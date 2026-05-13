@@ -1,0 +1,200 @@
+{
+  "Index": {
+    "Hero": {
+      "title": "El Proveedor Mayorista de Péptidos de Confianza en América",
+      "subtitle": "Péptidos de investigación premium fabricados en EE. UU. para profesionales autorizados. Pureza garantizada del 99%+ con COA de lotes independientes.",
+      "primaryCta": "Contactar por WhatsApp",
+      "secondaryCta": "Ver Catálogo",
+      "badges": {
+        "usMade": "Hecho en EE. UU.",
+        "purity": "99%+ Pureza",
+        "tested": "Pruebas Independientes",
+        "shipping": "Envío Rápido",
+        "b2b": "Solo B2B"
+      }
+    },
+    "Differentiators": {
+      "lab": { "title": "Laboratorio en EE. UU.", "description": "Síntesis nacional asegurando los más altos estándares de calidad." },
+      "coa": { "title": "COA por Lotes", "description": "Informes de pureza verificados disponibles para cada lote." },
+      "pricing": { "title": "Precios por Niveles", "description": "Márgenes escalables adaptados para su crecimiento." },
+      "support": { "title": "Soporte B2B", "description": "Gerentes de cuenta dedicados vía WhatsApp." }
+    },
+    "Categories": {
+      "title": "Categorías de Investigación Destacadas",
+      "items": {
+        "bpc": { "name": "BPC-157", "description": "Variaciones estándar y sal de arginina" },
+        "cjc": { "name": "CJC-1295 / Ipamorelin", "description": "Mezclas de investigación populares" },
+        "tb": { "name": "TB-500", "description": "Fragmento de timosina beta-4 de alta pureza" },
+        "sema": { "name": "Semaglutida", "description": "Agonista del receptor GLP-1" },
+        "tirz": { "name": "Tirzepatida", "description": "Agonista dual de los receptores GIP y GLP-1" },
+        "reta": { "name": "Retatrutida", "description": "Agonista de triple receptor hormonal" }
+      },
+      "cta": "Ver Catálogo Completo"
+    },
+    "Quality": {
+      "title": "Prueba en Cada Vial",
+      "description": "No solo afirmamos pureza, la demostramos. Cada lote se somete a rigurosas pruebas de HPLC y espectrometría de masas por terceros.",
+      "downloads": {
+        "bpc": "Descargar COA BPC-157",
+        "sema": "Descargar COA Semaglutida",
+        "tirz": "Descargar COA Tirzepatida"
+      },
+      "cta": "Conozca Nuestros Estándares de Calidad"
+    },
+    "Tiers": {
+      "title": "Niveles de Asociación Mayorista",
+      "description": "Desbloquee mejores precios a medida que crece su volumen.",
+      "items": {
+        "starter": { "name": "Inicial", "description": "MOQs bajos para probar el mercado." },
+        "tier1": { "name": "Nivel 1", "description": "Volumen mensual constante con márgenes mejorados." },
+        "tier2": { "name": "Nivel 2", "description": "Alto volumen con cumplimiento prioritario." },
+        "tier3": { "name": "Nivel 3", "description": "Escala empresarial con opciones de fabricación personalizadas." }
+      },
+      "cta": "Discutir Precios en WhatsApp"
+    },
+    "Services": {
+      "title": "Más Allá del Suministro",
+      "points": {
+        "whiteLabel": "Opciones de Marca Blanca",
+        "dropShipping": "Envío Directo para Socios Calificados",
+        "custom": "Formulaciones de Mezcla Personalizadas"
+      },
+      "cta": "Explorar Servicios para Socios"
+    },
+    "CtaBanner": {
+      "title": "¿Listo para Mejorar su Cadena de Suministro?",
+      "whatsapp": "Chatear por WhatsApp",
+      "email": "Enviar Email a Ventas"
+    }
+  },
+  "Layout": {
+    "announcement": "Solo para profesionales e investigadores autorizados",
+    "nav": {
+      "products": "Productos",
+      "quality": "Calidad",
+      "services": "Servicios",
+      "about": "Nosotros",
+      "contact": "Contacto"
+    },
+    "whatsapp": "Contactar por WhatsApp",
+    "footer": {
+      "paymentMethods": "Métodos de pago aceptados",
+      "disclaimer": "Los productos están destinados únicamente a fines de investigación de laboratorio. No apto para el consumo humano.",
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que busca no existe o ha sido movida.",
+    "cta": "Volver al inicio"
+  },
+  "Contact": {
+    "Hero": {
+      "title": "Contáctenos — Consultas Mayoristas Bienvenidas",
+      "subtitle": "Comuníquese con nuestro equipo en EE. UU. para discutir niveles de precios, pedidos por volumen o nuestro programa de envío directo."
+    },
+    "Methods": {
+      "whatsapp": {
+        "title": "Para la respuesta más rápida — envíenos un mensaje directamente por WhatsApp.",
+        "description": "Nuestro equipo responde dentro de las 2 horas hábiles durante los días laborables.",
+        "cta": "Chatear por WhatsApp"
+      },
+      "email": {
+        "title": "¿Prefiere el correo electrónico?",
+        "description": "Envíenos su consulta y le responderemos en 1 día hábil.",
+        "cta": "Envíenos un Correo"
+      },
+      "checklist": {
+        "title": "Qué incluir en su mensaje:",
+        "items": [
+          "Su tipo de negocio (clínica, farmacia, distribuidor, etc.)",
+          "Productos en los que está interesado",
+          "Volumen mensual aproximado",
+          "Estado/ubicación"
+        ]
+      }
+    },
+    "Form": {
+      "title": "Solicitud de Cuenta Mayorista",
+      "subtitle": "Envíe sus datos y un representante se comunicará con usted con los precios.",
+      "fields": {
+        "businessName": "Nombre del Negocio",
+        "businessType": "Tipo de Negocio",
+        "state": "Estado",
+        "products": "Productos Principales de Interés",
+        "volume": "Volumen Mensual Estimado",
+        "contactMethod": "Método de Contacto Preferido",
+        "submit": "Enviar Solicitud"
+      }
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "q1": { "q": "¿Hacen envíos internacionales?", "a": "Actualmente, solo enviamos dentro de los Estados Unidos." },
+        "q2": { "q": "¿Cuál es la cantidad mínima de pedido?", "a": "El MOQ es de 10 unidades por especificación de producto." },
+        "q3": { "q": "¿Requieren licencia para comprar?", "a": "Sí, nuestros productos son solo para profesionales e investigadores autorizados. No para consumo humano." },
+        "q4": { "q": "¿Cuánto tarda el envío?", "a": "El tiempo de respuesta típico es de 2 a 4 días hábiles según la ubicación." },
+        "q5": { "q": "¿Puedo obtener un COA antes de ordenar?", "a": "Sí, los Certificados de Análisis están disponibles bajo petición para cualquier lote actual." },
+        "q6": { "q": "¿Ofrecen condiciones de pago a plazo?", "a": "Comuníquese con nosotros para discutir términos para cuentas establecidas de alto volumen." }
+      }
+    }
+  },
+  "About": {
+    "Hero": {
+      "title": "Hecho en América. Confiado por Profesionales en Todo el País.",
+      "subtitle": "Descubra la historia detrás de nuestro compromiso con la pureza, la transparencia y la asociación B2B."
+    },
+    "Story": {
+      "p1": "99 Purity Peptides comenzó con una simple convicción: el mercado de péptidos de EE. UU. merecía un proveedor nacional en el que los profesionales realmente pudieran confiar. Sin importaciones reempaquetadas. Sin pureza misteriosa. Sin abastecimiento en zonas grises.",
+      "p2": "Construimos nuestra operación desde cero — laboratorio, pruebas y equipo en EE. UU. — para que las farmacias de compuestos, clínicas de bienestar e investigadores autorizados tuvieran una fuente nacional confiable de péptidos de grado de investigación a precios mayoristas competitivos.",
+      "p3": "Hoy atendemos a más de 200 clientes B2B en todo Estados Unidos, con un extenso catálogo, precios por niveles y documentación completa de COA en cada pedido."
+    },
+    "Values": {
+      "title": "Nuestros Valores Fundamentales",
+      "purity": {
+        "title": "Pureza",
+        "desc": "≥99% en cada producto, verificado por laboratorios de terceros independientes, no solo afirmado."
+      },
+      "transparency": {
+        "title": "Transparencia",
+        "desc": "Cada lote tiene un Certificado de Análisis. Sin excusas, sin excepciones. Demostramos nuestra calidad."
+      },
+      "partnership": {
+        "title": "Asociación",
+        "desc": "Tenemos éxito cuando nuestros clientes tienen éxito. Ofrecemos servicios de desarrollo empresarial, no solo productos."
+      }
+    },
+    "Stats": {
+      "products": "Productos en Catálogo",
+      "tiers": "Niveles Mayoristas",
+      "purity": "Estándar de Pureza",
+      "clients": "Clientes B2B"
+    },
+    "Cta": {
+      "title": "¿Tiene preguntas sobre nuestros antecedentes, prácticas de laboratorio o abastecimiento?",
+      "subtitle": "Agradecemos la conversación. Comuníquese con nuestro equipo en EE. UU.",
+      "whatsapp": "Chatear por WhatsApp",
+      "email": "Envíenos un Correo"
+    }
+  },
+  "Legal": {
+    "Disclaimer": {
+      "title": "Aviso sobre el Uso en Investigación",
+      "content": [
+        "Todos los productos proporcionados por 99 Purity Peptides se venden estrictamente para uso de investigación y laboratorio por profesionales autorizados.",
+        "Nuestros productos NO están destinados al consumo humano, uso clínico o como tratamiento para ninguna condición médica.",
+        "No son para venta minorista al público en general.",
+        "Al comprar en 99 Purity Peptides, el comprador reconoce y acepta que es un profesional autorizado, investigador o instalación que actúa de acuerdo con todas las leyes locales, estatales y federales aplicables.",
+        "El comprador asume la responsabilidad total del manejo, almacenamiento y aplicación adecuados de estos compuestos de investigación."
+      ]
+    },
+    "Privacy": {
+      "title": "Política de Privacidad",
+      "content": "Este es un marcador de posición para la Política de Privacidad completa. Consulte a su asesor legal para el texto final."
+    },
+    "Terms": {
+      "title": "Términos de Servicio",
+      "content": "Este es un marcador de posición para los Términos de Servicio completos. Consulte a su asesor legal para el texto final."
+    }
+  }
+}

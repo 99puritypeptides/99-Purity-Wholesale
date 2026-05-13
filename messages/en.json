@@ -1,0 +1,200 @@
+{
+  "Index": {
+    "Hero": {
+      "title": "America's Trusted Wholesale Peptide Supplier",
+      "subtitle": "Premium US-made research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch COAs.",
+      "primaryCta": "Contact on WhatsApp",
+      "secondaryCta": "View Catalog",
+      "badges": {
+        "usMade": "U.S. Made",
+        "purity": "99%+ Purity",
+        "tested": "Third-Party Tested",
+        "shipping": "Fast Shipping",
+        "b2b": "B2B Only"
+      }
+    },
+    "Differentiators": {
+      "lab": { "title": "U.S. Laboratory", "description": "Domestic synthesis ensuring highest quality standards." },
+      "coa": { "title": "Batch COAs", "description": "Verified purity reports available for every lot." },
+      "pricing": { "title": "Tiered Pricing", "description": "Scalable margins tailored for your growth." },
+      "support": { "title": "B2B Support", "description": "Dedicated account managers via WhatsApp." }
+    },
+    "Categories": {
+      "title": "Featured Research Categories",
+      "items": {
+        "bpc": { "name": "BPC-157", "description": "Standard & Arginine Salt variations" },
+        "cjc": { "name": "CJC-1295 / Ipamorelin", "description": "Popular research blends" },
+        "tb": { "name": "TB-500", "description": "High-purity thymosin beta-4 fragment" },
+        "sema": { "name": "Semaglutide", "description": "GLP-1 receptor agonist" },
+        "tirz": { "name": "Tirzepatide", "description": "Dual GIP and GLP-1 receptor agonist" },
+        "reta": { "name": "Retatrutide", "description": "Triple hormone receptor agonist" }
+      },
+      "cta": "View Full Catalog"
+    },
+    "Quality": {
+      "title": "Proof in Every Vial",
+      "description": "We don't just claim purity, we prove it. Every batch undergoes rigorous third-party HPLC and Mass Spectrometry testing.",
+      "downloads": {
+        "bpc": "Download BPC-157 COA",
+        "sema": "Download Semaglutide COA",
+        "tirz": "Download Tirzepatide COA"
+      },
+      "cta": "Learn About Our Quality Standards"
+    },
+    "Tiers": {
+      "title": "Wholesale Partnership Tiers",
+      "description": "Unlock better pricing as your volume grows.",
+      "items": {
+        "starter": { "name": "Starter", "description": "Low MOQs for testing the market." },
+        "tier1": { "name": "Tier 1", "description": "Consistent monthly volume with improved margins." },
+        "tier2": { "name": "Tier 2", "description": "High volume with priority fulfillment." },
+        "tier3": { "name": "Tier 3", "description": "Enterprise scale with custom manufacturing options." }
+      },
+      "cta": "Discuss Pricing on WhatsApp"
+    },
+    "Services": {
+      "title": "Beyond Just Supply",
+      "points": {
+        "whiteLabel": "White Labeling Options",
+        "dropShipping": "Drop-shipping for Qualified Partners",
+        "custom": "Custom Blend Formulations"
+      },
+      "cta": "Explore Partner Services"
+    },
+    "CtaBanner": {
+      "title": "Ready to Upgrade Your Supply Chain?",
+      "whatsapp": "Chat on WhatsApp",
+      "email": "Email Sales Team"
+    }
+  },
+  "Layout": {
+    "announcement": "Licensed Professionals & Researchers Only",
+    "nav": {
+      "products": "Products",
+      "quality": "Quality",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "whatsapp": "Contact on WhatsApp",
+    "footer": {
+      "paymentMethods": "Accepted Payment Methods",
+      "disclaimer": "Products are intended for laboratory research purposes only. Not for human consumption.",
+      "rights": "All rights reserved."
+    }
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been moved.",
+    "cta": "Return Home"
+  },
+  "Contact": {
+    "Hero": {
+      "title": "Get in Touch — Wholesale Inquiries Welcome",
+      "subtitle": "Reach out to our U.S.-based team to discuss pricing tiers, volume orders, or our drop-shipping program."
+    },
+    "Methods": {
+      "whatsapp": {
+        "title": "For fastest response — message us directly on WhatsApp.",
+        "description": "Our team replies within 2 business hours during business days.",
+        "cta": "Chat on WhatsApp"
+      },
+      "email": {
+        "title": "Prefer email?",
+        "description": "Send us your inquiry and we'll respond within 1 business day.",
+        "cta": "Email Us"
+      },
+      "checklist": {
+        "title": "What to include in your message:",
+        "items": [
+          "Your business type (clinic, pharmacy, distributor, etc.)",
+          "Products you're interested in",
+          "Approximate monthly volume",
+          "State/location"
+        ]
+      }
+    },
+    "Form": {
+      "title": "Wholesale Account Application",
+      "subtitle": "Submit your details and a representative will contact you with pricing.",
+      "fields": {
+        "businessName": "Business Name",
+        "businessType": "Business Type",
+        "state": "State",
+        "products": "Primary Products of Interest",
+        "volume": "Estimated Monthly Volume",
+        "contactMethod": "Preferred Contact Method",
+        "submit": "Submit Application"
+      }
+    },
+    "FAQ": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "q1": { "q": "Do you ship internationally?", "a": "Currently, we only ship within the United States." },
+        "q2": { "q": "What is the minimum order quantity?", "a": "The MOQ is 10 units per product specification." },
+        "q3": { "q": "Do you require a license to purchase?", "a": "Yes, our products are for licensed professionals and researchers only. Not for human consumption." },
+        "q4": { "q": "How long does shipping take?", "a": "Typical turnaround is 2-4 business days depending on location." },
+        "q5": { "q": "Can I get a COA before ordering?", "a": "Yes, Certificates of Analysis are available upon request for any current batch." },
+        "q6": { "q": "Do you offer net terms?", "a": "Please contact us to discuss terms for established high-volume accounts." }
+      }
+    }
+  },
+  "About": {
+    "Hero": {
+      "title": "Built in America. Trusted by Professionals Nationwide.",
+      "subtitle": "Discover the story behind our commitment to purity, transparency, and B2B partnership."
+    },
+    "Story": {
+      "p1": "99 Purity Peptides began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-zone sourcing.",
+      "p2": "We built our operation from the ground up — U.S. laboratory, U.S. testing, U.S. team — so that compounding pharmacies, wellness clinics, and licensed researchers would have a reliable domestic source for research-grade peptides at competitive wholesale pricing.",
+      "p3": "Today we serve over 200 B2B clients across the United States, with an extensive catalog, tiered pricing, and full COA documentation on every order."
+    },
+    "Values": {
+      "title": "Our Core Values",
+      "purity": {
+        "title": "Purity",
+        "desc": "≥99% on every product, verified by independent third-party laboratories, not just claimed."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "desc": "Every batch has a Certificate of Analysis. No excuses, no exceptions. We prove our quality."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "desc": "We succeed when our clients succeed. We offer business development services, not just product."
+      }
+    },
+    "Stats": {
+      "products": "Products in Catalog",
+      "tiers": "Wholesale Tiers",
+      "purity": "Purity Standard",
+      "clients": "B2B Clients"
+    },
+    "Cta": {
+      "title": "Have questions about our background, lab practices, or sourcing?",
+      "subtitle": "We welcome the conversation. Reach out to our U.S. team.",
+      "whatsapp": "Chat on WhatsApp",
+      "email": "Email Us"
+    }
+  },
+  "Legal": {
+    "Disclaimer": {
+      "title": "Research Use Disclaimer",
+      "content": [
+        "All products provided by 99 Purity Peptides are sold strictly for research and laboratory use by licensed professionals.",
+        "Our products are NOT intended for human consumption, clinical use, or as a treatment for any medical condition.",
+        "They are not for retail sale to the general public.",
+        "By purchasing from 99 Purity Peptides, the buyer acknowledges and agrees that they are a licensed professional, researcher, or facility acting in compliance with all applicable local, state, and federal laws.",
+        "The buyer assumes full responsibility for the proper handling, storage, and application of these research compounds."
+      ]
+    },
+    "Privacy": {
+      "title": "Privacy Policy",
+      "content": "This is a placeholder for the full Privacy Policy. Please consult your legal counsel for the final text."
+    },
+    "Terms": {
+      "title": "Terms of Service",
+      "content": "This is a placeholder for the full Terms of Service. Please consult your legal counsel for the final text."
+    }
+  }
+}
