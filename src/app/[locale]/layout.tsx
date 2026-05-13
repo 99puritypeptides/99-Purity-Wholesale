@@ -1,6 +1,6 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages, getTranslations} from 'next-intl/server';
-import {Rajdhani, DM_Sans, DM_Mono} from 'next/font/google';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
+import { Rajdhani, DM_Sans, DM_Mono } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
@@ -23,8 +23,8 @@ const dmMono = DM_Mono({
   variable: '--font-dm-mono',
 });
 
-export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'Meta'});
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('homeTitle'),
     description: t('homeDesc'),
@@ -33,10 +33,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 export default async function RootLayout({
   children,
-  params: {locale}
+  params: { locale }
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }) {
   const messages = await getMessages({ locale });
 
