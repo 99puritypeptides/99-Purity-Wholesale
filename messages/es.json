@@ -14,20 +14,50 @@
       }
     },
     "Differentiators": {
-      "lab": { "title": "Laboratorio en EE. UU.", "description": "Síntesis nacional asegurando los más altos estándares de calidad." },
-      "coa": { "title": "COA por Lotes", "description": "Informes de pureza verificados disponibles para cada lote." },
-      "pricing": { "title": "Precios por Niveles", "description": "Márgenes escalables adaptados para su crecimiento." },
-      "support": { "title": "Soporte B2B", "description": "Gerentes de cuenta dedicados vía WhatsApp." }
+      "lab": {
+        "title": "Laboratorio en EE. UU.",
+        "description": "Síntesis nacional asegurando los más altos estándares de calidad."
+      },
+      "coa": {
+        "title": "COA por Lotes",
+        "description": "Informes de pureza verificados disponibles para cada lote."
+      },
+      "pricing": {
+        "title": "Precios por Niveles",
+        "description": "Márgenes escalables adaptados para su crecimiento."
+      },
+      "support": {
+        "title": "Soporte B2B",
+        "description": "Gerentes de cuenta dedicados vía WhatsApp."
+      }
     },
     "Categories": {
       "title": "Categorías de Investigación Destacadas",
       "items": {
-        "bpc": { "name": "BPC-157", "description": "Variaciones estándar y sal de arginina" },
-        "cjc": { "name": "CJC-1295 / Ipamorelin", "description": "Mezclas de investigación populares" },
-        "tb": { "name": "TB-500", "description": "Fragmento de timosina beta-4 de alta pureza" },
-        "sema": { "name": "Semaglutida", "description": "Agonista del receptor GLP-1" },
-        "tirz": { "name": "Tirzepatida", "description": "Agonista dual de los receptores GIP y GLP-1" },
-        "reta": { "name": "Retatrutida", "description": "Agonista de triple receptor hormonal" }
+        "bpc": {
+          "name": "BPC-157",
+          "description": "Variaciones estándar y sal de arginina"
+        },
+        "cjc": {
+          "name": "CJC-1295 / Ipamorelin",
+          "description": "Mezclas de investigación populares"
+        },
+        "tb": {
+          "name": "TB-500",
+          "description": "Fragmento de timosina beta-4 de alta pureza"
+        },
+        "sema": {
+          "name": "Semaglutida",
+          "description": "Agonista del receptor GLP-1"
+        },
+        "tirz": {
+          "name": "Tirzepatida",
+          "description": "Agonista dual de los receptores GIP y GLP-1"
+        },
+        "reta": {
+          "name": "Retatrutida",
+          "description": "Agonista de triple receptor hormonal"
+        }
       },
       "cta": "Ver Catálogo Completo"
     },
@@ -45,10 +75,22 @@
       "title": "Niveles de Asociación Mayorista",
       "description": "Desbloquee mejores precios a medida que crece su volumen.",
       "items": {
-        "starter": { "name": "Inicial", "description": "MOQs bajos para probar el mercado." },
-        "tier1": { "name": "Nivel 1", "description": "Volumen mensual constante con márgenes mejorados." },
-        "tier2": { "name": "Nivel 2", "description": "Alto volumen con cumplimiento prioritario." },
-        "tier3": { "name": "Nivel 3", "description": "Escala empresarial con opciones de fabricación personalizadas." }
+        "starter": {
+          "name": "Inicial",
+          "description": "MOQs bajos para probar el mercado."
+        },
+        "tier1": {
+          "name": "Nivel 1",
+          "description": "Volumen mensual constante con márgenes mejorados."
+        },
+        "tier2": {
+          "name": "Nivel 2",
+          "description": "Alto volumen con cumplimiento prioritario."
+        },
+        "tier3": {
+          "name": "Nivel 3",
+          "description": "Escala empresarial con opciones de fabricación personalizadas."
+        }
       },
       "cta": "Discutir Precios en WhatsApp"
     },
@@ -73,6 +115,7 @@
       "products": "Productos",
       "quality": "Calidad",
       "services": "Servicios",
+      "locations": "Ubicaciones",
       "about": "Nosotros",
       "contact": "Contacto"
     },
@@ -130,12 +173,30 @@
     "FAQ": {
       "title": "Preguntas Frecuentes",
       "items": {
-        "q1": { "q": "¿Hacen envíos internacionales?", "a": "Actualmente, solo enviamos dentro de los Estados Unidos." },
-        "q2": { "q": "¿Cuál es la cantidad mínima de pedido?", "a": "El MOQ es de 10 unidades por especificación de producto." },
-        "q3": { "q": "¿Requieren licencia para comprar?", "a": "Sí, nuestros productos son solo para profesionales e investigadores autorizados. No para consumo humano." },
-        "q4": { "q": "¿Cuánto tarda el envío?", "a": "El tiempo de respuesta típico es de 2 a 4 días hábiles según la ubicación." },
-        "q5": { "q": "¿Puedo obtener un COA antes de ordenar?", "a": "Sí, los Certificados de Análisis están disponibles bajo petición para cualquier lote actual." },
-        "q6": { "q": "¿Ofrecen condiciones de pago a plazo?", "a": "Comuníquese con nosotros para discutir términos para cuentas establecidas de alto volumen." }
+        "q1": {
+          "q": "¿Hacen envíos internacionales?",
+          "a": "Actualmente, solo enviamos dentro de los Estados Unidos."
+        },
+        "q2": {
+          "q": "¿Cuál es la cantidad mínima de pedido?",
+          "a": "El MOQ es de 10 unidades por especificación de producto."
+        },
+        "q3": {
+          "q": "¿Requieren licencia para comprar?",
+          "a": "Sí, nuestros productos son solo para profesionales e investigadores autorizados. No para consumo humano."
+        },
+        "q4": {
+          "q": "¿Cuánto tarda el envío?",
+          "a": "El tiempo de respuesta típico es de 2 a 4 días hábiles según la ubicación."
+        },
+        "q5": {
+          "q": "¿Puedo obtener un COA antes de ordenar?",
+          "a": "Sí, los Certificados de Análisis están disponibles bajo petición para cualquier lote actual."
+        },
+        "q6": {
+          "q": "¿Ofrecen condiciones de pago a plazo?",
+          "a": "Comuníquese con nosotros para discutir términos para cuentas establecidas de alto volumen."
+        }
       }
     }
   },
@@ -195,6 +256,255 @@
     "Terms": {
       "title": "Términos de Servicio",
       "content": "Este es un marcador de posición para los Términos de Servicio completos. Consulte a su asesor legal para el texto final."
+    }
+  },
+  "Meta": {
+    "homeTitle": "Péptidos al por Mayor Estados Unidos | 99 Purity",
+    "homeDesc": "Proveedor mayorista de péptidos fabricados en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
+    "productsTitle": "Catálogo Mayorista de Péptidos | 99 Purity Peptides",
+    "productsDesc": "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
+    "servicesTitle": "Servicios B2B y Crecimiento | Proveedor Mayorista de Péptidos",
+    "servicesDesc": "Servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones con péptidos al por mayor Estados Unidos.",
+    "aboutTitle": "Nosotros | Péptidos Fabricados en América",
+    "aboutDesc": "Conozca 99 Purity Peptides. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
+    "contactTitle": "Contacto | Consultas sobre Péptidos al por Mayor",
+    "contactDesc": "Comuníquese con nuestro equipo en EE. UU. para precios, pedidos por volumen y programas de envío directo.",
+    "locationsTitle": "Mercados de Entrega | Proveedor Mayorista de Péptidos",
+    "locationsDesc": "Cumplimiento nacional rápido y seguro a instituciones de investigación en todo Estados Unidos."
+  },
+  "ProductsIndex": {
+    "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
+    "title": "Catálogo Mayorista",
+    "subtitle": "Compuestos de investigación de primera calidad para instituciones calificadas e investigadores independientes.",
+    "moqTitle": "Requisitos para Mayoristas",
+    "moqText": "Cantidad Mínima de Pedido (MOQ): 10 unidades por producto.",
+    "cta": "Contactar para Precios",
+    "categories": {
+      "glp1-metabolic-peptides": {
+        "name": "GLP-1 / Metabólicos",
+        "desc": "Péptidos de investigación metabólica avanzados que incluyen Semaglutida, Tirzepatida y Retatrutida."
+      },
+      "growth-hormone": {
+        "name": "Hormona de Crecimiento",
+        "desc": "Péptidos GHRP y GHRH para aplicaciones de investigación."
+      },
+      "healing-recovery-peptides": {
+        "name": "Curación y Recuperación",
+        "desc": "Compuestos de reparación y recuperación de tejidos que incluyen BPC-157 y TB-500."
+      },
+      "cognitive-nootropic": {
+        "name": "Cognitivos / Nootrópicos",
+        "desc": "Compuestos de investigación neurológica y potenciadores cognitivos."
+      },
+      "anti-aging-longevity": {
+        "name": "Antienvejecimiento y Longevidad",
+        "desc": "Senescencia celular y péptidos de investigación de longevidad."
+      },
+      "cosmetic-aesthetic": {
+        "name": "Cosméticos y Estéticos",
+        "desc": "Compuestos de investigación dermatológica y cosmética."
+      },
+      "ancillaries": {
+        "name": "Auxiliares",
+        "desc": "Soluciones de reconstitución, suministros y auxiliares de investigación."
+      }
+    },
+    "viewCategory": "Ver Categoría"
+  },
+  "ProductDetail": {
+    "breadcrumbs": {
+      "products": "Productos"
+    },
+    "purity": "≥99% de Pureza Garantizada",
+    "cas": "CAS:",
+    "specsTitle": "Especificaciones del Producto",
+    "availableSizes": "Tamaños Disponibles",
+    "storageDetails": "Detalles de Almacenamiento",
+    "moqHeading": "MOQ Mayorista: 10 Unidades",
+    "moqSubtext": "La cantidad mínima de pedido se aplica a todas las especificaciones.",
+    "pricingHeading": "Contactar para Precios por Niveles",
+    "pricingTiers": "Inicial · Nivel 1 · Nivel 2 · Nivel 3",
+    "contextTitle": "Contexto de Investigación",
+    "contextP1": "Este compuesto se suministra exclusivamente para investigación de laboratorio in vitro y modelado académico. No está destinado a aplicaciones diagnósticas, terapéuticas o clínicas en humanos o animales. Los investigadores que utilizan {name} deben adherirse a los protocolos de seguridad de laboratorio estándar y asegurarse de que su institución cuente con las autorizaciones éticas adecuadas para uso experimental.",
+    "contextP2": "Como herramienta molecular avanzada, {name} permite a los investigadores sondear vías celulares específicas, afinidades de receptores y cascadas bioquímicas. Todos los lotes se someten a rigurosas pruebas analíticas para confirmar la precisión de la secuencia y la integridad estructural, asegurando que los datos de referencia no se vean comprometidos por impurezas. Las condiciones de almacenamiento deben mantenerse estrictamente para evitar la degradación de los péptidos o la pérdida de actividad biológica antes de la implementación del ensayo.",
+    "coaTitle": "Certificado de Análisis (COA)",
+    "coaDesc": "Informes de HPLC y espectrometría de masas emparejados por lote.",
+    "requestCoa": "Solicitar COA",
+    "requestPricingTitle": "Solicitar Precios",
+    "requestPricingDesc": "Obtenga las tarifas mayoristas actuales para {name}. Nuestro equipo responde dentro de 2-4 horas en días hábiles.",
+    "whatsappCta": "Ventas por WhatsApp",
+    "or": "o",
+    "emailCta": "Consulta por Email",
+    "confidential": "Todas las consultas son estrictamente confidenciales. Solo para pedidos B2B / Instituciones.",
+    "relatedTitle": "Compuestos de Investigación Relacionados",
+    "viewDetails": "Ver Detalles",
+    "whatsappMsg": "Hola, solicito información sobre precios mayoristas para {name}."
+  },
+  "Services": {
+    "badge": "Soluciones de Crecimiento B2B",
+    "title": "Servicios Mayoristas",
+    "subtitle": "Más allá de suministrar compuestos de investigación premium, ofrecemos servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones, construir su marca y dominar el mercado.",
+    "items": {
+      "dropshipping": {
+        "title": "Programa de Envío Directo (Dropshipping)",
+        "desc": "Escale su negocio sin los gastos generales de inventario o cumplimiento. Nos encargamos del almacenamiento, embalaje y envío discreto directamente a sus clientes bajo su marca. Concéntrese completamente en ventas y marketing mientras gestionamos la logística.",
+        "msg": "Hola, estoy interesado en el Programa de Envío Directo."
+      },
+      "launch-support": {
+        "title": "Apoyo al Lanzamiento de Nuevos Negocios",
+        "desc": "Inicie su marca de péptidos de investigación con una base sólida. Brindamos orientación integral sobre selección de productos, estrategias de precios y adquisición de inventario inicial. Evite errores costosos de principiantes y lance con confianza.",
+        "msg": "Hola, me gustaría más información sobre el Apoyo al Lanzamiento."
+      },
+      "website-development": {
+        "title": "Desarrollo de Sitios Web",
+        "desc": "Establezca una presencia digital premium que convierta visitantes en compradores. Nuestro equipo construye plataformas de comercio electrónico de alto rendimiento, seguras y totalmente personalizadas adaptadas a la industria de compuestos de investigación. Aseguramos que su sitio esté optimizado para velocidad, SEO y transacciones perfectas.",
+        "msg": "Hola, estoy interesado en los servicios de Desarrollo Web."
+      },
+      "sales-distribution": {
+        "title": "Desarrollo de Ventas y Distribución",
+        "desc": "Expanda su alcance en el mercado y acelere el crecimiento de sus ingresos. Asesoramos en estrategias de adquisición B2B, creación de redes de afiliados y canales de distribución de alto volumen. Aproveche nuestra experiencia en la industria para dominar su sector.",
+        "msg": "Hola, me gustaría discutir sobre Desarrollo de Ventas y Distribución."
+      },
+      "private-label": {
+        "title": "Marca Privada / Marca Blanca",
+        "desc": "Construya el valor de su marca con sus propios productos etiquetados de forma personalizada. Suministramos compuestos premium de >99% de pureza meticulosamente empaquetados con su marca y diseño únicos. Diferénciese en el mercado con presentaciones profesionales y listas para la venta.",
+        "msg": "Hola, estoy interesado en servicios de Marca Privada / Blanca."
+      },
+      "fulfillment-consulting": {
+        "title": "Consultoría de Cumplimiento de Pedidos",
+        "desc": "Optimice sus operaciones de envío interno para lograr la máxima eficiencia. Lo ayudamos a implementar protocolos de empaque escalables, soluciones de gestión de cadena de frío y estrategias de envío rentables. Reduzca errores y asegure que sus productos lleguen de manera segura.",
+        "msg": "Hola, necesito Consultoría de Cumplimiento de Pedidos."
+      }
+    },
+    "inquireBtn": "Consultar por WhatsApp",
+    "stepsTitle": "Cómo Empezar",
+    "stepsSubtitle": "Asociarse con nosotros es sencillo. Evaluamos sus necesidades y ejecutamos una estrategia adaptada a su crecimiento.",
+    "step1Title": "Consulta Inicial",
+    "step1Desc": "Comuníquese a través de WhatsApp o correo electrónico. Discutiremos sus operaciones actuales, objetivos a largo plazo e identificaremos qué servicios se alinean mejor con sus metas.",
+    "step2Title": "Propuesta Estratégica",
+    "step2Desc": "Nuestro equipo redactará un plan de ejecución personalizado que detallará los precios, los plazos y exactamente cómo integraremos nuestra infraestructura con su marca.",
+    "step3Title": "Incorporación y Ejecución",
+    "step3Desc": "Una vez aprobados, comenzamos inmediatamente el proceso de incorporación. Lance su nueva infraestructura y comience a escalar sus ingresos con total confianza.",
+    "scheduleCta": "Programar Consulta",
+    "scheduleMsg": "Hola, me gustaría programar una consulta inicial para servicios B2B."
+  },
+  "LocationsIndex": {
+    "badge": "Alcance Nacional",
+    "title": "Nuestros Mercados Principales",
+    "subtitle": "99 Purity Peptides proporciona un cumplimiento nacional rápido y seguro a instituciones de investigación, laboratorios y clínicas de bienestar B2B en todo Estados Unidos. Explore nuestros centros regionales dedicados a continuación.",
+    "viewHub": "Ver Centro Local"
+  },
+  "LocationDetail": {
+    "hub": "Centro en {city}, {state}",
+    "trendingTitle": "Compuestos de Investigación Tendencia en {city}",
+    "trendingDesc": "Según los datos recientes de adquisiciones mayoristas de laboratorios y clínicas de bienestar en el área de {city}, estos son actualmente los compuestos más investigados en su región:",
+    "fastShippingTitle": "Cumplimiento Nacional Rápido a {state}",
+    "fastShippingDesc": "Debido a que enviamos desde dentro de los Estados Unidos, los laboratorios en {city} no enfrentan retrasos en aduanas internacionales, incautaciones de paquetes ni pérdida de integridad de la cadena de frío. Los pedidos se procesan inmediatamente después de la confirmación del pago.",
+    "shippingPoints": {
+      "priority": "Envío Nacional Prioritario",
+      "discreet": "Embalaje Discreto y Térmicamente Estable",
+      "noCustoms": "Cero Riesgo Aduanero Internacional"
+    },
+    "complianceTitle": "Aviso de Cumplimiento de Investigación",
+    "complianceDesc": "Todos los compuestos suministrados a {city}, {state} son exclusivamente para investigación de laboratorio in vitro y uso académico. Estrictamente no son para consumo humano, ni uso diagnóstico o terapéutico. Los compradores son responsables de asegurar el cumplimiento de todas las regulaciones locales y estatales sobre el manejo de químicos de investigación.",
+    "contactTitle": "Contactar a Ventas en {city}",
+    "contactDesc": "Conéctese con nuestro equipo de ventas B2B dedicado al área de {state} para solicitar nuestra lista de precios mayorista actual o discutir un pedido a granel.",
+    "whatsappCta": "Ventas por WhatsApp",
+    "or": "o",
+    "emailCta": "Consulta por Email",
+    "viewCatalog": "Ver Catálogo Completo",
+    "whatsappMsg": "Hola, soy un investigador ubicado en {city}, {state} en busca de precios mayoristas.",
+    "emailSubject": "Consulta Mayorista - {city}, {state}"
+  },
+  "CategoryTemplate": {
+    "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
+    "availableSpecs": "Especificaciones Disponibles",
+    "moq": "MOQ",
+    "units": "10 Unidades",
+    "pricing": "Precios",
+    "contact": "Contactar",
+    "viewDetails": "Ver Detalles del Producto",
+    "whatsappPricing": "Precios por WhatsApp",
+    "emailInquiry": "Consulta por Email"
+  },
+  "QualityPage": {
+    "badge": "Estándares Inquebrantables",
+    "title": "Prueba en Cada Vial",
+    "subtitle": "En la industria de la investigación, las suposiciones destruyen los datos. Confiamos en una validación analítica estricta, asegurando que cada compuesto que llega a su laboratorio supere el 99% de pureza. Sin excepciones.",
+    "pipeline": {
+      "title": "Nuestra Línea Analítica",
+      "subtitle": "Una secuencia rigurosa de síntesis, purificación y verificación garantiza una precisión absoluta de la secuencia.",
+      "step1": {
+        "title": "1. Producción y Síntesis",
+        "desc": "Los compuestos se sintetizan bajo estrictas condiciones que cumplen con las cGMP utilizando síntesis de péptidos en fase sólida (SPPS), lo que garantiza la fidelidad estructural desde la primera cadena de aminoácidos."
+      },
+      "step2": {
+        "title": "2. Pruebas Independientes",
+        "desc": "Las muestras se envían a laboratorios analíticos independientes con sede en EE. UU. para Cromatografía Líquida de Alta Resolución (HPLC) y Espectrometría de Masas (MS) para verificar una pureza ≥99%."
+      },
+      "step3": {
+        "title": "3. COA Emparejado por Lote",
+        "desc": "Se genera un Certificado de Análisis único para cada lote de producción. No utilizamos informes de pruebas genéricos o desactualizados. Lo que ve es exactamente lo que hay en su vial."
+      }
+    },
+    "comparison": {
+      "title": "El Estándar 99PP",
+      "subtitle": "Cómo nos comparamos con los proveedores extranjeros típicos y distribuidores no verificados.",
+      "headers": {
+        "criteria": "Criterios",
+        "ours": "99 Purity Peptides",
+        "theirs": "Proveedor Extranjero Típico"
+      },
+      "rows": {
+        "purity": {
+          "crit": "Estándar de Pureza",
+          "ours": "Estrictamente ≥ 99%",
+          "theirs": "95% - 98% (A menudo falsificado)"
+        },
+        "testing": {
+          "crit": "Pruebas Analíticas",
+          "ours": "Laboratorios Independientes de EE. UU.",
+          "theirs": "Internas o ninguna"
+        },
+        "coa": {
+          "crit": "Validez del COA",
+          "ours": "Emparejado por lote y verificable",
+          "theirs": "Genérico / Photoshop"
+        },
+        "support": {
+          "crit": "Soporte al Cliente",
+          "ours": "Basado en EE. UU., respuesta en 24h",
+          "theirs": "Comunicación lenta y poco confiable"
+        },
+        "shipping": {
+          "crit": "Envío y Cumplimiento",
+          "ours": "Nacional rápido (Sin aduanas)",
+          "theirs": "Riesgo de aduanas internacionales"
+        }
+      }
+    },
+    "library": {
+      "title": "Biblioteca de Documentos COA",
+      "subtitle": "Acceda a informes analíticos emparejados por lote para nuestro catálogo.",
+      "placeholder": "Buscar por nombre de producto...",
+      "headers": {
+        "name": "Nombre del Producto",
+        "category": "Categoría",
+        "batch": "Último Lote",
+        "action": "Acción"
+      },
+      "verified": "Verificado",
+      "download": "Descargar PDF",
+      "empty": "No se encontraron productos que coincidan con \"{searchTerm}\"."
+    },
+    "trust": {
+      "title": "Confianza Institucional Inquebrantable",
+      "desc": "Nos asociamos con instituciones académicas líderes, instalaciones de investigación privadas e investigadores independientes en todo el mundo. Nuestro compromiso con las prácticas estrictas alineadas con cGMP y la verificación independiente garantiza que sus datos se construyan sobre una base impecable.",
+      "badges": {
+        "us": "Instalaciones en EE. UU.",
+        "cgmp": "Alineado con cGMP",
+        "qa": "QA Independiente"
+      }
     }
   }
 }

@@ -43,6 +43,7 @@ export default function Header() {
           <Link href="/products" className="hover:text-brand-accent transition-colors">{t('nav.products')}</Link>
           <Link href="/quality" className="hover:text-brand-accent transition-colors">{t('nav.quality')}</Link>
           <Link href="/services" className="hover:text-brand-accent transition-colors">{t('nav.services')}</Link>
+          <Link href="/locations" className="hover:text-brand-accent transition-colors">{t('nav.locations')}</Link>
           <Link href="/about" className="hover:text-brand-accent transition-colors">{t('nav.about')}</Link>
           <Link href="/contact" className="hover:text-brand-accent transition-colors">{t('nav.contact')}</Link>
         </div>

@@ -1,49 +1,60 @@
 import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
 import { AlertTriangle, ChevronRight, FlaskConical, Activity, Brain, ShieldAlert, Sparkles, Syringe, Box } from 'lucide-react';
 
-export default function ProductsPage() {
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+  const t = await getTranslations({locale, namespace: 'Meta'});
+  return {
+    title: t('productsTitle'),
+    description: t('productsDesc'),
+  };
+}
+
+export default async function ProductsPage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'ProductsIndex' });
+
   const categories = [
     {
       id: 'glp1-metabolic-peptides',
-      name: 'GLP-1 / Metabolic',
+      name: t('categories.glp1-metabolic-peptides.name'),
       icon: Activity,
-      description: 'Advanced metabolic research peptides including Semaglutide, Tirzepatide, and Retatrutide.',
+      description: t('categories.glp1-metabolic-peptides.desc'),
     },
     {
       id: 'growth-hormone',
-      name: 'Growth Hormone',
-      icon: TrendingUpIcon, // Using generic ones
-      description: 'GHRP and GHRH peptides for research applications.',
+      name: t('categories.growth-hormone.name'),
+      icon: TrendingUpIcon,
+      description: t('categories.growth-hormone.desc'),
     },
     {
       id: 'healing-recovery-peptides',
-      name: 'Healing & Recovery',
+      name: t('categories.healing-recovery-peptides.name'),
       icon: FlaskConical,
-      description: 'Tissue repair and recovery compounds including BPC-157 and TB-500.',
+      description: t('categories.healing-recovery-peptides.desc'),
     },
     {
       id: 'cognitive-nootropic',
-      name: 'Cognitive / Nootropic',
+      name: t('categories.cognitive-nootropic.name'),
       icon: Brain,
-      description: 'Neurological research compounds and cognitive enhancers.',
+      description: t('categories.cognitive-nootropic.desc'),
     },
     {
       id: 'anti-aging-longevity',
-      name: 'Anti-Aging & Longevity',
-      icon: ShieldAlert, // Using placeholder icon
-      description: 'Cellular senescence and longevity research peptides.',
+      name: t('categories.anti-aging-longevity.name'),
+      icon: ShieldAlert,
+      description: t('categories.anti-aging-longevity.desc'),
     },
     {
       id: 'cosmetic-aesthetic',
-      name: 'Cosmetic & Aesthetic',
+      name: t('categories.cosmetic-aesthetic.name'),
       icon: Sparkles,
-      description: 'Dermatological and cosmetic research compounds.',
+      description: t('categories.cosmetic-aesthetic.desc'),
     },
     {
       id: 'ancillaries',
-      name: 'Ancillaries',
+      name: t('categories.ancillaries.name'),
       icon: Syringe,
-      description: 'Reconstitution solutions, supplies, and research ancillaries.',
+      description: t('categories.ancillaries.desc'),
     }
   ];
 
@@ -52,16 +63,16 @@ export default function ProductsPage() {
       {/* Research Disclaimer Banner */}
       <div className="bg-yellow-900/20 border-b border-yellow-700/30 text-yellow-500 py-3 px-4 text-center text-sm font-dm-mono flex items-center justify-center gap-2">
         <AlertTriangle className="w-4 h-4" />
-        ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.
+        {t('banner')}
       </div>
 
       <div className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            Wholesale Catalog
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto">
-            Premium quality research compounds for qualified institutions and independent researchers.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -72,13 +83,13 @@ export default function ProductsPage() {
               <Box className="w-6 h-6 text-brand-accent" />
             </div>
             <div>
-              <h3 className="text-xl font-rajdhani font-bold text-white mb-1">Wholesale Requirements</h3>
-              <p className="text-gray-400 font-dm-sans">Minimum Order Quantity (MOQ): 10 units per product.</p>
+              <h3 className="text-xl font-rajdhani font-bold text-white mb-1">{t('moqTitle')}</h3>
+              <p className="text-gray-400 font-dm-sans">{t('moqText')}</p>
             </div>
           </div>
           <div>
             <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold px-6 py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider inline-flex">
-              Contact for Pricing
+              {t('cta')}
             </a>
           </div>
         </div>
@@ -96,7 +107,7 @@ export default function ProductsPage() {
                   {cat.description}
                 </p>
                 <div className="flex items-center text-brand-accent font-bold font-rajdhani uppercase tracking-wider text-sm mt-auto">
-                  View Category <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  {t('viewCategory')} <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>

@@ -3,9 +3,9 @@ import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import productsData from '@/data/products.json';
 
-export default async function GLP1MetabolicPage({ params }: { params: { locale: string } }) {
+export default async function AntiAgingLongevityPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'CategoryTemplate' });
-  const products = productsData.filter(p => p.category === 'glp1-metabolic-peptides');
+  const products = productsData.filter(p => p.category === 'anti-aging-longevity');
 
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
@@ -17,16 +17,16 @@ export default async function GLP1MetabolicPage({ params }: { params: { locale: 
 
       {/* Category Hero */}
       <section className="relative overflow-hidden py-20 border-b border-white/5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
-            Metabolic Research
+            Senescence & Longevity
           </div>
           <h1 className="text-5xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            GLP-1 & Metabolic Peptides
+            Anti-Aging & Longevity Peptides
           </h1>
           <p className="text-xl text-gray-400 font-dm-sans leading-relaxed">
-            Premium-grade metabolic research compounds synthesized for maximum purity and stability. Our B2B wholesale program provides scalable solutions for research institutions, laboratories, and independent investigators requiring uncompromising quality.
+            Specialized bioregulators and metabolic intermediates engineered for researching cellular senescence, mitochondrial function, and telomerase activation. Guaranteed high-purity supply for B2B clinical researchers and laboratories.
           </p>
         </div>
       </section>
@@ -81,23 +81,23 @@ export default async function GLP1MetabolicPage({ params }: { params: { locale: 
         </div>
       </section>
 
-      {/* SEO Content Block (Expandable using Details/Summary) */}
+      {/* SEO Content Block (Expandable) */}
       <section className="py-16 bg-black border-t border-white/5">
         <div className="container mx-auto px-4 max-w-4xl">
           <details className="group border border-white/10 rounded-xl bg-[#0e131b] overflow-hidden">
             <summary className="p-6 cursor-pointer font-rajdhani font-bold text-xl text-white flex justify-between items-center outline-none">
-              About GLP-1 & Metabolic Research Peptides
+              About Longevity & Anti-Aging Research Compounds
               <span className="text-brand-accent group-open:rotate-180 transition-transform duration-300">▼</span>
             </summary>
             <div className="p-6 pt-0 border-t border-white/5 text-gray-400 font-dm-sans leading-relaxed space-y-4">
               <p>
-                Glucagon-like peptide-1 (GLP-1) receptor agonists and related metabolic peptides represent a significant area of endocrinology and metabolic research. These synthesized peptide chains mimic endogenous incretin hormones, allowing researchers to study cellular responses related to insulin secretion, gastric motility, and appetite regulation pathways in laboratory settings.
+                The study of longevity and biological aging involves targeting precise molecular pathways responsible for cellular degradation, mitochondrial dysfunction, and telomere shortening. Our selection of anti-aging peptides provides researchers with the essential tools required to model these biological processes.
               </p>
               <p>
-                Our comprehensive catalog includes single, dual, and triple receptor agonists, providing diverse mechanisms for advanced metabolic studies. Compounds like Semaglutide and Tirzepatide (a dual GIP and GLP-1 receptor agonist) have established new benchmarks in research efficacy. Newer compounds such as Retatrutide (a tri-agonist targeting GLP-1, GIP, and Glucagon receptors) offer novel pathways for investigating complex metabolic cascades.
+                Compounds like Epithalon (a synthetic pineal gland extract derivative) are central to research involving telomerase activation and cellular life extension models. Peptides such as MOTS-c and SS-31 specifically target mitochondrial-derived mechanisms, making them indispensable for studying metabolic homeostasis and oxidative stress resilience. Additionally, immunological research benefits from thymic bioregulators like Thymalin and Thymosin Alpha-1.
               </p>
               <p>
-                All metabolic peptides are subjected to rigorous third-party analytical testing, ensuring &gt;99% purity levels. Certificates of Analysis (COAs) and High-Performance Liquid Chromatography (HPLC) reports are available, confirming structural integrity and correct sequence confirmation for reproducible experimental results.
+                We also supply foundational metabolic intermediates such as high-purity NAD+ (Nicotinamide Adenine Dinucleotide) to facilitate comprehensive studies on energy metabolism. Every batch undergoes rigorous quality assurance to confirm its suitability for highly sensitive longevity research protocols.
               </p>
             </div>
           </details>

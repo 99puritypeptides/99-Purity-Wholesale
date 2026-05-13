@@ -14,20 +14,50 @@
       }
     },
     "Differentiators": {
-      "lab": { "title": "U.S. Laboratory", "description": "Domestic synthesis ensuring highest quality standards." },
-      "coa": { "title": "Batch COAs", "description": "Verified purity reports available for every lot." },
-      "pricing": { "title": "Tiered Pricing", "description": "Scalable margins tailored for your growth." },
-      "support": { "title": "B2B Support", "description": "Dedicated account managers via WhatsApp." }
+      "lab": {
+        "title": "U.S. Laboratory",
+        "description": "Domestic synthesis ensuring highest quality standards."
+      },
+      "coa": {
+        "title": "Batch COAs",
+        "description": "Verified purity reports available for every lot."
+      },
+      "pricing": {
+        "title": "Tiered Pricing",
+        "description": "Scalable margins tailored for your growth."
+      },
+      "support": {
+        "title": "B2B Support",
+        "description": "Dedicated account managers via WhatsApp."
+      }
     },
     "Categories": {
       "title": "Featured Research Categories",
       "items": {
-        "bpc": { "name": "BPC-157", "description": "Standard & Arginine Salt variations" },
-        "cjc": { "name": "CJC-1295 / Ipamorelin", "description": "Popular research blends" },
-        "tb": { "name": "TB-500", "description": "High-purity thymosin beta-4 fragment" },
-        "sema": { "name": "Semaglutide", "description": "GLP-1 receptor agonist" },
-        "tirz": { "name": "Tirzepatide", "description": "Dual GIP and GLP-1 receptor agonist" },
-        "reta": { "name": "Retatrutide", "description": "Triple hormone receptor agonist" }
+        "bpc": {
+          "name": "BPC-157",
+          "description": "Standard & Arginine Salt variations"
+        },
+        "cjc": {
+          "name": "CJC-1295 / Ipamorelin",
+          "description": "Popular research blends"
+        },
+        "tb": {
+          "name": "TB-500",
+          "description": "High-purity thymosin beta-4 fragment"
+        },
+        "sema": {
+          "name": "Semaglutide",
+          "description": "GLP-1 receptor agonist"
+        },
+        "tirz": {
+          "name": "Tirzepatide",
+          "description": "Dual GIP and GLP-1 receptor agonist"
+        },
+        "reta": {
+          "name": "Retatrutide",
+          "description": "Triple hormone receptor agonist"
+        }
       },
       "cta": "View Full Catalog"
     },
@@ -45,10 +75,22 @@
       "title": "Wholesale Partnership Tiers",
       "description": "Unlock better pricing as your volume grows.",
       "items": {
-        "starter": { "name": "Starter", "description": "Low MOQs for testing the market." },
-        "tier1": { "name": "Tier 1", "description": "Consistent monthly volume with improved margins." },
-        "tier2": { "name": "Tier 2", "description": "High volume with priority fulfillment." },
-        "tier3": { "name": "Tier 3", "description": "Enterprise scale with custom manufacturing options." }
+        "starter": {
+          "name": "Starter",
+          "description": "Low MOQs for testing the market."
+        },
+        "tier1": {
+          "name": "Tier 1",
+          "description": "Consistent monthly volume with improved margins."
+        },
+        "tier2": {
+          "name": "Tier 2",
+          "description": "High volume with priority fulfillment."
+        },
+        "tier3": {
+          "name": "Tier 3",
+          "description": "Enterprise scale with custom manufacturing options."
+        }
       },
       "cta": "Discuss Pricing on WhatsApp"
     },
@@ -73,6 +115,7 @@
       "products": "Products",
       "quality": "Quality",
       "services": "Services",
+      "locations": "Locations",
       "about": "About",
       "contact": "Contact"
     },
@@ -130,12 +173,30 @@
     "FAQ": {
       "title": "Frequently Asked Questions",
       "items": {
-        "q1": { "q": "Do you ship internationally?", "a": "Currently, we only ship within the United States." },
-        "q2": { "q": "What is the minimum order quantity?", "a": "The MOQ is 10 units per product specification." },
-        "q3": { "q": "Do you require a license to purchase?", "a": "Yes, our products are for licensed professionals and researchers only. Not for human consumption." },
-        "q4": { "q": "How long does shipping take?", "a": "Typical turnaround is 2-4 business days depending on location." },
-        "q5": { "q": "Can I get a COA before ordering?", "a": "Yes, Certificates of Analysis are available upon request for any current batch." },
-        "q6": { "q": "Do you offer net terms?", "a": "Please contact us to discuss terms for established high-volume accounts." }
+        "q1": {
+          "q": "Do you ship internationally?",
+          "a": "Currently, we only ship within the United States."
+        },
+        "q2": {
+          "q": "What is the minimum order quantity?",
+          "a": "The MOQ is 10 units per product specification."
+        },
+        "q3": {
+          "q": "Do you require a license to purchase?",
+          "a": "Yes, our products are for licensed professionals and researchers only. Not for human consumption."
+        },
+        "q4": {
+          "q": "How long does shipping take?",
+          "a": "Typical turnaround is 2-4 business days depending on location."
+        },
+        "q5": {
+          "q": "Can I get a COA before ordering?",
+          "a": "Yes, Certificates of Analysis are available upon request for any current batch."
+        },
+        "q6": {
+          "q": "Do you offer net terms?",
+          "a": "Please contact us to discuss terms for established high-volume accounts."
+        }
       }
     }
   },
@@ -195,6 +256,255 @@
     "Terms": {
       "title": "Terms of Service",
       "content": "This is a placeholder for the full Terms of Service. Please consult your legal counsel for the final text."
+    }
+  },
+  "Meta": {
+    "homeTitle": "99 Purity Wholesale | America's Trusted Peptide Supplier",
+    "homeDesc": "Premium US-made research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch COAs.",
+    "productsTitle": "Wholesale Peptide Catalog | 99 Purity Peptides",
+    "productsDesc": "Premium quality research compounds for qualified institutions and independent researchers. View our wholesale catalog.",
+    "servicesTitle": "B2B Growth & Wholesale Services | 99 Purity",
+    "servicesDesc": "Comprehensive infrastructure and consulting services to help you scale your research compound operations.",
+    "aboutTitle": "About Us | US-Made Research Peptides",
+    "aboutDesc": "Learn about 99 Purity Peptides. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
+    "contactTitle": "Contact Us | Wholesale Peptides Inquiry",
+    "contactDesc": "Contact our US-based team for pricing tiers, volume orders, and dropshipping programs.",
+    "locationsTitle": "Primary Delivery Markets | 99 Purity Peptides",
+    "locationsDesc": "Fast, secure domestic fulfillment to research institutions across the United States."
+  },
+  "ProductsIndex": {
+    "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
+    "title": "Wholesale Catalog",
+    "subtitle": "Premium quality research compounds for qualified institutions and independent researchers.",
+    "moqTitle": "Wholesale Requirements",
+    "moqText": "Minimum Order Quantity (MOQ): 10 units per product.",
+    "cta": "Contact for Pricing",
+    "categories": {
+      "glp1-metabolic-peptides": {
+        "name": "GLP-1 / Metabolic",
+        "desc": "Advanced metabolic research peptides including Semaglutide, Tirzepatide, and Retatrutide."
+      },
+      "growth-hormone": {
+        "name": "Growth Hormone",
+        "desc": "GHRP and GHRH peptides for research applications."
+      },
+      "healing-recovery-peptides": {
+        "name": "Healing & Recovery",
+        "desc": "Tissue repair and recovery compounds including BPC-157 and TB-500."
+      },
+      "cognitive-nootropic": {
+        "name": "Cognitive / Nootropic",
+        "desc": "Neurological research compounds and cognitive enhancers."
+      },
+      "anti-aging-longevity": {
+        "name": "Anti-Aging & Longevity",
+        "desc": "Cellular senescence and longevity research peptides."
+      },
+      "cosmetic-aesthetic": {
+        "name": "Cosmetic & Aesthetic",
+        "desc": "Dermatological and cosmetic research compounds."
+      },
+      "ancillaries": {
+        "name": "Ancillaries",
+        "desc": "Reconstitution solutions, supplies, and research ancillaries."
+      }
+    },
+    "viewCategory": "View Category"
+  },
+  "ProductDetail": {
+    "breadcrumbs": {
+      "products": "Products"
+    },
+    "purity": "≥99% Purity Guaranteed",
+    "cas": "CAS:",
+    "specsTitle": "Product Specifications",
+    "availableSizes": "Available Sizes",
+    "storageDetails": "Storage Details",
+    "moqHeading": "Wholesale MOQ: 10 Units",
+    "moqSubtext": "Minimum order quantity applies to all specifications.",
+    "pricingHeading": "Contact for Tiered Pricing",
+    "pricingTiers": "Starter · Tier 1 · Tier 2 · Tier 3",
+    "contextTitle": "Research Context",
+    "contextP1": "This compound is supplied exclusively for in vitro laboratory research and academic modeling. It is not intended for diagnostic, therapeutic, or clinical applications in humans or animals. Researchers utilizing {name} should adhere to standard laboratory safety protocols and ensure their institution has the appropriate ethical clearances for experimental use.",
+    "contextP2": "As an advanced molecular tool, {name} allows investigators to probe specific cellular pathways, receptor affinities, and biochemical cascades. All batches undergo rigorous analytical testing to confirm sequence accuracy and structural integrity, ensuring that baseline data is not compromised by impurities. Storage conditions must be strictly maintained to prevent peptide degradation or loss of biological activity prior to assay implementation.",
+    "coaTitle": "Certificate of Analysis (COA)",
+    "coaDesc": "Batch-matched HPLC and Mass Spectrometry reports.",
+    "requestCoa": "Request COA",
+    "requestPricingTitle": "Request Pricing",
+    "requestPricingDesc": "Get current wholesale rates for {name}. Our team responds within 2-4 hours during business days.",
+    "whatsappCta": "WhatsApp Sales",
+    "or": "or",
+    "emailCta": "Email Inquiry",
+    "confidential": "All inquiries are strictly confidential. For B2B / Institution orders only.",
+    "relatedTitle": "Related Research Compounds",
+    "viewDetails": "View Details",
+    "whatsappMsg": "Hi, I am inquiring about wholesale pricing for {name}."
+  },
+  "Services": {
+    "badge": "B2B Growth Solutions",
+    "title": "Wholesale Services",
+    "subtitle": "Beyond supplying premium research compounds, we offer comprehensive infrastructure and consulting services to help you scale your operations, build your brand, and dominate the market.",
+    "items": {
+      "dropshipping": {
+        "title": "Dropshipping Program",
+        "desc": "Scale your business without the overhead of inventory or fulfillment. We handle the storage, packing, and discreet shipping directly to your clients under your branding. Focus entirely on sales and marketing while we manage the logistics.",
+        "msg": "Hi, I'm interested in the Dropshipping Program."
+      },
+      "launch-support": {
+        "title": "New Business Launch Support",
+        "desc": "Start your research peptide brand with a solid foundation. We provide end-to-end guidance on product selection, pricing strategies, and initial inventory acquisition. Avoid costly beginner mistakes and launch with confidence.",
+        "msg": "Hi, I'd like more info on New Business Launch Support."
+      },
+      "website-development": {
+        "title": "Website Development",
+        "desc": "Establish a premium digital presence that converts visitors into buyers. Our team builds high-performance, secure, and fully customized e-commerce platforms tailored for the research compound industry. We ensure your site is optimized for speed, SEO, and seamless transactions.",
+        "msg": "Hi, I'm interested in Website Development services."
+      },
+      "sales-distribution": {
+        "title": "Sales & Distribution Development",
+        "desc": "Expand your market reach and accelerate your revenue growth. We consult on B2B acquisition strategies, affiliate network building, and high-volume distribution pipelines. Leverage our industry expertise to dominate your sector.",
+        "msg": "Hi, I'd like to discuss Sales & Distribution Development."
+      },
+      "private-label": {
+        "title": "Private Label / White Label",
+        "desc": "Build brand equity with your own custom-labeled products. We supply premium >99% purity compounds meticulously packaged with your unique branding and design. Differentiate yourself in the market with professional, retail-ready presentations.",
+        "msg": "Hi, I'm interested in Private Label / White Label services."
+      },
+      "fulfillment-consulting": {
+        "title": "Order Fulfillment Consulting",
+        "desc": "Optimize your internal shipping operations for maximum efficiency. We help you implement scalable packing protocols, cold-chain management solutions, and cost-effective shipping strategies. Reduce errors and ensure your products arrive safely every time.",
+        "msg": "Hi, I need Order Fulfillment Consulting."
+      }
+    },
+    "inquireBtn": "Inquire on WhatsApp",
+    "stepsTitle": "How to Get Started",
+    "stepsSubtitle": "Partnering with us is straightforward. We evaluate your needs and execute a strategy tailored to your growth.",
+    "step1Title": "Initial Consultation",
+    "step1Desc": "Reach out via WhatsApp or Email. We'll discuss your current operations, long-term goals, and identify which services align best with your objectives.",
+    "step2Title": "Strategic Proposal",
+    "step2Desc": "Our team will draft a customized execution plan outlining pricing, timelines, and exactly how we will integrate our infrastructure with your brand.",
+    "step3Title": "Onboarding & Execution",
+    "step3Desc": "Once approved, we immediately begin the onboarding process. Launch your new infrastructure and start scaling your revenue with total confidence.",
+    "scheduleCta": "Schedule Consultation",
+    "scheduleMsg": "Hi, I would like to schedule an initial consultation for B2B services."
+  },
+  "LocationsIndex": {
+    "badge": "Nationwide Reach",
+    "title": "Our Primary Markets",
+    "subtitle": "99 Purity Peptides provides fast, secure domestic fulfillment to research institutions, laboratories, and B2B wellness clinics across the United States. Explore our dedicated regional hubs below.",
+    "viewHub": "View Local Hub"
+  },
+  "LocationDetail": {
+    "hub": "{city}, {state} Hub",
+    "trendingTitle": "Trending Research Compounds in {city}",
+    "trendingDesc": "Based on recent wholesale procurement data from {city}-area laboratories and wellness clinics, these are currently the most heavily researched compounds in your region:",
+    "fastShippingTitle": "Fast Domestic Fulfillment to {state}",
+    "fastShippingDesc": "Because we ship from within the United States, laboratories in {city} do not face international customs delays, package seizures, or cold-chain integrity loss. Orders are processed immediately upon payment confirmation.",
+    "shippingPoints": {
+      "priority": "Priority Domestic Shipping",
+      "discreet": "Discreet, Temperature-Stable Packaging",
+      "noCustoms": "Zero International Customs Risk"
+    },
+    "complianceTitle": "Research Compliance Notice",
+    "complianceDesc": "All compounds supplied to {city}, {state} are exclusively for in vitro laboratory research and academic use. They are strictly not for human consumption, diagnostic, or therapeutic use. Buyers are responsible for ensuring compliance with all local and state regulations regarding the handling of research chemicals.",
+    "contactTitle": "Contact {city} Sales",
+    "contactDesc": "Connect with our dedicated B2B sales team serving the {state} region to request our current wholesale price list or discuss a bulk order.",
+    "whatsappCta": "WhatsApp Sales",
+    "or": "or",
+    "emailCta": "Email Inquiry",
+    "viewCatalog": "View Full Catalog",
+    "whatsappMsg": "Hi, I am a researcher located in {city}, {state} looking for wholesale pricing.",
+    "emailSubject": "Wholesale Inquiry - {city}, {state}"
+  },
+  "CategoryTemplate": {
+    "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
+    "availableSpecs": "Available Specs",
+    "moq": "MOQ",
+    "units": "10 Units",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "viewDetails": "View Product Details",
+    "whatsappPricing": "WhatsApp Pricing",
+    "emailInquiry": "Email Inquiry"
+  },
+  "QualityPage": {
+    "badge": "Uncompromising Standards",
+    "title": "Proof in Every Vial",
+    "subtitle": "In the research industry, assumptions destroy data. We rely on strict analytical validation, ensuring every compound reaching your laboratory exceeds 99% purity. No exceptions.",
+    "pipeline": {
+      "title": "Our Analytical Pipeline",
+      "subtitle": "A rigorous sequence of synthesis, purification, and verification guarantees absolute sequence accuracy.",
+      "step1": {
+        "title": "1. Production & Synthesis",
+        "desc": "Compounds are synthesized under strict cGMP-compliant conditions utilizing solid-phase peptide synthesis (SPPS), ensuring structural fidelity from the first amino acid chain."
+      },
+      "step2": {
+        "title": "2. Third-Party Testing",
+        "desc": "Samples are sent to independent US-based analytical laboratories for High-Performance Liquid Chromatography (HPLC) and Mass Spectrometry (MS) to verify ≥99% purity."
+      },
+      "step3": {
+        "title": "3. Batch-Matched COA",
+        "desc": "A unique Certificate of Analysis is generated for each production batch. We do not use generic or outdated testing reports. What you see is exactly what is in your vial."
+      }
+    },
+    "comparison": {
+      "title": "The 99PP Standard",
+      "subtitle": "How we compare to typical overseas suppliers and unverified distributors.",
+      "headers": {
+        "criteria": "Criteria",
+        "ours": "99 Purity Peptides",
+        "theirs": "Typical Overseas Supplier"
+      },
+      "rows": {
+        "purity": {
+          "crit": "Purity Standard",
+          "ours": "Strictly ≥ 99%",
+          "theirs": "95% - 98% (Often Falsified)"
+        },
+        "testing": {
+          "crit": "Analytical Testing",
+          "ours": "Independent US Laboratories",
+          "theirs": "In-house or None"
+        },
+        "coa": {
+          "crit": "COA Validity",
+          "ours": "Batch-Matched & Verifiable",
+          "theirs": "Generic / Photoshopped"
+        },
+        "support": {
+          "crit": "Customer Support",
+          "ours": "US-Based, 24hr Response",
+          "theirs": "Slow, Unreliable Communication"
+        },
+        "shipping": {
+          "crit": "Shipping & Fulfillment",
+          "ours": "Fast US Domestic (No Customs)",
+          "theirs": "International Customs Risk"
+        }
+      }
+    },
+    "library": {
+      "title": "COA Document Library",
+      "subtitle": "Access batch-matched analytical reports for our catalog.",
+      "placeholder": "Search by product name...",
+      "headers": {
+        "name": "Product Name",
+        "category": "Category",
+        "batch": "Latest Batch",
+        "action": "Action"
+      },
+      "verified": "Verified",
+      "download": "Download PDF",
+      "empty": "No products found matching \"{searchTerm}\"."
+    },
+    "trust": {
+      "title": "Unwavering Institutional Trust",
+      "desc": "We partner with leading academic institutions, private research facilities, and independent investigators worldwide. Our commitment to strict cGMP-aligned practices and independent verification ensures your data is built on a flawless foundation.",
+      "badges": {
+        "us": "US-Based Facilities",
+        "cgmp": "cGMP Aligned",
+        "qa": "Independent QA"
+      }
     }
   }
 }

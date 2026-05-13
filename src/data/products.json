@@ -1,0 +1,416 @@
+[
+  {
+    "name": "Adamax",
+    "slug": "adamax",
+    "category": "cognitive-nootropic",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "N/A",
+    "storage": "Store at -20°C. Protect from light.",
+    "description": "Advanced nootropic peptide designed for B2B neurological research, offering enhanced stability and bioavailability for studying cognitive pathways and neuroprotection."
+  },
+  {
+    "name": "Adipotide/FTTP",
+    "slug": "adipotide-fttp",
+    "category": "cosmetic-aesthetic",
+    "specs": ["2mg×10", "5mg×10", "10mg×10"],
+    "cas": "N/A",
+    "storage": "Store at -20°C.",
+    "description": "Proapoptotic peptide targeting adipose tissue vasculature, utilized in aesthetic and dermatological research models for regulating localized metabolic shifts."
+  },
+  {
+    "name": "AOD9604",
+    "slug": "aod9604",
+    "category": "anti-aging-longevity",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "221231-10-3",
+    "storage": "Store at -20°C.",
+    "description": "Modified fragment of human growth hormone designed for lipolytic research, focusing on fat metabolism without affecting IGF-1 levels."
+  },
+  {
+    "name": "B7-33",
+    "slug": "b7-33",
+    "category": "healing-recovery-peptides",
+    "specs": ["2mg×10", "10mg×10"],
+    "cas": "N/A",
+    "storage": "Store at -20°C.",
+    "description": "Soluble single-chain relaxin analog for researching antifibrotic effects and tissue remodeling in laboratory settings."
+  },
+  {
+    "name": "BAC Water",
+    "slug": "bac-water",
+    "category": "ancillaries",
+    "specs": ["3ml×10", "10ml×10"],
+    "cas": "7732-18-5",
+    "storage": "Store at room temperature.",
+    "description": "Sterile bacteriostatic water formulated for the reliable reconstitution and preservation of delicate peptide chains during long-term storage."
+  },
+  {
+    "name": "B12",
+    "slug": "b12",
+    "category": "ancillaries",
+    "specs": ["10mg×10"],
+    "cas": "68-19-9",
+    "storage": "Store at room temperature away from light.",
+    "description": "Injectable-grade Vitamin B12 for metabolic research, supporting in vitro studies on cellular energy and neurological function."
+  },
+  {
+    "name": "BPC-157",
+    "slug": "bpc-157",
+    "category": "healing-recovery-peptides",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "137525-51-0",
+    "storage": "Store at -20°C.",
+    "description": "Body Protection Compound-157, highly pure peptide for researching angiogenesis, soft tissue repair, and gastrointestinal healing models."
+  },
+  {
+    "name": "BPC 5mg + TB 5mg",
+    "slug": "bpc-tb-5mg-blend",
+    "category": "healing-recovery-peptides",
+    "specs": ["10mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "Synergistic peptide blend engineered to study the combined effects of BPC-157 and TB-500 on accelerated tissue regeneration and repair."
+  },
+  {
+    "name": "BPC 10mg + TB 10mg",
+    "slug": "bpc-tb-10mg-blend",
+    "category": "healing-recovery-peptides",
+    "specs": ["20mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "High-concentration synergistic peptide blend designed for intensive regenerative studies on tissue repair and cellular recovery pathways."
+  },
+  {
+    "name": "Cagrilintide",
+    "slug": "cagrilintide",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "141430-65-1",
+    "storage": "Store at -20°C.",
+    "description": "Long-acting amylin analog utilized in advanced metabolic research for evaluating synergistic weight management and glycemic control pathways."
+  },
+  {
+    "name": "Cagrisema (2.5+2.5)",
+    "slug": "cagrisema",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["5mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "Co-formulated combination of Cagrilintide and Semaglutide, providing a dual-action mechanism for studying complex endocrine and metabolic signaling."
+  },
+  {
+    "name": "CJC-1295 w/ DAC",
+    "slug": "cjc-1295-dac",
+    "category": "growth-hormone",
+    "specs": ["5mg×10"],
+    "cas": "863288-34-0",
+    "storage": "Store at -20°C.",
+    "description": "Long-acting GHRH analog with Drug Affinity Complex, offering extended half-life for investigating sustained endogenous growth hormone pulsatility."
+  },
+  {
+    "name": "CJC-1295 (no DAC)",
+    "slug": "cjc-1295-no-dac",
+    "category": "growth-hormone",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "863288-34-0 (modified)",
+    "storage": "Store at -20°C.",
+    "description": "Standard GHRH analog (Modified GRF 1-29) for precisely modeling pulsatile growth hormone release without prolonged binding affinity."
+  },
+  {
+    "name": "CJC-1295 + Ipamorelin",
+    "slug": "cjc-1295-ipamorelin-blend",
+    "category": "growth-hormone",
+    "specs": ["10mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "Optimized peptide blend combining a GHRH and a GHRP, enabling laboratories to study synergistic stimulation of the somatotropic axis."
+  },
+  {
+    "name": "Dihexa",
+    "slug": "dihexa",
+    "category": "cognitive-nootropic",
+    "specs": ["10mg×10"],
+    "cas": "1401708-83-5",
+    "storage": "Store at -20°C.",
+    "description": "Potent angiotensin IV analog investigated for its remarkable capability to enhance synaptogenesis and cognitive function in neurological models."
+  },
+  {
+    "name": "DSIP",
+    "slug": "dsip",
+    "category": "cognitive-nootropic",
+    "specs": ["5mg×10"],
+    "cas": "62568-57-4",
+    "storage": "Store at -20°C.",
+    "description": "Delta Sleep-Inducing Peptide, a neuropeptide used to study circadian rhythms, stress modulation, and autonomic regulation pathways."
+  },
+  {
+    "name": "Dulaglutide",
+    "slug": "dulaglutide",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "923950-08-7",
+    "storage": "Store at -20°C.",
+    "description": "GLP-1 receptor agonist engineered for extended action, facilitating metabolic research on insulinotropic effects and gastric motility."
+  },
+  {
+    "name": "Epithalon",
+    "slug": "epithalon",
+    "category": "anti-aging-longevity",
+    "specs": ["10mg×10", "50mg×10"],
+    "cas": "307297-39-8",
+    "storage": "Store at -20°C.",
+    "description": "Synthetic pineal peptide derivative critical for studying telomerase activation, cellular senescence, and biological life extension models."
+  },
+  {
+    "name": "5-AMINO-1MQ",
+    "slug": "5-amino-1mq",
+    "category": "cosmetic-aesthetic",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "42464-96-0",
+    "storage": "Store in a cool, dry place.",
+    "description": "NNMT inhibitor researched for its potential to reverse diet-induced obesity and regulate adipocyte metabolism on a cellular level."
+  },
+  {
+    "name": "FOXO4",
+    "slug": "foxo4",
+    "category": "cognitive-nootropic",
+    "specs": ["2mg×10", "10mg×10"],
+    "cas": "N/A",
+    "storage": "Store at -20°C.",
+    "description": "Transcription factor-related peptide utilized in specialized studies involving cellular apoptosis, oxidative stress, and neuroprotection."
+  },
+  {
+    "name": "FOXO4-DRI",
+    "slug": "foxo4-dri",
+    "category": "cognitive-nootropic",
+    "specs": ["10mg×10"],
+    "cas": "N/A",
+    "storage": "Store at -20°C.",
+    "description": "Advanced senolytic peptide designed to selectively induce apoptosis in senescent cells, utilized heavily in neuro-longevity research."
+  },
+  {
+    "name": "GHK-Cu",
+    "slug": "ghk-cu",
+    "category": "cosmetic-aesthetic",
+    "specs": ["50mg×10", "100mg×10"],
+    "cas": "49557-75-7",
+    "storage": "Store at -20°C.",
+    "description": "Copper-binding peptide renowned in dermatological research for its involvement in collagen synthesis, wound healing, and tissue remodeling."
+  },
+  {
+    "name": "GLOW Blend",
+    "slug": "glow-blend",
+    "category": "cosmetic-aesthetic",
+    "specs": ["70mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "Proprietary cosmetic research blend designed to investigate synergistic mechanisms related to skin elasticity and dermal extracellular matrix production."
+  },
+  {
+    "name": "KLOW Blend",
+    "slug": "klow-blend",
+    "category": "cosmetic-aesthetic",
+    "specs": ["80mg×10"],
+    "cas": "Blend",
+    "storage": "Store at -20°C.",
+    "description": "Advanced cosmetic peptide formulation created for researching targeted aesthetic applications and topical cellular interactions."
+  },
+  {
+    "name": "Glutathione",
+    "slug": "glutathione",
+    "category": "ancillaries",
+    "specs": ["600mg×10", "1500mg×10"],
+    "cas": "70-18-8",
+    "storage": "Store at 2-8°C.",
+    "description": "Essential laboratory antioxidant utilized as a vital reagent for cellular defense, detoxification models, and oxidative stress research."
+  },
+  {
+    "name": "Ipamorelin",
+    "slug": "ipamorelin",
+    "category": "growth-hormone",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "170851-70-4",
+    "storage": "Store at -20°C.",
+    "description": "Highly specific Growth Hormone Releasing Peptide (GHRP) utilized for studying targeted somatotropic stimulation without elevating prolactin or cortisol."
+  },
+  {
+    "name": "KPV",
+    "slug": "kpv",
+    "category": "healing-recovery-peptides",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "17750-73-1",
+    "storage": "Store at -20°C.",
+    "description": "Alpha-MSH-derived tripeptide explored extensively for its potent anti-inflammatory and immunomodulatory properties in tissue recovery models."
+  },
+  {
+    "name": "L-Carnitine",
+    "slug": "l-carnitine",
+    "category": "ancillaries",
+    "specs": ["1200mg×10"],
+    "cas": "541-15-1",
+    "storage": "Store at room temperature.",
+    "description": "High-purity metabolic ancillary essential for in vitro research concerning mitochondrial lipid transport and fatty acid oxidation."
+  },
+  {
+    "name": "Lipo-C",
+    "slug": "lipo-c",
+    "category": "ancillaries",
+    "specs": ["10ml×10"],
+    "cas": "Blend",
+    "storage": "Store at 2-8°C.",
+    "description": "Lipotropic reagent blend utilized in laboratory settings to investigate the metabolic breakdown and export of lipids."
+  },
+  {
+    "name": "LL37",
+    "slug": "ll37",
+    "category": "healing-recovery-peptides",
+    "specs": ["5mg×10"],
+    "cas": "597562-32-8",
+    "storage": "Store at -20°C.",
+    "description": "Endogenous antimicrobial peptide researched for its role in innate immune response, wound healing, and cellular defense mechanisms."
+  },
+  {
+    "name": "MIC (Lipo C+B12)",
+    "slug": "mic",
+    "category": "ancillaries",
+    "specs": ["10mg×10"],
+    "cas": "Blend",
+    "storage": "Store at 2-8°C.",
+    "description": "Methionine, Inositol, and Choline combined with Vitamin B12, acting as a crucial ancillary for modeling hepatic lipid metabolism."
+  },
+  {
+    "name": "MOTS-c",
+    "slug": "mots-c",
+    "category": "anti-aging-longevity",
+    "specs": ["10mg×10", "15mg×10", "20mg×10", "40mg×10"],
+    "cas": "1627580-64-6",
+    "storage": "Store at -20°C.",
+    "description": "Mitochondrial-derived peptide studied for its influence on metabolic homeostasis, insulin sensitivity, and cellular longevity pathways."
+  },
+  {
+    "name": "NAD+",
+    "slug": "nad",
+    "category": "anti-aging-longevity",
+    "specs": ["100mg×10", "500mg×10", "1000mg×10"],
+    "cas": "53-84-9",
+    "storage": "Store at -20°C.",
+    "description": "Nicotinamide Adenine Dinucleotide, a fundamental coenzyme utilized in studies exploring cellular energy transfer, aging, and DNA repair."
+  },
+  {
+    "name": "Retatrutide",
+    "slug": "retatrutide",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["5mg×10", "10mg×10", "15mg×10", "20mg×10", "30mg×10", "60mg×10"],
+    "cas": "2381089-83-2",
+    "storage": "Store at -20°C.",
+    "description": "Novel triple-receptor agonist (GLP-1/GIP/Glucagon) offering researchers unprecedented mechanisms for investigating comprehensive metabolic control."
+  },
+  {
+    "name": "Selank",
+    "slug": "selank",
+    "category": "cognitive-nootropic",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "129954-34-3",
+    "storage": "Store at -20°C.",
+    "description": "Heptapeptide analog of tuftsin extensively researched for its anxiolytic and nootropic effects within neurochemical modeling."
+  },
+  {
+    "name": "Semaglutide",
+    "slug": "semaglutide",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["10mg×10", "15mg×10", "20mg×10", "30mg×10"],
+    "cas": "910463-68-2",
+    "storage": "Store at -20°C.",
+    "description": "Industry-standard GLP-1 receptor agonist, providing consistent and reproducible results for in vitro studies on insulin secretion and metabolism."
+  },
+  {
+    "name": "Semax",
+    "slug": "semax",
+    "category": "cognitive-nootropic",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "80714-61-0",
+    "storage": "Store at -20°C.",
+    "description": "ACTH-derived peptide crucial for neurological research involving neuroprotection, memory consolidation, and BDNF expression pathways."
+  },
+  {
+    "name": "Sermorelin Acetate",
+    "slug": "sermorelin",
+    "category": "growth-hormone",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "86168-78-7",
+    "storage": "Store at -20°C.",
+    "description": "Truncated analog of GHRH used systematically to study the physiological stimulation of endogenous growth hormone secretion."
+  },
+  {
+    "name": "Snap-8",
+    "slug": "snap-8",
+    "category": "cosmetic-aesthetic",
+    "specs": ["10mg×10", "100mg×10"],
+    "cas": "868844-74-0",
+    "storage": "Store at -20°C.",
+    "description": "Advanced octapeptide utilized in dermatological research to investigate the modulation of neurotransmitter pathways linked to muscle contraction."
+  },
+  {
+    "name": "SS-31",
+    "slug": "ss-31",
+    "category": "anti-aging-longevity",
+    "specs": ["10mg×10", "50mg×10"],
+    "cas": "736992-21-5",
+    "storage": "Store at -20°C.",
+    "description": "Mitochondria-targeted antioxidant peptide essential for studying oxidative stress resilience and the prevention of cellular mitochondrial dysfunction."
+  },
+  {
+    "name": "TB-500",
+    "slug": "tb-500",
+    "category": "healing-recovery-peptides",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "77591-33-4",
+    "storage": "Store at -20°C.",
+    "description": "Synthetic derivative of Thymosin Beta-4, critical for laboratory research focused on cellular migration, actin upregulation, and tissue repair."
+  },
+  {
+    "name": "Tesamorelin",
+    "slug": "tesamorelin",
+    "category": "growth-hormone",
+    "specs": ["5mg×10", "10mg×10", "20mg×10"],
+    "cas": "218949-48-5",
+    "storage": "Store at -20°C.",
+    "description": "GHRH analog synthesized for endocrine research, particularly noted for its role in investigating visceral adipose tissue reduction models."
+  },
+  {
+    "name": "Thymalin/Thymulin",
+    "slug": "thymalin",
+    "category": "anti-aging-longevity",
+    "specs": ["10mg×10"],
+    "cas": "63958-90-7",
+    "storage": "Store at -20°C.",
+    "description": "Thymic bioregulator essential for immunological research and the study of T-cell differentiation and senescence."
+  },
+  {
+    "name": "Thymosin Alpha-1",
+    "slug": "thymosin-alpha-1",
+    "category": "anti-aging-longevity",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "62304-98-7",
+    "storage": "Store at -20°C.",
+    "description": "Endogenous peptide modifier explored in laboratory models focusing on immune response enhancement and host defense mechanisms."
+  },
+  {
+    "name": "Tirzepatide",
+    "slug": "tirzepatide",
+    "category": "glp1-metabolic-peptides",
+    "specs": ["5mg×10", "10mg×10", "15mg×10", "20mg×10", "30mg×10", "40mg×10", "50mg×10", "60mg×10", "80mg×10"],
+    "cas": "2023788-19-2",
+    "storage": "Store at -20°C.",
+    "description": "Dual GIP and GLP-1 receptor agonist utilized for comprehensive research regarding synergistic incretin effects on systemic metabolism."
+  },
+  {
+    "name": "VIP",
+    "slug": "vip",
+    "category": "ancillaries",
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "37221-79-7",
+    "storage": "Store at -20°C.",
+    "description": "Vasoactive Intestinal Peptide, an essential research compound for studying smooth muscle relaxation, vasodilation, and immune system modulation."
+  }
+]

@@ -1,5 +1,5 @@
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, getTranslations} from 'next-intl/server';
 import {Rajdhani, DM_Sans, DM_Mono} from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -23,10 +23,13 @@ const dmMono = DM_Mono({
   variable: '--font-dm-mono',
 });
 
-export const metadata = {
-  title: '99 Purity Wholesale',
-  description: 'Your trusted B2B wholesale partner.',
-};
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+  const t = await getTranslations({locale, namespace: 'Meta'});
+  return {
+    title: t('homeTitle'),
+    description: t('homeDesc'),
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -35,7 +38,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} suppressHydrationWarning>

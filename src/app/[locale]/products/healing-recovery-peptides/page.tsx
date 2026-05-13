@@ -1,40 +1,18 @@
 import { AlertTriangle, Mail, Zap, CheckCircle2 } from 'lucide-react';
 import { Link } from '@/i18n/routing';
+import { getTranslations } from 'next-intl/server';
+import productsData from '@/data/products.json';
 
-export default function HealingRecoveryPage() {
-  const products = [
-    {
-      name: 'BPC-157',
-      specs: ['5mg × 10 vials', '10mg × 10 vials'],
-    },
-    {
-      name: 'TB-500',
-      specs: ['5mg × 10 vials', '10mg × 10 vials'],
-    },
-    {
-      name: 'BPC-157 + TB-500 Blend',
-      specs: ['5mg/5mg × 10 vials', '10mg/10mg × 10 vials'],
-    },
-    {
-      name: 'LL-37',
-      specs: ['2mg × 10 vials', '5mg × 10 vials'],
-    },
-    {
-      name: 'KPV',
-      specs: ['5mg × 10 vials', '10mg × 10 vials'],
-    },
-    {
-      name: 'B7-33',
-      specs: ['5mg × 10 vials'],
-    }
-  ];
+export default async function HealingRecoveryPage({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'CategoryTemplate' });
+  const products = productsData.filter(p => p.category === 'healing-recovery-peptides');
 
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
       {/* Research Disclaimer Banner */}
       <div className="bg-yellow-900/20 border-b border-yellow-700/30 text-yellow-500 py-3 px-4 text-center text-sm font-dm-mono flex items-center justify-center gap-2">
         <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-        ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.
+        {t('banner')}
       </div>
 
       {/* Category Hero */}
@@ -64,7 +42,7 @@ export default function HealingRecoveryPage() {
                 </h3>
                 
                 <div className="mb-6 flex-grow">
-                  <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">Available Specs</h4>
+                  <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{t('availableSpecs')}</h4>
                   <ul className="space-y-2">
                     {product.specs.map((spec) => (
                       <li key={spec} className="flex items-center gap-2 text-gray-300 font-dm-sans">
@@ -77,21 +55,24 @@ export default function HealingRecoveryPage() {
 
                 <div className="bg-black/50 p-4 rounded-lg mb-6 border border-white/5">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-gray-400 font-dm-sans text-sm">MOQ</span>
-                    <span className="text-white font-bold font-dm-mono">10 Units</span>
+                    <span className="text-gray-400 font-dm-sans text-sm">{t('moq')}</span>
+                    <span className="text-white font-bold font-dm-mono">{t('units')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400 font-dm-sans text-sm">Pricing</span>
-                    <span className="text-brand-accent font-bold font-dm-mono text-sm border border-brand-accent/30 px-2 py-1 rounded bg-brand-accent/10">Contact</span>
+                    <span className="text-gray-400 font-dm-sans text-sm">{t('pricing')}</span>
+                    <span className="text-brand-accent font-bold font-dm-mono text-sm border border-brand-accent/30 px-2 py-1 rounded bg-brand-accent/10">{t('contact')}</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-3">
+                  <Link href={`/products/${product.category}/${product.slug}`} className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
+                    {t('viewDetails')}
+                  </Link>
                   <a href={`https://wa.me/1234567890?text=Hi, I'm interested in wholesale pricing for ${product.name}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
-                    <Zap className="w-5 h-5" /> WhatsApp Pricing
+                    <Zap className="w-5 h-5" /> {t('whatsappPricing')}
                   </a>
                   <a href={`mailto:sales@99purity.com?subject=Wholesale Inquiry: ${product.name}`} className="w-full bg-transparent border border-white/20 hover:bg-white/5 text-white font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
-                    <Mail className="w-5 h-5" /> Email Inquiry
+                    <Mail className="w-5 h-5" /> {t('emailInquiry')}
                   </a>
                 </div>
               </div>
@@ -116,7 +97,7 @@ export default function HealingRecoveryPage() {
                 Our inventory includes widely studied compounds such as BPC-157 (Body Protection Compound-157) and TB-500 (Thymosin Beta-4 derivative), which are frequently investigated for their potential to accelerate the repair of tendons, ligaments, and muscle tissue. We also offer advanced blends combining these sequences to facilitate complex synergistic studies. Specialized peptides like LL-37 (an antimicrobial peptide) and KPV (an anti-inflammatory sequence) allow for targeted research into immune response and wound healing pathways.
               </p>
               <p>
-                Ensuring structural stability and purity is critical for regenerative research. All our healing and recovery peptides undergo stringent quality control protocols, including mass spectrometry and HPLC analysis, guaranteeing >99% purity to ensure consistent, reliable, and reproducible experimental outcomes.
+                Ensuring structural stability and purity is critical for regenerative research. All our healing and recovery peptides undergo stringent quality control protocols, including mass spectrometry and HPLC analysis, guaranteeing &gt;99% purity to ensure consistent, reliable, and reproducible experimental outcomes.
               </p>
             </div>
           </details>

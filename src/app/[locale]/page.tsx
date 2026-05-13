@@ -2,8 +2,8 @@ import {getTranslations, getLocale} from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { ShieldCheck, Truck, FlaskConical, Building2, Download, CheckCircle2, Star, Beaker, FileBadge, BarChart3, Users, Zap, Mail } from 'lucide-react';
 
-export default async function HomePage() {
-  const t = await getTranslations('Index');
+export default async function HomePage({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'Index' });
   const locale = await getLocale();
 
   return (

@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "texas-dallas",
+    "city": "Dallas",
+    "state": "Texas",
+    "region": "Southwest",
+    "h1": "Premium Peptide Supplier in Dallas, Texas",
+    "intro": "Dallas is a rapidly growing hub for advanced medical research, anti-aging clinics, and wellness centers. As the demand for high-quality wholesale peptides in Texas expands, 99 Purity Peptides provides institutions across the DFW metroplex with verified, third-party tested compounds. Whether you are conducting endocrinology research or exploring metabolic pathways, we are your trusted peptide supplier in Dallas.",
+    "popularProducts": ["Semaglutide", "Tirzepatide", "BPC-157", "CJC-1295 w/ DAC"]
+  },
+  {
+    "slug": "texas-houston",
+    "city": "Houston",
+    "state": "Texas",
+    "region": "Southwest",
+    "h1": "Top-Tier Wholesale Peptides in Houston, Texas",
+    "intro": "Home to the world's largest medical center, Houston represents the pinnacle of clinical and independent research. 99 Purity Peptides supplies the Houston medical and wellness community with >99% pure research compounds. For laboratories seeking a reliable peptide supplier in Houston and wholesale peptides in Texas, our stringent analytical testing ensures flawless experimental data.",
+    "popularProducts": ["Retatrutide", "TB-500", "Epithalon", "GHK-Cu"]
+  },
+  {
+    "slug": "florida-miami",
+    "city": "Miami",
+    "state": "Florida",
+    "region": "Southeast",
+    "h1": "Leading Peptide Supplier in Miami, Florida",
+    "intro": "Miami's booming wellness, aesthetic, and longevity industry demands the highest caliber of research compounds. We specialize in supplying B2B clinics and laboratories with wholesale peptides in Florida. If you are looking for a trusted peptide supplier in Miami for your next cosmetic or metabolic study, our batch-matched COAs guarantee uncompromised quality.",
+    "popularProducts": ["GHK-Cu", "Snap-8", "Semaglutide", "MOTS-c"]
+  },
+  {
+    "slug": "california-los-angeles",
+    "city": "Los Angeles",
+    "state": "California",
+    "region": "West Coast",
+    "h1": "Wholesale Peptides in Los Angeles, California",
+    "intro": "Los Angeles is at the forefront of anti-aging, longevity, and bio-optimization research. 99 Purity Peptides provides top-tier research facilities across Southern California with rigorously tested compounds. As your premier peptide supplier in Los Angeles, we ensure access to wholesale peptides in California that meet strict cGMP-aligned standards.",
+    "popularProducts": ["NAD+", "Epithalon", "Tirzepatide", "Tesamorelin"]
+  },
+  {
+    "slug": "arizona-scottsdale",
+    "city": "Scottsdale",
+    "state": "Arizona",
+    "region": "Southwest",
+    "h1": "Reliable Peptide Supplier in Scottsdale, Arizona",
+    "intro": "Scottsdale has established itself as a premier destination for holistic wellness and longevity research. To support this thriving sector, we deliver ultra-pure wholesale peptides in Arizona. Research institutions rely on us as their dedicated peptide supplier in Scottsdale for metabolic, cognitive, and tissue recovery studies.",
+    "popularProducts": ["BPC-157", "SS-31", "Semax", "Ipamorelin"]
+  },
+  {
+    "slug": "new-york-nyc",
+    "city": "New York City",
+    "state": "New York",
+    "region": "Northeast",
+    "h1": "Wholesale Peptides in New York City, New York",
+    "intro": "The fast-paced, cutting-edge medical and research community in NYC requires unparalleled quality and speed. 99 Purity Peptides serves as the definitive peptide supplier in NYC, offering fast domestic fulfillment for wholesale peptides in New York. We support academic and private labs with meticulously verified compounds.",
+    "popularProducts": ["Semaglutide", "Dihexa", "Thymosin Alpha-1", "AOD9604"]
+  },
+  {
+    "slug": "colorado-denver",
+    "city": "Denver",
+    "state": "Colorado",
+    "region": "Mountain",
+    "h1": "Premium Peptide Supplier in Denver, Colorado",
+    "intro": "Denver's active lifestyle and high-altitude research facilities heavily focus on physical recovery, sports medicine, and bio-optimization. We supply wholesale peptides in Colorado to support these critical studies. As an industry-leading peptide supplier in Denver, our regenerative and metabolic compounds are validated for maximum efficacy.",
+    "popularProducts": ["BPC 10mg+TB 10mg", "KPV", "LL37", "Cagrilintide"]
+  },
+  {
+    "slug": "nevada-las-vegas",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "region": "West",
+    "h1": "Wholesale Peptides in Las Vegas, Nevada",
+    "intro": "Beyond entertainment, Las Vegas is rapidly expanding its footprint in the regenerative medicine and anti-aging sectors. We are proud to be the go-to peptide supplier in Las Vegas, providing highly sought-after wholesale peptides in Nevada to clinics and independent researchers focused on cutting-edge longevity and aesthetic models.",
+    "popularProducts": ["Tirzepatide", "GHK-Cu", "FOXO4-DRI", "5-AMINO-1MQ"]
+  },
+  {
+    "slug": "georgia-atlanta",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "region": "Southeast",
+    "h1": "Trusted Peptide Supplier in Atlanta, Georgia",
+    "intro": "Atlanta's robust network of healthcare institutions and biotech startups makes it a central hub for molecular research in the Southeast. 99 Purity Peptides provides verified wholesale peptides in Georgia. Choose us as your reliable peptide supplier in Atlanta to ensure every vial is backed by independent US laboratory testing.",
+    "popularProducts": ["Retatrutide", "B12", "Cagrisema", "Sermorelin Acetate"]
+  }
+]
