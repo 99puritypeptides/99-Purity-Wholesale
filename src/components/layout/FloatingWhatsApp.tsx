@@ -3,7 +3,7 @@
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/15551234567"
+      href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-brand-accent text-brand-bg p-4 rounded-full shadow-lg hover:bg-opacity-90 transition-all hover:scale-110 z-50 flex items-center justify-center animate-bounce-slow"

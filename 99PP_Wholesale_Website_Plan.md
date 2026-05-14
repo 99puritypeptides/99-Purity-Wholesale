@@ -1,4 +1,4 @@
-# 99 Purity Peptides — Wholesale B2B Website
+# 99 Purity Wholesale — Wholesale B2B Website
 ## Complete Page-by-Page, Section-by-Section Build Plan
 
 > **Stack:** Next.js 14 (App Router) · TypeScript · Tailwind CSS · i18n (EN/ES)
@@ -75,7 +75,7 @@ Peptide websites face constant ad disapproval on Google, Meta, and Instagram. Pl
 
 **ES version headline:** "El Proveedor Mayorista de Péptidos de Confianza en América"
 
-### Section 1.3 — Why Choose 99 Purity Peptides (Differentiators)
+### Section 1.3 — Why Choose 99 Purity Wholesale (Differentiators)
 4-column card grid:
 
 | Card | Headline | Body |
@@ -252,7 +252,7 @@ Example: `/products/glp1-metabolic-peptides/semaglutide`
 "Certificates of Analysis — Batch-Verified Purity"
 - Downloadable PDF link(s) for available batches
 - "Need a COA for a specific batch? Contact us with your order number."
-- Statement: "All 99 Purity Peptides products are independently tested by third-party U.S. laboratories to confirm ≥99% purity."
+- Statement: "All 99 Purity Wholesale products are independently tested by third-party U.S. laboratories to confirm ≥99% purity."
 
 ### Section 4.6 — Research Context Block
 150–300 words of factual, research-framed content about the compound. Written for knowledgeable B2B buyers. No medical claims. Citations to PubMed/NIH if desired for credibility.
@@ -278,7 +278,7 @@ Example: `/products/glp1-metabolic-peptides/semaglutide`
 ### Section 5.3 — Why COAs Matter (Competitor Comparison)
 Comparison table framing 99PP vs "typical overseas supplier":
 
-| Factor | 99 Purity Peptides | Typical Overseas Supplier |
+| Factor | 99 Purity Wholesale | Typical Overseas Supplier |
 |--------|-------------------|--------------------------|
 | Manufacturing location | 🇺🇸 United States | Unknown / China / India |
 | COA availability | Batch-matched, always | Generic or unavailable |
@@ -304,7 +304,7 @@ Filterable list of available COA PDFs by product:
 ### Section 6.1 — Brand Story
 **H1:** "Built in America. Trusted by Professionals Nationwide."
 **Story:**
-99 Purity Peptides began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-zone sourcing.
+99 Purity Wholesale began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-zone sourcing.
 
 We built our operation from the ground up — U.S. laboratory, U.S. testing, U.S. team — so that compounding pharmacies, wellness clinics, and licensed researchers would have a reliable domestic source for research-grade peptides at competitive wholesale pricing.
 
@@ -343,7 +343,7 @@ If comfortable showing team members, brief bios. If not, keep abstract: "Our tea
 
 #### Service 1: Dropshipping Program
 **Headline:** "Sell Peptides Without Holding Inventory"
-**Description:** Partner with 99 Purity Peptides as your backend supplier. You take orders, we fulfill them — branded or white-label. Perfect for clinics wanting to offer a peptide line without the overhead of managing stock.
+**Description:** Partner with 99 Purity Wholesale as your backend supplier. You take orders, we fulfill them — branded or white-label. Perfect for clinics wanting to offer a peptide line without the overhead of managing stock.
 **CTA:** "Learn About Dropshipping" → WhatsApp
 
 #### Service 2: New Business Launch Support
@@ -385,7 +385,7 @@ Purpose: Local SEO — rank for "peptide supplier [city/state]" searches.
 
 ### Section 8.1 — Hero
 **H1:** "Wholesale Peptide Supplier — Serving Licensed Professionals Across the United States"
-**Copy:** "99 Purity Peptides ships from our U.S.-based laboratory to licensed buyers in all 50 states. Find information specific to your region, including state-specific compliance notes and local B2B market context."
+**Copy:** "99 Purity Wholesale ships from our U.S.-based laboratory to licensed buyers in all 50 states. Find information specific to your region, including state-specific compliance notes and local B2B market context."
 
 ### Section 8.2 — State/Region Grid
 Cards for high-priority markets (build these pages first):
@@ -409,7 +409,7 @@ Each card: state name, city count, "View [State] →"
 
 **Sections:**
 - Local intro paragraph mentioning Dallas wellness/medical spa industry
-- Why licensed Dallas-area professionals choose 99 Purity Peptides
+- Why licensed Dallas-area professionals choose 99 Purity Wholesale
 - Products popular in this market (based on category relevance)
 - Compliance note for Texas (any state-specific research-use context)
 - Contact CTA for Dallas-area buyers
@@ -553,7 +553,7 @@ Floating WhatsApp button: sticky on all pages, bottom-right, visible on mobile a
 - "wholesale peptides USA"
 - "bulk peptide supplier United States"
 - "research grade peptides wholesale"
-- "99 purity peptides wholesale"
+- "99 Purity Wholesale wholesale"
 - "made in America peptides bulk"
 - "US manufactured peptides supplier"
 
@@ -641,5 +641,5 @@ Display these clearly on: Contact page, Product pages (in ordering info section)
 
 ---
 
-*Plan version 1.0 — 99 Purity Peptides Wholesale B2B Website*
+*Plan version 1.0 — 99 Purity Wholesale Wholesale B2B Website*
 *Prepared based on wholesale catalog and brief provided.*

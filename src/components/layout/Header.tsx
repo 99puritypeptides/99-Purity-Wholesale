@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { Menu, X, ArrowUpRight, Search, Globe } from 'lucide-react';
 import GlobalSearch from '@/components/search/GlobalSearch';
+import CartIcon from '@/components/cart/CartIcon';
 
 export default function Header() {
   const t = useTranslations('Layout');
@@ -109,7 +110,8 @@ export default function Header() {
             </button>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 lg:gap-6">
+            <CartIcon />
             {/* Search Icon for Mobile/Tablet */}
             <button 
               onClick={() => setIsSearchOpen(true)}
@@ -119,7 +121,7 @@ export default function Header() {
             </button>
 
             <a 
-              href="https://wa.me/15551234567" 
+              href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hidden sm:flex items-center gap-3 bg-brand-accent text-brand-bg pl-8 pr-4 py-4 rounded-l-full rounded-tr-[2rem] rounded-br-[0.5rem] font-bold text-xs uppercase tracking-widest transition-[padding,background-color,transform,shadow] duration-300 hover:pr-8 group shadow-[0_0_40px_rgba(79,195,208,0.2)]"

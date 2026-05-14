@@ -394,7 +394,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                   <div className="text-white/40 font-dm-mono text-sm mt-1">{t.kits}</div>
                 </div>
                 <p className="text-brand-text/50 font-dm-sans text-sm leading-relaxed flex-grow">{t.desc}</p>
-                <a href="https://wa.me/1234567890?text=Hi%2C%20I%27d%20like%20to%20learn%20about%20wholesale%20tier%20pricing." target="_blank" rel="noopener noreferrer" className="mt-8 w-full text-center py-3 rounded-xl border border-brand-accent/30 text-brand-accent text-sm font-bold uppercase tracking-widest hover:bg-brand-accent/10 transition-colors font-rajdhani">
+                <a href="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20learn%20about%20wholesale%20tier%20pricing." target="_blank" rel="noopener noreferrer" className="mt-8 w-full text-center py-3 rounded-xl border border-brand-accent/30 text-brand-accent text-sm font-bold uppercase tracking-widest hover:bg-brand-accent/10 transition-colors font-rajdhani">
                   Get Pricing
                 </a>
               </div>
@@ -435,9 +435,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { quote: "We've been sourcing research-grade peptides for our compounding facility for two years. The COA documentation and purity consistency from 99 Purity is simply unmatched by any domestic supplier we've tested.", role: 'Compounding Pharmacy Director', location: 'Texas' },
-              { quote: "Switching to 99 Purity for our wholesale supply was a game changer. Tiered pricing made it easy to scale as our clinic network grew. Our account manager is responsive and the fulfillment is fast.", role: 'Wellness Clinic Network Owner', location: 'Florida' },
-              { quote: "As a distributor serving medical spas across the Southwest, consistent purity and reliable batch COAs are non-negotiable. 99 Purity delivers both, every single time.", role: 'Regional B2B Distributor', location: 'Arizona' },
+              { quote: "We've been sourcing research-grade peptides for our compounding facility for two years. The COA documentation and purity consistency from 99 Purity Wholesale is simply unmatched by any domestic supplier we've tested.", role: 'Compounding Pharmacy Director', location: 'Texas' },
+              { quote: "Switching to 99 Purity Wholesale for our wholesale supply was a game changer. Tiered pricing made it easy to scale as our clinic network grew. Our account manager is responsive and the fulfillment is fast.", role: 'Wellness Clinic Network Owner', location: 'Florida' },
+              { quote: "As a distributor serving medical spas across the Southwest, consistent purity and reliable batch COAs are non-negotiable. 99 Purity Wholesale delivers both, every single time.", role: 'Regional B2B Distributor', location: 'Arizona' },
             ].map((t, i) => (
               <div key={i} className="bg-[#0A0A0A] border border-white/5 rounded-3xl p-10 flex flex-col hover:border-brand-accent/20 transition-colors">
                 <div className="text-brand-accent text-4xl font-rajdhani mb-6">"</div>
@@ -462,7 +462,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                 We Build Peptide<br /><span className="text-brand-accent">Businesses, Not Just Orders</span>
               </h2>
               <p className="text-brand-text/50 font-dm-sans text-lg leading-relaxed mb-10">
-                Beyond wholesale supply, 99 Purity Peptides offers a full suite of B2B services for clinics, distributors, and entrepreneurs entering the peptide market. From dropshipping and private label to website development and business launch consulting.
+                Beyond wholesale supply, 99 Purity Wholesale offers a full suite of B2B services for clinics, distributors, and entrepreneurs entering the peptide market. From dropshipping and private label to website development and business launch consulting.
               </p>
               <Link href="/services" className="inline-flex items-center gap-3 bg-brand-accent text-brand-bg font-bold text-sm px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(79,195,208,0.3)] transition-all font-dm-sans uppercase tracking-widest">
                 Explore All Services <ArrowRight className="w-4 h-4" />
@@ -527,12 +527,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
           <div className="text-center mb-16">
             <span className="text-brand-accent font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">Common Questions</span>
             <h2 className="text-5xl font-rajdhani font-bold text-white">Wholesale Peptide FAQ</h2>
-            <p className="text-brand-text/40 font-dm-sans mt-4">Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity.</p>
+            <p className="text-brand-text/40 font-dm-sans mt-4">Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity Wholesale.</p>
           </div>
           <div className="space-y-4">
             {[
-              { q: 'What makes 99 Purity Peptides different from other wholesale peptide suppliers?', a: 'We are a U.S.-based manufacturer — not an importer or repackager. Every batch is synthesized domestically and independently tested by accredited U.S. third-party laboratories. Every product ships with a batch-matched Certificate of Analysis (COA) confirming ≥99% purity via HPLC and Mass Spectrometry.' },
-              { q: 'Who qualifies to purchase wholesale peptides from 99 Purity?', a: 'Our products are sold strictly to licensed professionals and qualified research institutions — including compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All purchases require buyer attestation of professional status.' },
+              { q: 'What makes 99 Purity Wholesale different from other wholesale peptide suppliers?', a: 'We are a U.S.-based manufacturer — not an importer or repackager. Every batch is synthesized domestically and independently tested by accredited U.S. third-party laboratories. Every product ships with a batch-matched Certificate of Analysis (COA) confirming ≥99% purity via HPLC and Mass Spectrometry.' },
+              { q: 'Who qualifies to purchase wholesale peptides from 99 Purity Wholesale?', a: 'Our products are sold strictly to licensed professionals and qualified research institutions — including compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All purchases require buyer attestation of professional status.' },
               { q: 'What is the minimum order quantity (MOQ) for wholesale peptides?', a: 'Our minimum order is 10 units (1 kit) per product specification. Volume discounts activate at 10, 20, and 40+ kits through our tiered pricing program. Contact our team for current pricing.' },
               { q: 'Do you offer bulk peptides for compounding pharmacies?', a: 'Yes. Compounding pharmacies are one of our primary B2B client segments. We supply bulk research-grade peptides including GLP-1 compounds, growth hormone secretagogues, and healing peptides with full COA documentation suitable for pharmacy procurement records.' },
               { q: 'What payment methods do you accept for wholesale orders?', a: 'We accept Bitcoin, Zelle, and bank transfer (ACH/Wire). These methods are available to all verified wholesale accounts. Contact our team for payment instructions after your account is approved.' },
@@ -573,7 +573,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               Join 200+ compounding pharmacies, wellness clinics, and licensed distributors sourcing research-grade bulk peptides from America's most trusted wholesale supplier.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-              <a href="https://wa.me/1234567890?text=Hi%2C%20I%27d%20like%20to%20request%20wholesale%20peptide%20pricing." target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-brand-accent text-brand-bg font-bold text-sm px-12 py-6 rounded-full transition-all hover:shadow-[0_0_50px_rgba(79,195,208,0.4)] hover:-translate-y-1 font-dm-sans uppercase tracking-widest">
+              <a href="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20request%20wholesale%20peptide%20pricing." target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-brand-accent text-brand-bg font-bold text-sm px-12 py-6 rounded-full transition-all hover:shadow-[0_0_50px_rgba(79,195,208,0.4)] hover:-translate-y-1 font-dm-sans uppercase tracking-widest">
                 <Zap className="w-5 h-5 fill-current" />
                 Request Pricing on WhatsApp
               </a>

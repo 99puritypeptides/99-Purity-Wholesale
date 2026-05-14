@@ -3,23 +3,51 @@ import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, B
 import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
 import { getTranslations } from 'next-intl/server';
+import SpecSelector from '@/components/products/SpecSelector';
+import ShareProduct from '@/components/products/ShareProduct';
 
 export async function generateMetadata({ params }: { params: { locale: string; category: string; slug: string } }) {
   const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
   if (!product) return {};
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
+  const url = `${baseUrl}/${params.locale}/products/${params.category}/${params.slug}`;
+
   return {
-    title: `${product.name} — Wholesale Bulk Supply | 99 Purity Peptides`,
-    description: `Buy ${product.name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping to all 50 states. Research use only.`,
+    metadataBase: new URL(baseUrl),
+    title: `${product.name} — Wholesale Bulk Supply | 99 Purity Wholesale`,
+    description: `Buy ${product.name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping. Research use only.`,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
+      title: `${product.name} | Bulk Wholesale Research Peptides`,
+      description: `Premium ${product.name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment.`,
+      url: url,
+      siteName: '99 Purity Wholesale',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${product.name} Wholesale Peptides`,
+        },
+      ],
+      locale: params.locale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
       title: `${product.name} — Wholesale Supply`,
-      description: product.description,
+      description: `Buy bulk ${product.name} at ≥99% purity. U.S. manufactured.`,
+      images: ['/og-image.png'],
     },
   };
 }
 
 function buildFaqs(name: string, specs: string[], cas: string) {
   return [
-    { q: `What is the purity of wholesale ${name}?`, a: `All batches of ${name} from 99 Purity Peptides are independently verified at ≥99% purity by accredited U.S. laboratories using HPLC and Mass Spectrometry. A batch-matched Certificate of Analysis (COA) is included with every shipment.` },
+    { q: `What is the purity of wholesale ${name}?`, a: `All batches of ${name} from 99 Purity Wholesale are independently verified at ≥99% purity by accredited U.S. laboratories using HPLC and Mass Spectrometry. A batch-matched Certificate of Analysis (COA) is included with every shipment.` },
     { q: `What specifications of ${name} are available?`, a: `${name} is available in the following wholesale specifications: ${specs.join(', ')}. Minimum order quantity is 10 units (1 kit) per specification.` },
     { q: `What is the MOQ for wholesale ${name}?`, a: `The minimum order quantity for ${name} is 10 units (1 kit) per specification. Volume discounts are available through our tiered pricing: Start (1–9 kits), Tier 1 (10–19), Tier 2 (20–39), and Tier 3 (40+ kits).` },
     { q: `How is ${name} shipped?`, a: `${name} ships as a lyophilized (freeze-dried) powder via priority domestic carrier from our U.S. facility. Delivery is 2–4 business days to all 50 states. No international customs risk. No cold-chain required during transit.` },
@@ -94,9 +122,23 @@ export default async function ProductPage({ params }: { params: { locale: string
               <h1 className="text-4xl md:text-5xl font-rajdhani font-bold text-white mb-4">
                 {product.name}
               </h1>
-              <p className="text-xl text-gray-400 font-dm-sans leading-relaxed">
+              <p className="text-xl text-gray-400 font-dm-sans leading-relaxed mb-8">
                 {product.description}
               </p>
+
+              <SpecSelector
+                productId={product.slug}
+                productName={product.name}
+                category={formatCategoryName(product.category)}
+                categoryPage={`/products/${product.category}`}
+                specs={Array.from(new Set(product.specs.map(s => s.split('×')[0])))}
+                kitSizes={Array.from(new Set(product.specs.map(s => parseInt(s.split('×')[1]))))}
+              />
+
+              <ShareProduct 
+                title={product.name} 
+                url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale}/products/${product.category}/${product.slug}`}
+              />
             </div>
 
             {/* Specifications & MOQ */}
@@ -190,7 +232,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               </p>
               
               <div className="space-y-4">
-                <a href={`https://wa.me/1234567890?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 rounded-lg transition-all font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(79,195,208,0.3)] hover:shadow-[0_0_25px_rgba(79,195,208,0.5)]">
+                <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 rounded-lg transition-all font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(79,195,208,0.3)] hover:shadow-[0_0_25px_rgba(79,195,208,0.5)]">
                   <Zap className="w-5 h-5" /> {t('whatsappCta')}
                 </a>
                 
@@ -254,7 +296,7 @@ export default async function ProductPage({ params }: { params: { locale: string
       
       {/* Mobile Sticky CTA Footer (only visible on small screens) */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#0B0F15] border-t border-white/10 z-50 lg:hidden shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
-        <a href={`https://wa.me/1234567890?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-3 rounded-lg transition-colors font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-2">
+        <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-3 rounded-lg transition-colors font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-2">
           <Zap className="w-5 h-5" /> {t('requestPricingTitle')}
         </a>
       </div>

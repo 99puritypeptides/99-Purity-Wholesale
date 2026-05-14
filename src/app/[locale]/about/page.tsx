@@ -7,8 +7,8 @@ export default function AboutPage() {
   const t = useTranslations("About");
 
   const handleWhatsAppClick = () => {
-    const phone = "18005550199";
-    const message = "Hi, I have a question about 99 Purity Peptides wholesale sourcing.";
+    const phone = "18437439007";
+    const message = "Hi, I have a question about 99 Purity Wholesale wholesale sourcing.";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -29,7 +29,7 @@ export default function AboutPage() {
             {t("Hero.subtitle")}
           </p>
           <p className="text-lg text-slate-400 font-dm-sans max-w-3xl mx-auto leading-relaxed">
-            Since our founding, 99 Purity Peptides has operated on a single principle: licensed professionals and qualified researchers in the United States deserve a domestic peptide supplier they can trust — one that backs every claim with data, every batch with a COA, and every client relationship with genuine partnership.
+            Since our founding, 99 Purity Wholesale has operated on a single principle: licensed professionals and qualified researchers in the United States deserve a domestic peptide supplier they can trust — one that backs every claim with data, every batch with a COA, and every client relationship with genuine partnership.
           </p>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <blockquote className="text-3xl md:text-4xl font-rajdhani font-bold text-white leading-tight mb-8">
             "Every vial we ship carries the weight of our reputation — and the trust of the licensed professionals who depend on us for research-grade quality, batch after batch."
           </blockquote>
-          <p className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-widest">— The 99 Purity Peptides Team</p>
+          <p className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-widest">— The 99 Purity Wholesale Team</p>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <span className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">Our Clients</span>
-              <h2 className="text-4xl font-bold text-white font-rajdhani mb-8">Who Sources From 99 Purity Peptides</h2>
+              <h2 className="text-4xl font-bold text-white font-rajdhani mb-8">Who Sources From 99 Purity Wholesale</h2>
               <p className="text-slate-400 font-dm-sans leading-relaxed mb-8">
                 We are a B2B-only wholesale supplier. Our clients are licensed professionals and qualified research institutions across the United States who require consistent, verified, research-grade peptide supply at competitive wholesale pricing.
               </p>

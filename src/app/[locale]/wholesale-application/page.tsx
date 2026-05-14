@@ -3,8 +3,8 @@ import { CheckCircle2, ShieldCheck, FlaskConical, Users, Truck, Award, ArrowRigh
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   return {
-    title: 'Apply for a Wholesale Account | 99 Purity Peptides — Bulk Research Peptides USA',
-    description: 'Apply for a verified wholesale peptide account with 99 Purity Peptides. Access bulk pricing on 50+ research-grade peptides. U.S.-manufactured, COA-verified. For licensed professionals only.',
+    title: 'Apply for a Wholesale Account | 99 Purity Wholesale — Bulk Research Peptides USA',
+    description: 'Apply for a verified wholesale peptide account with 99 Purity Wholesale. Access bulk pricing on 50+ research-grade peptides. U.S.-manufactured, COA-verified. For licensed professionals only.',
     robots: 'noindex, follow', // Keep off Google Shopping / product policy triggers
   };
 }
@@ -79,7 +79,7 @@ export default async function WholesaleApplicationPage({ params }: { params: { l
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-rajdhani font-bold text-white mb-6">Eligibility Requirements</h2>
               <p className="text-gray-400 font-dm-sans leading-relaxed mb-8">
-                99 Purity Peptides is a B2B-only wholesale supplier. To qualify for a wholesale account, buyers must meet the following criteria and agree to our research-use terms.
+                99 Purity Wholesale is a B2B-only wholesale supplier. To qualify for a wholesale account, buyers must meet the following criteria and agree to our research-use terms.
               </p>
               <div className="space-y-4">
                 {requirements.map((req, i) => (
@@ -220,7 +220,7 @@ export default async function WholesaleApplicationPage({ params }: { params: { l
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <p className="text-gray-400 font-dm-sans mb-6">Need faster turnaround? Skip the form and message us directly.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/1234567890?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-xl transition-colors font-rajdhani text-lg uppercase tracking-wider">
+            <a href="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-xl transition-colors font-rajdhani text-lg uppercase tracking-wider">
               Apply via WhatsApp
             </a>
             <a href="mailto:wholesale@99puritypeptides.com" className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-colors border border-white/10 font-rajdhani text-lg uppercase tracking-wider">

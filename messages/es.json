@@ -1,7 +1,7 @@
 {
   "Index": {
     "Hero": {
-      "title": "El Proveedor Mayorista de Péptidos de Confianza en América",
+      "title": "El Proveedor de 99 Purity Wholesale de Confianza en América",
       "subtitle": "Péptidos de investigación premium fabricados en EE. UU. para profesionales autorizados. Pureza garantizada del 99%+ con COA de lotes independientes.",
       "primaryCta": "Contactar por WhatsApp",
       "secondaryCta": "Ver Catálogo",
@@ -135,7 +135,7 @@
   },
   "Contact": {
     "Hero": {
-      "title": "Contáctenos — Consultas Mayoristas Bienvenidas",
+      "title": "Contáctenos — Consultas de 99 Purity Wholesale Bienvenidas",
       "subtitle": "Comuníquese con nuestro equipo en EE. UU. para discutir niveles de precios, pedidos por volumen o nuestro programa de envío directo."
     },
     "Methods": {
@@ -160,7 +160,7 @@
       }
     },
     "Form": {
-      "title": "Solicitud de Cuenta Mayorista",
+      "title": "Solicitud de Cuenta de 99 Purity Wholesale",
       "subtitle": "Envíe sus datos y un representante se comunicará con usted con los precios.",
       "fields": {
         "businessName": "Nombre del Negocio",
@@ -176,39 +176,43 @@
       "title": "Preguntas Frecuentes",
       "items": {
         "q1": {
-          "q": "¿Hacen envíos internacionales?",
-          "a": "Actualmente, solo enviamos dentro de los Estados Unidos."
+          "q": "¿Es 99 Purity Wholesale un proveedor mayorista nacional de péptidos?",
+          "a": "Sí, somos un proveedor mayorista nacional de péptidos con sede en EE. UU. Nos especializamos en la síntesis y el cumplimiento nacional, asegurando que las clínicas de bienestar y las farmacias de compuestos eviten los riesgos aduaneros y las inconsistencias de calidad asociadas con el abastecimiento en el extranjero."
         },
         "q2": {
-          "q": "¿Cuál es la cantidad mínima de pedido?",
-          "a": "El MOQ es de 10 unidades por especificación de producto."
+          "q": "¿Cuál es el estándar de pureza de sus péptidos de grado de investigación?",
+          "a": "Cada lote de nuestro catálogo tiene una pureza garantizada del ≥99%. Utilizamos pruebas independientes de HPLC y espectrometría de masas para verificar la integridad estructural y la pureza de nuestros péptidos de grado de investigación antes de que se liberen para la distribución mayorista."
         },
         "q3": {
-          "q": "¿Requieren licencia para comprar?",
-          "a": "Sí, nuestros productos son solo para profesionales e investigadores autorizados. No para consumo humano."
+          "q": "¿Proporcionan COA emparejados por lote para pedidos de péptidos a granel?",
+          "a": "Absolutamente. La transparencia es fundamental en nuestras operaciones. Cada pedido de péptidos a granel va acompañado de un Certificado de Análisis (COA) emparejado por lote, lo que permite a los investigadores verificar la pureza y la secuencia específica de los compuestos que reciben."
         },
         "q4": {
-          "q": "¿Cuánto tarda el envío?",
-          "a": "El tiempo de respuesta típico es de 2 a 4 días hábiles según la ubicación."
+          "q": "¿Cuáles son los niveles de precios mayoristas para clínicas de bienestar y farmacias?",
+          "a": "Ofrecemos una estructura de precios mayoristas de cuatro niveles diseñada para apoyar el crecimiento de las clínicas de bienestar y las farmacias de compuestos. Nuestros niveles van desde Inicial (1-9 kits) hasta Empresarial (40+ kits), proporcionando márgenes competitivos en cada escala de operación."
         },
         "q5": {
-          "q": "¿Puedo obtener un COA antes de ordenar?",
-          "a": "Sí, los Certificados de Análisis están disponibles bajo petición para cualquier lote actual."
+          "q": "¿Pueden suministrar péptidos para el abastecimiento de farmacias de compuestos?",
+          "a": "Sí, somos una fuente principal para el abastecimiento de péptidos para farmacias de compuestos. Proporcionamos compuestos liofilizados de alta pureza como BPC-157, Semaglutida y Tirzepatide, respaldados por la documentación rigurosa requerida para entornos farmacéuticos profesionales."
         },
         "q6": {
-          "q": "¿Ofrecen condiciones de pago a plazo?",
-          "a": "Comuníquese con nosotros para discutir términos para cuentas establecidas de alto volumen."
+          "q": "¿Ofrecen un programa de envío directo (dropshipping) de péptidos para socios B2B?",
+          "a": "Sí, ofrecemos un programa especializado de envío directo de péptidos para socios B2B calificados. Esto le permite aprovechar nuestra infraestructura de cumplimiento en EE. UU. y nuestro stock de pureza ≥99% mientras envía directamente a sus clientes bajo su propia marca."
+        },
+        "q7": {
+          "q": "¿Sus péptidos al por mayor están destinados al consumo humano?",
+          "a": "No. Todos los productos suministrados por 99 Purity Wholesale son estrictamente para investigación de laboratorio y pruebas in vitro por profesionales autorizados. No son para consumo humano, uso terapéutico o aplicación clínica."
         }
       }
     }
   },
   "About": {
     "Hero": {
-      "title": "Hecho en América. Confiado por Profesionales en Todo el País.",
+      "title": "99 Purity Wholesale: Hecho en América. Confiado por Profesionales.",
       "subtitle": "Descubra la historia detrás de nuestro compromiso con la pureza, la transparencia y la asociación B2B."
     },
     "Story": {
-      "p1": "99 Purity Peptides comenzó con una simple convicción: el mercado de péptidos de EE. UU. merecía un proveedor nacional en el que los profesionales realmente pudieran confiar. Sin importaciones reempaquetadas. Sin pureza misteriosa. Sin abastecimiento en zonas grises.",
+      "p1": "99 Purity Wholesale comenzó con una simple convicción: el mercado de péptidos de EE. UU. merecía un proveedor nacional en el que los profesionales realmente pudieran confiar. Sin importaciones reempaquetadas. Sin pureza misteriosa. Sin abastecimiento en zonas grises.",
       "p2": "Construimos nuestra operación desde cero — laboratorio, pruebas y equipo en EE. UU. — para que las farmacias de compuestos, clínicas de bienestar e investigadores autorizados tuvieran una fuente nacional confiable de péptidos de grado de investigación a precios mayoristas competitivos.",
       "p3": "Hoy atendemos a más de 200 clientes B2B en todo Estados Unidos, con un extenso catálogo, precios por niveles y documentación completa de COA en cada pedido."
     },
@@ -244,10 +248,10 @@
     "Disclaimer": {
       "title": "Aviso sobre el Uso en Investigación",
       "content": [
-        "Todos los productos proporcionados por 99 Purity Peptides se venden estrictamente para uso de investigación y laboratorio por profesionales autorizados.",
+        "Todos los productos proporcionados por 99 Purity Wholesale se venden estrictamente para uso de investigación y laboratorio por profesionales autorizados.",
         "Nuestros productos NO están destinados al consumo humano, uso clínico o como tratamiento para ninguna condición médica.",
         "No son para venta minorista al público en general.",
-        "Al comprar en 99 Purity Peptides, el comprador reconoce y acepta que es un profesional autorizado, investigador o instalación que actúa de acuerdo con todas las leyes locales, estatales y federales aplicables.",
+        "Al comprar en 99 Purity Wholesale, el comprador reconoce y acepta que es un profesional autorizado, investigador o instalación que actúa de acuerdo con todas las leyes locales, estatales y federales aplicables.",
         "El comprador asume la responsabilidad total del manejo, almacenamiento y aplicación adecuados de estos compuestos de investigación."
       ]
     },
@@ -261,22 +265,22 @@
     }
   },
   "Meta": {
-    "homeTitle": "Péptidos al por Mayor Estados Unidos | 99 Purity",
-    "homeDesc": "Proveedor mayorista de péptidos fabricados en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
-    "productsTitle": "Catálogo Mayorista de Péptidos | 99 Purity Peptides",
+    "homeTitle": "99 Purity Wholesale | Péptidos al por Mayor Estados Unidos",
+    "homeDesc": "Proveedor de 99 Purity Wholesale fabricado en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
+    "productsTitle": "Catálogo de 99 Purity Wholesale | Péptidos al por Mayor",
     "productsDesc": "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
-    "servicesTitle": "Servicios B2B y Crecimiento | Proveedor Mayorista de Péptidos",
-    "servicesDesc": "Servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones con péptidos al por mayor Estados Unidos.",
-    "aboutTitle": "Nosotros | Péptidos Fabricados en América",
-    "aboutDesc": "Conozca 99 Purity Peptides. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
-    "contactTitle": "Contacto | Consultas sobre Péptidos al por Mayor",
+    "servicesTitle": "Servicios B2B y Crecimiento | 99 Purity Wholesale",
+    "servicesDesc": "Servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones con 99 Purity Wholesale.",
+    "aboutTitle": "Sobre 99 Purity Wholesale | Péptidos Fabricados en América",
+    "aboutDesc": "Conozca 99 Purity Wholesale. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
+    "contactTitle": "Contacto | Consultas sobre 99 Purity Wholesale",
     "contactDesc": "Comuníquese con nuestro equipo en EE. UU. para precios, pedidos por volumen y programas de envío directo.",
-    "locationsTitle": "Mercados de Entrega | Proveedor Mayorista de Péptidos",
-    "locationsDesc": "Cumplimiento nacional rápido y seguro a instituciones de investigación en todo Estados Unidos."
+    "locationsTitle": "Ubicaciones de 99 Purity Wholesale | Todos los 50 Estados",
+    "locationsDesc": "Cumplimiento nacional rápido y seguro a instituciones de investigación en todo Estados Unidos con 99 Purity Wholesale."
   },
   "ProductsIndex": {
     "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
-    "title": "Catálogo Mayorista",
+    "title": "Catálogo de 99 Purity Wholesale",
     "subtitle": "Compuestos de investigación de primera calidad para instituciones calificadas e investigadores independientes.",
     "moqTitle": "Requisitos para Mayoristas",
     "moqText": "Cantidad Mínima de Pedido (MOQ): 10 unidades (1 kit) por producto.",
@@ -285,7 +289,7 @@
     "categories": {
       "glp1-metabolic-peptides": {
         "name": "GLP-1 / Metabólicos",
-        "desc": "Péptidos de investigación metabólica avanzados que incluyen Semaglutida, Tirzepatida y Retatrutida."
+        "desc": "Péptidos de investigación metabólica avanzados que incluyen Semaglutida, Tirzepatide y Retatrutida."
       },
       "growth-hormone": {
         "name": "Hormona de Crecimiento",
@@ -329,7 +333,7 @@
     "pricingTiers": "Inicial (1-9) · Nivel 1 (10-19) · Nivel 2 (20-39) · Nivel 3 (40+)",
     "contextTitle": "Contexto de Investigación",
     "contextP1": "Este compuesto se suministra exclusivamente para investigación de laboratorio in vitro y modelado académico. No está destinado a aplicaciones diagnósticas, terapéuticas o clínicas en humanos o animales. Los investigadores que utilizan {name} deben adherirse a los protocolos de seguridad de laboratorio estándar y asegurarse de que su institución cuente con las autorizaciones éticas adecuadas para uso experimental.",
-    "contextP2": "Como herramienta molecular avanzada, {name} permite a los investigadores sondear vías celulares específicas, afinidades de receptores y cascadas bioquímicas. Todos los lotes se someten a rigurosas pruebas analíticas para confirmar la precisión de la secuencia y la integridad estructural, asegurando que los datos de referencia no se vean comprometidos por impurezas. Las condiciones de almacenamiento deben mantenerse estrictamente para evitar la degradación de los péptidos o la pérdida de actividad biológica antes de la implementación del ensayo.",
+    "contextP2": "Asunto de 99 Purity Wholesale, {name} permite a los investigadores sondear vías celulares específicas, afinidades de receptores y cascadas bioquímicas. Todos los lotes se someten a rigurosas pruebas analíticas para confirmar la precisión de la secuencia y la integridad estructural, asegurando que los datos de referencia no se vean comprometidos por impurezas. Las condiciones de almacenamiento deben mantenerse estrictamente para evitar la degradación de los péptidos o la pérdida de actividad biológica antes de la implementación del ensayo.",
     "coaTitle": "Certificado de Análisis (COA)",
     "coaDesc": "Informes de HPLC y espectrometría de masas emparejados por lote.",
     "requestCoa": "Solicitar COA",
@@ -341,11 +345,17 @@
     "confidential": "Todas las consultas son estrictamente confidenciales. Solo para pedidos B2B / Instituciones.",
     "relatedTitle": "Compuestos de Investigación Relacionados",
     "viewDetails": "Ver Detalles",
-    "whatsappMsg": "Hola, solicito información sobre precios mayoristas para {name}."
+    "whatsappMsg": "Hola, solicito información sobre precios mayoristas para {name}.",
+    "share": {
+      "title": "Compartir este producto",
+      "copy": "Copiar enlace",
+      "copied": "Copiado",
+      "emailBody": "Echa un vistazo a este compuesto de investigación: {title}\n\nURL: {url}\n\nPureza garantizada ≥99% de 99 Purity Wholesale."
+    }
   },
   "Services": {
     "badge": "Soluciones de Crecimiento B2B",
-    "title": "Servicios Mayoristas",
+    "title": "Servicios de 99 Purity Wholesale",
     "subtitle": "Más allá de suministrar compuestos de investigación premium, ofrecemos servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones, construir su marca y dominar el mercado.",
     "items": {
       "dropshipping": {
@@ -394,7 +404,7 @@
   "LocationsIndex": {
     "badge": "Alcance Nacional",
     "title": "Nuestros Mercados Principales",
-    "subtitle": "99 Purity Peptides proporciona un cumplimiento nacional rápido y seguro a instituciones de investigación, laboratorios y clínicas de bienestar B2B en todo Estados Unidos. Explore nuestros centros regionales dedicados a continuación.",
+    "subtitle": "99 Purity Wholesale proporciona un cumplimiento nacional rápido y seguro a instituciones de investigación, laboratorios y clínicas de bienestar B2B en todo Estados Unidos. Explore nuestros centros regionales dedicados a continuación.",
     "viewHub": "Ver Centro Local"
   },
   "LocationDetail": {
@@ -416,8 +426,8 @@
     "or": "o",
     "emailCta": "Consulta por Email",
     "viewCatalog": "Ver Catálogo Completo",
-    "whatsappMsg": "Hola, soy un investigador ubicado en {city}, {state} en busca de precios mayoristas.",
-    "emailSubject": "Consulta Mayorista - {city}, {state}"
+    "whatsappMsg": "Hola, soy un investigador ubicado en {city}, {state} en busca de precios de 99 Purity Wholesale.",
+    "emailSubject": "Consulta de 99 Purity Wholesale - {city}, {state}"
   },
   "CategoryTemplate": {
     "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
@@ -433,7 +443,7 @@
   "QualityPage": {
     "badge": "Estándares Inquebrantables",
     "title": "Prueba en Cada Vial",
-    "subtitle": "En la industria de la investigación, las suposiciones destruyen los datos. Confiamos en una validación analítica estricta, asegurando que cada compuesto que llega a su laboratorio supere el 99% de pureza. Sin excepciones.",
+    "subtitle": "En la industria de la investigación, las suposiciones destruyen los datos. Confiamos en una validación analítica estricta, asegurando que cada compuesto que llega a su laboratorio supere el 99% de pureza. No excepciones.",
     "pipeline": {
       "title": "Nuestra Línea Analítica",
       "subtitle": "Una secuencia rigurosa de síntesis, purificación y verificación garantiza una precisión absoluta de la secuencia.",
@@ -451,11 +461,11 @@
       }
     },
     "comparison": {
-      "title": "El Estándar 99PP",
+      "title": "El Estándar 99PW",
       "subtitle": "Cómo nos comparamos con los proveedores extranjeros típicos y distribuidores no verificados.",
       "headers": {
         "criteria": "Criterios",
-        "ours": "99 Purity Peptides",
+        "ours": "99 Purity Wholesale",
         "theirs": "Proveedor Extranjero Típico"
       },
       "rows": {
@@ -502,7 +512,7 @@
     },
     "trust": {
       "title": "Confianza Institucional Inquebrantable",
-      "desc": "Nos asociamos con instituciones académicas líderes, instalaciones de investigación privadas e investigadores independientes en todo el mundo. Nuestro compromiso con las prácticas estrictas alineadas con cGMP y la verificación independiente garantiza que sus datos se construyan sobre una base impecable.",
+      "desc": "Nos asociamos con instituciones académicas líderes, instalaciones de investigación privadas e investigadores independientes en todo el mundo. Nuestro compromiso con las prácticas estrictas alineadas con cGMP y la verificación independiente garantiza que sus datos se construyan sobre una base de excelencia de 99 Purity Wholesale.",
       "badges": {
         "us": "Instalaciones en EE. UU.",
         "cgmp": "Alineado con cGMP",

@@ -4,6 +4,9 @@ import React, { useState, useMemo } from 'react';
 import { Search, Filter, ArrowRight, FlaskConical, ChevronRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import AddToInquiryButton from '@/components/products/AddToInquiryButton';
+
+import { getSearchEngine } from '@/lib/search';
 
 interface Product {
   name: string;
@@ -23,13 +26,29 @@ export default function ProductDirectory({ products, categories }: ProductDirect
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
+  // Memoize search engine
+  const searchEngine = useMemo(() => getSearchEngine(products), [products]);
+
   const filteredProducts = useMemo(() => {
-    return products.filter(product => {
-      const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = activeCategory === 'all' || product.category === activeCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [products, searchQuery, activeCategory]);
+    let result = products;
+
+    // Apply fuzzy search if query exists
+    if (searchQuery.trim().length >= 2) {
+      result = searchEngine.search(searchQuery).map(res => res.item);
+    } else if (searchQuery.trim().length > 0) {
+      // Basic includes for very short queries
+      result = products.filter(p => 
+        p.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    // Apply category filter
+    if (activeCategory !== 'all') {
+      result = result.filter(product => product.category === activeCategory);
+    }
+
+    return result;
+  }, [products, searchQuery, activeCategory, searchEngine]);
 
   return (
     <div className="w-full">
@@ -84,31 +103,48 @@ export default function ProductDirectory({ products, categories }: ProductDirect
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
-              <Link 
+              <div 
                 key={product.slug} 
-                href={`/products/${product.category}/${product.slug}`}
                 className="group bg-[#0e131b] border border-white/5 rounded-2xl p-6 hover:border-brand-accent/30 transition-all duration-300 flex flex-col hover:-translate-y-1 shadow-lg hover:shadow-brand-accent/5"
               >
-                <div className="mb-4">
-                  <span className="text-[10px] font-dm-mono text-brand-accent uppercase tracking-[0.2em] px-2 py-1 bg-brand-accent/5 rounded border border-brand-accent/20">
-                    {product.category.replace(/-/g, ' ')}
-                  </span>
-                </div>
-                <h3 className="text-xl font-rajdhani font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-sm text-gray-500 font-dm-sans line-clamp-2 mb-6 flex-grow">
-                  {product.description}
-                </p>
-                <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-auto">
-                  <div className="text-[10px] font-dm-mono text-gray-500 uppercase">
-                    {product.specs.length} Specs
+                <Link href={`/products/${product.category}/${product.slug}`} className="flex flex-col h-full">
+                  <div className="mb-4">
+                    <span className="text-[10px] font-dm-mono text-brand-accent uppercase tracking-[0.2em] px-2 py-1 bg-brand-accent/5 rounded border border-brand-accent/20">
+                      {product.category.replace(/-/g, ' ')}
+                    </span>
                   </div>
-                  <div className="flex items-center text-brand-accent text-xs font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all translate-x-2 group-hover:translate-x-0">
-                    Details <ChevronRight className="w-3 h-3 ml-1" />
+                  <h3 className="text-xl font-rajdhani font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 font-dm-sans line-clamp-2 mb-6 flex-grow">
+                    {product.description}
+                  </p>
+                </Link>
+
+                <div className="flex flex-col gap-4 pt-4 border-t border-white/5 mt-auto">
+                  {(() => {
+                    const [spec, kitSizeStr] = product.specs[0].split('×');
+                    return (
+                      <AddToInquiryButton
+                        productId={product.slug}
+                        productName={product.name}
+                        category={product.category}
+                        spec={spec}
+                        kitSize={parseInt(kitSizeStr)}
+                        categoryPage={`/products/${product.category}`}
+                      />
+                    );
+                  })()}
+                  <div className="flex items-center justify-between">
+                    <div className="text-[10px] font-dm-mono text-gray-500 uppercase">
+                      {product.specs.length} Specs
+                    </div>
+                    <Link href={`/products/${product.category}/${product.slug}`} className="flex items-center text-brand-accent text-xs font-bold uppercase tracking-widest transition-all hover:gap-1">
+                      Details <ChevronRight className="w-3 h-3 ml-1" />
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         ) : (

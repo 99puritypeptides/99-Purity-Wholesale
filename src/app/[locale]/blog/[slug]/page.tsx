@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Link } from '@/i18n/routing';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import BlogFAQ from '@/components/blog/BlogFAQ';
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   try {
@@ -29,9 +30,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             </h1>
           </header>
 
-          <div className="prose prose-invert prose-brand max-w-none">
+          <div className="prose prose-invert prose-brand max-w-none mb-12">
             <MDXRemote source={post.content} />
           </div>
+
+          {post.meta.faqs && <BlogFAQ faqs={post.meta.faqs} />}
 
           <div className="mt-20 border-t border-white/10 pt-12">
             <div className="bg-[#0e131b] border border-brand-accent/20 rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -40,7 +43,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 <p className="text-gray-400 font-dm-sans">Connect with our wholesale team for current pricing and COAs.</p>
               </div>
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/18437439007" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider inline-flex items-center whitespace-nowrap"

@@ -12,10 +12,10 @@ export default function ContactPage() {
     setOpenFaq(openFaq === id ? null : id);
   };
 
-  const faqItems = ["q1", "q2", "q3", "q4", "q5", "q6"];
+  const faqItems = ["q1", "q2", "q3", "q4", "q5", "q6", "q7"];
 
   const handleWhatsAppClick = () => {
-    const phone = "18005550199"; // Placeholder
+    const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "18437439007").replace(/\D/g, '');
     const message = "Hi, I'd like to learn about your wholesale pricing and tiers. My business is a ";
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };
@@ -212,7 +212,7 @@ export default function ContactPage() {
                 
                 <div 
                   className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                    openFaq === id ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"
+                    openFaq === id ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <p className="text-slate-400 leading-relaxed">

@@ -29,7 +29,7 @@ export default async function LocationsIndexPage({ params: { locale } }: { param
             <span className="text-brand-accent">Serving All 50 U.S. States</span>
           </h1>
           <p className="text-xl text-gray-400 font-dm-sans leading-relaxed max-w-3xl mx-auto">
-            99 Purity Peptides ships U.S.-manufactured, ≥99% purity research-grade peptides to licensed professionals across every state. Explore our dedicated regional hubs for local market information, compliance notes, and direct B2B contact.
+            99 Purity Wholesale ships U.S.-manufactured, ≥99% purity research-grade peptides to licensed professionals across every state. Explore our dedicated regional hubs for local market information, compliance notes, and direct B2B contact.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-white/30 font-dm-mono text-xs uppercase tracking-widest">
             <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-brand-accent" /> ≥99% Purity Guaranteed</span>
@@ -105,11 +105,11 @@ export default async function LocationsIndexPage({ params: { locale } }: { param
             Don't See Your State? We Ship Everywhere.
           </h2>
           <p className="text-gray-400 font-dm-sans text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-            While we maintain dedicated regional hub pages for our highest-volume markets, 99 Purity Peptides fulfills wholesale peptide orders to licensed professionals in all 50 U.S. states. If your state isn't listed above, contact us directly — same fast domestic fulfillment, same ≥99% purity guarantee, same batch COA documentation on every order.
+            While we maintain dedicated regional hub pages for our highest-volume markets, 99 Purity Wholesale fulfills wholesale peptide orders to licensed professionals in all 50 U.S. states. If your state isn't listed above, contact us directly — same fast domestic fulfillment, same ≥99% purity guarantee, same batch COA documentation on every order.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/1234567890?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20peptide%20pricing%20for%20my%20state."
+              href="https://wa.me/18437439007?text=Hi%2C%20I%27m%20interested%20in%20wholesale%20peptide%20pricing%20for%20my%20state."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 px-8 rounded-xl transition-all font-rajdhani text-lg uppercase tracking-wider"
@@ -132,14 +132,14 @@ export default async function LocationsIndexPage({ params: { locale } }: { param
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="text-4xl font-rajdhani font-bold text-white mb-6">
-                Why Licensed Professionals Across the U.S. Source from 99 Purity Peptides
+                Why Licensed Professionals Across the U.S. Source from 99 Purity Wholesale
               </h2>
               <div className="space-y-5 text-gray-400 font-dm-sans leading-relaxed">
                 <p>
                   For compounding pharmacies, wellness clinics, medical spas, and licensed distributors operating across the United States, having a reliable domestic wholesale peptide supplier is a strategic necessity — not just a convenience. International sourcing introduces customs risk, documentation gaps, supply continuity uncertainty, and purity verification challenges that domestic procurement eliminates entirely.
                 </p>
                 <p>
-                  99 Purity Peptides manufactures all research compounds in the United States. Every batch is synthesized domestically, tested by independent U.S. accredited laboratories, and fulfilled via priority domestic carrier. Your order ships without international transit exposure and arrives with a batch-matched Certificate of Analysis confirming ≥99% purity.
+                  99 Purity Wholesale manufactures all research compounds in the United States. Every batch is synthesized domestically, tested by independent U.S. accredited laboratories, and fulfilled via priority domestic carrier. Your order ships without international transit exposure and arrives with a batch-matched Certificate of Analysis confirming ≥99% purity.
                 </p>
                 <p>
                   Our tiered wholesale pricing program — from the Start tier for emerging operations to Tier 3 for high-volume compounding and distribution accounts — ensures competitive margins at every scale. Licensed professionals in Texas, Florida, California, New York, and every other state benefit from the same purity guarantee, documentation standards, and fulfillment reliability.

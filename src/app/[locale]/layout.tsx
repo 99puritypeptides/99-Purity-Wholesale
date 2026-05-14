@@ -27,9 +27,10 @@ const dmMono = DM_Mono({
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'),
     title: {
       default: t('homeTitle'),
-      template: '%s | 99 Purity Peptides',
+      template: '%s | 99 Purity Wholesale',
     },
     description: t('homeDesc'),
     keywords: [
@@ -46,7 +47,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       'bulk GLP-1 peptides',
       'wholesale tirzepatide',
       'peptide supplier for wellness clinic',
-      '99 purity peptides',
+      '99 purity wholesale',
       'COA verified peptides wholesale',
     ],
     icons: {
@@ -55,15 +56,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     openGraph: {
       type: 'website',
-      siteName: '99 Purity Peptides Wholesale',
+      siteName: '99 Purity Wholesale',
       title: t('homeTitle'),
       description: t('homeDesc'),
       images: [
         {
-          url: '/images/99pw-logo.webp',
-          width: 800,
-          height: 600,
-          alt: '99 Purity Peptides — Wholesale Peptide Supplier USA',
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: '99 Purity Wholesale — Wholesale Peptide Supplier USA',
         },
       ],
     },
@@ -71,7 +72,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title: t('homeTitle'),
       description: t('homeDesc'),
-      images: ['/images/99pw-logo.webp'],
+      images: ['/og-image.png'],
+    },
+    manifest: '/manifest.json',
+    themeColor: '#4FC3D0',
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: 'default',
+      title: '99 Purity Wholesale',
+      startupImage: '/images/99pw-logo.webp',
     },
     robots: {
       index: true,
@@ -88,6 +97,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 
+import { CartProvider } from '@/context/CartContext';
+import CartDrawer from '@/components/cart/CartDrawer';
+
 export default async function RootLayout({
   children,
   params: { locale }
@@ -100,7 +112,7 @@ export default async function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "99 Purity Peptides",
+    "name": "99 Purity Wholesale",
     "alternateName": "99 Purity Wholesale",
     "description": "America's trusted wholesale peptide supplier. U.S.-manufactured, ≥99% purity research-grade peptides for compounding pharmacies, wellness clinics, and licensed distributors.",
     "url": "https://99puritypeptides.com",
@@ -151,12 +163,15 @@ export default async function RootLayout({
       </head>
       <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <MainContentWrapper>
-            {children}
-          </MainContentWrapper>
-          <Footer />
-          <FloatingWhatsApp />
+          <CartProvider>
+            <Header />
+            <MainContentWrapper>
+              {children}
+            </MainContentWrapper>
+            <Footer />
+            <FloatingWhatsApp />
+            <CartDrawer />
+          </CartProvider>
         </NextIntlClientProvider>
       </body>
     </html>

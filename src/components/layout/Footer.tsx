@@ -95,7 +95,9 @@ export default function Footer() {
                 </div>
                 <div>
                   <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">Inquiries</span>
-                  <a href="mailto:sales@99purity.com" className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">sales@99purity.com</a>
+                  <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'sales@99puritypeptides.com'}`} className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">
+                    {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'sales@99puritypeptides.com'}
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-4 group">
@@ -104,7 +106,9 @@ export default function Footer() {
                 </div>
                 <div>
                   <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">Operations</span>
-                  <a href="tel:+15551234567" className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">+1 (555) 123-4567</a>
+                  <a href={`tel:+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007'}`} className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">
+                    {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}` : '+1 (843) 743-9007'}
+                  </a>
                 </div>
               </li>
               <li className="flex items-start gap-4 group">

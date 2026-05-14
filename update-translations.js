@@ -11,15 +11,15 @@ const newEn = {
   Meta: {
     homeTitle: "99 Purity Wholesale | America's Trusted Peptide Supplier",
     homeDesc: "Premium US-made research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch COAs.",
-    productsTitle: "Wholesale Peptide Catalog | 99 Purity Peptides",
+    productsTitle: "Wholesale Peptide Catalog | 99 Purity Wholesale",
     productsDesc: "Premium quality research compounds for qualified institutions and independent researchers. View our wholesale catalog.",
-    servicesTitle: "B2B Growth & Wholesale Services | 99 Purity",
+    servicesTitle: "B2B Growth & Wholesale Services | 99 Purity Wholesale",
     servicesDesc: "Comprehensive infrastructure and consulting services to help you scale your research compound operations.",
     aboutTitle: "About Us | US-Made Research Peptides",
-    aboutDesc: "Learn about 99 Purity Peptides. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
+    aboutDesc: "Learn about 99 Purity Wholesale. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
     contactTitle: "Contact Us | Wholesale Peptides Inquiry",
     contactDesc: "Contact our US-based team for pricing tiers, volume orders, and dropshipping programs.",
-    locationsTitle: "Primary Delivery Markets | 99 Purity Peptides",
+    locationsTitle: "Primary Delivery Markets | 99 Purity Wholesale",
     locationsDesc: "Fast, secure domestic fulfillment to research institutions across the United States."
   },
   ProductsIndex: {
@@ -118,7 +118,7 @@ const newEn = {
   LocationsIndex: {
     badge: "Nationwide Reach",
     title: "Our Primary Markets",
-    subtitle: "99 Purity Peptides provides fast, secure domestic fulfillment to research institutions, laboratories, and B2B wellness clinics across the United States. Explore our dedicated regional hubs below.",
+    subtitle: "99 Purity Wholesale provides fast, secure domestic fulfillment to research institutions, laboratories, and B2B wellness clinics across the United States. Explore our dedicated regional hubs below.",
     viewHub: "View Local Hub"
   },
   LocationDetail: {
@@ -147,14 +147,14 @@ const newEn = {
 
 const newEs = {
   Meta: {
-    homeTitle: "Péptidos al por Mayor Estados Unidos | 99 Purity",
+    homeTitle: "Péptidos al por Mayor Estados Unidos | 99 Purity Wholesale",
     homeDesc: "Proveedor mayorista de péptidos fabricados en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
-    productsTitle: "Catálogo Mayorista de Péptidos | 99 Purity Peptides",
+    productsTitle: "Catálogo Mayorista de Péptidos | 99 Purity Wholesale",
     productsDesc: "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
     servicesTitle: "Servicios B2B y Crecimiento | Proveedor Mayorista de Péptidos",
     servicesDesc: "Servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones con péptidos al por mayor Estados Unidos.",
     aboutTitle: "Nosotros | Péptidos Fabricados en América",
-    aboutDesc: "Conozca 99 Purity Peptides. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
+    aboutDesc: "Conozca 99 Purity Wholesale. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
     contactTitle: "Contacto | Consultas sobre Péptidos al por Mayor",
     contactDesc: "Comuníquese con nuestro equipo en EE. UU. para precios, pedidos por volumen y programas de envío directo.",
     locationsTitle: "Mercados de Entrega | Proveedor Mayorista de Péptidos",
@@ -256,7 +256,7 @@ const newEs = {
   LocationsIndex: {
     badge: "Alcance Nacional",
     title: "Nuestros Mercados Principales",
-    subtitle: "99 Purity Peptides proporciona un cumplimiento nacional rápido y seguro a instituciones de investigación, laboratorios y clínicas de bienestar B2B en todo Estados Unidos. Explore nuestros centros regionales dedicados a continuación.",
+    subtitle: "99 Purity Wholesale proporciona un cumplimiento nacional rápido y seguro a instituciones de investigación, laboratorios y clínicas de bienestar B2B en todo Estados Unidos. Explore nuestros centros regionales dedicados a continuación.",
     viewHub: "Ver Centro Local"
   },
   LocationDetail: {

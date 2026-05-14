@@ -94,7 +94,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
                 </p>
 
                 <a 
-                  href={`https://wa.me/1234567890?text=${encodeURIComponent(service.whatsappMsg)}`} 
+                  href={`https://wa.me/18437439007?text=${encodeURIComponent(service.whatsappMsg)}`} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2"
@@ -161,7 +161,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
           </div>
           
           <div className="mt-16 text-center">
-            <a href={`https://wa.me/1234567890?text=${encodeURIComponent(t('scheduleMsg'))}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 px-8 rounded-lg transition-colors font-rajdhani text-lg uppercase tracking-wider">
+            <a href={`https://wa.me/18437439007?text=${encodeURIComponent(t('scheduleMsg'))}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 px-8 rounded-lg transition-colors font-rajdhani text-lg uppercase tracking-wider">
               {t('scheduleCta')} <ArrowRight className="w-5 h-5" />
             </a>
           </div>

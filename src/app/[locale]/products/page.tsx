@@ -69,11 +69,11 @@ const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    { '@type': 'Question', name: 'What wholesale peptides do you carry?', acceptedAnswer: { '@type': 'Answer', text: '99 Purity Peptides carries 50+ research-grade compounds across 7 categories: GLP-1 & metabolic peptides (Semaglutide, Tirzepatide, Retatrutide), growth hormone peptides (Ipamorelin, CJC-1295, Sermorelin), healing & recovery (BPC-157, TB-500), cognitive & nootropic peptides, anti-aging & longevity compounds, cosmetic research peptides, and ancillaries. All products are for research use only.' } },
+    { '@type': 'Question', name: 'What wholesale peptides do you carry?', acceptedAnswer: { '@type': 'Answer', text: '99 Purity Wholesale carries 50+ research-grade compounds across 7 categories: GLP-1 & metabolic peptides (Semaglutide, Tirzepatide, Retatrutide), growth hormone peptides (Ipamorelin, CJC-1295, Sermorelin), healing & recovery (BPC-157, TB-500), cognitive & nootropic peptides, anti-aging & longevity compounds, cosmetic research peptides, and ancillaries. All products are for research use only.' } },
     { '@type': 'Question', name: 'What is the minimum order quantity for wholesale peptides?', acceptedAnswer: { '@type': 'Answer', text: 'Our minimum order quantity (MOQ) is 10 units (1 kit) per product specification. Volume discounts activate at 10, 20, and 40+ kits through our tiered pricing structure.' } },
     { '@type': 'Question', name: 'Are your wholesale peptides third-party tested?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every batch is independently tested by accredited U.S. laboratories using HPLC and Mass Spectrometry. Every shipment includes a batch-matched Certificate of Analysis (COA) confirming ≥99% purity. COAs are available on request prior to purchase.' } },
     { '@type': 'Question', name: 'Do you ship wholesale peptides to all U.S. states?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We fulfill wholesale orders to licensed professionals in all 50 U.S. states via priority domestic shipping. Standard delivery is 2–4 business days. All fulfillment is 100% domestic — no international customs exposure.' } },
-    { '@type': 'Question', name: 'Who can buy wholesale peptides from 99 Purity Peptides?', acceptedAnswer: { '@type': 'Answer', text: 'Our products are sold exclusively to licensed professionals and qualified research institutions: compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All buyers must attest to professional status and research-use compliance.' } },
+    { '@type': 'Question', name: 'Who can buy wholesale peptides from 99 Purity Wholesale?', acceptedAnswer: { '@type': 'Answer', text: 'Our products are sold exclusively to licensed professionals and qualified research institutions: compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All buyers must attest to professional status and research-use compliance.' } },
     { '@type': 'Question', name: 'How do I get a Certificate of Analysis (COA)?', acceptedAnswer: { '@type': 'Answer', text: 'COAs for current batches are available on request via WhatsApp or email before and after purchase. Our Quality Hub also maintains a searchable COA library. Contact our team for specific batch documentation.' } },
   ],
 };
@@ -92,7 +92,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
   ];
 
   const faqs = [
-    { q: 'What wholesale peptides do you carry?', a: '99 Purity Peptides carries 50+ research-grade compounds across 7 categories: GLP-1 & metabolic peptides (Semaglutide, Tirzepatide, Retatrutide), growth hormone peptides (Ipamorelin, CJC-1295, Sermorelin), healing & recovery compounds (BPC-157, TB-500), cognitive & nootropic peptides (Semax, Selank), anti-aging & longevity peptides (Epithalon, NAD+), cosmetic research compounds (GHK-Cu), and ancillaries. All for research use only.' },
+    { q: 'What wholesale peptides do you carry?', a: '99 Purity Wholesale carries 50+ research-grade compounds across 7 categories: GLP-1 & metabolic peptides (Semaglutide, Tirzepatide, Retatrutide), growth hormone peptides (Ipamorelin, CJC-1295, Sermorelin), healing & recovery compounds (BPC-157, TB-500), cognitive & nootropic peptides (Semax, Selank), anti-aging & longevity peptides (Epithalon, NAD+), cosmetic research compounds (GHK-Cu), and ancillaries. All for research use only.' },
     { q: 'What is the minimum order quantity (MOQ) for wholesale peptides?', a: 'Our minimum order is 10 units (1 kit) per product specification. Volume discounts activate at 10, 20, and 40+ kits through our tiered pricing program (Start → Tier 1 → Tier 2 → Tier 3). Contact our team for current pricing at your volume level.' },
     { q: 'Are your wholesale peptides independently tested?', a: 'Yes. Every batch is independently verified by accredited U.S. third-party laboratories using HPLC (High-Performance Liquid Chromatography) and Mass Spectrometry. Every shipment includes a batch-matched Certificate of Analysis confirming ≥99% purity. COAs can be requested before purchase.' },
     { q: 'Do you ship wholesale peptides to all 50 U.S. states?', a: 'Yes. We fulfill wholesale orders to licensed professionals in all 50 U.S. states via priority domestic shipping. Standard delivery is 2–4 business days after payment confirmation. 100% U.S. domestic fulfillment — no international customs exposure or cold-chain transit risk.' },
@@ -155,7 +155,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                 <p className="text-gray-400 font-dm-sans">{t('moqText')}</p>
               </div>
             </div>
-            <a href="https://wa.me/1234567890?text=Hi%2C%20I%27d%20like%20wholesale%20peptide%20pricing." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20wholesale%20peptide%20pricing." target="_blank" rel="noopener noreferrer"
               className="flex-shrink-0 flex items-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold px-8 py-4 rounded-xl transition-all font-rajdhani text-lg uppercase tracking-wider shadow-lg">
               <Zap className="w-5 h-5" /> {t('cta')}
             </a>
@@ -209,7 +209,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-1/2">
-              <span className="text-brand-accent font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">Why Choose 99 Purity</span>
+              <span className="text-brand-accent font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">Why Choose 99 Purity Wholesale</span>
               <h2 className="text-4xl font-rajdhani font-bold text-white mb-8 leading-tight">
                 America's Most Trusted<br />Wholesale Peptide Supplier
               </h2>
@@ -218,7 +218,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                   When compounding pharmacies, wellness clinics, and licensed distributors across the United States need reliable bulk peptide supply, they need more than a catalog — they need a verified domestic manufacturer with the documentation, purity standards, and operational reliability to support professional research programs.
                 </p>
                 <p>
-                  99 Purity Peptides manufactures all research compounds in the United States using solid-phase peptide synthesis (SPPS) under strict quality controls. Every batch is independently tested by accredited U.S. laboratories — not in-house, not overseas — and shipped with a batch-specific Certificate of Analysis showing HPLC and MS purity confirmation at ≥99%.
+                  99 Purity Wholesale manufactures all research compounds in the United States using solid-phase peptide synthesis (SPPS) under strict quality controls. Every batch is independently tested by accredited U.S. laboratories — not in-house, not overseas — and shipped with a batch-specific Certificate of Analysis showing HPLC and MS purity confirmation at ≥99%.
                 </p>
                 <p>
                   Our tiered wholesale pricing program scales with your business. Start with our entry-level minimum and move through Tier 1, Tier 2, and Tier 3 as your volume grows — with margin improvement at every stage and dedicated B2B support throughout.
@@ -273,7 +273,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
             ))}
           </div>
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/1234567890?text=Hi%2C%20I%27d%20like%20to%20place%20a%20wholesale%20peptide%20order." target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20place%20a%20wholesale%20peptide%20order." target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-brand-bg font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider transition-all">
               <Zap className="w-5 h-5" /> Start Your Order via WhatsApp
             </a>

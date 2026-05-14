@@ -3,6 +3,7 @@ import { AlertTriangle, Mail, Zap, CheckCircle2, ArrowRight, ShieldCheck } from 
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import productsData from '@/data/products.json';
+import AddToInquiryButton from '@/components/products/AddToInquiryButton';
 
 const catData: Record<string, { title: string; badge: string; desc: string; seoP1: string; seoP2: string; faqs: { q: string; a: string }[] }> = {
   'glp1-metabolic-peptides': {
@@ -78,7 +79,7 @@ export async function generateMetadata({ params }: { params: { locale: string; c
   const cat = catData[params.category];
   if (!cat) return {};
   return {
-    title: `${cat.title} — Wholesale Bulk Supply | 99 Purity Peptides`,
+    title: `${cat.title} — Wholesale Bulk Supply | 99 Purity Wholesale`,
     description: cat.desc,
   };
 }
@@ -138,8 +139,23 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                 </div>
                 <div className="flex flex-col gap-3">
                   <Link href={`/products/${product.category}/${product.slug}`} className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">{t('viewDetails')}</Link>
-                  <a href={`https://wa.me/1234567890?text=${encodeURIComponent(`Hi, I need wholesale pricing for ${product.name}`)}`} target="_blank" rel="noopener noreferrer" className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
-                    <Zap className="w-5 h-5" /> {t('whatsappPricing')}
+                  
+                  {(() => {
+                    const [spec, kitSizeStr] = product.specs[0].split('×');
+                    return (
+                      <AddToInquiryButton
+                        productId={product.slug}
+                        productName={product.name}
+                        category={cat.title}
+                        spec={spec}
+                        kitSize={parseInt(kitSizeStr)}
+                        categoryPage={`/products/${product.category}`}
+                      />
+                    );
+                  })()}
+
+                  <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(`Hi, I need wholesale pricing for ${product.name}`)}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-[#25D366] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
+                    <Zap className="w-5 h-5" /> WhatsApp Pricing
                   </a>
                 </div>
               </div>
@@ -166,7 +182,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                     <li key={p} className="flex items-start gap-2 text-gray-400 font-dm-sans text-sm"><CheckCircle2 className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />{p}</li>
                   ))}
                 </ul>
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="mt-6 w-full bg-brand-accent text-brand-bg font-bold py-3 rounded-xl flex items-center justify-center gap-2 font-rajdhani uppercase tracking-wider text-sm hover:bg-[#3EABC0] transition-colors">
+                <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="mt-6 w-full bg-brand-accent text-brand-bg font-bold py-3 rounded-xl flex items-center justify-center gap-2 font-rajdhani uppercase tracking-wider text-sm hover:bg-[#3EABC0] transition-colors">
                   <Zap className="w-4 h-4" /> Get Pricing
                 </a>
               </div>
@@ -203,7 +219,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
           <h2 className="text-3xl font-rajdhani font-bold text-white mb-4">Ready to Order {cat.title}?</h2>
           <p className="text-gray-400 font-dm-sans mb-8">Contact our B2B team for current wholesale pricing, batch COA documentation, and volume tier information.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-brand-bg font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider"><Zap className="w-5 h-5" /> WhatsApp Sales</a>
+            <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-brand-bg font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider"><Zap className="w-5 h-5" /> WhatsApp Sales</a>
             <Link href="/products" className="inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider hover:bg-white/10"><ArrowRight className="w-5 h-5" /> Back to Full Catalog</Link>
           </div>
         </div>

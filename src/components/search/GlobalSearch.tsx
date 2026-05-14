@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Search, X, Command, ArrowRight, FlaskConical, Activity, Brain, ShieldAlert, Sparkles, Syringe, TrendingUp, Box } from 'lucide-react';
 import { Link, useRouter } from '@/i18n/routing';
 import productsData from '@/data/products.json';
 import { useTranslations } from 'next-intl';
+
+import { getSearchEngine } from '@/lib/search';
 
 interface GlobalSearchProps {
   isOpen: boolean;
@@ -18,13 +20,16 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
+  // Memoize search engine to avoid recreating on every render
+  const searchEngine = useMemo(() => getSearchEngine(productsData), []);
+
   // Handle keyboard shortcut (Ctrl/Cmd + K)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
-        if (isOpen) onClose();
-        else onClose(); // This is handled by parent, but we can emit event
+        // Since the parent manages isOpen, we rely on the parent's handler
+        // but this keeps internal state clean if needed.
       }
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -45,21 +50,20 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
     }
   }, [isOpen]);
 
-  // Real-time search logic
+  // Real-time search logic with Fuse.js
   useEffect(() => {
     if (query.trim().length < 2) {
       setResults([]);
       return;
     }
 
-    const filtered = productsData.filter(product => 
-      product.name.toLowerCase().includes(query.toLowerCase()) ||
-      product.category.toLowerCase().includes(query.toLowerCase()) ||
-      product.description.toLowerCase().includes(query.toLowerCase())
-    ).slice(0, 8); // Limit results for clean UI
+    const searchResults = searchEngine.search(query);
+    const filtered = searchResults
+      .map(result => result.item)
+      .slice(0, 8); // Limit results for clean UI
 
     setResults(filtered);
-  }, [query]);
+  }, [query, searchEngine]);
 
   if (!isOpen) return null;
 

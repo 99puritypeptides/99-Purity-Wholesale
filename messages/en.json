@@ -1,7 +1,7 @@
 {
   "Index": {
     "Hero": {
-      "title": "America's Trusted Wholesale Peptide Supplier",
+      "title": "America's Trusted 99 Purity Wholesale Supplier",
       "subtitle": "Premium US-made research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch COAs.",
       "primaryCta": "Contact on WhatsApp",
       "secondaryCta": "View Catalog",
@@ -135,7 +135,7 @@
   },
   "Contact": {
     "Hero": {
-      "title": "Get in Touch — Wholesale Inquiries Welcome",
+      "title": "Get in Touch — 99 Purity Wholesale Inquiries",
       "subtitle": "Reach out to our U.S.-based team to discuss pricing tiers, volume orders, or our drop-shipping program."
     },
     "Methods": {
@@ -160,7 +160,7 @@
       }
     },
     "Form": {
-      "title": "Wholesale Account Application",
+      "title": "99 Purity Wholesale Account Application",
       "subtitle": "Submit your details and a representative will contact you with pricing.",
       "fields": {
         "businessName": "Business Name",
@@ -176,39 +176,43 @@
       "title": "Frequently Asked Questions",
       "items": {
         "q1": {
-          "q": "Do you ship internationally?",
-          "a": "Currently, we only ship within the United States."
+          "q": "Is 99 Purity Wholesale a domestic wholesale peptide supplier?",
+          "a": "Yes, we are a leading U.S.-based domestic wholesale peptide supplier. We specialize in domestic synthesis and fulfillment, ensuring that wellness clinics and compounding pharmacies avoid the customs risks and quality inconsistencies associated with overseas sourcing."
         },
         "q2": {
-          "q": "What is the minimum order quantity?",
-          "a": "The MOQ is 10 units per product specification."
+          "q": "What is the purity standard for your research grade peptides?",
+          "a": "Every batch in our catalog is guaranteed at ≥99% purity. We utilize independent third-party HPLC and Mass Spectrometry testing to verify the structural integrity and purity of our research grade peptides before they are released for wholesale distribution."
         },
         "q3": {
-          "q": "Do you require a license to purchase?",
-          "a": "Yes, our products are for licensed professionals and researchers only. Not for human consumption."
+          "q": "Do you provide batch-matched COAs for bulk peptide orders?",
+          "a": "Absolutely. Transparency is core to our operations. Every bulk peptide order is accompanied by a batch-matched Certificate of Analysis (COA), allowing researchers to verify the specific purity and sequence of the compounds they receive."
         },
         "q4": {
-          "q": "How long does shipping take?",
-          "a": "Typical turnaround is 2-4 business days depending on location."
+          "q": "What are the wholesale pricing tiers for wellness clinics and pharmacies?",
+          "a": "We offer a four-tier wholesale pricing structure designed to support the growth of wellness clinics and compounding pharmacies. Our tiers range from Starter (1-9 kits) to Enterprise (40+ kits), providing competitive margins at every scale of operation."
         },
         "q5": {
-          "q": "Can I get a COA before ordering?",
-          "a": "Yes, Certificates of Analysis are available upon request for any current batch."
+          "q": "Can you supply peptides for compounding pharmacy sourcing?",
+          "a": "Yes, we are a primary source for compounding pharmacy peptide sourcing. We provide high-purity liofilized compounds like BPC-157, Semaglutide, and Tirzepatide, backed by the rigorous documentation required for professional pharmacy environments."
         },
         "q6": {
-          "q": "Do you offer net terms?",
-          "a": "Please contact us to discuss terms for established high-volume accounts."
+          "q": "Do you offer a peptide dropshipping program for B2B partners?",
+          "a": "Yes, we offer a specialized peptide dropshipping program for qualified B2B partners. This allows you to leverage our U.S. fulfillment infrastructure and ≥99% purity stock while shipping directly to your clients under your own brand."
+        },
+        "q7": {
+          "q": "Are your wholesale peptides intended for human consumption?",
+          "a": "No. All products supplied by 99 Purity Wholesale are strictly for laboratory research and in-vitro testing by licensed professionals. They are not for human consumption, therapeutic use, or clinical application."
         }
       }
     }
   },
   "About": {
     "Hero": {
-      "title": "Built in America. Trusted by Professionals Nationwide.",
+      "title": "99 Purity Wholesale: Built in America. Trusted by Professionals.",
       "subtitle": "Discover the story behind our commitment to purity, transparency, and B2B partnership."
     },
     "Story": {
-      "p1": "99 Purity Peptides began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-zone sourcing.",
+      "p1": "99 Purity Wholesale began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-zone sourcing.",
       "p2": "We built our operation from the ground up — U.S. laboratory, U.S. testing, U.S. team — so that compounding pharmacies, wellness clinics, and licensed researchers would have a reliable domestic source for research-grade peptides at competitive wholesale pricing.",
       "p3": "Today we serve over 200 B2B clients across the United States, with an extensive catalog, tiered pricing, and full COA documentation on every order."
     },
@@ -244,10 +248,10 @@
     "Disclaimer": {
       "title": "Research Use Disclaimer",
       "content": [
-        "All products provided by 99 Purity Peptides are sold strictly for research and laboratory use by licensed professionals.",
+        "All products provided by 99 Purity Wholesale are sold strictly for research and laboratory use by licensed professionals.",
         "Our products are NOT intended for human consumption, clinical use, or as a treatment for any medical condition.",
         "They are not for retail sale to the general public.",
-        "By purchasing from 99 Purity Peptides, the buyer acknowledges and agrees that they are a licensed professional, researcher, or facility acting in compliance with all applicable local, state, and federal laws.",
+        "By purchasing from 99 Purity Wholesale, the buyer acknowledges and agrees that they are a licensed professional, researcher, or facility acting in compliance with all applicable local, state, and federal laws.",
         "The buyer assumes full responsibility for the proper handling, storage, and application of these research compounds."
       ]
     },
@@ -261,26 +265,26 @@
     }
   },
   "Meta": {
-    "homeTitle": "Wholesale Peptides USA | 99 Purity Peptides — Bulk Research-Grade Supply",
-    "homeDesc": "America's trusted wholesale peptide supplier. U.S.-manufactured, ≥99% purity, batch COA verified. Bulk pricing for compounding pharmacies, wellness clinics & licensed distributors. Research use only.",
-    "productsTitle": "Wholesale Peptide Catalog — Bulk Research-Grade Supply | 99 Purity Peptides",
+    "homeTitle": "99 Purity Wholesale | Wholesale Peptides USA — Bulk Research-Grade Supply",
+    "homeDesc": "America's trusted 99 Purity Wholesale supplier. U.S.-manufactured, ≥99% purity, batch COA verified. Bulk pricing for compounding pharmacies, wellness clinics & licensed distributors. Research use only.",
+    "productsTitle": "99 Purity Wholesale Catalog — Bulk Research-Grade Supply",
     "productsDesc": "Browse 50+ U.S.-manufactured research peptides at wholesale pricing. GLP-1, BPC-157, Semaglutide, TB-500 & more. Batch COA on every order. For licensed professionals only.",
-    "servicesTitle": "B2B Peptide Services — Dropshipping, Private Label & Wholesale Programs | 99 Purity",
-    "servicesDesc": "Wholesale peptide dropshipping, private label packaging, business launch support & website development for clinics, pharmacies & distributors. U.S.-based B2B partner.",
-    "aboutTitle": "About 99 Purity Peptides — U.S. Wholesale Peptide Manufacturer",
-    "aboutDesc": "99 Purity Peptides: America's domestic wholesale peptide supplier. U.S. laboratory, third-party COA verification, 50+ compounds, 200+ B2B clients nationwide. Research use only.",
-    "contactTitle": "Contact Our Wholesale Peptide Team | 99 Purity Peptides",
-    "contactDesc": "Request wholesale peptide pricing, bulk order quotes & COA documentation. WhatsApp and email B2B support. Serving compounding pharmacies, clinics & distributors across the USA.",
-    "locationsTitle": "Wholesale Peptide Supplier — All 50 U.S. States | 99 Purity Peptides",
-    "locationsDesc": "99 Purity Peptides ships bulk research-grade peptides to all 50 U.S. states. Fast domestic fulfillment for compounding pharmacies, wellness clinics & distributors. No customs risk.",
-    "qualityTitle": "Peptide Quality & COA Hub — ≥99% Purity Verified | 99 Purity Peptides",
-    "qualityDesc": "Download batch-matched COAs for all wholesale peptides. Third-party HPLC and MS verified. Every U.S.-manufactured batch hits ≥99% purity. See how we test.",
-    "blogTitle": "Wholesale Peptide Industry Insights & B2B Guides | 99 Purity Peptides",
-    "blogDesc": "Expert guides for compounding pharmacies, wellness clinics & distributors sourcing wholesale research peptides. B2B pricing, COA standards & market analysis."
+    "servicesTitle": "B2B Peptide Services — Dropshipping, Private Label & 99 Purity Wholesale Programs",
+    "servicesDesc": "99 Purity Wholesale peptide dropshipping, private label packaging, business launch support & website development for clinics, pharmacies & distributors. U.S.-based B2B partner.",
+    "aboutTitle": "About 99 Purity Wholesale — U.S. Wholesale Peptide Manufacturer",
+    "aboutDesc": "99 Purity Wholesale: America's domestic wholesale peptide supplier. U.S. laboratory, third-party COA verification, 50+ compounds, 200+ B2B clients nationwide. Research use only.",
+    "contactTitle": "Contact Our 99 Purity Wholesale Team | Bulk Peptide Pricing",
+    "contactDesc": "Request 99 Purity Wholesale peptide pricing, bulk order quotes & COA documentation. WhatsApp and email B2B support. Serving compounding pharmacies, clinics & distributors across the USA.",
+    "locationsTitle": "99 Purity Wholesale Supplier — All 50 U.S. States",
+    "locationsDesc": "99 Purity Wholesale ships bulk research-grade peptides to all 50 U.S. states. Fast domestic fulfillment for compounding pharmacies, wellness clinics & distributors. No customs risk.",
+    "qualityTitle": "Peptide Quality & COA Hub — ≥99% Purity Verified | 99 Purity Wholesale",
+    "qualityDesc": "Download batch-matched COAs for all 99 Purity Wholesale peptides. Third-party HPLC and MS verified. Every U.S.-manufactured batch hits ≥99% purity. See how we test.",
+    "blogTitle": "Wholesale Peptide Industry Insights & B2B Guides | 99 Purity Wholesale",
+    "blogDesc": "Expert guides for compounding pharmacies, wellness clinics & distributors sourcing 99 Purity Wholesale research peptides. B2B pricing, COA standards & market analysis."
   },
   "ProductsIndex": {
     "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
-    "title": "Wholesale Catalog",
+    "title": "99 Purity Wholesale Catalog",
     "subtitle": "Premium quality research compounds for qualified institutions and independent researchers.",
     "moqTitle": "Wholesale Requirements",
     "moqText": "Minimum Order Quantity (MOQ): 10 units (1 kit) per product.",
@@ -345,11 +349,17 @@
     "confidential": "All inquiries are strictly confidential. For B2B / Institution orders only.",
     "relatedTitle": "Related Research Compounds",
     "viewDetails": "View Details",
-    "whatsappMsg": "Hi, I am inquiring about wholesale pricing for {name}."
+    "whatsappMsg": "Hi, I am inquiring about wholesale pricing for {name}.",
+    "share": {
+      "title": "Share this product",
+      "copy": "Copy Link",
+      "copied": "Copied",
+      "emailBody": "Check out this research compound: {title}\n\nURL: {url}\n\nGuaranteed ≥99% Purity from 99 Purity Wholesale."
+    }
   },
   "Services": {
     "badge": "B2B Growth Solutions",
-    "title": "Wholesale Services",
+    "title": "99 Purity Wholesale Services",
     "subtitle": "Beyond supplying premium research compounds, we offer comprehensive infrastructure and consulting services to help you scale your operations, build your brand, and dominate the market.",
     "items": {
       "dropshipping": {
@@ -398,7 +408,7 @@
   "LocationsIndex": {
     "badge": "Nationwide Reach",
     "title": "Our Primary Markets",
-    "subtitle": "99 Purity Peptides provides fast, secure domestic fulfillment to research institutions, laboratories, and B2B wellness clinics across the United States. Explore our dedicated regional hubs below.",
+    "subtitle": "99 Purity Wholesale provides fast, secure domestic fulfillment to research institutions, laboratories, and B2B wellness clinics across the United States. Explore our dedicated regional hubs below.",
     "viewHub": "View Local Hub"
   },
   "LocationDetail": {
@@ -420,8 +430,8 @@
     "or": "or",
     "emailCta": "Email Inquiry",
     "viewCatalog": "View Full Catalog",
-    "whatsappMsg": "Hi, I am a researcher located in {city}, {state} looking for wholesale pricing.",
-    "emailSubject": "Wholesale Inquiry - {city}, {state}"
+    "whatsappMsg": "Hi, I am a researcher located in {city}, {state} looking for 99 Purity Wholesale pricing.",
+    "emailSubject": "99 Purity Wholesale Inquiry - {city}, {state}"
   },
   "CategoryTemplate": {
     "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
@@ -455,11 +465,11 @@
       }
     },
     "comparison": {
-      "title": "The 99PP Standard",
+      "title": "The 99PW Standard",
       "subtitle": "How we compare to typical overseas suppliers and unverified distributors.",
       "headers": {
         "criteria": "Criteria",
-        "ours": "99 Purity Peptides",
+        "ours": "99 Purity Wholesale",
         "theirs": "Typical Overseas Supplier"
       },
       "rows": {
@@ -506,7 +516,7 @@
     },
     "trust": {
       "title": "Unwavering Institutional Trust",
-      "desc": "We partner with leading academic institutions, private research facilities, and independent investigators worldwide. Our commitment to strict cGMP-aligned practices and independent verification ensures your data is built on a flawless foundation.",
+      "desc": "We partner with leading academic institutions, private research facilities, and independent investigators worldwide. Our commitment to strict cGMP-aligned practices and independent verification ensures your data is built on a foundation of 99 Purity Wholesale excellence.",
       "badges": {
         "us": "US-Based Facilities",
         "cgmp": "cGMP Aligned",

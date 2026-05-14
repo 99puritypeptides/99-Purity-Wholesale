@@ -1,4 +1,4 @@
-# 99 Purity Peptides — Wholesale B2B Site Rules
+# 99 Purity Wholesale — Wholesale B2B Site Rules
 
 ## Ads Compliance (CRITICAL — never violate)
 - NEVER use: treats, cures, clinical use, injection, patient, prescription

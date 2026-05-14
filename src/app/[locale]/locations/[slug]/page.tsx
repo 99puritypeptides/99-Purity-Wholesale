@@ -30,7 +30,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: '99 Purity Peptides',
+    name: '99 Purity Wholesale',
     description: `Wholesale research-grade peptide supplier serving licensed professionals in ${location.city}, ${location.state}.`,
     areaServed: {
       '@type': 'City',
@@ -152,7 +152,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
               {/* Why Choose Us for This Location */}
               <div className="bg-brand-accent/5 border border-brand-accent/20 rounded-2xl p-8">
                 <h2 className="text-2xl font-rajdhani font-bold text-white mb-6">
-                  Why {location.city}-Area Professionals Choose 99 Purity Peptides
+                  Why {location.city}-Area Professionals Choose 99 Purity Wholesale
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {location.whyUs.map((point, i) => (
@@ -248,7 +248,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
 
                   <div className="space-y-3">
                     <a
-                      href={`https://wa.me/1234567890?text=${encodeURIComponent(`Hi, I am a licensed professional in ${location.city}, ${location.state} looking for wholesale peptide pricing.`)}`}
+                      href={`https://wa.me/18437439007?text=${encodeURIComponent(`Hi, I am a licensed professional in ${location.city}, ${location.state} looking for wholesale peptide pricing.`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 rounded-xl transition-all font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(79,195,208,0.3)] hover:shadow-[0_0_25px_rgba(79,195,208,0.5)]"
