@@ -31,7 +31,7 @@ export const PRODUCT_ALIASES: Record<string, string[]> = {
   "5-amino-1mq": ["5-Amino", "1MQ", "Metabolic activator"]
 };
 
-export function getSearchEngine(products: ProductSearchItem[]) {
+export function getSearchEngine<T extends ProductSearchItem>(products: T[]) {
   const productsWithAliases = products.map(p => ({
     ...p,
     searchAliases: PRODUCT_ALIASES[p.slug] || []
