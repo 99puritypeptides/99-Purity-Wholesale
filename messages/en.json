@@ -39,7 +39,7 @@
           "description": "Standard & Arginine Salt variations"
         },
         "cjc": {
-          "name": "CJC-1295 / Ipamorelin",
+          "name": "CJC-1295 + Ipam.",
           "description": "Popular research blends"
         },
         "tb": {
@@ -77,19 +77,19 @@
       "items": {
         "starter": {
           "name": "Starter",
-          "description": "Low MOQs for testing the market."
+          "description": "1–9 kits — Low MOQs for testing the market."
         },
         "tier1": {
           "name": "Tier 1",
-          "description": "Consistent monthly volume with improved margins."
+          "description": "10–19 kits — Consistent volume with improved margins."
         },
         "tier2": {
           "name": "Tier 2",
-          "description": "High volume with priority fulfillment."
+          "description": "20–39 kits — High volume with priority fulfillment."
         },
         "tier3": {
-          "name": "Tier 3",
-          "description": "Enterprise scale with custom manufacturing options."
+          "name": "Tier 3 (Best Value)",
+          "description": "40+ kits — Enterprise scale with maximum margins."
         }
       },
       "cta": "Discuss Pricing on WhatsApp"
@@ -115,9 +115,11 @@
       "products": "Products",
       "quality": "Quality",
       "services": "Services",
+      "blog": "Blog",
       "locations": "Locations",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "search": "Search"
     },
     "whatsapp": "Contact on WhatsApp",
     "footer": {
@@ -259,25 +261,30 @@
     }
   },
   "Meta": {
-    "homeTitle": "99 Purity Wholesale | America's Trusted Peptide Supplier",
-    "homeDesc": "Premium US-made research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch COAs.",
-    "productsTitle": "Wholesale Peptide Catalog | 99 Purity Peptides",
-    "productsDesc": "Premium quality research compounds for qualified institutions and independent researchers. View our wholesale catalog.",
-    "servicesTitle": "B2B Growth & Wholesale Services | 99 Purity",
-    "servicesDesc": "Comprehensive infrastructure and consulting services to help you scale your research compound operations.",
-    "aboutTitle": "About Us | US-Made Research Peptides",
-    "aboutDesc": "Learn about 99 Purity Peptides. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
-    "contactTitle": "Contact Us | Wholesale Peptides Inquiry",
-    "contactDesc": "Contact our US-based team for pricing tiers, volume orders, and dropshipping programs.",
-    "locationsTitle": "Primary Delivery Markets | 99 Purity Peptides",
-    "locationsDesc": "Fast, secure domestic fulfillment to research institutions across the United States."
+    "homeTitle": "Wholesale Peptides USA | 99 Purity Peptides — Bulk Research-Grade Supply",
+    "homeDesc": "America's trusted wholesale peptide supplier. U.S.-manufactured, ≥99% purity, batch COA verified. Bulk pricing for compounding pharmacies, wellness clinics & licensed distributors. Research use only.",
+    "productsTitle": "Wholesale Peptide Catalog — Bulk Research-Grade Supply | 99 Purity Peptides",
+    "productsDesc": "Browse 50+ U.S.-manufactured research peptides at wholesale pricing. GLP-1, BPC-157, Semaglutide, TB-500 & more. Batch COA on every order. For licensed professionals only.",
+    "servicesTitle": "B2B Peptide Services — Dropshipping, Private Label & Wholesale Programs | 99 Purity",
+    "servicesDesc": "Wholesale peptide dropshipping, private label packaging, business launch support & website development for clinics, pharmacies & distributors. U.S.-based B2B partner.",
+    "aboutTitle": "About 99 Purity Peptides — U.S. Wholesale Peptide Manufacturer",
+    "aboutDesc": "99 Purity Peptides: America's domestic wholesale peptide supplier. U.S. laboratory, third-party COA verification, 50+ compounds, 200+ B2B clients nationwide. Research use only.",
+    "contactTitle": "Contact Our Wholesale Peptide Team | 99 Purity Peptides",
+    "contactDesc": "Request wholesale peptide pricing, bulk order quotes & COA documentation. WhatsApp and email B2B support. Serving compounding pharmacies, clinics & distributors across the USA.",
+    "locationsTitle": "Wholesale Peptide Supplier — All 50 U.S. States | 99 Purity Peptides",
+    "locationsDesc": "99 Purity Peptides ships bulk research-grade peptides to all 50 U.S. states. Fast domestic fulfillment for compounding pharmacies, wellness clinics & distributors. No customs risk.",
+    "qualityTitle": "Peptide Quality & COA Hub — ≥99% Purity Verified | 99 Purity Peptides",
+    "qualityDesc": "Download batch-matched COAs for all wholesale peptides. Third-party HPLC and MS verified. Every U.S.-manufactured batch hits ≥99% purity. See how we test.",
+    "blogTitle": "Wholesale Peptide Industry Insights & B2B Guides | 99 Purity Peptides",
+    "blogDesc": "Expert guides for compounding pharmacies, wellness clinics & distributors sourcing wholesale research peptides. B2B pricing, COA standards & market analysis."
   },
   "ProductsIndex": {
     "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
     "title": "Wholesale Catalog",
     "subtitle": "Premium quality research compounds for qualified institutions and independent researchers.",
     "moqTitle": "Wholesale Requirements",
-    "moqText": "Minimum Order Quantity (MOQ): 10 units per product.",
+    "moqText": "Minimum Order Quantity (MOQ): 10 units (1 kit) per product.",
+    "searchPlaceholder": "Search compound directory...",
     "cta": "Contact for Pricing",
     "categories": {
       "glp1-metabolic-peptides": {
@@ -321,9 +328,9 @@
     "availableSizes": "Available Sizes",
     "storageDetails": "Storage Details",
     "moqHeading": "Wholesale MOQ: 10 Units",
-    "moqSubtext": "Minimum order quantity applies to all specifications.",
+    "moqSubtext": "Minimum order quantity is 10 units (1 kit).",
     "pricingHeading": "Contact for Tiered Pricing",
-    "pricingTiers": "Starter · Tier 1 · Tier 2 · Tier 3",
+    "pricingTiers": "Starter (1-9) · Tier 1 (10-19) · Tier 2 (20-39) · Tier 3 (40+)",
     "contextTitle": "Research Context",
     "contextP1": "This compound is supplied exclusively for in vitro laboratory research and academic modeling. It is not intended for diagnostic, therapeutic, or clinical applications in humans or animals. Researchers utilizing {name} should adhere to standard laboratory safety protocols and ensure their institution has the appropriate ethical clearances for experimental use.",
     "contextP2": "As an advanced molecular tool, {name} allows investigators to probe specific cellular pathways, receptor affinities, and biochemical cascades. All batches undergo rigorous analytical testing to confirm sequence accuracy and structural integrity, ensuring that baseline data is not compromised by impurities. Storage conditions must be strictly maintained to prevent peptide degradation or loss of biological activity prior to assay implementation.",

@@ -39,7 +39,7 @@
           "description": "Variaciones estándar y sal de arginina"
         },
         "cjc": {
-          "name": "CJC-1295 / Ipamorelin",
+          "name": "CJC-1295 + Ipam.",
           "description": "Mezclas de investigación populares"
         },
         "tb": {
@@ -77,19 +77,19 @@
       "items": {
         "starter": {
           "name": "Inicial",
-          "description": "MOQs bajos para probar el mercado."
+          "description": "1–9 kits — MOQs bajos para probar el mercado."
         },
         "tier1": {
           "name": "Nivel 1",
-          "description": "Volumen mensual constante con márgenes mejorados."
+          "description": "10–19 kits — Volumen constante con márgenes mejorados."
         },
         "tier2": {
           "name": "Nivel 2",
-          "description": "Alto volumen con cumplimiento prioritario."
+          "description": "20–39 kits — Alto volumen con cumplimiento prioritario."
         },
         "tier3": {
-          "name": "Nivel 3",
-          "description": "Escala empresarial con opciones de fabricación personalizadas."
+          "name": "Nivel 3 (Mejor Valor)",
+          "description": "40+ kits — Escala empresarial con márgenes máximos."
         }
       },
       "cta": "Discutir Precios en WhatsApp"
@@ -115,9 +115,11 @@
       "products": "Productos",
       "quality": "Calidad",
       "services": "Servicios",
+      "blog": "Blog",
       "locations": "Ubicaciones",
       "about": "Nosotros",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "search": "Buscar"
     },
     "whatsapp": "Contactar por WhatsApp",
     "footer": {
@@ -277,7 +279,8 @@
     "title": "Catálogo Mayorista",
     "subtitle": "Compuestos de investigación de primera calidad para instituciones calificadas e investigadores independientes.",
     "moqTitle": "Requisitos para Mayoristas",
-    "moqText": "Cantidad Mínima de Pedido (MOQ): 10 unidades por producto.",
+    "moqText": "Cantidad Mínima de Pedido (MOQ): 10 unidades (1 kit) por producto.",
+    "searchPlaceholder": "Buscar en el directorio de compuestos...",
     "cta": "Contactar para Precios",
     "categories": {
       "glp1-metabolic-peptides": {
@@ -321,9 +324,9 @@
     "availableSizes": "Tamaños Disponibles",
     "storageDetails": "Detalles de Almacenamiento",
     "moqHeading": "MOQ Mayorista: 10 Unidades",
-    "moqSubtext": "La cantidad mínima de pedido se aplica a todas las especificaciones.",
+    "moqSubtext": "La cantidad mínima de pedido es de 10 unidades (1 kit).",
     "pricingHeading": "Contactar para Precios por Niveles",
-    "pricingTiers": "Inicial · Nivel 1 · Nivel 2 · Nivel 3",
+    "pricingTiers": "Inicial (1-9) · Nivel 1 (10-19) · Nivel 2 (20-39) · Nivel 3 (40+)",
     "contextTitle": "Contexto de Investigación",
     "contextP1": "Este compuesto se suministra exclusivamente para investigación de laboratorio in vitro y modelado académico. No está destinado a aplicaciones diagnósticas, terapéuticas o clínicas en humanos o animales. Los investigadores que utilizan {name} deben adherirse a los protocolos de seguridad de laboratorio estándar y asegurarse de que su institución cuente con las autorizaciones éticas adecuadas para uso experimental.",
     "contextP2": "Como herramienta molecular avanzada, {name} permite a los investigadores sondear vías celulares específicas, afinidades de receptores y cascadas bioquímicas. Todos los lotes se someten a rigurosas pruebas analíticas para confirmar la precisión de la secuencia y la integridad estructural, asegurando que los datos de referencia no se vean comprometidos por impurezas. Las condiciones de almacenamiento deben mantenerse estrictamente para evitar la degradación de los péptidos o la pérdida de actividad biológica antes de la implementación del ensayo.",

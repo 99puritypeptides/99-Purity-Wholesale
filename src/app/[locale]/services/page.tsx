@@ -60,7 +60,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 border-b border-white/5">
+      <section className="relative overflow-hidden pb-24 border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-accent/10 via-brand-bg to-brand-bg"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
           <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">

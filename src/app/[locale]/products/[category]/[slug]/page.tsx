@@ -1,15 +1,31 @@
 import { notFound } from 'next/navigation';
-import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight } from 'lucide-react';
+import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, Box } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'Meta'});
+export async function generateMetadata({ params }: { params: { locale: string; category: string; slug: string } }) {
+  const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
+  if (!product) return {};
   return {
-    title: t('productsTitle'),
-    description: t('productsDesc'),
+    title: `${product.name} — Wholesale Bulk Supply | 99 Purity Peptides`,
+    description: `Buy ${product.name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping to all 50 states. Research use only.`,
+    openGraph: {
+      title: `${product.name} — Wholesale Supply`,
+      description: product.description,
+    },
   };
+}
+
+function buildFaqs(name: string, specs: string[], cas: string) {
+  return [
+    { q: `What is the purity of wholesale ${name}?`, a: `All batches of ${name} from 99 Purity Peptides are independently verified at ≥99% purity by accredited U.S. laboratories using HPLC and Mass Spectrometry. A batch-matched Certificate of Analysis (COA) is included with every shipment.` },
+    { q: `What specifications of ${name} are available?`, a: `${name} is available in the following wholesale specifications: ${specs.join(', ')}. Minimum order quantity is 10 units (1 kit) per specification.` },
+    { q: `What is the MOQ for wholesale ${name}?`, a: `The minimum order quantity for ${name} is 10 units (1 kit) per specification. Volume discounts are available through our tiered pricing: Start (1–9 kits), Tier 1 (10–19), Tier 2 (20–39), and Tier 3 (40+ kits).` },
+    { q: `How is ${name} shipped?`, a: `${name} ships as a lyophilized (freeze-dried) powder via priority domestic carrier from our U.S. facility. Delivery is 2–4 business days to all 50 states. No international customs risk. No cold-chain required during transit.` },
+    { q: `Can I get a COA for ${name} before ordering?`, a: `Yes. Contact our team via WhatsApp or email to request the current batch Certificate of Analysis for ${name} before placing your order. COAs include HPLC purity data, MS sequence confirmation, and batch identification.` },
+    ...(cas !== 'N/A' ? [{ q: `What is the CAS number for ${name}?`, a: `The CAS registry number for ${name} is ${cas}. This identifier can be used to cross-reference published literature and verify compound identity.` }] : []),
+  ];
 }
 
 export default async function ProductPage({ params }: { params: { locale: string, category: string, slug: string } }) {
@@ -19,6 +35,18 @@ export default async function ProductPage({ params }: { params: { locale: string
   if (!product) {
     notFound();
   }
+
+  const faqs = buildFaqs(product.name, product.specs, product.cas);
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
 
   // Find related products (same category, different slug, max 3)
   const relatedProducts = productsData
@@ -31,6 +59,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text pb-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Breadcrumbs */}
       <div className="border-b border-white/5 bg-[#0e131b]">
         <div className="container mx-auto px-4 py-4 flex items-center gap-2 text-sm font-dm-mono text-gray-500 overflow-x-auto whitespace-nowrap">
@@ -77,34 +106,47 @@ export default async function ProductPage({ params }: { params: { locale: string
                 {t('specsTitle')}
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{t('availableSizes')}</h4>
-                  <ul className="space-y-3">
-                    {product.specs.map(spec => (
-                      <li key={spec} className="flex items-center gap-3 text-white font-dm-sans bg-black/30 px-4 py-2 rounded-lg border border-white/5">
-                        <CheckCircle2 className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                        {spec}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{t('storageDetails')}</h4>
-                  <p className="text-gray-300 font-dm-sans bg-black/30 px-4 py-3 rounded-lg border border-white/5 h-full flex items-center">
-                    {product.storage}
-                  </p>
+              <div className="mb-8">
+                <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{t('availableSizes')}</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {product.specs.map(spec => (
+                    <div key={spec} className="flex items-center gap-3 text-white font-dm-sans bg-black/30 px-4 py-2 rounded-lg border border-white/5">
+                      <CheckCircle2 className="w-4 h-4 text-brand-accent flex-shrink-0" />
+                      {spec}
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="bg-brand-accent/5 border border-brand-accent/20 rounded-lg p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div>
-                  <div className="text-brand-accent font-bold font-dm-mono text-lg">{t('moqHeading')}</div>
-                  <div className="text-sm text-gray-400 font-dm-sans">{t('moqSubtext')}</div>
+              <div className="flex flex-col md:flex-row gap-6 mb-10">
+                <div className="flex-1 bg-brand-accent/5 border border-brand-accent/20 rounded-xl p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <Box className="w-5 h-5 text-brand-accent" />
+                    <h4 className="text-brand-accent font-bold font-dm-mono text-lg uppercase tracking-tight">{t('moqHeading')}</h4>
+                  </div>
+                  <p className="text-sm text-gray-400 font-dm-sans">{t('moqSubtext')}</p>
                 </div>
-                <div className="text-right">
-                  <div className="text-white font-bold font-rajdhani text-xl">{t('pricingHeading')}</div>
-                  <div className="text-xs text-gray-500 font-dm-mono uppercase tracking-wider">{t('pricingTiers')}</div>
+                
+                <div className="flex-[2] bg-[#0B0F15] border border-white/10 rounded-xl p-6">
+                  <h4 className="text-white font-bold font-rajdhani text-xl mb-4 flex items-center gap-2">
+                    <Zap className="w-5 h-5 text-brand-accent" />
+                    {t('pricingHeading')}
+                  </h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {[
+                      { key: 'starter', range: '1-9' },
+                      { key: 'tier1', range: '10-19' },
+                      { key: 'tier2', range: '20-39' },
+                      { key: 'tier3', range: '40+' }
+                    ].map((tier) => (
+                      <div key={tier.key} className="bg-white/5 border border-white/10 rounded-lg p-3 flex flex-col items-center text-center transition-colors hover:border-brand-accent/30">
+                        <span className="text-[10px] text-gray-500 font-dm-mono uppercase mb-1">
+                          {tier.key === 'tier3' ? 'Tier 3' : tier.key.charAt(0).toUpperCase() + tier.key.slice(1).replace('tier', 'Tier ')}
+                        </span>
+                        <span className="text-sm text-brand-accent font-bold font-dm-mono">{tier.range} kits</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -170,6 +212,24 @@ export default async function ProductPage({ params }: { params: { locale: string
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Product FAQ */}
+        <div className="mt-20 pt-10 border-t border-white/5">
+          <h2 className="text-3xl font-rajdhani font-bold text-white mb-8">Frequently Asked Questions — {product.name}</h2>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <details key={i} className="group bg-[#0e131b] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-accent/20 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer list-none gap-4">
+                  <h3 className="text-white font-rajdhani font-bold text-lg group-open:text-brand-accent transition-colors">{faq.q}</h3>
+                  <div className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/40 group-open:text-brand-accent flex-shrink-0 text-lg leading-none">
+                    <span className="group-open:hidden">+</span><span className="hidden group-open:block">−</span>
+                  </div>
+                </summary>
+                <div className="px-6 pb-6"><p className="text-gray-400 font-dm-sans leading-relaxed">{faq.a}</p></div>
+              </details>
+            ))}
           </div>
         </div>
 

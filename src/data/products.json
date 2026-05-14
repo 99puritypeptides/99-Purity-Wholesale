@@ -1,21 +1,11 @@
 [
   {
-    "name": "Adamax",
-    "slug": "adamax",
-    "category": "cognitive-nootropic",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "N/A",
-    "storage": "Store at -20°C. Protect from light.",
-    "description": "Advanced nootropic peptide designed for B2B neurological research, offering enhanced stability and bioavailability for studying cognitive pathways and neuroprotection."
-  },
-  {
-    "name": "Adipotide/FTTP",
-    "slug": "adipotide-fttp",
+    "name": "5-AMINO-1MQ",
+    "slug": "5-amino-1mq",
     "category": "cosmetic-aesthetic",
-    "specs": ["2mg×10", "5mg×10", "10mg×10"],
-    "cas": "N/A",
-    "storage": "Store at -20°C.",
-    "description": "Proapoptotic peptide targeting adipose tissue vasculature, utilized in aesthetic and dermatological research models for regulating localized metabolic shifts."
+    "specs": ["5mg×10", "10mg×10"],
+    "cas": "42464-96-0",
+    "description": "Research-grade compound intended strictly for laboratory, analytical, and in-vitro research applications. Not for human consumption, therapeutic use, veterinary use, or diagnostic procedures."
   },
   {
     "name": "AOD9604",
@@ -23,26 +13,23 @@
     "category": "anti-aging-longevity",
     "specs": ["5mg×10", "10mg×10"],
     "cas": "221231-10-3",
-    "storage": "Store at -20°C.",
-    "description": "Modified fragment of human growth hormone designed for lipolytic research, focusing on fat metabolism without affecting IGF-1 levels."
+    "description": "Research-use peptide supplied for scientific and analytical testing only. Not for human consumption or medical application."
   },
   {
-    "name": "B7-33",
-    "slug": "b7-33",
-    "category": "healing-recovery-peptides",
-    "specs": ["2mg×10", "10mg×10"],
+    "name": "Adamax",
+    "slug": "adamax",
+    "category": "cognitive-nootropic",
+    "specs": ["5mg×10", "10mg×10"],
     "cas": "N/A",
-    "storage": "Store at -20°C.",
-    "description": "Soluble single-chain relaxin analog for researching antifibrotic effects and tissue remodeling in laboratory settings."
+    "description": "Laboratory research material intended for controlled experimental environments only. Not approved for human consumption."
   },
   {
-    "name": "BAC Water",
-    "slug": "bac-water",
-    "category": "ancillaries",
-    "specs": ["3ml×10", "10ml×10"],
-    "cas": "7732-18-5",
-    "storage": "Store at room temperature.",
-    "description": "Sterile bacteriostatic water formulated for the reliable reconstitution and preservation of delicate peptide chains during long-term storage."
+    "name": "Adipotide/FTTP",
+    "slug": "adipotide-fttp",
+    "category": "cosmetic-aesthetic",
+    "specs": ["2mg×10", "5mg×10", "10mg×10"],
+    "cas": "N/A",
+    "description": "Research peptide manufactured for laboratory analysis and investigational research purposes only. Not for human or animal consumption."
   },
   {
     "name": "B12",
@@ -50,8 +37,23 @@
     "category": "ancillaries",
     "specs": ["10mg×10"],
     "cas": "68-19-9",
-    "storage": "Store at room temperature away from light.",
-    "description": "Injectable-grade Vitamin B12 for metabolic research, supporting in vitro studies on cellular energy and neurological function."
+    "description": "Research-use compound for analytical and laboratory applications only. Not intended for ingestion or therapeutic use."
+  },
+  {
+    "name": "B7-33",
+    "slug": "b7-33",
+    "category": "healing-recovery-peptides",
+    "specs": ["2mg×10", "10mg×10"],
+    "cas": "N/A",
+    "description": "Research-grade peptide for scientific study and laboratory evaluation only. Not for human consumption."
+  },
+  {
+    "name": "BAC Water",
+    "slug": "bac-water",
+    "category": "ancillaries",
+    "specs": ["3ml×10", "10ml×10"],
+    "cas": "7732-18-5",
+    "description": "Laboratory-use bacteriostatic water intended for research handling and analytical preparation only. Not for direct human use."
   },
   {
     "name": "BPC-157",
@@ -59,26 +61,23 @@
     "category": "healing-recovery-peptides",
     "specs": ["5mg×10", "10mg×10"],
     "cas": "137525-51-0",
-    "storage": "Store at -20°C.",
-    "description": "Body Protection Compound-157, highly pure peptide for researching angiogenesis, soft tissue repair, and gastrointestinal healing models."
+    "description": "Research peptide intended exclusively for laboratory and investigational use. Not for human consumption or pharmaceutical application."
   },
   {
-    "name": "BPC 5mg + TB 5mg",
-    "slug": "bpc-tb-5mg-blend",
+    "name": "BPC 5mg+TB 5mg",
+    "slug": "bpc-5mg-tb-5mg",
     "category": "healing-recovery-peptides",
     "specs": ["10mg×10"],
     "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "Synergistic peptide blend engineered to study the combined effects of BPC-157 and TB-500 on accelerated tissue regeneration and repair."
+    "description": "Combination research peptide blend intended strictly for controlled laboratory research. Not for human consumption."
   },
   {
-    "name": "BPC 10mg + TB 10mg",
-    "slug": "bpc-tb-10mg-blend",
+    "name": "BPC 10mg+TB 10mg",
+    "slug": "bpc-10mg-tb-10mg",
     "category": "healing-recovery-peptides",
     "specs": ["20mg×10"],
     "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "High-concentration synergistic peptide blend designed for intensive regenerative studies on tissue repair and cellular recovery pathways."
+    "description": "Research peptide blend supplied for analytical and scientific evaluation only. Not for therapeutic or personal use."
   },
   {
     "name": "Cagrilintide",
@@ -86,26 +85,7 @@
     "category": "glp1-metabolic-peptides",
     "specs": ["5mg×10", "10mg×10"],
     "cas": "141430-65-1",
-    "storage": "Store at -20°C.",
-    "description": "Long-acting amylin analog utilized in advanced metabolic research for evaluating synergistic weight management and glycemic control pathways."
-  },
-  {
-    "name": "Cagrisema (2.5+2.5)",
-    "slug": "cagrisema",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10"],
-    "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "Co-formulated combination of Cagrilintide and Semaglutide, providing a dual-action mechanism for studying complex endocrine and metabolic signaling."
-  },
-  {
-    "name": "CJC-1295 w/ DAC",
-    "slug": "cjc-1295-dac",
-    "category": "growth-hormone",
-    "specs": ["5mg×10"],
-    "cas": "863288-34-0",
-    "storage": "Store at -20°C.",
-    "description": "Long-acting GHRH analog with Drug Affinity Complex, offering extended half-life for investigating sustained endogenous growth hormone pulsatility."
+    "description": "Research-grade peptide for in-vitro and laboratory research applications only. Not intended for human consumption."
   },
   {
     "name": "CJC-1295 (no DAC)",
@@ -113,26 +93,23 @@
     "category": "growth-hormone",
     "specs": ["5mg×10", "10mg×10"],
     "cas": "863288-34-0 (modified)",
-    "storage": "Store at -20°C.",
-    "description": "Standard GHRH analog (Modified GRF 1-29) for precisely modeling pulsatile growth hormone release without prolonged binding affinity."
+    "description": "Laboratory research peptide intended for scientific testing and investigational work only. Not for human use."
   },
   {
-    "name": "CJC-1295 + Ipamorelin",
-    "slug": "cjc-1295-ipamorelin-blend",
+    "name": "CJC-1295 + Ipam.",
+    "slug": "cjc-1295-ipam",
     "category": "growth-hormone",
     "specs": ["10mg×10"],
     "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "Optimized peptide blend combining a GHRH and a GHRP, enabling laboratories to study synergistic stimulation of the somatotropic axis."
+    "description": "Research peptide blend formulated strictly for laboratory applications and analytical evaluation. Not for human consumption."
   },
   {
-    "name": "Dihexa",
-    "slug": "dihexa",
-    "category": "cognitive-nootropic",
-    "specs": ["10mg×10"],
-    "cas": "1401708-83-5",
-    "storage": "Store at -20°C.",
-    "description": "Potent angiotensin IV analog investigated for its remarkable capability to enhance synaptogenesis and cognitive function in neurological models."
+    "name": "CJC-1295 w/ DAC",
+    "slug": "cjc-1295-dac",
+    "category": "growth-hormone",
+    "specs": ["5mg×10"],
+    "cas": "863288-34-0",
+    "description": "Scientific research peptide intended for controlled investigational environments only. Not approved for medical or dietary use."
   },
   {
     "name": "DSIP",
@@ -140,116 +117,63 @@
     "category": "cognitive-nootropic",
     "specs": ["5mg×10"],
     "cas": "62568-57-4",
-    "storage": "Store at -20°C.",
-    "description": "Delta Sleep-Inducing Peptide, a neuropeptide used to study circadian rhythms, stress modulation, and autonomic regulation pathways."
-  },
-  {
-    "name": "Dulaglutide",
-    "slug": "dulaglutide",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "923950-08-7",
-    "storage": "Store at -20°C.",
-    "description": "GLP-1 receptor agonist engineered for extended action, facilitating metabolic research on insulinotropic effects and gastric motility."
+    "description": "Research-use peptide intended solely for laboratory experimentation and analytical testing. Not for human consumption."
   },
   {
     "name": "Epithalon",
     "slug": "epithalon",
     "category": "anti-aging-longevity",
-    "specs": ["10mg×10", "50mg×10"],
-    "cas": "307297-39-8",
-    "storage": "Store at -20°C.",
-    "description": "Synthetic pineal peptide derivative critical for studying telomerase activation, cellular senescence, and biological life extension models."
-  },
-  {
-    "name": "5-AMINO-1MQ",
-    "slug": "5-amino-1mq",
-    "category": "cosmetic-aesthetic",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "42464-96-0",
-    "storage": "Store in a cool, dry place.",
-    "description": "NNMT inhibitor researched for its potential to reverse diet-induced obesity and regulate adipocyte metabolism on a cellular level."
-  },
-  {
-    "name": "FOXO4",
-    "slug": "foxo4",
-    "category": "cognitive-nootropic",
-    "specs": ["2mg×10", "10mg×10"],
-    "cas": "N/A",
-    "storage": "Store at -20°C.",
-    "description": "Transcription factor-related peptide utilized in specialized studies involving cellular apoptosis, oxidative stress, and neuroprotection."
-  },
-  {
-    "name": "FOXO4-DRI",
-    "slug": "foxo4-dri",
-    "category": "cognitive-nootropic",
     "specs": ["10mg×10"],
-    "cas": "N/A",
-    "storage": "Store at -20°C.",
-    "description": "Advanced senolytic peptide designed to selectively induce apoptosis in senescent cells, utilized heavily in neuro-longevity research."
+    "cas": "307297-39-8",
+    "description": "Research peptide for laboratory analysis and scientific study only. Not intended for ingestion or therapeutic use."
   },
   {
-    "name": "GHK-Cu",
+    "name": "GHK-CU",
     "slug": "ghk-cu",
     "category": "cosmetic-aesthetic",
-    "specs": ["50mg×10", "100mg×10"],
+    "specs": ["50mg×10"],
     "cas": "49557-75-7",
-    "storage": "Store at -20°C.",
-    "description": "Copper-binding peptide renowned in dermatological research for its involvement in collagen synthesis, wound healing, and tissue remodeling."
+    "description": "Research-grade copper peptide intended for analytical and laboratory research only. Not for human consumption."
   },
   {
     "name": "GLOW Blend",
     "slug": "glow-blend",
     "category": "cosmetic-aesthetic",
-    "specs": ["70mg×10"],
+    "specs": ["10mg×10"],
     "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "Proprietary cosmetic research blend designed to investigate synergistic mechanisms related to skin elasticity and dermal extracellular matrix production."
+    "description": "Research blend supplied for investigational and laboratory applications only. Not for personal or medical use."
   },
   {
-    "name": "KLOW Blend",
-    "slug": "klow-blend",
-    "category": "cosmetic-aesthetic",
-    "specs": ["80mg×10"],
-    "cas": "Blend",
-    "storage": "Store at -20°C.",
-    "description": "Advanced cosmetic peptide formulation created for researching targeted aesthetic applications and topical cellular interactions."
+    "name": "Hexarelin",
+    "slug": "hexarelin",
+    "category": "growth-hormone",
+    "specs": ["2mg×10"],
+    "cas": "140703-51-1",
+    "description": "Scientific research peptide intended exclusively for laboratory testing and evaluation. Not for human consumption."
   },
   {
-    "name": "Glutathione",
-    "slug": "glutathione",
-    "category": "ancillaries",
-    "specs": ["600mg×10", "1500mg×10"],
-    "cas": "70-18-8",
-    "storage": "Store at 2-8°C.",
-    "description": "Essential laboratory antioxidant utilized as a vital reagent for cellular defense, detoxification models, and oxidative stress research."
+    "name": "HGH Fragment 176-191",
+    "slug": "hgh-fragment-176-191",
+    "category": "growth-hormone",
+    "specs": ["5mg×10"],
+    "cas": "N/A",
+    "description": "Research peptide intended strictly for scientific and analytical applications. Not approved for human use."
   },
   {
     "name": "Ipamorelin",
     "slug": "ipamorelin",
     "category": "growth-hormone",
-    "specs": ["5mg×10", "10mg×10"],
+    "specs": ["2mg×10", "5mg×10"],
     "cas": "170851-70-4",
-    "storage": "Store at -20°C.",
-    "description": "Highly specific Growth Hormone Releasing Peptide (GHRP) utilized for studying targeted somatotropic stimulation without elevating prolactin or cortisol."
+    "description": "Laboratory research peptide supplied for analytical and investigational purposes only. Not for human consumption."
   },
   {
     "name": "KPV",
     "slug": "kpv",
     "category": "healing-recovery-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "specs": ["5mg×10"],
     "cas": "17750-73-1",
-    "storage": "Store at -20°C.",
-    "description": "Alpha-MSH-derived tripeptide explored extensively for its potent anti-inflammatory and immunomodulatory properties in tissue recovery models."
-  },
-  {
-    "name": "L-Carnitine",
-    "slug": "l-carnitine",
-    "category": "ancillaries",
-    "specs": ["1200mg×10"],
-    "cas": "541-15-1",
-    "storage": "Store at room temperature.",
-    "description": "High-purity metabolic ancillary essential for in vitro research concerning mitochondrial lipid transport and fatty acid oxidation."
+    "description": "Research peptide for controlled laboratory and scientific applications only. Not intended for human use."
   },
   {
     "name": "Lipo-C",
@@ -257,26 +181,23 @@
     "category": "ancillaries",
     "specs": ["10ml×10"],
     "cas": "Blend",
-    "storage": "Store at 2-8°C.",
-    "description": "Lipotropic reagent blend utilized in laboratory settings to investigate the metabolic breakdown and export of lipids."
+    "description": "Research-use formulation intended for laboratory handling and investigational study only. Not for ingestion or therapeutic application."
   },
   {
-    "name": "LL37",
-    "slug": "ll37",
-    "category": "healing-recovery-peptides",
-    "specs": ["5mg×10"],
-    "cas": "597562-32-8",
-    "storage": "Store at -20°C.",
-    "description": "Endogenous antimicrobial peptide researched for its role in innate immune response, wound healing, and cellular defense mechanisms."
-  },
-  {
-    "name": "MIC (Lipo C+B12)",
-    "slug": "mic",
-    "category": "ancillaries",
+    "name": "MELANOTAN I",
+    "slug": "melanotan-i",
+    "category": "cosmetic-aesthetic",
     "specs": ["10mg×10"],
-    "cas": "Blend",
-    "storage": "Store at 2-8°C.",
-    "description": "Methionine, Inositol, and Choline combined with Vitamin B12, acting as a crucial ancillary for modeling hepatic lipid metabolism."
+    "cas": "75921-69-6",
+    "description": "Research peptide supplied for laboratory and analytical research only. Not for human consumption."
+  },
+  {
+    "name": "MELANOTAN II",
+    "slug": "melanotan-ii",
+    "category": "cosmetic-aesthetic",
+    "specs": ["10mg×10"],
+    "cas": "121062-08-6",
+    "description": "Scientific research compound intended solely for investigational and laboratory use. Not approved for human use."
   },
   {
     "name": "MOTS-c",
@@ -284,80 +205,55 @@
     "category": "anti-aging-longevity",
     "specs": ["10mg×10", "15mg×10", "20mg×10", "40mg×10"],
     "cas": "1627580-64-6",
-    "storage": "Store at -20°C.",
-    "description": "Mitochondrial-derived peptide studied for its influence on metabolic homeostasis, insulin sensitivity, and cellular longevity pathways."
+    "description": "Research-grade peptide intended for laboratory and analytical applications only. Not for human consumption."
   },
   {
     "name": "NAD+",
     "slug": "nad",
     "category": "anti-aging-longevity",
-    "specs": ["100mg×10", "500mg×10", "1000mg×10"],
+    "specs": ["100mg×10", "500mg×10"],
     "cas": "53-84-9",
-    "storage": "Store at -20°C.",
-    "description": "Nicotinamide Adenine Dinucleotide, a fundamental coenzyme utilized in studies exploring cellular energy transfer, aging, and DNA repair."
+    "description": "Laboratory-use compound supplied for scientific evaluation and analytical research only. Not intended for therapeutic or dietary use."
+  },
+  {
+    "name": "PT-141",
+    "slug": "pt-141",
+    "category": "cosmetic-aesthetic",
+    "specs": ["10mg×10"],
+    "cas": "189691-06-3",
+    "description": "Research peptide intended strictly for scientific study and laboratory investigation. Not for human consumption."
   },
   {
     "name": "Retatrutide",
     "slug": "retatrutide",
     "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10", "15mg×10", "20mg×10", "30mg×10", "60mg×10"],
-    "cas": "2381089-83-2",
-    "storage": "Store at -20°C.",
-    "description": "Novel triple-receptor agonist (GLP-1/GIP/Glucagon) offering researchers unprecedented mechanisms for investigating comprehensive metabolic control."
-  },
-  {
-    "name": "Selank",
-    "slug": "selank",
-    "category": "cognitive-nootropic",
     "specs": ["5mg×10", "10mg×10"],
-    "cas": "129954-34-3",
-    "storage": "Store at -20°C.",
-    "description": "Heptapeptide analog of tuftsin extensively researched for its anxiolytic and nootropic effects within neurochemical modeling."
+    "cas": "2381089-83-2",
+    "description": "Research peptide provided exclusively for laboratory, analytical, and investigational use. Not for human consumption, clinical use, or diagnostic purposes."
   },
   {
     "name": "Semaglutide",
     "slug": "semaglutide",
     "category": "glp1-metabolic-peptides",
-    "specs": ["10mg×10", "15mg×10", "20mg×10", "30mg×10"],
-    "cas": "910463-68-2",
-    "storage": "Store at -20°C.",
-    "description": "Industry-standard GLP-1 receptor agonist, providing consistent and reproducible results for in vitro studies on insulin secretion and metabolism."
-  },
-  {
-    "name": "Semax",
-    "slug": "semax",
-    "category": "cognitive-nootropic",
     "specs": ["5mg×10", "10mg×10"],
-    "cas": "80714-61-0",
-    "storage": "Store at -20°C.",
-    "description": "ACTH-derived peptide crucial for neurological research involving neuroprotection, memory consolidation, and BDNF expression pathways."
+    "cas": "910463-68-2",
+    "description": "Research-grade peptide intended for in-vitro and controlled laboratory research only. Not for human or veterinary consumption."
   },
   {
-    "name": "Sermorelin Acetate",
+    "name": "Sermorelin",
     "slug": "sermorelin",
     "category": "growth-hormone",
-    "specs": ["5mg×10", "10mg×10"],
+    "specs": ["5mg×10"],
     "cas": "86168-78-7",
-    "storage": "Store at -20°C.",
-    "description": "Truncated analog of GHRH used systematically to study the physiological stimulation of endogenous growth hormone secretion."
-  },
-  {
-    "name": "Snap-8",
-    "slug": "snap-8",
-    "category": "cosmetic-aesthetic",
-    "specs": ["10mg×10", "100mg×10"],
-    "cas": "868844-74-0",
-    "storage": "Store at -20°C.",
-    "description": "Advanced octapeptide utilized in dermatological research to investigate the modulation of neurotransmitter pathways linked to muscle contraction."
+    "description": "Scientific research peptide intended solely for laboratory experimentation and analytical testing. Not for human use."
   },
   {
     "name": "SS-31",
     "slug": "ss-31",
     "category": "anti-aging-longevity",
-    "specs": ["10mg×10", "50mg×10"],
+    "specs": ["10mg×10"],
     "cas": "736992-21-5",
-    "storage": "Store at -20°C.",
-    "description": "Mitochondria-targeted antioxidant peptide essential for studying oxidative stress resilience and the prevention of cellular mitochondrial dysfunction."
+    "description": "Research-use peptide for analytical and investigational laboratory applications only. Not intended for human consumption."
   },
   {
     "name": "TB-500",
@@ -365,52 +261,46 @@
     "category": "healing-recovery-peptides",
     "specs": ["5mg×10", "10mg×10"],
     "cas": "77591-33-4",
-    "storage": "Store at -20°C.",
-    "description": "Synthetic derivative of Thymosin Beta-4, critical for laboratory research focused on cellular migration, actin upregulation, and tissue repair."
+    "description": "Research peptide intended for laboratory and scientific evaluation only. Not for human consumption or medical use."
   },
   {
     "name": "Tesamorelin",
     "slug": "tesamorelin",
     "category": "growth-hormone",
-    "specs": ["5mg×10", "10mg×10", "20mg×10"],
+    "specs": ["10mg×10"],
     "cas": "218949-48-5",
-    "storage": "Store at -20°C.",
-    "description": "GHRH analog synthesized for endocrine research, particularly noted for its role in investigating visceral adipose tissue reduction models."
+    "description": "Research-grade peptide supplied for controlled scientific and analytical applications only. Not intended for therapeutic use."
   },
   {
-    "name": "Thymalin/Thymulin",
+    "name": "Tesofensine",
+    "slug": "tesofensine",
+    "category": "cognitive-nootropic",
+    "specs": ["500mcg×10"],
+    "cas": "195875-84-4",
+    "description": "Research compound intended exclusively for laboratory testing and investigational research. Not for human consumption."
+  },
+  {
+    "name": "Thymalin",
     "slug": "thymalin",
     "category": "anti-aging-longevity",
     "specs": ["10mg×10"],
     "cas": "63958-90-7",
-    "storage": "Store at -20°C.",
-    "description": "Thymic bioregulator essential for immunological research and the study of T-cell differentiation and senescence."
+    "description": "Laboratory research peptide intended for scientific study and analytical work only. Not approved for human use."
   },
   {
     "name": "Thymosin Alpha-1",
     "slug": "thymosin-alpha-1",
     "category": "anti-aging-longevity",
-    "specs": ["5mg×10", "10mg×10"],
+    "specs": ["10mg×10"],
     "cas": "62304-98-7",
-    "storage": "Store at -20°C.",
-    "description": "Endogenous peptide modifier explored in laboratory models focusing on immune response enhancement and host defense mechanisms."
+    "description": "Research peptide intended for laboratory experimentation and controlled analytical use only. Not for human consumption."
   },
   {
     "name": "Tirzepatide",
     "slug": "tirzepatide",
     "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10", "15mg×10", "20mg×10", "30mg×10", "40mg×10", "50mg×10", "60mg×10", "80mg×10"],
+    "specs": ["5mg×10", "10mg×10", "15mg×10"],
     "cas": "2023788-19-2",
-    "storage": "Store at -20°C.",
-    "description": "Dual GIP and GLP-1 receptor agonist utilized for comprehensive research regarding synergistic incretin effects on systemic metabolism."
-  },
-  {
-    "name": "VIP",
-    "slug": "vip",
-    "category": "ancillaries",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "37221-79-7",
-    "storage": "Store at -20°C.",
-    "description": "Vasoactive Intestinal Peptide, an essential research compound for studying smooth muscle relaxation, vasodilation, and immune system modulation."
+    "description": "Research-grade peptide intended strictly for laboratory, analytical, and investigational applications. Not for human consumption, medical use, or therapeutic administration."
   }
 ]

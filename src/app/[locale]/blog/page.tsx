@@ -1,6 +1,15 @@
 import { getAllPosts } from '@/utils/mdx';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, BookOpen } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+  return {
+    title: t('blogTitle'),
+    description: t('blogDesc'),
+  };
+}
 
 export default async function BlogIndex({ params }: { params: { locale: string } }) {
   const posts = await getAllPosts();
@@ -12,12 +21,20 @@ export default async function BlogIndex({ params }: { params: { locale: string }
           <div className="w-16 h-16 mx-auto rounded-full bg-brand-accent/10 flex items-center justify-center mb-6">
             <BookOpen className="w-8 h-8 text-brand-accent" />
           </div>
+          <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
+            B2B Knowledge Hub
+          </div>
           <h1 className="text-4xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            Industry Insights
+            Wholesale Peptide Industry Insights
           </h1>
-          <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto">
-            Strategic guidance, quality assurance protocols, and market analysis for B2B peptide procurement.
+          <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto leading-relaxed">
+            Expert guides, market analysis, and compliance resources for compounding pharmacies, wellness clinics, and licensed distributors sourcing bulk research-grade peptides in the USA.
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            {['Wholesale Pricing', 'Quality & COA', 'Business Launch', 'Compliance', 'GLP-1 Research', 'Dropshipping'].map((tag) => (
+              <span key={tag} className="bg-white/5 border border-white/10 text-white/50 px-3 py-1 rounded-full font-dm-mono text-xs uppercase tracking-wider">{tag}</span>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,59 +1,195 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/i18n/routing';
+import { Link, useRouter, usePathname } from '@/i18n/routing';
+import { Menu, X, ArrowUpRight, Search, Globe } from 'lucide-react';
+import GlobalSearch from '@/components/search/GlobalSearch';
 
 export default function Header() {
   const t = useTranslations('Layout');
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsSearchOpen(prev => !prev);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   const handleLanguageSwitch = () => {
-    const nextLocale = locale === 'en' ? 'es' : 'en';
-    // Use the localized router to handle the switch
-    router.replace(pathname, {locale: nextLocale});
+    const newLocale = locale === 'en' ? 'es' : 'en';
+    router.replace(pathname, { locale: newLocale });
   };
 
+  const navLinks = [
+    { href: '/products', label: t('nav.products') },
+    { href: '/quality', label: t('nav.quality') },
+    { href: '/services', label: t('nav.services') },
+    { href: '/blog', label: t('nav.blog') },
+    { href: '/locations', label: t('nav.locations') },
+    { href: '/about', label: t('nav.about') },
+    { href: '/contact', label: t('nav.contact') },
+  ];
+
   return (
-    <header className="w-full">
-      {/* Announcement Bar */}
-      <div className="bg-[#121822] text-brand-text py-2 px-4 text-xs sm:text-sm font-medium flex justify-between items-center border-b border-gray-800">
-        <div className="flex gap-4">
-          <button onClick={handleLanguageSwitch} className="hover:text-brand-accent font-dm-mono uppercase tracking-widest transition-colors">
-            {locale === 'en' ? 'ES' : 'EN'}
-          </button>
+    <>
+      <header 
+        className={`fixed top-0 left-0 w-full z-[60] transition-all duration-500 ${
+          isScrolled ? 'py-4' : 'py-6 md:py-8'
+        }`}
+      >
+        <div className="max-w-[1600px] mx-auto px-6 flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="relative z-[70] flex items-center transition-transform hover:scale-105">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 px-5 py-3 rounded-2xl shadow-2xl">
+              <Image 
+                src="/images/99pw-logo.webp"
+                alt="99 Purity Wholesale"
+                width={130}
+                height={32}
+                className="w-auto h-7 object-contain brightness-0 invert"
+                priority
+              />
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-8 bg-[#0A0F16]/60 backdrop-blur-2xl border border-white/10 px-8 py-3.5 rounded-full shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className="text-[12px] font-bold text-white/70 uppercase tracking-widest hover:text-brand-accent transition-colors relative group py-1"
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-brand-accent transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+            
+            <div className="w-[1px] h-5 bg-white/10 mx-2"></div>
+            
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="flex items-center gap-2 text-[11px] font-bold text-white/50 hover:text-brand-accent transition-colors uppercase tracking-widest group"
+            >
+              <Search className="w-4 h-4" />
+              <span className="hidden xl:inline">{t('nav.search') || 'Search'}</span>
+            </button>
+
+            <button 
+              onClick={handleLanguageSwitch}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] font-bold transition-all uppercase tracking-widest hover:border-brand-accent/50 group"
+            >
+              <Globe className="w-3.5 h-3.5 text-white/40 group-hover:text-brand-accent transition-colors" />
+              <div className="flex items-center gap-1.5">
+                <span className={locale === 'en' ? 'text-brand-accent' : 'text-white/30'}>EN</span>
+                <span className="text-white/10 text-[8px]">|</span>
+                <span className={locale === 'es' ? 'text-brand-accent' : 'text-white/30'}>ES</span>
+              </div>
+            </button>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            {/* Search Icon for Mobile/Tablet */}
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="lg:hidden p-3 rounded-xl bg-white/5 border border-white/10 text-white transition-all hover:bg-white/10"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
+            <a 
+              href="https://wa.me/15551234567" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hidden sm:flex items-center gap-3 bg-brand-accent text-brand-bg pl-8 pr-4 py-4 rounded-l-full rounded-tr-[2rem] rounded-br-[0.5rem] font-bold text-xs uppercase tracking-widest transition-[padding,background-color,transform,shadow] duration-300 hover:pr-8 group shadow-[0_0_40px_rgba(79,195,208,0.2)]"
+            >
+              <span className="transition-transform duration-300 group-hover:translate-x-1">{t('whatsapp')}</span>
+              <div className="w-8 h-8 rounded-full bg-brand-bg flex items-center justify-center text-brand-accent group-hover:rotate-45 group-hover:scale-110 transition-transform duration-300">
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </a>
+
+            {/* Mobile Toggle */}
+            <button 
+              className="lg:hidden relative z-[70] p-3 rounded-xl bg-white/5 border border-white/10 text-white transition-all hover:bg-white/10"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
-        <div className="hidden md:block text-center font-rajdhani font-semibold tracking-[0.2em] uppercase text-brand-accent">
-          {t('announcement')}
-        </div>
-        <div className="flex items-center gap-2 text-brand-text hover:text-brand-accent transition-colors cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span className="font-dm-mono">+1 (555) 123-4567</span>
+      </header>
+
+      {/* Global Search Modal */}
+      <GlobalSearch 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
+
+      {/* Modern Mobile Menu Overlay */}
+      <div className={`fixed inset-0 z-[55] bg-black/95 backdrop-blur-2xl transition-all duration-700 ${
+        isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+      }`}>
+        <div className="h-full flex flex-col justify-center items-center p-12">
+          <nav className="flex flex-col items-center gap-8">
+            {navLinks.map((link, i) => (
+              <Link 
+                key={link.href}
+                href={link.href} 
+                className={`text-3xl md:text-5xl font-rajdhani font-bold text-white hover:text-brand-accent transition-all tracking-tighter duration-500 ${
+                  isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                }`}
+                style={{ transitionDelay: `${i * 100}ms` }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          
+          <div className="mt-16 pt-16 border-t border-white/5 flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-4">
+              <span className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-bold">Select Language</span>
+              <div className="flex items-center gap-6">
+                <button 
+                  onClick={() => locale !== 'en' && router.replace(pathname, { locale: 'en' })}
+                  className={`text-xl font-rajdhani font-bold transition-all ${locale === 'en' ? 'text-brand-accent scale-125' : 'text-white/20 hover:text-white'}`}
+                >
+                  English
+                </button>
+                <div className="w-[1px] h-4 bg-white/10"></div>
+                <button 
+                  onClick={() => locale !== 'es' && router.replace(pathname, { locale: 'es' })}
+                  className={`text-xl font-rajdhani font-bold transition-all ${locale === 'es' ? 'text-brand-accent scale-125' : 'text-white/20 hover:text-white'}`}
+                >
+                  Español
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Main Nav */}
-      <nav className="border-b border-gray-800 py-5 px-6 flex justify-between items-center bg-brand-bg">
-        <Link href="/" className="text-2xl md:text-3xl font-rajdhani font-bold tracking-[0.15em] text-brand-text">
-          99 PURITY<span className="text-brand-accent font-light ml-2 text-xl">WHOLESALE</span>
-        </Link>
-
-        <div className="hidden lg:flex gap-8 text-sm font-dm-sans font-medium text-brand-text uppercase tracking-widest">
-          <Link href="/products" className="hover:text-brand-accent transition-colors">{t('nav.products')}</Link>
-          <Link href="/quality" className="hover:text-brand-accent transition-colors">{t('nav.quality')}</Link>
-          <Link href="/services" className="hover:text-brand-accent transition-colors">{t('nav.services')}</Link>
-          <Link href="/locations" className="hover:text-brand-accent transition-colors">{t('nav.locations')}</Link>
-          <Link href="/about" className="hover:text-brand-accent transition-colors">{t('nav.about')}</Link>
-          <Link href="/contact" className="hover:text-brand-accent transition-colors">{t('nav.contact')}</Link>
-        </div>
-
-        <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" className="bg-brand-accent text-brand-bg px-5 py-2.5 rounded shadow-sm font-dm-sans text-xs md:text-sm uppercase tracking-wider font-semibold flex items-center gap-2 transition-all hover:bg-opacity-90">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          <span className="hidden sm:inline">{t('whatsapp')}</span>
-          <span className="sm:hidden">Chat</span>
-        </a>
-      </nav>
-    </header>
+    </>
   );
 }
