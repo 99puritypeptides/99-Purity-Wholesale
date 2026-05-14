@@ -65,9 +65,9 @@ export default function Header() {
               <Image 
                 src="/images/99pw-logo.webp"
                 alt="99 Purity Wholesale"
-                width={130}
-                height={32}
-                className="w-auto h-7 object-contain brightness-0 invert"
+                width={160}
+                height={40}
+                className="w-auto h-8 object-contain"
                 priority
               />
             </div>
