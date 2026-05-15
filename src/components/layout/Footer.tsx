@@ -44,7 +44,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">Navigation</h4>
+            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">{t('footer.navTitle')}</h4>
             <ul className="space-y-4">
               {['products', 'quality', 'services', 'about', 'contact'].map((item) => (
                 <li key={item}>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div className="lg:col-span-2">
-            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">Resources</h4>
+            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">{t('footer.resTitle')}</h4>
             <ul className="space-y-4">
               <li>
                 <Link href="/blog" className="text-brand-text/40 hover:text-brand-accent text-xs uppercase tracking-widest transition-all flex items-center group">
@@ -77,8 +77,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/glossary" className="text-brand-text/40 hover:text-brand-accent text-xs uppercase tracking-widest transition-all flex items-center group">
+                  {t('footer.glossary')}
+                  <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </Link>
+              </li>
+              <li>
                 <Link href="/wholesale-application" className="text-brand-text/40 hover:text-brand-accent text-xs uppercase tracking-widest transition-all flex items-center group">
-                  Apply Wholesale
+                  {t('footer.apply')}
                   <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
                 </Link>
               </li>
@@ -87,14 +93,14 @@ export default function Footer() {
 
           {/* Contact Information */}
           <div className="lg:col-span-2">
-            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">HQ Operations</h4>
+            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">{t('footer.hqTitle')}</h4>
             <ul className="space-y-6">
               <li className="flex items-start gap-4 group">
                 <div className="bg-brand-accent/10 p-2.5 rounded-lg mt-1 group-hover:bg-brand-accent/20 transition-colors">
                   <Mail className="w-4 h-4 text-brand-accent" />
                 </div>
                 <div>
-                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">Inquiries</span>
+                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">{t('footer.inquiries')}</span>
                   <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'sales@99puritypeptides.com'}`} className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">
                     {process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'sales@99puritypeptides.com'}
                   </a>
@@ -105,7 +111,7 @@ export default function Footer() {
                   <Phone className="w-4 h-4 text-brand-accent" />
                 </div>
                 <div>
-                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">Operations</span>
+                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">{t('footer.operations')}</span>
                   <a href={`tel:+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007'}`} className="text-brand-text/60 hover:text-white transition-colors font-dm-mono text-sm">
                     {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}` : '+1 (843) 743-9007'}
                   </a>
@@ -116,7 +122,7 @@ export default function Footer() {
                   <MapPin className="w-4 h-4 text-brand-accent" />
                 </div>
                 <div>
-                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">Global Logistics</span>
+                  <span className="block text-[10px] text-brand-text/30 uppercase tracking-widest mb-1">{t('footer.logistics')}</span>
                   <span className="text-brand-text/60 font-dm-mono text-sm">San Diego, CA, USA</span>
                 </div>
               </li>
@@ -125,11 +131,11 @@ export default function Footer() {
 
           {/* Payments & Compliance */}
           <div className="lg:col-span-3">
-            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">Trade & Settlement</h4>
+            <h4 className="font-rajdhani font-bold text-sm tracking-[0.2em] uppercase mb-8 text-white/90">{t('footer.tradeTitle')}</h4>
             <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6">
-              <p className="text-[10px] text-brand-text/30 uppercase tracking-widest mb-4">Accepted Methods</p>
+              <p className="text-[10px] text-brand-text/30 uppercase tracking-widest mb-4">{t('footer.accepted')}</p>
               <div className="flex flex-wrap gap-2">
-                {['Bitcoin (BTC)', 'Zelle', 'Bank Transfer', 'USDT'].map((method) => (
+                {(t.raw('footer.paymentList') as string[]).map((method) => (
                   <span key={method} className="px-3 py-1.5 bg-white/5 rounded-lg text-[10px] font-bold text-brand-text/60 border border-white/5">
                     {method}
                   </span>
@@ -137,7 +143,7 @@ export default function Footer() {
               </div>
               <div className="mt-6 pt-6 border-t border-white/5">
                 <p className="text-[10px] text-brand-text/20 leading-relaxed italic">
-                  * All research compounds are for laboratory use only. Not for human consumption.
+                  {t('footer.compliance')}
                 </p>
               </div>
             </div>
@@ -154,8 +160,8 @@ export default function Footer() {
 
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest">
-              <Link href="/privacy" className="text-brand-text/30 hover:text-brand-accent transition-colors">Privacy</Link>
-              <Link href="/terms" className="text-brand-text/30 hover:text-brand-accent transition-colors">Terms</Link>
+              <Link href="/privacy" className="text-brand-text/30 hover:text-brand-accent transition-colors">{t('footer.privacy')}</Link>
+              <Link href="/terms" className="text-brand-text/30 hover:text-brand-accent transition-colors">{t('footer.terms')}</Link>
             </div>
             
             <div className="flex items-center bg-[#1A222C] rounded-full p-1 border border-white/5">

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import AddToInquiryButton from './AddToInquiryButton';
 
 interface SpecSelectorProps {
@@ -24,6 +25,7 @@ export default function SpecSelector({
   defaultSpec,
   defaultKitSize,
 }: SpecSelectorProps) {
+  const t = useTranslations('Components.SpecSelector');
   const [selectedSpec, setSelectedSpec] = useState(defaultSpec || specs[0]);
   const [selectedKitSize, setSelectedKitSize] = useState(defaultKitSize || kitSizes[0]);
 
@@ -35,7 +37,7 @@ export default function SpecSelector({
     <div className="flex flex-col gap-6 w-full max-w-md">
       {/* Spec Selector */}
       <div className="flex flex-col gap-2">
-        <label className="text-white font-rajdhani font-bold text-sm">Select Spec:</label>
+        <label className="text-white font-rajdhani font-bold text-sm">{t('selectSpec')}</label>
         <div className="flex flex-wrap gap-2">
           {specs.map((spec) => (
             <button
@@ -53,7 +55,7 @@ export default function SpecSelector({
 
       {/* Kit Size Selector */}
       <div className="flex flex-col gap-2">
-        <label className="text-white font-rajdhani font-bold text-sm">Kit Size:</label>
+        <label className="text-white font-rajdhani font-bold text-sm">{t('kitSize')}</label>
         <div className="flex flex-wrap gap-2">
           {kitSizes.map((size) => (
             <button
@@ -63,7 +65,7 @@ export default function SpecSelector({
                 selectedKitSize === size ? selectedPillClasses : defaultPillClasses
               }`}
             >
-              ×{size} vials
+              ×{size} {t('vials')}
             </button>
           ))}
         </div>
@@ -72,7 +74,7 @@ export default function SpecSelector({
       {/* MOQ and CTA */}
       <div className="flex flex-col gap-4">
         <p className="font-dm-mono text-[11px] text-[#7A8FA3] uppercase tracking-wider">
-          MOQ: 10 units minimum per spec
+          {t('moqLabel', { count: 10 })}
         </p>
         
         <AddToInquiryButton

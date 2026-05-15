@@ -8,6 +8,8 @@ import AddToInquiryButton from '@/components/products/AddToInquiryButton';
 
 import { getSearchEngine } from '@/lib/search';
 
+import { useSearchParams } from 'next/navigation';
+
 interface Product {
   name: string;
   slug: string;
@@ -23,8 +25,10 @@ interface ProductDirectoryProps {
 
 export default function ProductDirectory({ products, categories }: ProductDirectoryProps) {
   const t = useTranslations('ProductsIndex');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const tDetail = useTranslations('ProductDetail');
+  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [activeCategory, setActiveCategory] = useState<string>(searchParams.get('cat') || 'all');
 
   // Memoize search engine
   const searchEngine = useMemo(() => getSearchEngine(products), [products]);
@@ -117,7 +121,7 @@ export default function ProductDirectory({ products, categories }: ProductDirect
                     {product.name}
                   </h3>
                   <p className="text-sm text-gray-500 font-dm-sans line-clamp-2 mb-6 flex-grow">
-                    {product.description}
+                    {tDetail.has(`descriptions.${product.slug}`) ? tDetail(`descriptions.${product.slug}`) : product.description}
                   </p>
                 </Link>
 

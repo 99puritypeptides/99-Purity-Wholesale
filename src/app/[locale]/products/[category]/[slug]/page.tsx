@@ -7,6 +7,7 @@ import SpecSelector from '@/components/products/SpecSelector';
 import ShareProduct from '@/components/products/ShareProduct';
 
 export async function generateMetadata({ params }: { params: { locale: string; category: string; slug: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'Meta' });
   const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
   if (!product) return {};
 
@@ -15,19 +16,19 @@ export async function generateMetadata({ params }: { params: { locale: string; c
 
   return {
     metadataBase: new URL(baseUrl),
-    title: `${product.name} — Wholesale Bulk Supply | 99 Purity Wholesale`,
-    description: `Buy ${product.name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping. Research use only.`,
+    title: t('productTitle', { name: product.name }),
+    description: t('productDesc', { name: product.name }),
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: `${product.name} | Bulk Wholesale Research Peptides`,
-      description: `Premium ${product.name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment.`,
+      title: t('productOgTitle', { name: product.name }),
+      description: t('productOgDesc', { name: product.name }),
       url: url,
       siteName: '99 Purity Wholesale',
       images: [
         {
-          url: '/og-image.png',
+          url: `${baseUrl}/og-image.png`,
           width: 1200,
           height: 630,
           alt: `${product.name} Wholesale Peptides`,
@@ -38,9 +39,9 @@ export async function generateMetadata({ params }: { params: { locale: string; c
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.name} — Wholesale Supply`,
-      description: `Buy bulk ${product.name} at ≥99% purity. U.S. manufactured.`,
-      images: ['/og-image.png'],
+      title: t('productTitle', { name: product.name }),
+      description: t('productDesc', { name: product.name }),
+      images: [`${baseUrl}/og-image.png`],
     },
   };
 }
@@ -58,13 +59,43 @@ function buildFaqs(name: string, specs: string[], cas: string) {
 
 export default async function ProductPage({ params }: { params: { locale: string, category: string, slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'ProductDetail' });
+  const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
   const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
 
   if (!product) {
     notFound();
   }
 
-  const faqs = buildFaqs(product.name, product.specs, product.cas);
+  // Get localized category name from ProductsIndex namespace
+  const localizedCategoryName = pt(`categories.${product.category}.name`);
+
+  // Build localized FAQs
+  const faqs = [
+    { 
+      q: t('faqs.purity.q', { name: product.name }), 
+      a: t('faqs.purity.a', { name: product.name }) 
+    },
+    { 
+      q: t('faqs.specs.q', { name: product.name }), 
+      a: t('faqs.specs.a', { name: product.name, specs: product.specs.join(', ') }) 
+    },
+    { 
+      q: t('faqs.moq.q', { name: product.name }), 
+      a: t('faqs.moq.a', { name: product.name }) 
+    },
+    { 
+      q: t('faqs.shipping.q', { name: product.name }), 
+      a: t('faqs.shipping.a', { name: product.name }) 
+    },
+    { 
+      q: t('faqs.preOrderCoa.q', { name: product.name }), 
+      a: t('faqs.preOrderCoa.a', { name: product.name }) 
+    },
+    ...(product.cas !== 'N/A' ? [{ 
+      q: t('faqs.cas.q', { name: product.name }), 
+      a: t('faqs.cas.a', { name: product.name, cas: product.cas }) 
+    }] : []),
+  ];
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -81,10 +112,6 @@ export default async function ProductPage({ params }: { params: { locale: string
     .filter(p => p.category === product.category && p.slug !== product.slug)
     .slice(0, 3);
 
-  const formatCategoryName = (cat: string) => {
-    return cat.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  };
-
   return (
     <div className="min-h-screen bg-brand-bg text-brand-text pb-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
@@ -94,7 +121,7 @@ export default async function ProductPage({ params }: { params: { locale: string
           <Link href="/products" className="hover:text-brand-accent transition-colors">{t('breadcrumbs.products')}</Link>
           <ChevronRight className="w-4 h-4" />
           <Link href={`/products/${product.category}`} className="hover:text-brand-accent transition-colors">
-            {formatCategoryName(product.category)}
+            {localizedCategoryName}
           </Link>
           <ChevronRight className="w-4 h-4" />
           <span className="text-white">{product.name}</span>
@@ -123,13 +150,13 @@ export default async function ProductPage({ params }: { params: { locale: string
                 {product.name}
               </h1>
               <p className="text-xl text-gray-400 font-dm-sans leading-relaxed mb-8">
-                {product.description}
+                {t.has(`descriptions.${product.slug}`) ? t(`descriptions.${product.slug}`) : product.description}
               </p>
 
               <SpecSelector
                 productId={product.slug}
                 productName={product.name}
-                category={formatCategoryName(product.category)}
+                category={localizedCategoryName}
                 categoryPage={`/products/${product.category}`}
                 specs={Array.from(new Set(product.specs.map(s => s.split('×')[0])))}
                 kitSizes={Array.from(new Set(product.specs.map(s => parseInt(s.split('×')[1]))))}
@@ -183,9 +210,12 @@ export default async function ProductPage({ params }: { params: { locale: string
                     ].map((tier) => (
                       <div key={tier.key} className="bg-white/5 border border-white/10 rounded-lg p-3 flex flex-col items-center text-center transition-colors hover:border-brand-accent/30">
                         <span className="text-[10px] text-gray-500 font-dm-mono uppercase mb-1">
-                          {tier.key === 'tier3' ? 'Tier 3' : tier.key.charAt(0).toUpperCase() + tier.key.slice(1).replace('tier', 'Tier ')}
+                          {tier.key === 'starter' 
+                            ? t('pricing.starter') 
+                            : `${t('pricing.tier')} ${tier.key.replace('tier', '')}`
+                          }
                         </span>
-                        <span className="text-sm text-brand-accent font-bold font-dm-mono">{tier.range} kits</span>
+                        <span className="text-sm text-brand-accent font-bold font-dm-mono">{tier.range} {t('pricing.kits')}</span>
                       </div>
                     ))}
                   </div>
@@ -259,7 +289,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
         {/* Product FAQ */}
         <div className="mt-20 pt-10 border-t border-white/5">
-          <h2 className="text-3xl font-rajdhani font-bold text-white mb-8">Frequently Asked Questions — {product.name}</h2>
+          <h2 className="text-3xl font-rajdhani font-bold text-white mb-8">{t('faqTitle', { name: product.name })}</h2>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <details key={i} className="group bg-[#0e131b] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-accent/20 transition-colors">
@@ -283,7 +313,9 @@ export default async function ProductPage({ params }: { params: { locale: string
               {relatedProducts.map(rp => (
                 <Link key={rp.slug} href={`/products/${rp.category}/${rp.slug}`} className="group bg-[#0e131b] border border-white/5 rounded-xl p-6 hover:border-brand-accent/30 transition-colors flex flex-col">
                   <h3 className="text-xl font-rajdhani font-bold text-white mb-2 group-hover:text-brand-accent transition-colors">{rp.name}</h3>
-                  <p className="text-sm text-gray-400 font-dm-sans mb-4 line-clamp-2 flex-grow">{rp.description}</p>
+                  <p className="text-sm text-gray-400 font-dm-sans mb-4 line-clamp-2 flex-grow">
+                    {t.has(`descriptions.${rp.slug}`) ? t(`descriptions.${rp.slug}`) : rp.description}
+                  </p>
                   <div className="flex items-center text-brand-accent font-bold font-rajdhani uppercase tracking-wider text-sm mt-auto">
                     {t('viewDetails')} <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>

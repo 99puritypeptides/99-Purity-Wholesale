@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { useCart } from '@/context/CartContext';
 import { generateCartId } from '@/lib/cartUtils';
 
@@ -23,6 +24,7 @@ export default function AddToInquiryButton({
   moq = 10,
   categoryPage,
 }: AddToInquiryButtonProps) {
+  const t = useTranslations('Components.AddToInquiry');
   const { state, dispatch } = useCart();
   const [showAdded, setShowAdded] = useState(false);
 
@@ -61,14 +63,14 @@ export default function AddToInquiryButton({
 
   // Determine button styles based on state
   let buttonClasses = "font-rajdhani font-bold text-sm px-4 py-2 rounded-md transition-all duration-200 ";
-  let buttonText = "+ Add to Inquiry";
+  let buttonText = t('add');
 
   if (showAdded) {
     buttonClasses += "bg-[#3ECF8E] text-[#090C11]";
-    buttonText = "✓ Added!";
+    buttonText = t('added');
   } else if (isInCart) {
     buttonClasses += "bg-transparent border border-[#4FC3D0] text-[#4FC3D0]";
-    buttonText = "✓ In Inquiry";
+    buttonText = t('inInquiry');
   } else {
     buttonClasses += "bg-[#4FC3D0] hover:bg-[#3ab0bc] text-[#090C11]";
   }

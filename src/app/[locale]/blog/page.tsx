@@ -12,7 +12,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 export default async function BlogIndex({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
   const posts = await getAllPosts();
+
+  const tags = [
+    t('tags.pricing'),
+    t('tags.quality'),
+    t('tags.launch'),
+    t('tags.compliance'),
+    t('tags.glp1'),
+    t('tags.dropshipping')
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text pt-24">
@@ -22,16 +32,16 @@ export default async function BlogIndex({ params }: { params: { locale: string }
             <BookOpen className="w-8 h-8 text-brand-accent" />
           </div>
           <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
-            B2B Knowledge Hub
+            {t('badge')}
           </div>
           <h1 className="text-4xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            Wholesale Peptide Industry Insights
+            {t('title')}
           </h1>
           <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto leading-relaxed">
-            Expert guides, market analysis, and compliance resources for compounding pharmacies, wellness clinics, and licensed distributors sourcing bulk research-grade peptides in the USA.
+            {t('subtitle')}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            {['Wholesale Pricing', 'Quality & COA', 'Business Launch', 'Compliance', 'GLP-1 Research', 'Dropshipping'].map((tag) => (
+            {tags.map((tag) => (
               <span key={tag} className="bg-white/5 border border-white/10 text-white/50 px-3 py-1 rounded-full font-dm-mono text-xs uppercase tracking-wider">{tag}</span>
             ))}
           </div>
@@ -46,7 +56,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
                 </div>
                 
                 <time className="text-brand-accent font-dm-mono text-sm mb-4 block">
-                  {new Date(post.meta.date).toLocaleDateString('en-US', {
+                  {new Date(post.meta.date).toLocaleDateString(params.locale === 'es' ? 'es-ES' : 'en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
@@ -59,7 +69,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
                   {post.meta.description}
                 </p>
                 <div className="flex items-center text-brand-accent font-bold font-rajdhani uppercase tracking-wider text-sm mt-auto">
-                  Read Article <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                  {t('readMore')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
             </Link>

@@ -1,0 +1,114 @@
+[
+  {
+    "term": "HPLC",
+    "slug": "hplc",
+    "definition": "High-Performance Liquid Chromatography (HPLC) is an analytical chemistry technique used to separate, identify, and quantify each component in a mixture. At 99 Purity Wholesale, we utilize third-party HPLC testing to verify the purity and concentration of every peptide batch, ensuring they meet our ≥99% purity guarantee.",
+    "category": "Quality & Testing",
+    "relatedProducts": ["bpc-157", "semaglutide", "tirzepatide"]
+  },
+  {
+    "term": "Lyophilized",
+    "slug": "lyophilized",
+    "definition": "Lyophilization, or freeze-drying, is a process where water is removed from a product after it is frozen and placed under a vacuum, allowing the ice to change directly from solid to vapor without passing through a liquid phase. This technique is essential for preserving the structural integrity and stability of research peptides during storage and shipping.",
+    "category": "Manufacturing",
+    "relatedProducts": ["tb-500", "ipamorelin"]
+  },
+  {
+    "term": "GLP-1 Agonist",
+    "slug": "glp-1-agonist",
+    "definition": "Glucagon-like peptide-1 (GLP-1) receptor agonists are a class of compounds that mimic the action of the GLP-1 hormone. In research settings, they are studied for their effects on insulin secretion, glucose metabolism, and appetite regulation. Common research compounds in this class include Semaglutide and Tirzepatide.",
+    "category": "Pharmacology",
+    "relatedProducts": ["semaglutide", "tirzepatide", "retatrutide"]
+  },
+  {
+    "term": "Secretagogue",
+    "slug": "secretagogue",
+    "definition": "A secretagogue is a substance that stimulates another substance to be secreted. In peptide research, growth hormone secretagogues (GHS) like Ipamorelin and CJC-1295 are studied for their ability to stimulate the pituitary gland to release endogenous growth hormone.",
+    "category": "Pharmacology",
+    "relatedProducts": ["ipamorelin", "cjc-1295-no-dac", "tesamorelin"]
+  },
+  {
+    "term": "COA",
+    "slug": "coa",
+    "definition": "A Certificate of Analysis (COA) is a formal document that provides the results of laboratory testing for a specific batch of product. It verifies that the compound meets its required specifications, including purity levels (HPLC) and molecular mass (Mass Spectrometry). 99 Purity Wholesale provides batch-matched COAs with every order.",
+    "category": "Quality & Testing",
+    "relatedProducts": []
+  },
+  {
+    "term": "MOQ",
+    "slug": "moq",
+    "definition": "Minimum Order Quantity (MOQ) refers to the smallest amount of product that can be purchased in a single order. For 99 Purity Wholesale, our standard wholesale MOQ is 10 units (1 kit) per specification, allowing us to maintain competitive tiered pricing for B2B partners.",
+    "category": "Wholesale Operations",
+    "relatedProducts": []
+  },
+  {
+    "term": "DAC",
+    "slug": "dac",
+    "definition": "Drug Affinity Complex (DAC) is a technology used to extend the half-life of a peptide by allowing it to bind to albumin in the bloodstream. In research, CJC-1295 is often provided in 'DAC' and 'No-DAC' versions to compare varying durations of action and growth hormone stimulation.",
+    "category": "Pharmacology",
+    "relatedProducts": ["cjc-1295-dac"]
+  },
+  {
+    "term": "No-DAC",
+    "slug": "no-dac",
+    "definition": "No-DAC refers to a peptide sequence that does not include the Drug Affinity Complex (DAC) modification. This version, such as CJC-1295 No-DAC (also known as Mod GRF 1-29), has a shorter half-life and is typically studied for its acute, pulse-like stimulation of growth hormone release.",
+    "category": "Pharmacology",
+    "relatedProducts": ["cjc-1295-no-dac"]
+  },
+  {
+    "term": "Mass Spectrometry",
+    "slug": "mass-spectrometry",
+    "definition": "Mass Spectrometry (MS) is an analytical technique that measures the mass-to-charge ratio of ions. In peptide verification, it is used alongside HPLC to confirm the identity and molecular weight of a compound, ensuring the sequence accuracy of the synthesized peptide.",
+    "category": "Quality & Testing",
+    "relatedProducts": []
+  },
+  {
+    "term": "GIP",
+    "slug": "gip",
+    "definition": "Gastric Inhibitory Polypeptide (GIP), also known as glucose-dependent insulinotropic polypeptide, is an incretin hormone. Researchers study dual agonists like Tirzepatide, which target both GIP and GLP-1 receptors, for potentially synergistic effects on metabolic pathways.",
+    "category": "Pharmacology",
+    "relatedProducts": ["tirzepatide", "retatrutide"]
+  },
+  {
+    "term": "B2B",
+    "slug": "b2b",
+    "definition": "Business-to-Business (B2B) refers to transactions or partnerships between two businesses. 99 Purity Wholesale operates on a B2B model, supplying research peptides exclusively to wellness clinics, compounding pharmacies, and licensed research institutions.",
+    "category": "Wholesale Operations",
+    "relatedProducts": []
+  },
+  {
+    "term": "Peptide Synthesis",
+    "slug": "peptide-synthesis",
+    "definition": "Peptide synthesis is the production of peptides, which are organic compounds in which multiple amino acids are linked via amide bonds. 99 Purity Wholesale utilizes Solid-Phase Peptide Synthesis (SPPS) in our U.S.-based laboratories to ensure high purity and sequence precision.",
+    "category": "Manufacturing",
+    "relatedProducts": []
+  },
+  {
+    "term": "GHRH",
+    "slug": "ghrh",
+    "definition": "Growth Hormone-Releasing Hormone (GHRH) is a peptide hormone that stimulates the production and release of growth hormone. Compounds like CJC-1295 are GHRH analogs often used in research to study growth hormone regulation.",
+    "category": "Pharmacology",
+    "relatedProducts": ["cjc-1295-no-dac", "cjc-1295-dac", "tesamorelin"]
+  },
+  {
+    "term": "GHRP",
+    "slug": "ghrp",
+    "definition": "Growth Hormone-Releasing Peptides (GHRP) are a class of secretagogues that stimulate the release of growth hormone by activating the ghrelin receptor. Ipamorelin is a popular GHRP studied for its high selectivity and minimal effect on cortisol and prolactin levels.",
+    "category": "Pharmacology",
+    "relatedProducts": ["ipamorelin"]
+  },
+  {
+    "term": "CAS Number",
+    "slug": "cas-number",
+    "definition": "A CAS Registry Number is a unique numerical identifier assigned by the Chemical Abstracts Service (CAS) to every chemical substance described in the open scientific literature. It is used to provide an unambiguous way to identify chemical compounds globally.",
+    "category": "Technical",
+    "relatedProducts": []
+  },
+  {
+    "term": "Stability Testing",
+    "slug": "stability-testing",
+    "definition": "Stability testing involves assessing how the quality of a research compound varies with time under the influence of environmental factors such as temperature, humidity, and light. This data is used to determine optimal storage conditions for research peptides.",
+    "category": "Quality & Testing",
+    "relatedProducts": []
+  }
+]

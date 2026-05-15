@@ -61,7 +61,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       description: t('homeDesc'),
       images: [
         {
-          url: '/og-image.png',
+          url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`,
           width: 1200,
           height: 630,
           alt: '99 Purity Wholesale — Wholesale Peptide Supplier USA',
@@ -72,7 +72,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title: t('homeTitle'),
       description: t('homeDesc'),
-      images: ['/og-image.png'],
+      images: [`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`],
     },
     manifest: '/manifest.json',
     themeColor: '#4FC3D0',

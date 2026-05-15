@@ -172,7 +172,7 @@ export default function Header() {
           
           <div className="mt-16 pt-16 border-t border-white/5 flex flex-col items-center gap-8">
             <div className="flex flex-col items-center gap-4">
-              <span className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-bold">Select Language</span>
+              <span className="text-[10px] text-white/20 uppercase tracking-[0.4em] font-bold">{t('selectLanguage')}</span>
               <div className="flex items-center gap-6">
                 <button 
                   onClick={() => locale !== 'en' && router.replace(pathname, { locale: 'en' })}
