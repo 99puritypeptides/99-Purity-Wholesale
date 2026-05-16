@@ -1,11 +1,36 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { Rajdhani, DM_Sans, DM_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
 import MainContentWrapper from '@/components/layout/MainContentWrapper';
 import '../globals.css';
+
+const absans = localFont({
+  src: '../../../public/fonts/absans.woff2',
+  variable: '--font-absans',
+  display: 'swap',
+});
+
+const goku = localFont({
+  src: '../../../public/fonts/goku.woff2',
+  variable: '--font-goku',
+  display: 'swap',
+});
+
+const meshed = localFont({
+  src: '../../../public/fonts/meshed.woff2',
+  variable: '--font-meshed',
+  display: 'swap',
+});
+
+const archia = localFont({
+  src: '../../../public/fonts/archia.woff2',
+  variable: '--font-archia',
+  display: 'swap',
+});
 
 const rajdhani = Rajdhani({
   subsets: ['latin'],
@@ -161,7 +186,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+      <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} ${absans.variable} ${goku.variable} ${meshed.variable} ${archia.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <CartProvider>
             <Header />

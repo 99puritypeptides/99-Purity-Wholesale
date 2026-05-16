@@ -13,7 +13,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export default async function WholesaleApplicationPage({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'WholesaleApplication' });
 
-  const requirements = t.raw('eligibility.items') as string[];
+  const requirementsRaw = t.raw('eligibility.items');
+  const requirements = Array.isArray(requirementsRaw) ? requirementsRaw : [];
 
   const benefits = [
     { icon: FlaskConical, title: t('benefitsSection.items.catalog.title'), desc: t('benefitsSection.items.catalog.desc') },
@@ -147,7 +148,7 @@ export default async function WholesaleApplicationPage({ params: { locale } }: {
                 <label className="block text-gray-400 font-dm-mono text-xs uppercase tracking-widest mb-2">{t('form.fields.businessType')}</label>
                 <select name="businessType" required className="w-full bg-[#161d27] border border-white/10 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent transition-all font-dm-sans">
                   <option value="">{t('form.fields.businessTypeDefault')}</option>
-                  {(t.raw('form.fields.businessTypes') as string[]).map(type => (
+                  {Array.isArray(t.raw('form.fields.businessTypes')) && (t.raw('form.fields.businessTypes') as string[]).map(type => (
                     <option key={type} value={type}>{type}</option>
                   ))}
                 </select>
@@ -168,7 +169,7 @@ export default async function WholesaleApplicationPage({ params: { locale } }: {
                 <label className="block text-gray-400 font-dm-mono text-xs uppercase tracking-widest mb-2">{t('form.fields.volume')}</label>
                 <select name="monthlyVolume" required className="w-full bg-[#161d27] border border-white/10 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-brand-accent transition-all font-dm-sans">
                   <option value="">{t('form.fields.volumeDefault')}</option>
-                  {(t.raw('form.fields.volumeTiers') as string[]).map(tier => (
+                  {Array.isArray(t.raw('form.fields.volumeTiers')) && (t.raw('form.fields.volumeTiers') as string[]).map(tier => (
                     <option key={tier} value={tier}>{tier}</option>
                   ))}
                 </select>

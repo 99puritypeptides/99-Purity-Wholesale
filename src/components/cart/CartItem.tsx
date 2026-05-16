@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Minus, Plus, X } from 'lucide-react';
+import { Minus, Plus, Trash2 } from 'lucide-react';
 import { CartItem as CartItemType } from '@/types/cart';
 import { useCart } from '@/context/CartContext';
 
@@ -21,55 +21,58 @@ export default function CartItem({ item }: CartItemProps) {
   };
 
   return (
-    <div className="flex flex-col py-4 border-b border-[#1D2B40] gap-2">
-      <div className="flex items-start justify-between">
-        {/* Left Side: Product Info */}
-        <div className="flex flex-col gap-1">
-          <h4 className="font-rajdhani font-bold text-[15px] text-white leading-tight">
-            {item.productName}
-          </h4>
-          <span className="font-dm-mono text-[10px] text-[#7A8FA3] uppercase tracking-wider">
-            {item.category}
-          </span>
-          <div className="mt-1">
-            <span className="inline-block bg-[#1D2B40] text-[#4FC3D0] text-[10px] px-2 py-0.5 rounded font-dm-mono">
-              {item.spec} &times;{item.kitSize} vials
-            </span>
-          </div>
-        </div>
-
-        {/* Right Side: Quantity and Remove */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1">
-            <button
-              onClick={() => handleUpdateQuantity(item.quantity - 1)}
-              className="w-7 h-7 rounded border border-[#1D2B40] bg-[#18212F] text-[#7A8FA3] flex items-center justify-center hover:border-[#4FC3D0] hover:text-[#4FC3D0] transition-colors"
-            >
-              <Minus className="w-3 h-3" />
-            </button>
-            <span className="w-8 text-center font-bold text-white text-sm">
-              {item.quantity}
-            </span>
-            <button
-              onClick={() => handleUpdateQuantity(item.quantity + 1)}
-              className="w-7 h-7 rounded border border-[#1D2B40] bg-[#18212F] text-[#7A8FA3] flex items-center justify-center hover:border-[#4FC3D0] hover:text-[#4FC3D0] transition-colors"
-            >
-              <Plus className="w-3 h-3" />
-            </button>
+    <div className="group relative bg-white/5 border border-white/5 rounded-2xl p-6 transition-all hover:bg-white/10 hover:border-white/10">
+      <div className="flex flex-col gap-5">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex flex-col gap-1.5">
+            <h4 className="font-absans font-bold text-lg text-white leading-tight tracking-tight uppercase">
+              {item.productName}
+            </h4>
+            <div className="flex items-center gap-2">
+              <span className="text-[9px] font-bold text-white/30 uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded">
+                {item.category}
+              </span>
+              <span className="text-[9px] font-bold text-[#F1FF85]/60 uppercase tracking-widest">
+                {item.spec}
+              </span>
+            </div>
           </div>
           
           <button
             onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: { id: item.id } })}
-            className="text-[#7A8FA3] hover:text-red-400 transition-colors p-1"
+            className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/20 hover:bg-red-500/10 hover:text-red-400 transition-all"
+            aria-label="Remove item"
           >
-            <X className="w-4 h-4" />
+            <Trash2 className="w-4 h-4" />
           </button>
         </div>
-      </div>
 
-      {/* Summary Line */}
-      <div className="font-dm-mono text-[10px] text-[#7A8FA3] opacity-80">
-        Kit: {item.kitSize} vials &middot; Qty: {item.quantity} &middot; MOQ: {item.moq} units
+        <div className="flex items-center justify-between mt-2 pt-5 border-t border-white/5">
+          <div className="flex flex-col gap-1">
+            <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest">Inquiry Volume</div>
+            <div className="text-sm font-archia font-medium text-white/80">
+              {item.kitSize} Vials &times; {item.quantity} Kits
+            </div>
+          </div>
+
+          <div className="flex items-center bg-black/40 rounded-xl border border-white/10 p-1">
+            <button
+              onClick={() => handleUpdateQuantity(item.quantity - 1)}
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-white/40 hover:bg-white/10 hover:text-white transition-all"
+            >
+              <Minus className="w-3 h-3" />
+            </button>
+            <span className="w-10 text-center font-archia font-bold text-white text-sm">
+              {item.quantity}
+            </span>
+            <button
+              onClick={() => handleUpdateQuantity(item.quantity + 1)}
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-white/40 hover:bg-white/10 hover:text-white transition-all"
+            >
+              <Plus className="w-3 h-3" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Search, X, Command, ArrowRight, FlaskConical, Activity, Brain, ShieldAlert, Sparkles, Syringe, TrendingUp, Box } from 'lucide-react';
+import { Search, X, Command, ArrowRight, FlaskConical, Activity, TrendingUp, Box, Microscope, Sparkles, AlertCircle } from 'lucide-react';
 import { Link, useRouter } from '@/i18n/routing';
 import productsData from '@/data/products.json';
 import { useTranslations } from 'next-intl';
-
 import { getSearchEngine } from '@/lib/search';
 
 interface GlobalSearchProps {
@@ -26,11 +25,6 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
   // Handle keyboard shortcut (Ctrl/Cmd + K)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        // Since the parent manages isOpen, we rely on the parent's handler
-        // but this keeps internal state clean if needed.
-      }
       if (e.key === 'Escape' && isOpen) {
         onClose();
       }
@@ -39,11 +33,19 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Focus input when opened
+  // Focus input when opened with improved mobile handling
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
+      // Small delay works better across various mobile browsers
+      const timer = setTimeout(() => {
+        if (inputRef.current) {
+          inputRef.current.focus();
+          // For iOS specifically, sometimes we need to trigger it again
+          inputRef.current.click();
+        }
+      }, 300);
       document.body.style.overflow = 'hidden';
+      return () => clearTimeout(timer);
     } else {
       document.body.style.overflow = 'unset';
       setQuery('');
@@ -60,7 +62,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
     const searchResults = searchEngine.search(query);
     const filtered = searchResults
       .map(result => result.item)
-      .slice(0, 8); // Limit results for clean UI
+      .slice(0, 10); // Limit results for clean UI
 
     setResults(filtered);
   }, [query, searchEngine]);
@@ -68,93 +70,132 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-24 px-4">
+    <div className="fixed inset-0 z-[110] flex items-start justify-center pt-12 md:pt-40 px-4">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity"
+        className="absolute inset-0 bg-black/95 backdrop-blur-2xl transition-opacity duration-500"
         onClick={onClose}
       />
 
-      {/* Search Modal */}
-      <div className="relative w-full max-w-2xl bg-[#0e131b] border border-white/10 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
-        <div className="p-4 border-b border-white/5 flex items-center gap-4">
-          <Search className="w-5 h-5 text-brand-accent" />
+      {/* Search Command Palette */}
+      <div className="relative w-full max-w-3xl bg-[#0A0A0A] border border-white/10 rounded-3xl md:rounded-[2.5rem] shadow-[0_50px_150px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in zoom-in-95 duration-500 ease-out">
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        {/* Search Input Area */}
+        <div className="relative z-10 p-5 md:p-8 border-b border-white/5 flex items-center gap-4 md:gap-6 transition-all duration-500 focus-within:bg-white/[0.02] group/input">
+          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/5 flex items-center justify-center text-white/40 transition-all duration-500 group-focus-within/input:bg-white group-focus-within/input:text-black group-focus-within/input:scale-110 shadow-2xl">
+            <Search className="w-5 h-5 md:w-6 md:h-6" />
+          </div>
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search products, categories, or research applications..."
-            className="flex-1 bg-transparent border-none text-white focus:ring-0 text-lg font-dm-sans"
+            inputMode="search"
+            placeholder={t('placeholder')}
+            className="flex-1 bg-transparent border-none text-white focus:ring-0 text-xl md:text-3xl font-absans font-bold placeholder:text-white/10 transition-all duration-500 outline-none"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className="flex items-center gap-2 px-2 py-1 bg-white/5 border border-white/10 rounded text-[10px] text-gray-500 font-dm-mono uppercase">
-            <span>ESC</span>
-          </div>
-          <button onClick={onClose} className="p-1 hover:bg-white/5 rounded-lg transition-colors">
-            <X className="w-5 h-5 text-gray-400" />
+          <button 
+            onClick={onClose} 
+            className="p-2 md:p-3 hover:bg-white/5 rounded-xl md:rounded-2xl transition-all text-white/20 hover:text-white active:scale-90"
+          >
+            <X className="w-6 h-6" />
           </button>
+
+          {/* Animated Focus Line */}
+          <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent w-0 group-focus-within/input:w-full transition-all duration-1000 ease-in-out" />
         </div>
 
-        <div className="max-h-[60vh] overflow-y-auto no-scrollbar p-2">
+        {/* Results / Suggestions Area */}
+        <div className="relative z-10 max-h-[55vh] overflow-y-auto no-scrollbar pb-6 px-4 md:px-6">
           {query.length > 0 ? (
             results.length > 0 ? (
-              <div className="space-y-1">
-                <div className="px-4 py-2 text-[10px] text-gray-500 font-dm-mono uppercase tracking-widest">
-                  Research Compounds ({results.length})
+              <div className="py-4 space-y-1">
+                <div className="px-4 py-4 text-[10px] text-white/20 font-bold uppercase tracking-[0.4em] flex items-center justify-between">
+                  <span>{t('found', { count: results.length })}</span>
+                  <div className="h-px flex-1 mx-6 bg-white/5" />
                 </div>
-                {results.map((product) => (
-                  <Link
-                    key={product.slug}
-                    href={`/products/${product.category}/${product.slug}`}
-                    onClick={onClose}
-                    className="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 group transition-all"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center">
-                        <FlaskConical className="w-5 h-5 text-brand-accent" />
+                <div className="grid grid-cols-1 gap-1">
+                  {results.map((product) => (
+                    <Link
+                      key={product.slug}
+                      href={`/products/${product.category}/${product.slug}`}
+                      onClick={onClose}
+                      className="flex items-center justify-between p-4 rounded-[1.5rem] hover:bg-white/5 group transition-all"
+                    >
+                      <div className="flex items-center gap-5">
+                        <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center transition-all group-hover:bg-white group-hover:text-black">
+                          <FlaskConical className="w-5 h-5" />
+                        </div>
+                        <div>
+                          <div className="text-white text-lg font-bold font-absans tracking-tight group-hover:translate-x-1 transition-transform duration-300">{product.name}</div>
+                          <div className="text-[10px] text-white/30 font-bold uppercase tracking-widest mt-0.5">{product.category.replace(/-/g, ' ')}</div>
+                        </div>
                       </div>
-                      <div>
-                        <div className="text-white font-bold font-rajdhani group-hover:text-brand-accent transition-colors">{product.name}</div>
-                        <div className="text-xs text-gray-500 capitalize">{product.category.replace(/-/g, ' ')}</div>
+                      <div className="w-8 h-8 rounded-full border border-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:border-white/20 transition-all">
+                        <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform" />
                       </div>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-700 group-hover:text-brand-accent group-hover:translate-x-1 transition-all" />
-                  </Link>
-                ))}
+                    </Link>
+                  ))}
+                </div>
               </div>
             ) : (
-              <div className="py-12 text-center text-gray-500 font-dm-sans">
-                No matching research materials found for "{query}"
+              <div className="py-20 flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                  <AlertCircle className="w-8 h-8 text-white/10" />
+                </div>
+                <h3 className="text-white text-lg font-bold mb-2">{t('noResults')}</h3>
+                <p className="text-white/30 font-archia text-sm max-w-xs">{t('noResultsDesc', { query })}</p>
               </div>
             )
           ) : (
-            <div className="p-4 space-y-6">
+            <div className="py-6 space-y-10">
+              {/* Quick Access Categories */}
               <div>
-                <div className="px-2 mb-4 text-[10px] text-gray-500 font-dm-mono uppercase tracking-widest">Quick Categories</div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <div className="px-4 mb-6 text-[10px] text-white/20 font-bold uppercase tracking-[0.4em] flex items-center">
+                  <span>{t('quickCategories')}</span>
+                  <div className="h-px flex-1 mx-6 bg-white/5" />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 px-2">
                   {[
-                    { id: 'glp1-metabolic-peptides', name: 'GLP-1', icon: Activity },
+                    { id: 'glp1-metabolic-peptides', name: 'Metabolic & GLP-1', icon: Activity },
                     { id: 'growth-hormone', name: 'Growth Hormone', icon: TrendingUp },
-                    { id: 'healing-recovery-peptides', name: 'Healing', icon: FlaskConical },
+                    { id: 'healing-recovery-peptides', name: 'Healing & Recovery', icon: Microscope },
+                    { id: 'anti-aging-longevity', name: 'Anti-Aging & Longevity', icon: Sparkles },
                   ].map(cat => (
                     <Link
                       key={cat.id}
                       href={`/products/${cat.id}`}
                       onClick={onClose}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-brand-accent/30 transition-all group"
+                      className="flex items-center justify-between p-5 rounded-[1.5rem] bg-white/5 border border-white/5 hover:border-white/20 transition-all group"
                     >
-                      <cat.icon className="w-4 h-4 text-brand-accent" />
-                      <span className="text-xs text-gray-400 group-hover:text-white transition-colors">{cat.name}</span>
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center text-white/40 group-hover:text-white transition-colors">
+                          <cat.icon className="w-5 h-5" />
+                        </div>
+                        <span className="text-sm font-bold text-white/60 group-hover:text-white transition-colors">{cat.name}</span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-white/10 group-hover:text-white transition-colors" />
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-brand-accent/5 border border-brand-accent/10 rounded-xl p-4 flex items-center justify-between">
-                <div className="flex items-center gap-3 text-brand-accent text-sm font-bold">
-                  <Command className="w-4 h-4" />
-                  <span>Pro Tip: Use Ctrl+K to search anytime</span>
+              {/* Technical Help Bar */}
+              <div className="mx-2 p-6 rounded-[2rem] bg-gradient-to-r from-white/[0.03] to-transparent border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                    <Command className="w-5 h-5 text-white/40" />
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-bold text-white uppercase tracking-widest">{t('institutionalAccess')}</div>
+                    <div className="text-[10px] text-white/30 font-medium">{t('institutionalDesc')}</div>
+                  </div>
                 </div>
+                <button className="px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold text-white/60 uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                  {t('helpCenter')}
+                </button>
               </div>
             </div>
           )}

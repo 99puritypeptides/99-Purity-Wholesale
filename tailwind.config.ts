@@ -68,6 +68,9 @@ const config: Config = {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
+      backdropBlur: {
+        '3xl': '64px',
+      },
     },
   },
   plugins: [

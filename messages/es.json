@@ -1,5 +1,11 @@
 {
   "Index": {
+    "StatsBar": {
+      "purity": { "label": "Pureza Verificada" },
+      "compounds": { "label": "Lote Probado" },
+      "clients": { "label": "Socios B2B" },
+      "coverage": { "label": "Fuente Nacional" }
+    },
     "Hero": {
       "title": "El Proveedor de Péptidos Mayorista de Confianza en América",
       "subtitle": "Péptidos de investigación premium fabricados en EE. UU. para profesionales autorizados. Pureza garantizada del 99%+ con COA independientes emparejados por lote.",
@@ -34,9 +40,11 @@
       },
       "support": {
         "title": "Soporte B2B",
-        "description": "Gerentes de cuenta dedicados a través de WhatsApp."
+        "description": "Gerentes de cuenta dedicados vía WhatsApp."
       },
-      "shippingDesc": "Logística global rápida y discreta para péptidos de grado farmacéutico."
+      "shippingDesc": "Logística global rápida y discreta para péptidos de grado farmacéutico.",
+      "institutionalStandard": "Estándar Institucional",
+      "laboratory": "Laboratorio"
     },
     "Categories": {
       "badge": "Catálogo Mayorista",
@@ -71,7 +79,8 @@
       "fullCatalog": "Catálogo Completo",
       "fullCatalogDesc": "Examine nuestro inventario completo de compuestos con una pureza del 99%+.",
       "exploreSeries": "Explorar Series",
-      "cta": "Ver Catálogo Completo"
+      "cta": "Ver Catálogo Completo",
+      "accessCatalog": "Acceder al Catálogo"
     },
     "BestSellers": {
       "badge": "Compuestos Más Vendidos",
@@ -91,7 +100,9 @@
       "specs": "Especificaciones Disponibles",
       "purity": "Pureza",
       "viewSpecs": "Ver Especificaciones Completas",
-      "browseAll": "Explorar Inventario Completo ({count}+ Compuestos)"
+      "browseAll": "Explorar Inventario Completo ({count}+ Compuestos)",
+      "technicalGrade": "Grado Técnico",
+      "verifiedPurity": "Pureza Verificada"
     },
     "Quality": {
       "title": "Calidad Analítica sin Compromisos",
@@ -102,7 +113,9 @@
         "sema": "Descargar COA de Semaglutida",
         "tirz": "Descargar COA de Tirzepatida"
       },
-      "cta": "Conozca Nuestros Estándares de Calidad"
+      "cta": "Conozca Nuestros Estándares de Calidad",
+      "technicalStandard": "Estándar Técnico",
+      "verification": "Verificación"
     },
     "Tiers": {
       "badge": "Precios Basados en el Volumen",
@@ -152,7 +165,9 @@
         { "quote": "Hemos estado adquiriendo péptidos de grado de investigación para nuestra instalación de compuestos durante dos años. La documentación de COA y la consistencia de la pureza de 99 Purity Wholesale simplemente no tienen comparación con ningún proveedor nacional que hayamos probado.", "role": "Director de Farmacia de Compuestos", "location": "Texas" },
         { "quote": "Cambiar a 99 Purity Wholesale para nuestro suministro mayorista fue un cambio radical. Los precios por niveles facilitaron la escala a medida que crecía nuestra red de clínicas. Nuestro gerente de cuenta es receptivo y el cumplimiento es rápido.", "role": "Propietario de Red de Clínicas de Bienestar", "location": "Florida" },
         { "quote": "Como distribuidor que atiende spas médicos en todo el suroeste, la pureza constante y los COA de lote confiables no son negociables. 99 Purity Wholesale ofrece ambos, cada vez.", "role": "Distribuidor B2B Regional", "location": "Arizona" }
-      ]
+      ],
+      "verifiedClient": "Cliente Verificado",
+      "institutionalTrust": ["Instalación Certificada GMP", "Pureza Probada por HPLC", "Registrado en CLIA", "PORTAL B2B SEGURO"]
     },
     "Services": {
       "badge": "Servicios para Socios",
@@ -163,7 +178,17 @@
         "dropshipping": { "title": "Programa de Envío Directo", "desc": "Venda sin mantener inventario. Nosotros cumplimos bajo su marca." },
         "privateLabel": { "title": "Marca Privada", "desc": "Su marca en nuestros productos con pureza ≥99%. Basado en MOQ." },
         "launch": { "title": "Lanzamiento de Negocios", "desc": "Inicie su marca de péptidos con orientación experta." },
-        "web": { "title": "Desarrollo de Sitios Web", "desc": "Sitios de venta de péptidos que cumplen con las normas y son de alta conversión." }
+        "web": { "title": "Desarrollo Web", "desc": "Sitios de venta de péptidos que cumplen con las normas y de alta conversión." }
+      },
+      "scaleTitle": "Escala Tu <br /> Empresa de Péptidos",
+      "scaleSubtitle": "Ya seas una clínica de bienestar o una marca digital, nuestra infraestructura está construida para respaldar tu crecimiento de $0 a $1M+.",
+      "guide": "Guía Completa de Servicios",
+      "wholesaleApp": "Solicitud Mayorista",
+      "benefits": {
+        "dropshipping": ["Cumplimiento Directo al Cliente", "Envío Sigiloso Global", "Gestión de Riesgo de Inventario"],
+        "privateLabel": ["Marca y Embalaje Personalizados", "Certificación de Laboratorio", "Soporte de Identidad y Diseño"],
+        "launch": ["Estrategia de Salida al Mercado", "Pre-carga de Inventario", "Consultoría de Cumplimiento"],
+        "web": ["Escaparates de Alta Conversión", "Integración de Portal B2B", "Configuración de SEO y Analítica"]
       }
     },
     "Blog": {
@@ -179,8 +204,8 @@
     },
     "FAQ": {
       "badge": "Preguntas Comunes",
-      "title": "Preguntas Frecuentes sobre Péptidos al Por Mayor",
-      "subtitle": "Todo lo que los profesionales autorizados necesitan saber sobre el abastecimiento de péptidos a granel de 99 Purity Wholesale.",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que los profesionales autorizados necesitan saber sobre el abastecimiento de péptidos a granel de 99 Purity Wholesale. Entendemos que navegar por el mundo de los compuestos de investigación de laboratorio puede ser complejo. Hemos recopilado estas preguntas frecuentes para guiar su viaje de adquisición y cumplimiento.",
       "items": [
         { "q": "¿Qué hace que 99 Purity Wholesale sea diferente de otros proveedores mayoristas de péptidos?", "a": "Somos un fabricante con sede en EE. UU., no un importador o reempaquetador. Cada lote se sintetiza a nivel nacional y se prueba de forma independiente por laboratorios externos acreditados de EE. UU. Cada producto se envía con un Certificado de Análisis (COA) emparejado por lote que confirma una pureza ≥99% mediante HPLC y espectrometría de masas." },
         { "q": "¿Quién califica para comprar péptidos al por mayor de 99 Purity Wholesale?", "a": "Nuestros productos se venden estrictamente a profesionales autorizados e instituciones de investigación calificadas — incluyendo farmacias de compuestos, clínicas de bienestar, spas médicos, distribuidores autorizados e instalaciones de investigación académicas. Todas las compras requieren que el comprador atestigüe su estado profesional." },
@@ -201,8 +226,28 @@
       "msg": "Hola, me gustaría solicitar precios de péptidos al por mayor."
     }
   },
+  "Search": {
+    "title": "Búsqueda Global",
+    "placeholder": "Buscar compuestos...",
+    "instantDiscovery": "Descubrimiento Instantáneo",
+    "description": "Localice péptidos de investigación, datos clínicos y estándares de laboratorio en nuestro catálogo.",
+    "shortcut": "Atajo Rápido",
+    "found": "Encontrado ({count})",
+    "noResults": "No se encontró investigación",
+    "noResultsDesc": "No pudimos encontrar ningún compuesto que coincida con \"{query}\". Intente con un término más amplio.",
+    "quickCategories": "Categorías Rápidas",
+    "institutionalAccess": "Acceso Institucional",
+    "institutionalDesc": "Use [ ⌘ + K ] para buscar desde cualquier módulo de laboratorio",
+    "helpCenter": "Centro de Ayuda"
+  },
   "Layout": {
-    "announcement": "Solo para investigadores y profesionales autorizados",
+    "social": {
+      "linkedin": "Linkedin",
+      "threads": "Threads",
+      "tiktok": "TikTok",
+      "email": "Email"
+    },
+    "announcement": "Solo para profesionales e investigadores licenciados",
     "nav": {
       "products": "Productos",
       "quality": "Calidad",
@@ -216,11 +261,45 @@
     "whatsapp": "Contactar vía WhatsApp",
     "selectLanguage": "Seleccionar Idioma",
     "cart": {
+      "title": "Lista de Consulta",
+      "registered": "Compuestos Registrados",
       "productCount": "{count} {count, plural, one {producto} other {productos}} en su consulta",
       "clear": "Limpiar todo",
       "whatsapp": "Enviar Consulta por WhatsApp",
       "email": "Enviar Consulta por Correo",
-      "disclaimer": "Solo para uso de investigación y laboratorio. Solo profesionales autorizados."
+      "disclaimer": "Solo para uso de investigación y laboratorio. Solo profesionales autorizados.",
+      "empty": {
+        "title": "Lista de Consulta Vacía",
+        "desc": "Explore nuestro catálogo de compuestos verificados para comenzar a construir su solicitud de adquisición.",
+        "cta": "Explorar Catálogo"
+      }
+    },
+    "tooltips": {
+      "search": {
+        "title": "Descubrimiento de Compuestos",
+        "desc": "Localice péptidos de investigación, datos clínicos y estándares de laboratorio en nuestro catálogo."
+      },
+      "cart": {
+        "title": "Manifiesto de Consulta",
+        "desc": "Revise y gestione sus solicitudes de compuestos institucionales antes de enviarlas a nuestro equipo."
+      }
+    },
+    "whatsapp": {
+      "mockupTitle": "Soporte 99 Purity",
+      "mockupSubtitle": "Acceso Institucional",
+      "mockupWelcome": "Bienvenido al Conserje B2B de 99 Purity. Seleccione un módulo de adquisición para comenzar su consulta directa encriptada.",
+      "tooltipTitle": "Soporte Institucional",
+      "tooltipDesc": "¿Necesita Asistencia de Laboratorio?",
+      "messageOptions": {
+        "catalog": { "label": "Consulta de Catálogo Mayorista", "desc": "Precios Institucionales", "text": "Hola, estoy interesado en recibir su catálogo mayorista completo y la lista de precios a granel para péptidos de investigación." },
+        "partnership": { "label": "Solicitud de Asociación", "desc": "Verificación B2B", "text": "Hola, me gustaría discutir una posible asociación institucional para la adquisición regular de compuestos." },
+        "coa": { "label": "Datos de Lote y Solicitud de COA", "desc": "Soporte Técnico", "text": "Saludos, tengo una pregunta técnica sobre la pureza del lote y me gustaría solicitar los datos del COA para un compuesto específico." },
+        "synthesis": { "label": "Solicitud de Síntesis Personalizada", "desc": "Servicios Avanzados de Laboratorio", "text": "Hola, estoy consultando sobre los servicios de síntesis de compuestos personalizados para un proyecto de investigación específico." },
+        "distribution": { "label": "Distribución Internacional", "desc": "Logística Global", "text": "Hola, estoy interesado en convertirme en un distribuidor regional de sus compuestos de investigación fuera de los EE. UU." },
+        "status": { "label": "Soporte de Estado de Pedido", "desc": "Envío y Logística", "text": "Hola, estoy verificando el estado de mi envío mayorista reciente. ¿Podría proporcionarme una actualización de seguimiento?" },
+        "qa": { "label": "Ayuda de Garantía de Calidad", "desc": "Asistencia de Verificación", "text": "Saludos, necesito ayuda con la verificación de laboratorio de sus compuestos para mi centro de investigación." },
+        "technical": { "label": "Ayuda Técnica General", "desc": "Consulta Técnica", "text": "Hola, tengo una pregunta general sobre sus protocolos de almacenamiento y manejo de compuestos." }
+      }
     },
     "footer": {
       "navTitle": "Navegación",
@@ -229,17 +308,38 @@
       "apply": "Solicitar Mayorista",
       "hqTitle": "Operaciones HQ",
       "inquiries": "Consultas",
+      "locations": "Ubicaciones",
       "operations": "Operaciones",
       "logistics": "Logística Global",
       "tradeTitle": "Comercio y Liquidación",
       "accepted": "Métodos Aceptados",
       "paymentMethods": "Métodos de Pago Aceptados",
-      "paymentList": ["Bitcoin (BTC)", "Zelle", "Transferencia Bancaria", "USDT"],
-      "disclaimer": "Los productos están destinados únicamente a fines de investigación de laboratorio. No aptos para el consumo humano.",
+      "paymentList": ["Bitcoin (BTC)", "Zelle", "Bank Transfer", "USDT"],
+      "letsTalk": "Hablemos",
+      "disclaimer": "Descargo de Responsabilidad",
+      "disclaimerContent": "Todos los compuestos son estrictamente para investigación de laboratorio in vitro y pruebas analíticas por profesionales autorizados. No son para consumo humano o veterinario, uso terapéutico o aplicación clínica. Los compradores asumen toda la responsabilidad regulatoria.",
       "rights": "Todos los derechos reservados.",
       "compliance": "* Todos los compuestos de investigación son solo para uso en laboratorio. No aptos para el consumo humano.",
       "privacy": "Privacidad",
-      "terms": "Términos"
+      "terms": "Términos",
+      "labTitle": "Laboratorio",
+      "supportTitle": "Soporte",
+      "instTitle": "Institucional",
+      "legalTitle": "Legal",
+      "categories": "Categorías",
+      "wholesaleApp": "Solicitud Mayorista",
+      "fulfillment": "Cumplimiento",
+      "partnerProgram": "Programa de Socios",
+      "refundPolicy": "Política de Reembolso",
+      "complianceTitle": "Cumplimiento",
+      "desc": "99 Purity Wholesale es el principal proveedor nacional de péptidos de investigación de alta pureza de Estados Unidos. Nos especializamos en la distribución de péptidos a granel para clínicas de bienestar, farmacias de compuestos e instituciones de investigación en todo el país. Nuestro catálogo fabricado en EE. UU. es probado independientemente por HPLC para garantizar una pureza ≥99%, proporcionando el abastecimiento nacional confiable requerido para estándares de laboratorio precisos.",
+      "copyright": "99 PURITY © {year}. TODOS LOS DERECHOS RESERVADOS.",
+      "startNow": "Empezar Ahora",
+      "backToTop": "VOLVER ARRIBA",
+      "welcome": "De nada.",
+      "creditLab": "Excelencia en Laboratorio Mayorista",
+      "creditUSA": "Fabricado en EE. UU.",
+      "creditBy": "Diseñado y Desarrollado por"
     }
   },
   "NotFound": {
@@ -1091,8 +1191,9 @@
         "title": "Descargo de Responsabilidad de Uso en Investigación",
         "content": "Los compuestos de 99 Purity Wholesale NO están destinados para su uso como aditivos alimentarios, medicamentos, cosméticos, productos químicos domésticos u otras aplicaciones inapropiadas. La inclusión de un material en este sitio no constituye una licencia para su uso en infracción de ninguna patente. Se supone que todos los clientes son profesionales capacitados que comprenden los riesgos asociados con los productos químicos de investigación."
       }
-    },
-    "WholesaleApplication": {
+    }
+  },
+  "WholesaleApplication": {
       "metadata": {
         "title": "Solicitar una Cuenta Mayorista | 99 Purity Wholesale — Péptidos de Investigación a Granel EE. UU.",
         "description": "Solicite una cuenta de péptidos mayorista verificada con 99 Purity Wholesale. Acceda a precios a granel en más de 50 péptidos de grado de investigación. Fabricados en EE. UU., verificados por COA. Solo para profesionales autorizados."
@@ -1186,7 +1287,6 @@
         "text": "¿Necesita una respuesta más rápida? Salte el formulario y envíenos un mensaje directamente.",
         "whatsapp": "Solicitar por WhatsApp",
         "email": "Solicitud por Correo"
-      }
     }
   }
 }

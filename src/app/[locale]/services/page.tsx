@@ -1,5 +1,6 @@
 import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, ClipboardCheck, ArrowRight, PhoneCall, CheckCircle2 } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import GlobalCTA from '@/components/layout/GlobalCTA';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'Meta'});
@@ -160,11 +161,15 @@ export default async function ServicesPage({ params }: { params: { locale: strin
             </div>
           </div>
           
-          <div className="mt-16 text-center">
-            <a href={`https://wa.me/18437439007?text=${encodeURIComponent(t('scheduleMsg'))}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 px-8 rounded-lg transition-colors font-rajdhani text-lg uppercase tracking-wider">
-              {t('scheduleCta')} <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
+      <GlobalCTA 
+        badge={t('badge')}
+        title={t('scheduleCta')}
+        subtitle={t('subtitle')}
+        primaryCtaText="WhatsApp Sales"
+        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(t('scheduleMsg'))}`}
+        secondaryCtaText="Email Laboratory"
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
         </div>
       </section>
     </div>

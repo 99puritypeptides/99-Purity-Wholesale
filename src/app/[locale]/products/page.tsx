@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import { AlertTriangle, FlaskConical, Activity, Brain, ShieldAlert, Sparkles, Syringe, Box, TrendingUp, ShieldCheck, Truck, Award, CheckCircle2, ArrowRight, Zap } from 'lucide-react';
 import productsData from '@/data/products.json';
 import ProductDirectory from '@/components/products/ProductDirectory';
+import GlobalCTA from '@/components/layout/GlobalCTA';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
@@ -212,26 +213,15 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         </div>
       </section>
 
-      {/* Global Wholesale CTA */}
-      <section className="py-24 bg-[#0B0F15] border-y border-white/5">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <div className="inline-block p-3 bg-brand-accent/10 rounded-2xl mb-8 border border-brand-accent/20">
-            <Zap className="w-8 h-8 text-brand-accent" />
-          </div>
-          <h2 className="text-4xl md:text-6xl font-rajdhani font-bold text-white mb-6">Bulk Sourcing Redefined</h2>
-          <p className="text-xl text-gray-400 font-dm-sans mb-12 max-w-2xl mx-auto">
-            Stop navigating international customs and inconsistent quality. Secure your domestic supply chain with America's most trusted B2B peptide partner.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/18437439007" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-brand-accent text-[#090C11] font-bold py-4 px-10 rounded-xl font-rajdhani text-lg uppercase tracking-widest hover:bg-[#3EABC0] transition-all flex items-center justify-center gap-2">
-              <Zap className="w-5 h-5" /> WhatsApp Sales
-            </a>
-            <Link href="/contact" className="w-full sm:w-auto bg-white/5 border border-white/10 text-white font-bold py-4 px-10 rounded-xl font-rajdhani text-lg uppercase tracking-widest hover:bg-white/10 transition-all">
-              Request Pricing List
-            </Link>
-          </div>
-        </div>
-      </section>
+      <GlobalCTA 
+        badge="Institutional Sourcing"
+        title="Bulk Sourcing Redefined"
+        subtitle="Access tiered pricing, verified purity, and priority domestic fulfillment for your research institution or clinical practice."
+        primaryCtaText="WhatsApp Sales"
+        primaryCtaHref="https://wa.me/18437439007"
+        secondaryCtaText="Wholesale Application"
+        secondaryCtaHref="/wholesale-application"
+      />
 
       <script
         type="application/ld+json"

@@ -1,5 +1,11 @@
 {
   "Index": {
+    "StatsBar": {
+      "purity": { "label": "Verified Purity" },
+      "compounds": { "label": "Batch Tested" },
+      "clients": { "label": "B2B Partners" },
+      "coverage": { "label": "Domestic Source" }
+    },
     "Hero": {
       "title": "America's Trusted Wholesale Peptide Supplier",
       "subtitle": "Premium U.S.-manufactured research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch-matched COAs.",
@@ -7,7 +13,7 @@
       "secondaryCta": "View Catalog",
       "badge": "America's Trusted Wholesale Peptide Supplier",
       "authorized": "Authorized Research Supplier",
-      "explore": "Explore Full",
+      "explore": "Explore",
       "institutions": "200+ Institutions",
       "partners": "Verified Partners",
       "badges": {
@@ -36,7 +42,9 @@
         "title": "B2B Support",
         "description": "Dedicated account managers via WhatsApp."
       },
-      "shippingDesc": "Fast, discrete global logistics for pharmaceutical-grade peptides."
+      "shippingDesc": "Fast, discrete global logistics for pharmaceutical-grade peptides.",
+      "institutionalStandard": "Institutional Standard",
+      "laboratory": "Laboratory"
     },
     "Categories": {
       "badge": "Wholesale Catalog",
@@ -71,7 +79,8 @@
       "fullCatalog": "Full Catalog",
       "fullCatalogDesc": "Browse our complete inventory of 99%+ purity compounds.",
       "exploreSeries": "Explore Series",
-      "cta": "View Full Catalog"
+      "cta": "View Full Catalog",
+      "accessCatalog": "Access Catalog"
     },
     "BestSellers": {
       "badge": "Bestselling Compounds",
@@ -91,7 +100,9 @@
       "specs": "Available Specs",
       "purity": "Purity",
       "viewSpecs": "View Full Specs",
-      "browseAll": "Browse Complete Inventory ({count}+ Compounds)"
+      "browseAll": "Browse Complete Inventory ({count}+ Compounds)",
+      "technicalGrade": "Technical Grade",
+      "verifiedPurity": "Verified Purity"
     },
     "Quality": {
       "title": "Uncompromising Analytical Quality",
@@ -102,7 +113,9 @@
         "sema": "Download Semaglutide COA",
         "tirz": "Download Tirzepatide COA"
       },
-      "cta": "Learn Our Quality Standards"
+      "cta": "Learn Our Quality Standards",
+      "technicalStandard": "Technical Standard",
+      "verification": "Verification"
     },
     "Tiers": {
       "badge": "Volume-Based Pricing",
@@ -152,7 +165,9 @@
         { "quote": "We've been sourcing research-grade peptides for our compounding facility for two years. The COA documentation and purity consistency from 99 Purity Wholesale is simply unmatched by any domestic supplier we've tested.", "role": "Compounding Pharmacy Director", "location": "Texas" },
         { "quote": "Switching to 99 Purity Wholesale for our wholesale supply was a game changer. Tiered pricing made it easy to scale as our clinic network grew. Our account manager is responsive and the fulfillment is fast.", "role": "Wellness Clinic Network Owner", "location": "Florida" },
         { "quote": "As a distributor serving medical spas across the Southwest, consistent purity and reliable batch COAs are non-negotiable. 99 Purity Wholesale delivers both, every single time.", "role": "Regional B2B Distributor", "location": "Arizona" }
-      ]
+      ],
+      "verifiedClient": "Verified Client",
+      "institutionalTrust": ["GMP Certified Facility", "HPLC Tested Purity", "CLIA Registered", "SECURE B2B PORTAL"]
     },
     "Services": {
       "badge": "Partner Services",
@@ -164,6 +179,16 @@
         "privateLabel": { "title": "Private Label", "desc": "Your brand on our ≥99% purity products. MOQ-based." },
         "launch": { "title": "Business Launch", "desc": "Start your peptide brand with expert guidance." },
         "web": { "title": "Website Development", "desc": "Compliant, high-converting peptide retail sites." }
+      },
+      "scaleTitle": "Scale Your <br /> Peptide Venture",
+      "scaleSubtitle": "Whether you're a wellness clinic or a digital brand, our infrastructure is built to support your growth from $0 to $1M+.",
+      "guide": "Full Services Guide",
+      "wholesaleApp": "Wholesale App",
+      "benefits": {
+        "dropshipping": ["Direct-to-Customer Fulfillment", "Global Stealth Shipping", "Inventory Risk Management"],
+        "privateLabel": ["Custom Branding & Packaging", "Laboratory Certification", "Design & Identity Support"],
+        "launch": ["Go-to-Market Strategy", "Inventory Pre-loading", "Compliance Consulting"],
+        "web": ["High-Conversion Storefronts", "B2B Portal Integration", "SEO & Analytics Setup"]
       }
     },
     "Blog": {
@@ -179,8 +204,8 @@
     },
     "FAQ": {
       "badge": "Common Questions",
-      "title": "Wholesale Peptide FAQ",
-      "subtitle": "Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity Wholesale.",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity Wholesale. We understand that navigating the world of laboratory research compounds can be complex. We've compiled these frequently asked questions to guide your procurement and compliance journey.",
       "items": [
         { "q": "What makes 99 Purity Wholesale different from other wholesale peptide suppliers?", "a": "We are a U.S.-based manufacturer — not an importer or repackager. Every batch is synthesized domestically and independently tested by accredited U.S. third-party laboratories. Every product ships with a batch-matched Certificate of Analysis (COA) confirming ≥99% purity via HPLC and Mass Spectrometry." },
         { "q": "Who qualifies to purchase wholesale peptides from 99 Purity Wholesale?", "a": "Our products are sold strictly to licensed professionals and qualified research institutions — including compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All purchases require buyer attestation of professional status." },
@@ -201,7 +226,27 @@
       "msg": "Hi, I'd like to request wholesale peptide pricing."
     }
   },
+  "Search": {
+    "title": "Global Search",
+    "placeholder": "Search compounds...",
+    "instantDiscovery": "Instant Compound Discovery",
+    "description": "Locate specific research peptides, clinical data, and laboratory standards across our entire institutional catalog.",
+    "shortcut": "Quick Shortcut",
+    "found": "Found ({count})",
+    "noResults": "No research found",
+    "noResultsDesc": "We couldn't find any compounds matching \"{query}\". Try a broader term.",
+    "quickCategories": "Quick Categories",
+    "institutionalAccess": "Institutional Access",
+    "institutionalDesc": "Use [ ⌘ + K ] to search from any laboratory module",
+    "helpCenter": "Help Center"
+  },
   "Layout": {
+    "social": {
+      "linkedin": "Linkedin",
+      "threads": "Threads",
+      "tiktok": "TikTok",
+      "email": "Email"
+    },
     "announcement": "For licensed professionals and researchers only",
     "nav": {
       "products": "Products",
@@ -216,11 +261,45 @@
     "whatsapp": "Contact via WhatsApp",
     "selectLanguage": "Select Language",
     "cart": {
+      "title": "Inquiry List",
+      "registered": "Registered Compounds",
       "productCount": "{count} {count, plural, one {product} other {products}} in your inquiry",
       "clear": "Clear all",
       "whatsapp": "Send Inquiry via WhatsApp",
       "email": "Send Inquiry via Email",
-      "disclaimer": "For research and laboratory use only. Licensed professionals only."
+      "disclaimer": "For research and laboratory use only. Licensed professionals only.",
+      "empty": {
+        "title": "Inquiry List Empty",
+        "desc": "Browse our verified compound catalog to begin building your wholesale procurement request.",
+        "cta": "Browse Catalog"
+      }
+    },
+    "tooltips": {
+      "search": {
+        "title": "Instant Compound Discovery",
+        "desc": "Locate specific research peptides, clinical data, and laboratory standards across our entire institutional catalog."
+      },
+      "cart": {
+        "title": "Inquiry Manifest",
+        "desc": "Review and manage your institutional compound requests before submission to our wholesale team."
+      }
+    },
+    "whatsapp": {
+      "mockupTitle": "99 Purity Support",
+      "mockupSubtitle": "Institutional Access",
+      "mockupWelcome": "Welcome to the 99 Purity B2B Concierge. Please select a procurement module to begin your direct encrypted inquiry.",
+      "tooltipTitle": "Institutional Support",
+      "tooltipDesc": "Need Laboratory Assistance?",
+      "messageOptions": {
+        "catalog": { "label": "Wholesale Catalog Inquiry", "desc": "Institutional Pricing", "text": "Hello, I am interested in receiving your full wholesale catalog and bulk pricing list for research peptides." },
+        "partnership": { "label": "Partnership Application", "desc": "B2B Verification", "text": "Hi, I would like to discuss a potential institutional partnership for regular compound procurement." },
+        "coa": { "label": "Batch Data & COA Request", "desc": "Technical Support", "text": "Greetings, I have a technical question regarding batch purity and would like to request COA data for a specific compound." },
+        "synthesis": { "label": "Custom Synthesis Request", "desc": "Advanced Lab Services", "text": "Hello, I am inquiring about custom compound synthesis services for a specific research project." },
+        "distribution": { "label": "International Distribution", "desc": "Global Logistics", "text": "Hi, I am interested in becoming a regional distributor for your research compounds outside the US." },
+        "status": { "label": "Order Status Support", "desc": "Shipping & Logistics", "text": "Hello, I am checking on the status of my recent wholesale shipment. Could you provide a tracking update?" },
+        "qa": { "label": "Quality Assurance Help", "desc": "Verification Assistance", "text": "Greetings, I need assistance with laboratory verification of your compounds for my research facility." },
+        "technical": { "label": "General Technical Help", "desc": "Technical Inquiry", "text": "Hi, I have a general question regarding your compound storage and handling protocols." }
+      }
     },
     "footer": {
       "navTitle": "Navigation",
@@ -229,17 +308,38 @@
       "apply": "Apply Wholesale",
       "hqTitle": "HQ Operations",
       "inquiries": "Inquiries",
+      "locations": "Locations",
       "operations": "Operations",
       "logistics": "Global Logistics",
       "tradeTitle": "Trade & Settlement",
       "accepted": "Accepted Methods",
       "paymentMethods": "Accepted Payment Methods",
       "paymentList": ["Bitcoin (BTC)", "Zelle", "Bank Transfer", "USDT"],
-      "disclaimer": "Products are intended for laboratory research purposes only. Not for human consumption.",
+      "letsTalk": "Let's talk",
+      "disclaimer": "Disclaimer",
+      "disclaimerContent": "All compounds are strictly for in vitro laboratory research and analytical testing by licensed professionals. Not for human or veterinary consumption, therapeutic use, or clinical application. Buyers assume all regulatory responsibility.",
       "rights": "All rights reserved.",
       "compliance": "* All research compounds are for laboratory use only. Not for human consumption.",
       "privacy": "Privacy",
-      "terms": "Terms"
+      "terms": "Terms",
+      "labTitle": "Laboratory",
+      "supportTitle": "Support",
+      "instTitle": "Institutional",
+      "legalTitle": "Legal",
+      "categories": "Categories",
+      "wholesaleApp": "Wholesale App",
+      "fulfillment": "Fulfillment",
+      "partnerProgram": "Partner Program",
+      "refundPolicy": "Refund Policy",
+      "complianceTitle": "Compliance",
+      "desc": "99 Purity Wholesale is America's premier domestic supplier of high-purity research peptides. We specialize in bulk peptide distribution for wellness clinics, compounding pharmacies, and research institutions nationwide. Our USA-manufactured catalog is independently HPLC-tested to guarantee ≥99% purity, providing the reliable domestic sourcing required for precise laboratory standards.",
+      "copyright": "99 PURITY © {year}. ALL RIGHTS RESERVED.",
+      "startNow": "Start Now",
+      "backToTop": "BACK TO TOP",
+      "welcome": "You're welcome.",
+      "creditLab": "Wholesale Laboratory Excellence",
+      "creditUSA": "USA Manufactured",
+      "creditBy": "Designed & Developed by"
     }
   },
   "NotFound": {
@@ -1143,8 +1243,9 @@
         "title": "Research Use Only Disclaimer",
         "content": "99 Purity Wholesale compounds are NOT intended for use as food additives, drugs, cosmetics, household chemicals, or other inappropriate applications. The listing of a material on this site does not constitute a license to its use in infringement of any patent. All customers are assumed to be trained professionals who understand the risks associated with research chemicals."
       }
-    },
-    "WholesaleApplication": {
+    }
+  },
+  "WholesaleApplication": {
       "metadata": {
         "title": "Apply for a Wholesale Account | 99 Purity Wholesale — Bulk Research Peptides USA",
         "description": "Apply for a verified wholesale peptide account with 99 Purity Wholesale. Access bulk pricing on 50+ research-grade peptides. U.S.-manufactured, COA-verified. For licensed professionals only."
@@ -1239,6 +1340,5 @@
         "whatsapp": "Apply via WhatsApp",
         "email": "Email Application"
       }
-    }
   }
 }

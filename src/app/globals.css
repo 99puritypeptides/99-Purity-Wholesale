@@ -3,21 +3,82 @@
 @tailwind utilities;
 
 :root {
-  --background: #090C11;
-  --foreground: #EDF2F7;
+  --background: #F7F3EA;
+  --foreground: #101827;
+  --font-absans: 'Absans', sans-serif;
+  --font-goku: 'Goku', serif;
+  --font-meshed: 'Meshed Display', serif;
+  --font-archia: 'Archia', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #090C11;
-    --foreground: #EDF2F7;
+    --background: #F7F3EA;
+    --foreground: #101827;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-archia);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-absans);
+}
+
+.font-goku {
+  font-family: var(--font-goku);
+}
+
+.font-absans {
+  font-family: var(--font-absans);
+}
+
+.font-archia {
+  font-family: var(--font-archia);
+}
+
+.font-meshed {
+  font-family: var(--font-meshed);
+}
+
+@keyframes homeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes homeFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+.home-reveal {
+  animation: homeReveal 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-float {
+  animation: homeFloat 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reveal,
+  .home-float {
+    animation: none;
+  }
 }
 
 @layer utilities {
@@ -31,5 +92,57 @@ body {
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  @keyframes scrollDot {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+
+  .animate-scroll-dot {
+    animation: scrollDot 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  @keyframes premiumZoom {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .animate-premium-zoom {
+    animation: premiumZoom 8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .glass-button {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .glass-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    pointer-events: none;
+    border-radius: inherit;
   }
 }

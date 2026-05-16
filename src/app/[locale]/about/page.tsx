@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { MessageCircle, Mail, ShieldCheck, Search, Users, Activity, Layers, BarChart3, FlaskConical, Globe, Award, CheckCircle2, ArrowRight, Microscope, Star, Truck } from "lucide-react";
+import GlobalCTA from "@/components/layout/GlobalCTA";
 
 const iconMap: Record<string, any> = {
   FlaskConical,
@@ -235,26 +236,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-gradient-to-br from-[#121B2E] to-[#0A0F1C] border border-[#4FC3D0]/20 rounded-3xl p-10 text-center shadow-[0_0_40px_rgba(79,195,208,0.1)] relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#4FC3D0] to-transparent opacity-50"></div>
-            <h2 className="text-3xl font-bold text-white mb-4 font-rajdhani relative z-10">{t("Cta.title")}</h2>
-            <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto relative z-10">{t("Cta.subtitle")}</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-              <button onClick={handleWhatsAppClick} className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-xl transition-colors flex items-center justify-center space-x-2 text-lg shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                <MessageCircle className="w-5 h-5" />
-                <span>{t("Cta.whatsapp")}</span>
-              </button>
-              <a href="mailto:wholesale@99puritypeptides.com" className="w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-xl transition-colors flex items-center justify-center space-x-2 text-lg border border-white/10">
-                <Mail className="w-5 h-5" />
-                <span>{t("Cta.email")}</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GlobalCTA 
+        badge={t('Cta.title')}
+        title={t('Cta.subtitle')}
+        subtitle="Connect with our Laboratory Operations team directly to discuss high-volume procurement or specialized research needs."
+        primaryCtaText={t('Cta.whatsapp')}
+        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(t('Cta.msg'))}`}
+        secondaryCtaText={t('Cta.email')}
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
 
     </main>
   );
