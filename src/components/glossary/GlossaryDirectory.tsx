@@ -152,7 +152,7 @@ export default function GlossaryDirectory({ initialTerms, categories }: Glossary
                             <div className="pt-6 border-t border-white/5">
                               <h4 className="text-xs font-dm-mono text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
                                 <FlaskConical className="w-3 h-3 text-brand-accent" />
-                                {t('Terms.relatedTitle')}
+                                {t('relatedTitle')}
                               </h4>
                               <div className="flex flex-wrap gap-2">
                                 {item.relatedProducts.map(prodSlug => (

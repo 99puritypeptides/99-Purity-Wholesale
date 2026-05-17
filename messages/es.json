@@ -241,6 +241,9 @@
     "helpCenter": "Centro de Ayuda"
   },
   "Layout": {
+    "search": {
+      "shortcut": "Atajo Rápido"
+    },
     "social": {
       "linkedin": "Linkedin",
       "threads": "Threads",
@@ -346,6 +349,12 @@
     "title": "Página no encontrada",
     "description": "La página que busca no existe o ha sido movida.",
     "cta": "Volver al inicio"
+  },
+  "ErrorPage": {
+    "title": "Algo salió mal",
+    "description": "Ocurrió un error inesperado al cargar esta página.",
+    "retry": "Intentar de nuevo",
+    "home": "Volver al inicio"
   },
   "Contact": {
     "Hero": {
@@ -557,8 +566,23 @@
     "homeDesc": "Proveedor de 99 Purity Wholesale fabricado en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
     "productsTitle": "Catálogo de 99 Purity Wholesale | Péptidos al por Mayor",
     "productsDesc": "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
-    "servicesTitle": "Servicios B2B y Crecimiento | 99 Purity Wholesale",
-    "servicesDesc": "Servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones con 99 Purity Wholesale.",
+    "servicesTitle": "Servicios B2B de Péptidos al por Mayor | 99 Purity Wholesale",
+    "servicesDesc": "Proveedor de péptidos al por mayor en EE. UU. que ofrece dropshipping, marca propia, desarrollo web y soporte de lanzamiento para clínicas, farmacias y distribuidores.",
+    "servicesOgTitle": "Servicios Comerciales de Péptidos B2B — Diseñados para el Crecimiento | 99 Purity Wholesale",
+    "servicesOgDesc": "Desde dropshipping y marca propia hasta desarrollo web y estrategia de distribución: 99 Purity Wholesale es el motor operativo para su negocio de compuestos de investigación.",
+    "servicesKeywords": {
+      "k1": "servicios de proveedor de péptidos al por mayor",
+      "k2": "programa de dropshipping de péptidos EE. UU.",
+      "k3": "péptidos de marca propia Estados Unidos",
+      "k4": "soporte de lanzamiento de negocio de péptidos de investigación",
+      "k5": "desarrollo de sitio web de péptidos",
+      "k6": "consultoría de cumplimiento de péptidos a granel",
+      "k7": "desarrollo de distribución de péptidos",
+      "k8": "iniciar un negocio de péptidos en EE. UU.",
+      "k9": "compuestos de investigación de marca blanca",
+      "k10": "proveedor de péptidos para farmacia de compuestos",
+      "k11": "infraestructura de péptidos B2B"
+    },
     "aboutTitle": "Sobre 99 Purity Wholesale | Péptidos Fabricados en América",
     "aboutDesc": "Conozca 99 Purity Wholesale. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
     "contactTitle": "Contacto | Consultas sobre 99 Purity Wholesale",
@@ -625,16 +649,36 @@
     "viewCategory": "Ver Categoría",
     "faqs": [
       {
-        "q": "¿Qué péptidos al por mayor tienen?",
-        "a": "Contamos con más de 50 compuestos de investigación en las categorías GLP-1, Hormona de Crecimiento, Curación, Cognitiva, Antienvejecimiento y Cosmética, todos fabricados en nuestra instalación en EE. UU."
+        "q": "¿Qué péptidos al por mayor ofrecen en su catálogo de compuestos?",
+        "a": "Ofrecemos más de 50 compuestos de investigación de alta pureza en nuestro catálogo mayorista, especializados en las categorías GLP-1/Metabólicos, Hormona de Crecimiento, Curación y Recuperación, Nootrópicos Cognitivos, Antienvejecimiento y Longevidad, y Cosmética/Estética, todos sintetizados y enviados desde nuestra instalación en EE. UU."
       },
       {
-        "q": "¿Cuál es la garantía de pureza de sus péptidos?",
-        "a": "Cada lote tiene una pureza garantizada del ≥99%, verificada mediante pruebas independientes de HPLC y espectrometría de masas en laboratorios acreditados de EE. UU."
+        "q": "¿Cuál es la garantía de pureza de sus péptidos de investigación a granel?",
+        "a": "Cada lote de péptidos a granel está garantizado para cumplir o superar una pureza del ≥99.0%. Verificamos este estándar a través de análisis independientes de HPLC y Espectrometría de Masas de terceros en laboratorios acreditados de EE. UU. Se proporciona un Certificado de Análisis (COA) coincidente con el lote en cada orden de compra."
       },
       {
-        "q": "¿Ofrecen envío directo (dropshipping) para clínicas?",
-        "a": "Sí. Ofrecemos un programa especializado de envío directo para socios B2B calificados, incluyendo farmacias y clínicas de bienestar, utilizando nuestra infraestructura de cumplimiento nacional."
+        "q": "¿Cómo pueden las clínicas comprar péptidos al por mayor en EE. UU.?",
+        "a": "Las clínicas de bienestar, farmacias de compuestos y laboratorios pueden comprar péptidos al por mayor directamente a través de nuestra terminal de suministro en EE. UU. Simplemente envíe una solicitud mayorista B2B, seleccione su compuesto y cantidades, e inicie la compra a través de WhatsApp o correo electrónico. Ofrecemos cumplimiento prioritario a los 50 estados."
+      },
+      {
+        "q": "¿Cómo se deben almacenar y manipular los péptidos liofilizados?",
+        "a": "Todos los péptidos se entregan como polvo liofilizado (secado por congelación) altamente estable en viales de vidrio sellados. Para preservar la integridad química, recomendamos almacenar los compuestos liofilizados a -20°C para estudios a largo plazo, o a 2–8°C para uso inmediato a corto plazo. Evite ciclos repetidos de congelación y descongelación y reconstituya solo con agua bacteriostática estéril."
+      },
+      {
+        "q": "¿Ofrecen programas de envío directo (dropshipping) para clínicas de bienestar?",
+        "a": "Sí. Ofrecemos un programa de envío directo nacional integrado diseñado específicamente para clínicas de bienestar con licencia, farmacias de compuestos y marcas clínicas. Gestionamos la logística desde nuestro centro de distribución en EE. UU., garantizando envíos rápidos (2 a 4 días hábiles) sin riesgos aduaneros."
+      },
+      {
+        "q": "¿Sus péptidos a granel se someten a pruebas de laboratorio por lotes?",
+        "a": "Sí, la pureza absoluta es nuestro estándar principal. Cada lote de producción se somete a análisis de laboratorio obligatorios por terceros para verificar la composición y pureza. Los informes de HPLC y confirmaciones estructurales de espectrometría de masas están totalmente disponibles para los compradores B2B que lo soliciten."
+      },
+      {
+        "q": "¿Se requiere una receta médica para comprar péptidos de investigación?",
+        "a": "No, no se requiere una receta médica para realizar un pedido en nuestra terminal de suministro en EE. UU. Sin embargo, debe certificar que todos los compuestos adquiridos se utilizarán estrictamente para investigación de laboratorio, estudios in vitro académicos e investigación científica. Estos compuestos no están aprobados para el consumo humano."
+      },
+      {
+        "q": "¿Suministran kits de Semaglutida y Tirzepatida al por mayor?",
+        "a": "Sí. Nos especializamos en agonistas GLP-1 y GIP a granel, ofreciendo Semaglutida, Tirzepatide y Retatrutida en kits mayoristas estándar (10 viales por kit). Ofrecemos cuatro niveles de precios competitivos para apoyar a los investigadores en cualquier escala, desde paquetes iniciales hasta niveles de volumen clínico."
       }
     ]
   },
@@ -746,52 +790,213 @@
     }
   },
   "Services": {
-    "badge": "Soluciones de Crecimiento B2B",
-    "title": "Servicios de 99 Purity Wholesale",
-    "subtitle": "Más allá de suministrar compuestos de investigación premium, ofrecemos servicios integrales de infraestructura y consultoría para ayudarlo a escalar sus operaciones, construir su marca y dominar el mercado.",
+    "badge": "Sirviendo a Profesionales Autorizados en todo Estados Unidos",
+    "title": "Servicios de Negocios de Péptidos al Por Mayor para Operadores Serios",
+    "subtitle": "99 Purity Wholesale es más que un proveedor de péptidos al por mayor en EE. UU. Somos el motor operativo detrás de algunas de las empresas de compuestos de investigación de más rápido crecimiento en América, proporcionando la infraestructura, la marca, el cumplimiento de pedidos y la presencia digital que transforman una idea de producto en una operación escalable y rentable.",
+    "heroStats": {
+      "stat1Num": "50+",
+      "stat1Label": "Compuestos de Investigación en el Catálogo",
+      "stat2Num": "≥99%",
+      "stat2Label": "Pureza Verificada en Cada Lote",
+      "stat3Num": "6",
+      "stat3Label": "Programas de Servicio B2B Disponibles",
+      "stat4Num": "🇺🇸",
+      "stat4Label": "Fabricado y Cumplido en EE. UU."
+    },
+    "heroCta": {
+      "primary": "Programar una Consulta Gratis",
+      "secondary": "Ver Nuestro Catálogo de Productos",
+      "msg": "Hola, me gustaría programar una consulta gratuita para servicios B2B."
+    },
+    "trustBar": {
+      "t1": "Laboratorio y Cumplimiento en EE. UU.",
+      "t2": "COA Coincidente con el Lote en Cada Pedido",
+      "t3": "Sirviendo a Clínicas, Farmacias y Distribuidores",
+      "t4": "Envío a Nivel Nacional desde Instalaciones de EE. UU.",
+      "t5": "Embalaje B2B Discreto Disponible"
+    },
+    "intro": {
+      "badge": "Soluciones de Crecimiento B2B",
+      "title": "Todo lo que Necesita para Construir y Escalar un Negocio de Compuestos de Investigación",
+      "desc": "Ya sea que esté lanzando su primera línea de péptidos al por mayor, escalando una operación de farmacia de formulación magistral existente o construyendo una marca de compuestos de investigación de marca propia desde cero, 99 Purity Wholesale proporciona la infraestructura para hacerlo realidad. Nuestros servicios B2B están diseñados exclusivamente para profesionales con licencia, distribuidores y empresarios que operan en el mercado de compuestos de investigación de EE. UU. Cada programa está respaldado por nuestro estándar de pureza ≥99% y fabricación basada en EE. UU."
+    },
     "items": {
       "dropshipping": {
-        "title": "Programa de Envío Directo (Dropshipping)",
-        "desc": "Escale su negocio sin los gastos generales de inventario o cumplimiento. Nos encargamos del almacenamiento, embalaje y envío discreto directamente a sus clientes bajo su marca. Concéntrese completamente en ventas y marketing mientras gestionamos la logística.",
-        "msg": "Hola, estoy interesado en el Programa de Envío Directo."
+        "eyebrow": "Programa de Cumplimiento",
+        "title": "Programa de Envío Directo (Dropshipping) de Péptidos de Investigación",
+        "desc": "Venda péptidos de grado de investigación fabricados en EE. UU. sin tocar nunca el inventario. Nuestro programa de dropshipping al por mayor maneja el almacenamiento, el control de calidad, el embalaje y el cumplimiento de pedidos discreto directamente al cliente, todo bajo su marca. Usted se concentra exclusivamente en la adquisición de clientes y las ventas; nosotros operamos como su motor de cumplimiento invisible y de alta pureza. Ideal para spas médicos, clínicas de bienestar y distribuidores en línea que buscan ingresar al mercado de compuestos de investigación con cero inversión inicial en inventario y sin gastos generales de gestión de cadena de frío.",
+        "tags": {
+          "t1": "dropshipping de péptidos",
+          "t2": "cumplimiento de marca blanca",
+          "t3": "sin necesidad de inventario"
+        },
+        "idealFor": {
+          "i1": "Spas médicos y clínicas estéticas que ingresan a programas de péptidos",
+          "i2": "Distribuidores en línea que escalan sin gastos generales de almacenamiento",
+          "i3": "Marcas de bienestar que agregan compuestos de investigación a sus ofertas"
+        },
+        "ctaText": "Consultar sobre Dropshipping",
+        "msg": "Hola, estoy interesado en el Programa de Envío Directo de Péptidos. Mi negocio es: "
       },
       "launch-support": {
-        "title": "Apoyo al Lanzamiento de Nuevos Negocios",
-        "desc": "Inicie su marca de péptidos de investigación con una base sólida. Brindamos orientación integral sobre selección de productos, estrategias de precios y adquisición de inventario inicial. Evite errores costosos de principiantes y lance con confianza.",
-        "msg": "Hola, me gustaría más información sobre el Apoyo al Lanzamiento."
+        "eyebrow": "Desarrollo de Negocios",
+        "title": "Soporte de Lanzamiento de Negocios de Péptidos de Investigación",
+        "desc": "Lanzar un negocio de péptidos al por mayor o agregar compuestos de investigación a su práctica existente requiere más que el acceso al producto: exige claridad estratégica. Nuestro programa de soporte de lanzamiento brinda orientación práctica sobre la selección de productos para su mercado específico, la arquitectura de precios B2B, la estrategia de adquisición de inventario inicial y la configuración operativa. Hemos guiado a docenas de clínicas de EE. UU., farmacias de formulación magistral y distribuidores a través de su primer pedido de péptidos al por mayor y más allá. Evite errores costosos de inicio con una infraestructura experimentada detrás de cada decisión.",
+        "tags": {
+          "t1": "iniciar un negocio de péptidos",
+          "t2": "lanzamiento de péptidos al por mayor",
+          "t3": "consultoría B2B"
+        },
+        "idealFor": {
+          "i1": "Nuevas clínicas que construyen su primer programa de compuestos de investigación",
+          "i2": "Profesionales en transición hacia la distribución o venta al por mayor",
+          "i3": "Empresarios que ingresan al mercado de compuestos de investigación de EE. UU."
+        },
+        "ctaText": "Obtener Soporte de Lanzamiento",
+        "msg": "Hola, me gustaría recibir soporte de lanzamiento para iniciar un negocio de péptidos de investigación. Mi situación es: "
       },
       "website-development": {
-        "title": "Desarrollo de Sitios Web",
-        "desc": "Establezca una presencia digital premium que convierta visitantes en compradores. Nuestro equipo construye plataformas de comercio electrónico de alto rendimiento, seguras y totalmente personalizadas adaptadas a la industria de compuestos de investigación. Aseguramos que su sitio esté optimizado para velocidad, SEO y transacciones perfectas.",
-        "msg": "Hola, estoy interesado en los servicios de Desarrollo Web."
+        "eyebrow": "Infraestructura Digital",
+        "title": "Desarrollo de Sitios Web de Negocios de Péptidos",
+        "desc": "Su presencia digital es su activo de ventas más escalable. Nuestro equipo construye sitios web de alto rendimiento y totalmente personalizados para negocios de compuestos de investigación, diseñados desde cero para los requisitos de cumplimiento, las demandas de SEO y los patrones de conversión específicos de esta industria. Construimos portales mayoristas B2B, sitios de compuestos de investigación minoristas y plataformas híbridas utilizando tecnologías modernas como Next.js, React y arquitecturas de CMS sin cabeza. Cada sitio que construimos está optimizado para el cumplimiento de anuncios, la visibilidad en motores de búsqueda y un flujo de consultas B2B sin fricciones.",
+        "tags": {
+          "t1": "desarrollo web de péptidos",
+          "t2": "portal B2B de compuestos de investigación",
+          "t3": "sitio de péptidos con Next.js"
+        },
+        "idealFor": {
+          "i1": "Nuevos operadores que necesitan una tienda digital profesional",
+          "i2": "Negocios existentes que se actualizan desde plataformas obsoletas",
+          "i3": "Socios de dropshipping que necesitan una interfaz minorista de marca"
+        },
+        "ctaText": "Discutir Desarrollo Web",
+        "msg": "Hola, estoy interesado en que me desarrollen un sitio web de péptidos de investigación. Mis necesidades: "
       },
       "sales-distribution": {
-        "title": "Desarrollo de Ventas y Distribución",
-        "desc": "Expanda su alcance en el mercado y acelere el crecimiento de sus ingresos. Asesoramos en estrategias de adquisición B2B, creación de redes de afiliados y canales de distribución de alto volumen. Aproveche nuestra experiencia en la industria para dominar su sector.",
-        "msg": "Hola, me gustaría discutir sobre Desarrollo de Ventas y Distribución."
+        "eyebrow": "Crecimiento de Ingresos",
+        "title": "Desarrollo de Ventas y Distribución de Péptidos B2B",
+        "desc": "Escalar los ingresos en el mercado mayorista de compuestos de investigación requiere un enfoque sistemático para la adquisición de clientes B2B, el desarrollo de territorios y la arquitectura de redes de distribución. Asesoramos a los operadores establecidos sobre la creación de redes de afiliados, la expansión a nuevos mercados geográficos, la estructuración de acuerdos de distribución de alto volumen y el desarrollo de canales de ventas institucionales dirigidos a farmacias de formulación magistral, grupos de bienestar con múltiples ubicaciones y distribuidores regionales. Nuestras estrategias se basan en la experiencia directa en la industria, no en consejos comerciales genéricos, y están diseñadas para la dinámica específica de la cadena de suministro de compuestos de investigación de EE. UU.",
+        "tags": {
+          "t1": "distribución de péptidos",
+          "t2": "estrategia de adquisición B2B",
+          "t3": "desarrollo de canales mayoristas"
+        },
+        "idealFor": {
+          "i1": "Distribuidores establecidos que se expanden a nuevos estados o mercados",
+          "i2": "Operadores de alto volumen que estructuran canales de ventas institucionales",
+          "i3": "Negocios que construyen bases de clientes de farmacias de formulación magistral"
+        },
+        "ctaText": "Explorar Estrategia de Distribución",
+        "msg": "Hola, me gustaría discutir el Desarrollo de Ventas y Distribución para mi negocio de péptidos."
       },
       "private-label": {
-        "title": "Marca Privada / Marca Blanca",
-        "desc": "Construya el valor de su marca con sus propios productos etiquetados de forma personalizada. Suministramos compuestos premium de >99% de pureza meticulosamente empaquetados con su marca y diseño únicos. Diferénciese en el mercado con presentaciones profesionales y listas para la venta.",
-        "msg": "Hola, estoy interesado en servicios de Marca Privada / Blanca."
+        "eyebrow": "Valor de Marca",
+        "title": "Péptidos de Investigación de Marca Privada y Marca Blanca",
+        "desc": "Construya un valor de marca duradero en el mercado de compuestos de investigación con sus propios péptidos etiquetados a medida con una pureza ≥99%, fabricados en los Estados Unidos y empaquetados bajo la identidad de su marca. Nuestro programa de marca privada admite cuentas con volumen calificado con etiquetado personalizado, consulta de diseño de empaque de marca y documentación de COA coincidente con el lote emitida bajo su línea de productos. Cada lote de marca privada cumple con el mismo estándar de pureza ≥99% verificado por pruebas de laboratorio de terceros en EE. UU. Lance una línea de productos de compuestos de investigación lista para la venta sin tener que construir una operación de fabricación.",
+        "tags": {
+          "t1": "péptidos de marca privada EE. UU.",
+          "t2": "compuestos de investigación de marca blanca",
+          "t3": "péptidos de marca personalizados"
+        },
+        "idealFor": {
+          "i1": "Distribuidores establecidos que construyen líneas de productos patentadas",
+          "i2": "Marcas de bienestar que desean SKUs de compuestos de investigación de marca propia",
+          "i3": "Operaciones con múltiples ubicaciones que buscan consistencia de marca"
+        },
+        "ctaText": "Consultar sobre Marca Privada",
+        "msg": "Hola, estoy interesado en péptidos de investigación de Marca Privada / Marca Blanca. Mi volumen: "
       },
       "fulfillment-consulting": {
-        "title": "Consultoría de Cumplimiento de Pedidos",
-        "desc": "Optimice sus operaciones de envío interno para lograr la máxima eficiencia. Lo ayudamos a implementar protocolos de empaque escalables, soluciones de gestión de cadena de frío y estrategias de envío rentables. Reduzca errores y asegure que sus productos lleguen de manera segura.",
-        "msg": "Hola, necesito Consultoría de Cumplimiento de Pedidos."
+        "eyebrow": "Operaciones",
+        "title": "Consultoría de Cumplimiento de Péptidos de Investigación",
+        "desc": "La eficiencia operativa en el cumplimiento de pedidos de compuestos de investigación no es opcional: afecta directamente sus márgenes, la retención de clientes y su posición regulatoria. Nuestro programa de consultoría de cumplimiento ayuda a los operadores establecidos a diseñar e implementar protocolos de empaque internos escalables, sistemas de documentación de cadena de custodia, estrategias de envío nacional rentables y puntos de control de calidad. Ya sea que procese 50 pedidos al mes o 500, construimos una infraestructura de cumplimiento que reduce errores, mantiene el cumplimiento y escala limpiamente sin aumentos proporcionales en los gastos operativos.",
+        "tags": {
+          "t1": "operaciones de cumplimiento de péptidos",
+          "t2": "protocolos de envío de compuestos",
+          "t3": "consultoría de cumplimiento B2B"
+        },
+        "idealFor": {
+          "i1": "Operaciones en crecimiento que experimentan cuellos de botella en el cumplimiento",
+          "i2": "Negocios que se preparan para aumentos significativos de volumen",
+          "i3": "Operadores que necesitan sistemas de documentación de cadena de custodia"
+        },
+        "ctaText": "Obtener Consultoría de Cumplimiento",
+        "msg": "Hola, necesito Consultoría de Cumplimiento para mi operación de compuestos de investigación. Volumen actual: "
       }
     },
-    "inquireBtn": "Consultar por WhatsApp",
-    "stepsTitle": "Cómo Empezar",
-    "stepsSubtitle": "Asociarse con nosotros es sencillo. Evaluamos sus necesidades y ejecutamos una estrategia adaptada a su crecimiento.",
-    "step1Title": "Consulta Inicial",
-    "step1Desc": "Comuníquese a través de WhatsApp o correo electrónico. Discutiremos sus operaciones actuales, objetivos a largo plazo e identificaremos qué servicios se alinean mejor con sus metas.",
-    "step2Title": "Propuesta Estratégica",
-    "step2Desc": "Nuestro equipo redactará un plan de ejecución personalizado que detallará los precios, los plazos y exactamente cómo integraremos nuestra infraestructura con su marca.",
-    "step3Title": "Incorporación y Ejecución",
-    "step3Desc": "Una vez aprobados, comenzamos inmediatamente el proceso de incorporación. Lance su nueva infraestructura y comience a escalar sus ingresos con total confianza.",
+    "whyPartner": {
+      "badge": "Por Qué Asociarse Con Nosotros",
+      "title": "El Único Proveedor de Péptidos al Por Mayor en EE. UU. que Crece con Usted",
+      "col1Label": "Fabricación en EE. UU. Cero Compromisos.",
+      "col1Text": "Cada compuesto que suministramos se fabrica en nuestro laboratorio con sede en EE. UU., nunca de origen extranjero, nunca reenvasado de orígenes desconocidos. Obtiene un suministro rastreable de origen nacional con una pureza ≥99% verificada por pruebas de laboratorio independientes de terceros.",
+      "col2Label": "COA Coincidente con el Lote en Cada Envío",
+      "col2Text": "No solo afirmamos la pureza, la documentamos. Cada pedido se envía con un Certificado de Análisis coincidente con el lote de un laboratorio de pruebas acreditado de EE. UU. Sus clientes obtienen pruebas. Usted obtiene credibilidad.",
+      "col3Label": "Construimos Negocios, No Solo Transacciones",
+      "col3Text": "Nuestros servicios B2B existen porque entendemos que su éxito es nuestro crecimiento. Desde su primer pedido de péptidos al por mayor hasta la construcción de una red de distribución multiestatal, proporcionamos la infraestructura que otros proveedores simplemente no ofrecen."
+    },
+    "stepsTitle": "De Primer Contacto a Operación Completa en Tres Pasos",
+    "stepsSubtitle": "Cómo Empezar",
+    "step1Title": "Consulta Inicial Gratis",
+    "step1Desc": "Comuníquese a través de WhatsApp o correo electrónico. Evaluaremos su operación actual, sus objetivos de crecimiento a largo plazo e identificaremos exactamente qué programas de servicio se alínean con su modelo de negocio y posición en el mercado. Sin compromiso, sin discursos de ventas genéricos: una conversación directa con alguien que comprende la industria de compuestos de investigación.",
+    "step2Title": "Propuesta Estratégica Personalizada",
+    "step2Desc": "Nuestro equipo prepara una propuesta personalizada que detalla el programa de servicio recomendado, el cronograma de implementación, la estructura de precios y cómo nuestra infraestructura se integra con su marca y operaciones existentes. Cada propuesta es específica para su negocio, no una plantilla.",
+    "step3Title": "Incorporación y Ejecución en Vivo",
+    "step3Desc": "Una vez alineados, comenzamos la incorporación de inmediato. Su nueva infraestructura, ya sea dropshipping, marca propia, cumplimiento o digital, entra en funcionamiento con el soporte operativo completo de nuestro equipo. Escale sus ingresos con total confianza desde el primer día.",
     "scheduleCta": "Programar Consulta",
-    "scheduleMsg": "Hola, me gustaría programar una consulta inicial para servicios B2B."
+    "scheduleMsg": "Hola, me gustaría programar una consulta inicial para servicios B2B.",
+    "faq": {
+      "title": "Preguntas Frecuentes Sobre Nuestros Servicios B2B",
+      "items": [
+        {
+          "q": "¿Necesito ser un profesional con licencia para acceder a sus servicios B2B?",
+          "a": "Sí. Todos los servicios B2B de 99 Purity Peptides, incluidos el acceso al catálogo a granel, el empaque de marca propia, el cumplimiento de dropshipping y la síntesis de laboratorio personalizada, están disponibles estrictamente para profesionales con licencia, clínicas médicas de bienestar, farmacias de formulación magistral y entidades de investigación verificadas. Se requiere la validación de credenciales comerciales durante la incorporación."
+        },
+        {
+          "q": "¿Cuál es el volumen mínimo de pedido para su programa de envío directo (dropshipping) de péptidos al por mayor?",
+          "a": "Nuestro programa de dropshipping al por mayor no cuenta con costosas tarifas iniciales de almacenamiento de inventario. Sin embargo, para mantener la integración de su marca personalizada y asegurar nuestras categorías de precios más altas, requerimos un compromiso mínimo de 20 envíos de unidades por mes. Este umbral se analiza y ajusta según su catálogo de compuestos específico durante la incorporación."
+        },
+        {
+          "q": "¿Cuánto tiempo se tarda en lanzar una línea de péptidos de marca propia o marca blanca personalizada?",
+          "a": "El plazo de extremo a extremo para lanzar una línea de productos de péptidos de marca propia personalizada oscila entre 2 y 4 semanas. Esto incluye la verificación comercial, la revisión de cumplimiento de etiquetas, la finalización del diseño de marca y empaque personalizado, la verificación de la síntesis de sus lotes seleccionados y la integración directa en nuestro canal logístico nacional."
+        },
+        {
+          "q": "¿Puedo utilizar su desarrollo de sitios web o soporte de lanzamiento si obtengo compuestos de otro proveedor?",
+          "a": "No. Nuestros servicios de infraestructura digital de alto rendimiento, como el desarrollo de portales Next.js personalizados, el enrutamiento automatizado de cumplimiento y las calculadoras de negocios, son beneficios B2B de valor agregado premium reservados exclusivamente para cuentas B2B activas de alto volumen que obtienen sus péptidos liofilizados a través de 99 Purity Wholesale."
+        },
+        {
+          "q": "¿Cómo garantizan la pureza de los compuestos enviados en pedidos de dropshipping o marca propia?",
+          "a": "Cada lote de péptidos fabricado en nuestros laboratorios de EE. UU. se somete a rigurosos análisis de cromatografía líquida de alta resolución (HPLC) y espectrometría de masas (LC-MS) de doble paso. Cada pedido dropshipped o de marca propia se asocia directamente con su Certificado de Análisis (COA) de lote verificado que confirma una pureza mínima de ≥99%."
+        },
+        {
+          "q": "¿Qué métodos de pago aceptan para contratos de péptidos al por mayor de gran volumen?",
+          "a": "Para garantizar la liquidación inmediata de las transacciones y la velocidad operativa, aceptamos Bitcoin (BTC) para el procesamiento nacional inmediato, Zelle para transacciones de nivel medio y transferencias bancarias corporativas estándar (ACH/Cable) para cuentas de fabricación por contrato de gran volumen. Los ciclos de facturación personalizados están disponibles para socios calificados a largo plazo."
+        },
+        {
+          "q": "¿Se envían los péptidos de dropshipping y marca propia bajo empaque de cadena de frío?",
+          "a": "Nuestros péptidos se sintetizan y purifican bajo los más altos estándares de la industria, luego se liofilizan en un polvo sólido altamente estable. Los péptidos liofilizados permanecen molecularmente estables a temperatura ambiente durante el envío nacional estándar, lo que elimina la necesidad de tránsito de cadena de frío. Sin embargo, utilizamos empaques B2B sellados al vacío y amortiguados térmicamente para garantizar una protección ambiental completa."
+        },
+        {
+          "q": "¿Ofrecen síntesis de péptidos personalizada para concentraciones de investigación únicas o secuencias nuevas?",
+          "a": "Sí. Nuestros laboratorios de síntesis química con sede en EE. UU. pueden formular tamaños de concentración personalizados, pesos en miligramos personalizados (por ejemplo, viales personalizados de BPC-157 de 20 mg o Tirzepatide de 50 mg) o secuencias de aminoácidos personalizadas para socios B2B calificados. Los procesos de síntesis personalizados requieren un volumen de contrato de lote mínimo que se detallará durante la consulta."
+        },
+        {
+          "q": "¿Cómo se gestionan el envío, los retrasos aduaneros y el seguimiento de los pedidos de dropshipping?",
+          "a": "Dado que todas nuestras operaciones de fabricación, almacenamiento y cumplimiento se encuentran a nivel nacional dentro de los Estados Unidos, sus pedidos de dropshipping enfrentan cero riesgos aduaneros internacionales, retrasos fronterizos o exposición a incautaciones. Enviamos todos los paquetes B2B a través de servicios de mensajería urgente premium con seguimiento API integrado y automatizado enviado directamente a su portal de ventas."
+        },
+        {
+          "q": "¿Cuáles son los marcos de cumplimiento legal que rodean a los compuestos de investigación de marca blanca?",
+          "a": "Todos los materiales suministrados bajo nuestros programas de marca propia y marca blanca están estrictamente etiquetados y designados para aplicaciones de investigación científica in vitro, analíticas y de laboratorio únicamente. Los revendedores son legalmente responsables de garantizar que su comercialización de productos, escaparates digitales y clientes objetivo operen completamente dentro de estos marcos legales de uso de investigación."
+        },
+        {
+          "q": "¿Puedo solicitar la verificación del informe HPLC coincidente con el lote antes del cumplimiento de mi dropship?",
+          "a": "Sí. La transparencia es un pilar fundamental de nuestra asociación B2B. Los socios comerciales pueden solicitar informes de HPLC y espectrometría de masas coincidentes con el lote para el lote de fabricación específico asignado actualmente a su inventario o cola de cumplimiento en cualquier momento."
+        },
+        {
+          "q": "¿A qué canales de soporte tienen acceso los clientes B2B para problemas operativos?",
+          "a": "Todos los socios mayoristas, de dropshipping y de marca propia tienen asignado un Administrador de Cuentas B2B de EE. UU. dedicado. Recibe acceso directo a nuestra línea directa de WhatsApp de prioridad y a los escritorios de correo electrónico directo, lo que garantiza que cualquier consulta logística, técnica o de pedidos personalizados se resuelva por completo en un plazo de 2 horas hábiles."
+        }
+      ]
+    }
   },
   "LocationsIndex": {
     "badge": "Suministro Nacional al Por Mayor",
@@ -945,26 +1150,6 @@
       }
     }
   },
-  "Glossary": {
-    "Hero": {
-      "title": "Glosario y Diccionario de Compuestos",
-      "subtitle": "Términos técnicos esenciales, definiciones farmacológicas y estándares de calidad para la industria de péptidos de investigación."
-    },
-    "Search": {
-      "placeholder": "Buscar términos técnicos...",
-      "all": "Todos",
-      "noResults": "No se encontraron términos que coincidan con su búsqueda."
-    },
-    "Terms": {
-      "relatedTitle": "Compuestos de Investigación Relacionados",
-      "category": "Categoría:",
-      "viewProduct": "Ver Compuesto"
-    },
-    "Meta": {
-      "title": "Glosario de Péptidos y Diccionario Técnico | 99 Purity Wholesale",
-      "description": "Glosario completo de términos técnicos en la industria de investigación de péptidos. Aprenda sobre HPLC, liofilización, agonistas de GLP-1, COA y más."
-    }
-  },
   "CategoryDetail": {
     "categories": {
       "glp1-metabolic-peptides": {
@@ -1099,8 +1284,17 @@
       "subtitle": "Definiciones técnicas completas para investigadores de laboratorio, farmacias de compuestos y equipos de adquisición al por mayor.",
       "badge": "Referencia Técnica"
     },
+    "relatedProducts": "Productos Relacionados",
+    "relatedTitle": "Compuestos de Investigación Relacionados",
+    "ValueBoxes": [
+      { "title": "Pureza Verificada", "desc": "Cada término de nuestro glosario está respaldado por datos analíticos y estándares de laboratorio de EE. UU." },
+      { "title": "Síntesis Nacional", "desc": "Fabricado en EE. UU. para garantizar un control total sobre las especificaciones e identidad química." },
+      { "title": "Adquisición Rápida", "desc": "Pedidos al por mayor simplificados para instituciones profesionales e investigadores autorizados." }
+    ],
     "Search": {
-      "placeholder": "Buscar términos técnicos (ej., HPLC, GLP-1)..."
+      "placeholder": "Buscar términos técnicos (ej., HPLC, GLP-1)...",
+      "all": "Todos",
+      "noResults": "No se encontraron términos que coincidan con su búsqueda."
     },
     "Terms": {
       "hplc": {
@@ -1165,32 +1359,54 @@
       "subtitle": "Examine nuestro catálogo completo de péptidos con pureza ≥99%.",
       "button": "Ver Catálogo Completo"
     },
-    "Components": {
-      "SpecSelector": {
-        "selectSpec": "Seleccionar Especificación:",
-        "kitSize": "Tamaño del Kit:",
-        "vials": "viales",
-        "moqLabel": "MOQ: {count} unidades mínimo por especificación"
-      },
-      "AddToInquiry": {
-        "add": "+ Añadir a la Consulta",
-        "added": "✓ ¡Añadido!",
-        "inInquiry": "✓ En Consulta"
-      }
+    "Meta": {
+      "title": "Glosario de Péptidos y Diccionario Técnico | 99 Purity Wholesale",
+      "description": "Glosario completo de términos técnicos en la industria de investigación de péptidos. Aprenda sobre HPLC, liofilización, agonistas de GLP-1, COA y más."
+    }
+  },
+  "Components": {
+    "SpecSelector": {
+      "selectSpec": "Seleccionar Especificación:",
+      "kitSize": "Tamaño del Kit:",
+      "vials": "viales",
+      "moqLabel": "MOQ: {count} unidades mínimo por especificación"
     },
-    "Legal": {
-      "Privacy": {
-        "title": "Política de Privacidad",
-        "content": "99 Purity Wholesale se compromete a proteger su privacidad. Esta política describe cómo recopilamos, usamos y protegemos la información que proporciona al utilizar nuestra plataforma mayorista. Solo recopilamos información comercial esencial requerida para transacciones B2B y verificación de cumplimiento. Sus datos nunca se venden a terceros y están protegidos por cifrado estándar de la industria."
-      },
-      "Terms": {
-        "title": "Términos de Servicio",
-        "content": "Todos los productos suministrados por 99 Purity Wholesale son estrictamente para investigación de laboratorio y pruebas in vitro por profesionales autorizados. No son para consumo humano, uso terapéutico o aplicación clínica. Al acceder a este sitio y realizar un pedido, confirma que es un profesional autorizado o un investigador autorizado y acepta todas las pautas de cumplimiento y seguridad descritas en nuestro acuerdo comercial B2B."
-      },
-      "Disclaimer": {
-        "title": "Descargo de Responsabilidad de Uso en Investigación",
-        "content": "Los compuestos de 99 Purity Wholesale NO están destinados para su uso como aditivos alimentarios, medicamentos, cosméticos, productos químicos domésticos u otras aplicaciones inapropiadas. La inclusión de un material en este sitio no constituye una licencia para su uso en infracción de ninguna patente. Se supone que todos los clientes son profesionales capacitados que comprenden los riesgos asociados con los productos químicos de investigación."
-      }
+    "AddToInquiry": {
+      "add": "+ Añadir a la Consulta",
+      "added": "✓ ¡Añadido!",
+      "inInquiry": "✓ En Consulta"
+    }
+  },
+  "Blog": {
+    "badge": "Centro de Conocimiento B2B",
+    "title": "Perspectivas de la Industria de Péptidos al Por Mayor",
+    "subtitle": "Guías de expertos, análisis de mercado y recursos de cumplimiento para farmacias de compuestos, clínicas de bienestar y distribuidores autorizados que se abastecen de péptidos de grado de investigación a granel en EE. UU.",
+    "readMore": "Leer Artículo",
+    "back": "Volver a los Artículos",
+    "ctaTitle": "¿Listo para Mejorar su Cadena de Suministro?",
+    "ctaSubtitle": "Conéctese con nuestro equipo mayorista para conocer los precios actuales y los COA.",
+    "whatsapp": "Chatee con Nosotros en WhatsApp",
+    "tags": {
+      "pricing": "Precios Mayoristas",
+      "quality": "Calidad & COA",
+      "launch": "Lanzamiento de Negocio",
+      "compliance": "Cumplimiento",
+      "glp1": "Investigación GLP-1",
+      "dropshipping": "Envío Directo"
+    }
+  },
+  "Legal": {
+    "Privacy": {
+      "title": "Política de Privacidad",
+      "content": "99 Purity Wholesale se compromete a proteger su privacidad. Esta política describe cómo recopilamos, usamos y protegemos la información que proporciona al utilizar nuestra plataforma mayorista. Solo recopilamos información comercial esencial requerida para transacciones B2B y verificación de cumplimiento. Sus datos nunca se venden a terceros y están protegidos por cifrado estándar de la industria."
+    },
+    "Terms": {
+      "title": "Términos de Servicio",
+      "content": "Todos los productos suministrados por 99 Purity Wholesale son estrictamente para investigación de laboratorio y pruebas in vitro por profesionales autorizados. No son para consumo humano, uso terapéutico o aplicación clínica. Al acceder a este sitio y realizar un pedido, confirma que es un profesional autorizado o un investigador autorizado y acepta todas las pautas de cumplimiento y seguridad descritas en nuestro acuerdo comercial B2B."
+    },
+    "Disclaimer": {
+      "title": "Descargo de Responsabilidad de Uso en Investigación",
+      "content": "Los compuestos de 99 Purity Wholesale NO están destinados para su uso como aditivos alimentarios, medicamentos, cosméticos, productos químicos domésticos u otras aplicaciones inapropiadas. La inclusión de un material en este sitio no constituye una licencia para su uso en infracción de ninguna patente. Se supone que todos los clientes son profesionales capacitados que comprenden los riesgos asociados con los productos químicos de investigación."
     }
   },
   "WholesaleApplication": {
@@ -1287,6 +1503,6 @@
         "text": "¿Necesita una respuesta más rápida? Salte el formulario y envíenos un mensaje directamente.",
         "whatsapp": "Solicitar por WhatsApp",
         "email": "Solicitud por Correo"
-    }
+      }
   }
 }

@@ -241,6 +241,9 @@
     "helpCenter": "Help Center"
   },
   "Layout": {
+    "search": {
+      "shortcut": "Quick Shortcut"
+    },
     "social": {
       "linkedin": "Linkedin",
       "threads": "Threads",
@@ -346,6 +349,12 @@
     "title": "Page not found",
     "description": "The page you're looking for doesn't exist or has been moved.",
     "cta": "Back to Home"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred while loading this page.",
+    "retry": "Try Again",
+    "home": "Back to Home"
   },
   "Contact": {
     "Hero": {
@@ -558,8 +567,23 @@
     "homeDesc": "America's Made 99 Purity Wholesale Provider. Premium research peptides for licensed professionals with guaranteed 99%+ purity.",
     "productsTitle": "99 Purity Wholesale Catalog | Wholesale Peptides",
     "productsDesc": "High-quality America's made peptides for qualified institutions and researchers. View our wholesale catalog.",
-    "servicesTitle": "B2B Services & Growth | 99 Purity Wholesale",
-    "servicesDesc": "Comprehensive infrastructure and consulting services to help you scale your operations with 99 Purity Wholesale.",
+    "servicesTitle": "Wholesale Peptide B2B Services | 99 Purity Wholesale",
+    "servicesDesc": "U.S.-based wholesale peptide supplier offering dropshipping, private label, website development, and launch support for clinics, pharmacies & distributors.",
+    "servicesOgTitle": "B2B Peptide Business Services — Built for Growth | 99 Purity Wholesale",
+    "servicesOgDesc": "From dropshipping and private label to website builds and distribution strategy — 99 Purity Wholesale is the operational backbone for your research compound business.",
+    "servicesKeywords": {
+      "k1": "wholesale peptide supplier services",
+      "k2": "peptide dropshipping program USA",
+      "k3": "private label peptides United States",
+      "k4": "research peptide business launch support",
+      "k5": "peptide website development",
+      "k6": "bulk peptide fulfillment consulting",
+      "k7": "peptide distribution development",
+      "k8": "start a peptide business USA",
+      "k9": "white label research compounds",
+      "k10": "peptide supplier for compounding pharmacy",
+      "k11": "B2B peptide infrastructure"
+    },
     "aboutTitle": "About 99 Purity Wholesale | America's Made Peptides",
     "aboutDesc": "Meet 99 Purity Wholesale. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
     "contactTitle": "Contact | 99 Purity Wholesale Inquiries",
@@ -626,16 +650,36 @@
     "viewCategory": "View Category",
     "faqs": [
       {
-        "q": "What wholesale peptides do you carry?",
-        "a": "We carry over 50 research compounds across GLP-1, Growth Hormone, Healing, Cognitive, Anti-Aging, and Cosmetic categories, all manufactured in our U.S. facility."
+        "q": "What wholesale peptides do you carry in your compound catalog?",
+        "a": "We carry over 50 high-purity research compounds in our wholesale peptide catalog, specializing in GLP-1/Metabolic, Growth Hormone axis, Healing & Recovery, Cognitive Nootropics, Anti-Aging Longevity, and Cosmetic/Aesthetic categories, all synthesized and shipped from our U.S. facility."
       },
       {
-        "q": "What is the purity guarantee on your peptides?",
-        "a": "Every batch is guaranteed to be ≥99% pure, verified by independent third-party HPLC and Mass Spectrometry testing at accredited U.S. laboratories."
+        "q": "What is the purity guarantee on your bulk research peptides?",
+        "a": "Every single batch of bulk research peptides is guaranteed to meet or exceed ≥99.0% purity. We verify this rigorous quality standard through independent, third-party HPLC (High-Performance Liquid Chromatography) and Mass Spectrometry sequence analysis at accredited U.S. testing laboratories. A batch-matched Certificate of Analysis (COA) is provided with every procurement order."
       },
       {
-        "q": "Do you offer dropshipping for clinics?",
-        "a": "Yes. We offer a specialized dropshipping program for qualified B2B partners, including pharmacies and wellness clinics, using our domestic fulfillment infrastructure."
+        "q": "How can clinics buy wholesale peptides domestically in the USA?",
+        "a": "Wellness clinics, compound pharmacies, and qualified research labs can easily purchase wholesale peptides directly through our U.S. sourcing terminal. Simply submit a B2B wholesale application, select your compound and kit quantities, and coordinate secure procurement with our sales team via WhatsApp or secure email. We support fast, priority domestic fulfillment to all 50 states."
+      },
+      {
+        "q": "How should lyophilized peptides be stored and handled for research?",
+        "a": "All bulk research peptides are delivered as highly stable, lyophilized (freeze-dried) powder in sealed glass vials. To preserve chemical integrity and prevent degradation, we recommend storing lyophilized compounds at -20°C for long-term study, or 2–8°C for immediate short-term use. Avoid repetitive freeze-thaw cycles and reconstitute only using sterile Bacteriostatic Water."
+      },
+      {
+        "q": "Do you offer dropshipping fulfillment programs for wellness clinics?",
+        "a": "Yes. We offer an integrated, high-end domestic dropshipping program specifically designed for licensed wellness clinics, compound pharmacies, and clinical brands. We manage secure domestic logistics from our U.S. fulfillment hub, ensuring reliable, rapid shipping (2-4 business days) with zero customs transit issues."
+      },
+      {
+        "q": "Are your bulk peptides third-party batch tested?",
+        "a": "Yes, absolute purity is our core standard. Every unique production run undergoes mandatory third-party laboratory analysis to verify composition and purity. HPLC reports showing exact purity graphs and Mass Spectrometry structural confirmations are fully accessible by B2B buyers upon request prior to fulfillment."
+      },
+      {
+        "q": "Is a medical prescription required to purchase research peptides?",
+        "a": "No, a medical prescription is not required to place an order on our U.S. sourcing terminal. However, you must certify that all procured compounds will be used strictly for laboratory research, academic in-vitro study, and scientific investigation. These compounds are strictly not for human or animal consumption."
+      },
+      {
+        "q": "Do you supply bulk Semaglutide and Tirzepatide wholesale kits?",
+        "a": "Yes. We specialize in bulk GLP-1 and compounding GIP agonists, providing high-demand Semaglutide, Tirzepatide, and Retatrutide in bulk wholesale kit packages (10 vials per kit). We offer four competitive pricing tiers to support researchers at any scale, ranging from starter packages to clinical volume tiers."
       }
     ]
   },
@@ -747,52 +791,213 @@
     }
   },
   "Services": {
-    "badge": "B2B Growth Solutions",
-    "title": "99 Purity Wholesale Services",
-    "subtitle": "Beyond supplying premium research compounds, we offer comprehensive infrastructure and consulting services to help you scale your operations, build your brand, and dominate the market.",
+    "badge": "Serving Licensed Professionals Across the United States",
+    "title": "Wholesale Peptide Business Services for Serious Operators",
+    "subtitle": "99 Purity Wholesale is more than a U.S. wholesale peptide supplier. We are the operational backbone behind some of the fastest-growing research compound businesses in America — providing the infrastructure, branding, fulfillment, and digital presence that turns a product idea into a scalable, profitable operation.",
+    "heroStats": {
+      "stat1Num": "50+",
+      "stat1Label": "Research Compounds in Catalog",
+      "stat2Num": "≥99%",
+      "stat2Label": "Verified Purity on Every Batch",
+      "stat3Num": "6",
+      "stat3Label": "B2B Service Programs Available",
+      "stat4Num": "🇺🇸",
+      "stat4Label": "U.S. Manufactured & Fulfilled"
+    },
+    "heroCta": {
+      "primary": "Schedule a Free Consultation",
+      "secondary": "View Our Product Catalog",
+      "msg": "Hi, I'd like to schedule a free consultation for B2B services."
+    },
+    "trustBar": {
+      "t1": "U.S.-Based Laboratory & Fulfillment",
+      "t2": "Batch-Matched COA on Every Order",
+      "t3": "Serving Clinics, Pharmacies & Distributors",
+      "t4": "Nationwide Shipping from U.S. Facilities",
+      "t5": "Discreet B2B Packaging Available"
+    },
+    "intro": {
+      "badge": "B2B Growth Solutions",
+      "title": "Everything You Need to Build and Scale a Research Compound Business",
+      "desc": "Whether you are launching your first wholesale peptide line, scaling an existing compounding pharmacy operation, or building a private label research compound brand from scratch — 99 Purity Wholesale provides the infrastructure to make it happen. Our B2B services are designed exclusively for licensed professionals, distributors, and entrepreneurs operating within the U.S. research compound market. Every program is backed by our ≥99% purity standard and U.S.-based manufacturing."
+    },
     "items": {
       "dropshipping": {
-        "title": "Dropshipping Program",
-        "desc": "Scale your business without the overhead of inventory or fulfillment. We handle the storage, packaging, and discreet shipping directly to your clients under your brand. Focus entirely on sales and marketing while we manage the logistics.",
-        "msg": "Hi, I'm interested in the Dropshipping Program."
+        "eyebrow": "Fulfillment Program",
+        "title": "Research Peptide Dropshipping Program",
+        "desc": "Sell U.S.-manufactured, research-grade peptides without ever touching inventory. Our wholesale dropshipping program handles storage, quality control, packaging, and discreet direct-to-client fulfillment entirely under your brand. You focus exclusively on client acquisition and sales — we operate as your invisible, high-purity fulfillment backbone. Ideal for medical spas, wellness clinics, and online distributors looking to enter the research compound market with zero upfront inventory investment and no cold-chain management overhead.",
+        "tags": {
+          "t1": "peptide dropshipping",
+          "t2": "white-label fulfillment",
+          "t3": "no inventory required"
+        },
+        "idealFor": {
+          "i1": "Medical spas & aesthetic clinics entering peptide programs",
+          "i2": "Online distributors scaling without warehouse overhead",
+          "i3": "Wellness brands adding research compounds to their offerings"
+        },
+        "ctaText": "Inquire About Dropshipping",
+        "msg": "Hi, I'm interested in the Peptide Dropshipping Program. My business is: "
       },
       "launch-support": {
-        "title": "New Business Launch Support",
-        "desc": "Kickstart your research peptide brand with a solid foundation. We provide comprehensive guidance on product selection, pricing strategies, and initial inventory procurement. Avoid costly beginner mistakes and launch with confidence.",
-        "msg": "Hi, I'd like more info on Launch Support."
+        "eyebrow": "Business Development",
+        "title": "Research Peptide Business Launch Support",
+        "desc": "Launching a wholesale peptide business or adding research compounds to your existing practice requires more than product access — it demands strategic clarity. Our launch support program provides hands-on guidance across product selection for your specific market, B2B pricing architecture, initial inventory procurement strategy, and operational setup. We have guided dozens of U.S. clinics, compounding pharmacies, and distributors through their first wholesale peptide order and beyond. Avoid costly startup mistakes with experienced infrastructure behind every decision.",
+        "tags": {
+          "t1": "start a peptide business",
+          "t2": "wholesale peptide launch",
+          "t3": "B2B consulting"
+        },
+        "idealFor": {
+          "i1": "New clinics building their first research compound program",
+          "i2": "Practitioners transitioning into distribution or wholesale",
+          "i3": "Entrepreneurs entering the U.S. research compound market"
+        },
+        "ctaText": "Get Launch Support",
+        "msg": "Hi, I'd like launch support for starting a research peptide business. My situation: "
       },
       "website-development": {
-        "title": "Website Development",
-        "desc": "Establish a premium digital presence that converts visitors into buyers. Our team builds high-performance, secure, and fully customized e-commerce platforms tailored to the research compound industry. We ensure your site is optimized for speed, SEO, and seamless transactions.",
-        "msg": "Hi, I'm interested in Web Development services."
+        "eyebrow": "Digital Infrastructure",
+        "title": "Peptide Business Website Development",
+        "desc": "Your digital presence is your most scalable sales asset. Our team builds high-performance, fully customized websites for research compound businesses — engineered from the ground up for the compliance requirements, SEO demands, and conversion patterns specific to this industry. We build B2B wholesale portals, retail research compound sites, and hybrid platforms using modern stacks including Next.js, React, and headless CMS architectures. Every site we build is optimized for ads compliance, search engine visibility, and frictionless B2B inquiry flow.",
+        "tags": {
+          "t1": "peptide website development",
+          "t2": "research compound B2B portal",
+          "t3": "Next.js peptide site"
+        },
+        "idealFor": {
+          "i1": "New operators who need a professional digital storefront",
+          "i2": "Existing businesses upgrading from outdated platforms",
+          "i3": "Dropship partners needing a branded retail front end"
+        },
+        "ctaText": "Discuss Website Development",
+        "msg": "Hi, I'm interested in having a research peptide website developed. My needs: "
       },
       "sales-distribution": {
-        "title": "Sales & Distribution Development",
-        "desc": "Expand your market reach and accelerate revenue growth. We advise on B2B acquisition strategies, affiliate network building, and high-volume distribution channels. Leverage our industry expertise to dominate your sector.",
-        "msg": "Hi, I'd like to discuss Sales & Distribution Development."
+        "eyebrow": "Revenue Growth",
+        "title": "B2B Peptide Sales & Distribution Development",
+        "desc": "Scaling revenue in the wholesale research compound market requires a systematic approach to B2B client acquisition, territory development, and distribution network architecture. We advise established operators on building affiliate networks, expanding into new geographic markets, structuring high-volume distribution agreements, and developing institutional sales pipelines targeting compounding pharmacies, multi-location wellness groups, and regional distributors. Our strategies are built on direct industry experience — not generic business advice — and designed for the specific dynamics of the U.S. research compound supply chain.",
+        "tags": {
+          "t1": "peptide distribution",
+          "t2": "B2B acquisition strategy",
+          "t3": "wholesale channel development"
+        },
+        "idealFor": {
+          "i1": "Established distributors expanding to new states or markets",
+          "i2": "High-volume operators structuring institutional sales pipelines",
+          "i3": "Businesses building compounding pharmacy client bases"
+        },
+        "ctaText": "Explore Distribution Strategy",
+        "msg": "Hi, I'd like to discuss Sales & Distribution Development for my peptide business."
       },
       "private-label": {
-        "title": "Private Label / White Label",
-        "desc": "Build your brand equity with your own custom-labeled products. We supply premium >99% purity compounds meticulously packaged with your unique branding and design. Differentiate yourself in the market with professional, shelf-ready presentations.",
-        "msg": "Hi, I'm interested in Private / White Label services."
+        "eyebrow": "Brand Equity",
+        "title": "Private Label & White Label Research Peptides",
+        "desc": "Build lasting brand equity in the research compound market with your own custom-labeled, ≥99% purity peptides — manufactured in the United States and packaged under your brand identity. Our private label program supports qualifying volume accounts with custom labeling, branded packaging design consultation, and batch-matched COA documentation issued under your product line. Every private label batch meets the same ≥99% purity standard verified by third-party U.S. laboratory testing. Launch a shelf-ready research compound product line without building a manufacturing operation.",
+        "tags": {
+          "t1": "private label peptides USA",
+          "t2": "white label research compounds",
+          "t3": "custom branded peptides"
+        },
+        "idealFor": {
+          "i1": "Established distributors building proprietary product lines",
+          "i2": "Wellness brands wanting branded research compound SKUs",
+          "i3": "Multi-location operations seeking brand consistency"
+        },
+        "ctaText": "Inquire About Private Label",
+        "msg": "Hi, I'm interested in Private Label / White Label research peptides. My volume: "
       },
       "fulfillment-consulting": {
-        "title": "Fulfillment Consulting",
-        "desc": "Streamline your in-house shipping operations for maximum efficiency. We help you implement scalable packaging protocols, cold-chain management solutions, and cost-effective shipping strategies. Reduce errors and ensure your products arrive safely.",
-        "msg": "Hi, I need Fulfillment Consulting."
+        "eyebrow": "Operations",
+        "title": "Research Compound Fulfillment Consulting",
+        "desc": "Operational efficiency in research compound fulfillment is not optional — it directly impacts your margins, client retention, and regulatory standing. Our fulfillment consulting program helps established operators design and implement scalable in-house packaging protocols, chain-of-custody documentation systems, domestic shipping strategies, and quality control checkpoints. Whether you are processing 50 orders per month or 500, we build fulfillment infrastructure that reduces errors, maintains compliance, and scales cleanly without proportional increases in operational overhead.",
+        "tags": {
+          "t1": "peptide fulfillment operations",
+          "t2": "compound shipping protocols",
+          "t3": "B2B fulfillment consulting"
+        },
+        "idealFor": {
+          "i1": "Growing operations experiencing fulfillment bottlenecks",
+          "i2": "Businesses preparing for significant volume increases",
+          "i3": "Operators needing COC documentation systems"
+        },
+        "ctaText": "Get Fulfillment Consulting",
+        "msg": "Hi, I need Fulfillment Consulting for my research compound operation. Current volume: "
       }
     },
-    "inquireBtn": "Inquire via WhatsApp",
-    "stepsTitle": "How to Get Started",
-    "stepsSubtitle": "Partnering with us is straightforward. We assess your needs and execute a strategy tailored for your growth.",
-    "step1Title": "Initial Consultation",
-    "step1Desc": "Reach out via WhatsApp or email. We'll discuss your current operations, long-term goals, and identify which services align best with your objectives.",
-    "step2Title": "Strategic Proposal",
-    "step2Desc": "Our team will draft a customized execution plan detailing pricing, timelines, and exactly how we'll integrate our infrastructure with your brand.",
-    "step3Title": "Onboarding & Execution",
-    "step3Desc": "Once approved, we immediately begin the onboarding process. Launch your new infrastructure and start scaling your revenue with total confidence.",
+    "whyPartner": {
+      "badge": "Why Partner With Us",
+      "title": "The Only U.S. Wholesale Peptide Supplier That Grows With You",
+      "col1Label": "U.S. Manufacturing. Zero Compromise.",
+      "col1Text": "Every compound we supply is manufactured in our U.S.-based laboratory — never sourced overseas, never repackaged from unknown origins. You get traceable, domestic-origin supply with ≥99% purity verified by independent third-party laboratory testing.",
+      "col2Label": "Batch-Matched COA on Every Shipment",
+      "col2Text": "We don't just claim purity — we document it. Every order ships with a batch-matched Certificate of Analysis from an accredited U.S. testing laboratory. Your clients get proof. You get credibility.",
+      "col3Label": "We Build Businesses, Not Just Transactions",
+      "col3Text": "Our B2B services exist because we understand that your success is our growth. From your first wholesale peptide order to building a multi-state distribution network — we provide the infrastructure other suppliers simply don't offer."
+    },
+    "stepsTitle": "From First Contact to Full Operation in Three Steps",
+    "stepsSubtitle": "Getting Started",
+    "step1Title": "Free Initial Consultation",
+    "step1Desc": "Reach out via WhatsApp or email. We'll assess your current operation, long-term growth objectives, and identify exactly which service programs align with your business model and market position. No obligation, no generic sales pitch — a direct conversation with someone who understands the research compound industry.",
+    "step2Title": "Custom Strategic Proposal",
+    "step2Desc": "Our team prepares a customized proposal outlining the recommended service program, implementation timeline, pricing structure, and how our infrastructure integrates with your existing brand and operations. Every proposal is specific to your business — not templated.",
+    "step3Title": "Onboarding & Live Execution",
+    "step3Desc": "Once aligned, we begin onboarding immediately. Your new infrastructure — whether dropshipping, private label, fulfillment, or digital — goes live with full operational support from our team. Scale your revenue with total confidence from day one.",
     "scheduleCta": "Schedule Consultation",
-    "scheduleMsg": "Hi, I'd like to schedule an initial consultation for B2B services."
+    "scheduleMsg": "Hi, I'd like to schedule an initial consultation for B2B services.",
+    "faq": {
+      "title": "Frequently Asked Questions About Our B2B Services",
+      "items": [
+        {
+          "q": "Do I need to be a licensed professional to access your B2B services?",
+          "a": "Yes. All 99 Purity Peptides B2B services—including bulk catalog access, white-label packaging, dropshipping fulfillment, and custom laboratory synthesis—are strictly available to licensed professionals, medical wellness clinics, compounding pharmacies, and verified research entities. Business credential validation is required during onboarding."
+        },
+        {
+          "q": "What is the minimum order volume for your wholesale peptide dropshipping program?",
+          "a": "Our wholesale dropshipping program features no massive upfront inventory storage fees. However, to maintain your custom brand integration and secure our highest-tier pricing brackets, we require a minimum commitment of 20 unit fulfillments per month. This threshold is discussed and adjusted based on your specific compound catalog during onboarding."
+        },
+        {
+          "q": "How long does it take to launch a custom private label or white label peptide line?",
+          "a": "The end-to-end timeline for launching a custom private label peptide product line ranges from 2 to 4 weeks. This includes business verification, label compliance review, packaging and custom branding finalization, synthesis verification of your selected batches, and direct integration into our domestic logistics pipeline."
+        },
+        {
+          "q": "Can I use your website development or launch support if I source compounds elsewhere?",
+          "a": "No. Our high-performance digital infrastructure services—such as custom Next.js portal development, automated compliance routing, and business calculators—are premium value-added B2B benefits reserved exclusively for active, high-volume B2B accounts that source their lyophilized peptides through 99 Purity Wholesale."
+        },
+        {
+          "q": "How do you guarantee the purity of compounds shipped in dropshipping or private label orders?",
+          "a": "Every single peptide batch manufactured in our U.S. laboratories undergoes rigorous double-pass High-Performance Liquid Chromatography (HPLC) and Mass Spectrometry (LC-MS) analysis. Each dropshipped or private-labeled order is matched directly to its verified batch Certificate of Analysis (COA) confirming a minimum purity of ≥99%."
+        },
+        {
+          "q": "What payment methods do you accept for high-volume wholesale peptide contracts?",
+          "a": "To ensure immediate transaction clearance and operational speed, we accept Bitcoin (BTC) for immediate domestic processing, Zelle for mid-tier transactions, and standard corporate bank transfers (ACH/Wire) for high-volume contract manufacturing accounts. Customized billing cycles are available for qualified long-term partners."
+        },
+        {
+          "q": "Are dropshipped and private label peptides shipped under cold chain packaging?",
+          "a": "Our peptides are synthesized and purified to the highest industry standards, then lyophilized into a highly stable solid powder form. Lyophilized peptides remain molecularly stable at room temperatures during standard domestic shipping, eliminating the need for cold-chain transit. However, we utilize vacuum-sealed, thermally buffered B2B packaging to ensure complete environmental protection."
+        },
+        {
+          "q": "Do you offer custom peptide synthesis for unique research concentrations or novel sequences?",
+          "a": "Yes. Our U.S.-based chemical synthesis laboratories can formulate custom concentration sizes, custom milligram weights (e.g., custom 20mg BPC-157 or 50mg Tirzepatide vials), or custom amino acid sequences for qualified B2B partners. Custom synthesis runs require a minimum batch contract volume which will be detailed during consultation."
+        },
+        {
+          "q": "How are shipping, customs delays, and tracking handled for dropshipped orders?",
+          "a": "Since all of our manufacturing, warehousing, and fulfillment operations are located domestically within the United States, your dropshipped orders face zero international customs risks, border delays, or seizure exposures. We ship all B2B parcels via express couriers with automated API tracking sent directly to your sales portal."
+        },
+        {
+          "q": "What are the legal compliance frameworks surrounding white labeling research compounds?",
+          "a": "All materials supplied under our private label and white label programs are strictly labeled and designated for laboratory, analytical, and in-vitro scientific research applications only. Resellers are legally responsible for ensuring their product marketing, digital storefronts, and target clients operate fully within these legal research-use frameworks."
+        },
+        {
+          "q": "Can I request batch-matched HPLC report verification before my dropship fulfillment?",
+          "a": "Yes. Transparency is a core pillar of our B2B partnership. Business partners can request batch-matched HPLC and Mass Spectrometry reports for the specific manufacturing lot currently allocated to their inventory or fulfillment queue at any time."
+        },
+        {
+          "q": "What support channels do B2B clients have access to for operational issues?",
+          "a": "All wholesale, dropshipping, and private label partners are assigned a dedicated U.S. B2B Account Manager. You receive direct access to our priority WhatsApp hotline and direct email desks, ensuring any logistical, technical, or custom ordering inquiries are fully resolved within 2 business hours."
+        }
+      ]
+    }
   },
   "LocationsIndex": {
     "badge": "Nationwide Wholesale Supply",
@@ -973,26 +1178,6 @@
       }
     }
   },
-  "Glossary": {
-    "Hero": {
-      "title": "Compound Glossary & Dictionary",
-      "subtitle": "Essential technical terms, pharmacological definitions, and quality standards for the research peptide industry."
-    },
-    "Search": {
-      "placeholder": "Search technical terms...",
-      "all": "All",
-      "noResults": "No terms found matching your search."
-    },
-    "Terms": {
-      "relatedTitle": "Related Research Compounds",
-      "category": "Category:",
-      "viewProduct": "View Compound"
-    },
-    "Meta": {
-      "title": "Peptide Glossary & Technical Dictionary | 99 Purity Wholesale",
-      "description": "Comprehensive glossary of technical terms in the peptide research industry. Learn about HPLC, lyophilization, GLP-1 agonists, COA, and more."
-    }
-  },
   "CategoryDetail": {
     "categories": {
       "glp1-metabolic-peptides": {
@@ -1128,13 +1313,16 @@
       "badge": "Technical Reference"
     },
     "relatedProducts": "Related Products",
+    "relatedTitle": "Related Research Compounds",
     "ValueBoxes": [
       { "title": "Verified Purity", "desc": "Every term in our glossary is backed by analytical data and U.S. laboratory standards." },
       { "title": "Domestic Synthesis", "desc": "Manufactured in the USA to ensure full control over chemical specifications and identity." },
       { "title": "Fast Procurement", "desc": "Wholesale ordering simplified for professional institutions and licensed researchers." }
     ],
     "Search": {
-      "placeholder": "Search technical terms (e.g., HPLC, GLP-1)..."
+      "placeholder": "Search technical terms (e.g., HPLC, GLP-1)...",
+      "all": "All",
+      "noResults": "No terms found matching your search."
     },
     "Terms": {
       "hplc": {
@@ -1199,50 +1387,54 @@
       "subtitle": "Browse our full catalog of ≥99% purity peptides.",
       "button": "View Full Catalog"
     },
-    "Components": {
-      "SpecSelector": {
-        "selectSpec": "Select Spec:",
-        "kitSize": "Kit Size:",
-        "vials": "vials",
-        "moqLabel": "MOQ: {count} units minimum per spec"
-      },
-      "AddToInquiry": {
-        "add": "+ Add to Inquiry",
-        "added": "✓ Added!",
-        "inInquiry": "✓ In Inquiry"
-      }
+    "Meta": {
+      "title": "Peptide Glossary & Technical Dictionary | 99 Purity Wholesale",
+      "description": "Comprehensive glossary of technical terms in the peptide research industry. Learn about HPLC, lyophilization, GLP-1 agonists, COA, and more."
+    }
+  },
+  "Components": {
+    "SpecSelector": {
+      "selectSpec": "Select Spec:",
+      "kitSize": "Kit Size:",
+      "vials": "vials",
+      "moqLabel": "MOQ: {count} units minimum per spec"
     },
-    "Blog": {
-      "badge": "B2B Knowledge Hub",
-      "title": "Wholesale Peptide Industry Insights",
-      "subtitle": "Expert guides, market analysis, and compliance resources for compounding pharmacies, wellness clinics, and licensed distributors sourcing bulk research-grade peptides in the USA.",
-      "readMore": "Read Article",
-      "back": "Back to Articles",
-      "ctaTitle": "Ready to Upgrade Your Supply Chain?",
-      "ctaSubtitle": "Connect with our wholesale team for current pricing and COAs.",
-      "whatsapp": "WhatsApp Us Now",
-      "tags": {
-        "pricing": "Wholesale Pricing",
-        "quality": "Quality & COA",
-        "launch": "Business Launch",
-        "compliance": "Compliance",
-        "glp1": "GLP-1 Research",
-        "dropshipping": "Dropshipping"
-      }
+    "AddToInquiry": {
+      "add": "+ Add to Inquiry",
+      "added": "✓ Added!",
+      "inInquiry": "✓ In Inquiry"
+    }
+  },
+  "Blog": {
+    "badge": "B2B Knowledge Hub",
+    "title": "Wholesale Peptide Industry Insights",
+    "subtitle": "Expert guides, market analysis, and compliance resources for compounding pharmacies, wellness clinics, and licensed distributors sourcing bulk research-grade peptides in the USA.",
+    "readMore": "Read Article",
+    "back": "Back to Articles",
+    "ctaTitle": "Ready to Upgrade Your Supply Chain?",
+    "ctaSubtitle": "Connect with our wholesale team for current pricing and COAs.",
+    "whatsapp": "WhatsApp Us Now",
+    "tags": {
+      "pricing": "Wholesale Pricing",
+      "quality": "Quality & COA",
+      "launch": "Business Launch",
+      "compliance": "Compliance",
+      "glp1": "GLP-1 Research",
+      "dropshipping": "Dropshipping"
+    }
+  },
+  "Legal": {
+    "Privacy": {
+      "title": "Privacy Policy",
+      "content": "99 Purity Wholesale is committed to protecting your privacy. This policy outlines how we collect, use, and safeguard the information you provide when using our wholesale platform. We only collect essential business information required for B2B transactions and compliance verification. Your data is never sold to third parties and is protected by industry-standard encryption."
     },
-    "Legal": {
-      "Privacy": {
-        "title": "Privacy Policy",
-        "content": "99 Purity Wholesale is committed to protecting your privacy. This policy outlines how we collect, use, and safeguard the information you provide when using our wholesale platform. We only collect essential business information required for B2B transactions and compliance verification. Your data is never sold to third parties and is protected by industry-standard encryption."
-      },
-      "Terms": {
-        "title": "Terms of Service",
-        "content": "All products supplied by 99 Purity Wholesale are strictly for laboratory research and in vitro testing by licensed professionals. They are not for human consumption, therapeutic use, or clinical application. By accessing this site and placing an order, you confirm that you are a licensed professional or authorized researcher and agree to all compliance and safety guidelines outlined in our B2B trade agreement."
-      },
-      "Disclaimer": {
-        "title": "Research Use Only Disclaimer",
-        "content": "99 Purity Wholesale compounds are NOT intended for use as food additives, drugs, cosmetics, household chemicals, or other inappropriate applications. The listing of a material on this site does not constitute a license to its use in infringement of any patent. All customers are assumed to be trained professionals who understand the risks associated with research chemicals."
-      }
+    "Terms": {
+      "title": "Terms of Service",
+      "content": "All products supplied by 99 Purity Wholesale are strictly for laboratory research and in vitro testing by licensed professionals. They are not for human consumption, therapeutic use, or clinical application. By accessing this site and placing an order, you confirm that you are a licensed professional or authorized researcher and agree to all compliance and safety guidelines outlined in our B2B trade agreement."
+    },
+    "Disclaimer": {
+      "title": "Research Use Only Disclaimer",
+      "content": "99 Purity Wholesale compounds are NOT intended for use as food additives, drugs, cosmetics, household chemicals, or other inappropriate applications. The listing of a material on this site does not constitute a license to its use in infringement of any patent. All customers are assumed to be trained professionals who understand the risks associated with research chemicals."
     }
   },
   "WholesaleApplication": {

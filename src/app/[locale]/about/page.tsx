@@ -1,19 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { MessageCircle, Mail, ShieldCheck, Search, Users, Activity, Layers, BarChart3, FlaskConical, Globe, Award, CheckCircle2, ArrowRight, Microscope, Star, Truck } from "lucide-react";
+import { 
+  ShieldCheck, Search, Users, FlaskConical, Globe, 
+  Award, CheckCircle2, Microscope, Star, Truck 
+} from "lucide-react";
 import GlobalCTA from "@/components/layout/GlobalCTA";
-
-const iconMap: Record<string, any> = {
-  FlaskConical,
-  Award,
-  ShieldCheck,
-  Users,
-  Globe,
-  Star,
-  Microscope,
-  Truck
-};
+import { FadeIn } from "@/components/shared/Motion";
 
 export default function AboutPage() {
   const t = useTranslations("About");
@@ -25,217 +18,362 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0A0F1C] pb-24">
+    <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-32 border-b border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#4FC3D0]/10 via-[#0A0F1C] to-[#0A0F1C]"></div>
-        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <div className="inline-block bg-[#4FC3D0]/10 text-[#4FC3D0] px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-[#4FC3D0]/20">
-            {t("Hero.badge")}
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 font-rajdhani tracking-tight leading-tight">
-            {t("Hero.title")}
-          </h1>
-          <p className="text-xl text-[#4FC3D0] font-medium mb-8 max-w-3xl mx-auto">
-            {t("Hero.subtitle")}
-          </p>
-          <p className="text-lg text-slate-400 font-dm-sans max-w-3xl mx-auto leading-relaxed">
-            {t("Hero.p1")}
-          </p>
+      {/* Hero Section - Elegant Light Off-White */}
+      <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
+        {/* Light Grain Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+          <FadeIn>
+            <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+              {t("Hero.badge")}
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+              {t("Hero.title")}
+            </h1>
+            
+            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 mb-8 max-w-3xl mx-auto leading-relaxed">
+              {t("Hero.subtitle")}
+            </p>
+            
+            <p className="text-sm md:text-base font-archia text-black/55 font-medium max-w-3xl mx-auto leading-relaxed">
+              {t("Hero.p1")}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Brand Story */}
-      <section className="py-24 border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="lg:w-1/2">
-              <span className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">{t("Story.badge")}</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 font-rajdhani leading-tight">
-                {t("Story.title")}
+      {/* Brand Story - Stealth Luxury Black with Overlapping Image Collage */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white relative border-b border-white/5 overflow-hidden">
+        {/* Dark Grain Texture */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            {/* Left Column: Story paragraphs & Integrated Features Grid */}
+            <div className="lg:col-span-6 flex flex-col justify-center">
+              <FadeIn>
+                <span className="text-white/40 font-dm-sans font-bold text-xs uppercase tracking-widest mb-4 block">
+                  {t("Story.badge")}
+                </span>
+                
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-absans text-white uppercase tracking-tight mb-8 leading-none">
+                  {t("Story.title")}
+                </h2>
+                
+                <div className="space-y-6 text-white/60 font-archia text-sm md:text-base leading-relaxed font-medium mb-10">
+                  <p>{t("Story.p1")}</p>
+                  <p>{t("Story.p2")}</p>
+                  <p>{t("Story.p3")}</p>
+                  <p>{t("Story.p4")}</p>
+                </div>
+                
+                {/* Technical Features Grid integrated beautifully below story paragraphs */}
+                <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/5">
+                  {(t.raw("Story.features") as any[]).slice(0, 4).map((item, i) => {
+                    const icons = [FlaskConical, Award, ShieldCheck, Users];
+                    const Icon = icons[i] || ShieldCheck;
+                    return (
+                      <div key={i} className="flex gap-4 items-start group/feat">
+                        <div className="w-9 h-9 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0 transition-colors group-hover/feat:bg-white/10">
+                          <Icon className="w-4 h-4 text-white/80" />
+                        </div>
+                        <div>
+                          <h4 className="text-white font-absans font-bold text-xs uppercase tracking-wider">{item.title}</h4>
+                          <p className="text-white/40 font-archia font-medium text-[10px] leading-relaxed mt-1">{item.desc}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </FadeIn>
+            </div>
+            
+            {/* Right Column: Luxurious Multi-Dimensional Overlapping Image Collage */}
+            <div className="lg:col-span-6 relative mt-16 lg:mt-0 px-6 pb-12 lg:pb-0">
+              <FadeIn delay={0.2} className="relative w-full max-w-md mx-auto aspect-[4/5]">
+                {/* Base Card: Pristine Laboratory Setting */}
+                <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 group">
+                  <img 
+                    src="/images/hero-lab.png"
+                    alt="Pristine Peptide Chromatography Laboratory"
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                </div>
+                
+                {/* Overlapping Floating Product Kit Card */}
+                <div className="absolute -bottom-10 -left-6 md:-left-12 w-2/3 aspect-[4/3] rounded-3xl overflow-hidden border-[6px] border-[#05080C] shadow-[0_20px_50px_rgba(0,0,0,0.6)] z-20 group/kit transition-transform duration-500 hover:scale-105 hover:-rotate-1">
+                  <img 
+                    src="/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png"
+                    alt="Certified 99 Purity Peptide Vial Kit"
+                    className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover/kit:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </FadeIn>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* Standalone Widescreen Clinical Laboratory Breakout Card */}
+      <section className="bg-[#F8F8F6] pt-24 pb-8 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
+              {/* Pristine Full-Color Clinical Laboratory Research Visual */}
+              <img 
+                src="/images/hero-lab-bg.png"
+                alt="99 Purity Wholesale Analytical Research Laboratory"
+                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Mission Statement - Clean Light Off-White Quote */}
+      <section className="relative py-20 bg-[#F8F8F6] border-b border-black/5 overflow-hidden">
+        <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
+          <FadeIn>
+            <Microscope className="w-12 h-12 text-black/30 mx-auto mb-8 animate-pulse" />
+            <blockquote className="font-absans text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight mb-8 uppercase tracking-tight max-w-4xl mx-auto">
+              "{t("Mission.quote")}"
+            </blockquote>
+            <p className="text-black/50 font-dm-sans font-bold text-xs uppercase tracking-widest">
+              — {t("Mission.author")}
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Core Values - Stealth Luxury Black */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="text-center mb-16">
+            <FadeIn>
+              <span className="text-white/40 font-dm-sans font-bold text-xs uppercase tracking-widest mb-4 block">
+                {t("Values.badge")}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold font-absans text-white uppercase tracking-tight">
+                {t("Values.title")}
               </h2>
-              <div className="space-y-6 text-slate-300 font-dm-sans leading-relaxed">
-                <p>{t("Story.p1")}</p>
-                <p>{t("Story.p2")}</p>
-                <p>{t("Story.p3")}</p>
-                <p>{t("Story.p4")}</p>
-              </div>
-            </div>
-            <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-              {(t.raw("Story.features") as any[]).map((item, i) => {
-                const icons = [FlaskConical, Award, ShieldCheck, Users, Globe, Star];
-                const Icon = icons[i] || Star;
-                return (
-                  <div key={i} className="bg-[#121B2E] border border-white/5 rounded-2xl p-6 hover:border-[#4FC3D0]/30 transition-all">
-                    <Icon className="w-7 h-7 text-[#4FC3D0] mb-4" />
-                    <h3 className="text-white font-rajdhani font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="text-slate-400 font-dm-sans text-xs leading-relaxed">{item.desc}</p>
-                  </div>
-                );
-              })}
-            </div>
+            </FadeIn>
           </div>
-        </div>
-      </section>
-
-      {/* Mission Statement */}
-      <section className="py-24 bg-[#060B17] border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <Microscope className="w-12 h-12 text-[#4FC3D0] mx-auto mb-8 opacity-60" />
-          <blockquote className="text-3xl md:text-4xl font-rajdhani font-bold text-white leading-tight mb-8">
-            "{t("Mission.quote")}"
-          </blockquote>
-          <p className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-widest">— {t("Mission.author")}</p>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-24 border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-            <span className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">{t("Values.badge")}</span>
-            <h2 className="text-4xl font-bold text-center text-white font-rajdhani">{t("Values.title")}</h2>
-          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#121B2E] border border-white/5 rounded-2xl p-8 hover:border-[#4FC3D0]/30 transition-all">
-              <div className="w-14 h-14 bg-[#4FC3D0]/10 rounded-xl flex items-center justify-center mb-6">
-                <ShieldCheck className="w-7 h-7 text-[#4FC3D0]" />
+            {/* Value 1: Purity */}
+            <FadeIn delay={0.1} className="bg-white/5 border border-white/5 rounded-[2.2rem] p-8 hover:border-white/20 transition-all duration-300 shadow-lg">
+              <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <ShieldCheck className="w-6 h-6 text-white/80" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-rajdhani">{t("Values.purity.title")}</h3>
-              <p className="text-slate-400 leading-relaxed mb-4">{t("Values.purity.desc")}</p>
-              <p className="text-slate-500 font-dm-sans text-sm leading-relaxed">{t("Values.purity.longDesc")}</p>
-            </div>
-            <div className="bg-[#121B2E] border border-white/5 rounded-2xl p-8 hover:border-[#4FC3D0]/30 transition-all">
-              <div className="w-14 h-14 bg-[#4FC3D0]/10 rounded-xl flex items-center justify-center mb-6">
-                <Search className="w-7 h-7 text-[#4FC3D0]" />
+              <h3 className="text-2xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t("Values.purity.title")}</h3>
+              <p className="text-white/60 font-archia font-medium text-sm leading-relaxed mb-4">{t("Values.purity.desc")}</p>
+              <p className="text-white/35 font-dm-sans text-xs leading-relaxed">{t("Values.purity.longDesc")}</p>
+            </FadeIn>
+
+            {/* Value 2: Transparency */}
+            <FadeIn delay={0.2} className="bg-white/5 border border-white/5 rounded-[2.2rem] p-8 hover:border-white/20 transition-all duration-300 shadow-lg">
+              <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <Search className="w-6 h-6 text-white/80" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-rajdhani">{t("Values.transparency.title")}</h3>
-              <p className="text-slate-400 leading-relaxed mb-4">{t("Values.transparency.desc")}</p>
-              <p className="text-slate-500 font-dm-sans text-sm leading-relaxed">{t("Values.transparency.longDesc")}</p>
-            </div>
-            <div className="bg-[#121B2E] border border-white/5 rounded-2xl p-8 hover:border-[#4FC3D0]/30 transition-all">
-              <div className="w-14 h-14 bg-[#4FC3D0]/10 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-[#4FC3D0]" />
+              <h3 className="text-2xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t("Values.transparency.title")}</h3>
+              <p className="text-white/60 font-archia font-medium text-sm leading-relaxed mb-4">{t("Values.transparency.desc")}</p>
+              <p className="text-white/35 font-dm-sans text-xs leading-relaxed">{t("Values.transparency.longDesc")}</p>
+            </FadeIn>
+
+            {/* Value 3: Partnership */}
+            <FadeIn delay={0.3} className="bg-white/5 border border-white/5 rounded-[2.2rem] p-8 hover:border-white/20 transition-all duration-300 shadow-lg">
+              <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-white/80" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-rajdhani">{t("Values.partnership.title")}</h3>
-              <p className="text-slate-400 leading-relaxed mb-4">{t("Values.partnership.desc")}</p>
-              <p className="text-slate-500 font-dm-sans text-sm leading-relaxed">{t("Values.partnership.longDesc")}</p>
-            </div>
+              <h3 className="text-2xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t("Values.partnership.title")}</h3>
+              <p className="text-white/60 font-archia font-medium text-sm leading-relaxed mb-4">{t("Values.partnership.desc")}</p>
+              <p className="text-white/35 font-dm-sans text-xs leading-relaxed">{t("Values.partnership.longDesc")}</p>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* How We Work */}
-      <section className="py-24 bg-[#060B17] border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
+      {/* How We Work - Pristine Light White */}
+      <section className="py-24 md:py-32 bg-white text-black border-b border-black/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <span className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">{t("Process.badge")}</span>
-            <h2 className="text-4xl font-bold text-white font-rajdhani">{t("Process.title")}</h2>
-            <p className="text-slate-400 font-dm-sans mt-4 max-w-2xl mx-auto">{t("Process.subtitle")}</p>
+            <FadeIn>
+              <span className="text-black/45 font-dm-mono text-xs uppercase tracking-[0.3em] mb-4 block">
+                {t("Process.badge")}
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold font-absans text-black uppercase tracking-tight">
+                {t("Process.title")}
+              </h2>
+              <p className="text-black/50 font-archia text-sm mt-4 max-w-2xl mx-auto font-medium">
+                {t("Process.subtitle")}
+              </p>
+            </FadeIn>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-            <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-0.5 bg-gradient-to-r from-transparent via-[#4FC3D0]/30 to-transparent"></div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 relative">
+            <div className="hidden md:block absolute top-14 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-black/10 to-transparent"></div>
             {(t.raw("Process.steps") as any[]).map((step, i) => {
               const icons = [FlaskConical, Microscope, Award, Truck];
               const Icon = icons[i] || Truck;
               return (
-                <div key={i} className="bg-[#121B2E] border border-white/5 rounded-2xl p-8 text-center relative z-10 hover:border-[#4FC3D0]/30 transition-all">
-                  <div className="text-[#4FC3D0] font-dm-mono text-xs uppercase tracking-widest mb-4">Step 0{i+1}</div>
-                  <div className="w-14 h-14 bg-[#4FC3D0]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-[#4FC3D0]" />
+                <FadeIn key={i} delay={0.08 * i} className="bg-[#F8F8F6] border border-black/5 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/15 transition-all duration-300 hover:-translate-y-1 shadow-sm">
+                  <div className="text-black/40 font-dm-mono text-[10px] uppercase tracking-widest mb-4">Step 0{i+1}</div>
+                  <div className="w-12 h-12 bg-black/5 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-5 h-5 text-black/50" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 font-rajdhani">{step.title}</h3>
-                  <p className="text-slate-400 font-dm-sans text-sm leading-relaxed">{step.desc}</p>
-                </div>
+                  <h3 className="text-base font-bold font-absans text-black mb-2 uppercase tracking-wide">{step.title}</h3>
+                  <p className="text-black/55 font-archia text-xs leading-relaxed font-medium">{step.desc}</p>
+                </FadeIn>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Who We Serve */}
-      <section className="py-24 border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
-              <span className="text-[#4FC3D0] font-dm-mono text-sm uppercase tracking-[0.3em] mb-4 block">{t("Clients.badge")}</span>
-              <h2 className="text-4xl font-bold text-white font-rajdhani mb-8">{t("Clients.title")}</h2>
-              <p className="text-slate-400 font-dm-sans leading-relaxed mb-8">
-                {t("Clients.subtitle")}
-              </p>
-              <div className="space-y-4">
-                {(t.raw("Clients.items") as any[]).map((client, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 bg-[#121B2E] rounded-xl border border-white/5">
-                    <CheckCircle2 className="w-5 h-5 text-[#4FC3D0] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-bold font-rajdhani">{client.label}</div>
-                      <div className="text-slate-400 font-dm-sans text-sm">{client.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="bg-gradient-to-br from-[#121B2E] to-[#0A0F1C] border border-[#4FC3D0]/10 rounded-3xl p-10">
-                <h3 className="text-2xl font-bold text-white font-rajdhani mb-8">{t("Clients.whyTitle")}</h3>
-                <div className="space-y-6">
-                  {(t.raw("Clients.whyPoints") as string[]).map((point, i) => (
-                    <div key={i} className="flex items-center gap-4">
-                      <div className="w-2 h-2 rounded-full bg-[#4FC3D0] flex-shrink-0"></div>
-                      <span className="text-slate-300 font-dm-sans text-sm">{point}</span>
+      {/* Who We Serve - Stealth Luxury Black with Creative Interactive Split Card */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
+        {/* Dark Grain Texture */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column: Serve List */}
+            <div>
+              <FadeIn>
+                <span className="text-white/40 font-dm-sans font-bold text-xs uppercase tracking-widest mb-4 block">
+                  {t("Clients.badge")}
+                </span>
+                
+                <h2 className="text-3xl md:text-4xl font-bold font-absans text-white uppercase tracking-tight mb-6">
+                  {t("Clients.title")}
+                </h2>
+                
+                <p className="text-white/60 font-archia text-sm font-medium leading-relaxed mb-8">
+                  {t("Clients.subtitle")}
+                </p>
+                
+                <div className="space-y-4">
+                  {(t.raw("Clients.items") as any[]).map((client, i) => (
+                    <div key={i} className="flex items-start gap-4 p-5 bg-white/5 rounded-2xl border border-white/5 hover:border-white/15 transition-all">
+                      <CheckCircle2 className="w-5 h-5 text-white/50 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <div className="text-white font-bold font-absans text-sm uppercase tracking-wide">{client.label}</div>
+                        <div className="text-white/40 font-archia font-medium text-xs mt-1 leading-relaxed">{client.desc}</div>
+                      </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </FadeIn>
             </div>
+            
+            {/* Right Column: Creative Interactive Graphic-Split Card Container */}
+            <div>
+              <FadeIn delay={0.2}>
+                <div className="bg-white/5 border border-white/5 rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[500px] flex flex-col group transition-all duration-500 hover:border-white/10">
+                  {/* Top Portion: High-End Pristine Quality Control Lab Showcase (100% Relatable & Local) */}
+                  <div className="h-56 relative overflow-hidden">
+                    <img 
+                      src="/lab_quality_bg_1778896760027.png" 
+                      alt="Quality Verification Clinical Testing Laboratory"
+                      className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#05080C] via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute bottom-6 left-8 right-6 z-10">
+                      <h3 className="text-lg font-bold font-absans text-white uppercase tracking-wider">
+                        {t("Clients.whyTitle")}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  {/* Bottom Portion: Solid High-Contrast B2B Value Checklist */}
+                  <div className="p-8 flex-1 flex flex-col justify-center bg-white/[0.01]">
+                    <div className="space-y-5">
+                      {(t.raw("Clients.whyPoints") as string[]).map((point, i) => (
+                        <div key={i} className="flex items-start gap-4">
+                          <div className="w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0 mt-1.5"></div>
+                          <span className="text-white/70 font-archia font-medium text-xs leading-relaxed">{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+            
           </div>
         </div>
       </section>
 
-      {/* Stats Grid */}
-      <section className="py-24 bg-[#060B17] border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
+      {/* Corporate Stats - Light Minimalist Off-White */}
+      <section className="py-24 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white font-rajdhani">{t("Stats.title")}</h2>
+            <FadeIn>
+              <h2 className="text-3xl md:text-4xl font-bold font-absans text-black uppercase tracking-tight">
+                {t("Stats.title")}
+              </h2>
+            </FadeIn>
           </div>
+          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {(t.raw("Stats.items") as any[]).map((s, i) => (
-              <div key={i} className="bg-[#121B2E] border border-white/5 rounded-2xl p-6 text-center hover:border-[#4FC3D0]/20 transition-all">
-                <div className="text-3xl font-bold text-white mb-2 font-rajdhani text-[#4FC3D0]">{s.num}</div>
-                <div className="text-xs text-slate-400 uppercase tracking-wider font-dm-sans">{s.label}</div>
-              </div>
+              <FadeIn key={i} delay={0.05 * i} className="bg-white border border-black/5 rounded-2xl p-6 text-center hover:border-black/15 transition-all duration-300 shadow-sm hover:-translate-y-1">
+                <div className="text-3xl font-bold text-black font-absans mb-2">{s.num}</div>
+                <div className="text-[10px] text-black/50 uppercase tracking-widest font-dm-sans font-bold leading-tight">{s.label}</div>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Compliance Statement */}
-      <section className="py-24 border-b border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="bg-[#121B2E] border border-[#4FC3D0]/10 rounded-3xl p-12">
-            <div className="flex flex-col lg:flex-row gap-10 items-start">
-              <div className="lg:w-1/3">
-                <ShieldCheck className="w-12 h-12 text-[#4FC3D0] mb-4" />
-                <h2 className="text-3xl font-bold text-white font-rajdhani mb-4">{t("Compliance.title")}</h2>
-                <p className="text-slate-400 font-dm-sans text-sm leading-relaxed">{t("Compliance.desc")}</p>
-              </div>
-              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(t.raw("Compliance.items") as any[]).map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-[#0A0F1C] rounded-xl border border-white/5">
-                    <CheckCircle2 className="w-5 h-5 text-[#4FC3D0] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="text-white font-bold font-rajdhani text-sm">{item.title}</div>
-                      <div className="text-slate-500 font-dm-sans text-xs leading-relaxed mt-1">{item.desc}</div>
+      {/* Compliance Statement - Symmetrical Embedded Dark Card */}
+      <section className="py-24 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-5xl relative z-20">
+          <FadeIn>
+            <div className="relative overflow-hidden bg-white/5 border border-white/5 rounded-[2.5rem] p-10 md:p-12 shadow-2xl">
+              <div className="relative z-10 flex flex-col lg:flex-row gap-10 items-start">
+                
+                {/* Shield Column */}
+                <div className="lg:w-1/3">
+                  <ShieldCheck className="w-12 h-12 text-white/55 mb-4 animate-pulse" />
+                  <h2 className="text-2xl font-bold font-absans text-white mb-4 uppercase tracking-wide leading-tight">
+                    {t("Compliance.title")}
+                  </h2>
+                  <p className="text-white/40 font-archia font-medium text-xs leading-relaxed">
+                    {t("Compliance.desc")}
+                  </p>
+                </div>
+                
+                {/* Check List Column */}
+                <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {(t.raw("Compliance.items") as any[]).map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 p-4 bg-[#05080C] rounded-xl border border-white/5">
+                      <CheckCircle2 className="w-5 h-5 text-white/40 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <div className="text-white font-bold font-absans text-xs uppercase tracking-wider">{item.title}</div>
+                        <div className="text-white/30 font-archia font-medium text-[10px] leading-relaxed mt-1">{item.desc}</div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                
               </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
+      {/* Global B2B Call-To-Action Segment */}
       <GlobalCTA 
         badge={t('Cta.title')}
         title={t('Cta.subtitle')}

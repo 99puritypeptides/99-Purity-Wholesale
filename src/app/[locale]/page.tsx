@@ -6,6 +6,7 @@ import productsData from '@/data/products.json';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import StatsBar from '@/components/home/StatsBar';
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from '@/components/shared/Motion';
+import FaqSection from '@/components/shared/FaqSection';
 
 const cardBase = 'group relative overflow-hidden rounded-lg border border-[#16202f]/10 bg-white/[0.82] p-7 shadow-[0_22px_70px_rgba(19,32,52,0.09)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#13a7b7]/35 hover:shadow-[0_30px_90px_rgba(19,32,52,0.14)]';
 const eyebrow = 'font-absans text-[10px] font-bold uppercase tracking-[0.4em] opacity-40';
@@ -287,43 +288,69 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {(t.raw('BestSellers.items') as BestSellerItem[]).map((p, i) => {
+          <StaggerContainer className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-4">
+            {(t.raw('BestSellers.items') as BestSellerItem[]).slice(0, 8).map((p, i) => {
               const slug = bestSellerSlugs[i];
               const cat = bestSellerCats[i];
+
+              const bestSellerImages: Record<string, string> = {
+                'semaglutide': '/Product images/Semaglutide 10mg.jpg',
+                'tirzepatide': '/Product images/Tirzepatide 10mg.jpg',
+                'retatrutide': '/Product images/Retatrutide 10mg.jpg',
+                'bpc-157': '/Product images/BPC-157 10mg.jpg',
+                'tb-500': '/Product images/TB-500 10mg.jpg',
+                'ipamorelin': '/Product images/Ipamorelin 10mg.jpg',
+                'cjc-1295-no-dac': '/Product images/CJC-1295.Ipamorelin 10.10mg.jpg',
+                'nad': '/Product images/NAD+ 500mg.jpg',
+                'epithalon': '/Product images/Epithalon 10mg.jpg'
+              };
+              const productImg = bestSellerImages[slug] || '/Product images/Semaglutide 10mg.jpg';
 
               return (
                 <StaggerItem 
                   key={slug} 
-                  className="group relative flex flex-col h-[520px] rounded-[2.5rem] bg-white border border-black/[0.03] p-10 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
+                  className="group relative flex flex-col h-[420px] sm:h-[530px] rounded-[1.5rem] sm:rounded-[2rem] bg-white border border-black/[0.03] p-4 sm:p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
-                  <div className="flex-grow">
-                    <div className="flex items-center gap-3 mb-8">
-                      <span className="px-3 py-1 rounded-full bg-black text-white text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
-                      <div className="h-px flex-grow bg-black/5" />
-                    </div>
-                    
-                    <h3 className="font-absans text-3xl font-bold text-black tracking-tight mb-4 group-hover:text-black/60 transition-colors">{p.name}</h3>
-                    <p className="font-archia text-sm leading-relaxed text-black/40 line-clamp-3 mb-10">{p.desc}</p>
-                    
-                    <div className="grid grid-cols-2 gap-6 pt-6 border-t border-black/5">
-                      <div>
-                        <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-2">{t('BestSellers.technicalGrade')}</div>
-                        <div className="font-archia text-xs font-bold text-black">{p.spec}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-2">{t('BestSellers.verifiedPurity')}</div>
-                        <div className="font-archia text-xs font-bold text-emerald-600">&ge;99.0%</div>
-                      </div>
-                    </div>
-                  </div>
-
                   <Link 
                     href={`/products/${cat}/${slug}`} 
-                    className="mt-10 group/btn relative inline-flex items-center justify-center gap-4 py-5 rounded-2xl bg-black text-white overflow-hidden transition-all hover:pr-12"
+                    className="flex flex-col h-full w-full text-left"
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">{t('BestSellers.viewSpecs')}</span>
-                    <ArrowRight className="h-4 w-4 absolute right-8 opacity-0 transition-all group-hover/btn:opacity-100 group-hover/btn:right-6" />
+                    <div className="flex-grow flex flex-col">
+                      {/* Beautiful Seamless Floating Product Image */}
+                      <div className="relative w-full h-36 sm:h-48 flex items-center justify-center mb-3 sm:mb-4 overflow-hidden">
+                        <img 
+                          src={productImg} 
+                          alt={p.name} 
+                          className="h-full object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] filter group-hover:scale-105 transition-transform duration-700 ease-out" 
+                        />
+                      </div>
+
+                      <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                        <span className="px-2 sm:px-3 py-1 rounded-full bg-black text-white text-[7px] sm:text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
+                        <div className="h-px flex-grow bg-black/5" />
+                      </div>
+                      
+                      <h3 className="font-absans text-sm sm:text-2xl font-bold text-black tracking-tight mb-2 group-hover:text-black/60 transition-colors uppercase line-clamp-1 sm:line-clamp-none">{p.name}</h3>
+                      <p className="font-archia text-[9px] sm:text-xs leading-relaxed text-black/40 line-clamp-2 sm:line-clamp-3 mb-2 sm:mb-3">{p.desc}</p>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6 pt-3 sm:pt-4 border-t border-black/5 mt-auto">
+                        <div>
+                          <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-widest text-black/30 mb-0.5 sm:mb-1">{t('BestSellers.technicalGrade')}</div>
+                          <div className="font-archia text-[9px] sm:text-xs font-bold text-black">{p.spec}</div>
+                        </div>
+                        <div className="text-left sm:text-right">
+                          <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-widest text-black/30 mb-0.5 sm:mb-1">{t('BestSellers.verifiedPurity')}</div>
+                          <div className="font-archia text-[9px] sm:text-xs font-bold text-emerald-600">&ge;99.0%</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div 
+                      className="mt-4 sm:mt-6 relative inline-flex items-center justify-center gap-2 sm:gap-4 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-black text-white overflow-hidden transition-all group-hover:pr-12"
+                    >
+                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">{t('BestSellers.viewSpecs')}</span>
+                      <ArrowRight className="h-4 w-4 absolute right-8 opacity-0 transition-all group-hover:opacity-100 group-hover:right-6" />
+                    </div>
                   </Link>
                 </StaggerItem>
               );
@@ -697,113 +724,13 @@ export default async function HomePage({ params }: { params: { locale: string } 
         </div>
       </section>
 
-      <section className={`relative z-10 bg-[#F8F8F6] ${sectionPad}`} id="faq">
-        <div className="container mx-auto px-6 lg:px-12">
-          {/* FAQ Header Bar */}
-          <div className="flex justify-between items-center border-b border-black/10 pb-4 mb-12">
-            <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] text-black/40">(FAQ)</span>
-            <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-black/10 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-black/60">
-              {(t.raw('FAQ.items') as FaqItem[]).length.toString().padStart(2, '0')}
-            </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-20">
-            <div className="lg:w-1/2">
-              <h2 className="font-absans text-5xl md:text-8xl font-bold text-black leading-none uppercase tracking-tighter mb-8">
-                {t('FAQ.title')}
-              </h2>
-            </div>
-            <div className="lg:w-1/2 flex flex-col md:flex-row gap-8 items-start">
-              <div className="shrink-0 pt-2">
-                <svg width="48" height="48" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {[...Array(16)].map((_, i) => (
-                    <line 
-                      key={i} 
-                      x1="30" y1="30" 
-                      x2="30" y2="0" 
-                      stroke="black" 
-                      strokeWidth="2.5" 
-                      transform={`rotate(${i * 22.5} 30 30)`} 
-                    />
-                  ))}
-                </svg>
-              </div>
-              <p className="font-archia text-sm md:text-base leading-relaxed text-black/60 max-w-xl">
-                {t('FAQ.subtitle')}
-              </p>
-            </div>
-          </div>
-
-          {/* FAQ Cards Grid */}
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {(t.raw('FAQ.items') as FaqItem[]).map((faq, i) => {
-              // On desktop show first 3, on mobile show first 1
-              const isCard = i < 3;
-              const isMobileCard = i < 1;
-              
-              return (
-                <StaggerItem 
-                  key={i} 
-                  className={`bg-white p-8 md:p-12 border border-black/5 rounded-sm flex-col h-full ${
-                    isCard ? 'md:flex' : 'md:hidden'
-                  } ${
-                    isMobileCard ? 'flex' : 'hidden'
-                  }`}
-                >
-                  <span className="font-goku text-6xl md:text-8xl font-bold mb-12">
-                    {(i + 1).toString().padStart(2, '0')}.
-                  </span>
-                  <h3 className="font-absans text-xl md:text-2xl font-bold text-black mb-6 leading-tight">
-                    {faq.q}
-                  </h3>
-                  <p className="font-archia text-sm md:text-base leading-relaxed text-black/50">
-                    {faq.a}
-                  </p>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
-
-          {/* Remaining FAQs Accordion */}
-          <div className="space-y-0">
-            {(t.raw('FAQ.items') as FaqItem[]).map((faq, i) => {
-              // On desktop start from index 3, on mobile start from index 1
-              const isAccordionDesktop = i >= 3;
-              const isAccordionMobile = i >= 1;
-
-              return (
-                <details 
-                  key={i} 
-                  className={`group border-b border-black/10 overflow-hidden ${
-                    isAccordionDesktop ? 'md:block' : 'md:hidden'
-                  } ${
-                    isAccordionMobile ? 'block' : 'hidden'
-                  }`}
-                >
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-8">
-                    <div className="flex items-center gap-6">
-                      <span className="text-[10px] font-bold text-black/30 uppercase tracking-widest">
-                        {(i + 1).toString().padStart(2, '0')}
-                      </span>
-                      <h3 className="font-absans text-lg md:text-xl font-bold text-black group-hover:text-black/60 transition-colors">
-                        {faq.q}
-                      </h3>
-                    </div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 text-black/40 transition-all group-open:rotate-45">
-                      <span className="text-2xl leading-none font-light">+</span>
-                    </div>
-                  </summary>
-                  <div className="pb-10 pl-16">
-                    <p className="font-archia text-sm md:text-base leading-relaxed text-black/50 max-w-3xl">
-                      {faq.a}
-                    </p>
-                  </div>
-                </details>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <FaqSection 
+        title={t('FAQ.title')}
+        subtitle={t('FAQ.subtitle')}
+        items={t.raw('FAQ.items') as FaqItem[]}
+        eyebrow="(FAQ)"
+        theme="light"
+      />
 
       <GlobalCTA 
         badge={t('FinalCta.badge')}

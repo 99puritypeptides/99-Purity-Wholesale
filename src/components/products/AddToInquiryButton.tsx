@@ -62,17 +62,17 @@ export default function AddToInquiryButton({
   };
 
   // Determine button styles based on state
-  let buttonClasses = "font-rajdhani font-bold text-sm px-4 py-2 rounded-md transition-all duration-200 ";
+  let buttonClasses = "font-dm-sans font-bold text-xs py-2.5 px-5 rounded-full transition-all duration-300 uppercase tracking-wider border ";
   let buttonText = t('add');
 
   if (showAdded) {
-    buttonClasses += "bg-[#3ECF8E] text-[#090C11]";
+    buttonClasses += "bg-emerald-500/10 border-emerald-500/30 text-emerald-600";
     buttonText = t('added');
   } else if (isInCart) {
-    buttonClasses += "bg-transparent border border-[#4FC3D0] text-[#4FC3D0]";
+    buttonClasses += "bg-transparent border-black/15 border text-black/80 hover:bg-black hover:text-white hover:border-black";
     buttonText = t('inInquiry');
   } else {
-    buttonClasses += "bg-[#4FC3D0] hover:bg-[#3ab0bc] text-[#090C11]";
+    buttonClasses += "bg-black border-black text-white hover:bg-transparent hover:text-black hover:border-black";
   }
 
   return (

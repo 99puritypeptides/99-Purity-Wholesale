@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { AlertTriangle, Mail, Zap, CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { AlertTriangle, Mail, Zap, CheckCircle2, ArrowRight, ShieldCheck, FlaskConical } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import productsData from '@/data/products.json';
@@ -17,6 +17,36 @@ export async function generateMetadata({ params }: { params: { locale: string; c
     description: t(`categories.${params.category}.desc`),
   };
 }
+
+const productImagesMap = {
+  "5-amino-1mq": "5-Amino-1MQ 10mg.jpg",
+  "aod9604": "AOD 2mg.jpg",
+  "b12": "B12.png",
+  "bpc-157": "BPC-157 5mg.jpg",
+  "bpc-5mg-tb-5mg": "BPC-157.TB-500 5.5mg.jpg",
+  "bpc-10mg-tb-10mg": "BPC-157.TB-500 10.10mg.jpg",
+  "cagrilintide": "Cagrilintide.jpg",
+  "cjc-1295-ipam": "CJC-1295.Ipamorelin 10.10mg.jpg",
+  "dsip": "DSIP 10mg.jpg",
+  "epithalon": "Epithalon 10mg.jpg",
+  "ghk-cu": "GHK-CU 50mg.jpg",
+  "glow-blend": "GLOW.jpg",
+  "ipamorelin": "Ipamorelin 5mg.jpg",
+  "kpv": "KPV 10mg.jpg",
+  "melanotan-i": "MT - 1 10mg.jpg",
+  "melanotan-ii": "MT-2 10mg.jpg",
+  "mots-c": "Mots-c 10mg.jpg",
+  "nad": "NAD+ 500mg.jpg",
+  "pt-141": "PT-141 10mg.jpg",
+  "retatrutide": "Retatrutide 10mg.jpg",
+  "semaglutide": "Semaglutide 5mg.jpg",
+  "sermorelin": "Sermorelin 10mg.jpg",
+  "ss-31": "SS-31 50mg.jpg",
+  "tb-500": "TB-500 10mg.jpg",
+  "tesamorelin": "Tesamorelin 5mg.jpg",
+  "tesofensine": "Tesofensine 500mcg.png",
+  "tirzepatide": "Tirzepatide 10mg.jpg"
+};
 
 export default async function CategoryPage({ params }: { params: { locale: string; category: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'CategoryDetail' });
@@ -64,45 +94,64 @@ export default async function CategoryPage({ params }: { params: { locale: strin
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map(product => (
-              <div key={product.name} className="bg-[#0e131b] border border-white/5 rounded-xl p-8 hover:border-brand-accent/30 transition-all flex flex-col">
-                <h3 className="text-3xl font-rajdhani font-bold text-white mb-4 border-b border-white/10 pb-4">{product.name}</h3>
-                {product.cas && <div className="text-gray-500 font-dm-mono text-xs mb-4">CAS: {product.cas}</div>}
-                <div className="mb-6 flex-grow">
-                  <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{ct('availableSpecs')}</h4>
-                  <ul className="space-y-2">
-                    {product.specs.map(spec => (
-                      <li key={spec} className="flex items-center gap-2 text-gray-300 font-dm-sans"><CheckCircle2 className="w-4 h-4 text-brand-accent" />{spec}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="bg-black/50 p-4 rounded-lg mb-6 border border-white/5">
-                  <div className="flex justify-between mb-2"><span className="text-gray-400 text-sm">{ct('moq')}</span><span className="text-white font-bold font-dm-mono">{ct('units')}</span></div>
-                  <div className="flex justify-between"><span className="text-gray-400 text-sm">{ct('pricing')}</span><span className="text-brand-accent font-bold font-dm-mono text-sm border border-brand-accent/30 px-2 py-1 rounded bg-brand-accent/10">{ct('contact')}</span></div>
-                </div>
-                <div className="flex flex-col gap-3">
-                  <Link href={`/products/${product.category}/${product.slug}`} className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">{ct('viewDetails')}</Link>
-                  
-                  {(() => {
-                    const [spec, kitSizeStr] = product.specs[0].split('×');
-                    return (
-                      <AddToInquiryButton
-                        productId={product.slug}
-                        productName={product.name}
-                        category={t(`categories.${params.category}.title`)}
-                        spec={spec}
-                        kitSize={parseInt(kitSizeStr)}
-                        categoryPage={`/products/${product.category}`}
+            {products.map(product => {
+              const productImage = productImagesMap[product.slug as keyof typeof productImagesMap];
+              return (
+                <div key={product.name} className="bg-[#0e131b] border border-white/5 rounded-xl p-6 md:p-8 hover:border-brand-accent/30 transition-all flex flex-col group/card">
+                  {/* Luxury Product Image Showcase */}
+                  <div className="relative aspect-square w-full rounded-xl border border-white/10 bg-black/40 overflow-hidden flex items-center justify-center mb-6 shadow-lg group-hover/card:border-brand-accent/20 transition-colors">
+                    {productImage ? (
+                      <img 
+                        src={encodeURI(`/Product images/${productImage}`)}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105"
                       />
-                    );
-                  })()}
+                    ) : (
+                      <div className="flex flex-col items-center justify-center text-center p-6 text-gray-600">
+                        <FlaskConical className="w-12 h-12 text-brand-accent/40 mb-2 group-hover/card:text-brand-accent/60 transition-colors" />
+                        <span className="text-[10px] font-dm-mono uppercase tracking-[0.2em] text-white/30">Research Only</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-3xl font-rajdhani font-bold text-white mb-4 border-b border-white/10 pb-4 group-hover/card:text-brand-accent transition-colors">{product.name}</h3>
+                  {product.cas && <div className="text-gray-500 font-dm-mono text-xs mb-4">CAS: {product.cas}</div>}
+                  <div className="mb-6 flex-grow">
+                    <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{ct('availableSpecs')}</h4>
+                    <ul className="space-y-2">
+                      {product.specs.map(spec => (
+                        <li key={spec} className="flex items-center gap-2 text-gray-300 font-dm-sans"><CheckCircle2 className="w-4 h-4 text-brand-accent" />{spec}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-black/50 p-4 rounded-lg mb-6 border border-white/5">
+                    <div className="flex justify-between mb-2"><span className="text-gray-400 text-sm">{ct('moq')}</span><span className="text-white font-bold font-dm-mono">{ct('units')}</span></div>
+                    <div className="flex justify-between"><span className="text-gray-400 text-sm">{ct('pricing')}</span><span className="text-brand-accent font-bold font-dm-mono text-sm border border-brand-accent/30 px-2 py-1 rounded bg-brand-accent/10">{ct('contact')}</span></div>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <Link href={`/products/${product.category}/${product.slug}`} className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">{ct('viewDetails')}</Link>
+                    
+                    {(() => {
+                      const [spec, kitSizeStr] = product.specs[0].split('×');
+                      return (
+                        <AddToInquiryButton
+                          productId={product.slug}
+                          productName={product.name}
+                          category={t(`categories.${params.category}.title`)}
+                          spec={spec}
+                          kitSize={parseInt(kitSizeStr)}
+                          categoryPage={`/products/${product.category}`}
+                        />
+                      );
+                    })()}
 
-                  <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(ct('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-[#25D366] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
-                    <Zap className="w-5 h-5" /> {ct('whatsappPricing')}
-                  </a>
+                    <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(ct('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-[#25D366] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
+                      <Zap className="w-5 h-5" /> {ct('whatsappPricing')}
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

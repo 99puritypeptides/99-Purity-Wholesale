@@ -1,10 +1,22 @@
 import React from 'react';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
-import { AlertTriangle, FlaskConical, Activity, Brain, ShieldAlert, Sparkles, Syringe, Box, TrendingUp, ShieldCheck, Truck, Award, CheckCircle2, ArrowRight, Zap } from 'lucide-react';
+import { 
+  AlertTriangle, 
+  ShieldCheck, 
+  Truck, 
+  Award, 
+  Globe, 
+  Zap, 
+  Microscope, 
+  Star, 
+  FlaskConical 
+} from 'lucide-react';
 import productsData from '@/data/products.json';
 import ProductDirectory from '@/components/products/ProductDirectory';
 import GlobalCTA from '@/components/layout/GlobalCTA';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
+import FaqSection from '@/components/shared/FaqSection';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
@@ -17,27 +29,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 const getCategoryIcon = (id: string) => {
   switch (id) {
-    case 'glp1-metabolic-peptides': return Activity;
-    case 'growth-hormone': return TrendingUp;
-    case 'healing-recovery-peptides': return FlaskConical;
-    case 'cognitive-nootropic': return Brain;
-    case 'anti-aging-longevity': return Sparkles;
-    case 'cosmetic-aesthetic': return Syringe;
-    case 'ancillaries': return Box;
+    case 'glp1-metabolic-peptides': return Zap;
+    case 'growth-hormone': return Award;
+    case 'healing-recovery-peptides': return ShieldCheck;
+    case 'cognitive-nootropic': return Microscope;
+    case 'anti-aging-longevity': return Star;
+    case 'cosmetic-aesthetic': return Globe;
+    case 'ancillaries': return FlaskConical;
     default: return FlaskConical;
-  }
-};
-
-const getCategoryColor = (id: string) => {
-  switch (id) {
-    case 'glp1-metabolic-peptides': return 'from-teal-500/10';
-    case 'growth-hormone': return 'from-blue-500/10';
-    case 'healing-recovery-peptides': return 'from-green-500/10';
-    case 'cognitive-nootropic': return 'from-purple-500/10';
-    case 'anti-aging-longevity': return 'from-amber-500/10';
-    case 'cosmetic-aesthetic': return 'from-pink-500/10';
-    case 'ancillaries': return 'from-slate-500/10';
-    default: return 'from-gray-500/10';
   }
 };
 
@@ -60,8 +59,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
     description: t(`categories.${id}.desc`),
     longDesc: t(`categories.${id}.longDesc`),
     compounds: t(`categories.${id}.compounds`),
-    icon: getCategoryIcon(id),
-    color: getCategoryColor(id)
+    icon: getCategoryIcon(id)
   }));
 
   // Strip icon components for Client Component boundary
@@ -83,135 +81,173 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
-      {/* Research Disclaimer Banner */}
-      <div className="bg-yellow-900/20 border-b border-yellow-700/30 text-yellow-500 py-3 px-4 text-center text-sm font-dm-mono flex items-center justify-center gap-2">
-        <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-        {t('banner')}
+    <div className="flex flex-col min-h-screen bg-[#05080C] text-brand-text -mt-24 md:-mt-32">
+      {/* Research Disclaimer Banner - Redesigned Beautifully */}
+      <div className="bg-[#05080C] border-b border-yellow-500/10 pt-28 md:pt-36 pb-3.5 px-4 text-center relative z-20">
+        <div className="max-w-6xl mx-auto flex items-center justify-center gap-2.5">
+          <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0 text-yellow-500 animate-pulse" />
+          <span className="font-dm-mono text-[9px] uppercase tracking-[0.25em] text-[#A0AEC0] leading-none">
+            All products are for <span className="text-yellow-500 font-bold">laboratory research use only</span>. Not for human consumption.
+          </span>
+        </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 border-b border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-accent/5 via-brand-bg to-brand-bg pointer-events-none" />
-        <div className="container mx-auto px-4 max-w-5xl relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-rajdhani font-bold mb-6 text-white tracking-tighter leading-tight">
+      {/* Cinematic Dark Hero Section */}
+      <section className="relative min-h-[45vh] flex flex-col justify-center items-center overflow-hidden bg-[#090C11] text-white px-6 py-20 md:py-28 border-b border-white/5">
+        {/* Cinematic Dark Background & Vignette */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-radial-vignette opacity-80 z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-accent/15 via-[#090C11] to-[#090C11] z-10" />
+          <div className="absolute inset-0 opacity-[0.015] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] z-10" />
+        </div>
+
+        <div className="relative z-20 max-w-4xl w-full text-center flex flex-col items-center">
+          {/* Premium Status Badge */}
+          <FadeIn delay={0.1}>
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-xl mb-6">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand-accent"></span>
+              </span>
+              <span className="text-[9px] font-dm-mono font-bold uppercase tracking-[0.3em] text-white/60">
+                Institutional Sourcing Catalog
+              </span>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <h1 className="font-absans text-4xl md:text-7xl font-bold leading-[1.1] tracking-tighter uppercase mb-6 text-white drop-shadow-lg">
               {t('title')}
             </h1>
-            <p className="text-xl text-gray-400 font-dm-sans max-w-2xl mx-auto leading-relaxed">
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <p className="font-archia text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto font-medium">
               {t('subtitle')}
             </p>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* MOQ/Wholesale Info Banner */}
-      <section className="py-12 bg-[#0B0F15] border-b border-white/5">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center border border-brand-accent/20">
-                <ShieldCheck className="w-6 h-6 text-brand-accent" />
-              </div>
-              <div>
-                <h3 className="text-white font-rajdhani font-bold text-lg uppercase tracking-wide">{t('moqTitle')}</h3>
-                <p className="text-gray-500 text-sm font-dm-sans">{t('moqText')}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center border border-brand-accent/20">
-                <Truck className="w-6 h-6 text-brand-accent" />
-              </div>
-              <div>
-                <h3 className="text-white font-rajdhani font-bold text-lg uppercase tracking-wide">Nationwide Fulfillment</h3>
-                <p className="text-gray-500 text-sm font-dm-sans">Discreet 50-state U.S. shipping</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center border border-brand-accent/20">
-                <Award className="w-6 h-6 text-brand-accent" />
-              </div>
-              <div>
-                <h3 className="text-white font-rajdhani font-bold text-lg uppercase tracking-wide">Purity Guaranteed</h3>
-                <p className="text-gray-500 text-sm font-dm-sans">Batch-matched COA provided</p>
-              </div>
-            </div>
-          </div>
+      {/* MOQ/Wholesale Info Banner - Redesigned as Cinematic Dark Cards */}
+      <section className="relative z-20 bg-[#090C11] border-b border-white/5 py-10">
+        <div className="max-w-6xl mx-auto px-6">
+          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+                <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
+                   <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div>
+                   <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">{t('moqTitle')}</h3>
+                   <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">{t('moqText')}</p>
+                </div>
+             </StaggerItem>
+             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+                <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
+                   <Truck className="w-4 h-4" />
+                </div>
+                <div>
+                   <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">Nationwide Fulfillment</h3>
+                   <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">Secure 50-state U.S. priority logistics</p>
+                </div>
+             </StaggerItem>
+             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+                <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
+                   <Award className="w-4 h-4" />
+                </div>
+                <div>
+                   <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">Purity Guaranteed</h3>
+                   <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">Batch-matched COA and HPLC verification</p>
+                </div>
+             </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* Search Directory */}
-      <div className="min-h-[400px]">
-        <React.Suspense fallback={
-          <div className="flex items-center justify-center py-20">
-            <div className="w-10 h-10 border-4 border-brand-accent/20 border-t-brand-accent rounded-full animate-spin"></div>
+      {/* Search Directory Module */}
+      <section className="bg-[#F8F8F6] py-16 border-b border-black/5 relative overflow-hidden">
+        {/* Subtle Light Grain Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="text-center mb-10">
+            <span className="text-[10px] font-dm-mono font-bold uppercase tracking-[0.3em] text-black/40 block mb-3">
+              [ laboratory procurement terminal ]
+            </span>
+            <h2 className="font-absans text-3xl md:text-5xl font-bold text-black uppercase tracking-tight">
+              Instant Compound Discovery
+            </h2>
           </div>
-        }>
-          <ProductDirectory products={productsData} categories={categoriesForDirectory} />
-        </React.Suspense>
-      </div>
+        </div>
+        <div className="min-h-[400px]">
+          <React.Suspense fallback={
+            <div className="flex items-center justify-center py-20">
+              <div className="w-10 h-10 border-4 border-brand-accent/20 border-t-brand-accent rounded-full animate-spin"></div>
+            </div>
+          }>
+            <ProductDirectory products={productsData} categories={categoriesForDirectory} />
+          </React.Suspense>
+        </div>
+      </section>
 
-      {/* Category Cards */}
-      <section className="py-24 bg-[#060B17] border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-rajdhani font-bold text-white mb-4">Research Categories</h2>
-            <p className="text-gray-400 font-dm-sans max-w-2xl mx-auto">Explore our specialized catalog of domestic-manufactured research compounds verified for purity.</p>
+      {/* Redesigned Categories Library */}
+      <section className="relative z-10 overflow-hidden bg-[#060B17] py-24 md:py-32 border-b border-white/5">
+        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+          <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
+            <FadeIn className="max-w-3xl">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-10 h-px bg-white/20" />
+                <span className="text-[10px] font-dm-mono font-bold uppercase tracking-[0.4em] text-white/40">RESEARCH LIBRARY</span>
+              </div>
+              <h2 className="font-absans text-4xl md:text-7xl font-bold text-white leading-none tracking-tighter uppercase">
+                Product
+                <span className="text-white/20 italic font-medium lowercase ml-4">Categories</span>
+              </h2>
+              <p className="mt-8 max-w-xl font-archia text-lg text-white/40 leading-relaxed font-medium">
+                Explore our specialized catalog of domestic-manufactured research compounds verified for purity.
+              </p>
+            </FadeIn>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {categories.map((cat) => (
-              <div key={cat.id} className="group relative bg-[#0e131b] border border-white/5 rounded-2xl p-8 hover:border-brand-accent/30 transition-all flex flex-col h-full overflow-hidden">
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${cat.color} blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-                
-                <div className="flex items-start justify-between mb-8 relative z-10">
-                  <div className="p-3 bg-brand-accent/10 rounded-xl border border-brand-accent/20">
-                    <cat.icon className="w-6 h-6 text-brand-accent" />
+              <StaggerItem key={cat.id}>
+                <div className="group relative h-[460px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20">
+                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
+                  <div className="flex h-full flex-col justify-between relative z-10">
+                    <div>
+                      <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 border border-white/10 group-hover:bg-white group-hover:text-black transition-all duration-500">
+                        <cat.icon className="h-6 w-6 text-white group-hover:text-black transition-colors duration-500" />
+                      </div>
+                      <h4 className="font-absans text-2xl font-bold leading-tight text-white tracking-tight mb-4">{cat.name}</h4>
+                      <p className="line-clamp-4 font-archia text-sm leading-relaxed text-white/40 group-hover:text-white/60 transition-colors font-medium mb-6">{cat.longDesc}</p>
+                    </div>
+                    
+                    <div className="pt-6 border-t border-white/5">
+                      <span className="block text-[8px] text-white/20 uppercase tracking-widest mb-2 font-dm-mono">Compounds</span>
+                      <p className="text-xs text-white/50 font-archia leading-relaxed italic line-clamp-1">{cat.compounds}</p>
+                    </div>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-gray-700 group-hover:text-brand-accent group-hover:translate-x-1 transition-all" />
+
+                  <Link href={`/products/${cat.id}`} className="absolute inset-0 z-20"></Link>
                 </div>
-
-                <h3 className="text-2xl font-rajdhani font-bold text-white mb-4 relative z-10">{cat.name}</h3>
-                <p className="text-gray-400 text-sm font-dm-sans leading-relaxed mb-6 relative z-10 flex-grow">
-                  {cat.longDesc}
-                </p>
-
-                <div className="pt-6 border-t border-white/5 relative z-10">
-                  <span className="block text-[10px] text-gray-600 uppercase tracking-widest mb-2 font-dm-mono">Compounds</span>
-                  <p className="text-xs text-gray-500 font-dm-sans leading-relaxed italic">{cat.compounds}</p>
-                </div>
-
-                <Link href={`/products/${cat.id}`} className="absolute inset-0 z-20"></Link>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* Professional FAQ Section */}
-      <section className="py-24 border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-rajdhani font-bold text-white mb-4">Peptide Wholesale FAQ</h2>
-            <p className="text-gray-400 font-dm-sans">Essential information for clinical directors and research procurement teams.</p>
-          </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="group bg-[#0e131b] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-accent/20 transition-all">
-                <summary className="flex items-center justify-between p-7 cursor-pointer list-none gap-6 outline-none">
-                  <h3 className="text-lg font-rajdhani font-bold text-white group-open:text-brand-accent transition-colors">{faq.q}</h3>
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 group-open:border-brand-accent group-open:text-brand-accent transition-all">
-                    <span className="group-open:hidden text-xl">+</span>
-                    <span className="hidden group-open:block text-xl">−</span>
-                  </div>
-                </summary>
-                <div className="px-7 pb-7 border-t border-white/5 pt-6">
-                  <p className="text-gray-400 font-dm-sans leading-relaxed">{faq.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Redesigned FAQ Section using unified component */}
+      <FaqSection 
+        title="Peptide Sourcing FAQ"
+        subtitle="Essential information for clinical directors and research procurement teams regarding bulk compound sourcing."
+        items={faqs}
+        eyebrow="(PRODUCTS FAQ)"
+        theme="light"
+      />
 
       <GlobalCTA 
         badge="Institutional Sourcing"

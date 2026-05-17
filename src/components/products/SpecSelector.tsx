@@ -29,16 +29,16 @@ export default function SpecSelector({
   const [selectedSpec, setSelectedSpec] = useState(defaultSpec || specs[0]);
   const [selectedKitSize, setSelectedKitSize] = useState(defaultKitSize || kitSizes[0]);
 
-  const pillBaseClasses = "border px-3 py-1.5 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer";
-  const defaultPillClasses = "border-[#1D2B40] text-[#7A8FA3] bg-[#18212F] hover:border-[#7A8FA3]/30";
-  const selectedPillClasses = "border-[#4FC3D0] text-[#4FC3D0] bg-[#0d2030]";
+  const pillBaseClasses = "border px-5 py-2.5 rounded-full text-xs font-dm-sans font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer flex-shrink-0";
+  const defaultPillClasses = "border-black/10 text-black/60 bg-white hover:bg-black/5 hover:border-black/25 hover:text-black";
+  const selectedPillClasses = "border-black bg-black text-white";
 
   return (
     <div className="flex flex-col gap-6 w-full max-w-md">
       {/* Spec Selector */}
       <div className="flex flex-col gap-2">
-        <label className="text-white font-rajdhani font-bold text-sm">{t('selectSpec')}</label>
-        <div className="flex flex-wrap gap-2">
+        <label className="text-black/80 font-absans font-bold text-[10px] uppercase tracking-widest">{t('selectSpec')}</label>
+        <div className="flex flex-wrap gap-2.5">
           {specs.map((spec) => (
             <button
               key={spec}
@@ -55,8 +55,8 @@ export default function SpecSelector({
 
       {/* Kit Size Selector */}
       <div className="flex flex-col gap-2">
-        <label className="text-white font-rajdhani font-bold text-sm">{t('kitSize')}</label>
-        <div className="flex flex-wrap gap-2">
+        <label className="text-black/80 font-absans font-bold text-[10px] uppercase tracking-widest">{t('kitSize')}</label>
+        <div className="flex flex-wrap gap-2.5">
           {kitSizes.map((size) => (
             <button
               key={size}
@@ -72,8 +72,8 @@ export default function SpecSelector({
       </div>
 
       {/* MOQ and CTA */}
-      <div className="flex flex-col gap-4">
-        <p className="font-dm-mono text-[11px] text-[#7A8FA3] uppercase tracking-wider">
+      <div className="flex flex-col gap-4 pt-4 border-t border-black/5 mt-4">
+        <p className="font-dm-sans text-xs font-bold text-black/55 uppercase tracking-wider mt-1 mb-1">
           {t('moqLabel', { count: 10 })}
         </p>
         
