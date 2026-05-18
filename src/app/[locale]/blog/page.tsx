@@ -2,6 +2,8 @@ import { getAllPosts } from '@/utils/mdx';
 import { Link } from '@/i18n/routing';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { FadeIn } from '@/components/shared/Motion';
+import GlobalCTA from '@/components/layout/GlobalCTA';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
@@ -9,6 +11,36 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('blogTitle'),
     description: t('blogDesc'),
   };
+}
+
+// Curate high-quality, topic-relevant image paths dynamically for blog index cards
+function getPostCardImage(slug: string, index: number): string {
+  const normSlug = slug.toLowerCase();
+  if (normSlug.includes('glp') || normSlug.includes('weight')) {
+    return '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png';
+  }
+  if (normSlug.includes('bpc') || normSlug.includes('recovery')) {
+    return '/Product images/BPC-157 10mg.jpg';
+  }
+  if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
+    return '/Product images/NAD+ 500mg.jpg';
+  }
+  if (normSlug.includes('coa') || normSlug.includes('quality') || normSlug.includes('read-coa')) {
+    return '/lab_quality_bg_1778896760027.png';
+  }
+  if (normSlug.includes('pharmacy') || normSlug.includes('spas')) {
+    return '/Product images/HAIR, SKIN, & NAILS BLEND.png';
+  }
+  if (normSlug.includes('private-label')) {
+    return '/Product images/GLOW.jpg';
+  }
+  
+  const defaults = [
+    '/images/vial_kit_luxury.png',
+    '/images/chromatography_lab.png',
+    '/images/analytical_verification.png'
+  ];
+  return defaults[index % defaults.length];
 }
 
 export default async function BlogIndex({ params }: { params: { locale: string } }) {
@@ -25,57 +57,135 @@ export default async function BlogIndex({ params }: { params: { locale: string }
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text pt-24">
-      <div className="container mx-auto px-4 py-16 max-w-7xl">
-        <div className="mb-16 text-center">
-          <div className="w-16 h-16 mx-auto rounded-full bg-brand-accent/10 flex items-center justify-center mb-6">
-            <BookOpen className="w-8 h-8 text-brand-accent" />
-          </div>
-          <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
-            {t('badge')}
-          </div>
-          <h1 className="text-4xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            {t('title')}
-          </h1>
-          <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto leading-relaxed">
-            {t('subtitle')}
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            {tags.map((tag) => (
-              <span key={tag} className="bg-white/5 border border-white/10 text-white/50 px-3 py-1 rounded-full font-dm-mono text-xs uppercase tracking-wider">{tag}</span>
+    <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
+      
+      {/* Hero Section - Elegant Light Off-White Linen */}
+      <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
+        {/* Light Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+          <FadeIn>
+            <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+              {t('badge')}
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+              {t('title')}
+            </h1>
+            
+            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed mb-10">
+              {t('subtitle')}
+            </p>
+            
+            {/* Elegant Tag Filters Tray */}
+            <div className="flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
+              {tags.map((tag) => (
+                <span 
+                  key={tag} 
+                  className="bg-white border border-black/5 text-black/60 px-4 py-1.5 rounded-full font-dm-mono text-[10px] font-bold uppercase tracking-wider shadow-sm hover:border-black/15 transition-all"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Standalone Widescreen Clinical Laboratory Breakout Card */}
+      <section className="bg-[#F8F8F6] py-8 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
+              <img 
+                src="/lab_quality_bg_1778896760027.png"
+                alt="99 Purity Wholesale Analytical Research Compendium"
+                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Blog Cards Grid - Stealth Luxury Dark Section */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white border-t border-white/5 relative overflow-hidden">
+        {/* Dark Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {posts.map((post, idx) => (
+              <FadeIn key={post.slug} delay={0.05 * idx} className="h-full">
+                <Link href={`/blog/${post.slug}`} className="group block h-full">
+                  <div className="bg-[#090C12] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-brand-accent/30 hover:bg-[#0E131C] transition-all duration-500 shadow-2xl flex flex-col h-full group">
+                    
+                    {/* Top Portion: Rich Visual Image Header */}
+                    <div className="h-56 relative overflow-hidden bg-black/10">
+                      <img 
+                        src={getPostCardImage(post.slug, idx)} 
+                        alt={post.meta.title} 
+                        className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#090C12] via-transparent to-transparent pointer-events-none" />
+                      
+                      {/* Floating Lot Tag */}
+                      <div className="absolute top-6 left-6 z-10">
+                        <span className="bg-black/40 backdrop-blur-md text-brand-accent border border-brand-accent/20 px-3 py-1 rounded-full text-[9px] font-bold font-dm-mono uppercase tracking-wider">
+                          Article Lot
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Bottom Portion: Editorial Text Context */}
+                    <div className="p-8 flex-1 flex flex-col justify-between">
+                      <div>
+                        {/* Post Date */}
+                        <time className="text-white/40 font-dm-mono text-[9px] font-bold uppercase tracking-widest mb-3 block">
+                          {new Date(post.meta.date).toLocaleDateString(params.locale === 'es' ? 'es-ES' : 'en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </time>
+                        
+                        {/* Title */}
+                        <h2 className="text-2xl font-bold font-absans text-white uppercase tracking-tight mb-3 group-hover:text-brand-accent transition-colors leading-tight line-clamp-2">
+                          {post.meta.title}
+                        </h2>
+                        
+                        {/* Description */}
+                        <p className="text-white/55 font-archia font-medium text-xs leading-relaxed mb-6 line-clamp-3">
+                          {post.meta.description}
+                        </p>
+                      </div>
+
+                      {/* Read More Trigger */}
+                      <div className="inline-flex items-center gap-2 text-brand-accent font-bold font-dm-sans text-[9px] uppercase tracking-[0.2em] transition-all group-hover:text-white mt-auto">
+                        {t('readMore')} <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1.5 transition-transform" />
+                      </div>
+                    </div>
+
+                  </div>
+                </Link>
+              </FadeIn>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {posts.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-              <div className="bg-[#0B0F15] border border-white/5 rounded-xl p-8 hover:border-brand-accent/40 transition-all duration-300 h-full flex flex-col relative overflow-hidden">
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <BookOpen className="w-24 h-24" />
-                </div>
-                
-                <time className="text-brand-accent font-dm-mono text-sm mb-4 block">
-                  {new Date(post.meta.date).toLocaleDateString(params.locale === 'es' ? 'es-ES' : 'en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
-                </time>
-                <h2 className="text-2xl font-rajdhani font-bold text-white mb-4 group-hover:text-brand-accent transition-colors">
-                  {post.meta.title}
-                </h2>
-                <p className="text-gray-400 font-dm-sans mb-8 flex-grow">
-                  {post.meta.description}
-                </p>
-                <div className="flex items-center text-brand-accent font-bold font-rajdhani uppercase tracking-wider text-sm mt-auto">
-                  {t('readMore')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
+      {/* Global B2B Call-To-Action Segment */}
+      <GlobalCTA 
+        badge={t('badge')}
+        title={t('title')}
+        subtitle="Browse our comprehensive research compendium, highlighting synthesis benchmarks, purity metrics, and clinical dossier reviews."
+        primaryCtaText="WhatsApp Sales"
+        primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20your%20verified%20batch%20quality%20and%20receiving%20the%20wholesale%20price%20list."
+        secondaryCtaText="Email Laboratory"
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
+
+    </main>
   );
 }

@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ShieldCheck, FileText, Check, X, Search, Beaker, FlaskConical, TestTube, ArrowRight } from 'lucide-react';
+import { ShieldCheck, FileText, Check, X, Search, Beaker, FlaskConical, Microscope, Award, Globe, HelpCircle } from 'lucide-react';
 import productsData from '@/data/products.json';
+import { FadeIn } from '@/components/shared/Motion';
+import GlobalCTA from '@/components/layout/GlobalCTA';
 
 export default function QualityPage() {
   const t = useTranslations('QualityPage');
@@ -13,7 +15,6 @@ export default function QualityPage() {
     p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
     p.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
 
   const comparisonRows = [
     { 
@@ -49,199 +50,389 @@ export default function QualityPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pb-24 border-b border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-accent/10 via-brand-bg to-brand-bg"></div>
-        <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-          <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
-            {t('badge')}
-          </div>
-          <h1 className="text-5xl md:text-7xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            {t('title')}
-          </h1>
-          <p className="text-xl text-gray-400 font-dm-sans leading-relaxed">
-            {t('subtitle')}
-          </p>
+    <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
+      
+      {/* Hero Section - Elegant Light Off-White Linen */}
+      <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
+        {/* Light Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+          <FadeIn>
+            <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+              {t('badge')}
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+              {t('title')}
+            </h1>
+            
+            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed">
+              {t('subtitle')}
+            </p>
+          </FadeIn>
         </div>
       </section>
 
-      {/* 3-Step Testing Process */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-rajdhani font-bold text-white mb-4">{t('pipeline.title')}</h2>
-            <p className="text-gray-400 font-dm-sans max-w-2xl mx-auto">{t('pipeline.subtitle')}</p>
+      {/* Standalone Widescreen Clinical Laboratory Showcase Banner */}
+      <section className="bg-[#F8F8F6] py-12 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
+              {/* Pristine Full-Color Clinical Laboratory v2 Visual */}
+              <img 
+                src="/lab_quality_bg_1778896760027.png"
+                alt="99 Purity Wholesale Certified Quality Control Laboratory"
+                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 3-Step Testing Process - Stealth Luxury Dark Section */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
+        {/* Dark Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <FadeIn>
+              <div className="inline-block bg-white/5 border border-white/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-white/60 mb-6">
+                QUALITY ASSURANCE LOOP
+              </div>
+              
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-absans text-white uppercase tracking-tight leading-none mb-6 max-w-4xl mx-auto">
+                {t('pipeline.title')}
+              </h2>
+              
+              <p className="text-sm md:text-base font-archia font-medium text-white/55 max-w-3xl mx-auto leading-relaxed">
+                {t('pipeline.subtitle')}
+              </p>
+            </FadeIn>
           </div>
 
+          {/* Cards Pipeline Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="hidden md:block absolute top-12 left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-brand-accent/0 via-brand-accent/50 to-brand-accent/0"></div>
+            {/* Desktop connecting line */}
+            <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0 pointer-events-none"></div>
             
-            <div className="bg-[#0e131b] border border-white/5 rounded-xl p-8 relative z-10 hover:border-brand-accent/30 transition-colors text-center flex flex-col items-center">
-              <div className="w-20 h-20 bg-black rounded-full border border-brand-accent/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(79,195,208,0.2)]">
-                <FlaskConical className="w-8 h-8 text-brand-accent" />
+            {/* Step 1 */}
+            <FadeIn delay={0.1} className="bg-[#090C12] border border-white/5 rounded-[2.5rem] p-8 md:p-10 text-center relative z-10 hover:border-brand-accent/30 hover:bg-[#0E131C] transition-all duration-500 shadow-2xl flex flex-col items-center">
+              <div className="w-16 h-16 bg-white/5 border border-white/5 rounded-2xl flex items-center justify-center mb-6">
+                <FlaskConical className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-rajdhani font-bold text-white mb-3">{t('pipeline.step1.title')}</h3>
-              <p className="text-gray-400 font-dm-sans">
+              <div className="text-white/40 font-dm-mono font-bold text-[10px] uppercase tracking-widest mb-2">Step 01</div>
+              <h3 className="text-xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t('pipeline.step1.title')}</h3>
+              <p className="text-white/60 font-archia font-medium text-xs leading-relaxed">
                 {t('pipeline.step1.desc')}
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="bg-[#0e131b] border border-brand-accent/40 rounded-xl p-8 relative z-10 shadow-[0_0_30px_rgba(79,195,208,0.1)] text-center flex flex-col items-center">
-              <div className="w-20 h-20 bg-brand-accent/10 rounded-full border border-brand-accent flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(79,195,208,0.4)]">
-                <TestTube className="w-8 h-8 text-brand-accent" />
+            {/* Step 2 */}
+            <FadeIn delay={0.2} className="bg-[#090C12] border border-white/10 rounded-[2.5rem] p-8 md:p-10 text-center relative z-10 hover:border-brand-accent/40 hover:bg-[#0E131C] transition-all duration-500 shadow-2xl flex flex-col items-center">
+              <div className="w-16 h-16 bg-brand-accent/10 border border-brand-accent/20 rounded-2xl flex items-center justify-center mb-6">
+                <Microscope className="w-6 h-6 text-brand-accent" />
               </div>
-              <h3 className="text-2xl font-rajdhani font-bold text-white mb-3">{t('pipeline.step2.title')}</h3>
-              <p className="text-gray-400 font-dm-sans">
+              <div className="text-white/40 font-dm-mono font-bold text-[10px] uppercase tracking-widest mb-2">Step 02</div>
+              <h3 className="text-xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t('pipeline.step2.title')}</h3>
+              <p className="text-white/60 font-archia font-medium text-xs leading-relaxed">
                 {t('pipeline.step2.desc')}
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="bg-[#0e131b] border border-white/5 rounded-xl p-8 relative z-10 hover:border-brand-accent/30 transition-colors text-center flex flex-col items-center">
-              <div className="w-20 h-20 bg-black rounded-full border border-brand-accent/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(79,195,208,0.2)]">
-                <FileText className="w-8 h-8 text-brand-accent" />
+            {/* Step 3 */}
+            <FadeIn delay={0.3} className="bg-[#090C12] border border-white/5 rounded-[2.5rem] p-8 md:p-10 text-center relative z-10 hover:border-brand-accent/30 hover:bg-[#0E131C] transition-all duration-500 shadow-2xl flex flex-col items-center">
+              <div className="w-16 h-16 bg-white/5 border border-white/5 rounded-2xl flex items-center justify-center mb-6">
+                <FileText className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-rajdhani font-bold text-white mb-3">{t('pipeline.step3.title')}</h3>
-              <p className="text-gray-400 font-dm-sans">
+              <div className="text-white/40 font-dm-mono font-bold text-[10px] uppercase tracking-widest mb-2">Step 03</div>
+              <h3 className="text-xl font-bold font-absans text-white mb-4 uppercase tracking-wide">{t('pipeline.step3.title')}</h3>
+              <p className="text-white/60 font-archia font-medium text-xs leading-relaxed">
                 {t('pipeline.step3.desc')}
               </p>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Competitor Comparison Table */}
-      <section className="py-20 bg-[#0B0F15] border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl">
+      {/* Competitor Comparison Section - Sleek Off-White Linen */}
+      <section className="py-24 md:py-32 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+          
+          {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-rajdhani font-bold text-white mb-4">{t('comparison.title')}</h2>
-            <p className="text-gray-400 font-dm-sans">{t('comparison.subtitle')}</p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr>
-                  <th className="p-4 border-b-2 border-white/10 text-gray-500 font-dm-mono uppercase tracking-wider text-sm w-1/3">{t('comparison.headers.criteria')}</th>
-                  <th className="p-4 border-b-2 border-brand-accent text-brand-accent font-rajdhani font-bold text-xl w-1/3 bg-brand-accent/5 rounded-t-lg">{t('comparison.headers.ours')}</th>
-                  <th className="p-4 border-b-2 border-white/10 text-gray-400 font-rajdhani font-bold text-xl w-1/3">{t('comparison.headers.theirs')}</th>
-                </tr>
-              </thead>
-              <tbody className="font-dm-sans">
-                {comparisonRows.map((row, i) => (
-                  <tr key={row.id} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                    <td className="p-4 text-gray-300 font-bold">{row.crit}</td>
-                    <td className="p-4 bg-brand-accent/5 text-white flex items-center gap-2">
-                      <Check className="w-5 h-5 text-brand-accent flex-shrink-0" /> {row.ours}
-                    </td>
-                    <td className="p-4 text-gray-500 flex items-center gap-2">
-                      <X className="w-5 h-5 text-red-500 flex-shrink-0 opacity-70" /> {row.theirs}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* COA Library (Filterable) */}
-      <section className="py-20 bg-black border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-rajdhani font-bold text-white mb-2">{t('library.title')}</h2>
-              <p className="text-gray-400 font-dm-sans">{t('library.subtitle')}</p>
-            </div>
-            <div className="relative w-full md:w-96">
-              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-500" />
+            <FadeIn>
+              <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+                THE VERIFIED DIFFERENCE
               </div>
-              <input
-                type="text"
-                className="w-full bg-[#0e131b] border border-white/10 text-white rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all font-dm-sans"
-                placeholder={t('library.placeholder')}
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
+              
+              <h2 className="text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight mb-4">
+                {t('comparison.title')}
+              </h2>
+              
+              <p className="text-sm md:text-base font-archia font-medium text-black/55 max-w-2xl mx-auto leading-relaxed">
+                {t('comparison.subtitle')}
+              </p>
+            </FadeIn>
           </div>
 
-          <div className="bg-[#0e131b] border border-white/5 rounded-xl overflow-hidden">
-            <div className="max-h-[600px] overflow-y-auto">
-              <table className="w-full text-left border-collapse">
-                <thead className="sticky top-0 bg-[#161d27] shadow-md z-10">
-                  <tr>
-                    <th className="p-4 text-gray-500 font-dm-mono uppercase tracking-wider text-xs">{t('library.headers.name')}</th>
-                    <th className="p-4 text-gray-500 font-dm-mono uppercase tracking-wider text-xs hidden md:table-cell">{t('library.headers.category')}</th>
-                    <th className="p-4 text-gray-500 font-dm-mono uppercase tracking-wider text-xs hidden sm:table-cell">{t('library.headers.batch')}</th>
-                    <th className="p-4 text-right text-gray-500 font-dm-mono uppercase tracking-wider text-xs">{t('library.headers.action')}</th>
-                  </tr>
-                </thead>
-                <tbody className="font-dm-sans divide-y divide-white/5">
-                  {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product, idx) => (
-                      <tr key={idx} className="hover:bg-white/5 transition-colors">
-                        <td className="p-4">
-                          <div className="font-bold text-white">{product.name}</div>
-                          {product.cas !== 'N/A' && <div className="text-xs text-gray-500 font-dm-mono mt-1">CAS: {product.cas}</div>}
+          {/* Table Container */}
+          <FadeIn delay={0.1}>
+            <div className="bg-white border border-black/5 rounded-[2.5rem] overflow-hidden shadow-sm">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-[600px]">
+                  <thead>
+                    <tr className="border-b border-black/5 bg-[#FAF9F5]">
+                      <th className="p-6 text-black/40 font-dm-mono uppercase tracking-widest text-[10px] font-bold w-1/3">
+                        {t('comparison.headers.criteria')}
+                      </th>
+                      <th className="p-6 text-black font-absans font-bold text-sm uppercase tracking-wider w-1/3 bg-black/5">
+                        <div className="flex items-center gap-2">
+                          <Check className="w-4 h-4 text-black" />
+                          {t('comparison.headers.ours')}
+                        </div>
+                      </th>
+                      <th className="p-6 text-black/55 font-absans font-bold text-sm uppercase tracking-wider w-1/3">
+                        {t('comparison.headers.theirs')}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-black/5 font-archia font-medium text-sm">
+                    {comparisonRows.map((row) => (
+                      <tr key={row.id} className="hover:bg-black/[0.01] transition-colors">
+                        <td className="p-6 text-black font-bold uppercase tracking-wide text-xs">
+                          {row.crit}
                         </td>
-                        <td className="p-4 hidden md:table-cell text-gray-400 capitalize">
-                          {product.category.replace(/-/g, ' ')}
+                        <td className="p-6 bg-black/[0.02] text-black">
+                          <div className="flex items-start gap-2.5">
+                            <Check className="w-4 h-4 text-black flex-shrink-0 mt-0.5" />
+                            <span>{row.ours}</span>
+                          </div>
                         </td>
-                        <td className="p-4 hidden sm:table-cell">
-                          <span className="bg-brand-accent/10 text-brand-accent border border-brand-accent/20 px-2 py-1 rounded text-xs font-dm-mono uppercase tracking-wider">
-                            {t('library.verified')}
-                          </span>
-                        </td>
-                        <td className="p-4 text-right">
-                          <a href="/placeholder-coa.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-transparent border border-gray-600 hover:border-brand-accent hover:text-brand-accent text-gray-300 px-4 py-2 rounded font-dm-mono text-sm transition-colors">
-                            <FileText className="w-4 h-4" /> <span className="hidden sm:inline">{t('library.download')}</span>
-                          </a>
+                        <td className="p-6 text-black/45">
+                          <div className="flex items-start gap-2.5">
+                            <X className="w-4 h-4 text-black/35 flex-shrink-0 mt-0.5" />
+                            <span>{row.theirs}</span>
+                          </div>
                         </td>
                       </tr>
-                    ))
-                  ) : (
-                    <tr>
-                      <td colSpan={4} className="p-8 text-center text-gray-500 font-dm-sans">
-                        {t('library.empty', { searchTerm })}
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Lab Credentials Section */}
-      <section className="py-24 bg-[#0B0F15] relative overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2"></div>
-        <div className="container mx-auto px-4 max-w-5xl relative z-10 text-center">
-          <ShieldCheck className="w-16 h-16 text-brand-accent mx-auto mb-6" />
-          <h2 className="text-3xl md:text-5xl font-rajdhani font-bold text-white mb-6">{t('trust.title')}</h2>
-          <p className="text-xl text-gray-400 font-dm-sans max-w-3xl mx-auto mb-12">
-            {t('trust.desc')}
-          </p>
+      {/* COA Document Library - Interactive Reflowable Section */}
+      <section className="py-24 md:py-32 bg-[#FAF9F5] border-b border-black/5 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
           
-          <div className="flex flex-wrap justify-center gap-6">
-            <div className="bg-[#0e131b] border border-white/5 px-8 py-4 rounded-lg flex items-center gap-3">
-              <Beaker className="w-6 h-6 text-brand-accent" />
-              <span className="font-rajdhani font-bold text-white text-lg tracking-wide uppercase">{t('trust.badges.us')}</span>
-            </div>
-            <div className="bg-[#0e131b] border border-white/5 px-8 py-4 rounded-lg flex items-center gap-3">
-              <ShieldCheck className="w-6 h-6 text-brand-accent" />
-              <span className="font-rajdhani font-bold text-white text-lg tracking-wide uppercase">{t('trust.badges.cgmp')}</span>
-            </div>
-            <div className="bg-[#0e131b] border border-white/5 px-8 py-4 rounded-lg flex items-center gap-3">
-              <Check className="w-6 h-6 text-brand-accent" />
-              <span className="font-rajdhani font-bold text-white text-lg tracking-wide uppercase">{t('trust.badges.qa')}</span>
-            </div>
+          {/* Header & Search Bar split row */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-16">
+            <FadeIn className="max-w-xl">
+              <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+                ANALYTICAL DATABASE
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight mb-4">
+                {t('library.title')}
+              </h2>
+              <p className="text-sm md:text-base font-archia font-medium text-black/55">
+                {t('library.subtitle')}
+              </p>
+            </FadeIn>
+
+            {/* Glassmorphic Search Bar */}
+            <FadeIn className="w-full lg:w-auto min-w-[320px]">
+              <div className="relative w-full">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <Search className="h-4 w-4 text-black/40" />
+                </div>
+                <input
+                  type="text"
+                  className="w-full bg-white border border-black/10 text-black rounded-xl pl-11 pr-4 py-4 focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all font-archia font-medium text-sm shadow-sm"
+                  placeholder={t('library.placeholder')}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+            </FadeIn>
           </div>
+
+          {/* Table / Cards Container (Proper Responsive Reflow) */}
+          <FadeIn delay={0.1}>
+            <div className="bg-white border border-black/5 rounded-[2.5rem] overflow-hidden shadow-sm">
+              
+              {/* Desktop Table View */}
+              <div className="hidden md:block overflow-y-auto max-h-[600px]">
+                <table className="w-full text-left border-collapse">
+                  <thead className="sticky top-0 bg-[#FAF9F5] shadow-sm z-10">
+                    <tr className="border-b border-black/5">
+                      <th className="p-6 text-black/40 font-dm-mono uppercase tracking-widest text-[10px] font-bold">
+                        {t('library.headers.name')}
+                      </th>
+                      <th className="p-6 text-black/40 font-dm-mono uppercase tracking-widest text-[10px] font-bold">
+                        {t('library.headers.category')}
+                      </th>
+                      <th className="p-6 text-black/40 font-dm-mono uppercase tracking-widest text-[10px] font-bold">
+                        {t('library.headers.batch')}
+                      </th>
+                      <th className="p-6 text-right text-black/40 font-dm-mono uppercase tracking-widest text-[10px] font-bold">
+                        {t('library.headers.action')}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-black/5 font-archia font-medium text-sm">
+                    {filteredProducts.length > 0 ? (
+                      filteredProducts.map((product, idx) => (
+                        <tr key={idx} className="hover:bg-black/[0.01] transition-colors">
+                          <td className="p-6">
+                            <div className="font-bold text-black text-base">{product.name}</div>
+                            {product.cas !== 'N/A' && (
+                              <div className="text-[10px] text-black/40 font-dm-mono mt-1 tracking-widest uppercase">
+                                CAS: {product.cas}
+                              </div>
+                            )}
+                          </td>
+                          <td className="p-6 text-black/55 capitalize">
+                            {product.category.replace(/-/g, ' ')}
+                          </td>
+                          <td className="p-6">
+                            <span className="bg-black/5 text-black border border-black/5 px-3 py-1 rounded-full text-[10px] font-bold font-dm-mono uppercase tracking-wider">
+                              {t('library.verified')}
+                            </span>
+                          </td>
+                          <td className="p-6 text-right">
+                            <a 
+                              href="/placeholder-coa.pdf" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="inline-flex items-center justify-center gap-2 border border-black/15 hover:border-black hover:bg-black hover:text-white px-5 py-3 rounded-xl font-bold font-dm-sans text-[10px] uppercase tracking-[0.2em] transition-all"
+                            >
+                              <FileText className="w-3.5 h-3.5" /> 
+                              {t('library.download')}
+                            </a>
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan={4} className="p-12 text-center text-black/40 font-archia">
+                          {t('library.empty', { searchTerm })}
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Mobile Mobile Reflowed Card View */}
+              <div className="md:hidden divide-y divide-black/5 max-h-[600px] overflow-y-auto">
+                {filteredProducts.length > 0 ? (
+                  filteredProducts.map((product, idx) => (
+                    <div key={idx} className="p-6 flex flex-col gap-4">
+                      <div>
+                        <div className="font-bold text-black text-base">{product.name}</div>
+                        {product.cas !== 'N/A' && (
+                          <div className="text-[9px] text-black/45 font-dm-mono mt-1 tracking-wider uppercase">
+                            CAS: {product.cas}
+                          </div>
+                        )}
+                        <div className="text-xs text-black/55 capitalize mt-1">
+                          Category: {product.category.replace(/-/g, ' ')}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between gap-4 mt-2">
+                        <span className="bg-black/5 text-black border border-black/5 px-2.5 py-1 rounded-full text-[9px] font-bold font-dm-mono uppercase tracking-wider">
+                          {t('library.verified')}
+                        </span>
+                        
+                        <a 
+                          href="/placeholder-coa.pdf" 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="inline-flex items-center justify-center gap-2 border border-black/15 hover:border-black hover:bg-black hover:text-white px-4 py-2.5 rounded-lg font-bold font-dm-sans text-[9px] uppercase tracking-[0.2em] transition-all"
+                        >
+                          <FileText className="w-3 h-3" /> 
+                          {t('library.download')}
+                        </a>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="p-12 text-center text-black/40 font-archia text-sm">
+                    {t('library.empty', { searchTerm })}
+                  </div>
+                )}
+              </div>
+
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-    </div>
+      {/* Lab Credentials & Trust Section - Stealth Luxury Dark Section */}
+      <section className="py-24 md:py-32 bg-[#05080C] text-white relative overflow-hidden">
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2"></div>
+        <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
+          
+          <FadeIn>
+            <ShieldCheck className="w-16 h-16 text-white/60 mx-auto mb-8 animate-pulse" />
+            
+            <h2 className="text-3xl md:text-5xl font-bold font-absans text-white uppercase tracking-tight mb-6">
+              {t('trust.title')}
+            </h2>
+            
+            <p className="text-base md:text-lg font-archia font-medium text-white/55 max-w-3xl mx-auto leading-relaxed mb-16">
+              {t('trust.desc')}
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              {/* Badge 1 */}
+              <div className="bg-white/5 border border-white/5 px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:border-white/10 transition-colors">
+                <Globe className="w-5 h-5 text-white/70" />
+                <span className="font-absans font-bold text-white text-sm tracking-wider uppercase">
+                  {t('trust.badges.us')}
+                </span>
+              </div>
+              
+              {/* Badge 2 */}
+              <div className="bg-white/5 border border-white/5 px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:border-white/10 transition-colors">
+                <Award className="w-5 h-5 text-white/70" />
+                <span className="font-absans font-bold text-white text-sm tracking-wider uppercase">
+                  {t('trust.badges.cgmp')}
+                </span>
+              </div>
+              
+              {/* Badge 3 */}
+              <div className="bg-white/5 border border-white/5 px-8 py-5 rounded-2xl flex items-center justify-center gap-3 hover:border-white/10 transition-colors">
+                <Beaker className="w-5 h-5 text-white/70" />
+                <span className="font-absans font-bold text-white text-sm tracking-wider uppercase">
+                  {t('trust.badges.qa')}
+                </span>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Global B2B Call-To-Action Segment (Sleek Contrast) */}
+      <GlobalCTA 
+        badge={t('badge')}
+        title={t('title')}
+        subtitle={t('subtitle')}
+        primaryCtaText="WhatsApp Sales"
+        primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20your%20verified%20batch%20quality%20and%20receiving%20the%20wholesale%20price%20list."
+        secondaryCtaText="Email Laboratory"
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
+
+    </main>
   );
 }

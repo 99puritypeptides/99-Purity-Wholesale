@@ -2,305 +2,509 @@
   {
     "name": "5-AMINO-1MQ",
     "slug": "5-amino-1mq",
-    "category": "cosmetic-aesthetic",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "42464-96-0",
-    "description": "Research-grade compound intended strictly for laboratory, analytical, and in-vitro research applications. Not for human consumption, therapeutic use, veterinary use, or diagnostic procedures."
-  },
-  {
-    "name": "AOD9604",
-    "slug": "aod9604",
-    "category": "anti-aging-longevity",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "221231-10-3",
-    "description": "Research-use peptide supplied for scientific and analytical testing only. Not for human consumption or medical application."
+    "description": "Research-grade compound intended strictly for laboratory, analytical, and in-vitro research applications. Not for human consumption."
   },
   {
     "name": "Adamax",
     "slug": "adamax",
-    "category": "cognitive-nootropic",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "N/A",
-    "description": "Laboratory research material intended for controlled experimental environments only. Not approved for human consumption."
+    "category": "cognitive-function",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "80714-61-0",
+    "description": "Neurological research peptide studied for cognitive, neuroprotective, and sensory signaling properties in controlled laboratory environments."
   },
   {
     "name": "Adipotide/FTTP",
     "slug": "adipotide-fttp",
-    "category": "cosmetic-aesthetic",
-    "specs": ["2mg×10", "5mg×10", "10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "2mg×10",
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "N/A",
-    "description": "Research peptide manufactured for laboratory analysis and investigational research purposes only. Not for human or animal consumption."
+    "description": "Pro-apoptotic peptidomimetic researched for targeted cell signaling, fat tissue vascular study, and metabolic pathways."
   },
   {
-    "name": "B12",
-    "slug": "b12",
-    "category": "ancillaries",
-    "specs": ["10mg×10"],
-    "cas": "68-19-9",
-    "description": "Research-use compound for analytical and laboratory applications only. Not intended for ingestion or therapeutic use."
+    "name": "AOD9604",
+    "slug": "aod9604",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "221231-10-3",
+    "description": "Research-use peptide supplied for scientific and analytical testing only. Not for human consumption."
   },
   {
     "name": "B7-33",
     "slug": "b7-33",
-    "category": "healing-recovery-peptides",
-    "specs": ["2mg×10", "10mg×10"],
-    "cas": "N/A",
-    "description": "Research-grade peptide for scientific study and laboratory evaluation only. Not for human consumption."
+    "category": "recovery-research",
+    "specs": [
+      "2mg×10",
+      "10mg×10"
+    ],
+    "cas": "1609138-00-8",
+    "description": "Soluble relaxin receptor agonist studied for tissue remodeling, cardiovascular pathways, and fibrotic research models."
   },
   {
     "name": "BAC Water",
     "slug": "bac-water",
-    "category": "ancillaries",
-    "specs": ["3ml×10", "10ml×10"],
+    "category": "essentials",
+    "specs": [
+      "3ml×10",
+      "10ml×10"
+    ],
     "cas": "7732-18-5",
-    "description": "Laboratory-use bacteriostatic water intended for research handling and analytical preparation only. Not for direct human use."
+    "description": "Laboratory-use bacteriostatic water intended for research handling and analytical preparation only."
+  },
+  {
+    "name": "B12",
+    "slug": "b12",
+    "category": "aminos",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "68-19-9",
+    "description": "Research-use compound for analytical and laboratory applications only. Not intended for ingestion."
   },
   {
     "name": "BPC-157",
     "slug": "bpc-157",
-    "category": "healing-recovery-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "recovery-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "137525-51-0",
-    "description": "Research peptide intended exclusively for laboratory and investigational use. Not for human consumption or pharmaceutical application."
+    "description": "Research peptide intended exclusively for laboratory and investigational use. Not for human consumption."
   },
   {
     "name": "BPC 5mg+TB 5mg",
     "slug": "bpc-5mg-tb-5mg",
-    "category": "healing-recovery-peptides",
-    "specs": ["10mg×10"],
+    "category": "recovery-research",
+    "specs": [
+      "10mg×10"
+    ],
     "cas": "Blend",
-    "description": "Combination research peptide blend intended strictly for controlled laboratory research. Not for human consumption."
+    "description": "Combination research peptide blend intended strictly for controlled laboratory research."
   },
   {
     "name": "BPC 10mg+TB 10mg",
     "slug": "bpc-10mg-tb-10mg",
-    "category": "healing-recovery-peptides",
-    "specs": ["20mg×10"],
+    "category": "recovery-research",
+    "specs": [
+      "20mg×10"
+    ],
     "cas": "Blend",
-    "description": "Research peptide blend supplied for analytical and scientific evaluation only. Not for therapeutic or personal use."
+    "description": "Research peptide blend supplied for analytical and scientific evaluation only."
   },
   {
     "name": "Cagrilintide",
     "slug": "cagrilintide",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "141430-65-1",
-    "description": "Research-grade peptide for in-vitro and laboratory research applications only. Not intended for human consumption."
+    "description": "Research-grade peptide for in-vitro and laboratory research applications only."
   },
   {
-    "name": "CJC-1295 (no DAC)",
-    "slug": "cjc-1295-no-dac",
-    "category": "growth-hormone",
-    "specs": ["5mg×10", "10mg×10"],
-    "cas": "863288-34-0 (modified)",
-    "description": "Laboratory research peptide intended for scientific testing and investigational work only. Not for human use."
-  },
-  {
-    "name": "CJC-1295 + Ipam.",
-    "slug": "cjc-1295-ipam",
-    "category": "growth-hormone",
-    "specs": ["10mg×10"],
+    "name": "Cagrisema (2.5+2.5)",
+    "slug": "cagrisema",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10"
+    ],
     "cas": "Blend",
-    "description": "Research peptide blend formulated strictly for laboratory applications and analytical evaluation. Not for human consumption."
+    "description": "Lipotropic compound blend formulated strictly for advanced receptor synergy and laboratory metabolic research."
   },
   {
     "name": "CJC-1295 w/ DAC",
     "slug": "cjc-1295-dac",
-    "category": "growth-hormone",
-    "specs": ["5mg×10"],
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10"
+    ],
     "cas": "863288-34-0",
-    "description": "Scientific research peptide intended for controlled investigational environments only. Not approved for medical or dietary use."
+    "description": "Growth hormone releasing hormone analog with Drug Affinity Complex, synthesized for extended stability and receptor studies."
+  },
+  {
+    "name": "CJC-1295 (no DAC)",
+    "slug": "cjc-1295-no-dac",
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "863288-34-0",
+    "description": "GHRH analog without DAC, researched for pulse-mimicking somatotroph axis stimulation and pituitary studies."
+  },
+  {
+    "name": "CJC-1295 + Ipam.",
+    "slug": "cjc-1295-ipam",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Research peptide blend formulated strictly for laboratory applications and analytical evaluation."
+  },
+  {
+    "name": "Dihexa",
+    "slug": "dihexa",
+    "category": "cognitive-function",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "1401708-83-5",
+    "description": "Oligopeptide drug candidate researched for high-affinity hepatocyte growth factor (HGF) signaling and synaptic connectivity."
   },
   {
     "name": "DSIP",
     "slug": "dsip",
-    "category": "cognitive-nootropic",
-    "specs": ["5mg×10"],
+    "category": "sleep-cycle-investigation",
+    "specs": [
+      "5mg×10"
+    ],
     "cas": "62568-57-4",
-    "description": "Research-use peptide intended solely for laboratory experimentation and analytical testing. Not for human consumption."
+    "description": "Research-use peptide intended solely for laboratory experimentation and analytical testing."
+  },
+  {
+    "name": "Dulaglutide",
+    "slug": "dulaglutide",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "923950-08-7",
+    "description": "Long-acting GLP-1 receptor agonist fusion protein researched for glycemic control mechanisms and endocrine pathways."
   },
   {
     "name": "Epithalon",
     "slug": "epithalon",
-    "category": "anti-aging-longevity",
-    "specs": ["10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "50mg×10"
+    ],
     "cas": "307297-39-8",
-    "description": "Research peptide for laboratory analysis and scientific study only. Not intended for ingestion or therapeutic use."
+    "description": "Research peptide for laboratory analysis and scientific study only."
   },
   {
-    "name": "GHK-CU",
+    "name": "FOXO4",
+    "slug": "foxo4",
+    "category": "growth-factor-research",
+    "specs": [
+      "2mg×10",
+      "10mg×10"
+    ],
+    "cas": "N/A",
+    "description": "Designed strictly for investigational laboratory research into cellular health, longevity signaling, and senolytic pathways."
+  },
+  {
+    "name": "FOXO4-DRI",
+    "slug": "foxo4-dri",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "N/A",
+    "description": "D-retro-inverso isoform peptide studied for targeted cellular senescence pathways and cell viability assays."
+  },
+  {
+    "name": "GHK-Cu",
     "slug": "ghk-cu",
-    "category": "cosmetic-aesthetic",
-    "specs": ["50mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "50mg×10",
+      "100mg×10"
+    ],
     "cas": "49557-75-7",
-    "description": "Research-grade copper peptide intended for analytical and laboratory research only. Not for human consumption."
+    "description": "Research-grade copper peptide intended for analytical and laboratory research only."
   },
   {
     "name": "GLOW Blend",
     "slug": "glow-blend",
-    "category": "cosmetic-aesthetic",
-    "specs": ["10mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "70mg×10"
+    ],
     "cas": "Blend",
-    "description": "Research blend supplied for investigational and laboratory applications only. Not for personal or medical use."
+    "description": "Specialized synergistic peptide formulation designed strictly for in-vitro evaluation of skin remodeling and cellular glow pathways."
   },
   {
-    "name": "Hexarelin",
-    "slug": "hexarelin",
-    "category": "growth-hormone",
-    "specs": ["2mg×10"],
-    "cas": "140703-51-1",
-    "description": "Scientific research peptide intended exclusively for laboratory testing and evaluation. Not for human consumption."
+    "name": "KLOW Blend",
+    "slug": "klow-blend",
+    "category": "cellular-health-research",
+    "specs": [
+      "80mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Advanced cellular health and dermal signaling blend supplied strictly for controlled laboratory research."
   },
   {
-    "name": "HGH Fragment 176-191",
-    "slug": "hgh-fragment-176-191",
-    "category": "growth-hormone",
-    "specs": ["5mg×10"],
-    "cas": "N/A",
-    "description": "Research peptide intended strictly for scientific and analytical applications. Not approved for human use."
+    "name": "Glutathione",
+    "slug": "glutathione",
+    "category": "recovery-research",
+    "specs": [
+      "600mg×10",
+      "1500mg×10"
+    ],
+    "cas": "70-18-8",
+    "description": "High-purity antioxidant compound supplied strictly for controlled laboratory, analytical, and in-vitro applications."
   },
   {
     "name": "Ipamorelin",
     "slug": "ipamorelin",
-    "category": "growth-hormone",
-    "specs": ["2mg×10", "5mg×10"],
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "170851-70-4",
-    "description": "Laboratory research peptide supplied for analytical and investigational purposes only. Not for human consumption."
+    "description": "Laboratory research peptide supplied for analytical and investigational purposes only."
   },
   {
     "name": "KPV",
     "slug": "kpv",
-    "category": "healing-recovery-peptides",
-    "specs": ["5mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "17750-73-1",
-    "description": "Research peptide for controlled laboratory and scientific applications only. Not intended for human use."
+    "description": "Research peptide for controlled laboratory and scientific applications only."
+  },
+  {
+    "name": "L-Carnitine",
+    "slug": "l-carnitine",
+    "category": "aminos",
+    "specs": [
+      "1200mg×10"
+    ],
+    "cas": "541-15-1",
+    "description": "Research-grade amino acid formulation intended for analytical testing and laboratory metabolic research only."
   },
   {
     "name": "Lipo-C",
     "slug": "lipo-c",
-    "category": "ancillaries",
-    "specs": ["10ml×10"],
+    "category": "aminos",
+    "specs": [
+      "10ml×10"
+    ],
     "cas": "Blend",
-    "description": "Research-use formulation intended for laboratory handling and investigational study only. Not for ingestion or therapeutic application."
+    "description": "Lipotropic compound formulation researched for cellular transport mechanism studies and metabolic biology evaluation."
   },
   {
-    "name": "MELANOTAN I",
-    "slug": "melanotan-i",
-    "category": "cosmetic-aesthetic",
-    "specs": ["10mg×10"],
-    "cas": "75921-69-6",
-    "description": "Research peptide supplied for laboratory and analytical research only. Not for human consumption."
+    "name": "LL37",
+    "slug": "ll37",
+    "category": "recovery-research",
+    "specs": [
+      "5mg×10"
+    ],
+    "cas": "154947-66-7",
+    "description": "Antimicrobial peptide synthesized exclusively for academic, investigational, and clinical-preliminary laboratory research."
   },
   {
-    "name": "MELANOTAN II",
-    "slug": "melanotan-ii",
-    "category": "cosmetic-aesthetic",
-    "specs": ["10mg×10"],
-    "cas": "121062-08-6",
-    "description": "Scientific research compound intended solely for investigational and laboratory use. Not approved for human use."
+    "name": "MIC (Lipo C+B12)",
+    "slug": "mic-blend",
+    "category": "aminos",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Lipotropic blend optimized with Methionine, Inositol, Choline, and Methylcobalamin for biochemical signaling studies."
   },
   {
     "name": "MOTS-c",
     "slug": "mots-c",
-    "category": "anti-aging-longevity",
-    "specs": ["10mg×10", "15mg×10", "20mg×10", "40mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "15mg×10",
+      "20mg×10",
+      "40mg×10"
+    ],
     "cas": "1627580-64-6",
-    "description": "Research-grade peptide intended for laboratory and analytical applications only. Not for human consumption."
+    "description": "Research-grade peptide intended for laboratory and analytical applications only."
   },
   {
     "name": "NAD+",
     "slug": "nad",
-    "category": "anti-aging-longevity",
-    "specs": ["100mg×10", "500mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "100mg×10",
+      "500mg×10",
+      "1000mg×10"
+    ],
     "cas": "53-84-9",
-    "description": "Laboratory-use compound supplied for scientific evaluation and analytical research only. Not intended for therapeutic or dietary use."
-  },
-  {
-    "name": "PT-141",
-    "slug": "pt-141",
-    "category": "cosmetic-aesthetic",
-    "specs": ["10mg×10"],
-    "cas": "189691-06-3",
-    "description": "Research peptide intended strictly for scientific study and laboratory investigation. Not for human consumption."
+    "description": "Laboratory-use compound supplied for scientific evaluation and analytical research only."
   },
   {
     "name": "Retatrutide",
     "slug": "retatrutide",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10",
+      "15mg×10",
+      "20mg×10",
+      "30mg×10",
+      "60mg×10"
+    ],
     "cas": "2381089-83-2",
-    "description": "Research peptide provided exclusively for laboratory, analytical, and investigational use. Not for human consumption, clinical use, or diagnostic purposes."
+    "description": "Research peptide provided exclusively for laboratory, analytical, and investigational use."
+  },
+  {
+    "name": "Selank",
+    "slug": "selank",
+    "category": "cognitive-function",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "129954-34-3",
+    "description": "Neurological research peptide studied for cognitive, neuroprotective, and sensory signaling properties in controlled environments."
   },
   {
     "name": "Semaglutide",
     "slug": "semaglutide",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "15mg×10",
+      "20mg×10",
+      "30mg×10"
+    ],
     "cas": "910463-68-2",
-    "description": "Research-grade peptide intended for in-vitro and controlled laboratory research only. Not for human or veterinary consumption."
+    "description": "Research-grade peptide intended for in-vitro and controlled laboratory research only."
   },
   {
-    "name": "Sermorelin",
-    "slug": "sermorelin",
-    "category": "growth-hormone",
-    "specs": ["5mg×10"],
+    "name": "Semax",
+    "slug": "semax",
+    "category": "cognitive-function",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "80714-61-0",
+    "description": "Research-grade peptide intended for laboratory evaluation and cognitive signaling studies."
+  },
+  {
+    "name": "Sermorelin Acetate",
+    "slug": "sermorelin-acetate",
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "86168-78-7",
-    "description": "Scientific research peptide intended solely for laboratory experimentation and analytical testing. Not for human use."
+    "description": "Growth hormone releasing hormone analog studied for pituitary somatotroph stimulation and analytical research."
+  },
+  {
+    "name": "Snap-8",
+    "slug": "snap-8",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10",
+      "100mg×10"
+    ],
+    "cas": "868844-74-0",
+    "description": "Octapeptide compound manufactured strictly for dermatological, cellular signaling, and laboratory research applications only."
   },
   {
     "name": "SS-31",
     "slug": "ss-31",
-    "category": "anti-aging-longevity",
-    "specs": ["10mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "10mg×10",
+      "50mg×10"
+    ],
     "cas": "736992-21-5",
-    "description": "Research-use peptide for analytical and investigational laboratory applications only. Not intended for human consumption."
+    "description": "Research-use peptide for analytical and investigational laboratory applications only."
   },
   {
     "name": "TB-500",
     "slug": "tb-500",
-    "category": "healing-recovery-peptides",
-    "specs": ["5mg×10", "10mg×10"],
+    "category": "recovery-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "77591-33-4",
-    "description": "Research peptide intended for laboratory and scientific evaluation only. Not for human consumption or medical use."
+    "description": "Research peptide intended for laboratory and scientific evaluation only."
   },
   {
     "name": "Tesamorelin",
     "slug": "tesamorelin",
-    "category": "growth-hormone",
-    "specs": ["10mg×10"],
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10",
+      "20mg×10"
+    ],
     "cas": "218949-48-5",
-    "description": "Research-grade peptide supplied for controlled scientific and analytical applications only. Not intended for therapeutic use."
+    "description": "Research-grade peptide supplied for controlled scientific and analytical applications only."
   },
   {
-    "name": "Tesofensine",
-    "slug": "tesofensine",
-    "category": "cognitive-nootropic",
-    "specs": ["500mcg×10"],
-    "cas": "195875-84-4",
-    "description": "Research compound intended exclusively for laboratory testing and investigational research. Not for human consumption."
-  },
-  {
-    "name": "Thymalin",
-    "slug": "thymalin",
-    "category": "anti-aging-longevity",
-    "specs": ["10mg×10"],
-    "cas": "63958-90-7",
-    "description": "Laboratory research peptide intended for scientific study and analytical work only. Not approved for human use."
+    "name": "Thymalin/Thymulin",
+    "slug": "thymalin-thymulin",
+    "category": "cellular-health-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "63958-64-9",
+    "description": "Thymic factor peptide studied for cellular defense, immune response, and endocrine signaling pathways in analytical models."
   },
   {
     "name": "Thymosin Alpha-1",
     "slug": "thymosin-alpha-1",
-    "category": "anti-aging-longevity",
-    "specs": ["10mg×10"],
+    "category": "cellular-health-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
     "cas": "62304-98-7",
-    "description": "Research peptide intended for laboratory experimentation and controlled analytical use only. Not for human consumption."
+    "description": "High-purity thymic peptide researched for immune system modulation, cell viability, and cellular defense models."
   },
   {
     "name": "Tirzepatide",
     "slug": "tirzepatide",
-    "category": "glp1-metabolic-peptides",
-    "specs": ["5mg×10", "10mg×10", "15mg×10"],
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10",
+      "15mg×10",
+      "20mg×10",
+      "30mg×10",
+      "40mg×10",
+      "50mg×10",
+      "60mg×10",
+      "80mg×10"
+    ],
     "cas": "2023788-19-2",
-    "description": "Research-grade peptide intended strictly for laboratory, analytical, and investigational applications. Not for human consumption, medical use, or therapeutic administration."
+    "description": "Research-grade peptide intended strictly for laboratory, analytical, and investigational applications."
+  },
+  {
+    "name": "VIP",
+    "slug": "vip",
+    "category": "cellular-health-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "40077-57-4",
+    "description": "Vasoactive intestinal peptide for scientific investigation of pulmonary, immune, and inflammatory signaling pathways in research models."
   }
 ]

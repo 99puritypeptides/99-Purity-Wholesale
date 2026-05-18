@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import { 
-  AlertTriangle, 
   ShieldCheck, 
   Truck, 
   Award, 
@@ -29,13 +28,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 const getCategoryIcon = (id: string) => {
   switch (id) {
-    case 'glp1-metabolic-peptides': return Zap;
-    case 'growth-hormone': return Award;
-    case 'healing-recovery-peptides': return ShieldCheck;
-    case 'cognitive-nootropic': return Microscope;
-    case 'anti-aging-longevity': return Star;
-    case 'cosmetic-aesthetic': return Globe;
-    case 'ancillaries': return FlaskConical;
+    case 'metabolic-research': return Zap;
+    case 'cognitive-function': return Microscope;
+    case 'sleep-cycle-investigation': return ShieldCheck;
+    case 'growth-factor-research': return Award;
+    case 'recovery-research': return Star;
+    case 'cellular-health-research': return FlaskConical;
+    case 'aminos': return Globe;
+    case 'essentials': return Truck;
     default: return FlaskConical;
   }
 };
@@ -44,13 +44,14 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
   const t = await getTranslations({ locale, namespace: 'ProductsIndex' });
 
   const categoryIds = [
-    'glp1-metabolic-peptides',
-    'growth-hormone',
-    'healing-recovery-peptides',
-    'cognitive-nootropic',
-    'anti-aging-longevity',
-    'cosmetic-aesthetic',
-    'ancillaries'
+    'metabolic-research',
+    'cognitive-function',
+    'sleep-cycle-investigation',
+    'growth-factor-research',
+    'recovery-research',
+    'cellular-health-research',
+    'aminos',
+    'essentials'
   ];
 
   const categories = categoryIds.map(id => ({
@@ -82,18 +83,8 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
 
   return (
     <div className="flex flex-col min-h-screen bg-[#05080C] text-brand-text -mt-24 md:-mt-32">
-      {/* Research Disclaimer Banner - Redesigned Beautifully */}
-      <div className="bg-[#05080C] border-b border-yellow-500/10 pt-28 md:pt-36 pb-3.5 px-4 text-center relative z-20">
-        <div className="max-w-6xl mx-auto flex items-center justify-center gap-2.5">
-          <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0 text-yellow-500 animate-pulse" />
-          <span className="font-dm-mono text-[9px] uppercase tracking-[0.25em] text-[#A0AEC0] leading-none">
-            All products are for <span className="text-yellow-500 font-bold">laboratory research use only</span>. Not for human consumption.
-          </span>
-        </div>
-      </div>
-
       {/* Cinematic Dark Hero Section */}
-      <section className="relative min-h-[45vh] flex flex-col justify-center items-center overflow-hidden bg-[#090C11] text-white px-6 py-20 md:py-28 border-b border-white/5">
+      <section className="relative min-h-[45vh] flex flex-col justify-center items-center overflow-hidden bg-[#090C11] text-white px-6 pt-36 md:pt-48 pb-20 md:pb-28 border-b border-white/5">
         {/* Cinematic Dark Background & Vignette */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-radial-vignette opacity-80 z-10" />

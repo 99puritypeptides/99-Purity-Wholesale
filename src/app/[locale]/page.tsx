@@ -26,8 +26,8 @@ export default async function HomePage({ params }: { params: { locale: string } 
   const t = await getTranslations({ locale: params.locale, namespace: 'Index' });
   const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
 
-  const bestSellerSlugs = ['semaglutide', 'tirzepatide', 'retatrutide', 'bpc-157', 'tb-500', 'ipamorelin', 'cjc-1295-no-dac', 'nad', 'epithalon'];
-  const bestSellerCats = ['glp1-metabolic-peptides', 'glp1-metabolic-peptides', 'glp1-metabolic-peptides', 'healing-recovery-peptides', 'healing-recovery-peptides', 'growth-hormone', 'growth-hormone', 'anti-aging-longevity', 'anti-aging-longevity'];
+  const bestSellerSlugs = ['semaglutide', 'tirzepatide', 'retatrutide', 'bpc-157', 'tb-500', 'ipamorelin', 'cjc-1295-ipam', 'nad', 'epithalon'];
+  const bestSellerCats = ['metabolic-research', 'metabolic-research', 'metabolic-research', 'recovery-research', 'recovery-research', 'growth-factor-research', 'growth-factor-research', 'cellular-health-research', 'metabolic-research'];
   const heroBadges = ['purity', 'tested', 'b2b', 'states', 'shipping', 'usMade'] as const;
   const qualityDownloads = ['bpc', 'sema', 'tirz'] as const;
   const tierKeys: TierKey[] = ['starter', 'tier1', 'tier2', 'tier3'];
@@ -215,13 +215,14 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
           <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[
-              { id: 'glp1-metabolic-peptides', icon: Zap },
-              { id: 'growth-hormone', icon: Award },
-              { id: 'healing-recovery-peptides', icon: ShieldCheck },
-              { id: 'cognitive-nootropic', icon: Microscope },
-              { id: 'anti-aging-longevity', icon: Star },
-              { id: 'cosmetic-aesthetic', icon: Globe },
-              { id: 'ancillaries', icon: FlaskConical },
+              { id: 'metabolic-research', icon: Zap },
+              { id: 'cognitive-function', icon: Microscope },
+              { id: 'sleep-cycle-investigation', icon: ShieldCheck },
+              { id: 'growth-factor-research', icon: Award },
+              { id: 'recovery-research', icon: Star },
+              { id: 'cellular-health-research', icon: FlaskConical },
+              { id: 'aminos', icon: Globe },
+              { id: 'essentials', icon: Truck },
             ].map((cat, idx) => (
               <StaggerItem key={cat.id}>
                 <Link 

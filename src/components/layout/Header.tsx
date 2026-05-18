@@ -42,13 +42,14 @@ export default function Header() {
   };
 
   const categories = [
-    { id: 'glp1-metabolic-peptides', name: 'GLP-1 & Metabolic' },
-    { id: 'growth-hormone', name: 'Growth Hormone' },
-    { id: 'healing-recovery-peptides', name: 'Healing & Recovery' },
-    { id: 'anti-aging-longevity', name: 'Anti-Aging' },
-    { id: 'cognitive-nootropic', name: 'Cognitive & Nootropic' },
-    { id: 'cosmetic-aesthetic', name: 'Cosmetic & Aesthetic' },
-    { id: 'ancillaries', name: 'Ancillaries' },
+    { id: 'metabolic-research', name: 'Metabolic Research' },
+    { id: 'cognitive-function', name: 'Cognitive Function' },
+    { id: 'sleep-cycle-investigation', name: 'Sleep Cycle Investigation' },
+    { id: 'growth-factor-research', name: 'Growth Factor Research' },
+    { id: 'recovery-research', name: 'Recovery Research' },
+    { id: 'cellular-health-research', name: 'Cellular Health Research' },
+    { id: 'aminos', name: 'Aminos' },
+    { id: 'essentials', name: 'Essentials' },
   ];
 
   return (

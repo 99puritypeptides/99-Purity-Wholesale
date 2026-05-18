@@ -1,4 +1,4 @@
-import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, CheckCircle2, Settings, ShieldCheck, Award, Users, Globe, Lock } from 'lucide-react';
+import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, CheckCircle2, Settings, ShieldCheck, Award, Users, Globe, Lock, FlaskConical, ClipboardCheck, Handshake } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import GlobalCTA from '@/components/layout/GlobalCTA';

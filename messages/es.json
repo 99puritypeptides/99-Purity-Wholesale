@@ -1,10 +1,22 @@
 {
   "Index": {
     "StatsBar": {
-      "purity": { "label": "Pureza Verificada" },
-      "compounds": { "label": "Lote Probado" },
-      "clients": { "label": "Socios B2B" },
-      "coverage": { "label": "Fuente Nacional" }
+      "compounds": {
+        "label": "Compuestos de Investigación",
+        "sub": "En Catálogo Activo"
+      },
+      "purity": {
+        "label": "Pureza Garantizada",
+        "sub": "Verificada por Terceros"
+      },
+      "clients": {
+        "label": "Clientes B2B",
+        "sub": "Clínicas · Farmacias · Lab"
+      },
+      "coverage": {
+        "label": "Cobertura en EE. UU.",
+        "sub": "Solo Envío Nacional"
+      }
     },
     "Hero": {
       "title": "El Proveedor de Péptidos Mayorista de Confianza en América",
@@ -87,15 +99,51 @@
       "title": "Favoritos Mayoristas de Alto Volumen",
       "subtitle": "Nuestros compuestos de investigación más solicitados, fabricados con una pureza ≥99% y en los que confían más de 200 instituciones en todo el país.",
       "items": [
-        { "name": "Semaglutide", "spec": "5mg / 10mg", "desc": "El agonista del receptor GLP-1 estándar de la industria para la investigación metabólica." },
-        { "name": "Tirzepatide", "spec": "5mg / 10mg / 15mg", "desc": "Agonista dual de los receptores GLP-1 y GIP con una utilidad de investigación excepcional." },
-        { "name": "Retatrutide", "spec": "5mg / 10mg", "desc": "Agonista triple de próxima generación (GLP-1/GIP/Glucagón) para estudios avanzados." },
-        { "name": "BPC-157", "spec": "5mg / 10mg", "desc": "Pentadecapéptido gástrico altamente estable estudiado para la reparación y curación de tejidos." },
-        { "name": "TB-500", "spec": "5mg / 10mg", "desc": "Versión sintética de la Timosina Beta-4 estudiada para la angiogénesis y la recuperación." },
-        { "name": "Ipamorelin", "spec": "2mg / 5mg", "desc": "GHRP selectivo conocido por su estabilidad y eficacia probada en investigación." },
-        { "name": "CJC-1295 (sin DAC)", "spec": "5mg / 10mg", "desc": "Análogo de GHRH modificado frecuentemente emparejado con Ipamorelin en la investigación del eje GH." },
-        { "name": "NAD+", "spec": "100mg / 500mg", "desc": "Coenzima esencial para la salud mitocondrial y los modelos de investigación de longevidad." },
-        { "name": "Epithalon", "spec": "10mg", "desc": "Tetrapéptido estudiado por su papel en la activación de la telomerasa y la investigación pineal." }
+        {
+          "name": "Semaglutide",
+          "spec": "5mg / 10mg",
+          "desc": "El agonista del receptor GLP-1 estándar de la industria para la investigación metabólica."
+        },
+        {
+          "name": "Tirzepatide",
+          "spec": "5mg / 10mg / 15mg",
+          "desc": "Agonista dual de los receptores GLP-1 y GIP con una utilidad de investigación excepcional."
+        },
+        {
+          "name": "Retatrutide",
+          "spec": "5mg / 10mg",
+          "desc": "Agonista triple de próxima generación (GLP-1/GIP/Glucagón) para estudios avanzados."
+        },
+        {
+          "name": "BPC-157",
+          "spec": "5mg / 10mg",
+          "desc": "Pentadecapéptido gástrico altamente estable estudiado para la reparación y curación de tejidos."
+        },
+        {
+          "name": "TB-500",
+          "spec": "5mg / 10mg",
+          "desc": "Versión sintética de la Timosina Beta-4 estudiada para la angiogénesis y la recuperación."
+        },
+        {
+          "name": "Ipamorelin",
+          "spec": "2mg / 5mg",
+          "desc": "GHRP selectivo conocido por su estabilidad y eficacia probada en investigación."
+        },
+        {
+          "name": "CJC-1295 (sin DAC)",
+          "spec": "5mg / 10mg",
+          "desc": "Análogo de GHRH modificado frecuentemente emparejado con Ipamorelin en la investigación del eje GH."
+        },
+        {
+          "name": "NAD+",
+          "spec": "100mg / 500mg",
+          "desc": "Coenzima esencial para la salud mitocondrial y los modelos de investigación de longevidad."
+        },
+        {
+          "name": "Epithalon",
+          "spec": "10mg",
+          "desc": "Tetrapéptido estudiado por su papel en la activación de la telomerasa y la investigación pineal."
+        }
       ],
       "specs": "Especificaciones Disponibles",
       "purity": "Pureza",
@@ -152,22 +200,33 @@
       },
       "cta": "Discutir Precios en WhatsApp"
     },
-    "StatsBar": {
-      "compounds": { "label": "Compuestos de Investigación", "sub": "En Catálogo Activo" },
-      "purity": { "label": "Pureza Garantizada", "sub": "Verificada por Terceros" },
-      "clients": { "label": "Clientes B2B", "sub": "Clínicas · Farmacias · Lab" },
-      "coverage": { "label": "Cobertura en EE. UU.", "sub": "Solo Envío Nacional" }
-    },
     "Testimonials": {
       "badge": "Comentarios de los Clientes",
       "title": "Confiado por Profesionales en todo Estados Unidos",
       "items": [
-        { "quote": "Hemos estado adquiriendo péptidos de grado de investigación para nuestra instalación de compuestos durante dos años. La documentación de COA y la consistencia de la pureza de 99 Purity Wholesale simplemente no tienen comparación con ningún proveedor nacional que hayamos probado.", "role": "Director de Farmacia de Compuestos", "location": "Texas" },
-        { "quote": "Cambiar a 99 Purity Wholesale para nuestro suministro mayorista fue un cambio radical. Los precios por niveles facilitaron la escala a medida que crecía nuestra red de clínicas. Nuestro gerente de cuenta es receptivo y el cumplimiento es rápido.", "role": "Propietario de Red de Clínicas de Bienestar", "location": "Florida" },
-        { "quote": "Como distribuidor que atiende spas médicos en todo el suroeste, la pureza constante y los COA de lote confiables no son negociables. 99 Purity Wholesale ofrece ambos, cada vez.", "role": "Distribuidor B2B Regional", "location": "Arizona" }
+        {
+          "quote": "Hemos estado adquiriendo péptidos de grado de investigación para nuestra instalación de compuestos durante dos años. La documentación de COA y la consistencia de la pureza de 99 Purity Wholesale simplemente no tienen comparación con ningún proveedor nacional que hayamos probado.",
+          "role": "Director de Farmacia de Compuestos",
+          "location": "Texas"
+        },
+        {
+          "quote": "Cambiar a 99 Purity Wholesale para nuestro suministro mayorista fue un cambio radical. Los precios por niveles facilitaron la escala a medida que crecía nuestra red de clínicas. Nuestro gerente de cuenta es receptivo y el cumplimiento es rápido.",
+          "role": "Propietario de Red de Clínicas de Bienestar",
+          "location": "Florida"
+        },
+        {
+          "quote": "Como distribuidor que atiende spas médicos en todo el suroeste, la pureza constante y los COA de lote confiables no son negociables. 99 Purity Wholesale ofrece ambos, cada vez.",
+          "role": "Distribuidor B2B Regional",
+          "location": "Arizona"
+        }
       ],
       "verifiedClient": "Cliente Verificado",
-      "institutionalTrust": ["Instalación Certificada GMP", "Pureza Probada por HPLC", "Registrado en CLIA", "PORTAL B2B SEGURO"]
+      "institutionalTrust": [
+        "Instalación Certificada GMP",
+        "Pureza Probada por HPLC",
+        "Registrado en CLIA",
+        "PORTAL B2B SEGURO"
+      ]
     },
     "Services": {
       "badge": "Servicios para Socios",
@@ -175,20 +234,48 @@
       "description": "Más allá del suministro mayorista, 99 Purity Wholesale ofrece un conjunto completo de servicios B2B para clínicas, distribuidores y emprendedores que ingresan al mercado de péptidos. Desde el envío directo y la marca privada hasta el desarrollo de sitios web y la consultoría de lanzamiento de negocios.",
       "cta": "Explorar Todos los Servicios",
       "items": {
-        "dropshipping": { "title": "Programa de Envío Directo", "desc": "Venda sin mantener inventario. Nosotros cumplimos bajo su marca." },
-        "privateLabel": { "title": "Marca Privada", "desc": "Su marca en nuestros productos con pureza ≥99%. Basado en MOQ." },
-        "launch": { "title": "Lanzamiento de Negocios", "desc": "Inicie su marca de péptidos con orientación experta." },
-        "web": { "title": "Desarrollo Web", "desc": "Sitios de venta de péptidos que cumplen con las normas y de alta conversión." }
+        "dropshipping": {
+          "title": "Programa de Envío Directo",
+          "desc": "Venda sin mantener inventario. Nosotros cumplimos bajo su marca."
+        },
+        "privateLabel": {
+          "title": "Marca Privada",
+          "desc": "Su marca en nuestros productos con pureza ≥99%. Basado en MOQ."
+        },
+        "launch": {
+          "title": "Lanzamiento de Negocios",
+          "desc": "Inicie su marca de péptidos con orientación experta."
+        },
+        "web": {
+          "title": "Desarrollo Web",
+          "desc": "Sitios de venta de péptidos que cumplen con las normas y de alta conversión."
+        }
       },
       "scaleTitle": "Escala Tu <br /> Empresa de Péptidos",
       "scaleSubtitle": "Ya seas una clínica de bienestar o una marca digital, nuestra infraestructura está construida para respaldar tu crecimiento de $0 a $1M+.",
       "guide": "Guía Completa de Servicios",
       "wholesaleApp": "Solicitud Mayorista",
       "benefits": {
-        "dropshipping": ["Cumplimiento Directo al Cliente", "Envío Sigiloso Global", "Gestión de Riesgo de Inventario"],
-        "privateLabel": ["Marca y Embalaje Personalizados", "Certificación de Laboratorio", "Soporte de Identidad y Diseño"],
-        "launch": ["Estrategia de Salida al Mercado", "Pre-carga de Inventario", "Consultoría de Cumplimiento"],
-        "web": ["Escaparates de Alta Conversión", "Integración de Portal B2B", "Configuración de SEO y Analítica"]
+        "dropshipping": [
+          "Cumplimiento Directo al Cliente",
+          "Envío Sigiloso Global",
+          "Gestión de Riesgo de Inventario"
+        ],
+        "privateLabel": [
+          "Marca y Embalaje Personalizados",
+          "Certificación de Laboratorio",
+          "Soporte de Identidad y Diseño"
+        ],
+        "launch": [
+          "Estrategia de Salida al Mercado",
+          "Pre-carga de Inventario",
+          "Consultoría de Cumplimiento"
+        ],
+        "web": [
+          "Escaparates de Alta Conversión",
+          "Integración de Portal B2B",
+          "Configuración de SEO y Analítica"
+        ]
       }
     },
     "Blog": {
@@ -197,9 +284,24 @@
       "cta": "Ver Todos los Artículos",
       "readMore": "Leer Artículo",
       "items": [
-        { "slug": "how-to-start-peptide-product-line", "title": "Cómo Iniciar una Línea de Productos de Péptidos para su Clínica de Bienestar", "desc": "Una guía paso a paso para propietarios de clínicas que integran péptidos de grado de investigación en sus ofertas B2B.", "tag": "Guía de Negocios" },
-        { "slug": "us-manufactured-vs-imported-peptides", "title": "Péptidos Fabricados en EE. UU. frente a Importados: Lo que su Negocio Necesita Saber", "desc": "Por qué el abastecimiento nacional es importante para la garantía de calidad, la confiabilidad de los COA y el posicionamiento regulatorio.", "tag": "Calidad y Confianza" },
-        { "slug": "understanding-wholesale-peptide-pricing-tiers", "title": "Comprendiendo los Niveles de Precios de Péptidos al Por Mayor", "desc": "Un desglose de los modelos de precios por niveles y cómo maximizar los márgenes a medida que escala su volumen.", "tag": "Precios Mayoristas" }
+        {
+          "slug": "how-to-start-peptide-product-line",
+          "title": "Cómo Iniciar una Línea de Productos de Péptidos para su Clínica de Bienestar",
+          "desc": "Una guía paso a paso para propietarios de clínicas que integran péptidos de grado de investigación en sus ofertas B2B.",
+          "tag": "Guía de Negocios"
+        },
+        {
+          "slug": "us-manufactured-vs-imported-peptides",
+          "title": "Péptidos Fabricados en EE. UU. frente a Importados: Lo que su Negocio Necesita Saber",
+          "desc": "Por qué el abastecimiento nacional es importante para la garantía de calidad, la confiabilidad de los COA y el posicionamiento regulatorio.",
+          "tag": "Calidad y Confianza"
+        },
+        {
+          "slug": "understanding-wholesale-peptide-pricing-tiers",
+          "title": "Comprendiendo los Niveles de Precios de Péptidos al Por Mayor",
+          "desc": "Un desglose de los modelos de precios por niveles y cómo maximizar los márgenes a medida que escala su volumen.",
+          "tag": "Precios Mayoristas"
+        }
       ]
     },
     "FAQ": {
@@ -207,14 +309,38 @@
       "title": "Preguntas Frecuentes",
       "subtitle": "Todo lo que los profesionales autorizados necesitan saber sobre el abastecimiento de péptidos a granel de 99 Purity Wholesale. Entendemos que navegar por el mundo de los compuestos de investigación de laboratorio puede ser complejo. Hemos recopilado estas preguntas frecuentes para guiar su viaje de adquisición y cumplimiento.",
       "items": [
-        { "q": "¿Qué hace que 99 Purity Wholesale sea diferente de otros proveedores mayoristas de péptidos?", "a": "Somos un fabricante con sede en EE. UU., no un importador o reempaquetador. Cada lote se sintetiza a nivel nacional y se prueba de forma independiente por laboratorios externos acreditados de EE. UU. Cada producto se envía con un Certificado de Análisis (COA) emparejado por lote que confirma una pureza ≥99% mediante HPLC y espectrometría de masas." },
-        { "q": "¿Quién califica para comprar péptidos al por mayor de 99 Purity Wholesale?", "a": "Nuestros productos se venden estrictamente a profesionales autorizados e instituciones de investigación calificadas — incluyendo farmacias de compuestos, clínicas de bienestar, spas médicos, distribuidores autorizados e instalaciones de investigación académicas. Todas las compras requieren que el comprador atestigüe su estado profesional." },
-        { "q": "¿Cuál es la cantidad mínima de pedido (MOQ) para péptidos al por mayor?", "a": "Nuestro pedido mínimo es de 10 unidades (1 kit) per especificación de producto. Los descuentos por volumen se activan en 10, 20 y 40+ kits a través de nuestro programa de precios por niveles. Póngase en contacto con nuestro equipo para conocer los precios actuales." },
-        { "q": "¿Ofrecen péptidos a granel para farmacias de compuestos?", "a": "Sí. Las farmacias de compuestos son uno de nuestros principales segmentos de clientes B2B. Suministramos péptidos de grado de investigación a granel, incluidos los compuestos GLP-1, los secretagogos de la hormona del crecimiento y los péptidos de curación con documentación COA completa adecuada para los registros de adquisición de la farmacia." },
-        { "q": "¿Qué métodos de pago aceptan para pedidos al por mayor?", "a": "Aceptamos Bitcoin, Zelle y transferencia bancaria (ACH/Wire). Estos métodos están disponibles para todas las cuentas mayoristas verificadas. Póngase en contacto con nuestro equipo para obtener instrucciones de pago después de que se apruebe su cuenta." },
-        { "q": "¿Puedo obtener un COA antes de realizar un pedido al por mayor?", "a": "Sí. Los Certificados de Análisis para los lotes actuales están disponibles a pedido antes de la compra. Nuestro Centro de Calidad también mantiene una biblioteca de COA descargable para su referencia." },
-        { "q": "¿Ofrecen servicios de péptidos de marca privada o marca blanca?", "a": "Sí. Ofrecemos empaques de marca privada para cuentas de volumen calificadas. Su marca, su etiqueta, nuestra calidad de laboratorio con una pureza ≥99%. Consulte a través de WhatsApp para discutir volúmenes mínimos y opciones de personalización." },
-        { "q": "¿Cuánto tiempo tarda el envío de péptidos al por mayor dentro de los EE. UU.?", "a": "Los pedidos nacionales suelen enviarse en un plazo de 1 a 2 días hábiles después de la confirmación del pago. La entrega a la mayoría de los estados de EE. UU. es de 2 a 4 días hábiles mediante envío prioritario. Sin retrasos en aduanas internacionales — cumplimiento nacional 100% en EE. UU." }
+        {
+          "q": "¿Qué hace que 99 Purity Wholesale sea diferente de otros proveedores mayoristas de péptidos?",
+          "a": "Somos un fabricante con sede en EE. UU., no un importador o reempaquetador. Cada lote se sintetiza a nivel nacional y se prueba de forma independiente por laboratorios externos acreditados de EE. UU. Cada producto se envía con un Certificado de Análisis (COA) emparejado por lote que confirma una pureza ≥99% mediante HPLC y espectrometría de masas."
+        },
+        {
+          "q": "¿Quién califica para comprar péptidos al por mayor de 99 Purity Wholesale?",
+          "a": "Nuestros productos se venden estrictamente a profesionales autorizados e instituciones de investigación calificadas — incluyendo farmacias de compuestos, clínicas de bienestar, spas médicos, distribuidores autorizados e instalaciones de investigación académicas. Todas las compras requieren que el comprador atestigüe su estado profesional."
+        },
+        {
+          "q": "¿Cuál es la cantidad mínima de pedido (MOQ) para péptidos al por mayor?",
+          "a": "Nuestro pedido mínimo es de 10 unidades (1 kit) per especificación de producto. Los descuentos por volumen se activan en 10, 20 y 40+ kits a través de nuestro programa de precios por niveles. Póngase en contacto con nuestro equipo para conocer los precios actuales."
+        },
+        {
+          "q": "¿Ofrecen péptidos a granel para farmacias de compuestos?",
+          "a": "Sí. Las farmacias de compuestos son uno de nuestros principales segmentos de clientes B2B. Suministramos péptidos de grado de investigación a granel, incluidos los compuestos GLP-1, los secretagogos de la hormona del crecimiento y los péptidos de curación con documentación COA completa adecuada para los registros de adquisición de la farmacia."
+        },
+        {
+          "q": "¿Qué métodos de pago aceptan para pedidos al por mayor?",
+          "a": "Aceptamos Bitcoin, Zelle y transferencia bancaria (ACH/Wire). Estos métodos están disponibles para todas las cuentas mayoristas verificadas. Póngase en contacto con nuestro equipo para obtener instrucciones de pago después de que se apruebe su cuenta."
+        },
+        {
+          "q": "¿Puedo obtener un COA antes de realizar un pedido al por mayor?",
+          "a": "Sí. Los Certificados de Análisis para los lotes actuales están disponibles a pedido antes de la compra. Nuestro Centro de Calidad también mantiene una biblioteca de COA descargable para su referencia."
+        },
+        {
+          "q": "¿Ofrecen servicios de péptidos de marca privada o marca blanca?",
+          "a": "Sí. Ofrecemos empaques de marca privada para cuentas de volumen calificadas. Su marca, su etiqueta, nuestra calidad de laboratorio con una pureza ≥99%. Consulte a través de WhatsApp para discutir volúmenes mínimos y opciones de personalización."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda el envío de péptidos al por mayor dentro de los EE. UU.?",
+          "a": "Los pedidos nacionales suelen enviarse en un plazo de 1 a 2 días hábiles después de la confirmación del pago. La entrega a la mayoría de los estados de EE. UU. es de 2 a 4 días hábiles mediante envío prioritario. Sin retrasos en aduanas internacionales — cumplimiento nacional 100% en EE. UU."
+        }
       ]
     },
     "FinalCta": {
@@ -261,7 +387,55 @@
       "contact": "Contacto",
       "search": "Buscar"
     },
-    "whatsapp": "Contactar vía WhatsApp",
+    "whatsapp": {
+      "mockupTitle": "Soporte 99 Purity",
+      "mockupSubtitle": "Acceso Institucional",
+      "mockupWelcome": "Bienvenido al Conserje B2B de 99 Purity. Seleccione un módulo de adquisición para comenzar su consulta directa encriptada.",
+      "tooltipTitle": "Soporte Institucional",
+      "tooltipDesc": "¿Necesita Asistencia de Laboratorio?",
+      "messageOptions": {
+        "catalog": {
+          "label": "Consulta de Catálogo Mayorista",
+          "desc": "Precios Institucionales",
+          "text": "Hola, estoy interesado en recibir su catálogo mayorista completo y la lista de precios a granel para péptidos de investigación."
+        },
+        "partnership": {
+          "label": "Solicitud de Asociación",
+          "desc": "Verificación B2B",
+          "text": "Hola, me gustaría discutir una posible asociación institucional para la adquisición regular de compuestos."
+        },
+        "coa": {
+          "label": "Datos de Lote y Solicitud de COA",
+          "desc": "Soporte Técnico",
+          "text": "Saludos, tengo una pregunta técnica sobre la pureza del lote y me gustaría solicitar los datos del COA para un compuesto específico."
+        },
+        "synthesis": {
+          "label": "Solicitud de Síntesis Personalizada",
+          "desc": "Servicios Avanzados de Laboratorio",
+          "text": "Hola, estoy consultando sobre los servicios de síntesis de compuestos personalizados para un proyecto de investigación específico."
+        },
+        "distribution": {
+          "label": "Distribución Internacional",
+          "desc": "Logística Global",
+          "text": "Hola, estoy interesado en convertirme en un distribuidor regional de sus compuestos de investigación fuera de los EE. UU."
+        },
+        "status": {
+          "label": "Soporte de Estado de Pedido",
+          "desc": "Envío y Logística",
+          "text": "Hola, estoy verificando el estado de mi envío mayorista reciente. ¿Podría proporcionarme una actualización de seguimiento?"
+        },
+        "qa": {
+          "label": "Ayuda de Garantía de Calidad",
+          "desc": "Asistencia de Verificación",
+          "text": "Saludos, necesito ayuda con la verificación de laboratorio de sus compuestos para mi centro de investigación."
+        },
+        "technical": {
+          "label": "Ayuda Técnica General",
+          "desc": "Consulta Técnica",
+          "text": "Hola, tengo una pregunta general sobre sus protocolos de almacenamiento y manejo de compuestos."
+        }
+      }
+    },
     "selectLanguage": "Seleccionar Idioma",
     "cart": {
       "title": "Lista de Consulta",
@@ -287,23 +461,6 @@
         "desc": "Revise y gestione sus solicitudes de compuestos institucionales antes de enviarlas a nuestro equipo."
       }
     },
-    "whatsapp": {
-      "mockupTitle": "Soporte 99 Purity",
-      "mockupSubtitle": "Acceso Institucional",
-      "mockupWelcome": "Bienvenido al Conserje B2B de 99 Purity. Seleccione un módulo de adquisición para comenzar su consulta directa encriptada.",
-      "tooltipTitle": "Soporte Institucional",
-      "tooltipDesc": "¿Necesita Asistencia de Laboratorio?",
-      "messageOptions": {
-        "catalog": { "label": "Consulta de Catálogo Mayorista", "desc": "Precios Institucionales", "text": "Hola, estoy interesado en recibir su catálogo mayorista completo y la lista de precios a granel para péptidos de investigación." },
-        "partnership": { "label": "Solicitud de Asociación", "desc": "Verificación B2B", "text": "Hola, me gustaría discutir una posible asociación institucional para la adquisición regular de compuestos." },
-        "coa": { "label": "Datos de Lote y Solicitud de COA", "desc": "Soporte Técnico", "text": "Saludos, tengo una pregunta técnica sobre la pureza del lote y me gustaría solicitar los datos del COA para un compuesto específico." },
-        "synthesis": { "label": "Solicitud de Síntesis Personalizada", "desc": "Servicios Avanzados de Laboratorio", "text": "Hola, estoy consultando sobre los servicios de síntesis de compuestos personalizados para un proyecto de investigación específico." },
-        "distribution": { "label": "Distribución Internacional", "desc": "Logística Global", "text": "Hola, estoy interesado en convertirme en un distribuidor regional de sus compuestos de investigación fuera de los EE. UU." },
-        "status": { "label": "Soporte de Estado de Pedido", "desc": "Envío y Logística", "text": "Hola, estoy verificando el estado de mi envío mayorista reciente. ¿Podría proporcionarme una actualización de seguimiento?" },
-        "qa": { "label": "Ayuda de Garantía de Calidad", "desc": "Asistencia de Verificación", "text": "Saludos, necesito ayuda con la verificación de laboratorio de sus compuestos para mi centro de investigación." },
-        "technical": { "label": "Ayuda Técnica General", "desc": "Consulta Técnica", "text": "Hola, tengo una pregunta general sobre sus protocolos de almacenamiento y manejo de compuestos." }
-      }
-    },
     "footer": {
       "navTitle": "Navegación",
       "resTitle": "Recursos",
@@ -317,7 +474,12 @@
       "tradeTitle": "Comercio y Liquidación",
       "accepted": "Métodos Aceptados",
       "paymentMethods": "Métodos de Pago Aceptados",
-      "paymentList": ["Bitcoin (BTC)", "Zelle", "Bank Transfer", "USDT"],
+      "paymentList": [
+        "Bitcoin (BTC)",
+        "Zelle",
+        "Bank Transfer",
+        "USDT"
+      ],
       "letsTalk": "Hablemos",
       "disclaimer": "Descargo de Responsabilidad",
       "disclaimerContent": "Todos los compuestos son estrictamente para investigación de laboratorio in vitro y pruebas analíticas por profesionales autorizados. No son para consumo humano o veterinario, uso terapéutico o aplicación clínica. Los compradores asumen toda la responsabilidad regulatoria.",
@@ -444,12 +606,30 @@
       "p3": "Hoy atendemos a más de 200 clientes B2B en todo Estados Unidos, con un extenso catálogo, precios por niveles y documentación completa de COA en cada pedido.",
       "p4": "Nuestro catálogo abarca más de 50 compuestos de investigación en 7 categorías — desde péptidos metabólicos GLP-1 y secretagogos de la hormona del crecimiento hasta compuestos de curación, nootrópicos, péptidos antienvejecimiento y compuestos de investigación cosmética. Cada producto se fabrica en nuestras instalaciones de EE. UU., se prueba de forma independiente y se envía con un Certificado de Análisis emparejado por lote.",
       "features": [
-        { "title": "Laboratorio en EE. UU.", "desc": "Sintetizado en América — no importado, no reempaquetado. Verdadera fabricación nacional." },
-        { "title": "Pruebas de Terceros", "desc": "Cada lote verificado independientemente por laboratorios acreditados de EE. UU. mediante HPLC y MS." },
-        { "title": "≥99% de Pureza", "desc": "Nuestro estándar mínimo. No es un rango, no es una estimación — un umbral garantizado." },
-        { "title": "Asociación B2B", "desc": "Servimos a clínicas, farmacias, distribuidores e investigadores — no a consumidores finales." },
-        { "title": "Alcance en los 50 Estados", "desc": "Cumplimiento nacional rápido sin riesgos de aduanas internacionales ni fallas en la cadena de frío." },
-        { "title": "Más de 200 Clientes", "desc": "Red creciente de farmacias de compuestos, clínicas de bienestar y distribuidores." }
+        {
+          "title": "Laboratorio en EE. UU.",
+          "desc": "Sintetizado en América — no importado, no reempaquetado. Verdadera fabricación nacional."
+        },
+        {
+          "title": "Pruebas de Terceros",
+          "desc": "Cada lote verificado independientemente por laboratorios acreditados de EE. UU. mediante HPLC y MS."
+        },
+        {
+          "title": "≥99% de Pureza",
+          "desc": "Nuestro estándar mínimo. No es un rango, no es una estimación — un umbral garantizado."
+        },
+        {
+          "title": "Asociación B2B",
+          "desc": "Servimos a clínicas, farmacias, distribuidores e investigadores — no a consumidores finales."
+        },
+        {
+          "title": "Alcance en los 50 Estados",
+          "desc": "Cumplimiento nacional rápido sin riesgos de aduanas internacionales ni fallas en la cadena de frío."
+        },
+        {
+          "title": "Más de 200 Clientes",
+          "desc": "Red creciente de farmacias de compuestos, clínicas de bienestar y distribuidores."
+        }
       ]
     },
     "Mission": {
@@ -480,10 +660,22 @@
       "title": "De la Síntesis a su Instalación",
       "subtitle": "Cada pedido sigue una rigurosa línea de calidad antes de enviarse — asegurando que lo que llega a su instalación coincida exactamente con lo documentado en nuestros COA.",
       "steps": [
-        { "title": "Síntesis en EE. UU.", "desc": "Síntesis de péptidos en fase sólida (SPPS) en nuestra instalación nacional bajo estrictos controles de calidad." },
-        { "title": "Pruebas de Terceros", "desc": "Laboratorios independientes de EE. UU. realizan HPLC y espectrometría de masas para confirmar una pureza ≥99% en cada lote." },
-        { "title": "Emisión de COA por Lote", "desc": "Se genera un Certificado de Análisis único y se vincula con cada lote de producción." },
-        { "title": "Cumplimiento Nacional", "desc": "Envío nacional prioritario a su instalación — sin retrasos internacionales, sin riesgo de aduanas." }
+        {
+          "title": "Síntesis en EE. UU.",
+          "desc": "Síntesis de péptidos en fase sólida (SPPS) en nuestra instalación nacional bajo estrictos controles de calidad."
+        },
+        {
+          "title": "Pruebas de Terceros",
+          "desc": "Laboratorios independientes de EE. UU. realizan HPLC y espectrometría de masas para confirmar una pureza ≥99% en cada lote."
+        },
+        {
+          "title": "Emisión de COA por Lote",
+          "desc": "Se genera un Certificado de Análisis único y se vincula con cada lote de producción."
+        },
+        {
+          "title": "Cumplimiento Nacional",
+          "desc": "Envío nacional prioritario a su instalación — sin retrasos internacionales, sin riesgo de aduanas."
+        }
       ]
     },
     "Clients": {
@@ -491,11 +683,26 @@
       "title": "Quién se Abastece de 99 Purity Wholesale",
       "subtitle": "Somos un proveedor mayorista exclusivamente B2B. Nuestros clientes son profesionales autorizados e instituciones de investigación calificadas en todo Estados Unidos que requieren un suministro de péptidos de grado de investigación consistente, verificado y a precios mayoristas competitivos.",
       "items": [
-        { "label": "Farmacias de Compuestos", "desc": "Instalaciones de compuestos acreditadas por PCAB y autorizadas que se abastecen de APIs de péptidos a granel." },
-        { "label": "Clínicas de Bienestar y Spas Médicos", "desc": "Clínicas autorizadas que incorporan programas de investigación de péptidos en sus servicios." },
-        { "label": "Distribuidores Autorizados", "desc": "Distribuidores B2B regionales y nacionales que suministran al mercado de bienestar profesional." },
-        { "label": "Instalaciones de Investigación", "desc": "Instituciones de investigación académicas y privadas que realizan estudios de péptidos in vitro." },
-        { "label": "Prácticas de Antienvejecimiento y Longevidad", "desc": "Prácticas especializadas centradas en aplicaciones de investigación de longevidad y celular." }
+        {
+          "label": "Farmacias de Compuestos",
+          "desc": "Instalaciones de compuestos acreditadas por PCAB y autorizadas que se abastecen de APIs de péptidos a granel."
+        },
+        {
+          "label": "Clínicas de Bienestar y Spas Médicos",
+          "desc": "Clínicas autorizadas que incorporan programas de investigación de péptidos en sus servicios."
+        },
+        {
+          "label": "Distribuidores Autorizados",
+          "desc": "Distribuidores B2B regionales y nacionales que suministran al mercado de bienestar profesional."
+        },
+        {
+          "label": "Instalaciones de Investigación",
+          "desc": "Instituciones de investigación académicas y privadas que realizan estudios de péptidos in vitro."
+        },
+        {
+          "label": "Prácticas de Antienvejecimiento y Longevidad",
+          "desc": "Prácticas especializadas centradas en aplicaciones de investigación de longevidad y celular."
+        }
       ],
       "whyTitle": "Por Qué los Profesionales nos Eligen",
       "whyPoints": [
@@ -513,24 +720,60 @@
     "Stats": {
       "title": "En Cifras",
       "items": [
-        { "num": "50+", "label": "Productos en el Catálogo" },
-        { "num": "4", "label": "Niveles Mayoristas" },
-        { "num": "≥99%", "label": "Estándar de Pureza" },
-        { "num": "200+", "label": "Clientes B2B" },
-        { "num": "50", "label": "Estados Atendidos" },
-        { "num": "7", "label": "Categorías de Investigación" }
+        {
+          "num": "50+",
+          "label": "Productos en el Catálogo"
+        },
+        {
+          "num": "4",
+          "label": "Niveles Mayoristas"
+        },
+        {
+          "num": "≥99%",
+          "label": "Estándar de Pureza"
+        },
+        {
+          "num": "200+",
+          "label": "Clientes B2B"
+        },
+        {
+          "num": "50",
+          "label": "Estados Atendidos"
+        },
+        {
+          "num": "7",
+          "label": "Categorías de Investigación"
+        }
       ]
     },
     "Compliance": {
       "title": "Nuestro Compromiso de Cumplimiento",
       "desc": "Operamos dentro de un marco estricto de cumplimiento profesional y regulatorio — asegurando que cada transacción proteja tanto al comprador como la integridad de la industria de la investigación.",
       "items": [
-        { "title": "Solo para Uso en Investigación", "desc": "Todos los productos se venden exclusivamente para investigación de laboratorio in vitro. No para consumo humano, uso diagnóstico o terapéutico." },
-        { "title": "Solo Compradores Autorizados", "desc": "Las compras están restringidas a profesionales autorizados, investigadores e instituciones calificadas de acuerdo con la ley aplicable." },
-        { "title": "Documentación Completa", "desc": "Cada envío incluye documentación COA emparejada por lote adecuada para registros de adquisición profesional." },
-        { "title": "Responsabilidad del Comprador", "desc": "Los compradores dan fe del cumplimiento de todas las regulaciones locales, estatales y federales que rigen el manejo de compuestos de investigación." },
-        { "title": "Sin Ventas al Consumidor", "desc": "No vendemos al público en general. Esta es una operación mayorista B2B únicamente con requisitos de pedido mínimo." },
-        { "title": "Solo para EE. UU. Nacional", "desc": "Enviamos exclusivamente dentro de los Estados Unidos, reduciendo la complejidad regulatoria internacional y el riesgo de tránsito." }
+        {
+          "title": "Solo para Uso en Investigación",
+          "desc": "Todos los productos se venden exclusivamente para investigación de laboratorio in vitro. No para consumo humano, uso diagnóstico o terapéutico."
+        },
+        {
+          "title": "Solo Compradores Autorizados",
+          "desc": "Las compras están restringidas a profesionales autorizados, investigadores e instituciones calificadas de acuerdo con la ley aplicable."
+        },
+        {
+          "title": "Documentación Completa",
+          "desc": "Cada envío incluye documentación COA emparejada por lote adecuada para registros de adquisición profesional."
+        },
+        {
+          "title": "Responsabilidad del Comprador",
+          "desc": "Los compradores dan fe del cumplimiento de todas las regulaciones locales, estatales y federales que rigen el manejo de compuestos de investigación."
+        },
+        {
+          "title": "Sin Ventas al Consumidor",
+          "desc": "No vendemos al público en general. Esta es una operación mayorista B2B únicamente con requisitos de pedido mínimo."
+        },
+        {
+          "title": "Solo para EE. UU. Nacional",
+          "desc": "Enviamos exclusivamente dentro de los Estados Unidos, reduciendo la complejidad regulatoria internacional y el riesgo de tránsito."
+        }
       ]
     },
     "Cta": {
@@ -542,23 +785,17 @@
     }
   },
   "Legal": {
-    "Disclaimer": {
-      "title": "Aviso sobre el Uso en Investigación",
-      "content": [
-        "Todos los productos proporcionados por 99 Purity Wholesale se venden estrictamente para uso de investigación y laboratorio por profesionales autorizados.",
-        "Nuestros productos NO están destinados al consumo humano, uso clínico o como tratamiento para ninguna condición médica.",
-        "No son para venta minorista al público en general.",
-        "Al comprar en 99 Purity Wholesale, el comprador reconoce y acepta que es un profesional autorizado, investigador o instalación que actúa de acuerdo con todas las leyes locales, estatales y federales aplicables.",
-        "El comprador asume la responsabilidad total del manejo, almacenamiento y aplicación adecuados de estos compuestos de investigación."
-      ]
-    },
     "Privacy": {
       "title": "Política de Privacidad",
-      "content": "Este es un marcador de posición para la Política de Privacidad completa. Consulte a su asesor legal para el texto final."
+      "content": "99 Purity Wholesale se compromete a proteger su privacidad. Esta política describe cómo recopilamos, usamos y protegemos la información que proporciona al utilizar nuestra plataforma mayorista. Solo recopilamos información comercial esencial requerida para transacciones B2B y verificación de cumplimiento. Sus datos nunca se venden a terceros y están protegidos por cifrado estándar de la industria."
     },
     "Terms": {
       "title": "Términos de Servicio",
-      "content": "Este es un marcador de posición para los Términos de Servicio completos. Consulte a su asesor legal para el texto final."
+      "content": "Todos los productos suministrados por 99 Purity Wholesale son estrictamente para investigación de laboratorio y pruebas in vitro por profesionales autorizados. No son para consumo humano, uso terapéutico o aplicación clínica. Al acceder a este sitio y realizar un pedido, confirma que es un profesional autorizado o un investigador autorizado y acepta todas las pautas de cumplimiento y seguridad descritas en nuestro acuerdo comercial B2B."
+    },
+    "Disclaimer": {
+      "title": "Descargo de Responsabilidad de Uso en Investigación",
+      "content": "Los compuestos de 99 Purity Wholesale NO están destinados para su uso como aditivos alimentarios, medicamentos, cosméticos, productos químicos domésticos u otras aplicaciones inapropiadas. La inclusión de un material en este sitio no constituye una licencia para su uso en infracción de ninguna patente. Se supone que todos los clientes son profesionales capacitados que comprenden los riesgos asociados con los productos químicos de investigación."
     }
   },
   "Meta": {
@@ -603,47 +840,53 @@
     "searchPlaceholder": "Buscar en el directorio de compuestos...",
     "cta": "Contactar para Precios",
     "categories": {
-      "glp1-metabolic-peptides": {
-        "name": "GLP-1 / Metabólicos",
-        "desc": "Péptidos de investigación metabólica avanzados que incluyen Semaglutida, Tirzepatide y Retatrutida.",
-        "longDesc": "La categoría de péptidos más investigada activamente en el mercado de EE. UU. Agonistas de GLP-1, GIP y de triple receptor para programas de investigación metabólica en farmacias de compuestos, clínicas de bienestar e instituciones de investigación.",
-        "compounds": "Semaglutida · Tirzepatida · Retatrutida · Cagrilintida · Cagrisema"
+      "metabolic-research": {
+        "name": "Investigación Metabólica",
+        "desc": "Péptidos avanzados de investigación metabólica, incluidos Semaglutide, Tirzepatide, Retatrutide y 5-AMINO-1MQ.",
+        "longDesc": "La categoría líder en la industria para estudios metabólicos y de peso. Agonistas de receptores de alta pureza diseñados para evaluaciones rigurosas in-vitro e in-vivo.",
+        "compounds": "Semaglutide · Tirzepatide · Retatrutide · Cagrilintide · AOD9604 · Epithalon · MOTS-c · 5-AMINO-1MQ"
       },
-      "growth-hormone": {
-        "name": "Hormona de Crecimiento",
-        "desc": "Péptidos GHRP y GHRH para aplicaciones de investigación.",
-        "longDesc": "Compuestos de investigación GHRP y GHRH para estudios del eje de la hormona del crecimiento. Categoría mayorista de alta demanda constante para clínicas de bienestar y programas de investigación de farmacias de compuestos.",
-        "compounds": "Ipamorelin · CJC-1295 · Sermorelin · GHRP-2 · Tesamorelin · MK-677"
+      "cognitive-function": {
+        "name": "Función Cognitiva",
+        "desc": "Compuestos de investigación neurológica y potenciadores cognitivos, incluidos Semax y Selank.",
+        "longDesc": "Neuropéptidos de alta pureza desarrollados para la investigación en reparación del sistema nervioso central, señalización cognitiva y neuroprotección.",
+        "compounds": "Semax · Selank"
       },
-      "healing-recovery-peptides": {
-        "name": "Curación y Recuperación",
-        "desc": "Compuestos de reparación y recuperación de tejidos que incluyen BPC-157 y TB-500.",
-        "longDesc": "La piedra angular de la investigación de recuperación. BPC-157 y TB-500 son estándares en protocolos de investigación centrados en la reparación musculoesquelética, salud gastrointestinal y regeneración de tejidos.",
-        "compounds": "BPC-157 · TB-500 · KPV · LL-37 · B7-33 · GHK-Cu"
+      "sleep-cycle-investigation": {
+        "name": "Investigación del Ciclo del Sueño",
+        "desc": "Compuestos especializados en arquitectura del sueño y señalización neurológica como DSIP.",
+        "longDesc": "Compuestos neuroquímicos específicos para la investigación de la arquitectura del sueño y estudios científicos sobre vías de inducción del sueño profundo.",
+        "compounds": "DSIP"
       },
-      "cognitive-nootropic": {
-        "name": "Cognitivos / Nootrópicos",
-        "desc": "Compuestos de investigación neurológica y potenciadores cognitivos.",
-        "longDesc": "Compuestos avanzados para la investigación del SNC y cognitiva. Incluye Semax, Selank y otros neuropéptidos estudiados por sus propiedades neuroprotectoras y de mejora cognitiva.",
-        "compounds": "Semax · Selank · Dihexa · DSIP · Adamax · Noopept"
+      "growth-factor-research": {
+        "name": "Investigación de Factores de Crecimiento",
+        "desc": "Secretagogos de la hormona del crecimiento y péptidos de señalización de factores de crecimiento.",
+        "longDesc": "Secretagogos premium y sintéticos diseñados para la estimulación del eje somatotropo, estudios de respuesta de la hipófisis y modelos de envejecimiento celular tisular.",
+        "compounds": "Tesamorelin · Sermorelin · Ipamorelin · CJC-1295/IPAMORELIN · Snap-8 · FOXO4"
       },
-      "anti-aging-longevity": {
-        "name": "Antienvejecimiento y Longevidad",
-        "desc": "Senescencia celular y péptidos de investigación de longevidad.",
-        "longDesc": "Compuestos específicos para la investigación del envejecimiento celular. Epithalon, MOTS-c y precursores de NAD+ para clínicas de longevidad e instituciones de investigación antienvejecimiento.",
-        "compounds": "Epithalon · MOTS-c · NAD+ · Thymalin · SS-31 · FOXO4-DRI"
+      "recovery-research": {
+        "name": "Investigación de Recuperación",
+        "desc": "Compuestos de reparación tisular, musculoesquelética y cicatrización.",
+        "longDesc": "Compuestos de investigación de alto rendimiento enfocados en la regeneración celular, síntesis de tejidos, cicatrización de heridas y modelos de recuperación.",
+        "compounds": "TB-500 · BPC-157 · BPC-157/TB-500 MIX · Glutathione · LL37"
       },
-      "cosmetic-aesthetic": {
-        "name": "Cosméticos y Estéticos",
-        "desc": "Compuestos de investigación dermatológica y cosmética.",
-        "longDesc": "Compuestos con pureza garantizada para la investigación dermatológica y estética. Incluye GHK-Cu y otros péptidos estudiados para la remodelación de la piel y aplicaciones estéticas.",
-        "compounds": "GHK-Cu · Snap-8 · AOD-9604 · MT-2 · PT-141 · 5-Amino-1MQ"
+      "cellular-health-research": {
+        "name": "Investigación de Salud Celular",
+        "desc": "Péptidos de salud mitocondrial, defensa celular y longevidad.",
+        "longDesc": "Compuestos innovadores diseñados para estudiar la eficiencia mitocondrial, vías de longevidad, remodelación de la piel y sistemas de defensa celular.",
+        "compounds": "SS-31 · VIP · NAD+ · KPV · GHK-CU"
       },
-      "ancillaries": {
-        "name": "Auxiliares",
-        "desc": "Soluciones de reconstitución, suministros y auxiliares de investigación.",
-        "longDesc": "Compuestos de soporte esenciales para protocolos de investigación. Agua bacteriostática, B12 y Glutatión para complementar sus programas principales de péptidos de investigación.",
-        "compounds": "Agua BAC · B12 (Metil) · Glutatión · L-Carnitina · MIC"
+      "aminos": {
+        "name": "Aminoácidos",
+        "desc": "Aminoácidos esenciales y combinaciones lipotrópicas.",
+        "longDesc": "Formulaciones puras de aminoácidos y combinaciones lipotrópicas diseñadas para estudiar el metabolismo energético, síntesis celular y vías metabólicas.",
+        "compounds": "B12 · MIC BLEND · L-CARNATINE"
+      },
+      "essentials": {
+        "name": "Esenciales",
+        "desc": "Soluciones bacteriostáticas y productos esenciales de reconstitución de laboratorio.",
+        "longDesc": "Soluciones de reconstitución de laboratorio de la más alta calidad y compuestos de utilidad esenciales requeridos para respaldar protocolos de investigación estándar.",
+        "compounds": "BAC WATER"
       }
     },
     "viewCategory": "Ver Categoría",
@@ -1020,11 +1263,26 @@
     "whyProfessionalsDesc3": "Nuestro programa de precios al por mayor por niveles — desde el nivel Starter para operaciones emergentes hasta el Nivel 3 para cuentas de formulación y distribución de alto volumen — garantiza márgenes competitivos en todas las escalas. Los profesionales autorizados en Texas, Florida, California, Nueva York y todos los demás estados se benefician de la misma garantía de pureza, estándares de documentación y confiabilidad en el cumplimiento.",
     "whatOrderIncludesTitle": "Lo que incluye cada pedido al por mayor en EE. UU.",
     "orderIncludes": [
-      { "title": "Documentación de COA por lote", "desc": "Cada envío incluye un Certificado de Análisis vinculado al lote de producción exacto que recibe, de un laboratorio independiente nombrado de EE. UU." },
-      { "title": "Pureza ≥99% en cada compuesto", "desc": "Nuestro estándar mínimo, verificado por HPLC y Espectrometría de Masas. No es un rango, sino un umbral garantizado en cada producto de nuestro catálogo." },
-      { "title": "Envío Nacional Prioritario", "desc": "Los pedidos se envían a través de un transportista nacional prioritario dentro de 1 a 2 días hábiles después de la confirmación del pago. Entrega de 2 a 4 días a la mayoría de los estados de EE. UU." },
-      { "title": "Acceso al Soporte B2B", "desc": "Acceso directo vía WhatsApp y correo electrónico a nuestro equipo de ventas. Solicitudes de COA, consultas de precios y seguimiento de pedidos gestionados en 2 horas hábiles." },
-      { "title": "Sin Riesgo de Aduanas Internacionales", "desc": "Todo el cumplimiento es nacional de EE. UU. Sin retrasos fronterizos, sin riesgo de confiscación de paquetes, sin complejidad en la documentación internacional." }
+      {
+        "title": "Documentación de COA por lote",
+        "desc": "Cada envío incluye un Certificado de Análisis vinculado al lote de producción exacto que recibe, de un laboratorio independiente nombrado de EE. UU."
+      },
+      {
+        "title": "Pureza ≥99% en cada compuesto",
+        "desc": "Nuestro estándar mínimo, verificado por HPLC y Espectrometría de Masas. No es un rango, sino un umbral garantizado en cada producto de nuestro catálogo."
+      },
+      {
+        "title": "Envío Nacional Prioritario",
+        "desc": "Los pedidos se envían a través de un transportista nacional prioritario dentro de 1 a 2 días hábiles después de la confirmación del pago. Entrega de 2 a 4 días a la mayoría de los estados de EE. UU."
+      },
+      {
+        "title": "Acceso al Soporte B2B",
+        "desc": "Acceso directo vía WhatsApp y correo electrónico a nuestro equipo de ventas. Solicitudes de COA, consultas de precios y seguimiento de pedidos gestionados en 2 horas hábiles."
+      },
+      {
+        "title": "Sin Riesgo de Aduanas Internacionales",
+        "desc": "Todo el cumplimiento es nacional de EE. UU. Sin retrasos fronterizos, sin riesgo de confiscación de paquetes, sin complejidad en la documentación internacional."
+      }
     ]
   },
   "LocationDetail": {
@@ -1152,110 +1410,143 @@
   },
   "CategoryDetail": {
     "categories": {
-      "glp1-metabolic-peptides": {
-        "title": "Péptidos GLP-1 y Metabólicos",
-        "badge": "Investigación Metabólica",
-        "desc": "Compuestos de investigación metabólica y agonistas del receptor GLP-1 de grado premium — incluyendo Semaglutida, Tirzepatida y Retatrutida — sintetizados en EE. UU. para máxima pureza y estabilidad. Suministro mayorista para farmacias de compuestos, clínicas de bienestar e instituciones de investigación.",
-        "seoP1": "Los agonistas del receptor del péptido similar al glucagón-1 (GLP-1) representan la categoría de mayor demanda en el mercado mayorista de péptidos de EE. UU. Estos compuestos de péptidos sintetizados interactúan con los receptores de GLP-1, GIP y glucagón, permitiendo a los investigadores estudiar la señalización metabólica, las vías de la incretina y la cinética de unión de receptores en entornos de laboratorio controlados. Nuestro catálogo incluye agonistas simples (Semaglutida), agonistas duales (Tirzepatida) y agonistas triples (Retatrutide), brindando a los programas de investigación acceso al espectro completo de compuestos de investigación metabólica a precios mayoristas.",
-        "seoP2": "Todos los péptidos GLP-1 y metabólicos se fabrican en nuestras instalaciones de EE. UU. utilizando síntesis de péptidos en fase sólida (SPPS). Cada lote es probado de forma independiente por laboratorios acreditados de EE. UU. mediante HPLC y espectrometría de masas, confirmando una pureza ≥99% y la identidad de secuencia correcta. La documentación COA emparejada por lote se envía con cada pedido mayorista. Las formulaciones liofilizadas aseguran la estabilidad durante el envío nacional sin requisitos de cadena de frío.",
+      "metabolic-research": {
+        "title": "Péptidos de Investigación Metabólica",
+        "badge": "Metabólico",
+        "desc": "La categoría líder en la industria para estudios metabólicos y de peso. Agonistas de receptores de alta pureza diseñados para evaluaciones rigurosas in-vitro e in-vivo.",
+        "seoP1": "Investigación Metabólica represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué péptidos GLP-1 tienen al por mayor?",
-            "a": "Nuestro catálogo de GLP-1 incluye Semaglutida, Tirzepatide, Retatrutide, Cagrilintide y compuestos combinados de Cagrisema en múltiples especificaciones."
+            "q": "¿Qué péptidos metabólicos ofrecen?",
+            "a": "Nuestro catálogo incluye compuestos líderes en investigación metabólica como Semaglutide, Tirzepatide, Retatrutide, Cagrilintide y 5-AMINO-1MQ."
           },
           {
-            "q": "¿Qué nivel de pureza tienen sus péptidos GLP-1?",
-            "a": "Todos los compuestos de GLP-1 cumplen con nuestro estándar de pureza ≥99%, verificado independientemente por HPLC y espectrometría de masas en laboratorios acreditados de EE. UU."
+            "q": "¿Tienen estos compuestos una pureza ≥99%?",
+            "a": "Sí, cada lote se somete a pruebas independientes de HPLC y espectrometría de masas para confirmar una pureza ≥99%."
           },
           {
-            "q": "¿Cuál es el MOQ para los péptidos GLP-1 al por mayor?",
-            "a": "El pedido mínimo es de 10 unidades (1 kit) por especificación de producto. Los descuentos por volumen escalonados comienzan en 10 kits."
+            "q": "¿Cuál es el protocolo de reconstitución?",
+            "a": "Los viales liofilizados deben reconstituirse con agua bacteriostática estéril y mantenerse refrigerados a 2-8 °C."
           }
         ]
       },
-      "growth-hormone": {
-        "title": "Péptidos de la Hormona de Crecimiento",
-        "badge": "Investigación de GH",
-        "desc": "Compuestos de investigación GHRP y GHRH que incluyen Ipamorelin, CJC-1295, Sermorelin y Tesamorelin. Fabricados en EE. UU. con una pureza ≥99% para suministro mayorista B2B a profesionales autorizados e instituciones de investigación.",
-        "seoP1": "Los péptidos liberadores de la hormona del crecimiento (GHRP) y las hormonas liberadoras de la hormona del crecimiento (GHRH) se encuentran entre las categorías de compuestos de investigación más ordenadas de manera constante en el mercado mayorista de EE. UU. Ipamorelin, CJC-1295 (con y sin DAC), Acetato de Sermorelin, GHRP-2, GHRP-6 y Tesamorelin permiten a los investigadores estudiar la señalización del eje de la hormona del crecimiento, la función pituitaria y la actividad somatotrófica en modelos experimentales controlados.",
-        "seoP2": "Nuestro catálogo de péptidos de la hormona del crecimiento sirve a farmacias de compuestos, clínicas de bienestar e instalaciones de investigación que realizan estudios del eje GH. Todos los compuestos se fabrican en EE. UU., se prueban de forma independiente con una pureza ≥99% y están disponibles a precios mayoristas escalonados con documentación COA emparejada por lote en cada pedido.",
+      "cognitive-function": {
+        "title": "Péptidos de Función Cognitiva",
+        "badge": "Cognitivo",
+        "desc": "Neuropéptidos de alta pureza desarrollados para la investigación en reparación del sistema nervioso central, señalización cognitiva y neuroprotección.",
+        "seoP1": "Función Cognitiva represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué péptidos de la hormona de crecimiento están disponibles?",
-            "a": "Ipamorelin, CJC-1295 (con DAC y sin DAC), Acetato de Sermorelin, GHRP-2, GHRP-6, Tesamorelin, Hexarelin y MK-677."
+            "q": "¿Cuál es la aplicación principal de Semax y Selank?",
+            "a": "Estos neuropéptidos se investigan ampliamente por sus efectos neuroprotectores, señalización cognitiva y sistema nervioso central."
           },
           {
-            "q": "¿Puedo combinar péptidos de GH con otras categorías?",
-            "a": "Sí. La mayoría de las cuentas mayoristas ordenan en múltiples categorías. El precio por nivel se aplica al volumen total del pedido, no por categoría."
+            "q": "¿Cómo se envían los péptidos cognitivos?",
+            "a": "Se envían en forma de polvo liofilizado en viales sellados al vacío para mantener la estabilidad estructural durante el tránsito."
           }
         ]
       },
-      "healing-recovery-peptides": {
-        "title": "Péptidos de Curación y Recuperación",
-        "badge": "Investigación de Recuperación",
-        "desc": "BPC-157, TB-500, KPV, LL37 y compuestos de investigación de reparación de tejidos. La categoría con pedidos recurrentes más consistentes en nuestro catálogo mayorista, esencial para programas de investigación musculoesquelética, gastrointestinal y de curación de heridas.",
-        "seoP1": "BPC-157 (Body Protection Compound-157) y TB-500 (Thymosin Beta-4) son dos de los péptidos más extensamente estudiados en el espacio de la investigación de reparación de tejidos. Los estudios publicados abarcan modelos musculoesqueléticos, gastrointestinales y neurológicos, con décadas de literatura revisada por pares que establece estos compuestos como herramientas fundamentales en la investigación de recuperación y curación.",
-        "seoP2": "Nuestra categoría de curación incluye BPC-157 estándar (sal de acetato), BPC-157 AR (sal de arginina), TB-500, KPV, LL37 y B7-33. Todos los compuestos se fabrican en EE. UU. con una pureza ≥99% con verificación de COA independiente. Esta categoría mantiene la frecuencia de pedido recurrente más alta en nuestro programa mayorista; las farmacias de compuestos y las clínicas de bienestar suelen establecer pedidos mensuales permanentes.",
+      "sleep-cycle-investigation": {
+        "title": "Péptidos de Investigación del Ciclo del Sueño",
+        "badge": "Investigación del Sueño",
+        "desc": "Compuestos neuroquímicos específicos para la investigación de la arquitectura del sueño y estudios científicos sobre vías de inducción del sueño profundo.",
+        "seoP1": "Investigación del Ciclo del Sueño represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué formas de BPC-157 manejan?",
-            "a": "Ofrecemos BPC-157 estándar (sal de acetato) y BPC-157 AR (sal de arginina) en múltiples especificaciones, incluyendo viales de 5mg y 10mg."
+            "q": "¿Para qué se investiga el DSIP?",
+            "a": "El DSIP (péptido inductor del sueño delta) se estudia por su papel en la arquitectura del sueño, patrones de EEG y regulación endocrina."
           },
           {
-            "q": "¿Está disponible la combinación BPC-157 + TB-500?",
-            "a": "Sí. Ofrecemos tanto los compuestos individuales como kits combinados preconfigurados (BPC 10mg + TB 10mg) para compradores mayoristas."
+            "q": "¿Se suministra el DSIP como polvo liofilizado?",
+            "a": "Sí, se suministra como una formulación liofilizada para preservar la pureza durante el transporte y almacenamiento."
           }
         ]
       },
-      "cognitive-nootropic": {
-        "title": "Péptidos Cognitivos y Nootrópicos",
-        "badge": "Investigación Neuro",
-        "desc": "Semax, Selank, Dihexa, DSIP y péptidos de investigación cognitiva para estudios del SNC y neurociencia. Creciente demanda mayorista de clínicas de longevidad y prácticas de medicina funcional.",
-        "seoP1": "Los péptidos cognitivos y nootrópicos representan un segmento creciente del mercado de investigación mayorista de EE. UU., impulsado por el creciente interés en la investigación de neuroprotección, mejora cognitiva y señalización del SNC. Semax y Selank (desarrollados originalmente en el Instituto de Genética Molecular de la Academia de Ciencias de Rusia) tienen investigaciones publicadas sustanciales en modelos de modulación de neurotrofinas, expresión de BDNF y actividad ansiolítica.",
-        "seoP2": "Nuestro catálogo de nootrópicos incluye Semax, Selank, Dihexa, DSIP (péptido inductor del sueño delta), Adamax y Cortexin, todos fabricados en EE. UU. con una pureza ≥99% con verificación analítica independiente. Esta categoría es popular entre las prácticas enfocadas en la longevidad y las clínicas de medicina funcional que construyen programas de investigación integrales.",
+      "growth-factor-research": {
+        "title": "Péptidos de Factores de Crecimiento",
+        "badge": "Factores de Crecimiento",
+        "desc": "Secretagogos premium y sintéticos diseñados para la estimulación del eje somatotropo, estudios de respuesta de la hipófisis y modelos de envejecimiento celular tisular.",
+        "seoP1": "Investigación de Factores de Crecimiento represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué péptidos cognitivos son más populares?",
-            "a": "Semax y Dihexa son nuestros compuestos nootrópicos de mayor volumen, seguidos por Selank y DSIP."
+            "q": "¿Qué secretagogos de la hormona del crecimiento ofrecen?",
+            "a": "Suministramos Ipamorelin, Sermorelin, Tesamorelin y mezclas premium de CJC-1295/Ipamorelin."
+          },
+          {
+            "q": "¿Se aplican descuentos por volumen a los factores de crecimiento?",
+            "a": "Sí, todos los factores de crecimiento califican para la estructura de precios al por mayor B2B estándar."
           }
         ]
       },
-      "anti-aging-longevity": {
-        "title": "Péptidos Antienvejecimiento y Longevidad",
-        "badge": "Investigación de Longevidad",
-        "desc": "Epithalon, MOTS-c, NAD+, Thymalin, SS-31 y compuestos de investigación de senescencia. La categoría de más rápido crecimiento en el mercado mayorista de péptidos de EE. UU. para programas de longevidad y envejecimiento celular.",
-        "seoP1": "Los péptidos antienvejecimiento y de longevidad representan la categoría de más rápido crecimiento en el mercado de péptidos B2B de EE. UU. Epithalon (un tetrapéptido sintético estudiado por sus efectos en los telómeros y la glándula pineal), MOTS-c (un péptido derivado de las mitocondrias estudiado en modelos metabólicos y de ejercicio) y NAD+ (la coenzima esencial para los procesos celulares dependientes de las sirtuinas) están impulsando la demanda institucional de prácticas antienvejecimiento, clínicas de longevidad e instalaciones de investigación académicas.",
-        "seoP2": "Nuestro catálogo de longevidad también incluye Thymalin, Thymosin Alpha-1, SS-31 (Elamipretide), FOXO4-DRI y AOD9604. Todos los compuestos se fabrican en EE. UU. con una pureza ≥99% con documentación COA emparejada por lote. A medida que se acelera la investigación sobre la senescencia celular, la función mitocondrial y el metabolismo de NAD+, la demanda mayorista de esta categoría sigue creciendo significativamente.",
+      "recovery-research": {
+        "title": "Péptidos de Investigación de Recuperación",
+        "badge": "Recuperación y Cicatrización",
+        "desc": "Compuestos de investigación de alto rendimiento enfocados en la regeneración celular, síntesis de tejidos, cicatrización de heridas y modelos de recuperación.",
+        "seoP1": "Investigación de Recuperación represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué péptidos de longevidad tienen más demanda?",
-            "a": "Epithalon, NAD+ y MOTS-c son nuestros compuestos de longevidad de mayor volumen. SS-31 y FOXO4-DRI están creciendo rápidamente."
+            "q": "¿Qué formas de BPC-157 y TB-500 suministran?",
+            "a": "Ofrecemos BPC-157, TB-500 y mezclas combinadas de BPC-157/TB-500 en múltiples concentraciones."
+          },
+          {
+            "q": "¿Cuál es la validación de calidad de los péptidos de recuperación?",
+            "a": "Todos se fabrican en instalaciones de EE. UU. alineadas con cGMP y están certificados mediante informes HPLC con ≥99% de pureza."
           }
         ]
       },
-      "cosmetic-aesthetic": {
-        "title": "Péptidos Cosméticos y Estéticos",
-        "badge": "Investigación Estética",
-        "desc": "GHK-Cu, Snap-8, AOD9604 y compuestos de investigación cosmética para estudios dermatológicos. Alta demanda de programas mayoristas de spas médicos y clínicas estéticas.",
-        "seoP1": "El GHK-Cu (péptido de cobre) es uno de los compuestos más extensamente estudiados en la investigación dermatológica, con estudios publicados que examinan su papel en la síntesis de colágeno, la curación de heridas y la remodelación de la piel. Snap-8 (acetil glutamil heptapéptido-3) se estudia en modelos de contracción muscular y formación de arrugas. Estos péptidos cosméticos sirven a spas médicos y prácticas estéticas que realizan investigaciones sobre biología de la piel.",
-        "seoP2": "Nuestro catálogo cosmético incluye GHK-Cu, Snap-8, AOD9604, 5-AMINO-1MQ y PT-141, todos con pureza ≥99% con pruebas independientes y COA emparejado por lote. Los mercados de Miami, Los Ángeles y Scottsdale mantienen una demanda mayorista particularmente fuerte para esta categoría.",
+      "cellular-health-research": {
+        "title": "Péptidos de Salud Celular",
+        "badge": "Salud Celular",
+        "desc": "Compuestos innovadores diseñados para estudiar la eficiencia mitocondrial, vías de longevidad, remodelación de la piel y sistemas de defensa celular.",
+        "seoP1": "Investigación de Salud Celular represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Qué péptidos cosméticos están disponibles al por mayor?",
-            "a": "GHK-Cu (péptido de cobre), Snap-8, AOD9604, 5-AMINO-1MQ y PT-141 en múltiples especificaciones."
+            "q": "¿Cuál es el enfoque de la investigación de SS-31 y NAD+?",
+            "a": "Estos compuestos se investigan ampliamente en medicina mitocondrial, bioenergética celular y modelos de senescencia del envejecimiento."
+          },
+          {
+            "q": "¿Se pueden enviar estos compuestos a nivel internacional?",
+            "a": "Enviamos pedidos al por mayor a nivel nacional con COAs verificados. Comuníquese con ventas para consultar directrices internacionales."
           }
         ]
       },
-      "ancillaries": {
-        "title": "Auxiliares y Compuestos de Soporte",
-        "badge": "Soporte de Investigación",
-        "desc": "Agua bacteriostática, Glutación, B12 y suministros de reconstitución. Compuestos de soporte de investigación esenciales disponibles a precios mayoristas junto con sus pedidos de péptidos.",
-        "seoP1": "Los compuestos auxiliares y los suministros de reconstitución son componentes esenciales de cualquier operación completa de péptidos de investigación. El agua bacteriostática (BAC Water) es necesaria para la reconstitución de péptidos en protocolos de laboratorio. El glutatión, la vitamina B12 y otros compuestos de soporte complementan los programas de investigación primarios.",
-        "seoP2": "Al abastecerse de auxiliares junto con sus pedidos de péptidos primarios de un solo proveedor nacional, consolida la adquisición, reduce los costos de envío y garantiza una calidad de documentación consistente en toda su cadena de suministro de investigación.",
+      "aminos": {
+        "title": "Formulaciones de Aminoácidos",
+        "badge": "Aminoácidos",
+        "desc": "Formulaciones puras de aminoácidos y combinaciones lipotrópicas diseñadas para estudiar el metabolismo energético, síntesis celular y vías metabólicas.",
+        "seoP1": "Aminoácidos represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
         "faqs": [
           {
-            "q": "¿Puedo pedir auxiliares con mi pedido de péptidos?",
-            "a": "Sí. La mayoría de las cuentas mayoristas agregan agua BAC y auxiliares a sus pedidos de péptidos. Mismos precios escalonados, misma documentación COA, mismo envío."
+            "q": "¿Qué contiene la mezcla MIC?",
+            "a": "La mezcla MIC contiene agentes lipotrópicos de alta pureza (metionina, inositol y colina) optimizados para protocolos de investigación metabólica."
+          },
+          {
+            "q": "¿Son sus aminoácidos de grado de investigación?",
+            "a": "Sí, todos nuestros aminoácidos y mezclas están sintetizados y verificados con una pureza ≥99%."
+          }
+        ]
+      },
+      "essentials": {
+        "title": "Soluciones y Esenciales de Investigación",
+        "badge": "Esenciales",
+        "desc": "Soluciones de reconstitución de laboratorio de la más alta calidad y compuestos de utilidad esenciales requeridos para respaldar protocolos de investigación estándar.",
+        "seoP1": "Esenciales represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
+        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "faqs": [
+          {
+            "q": "¿Qué es el agua bacteriostática (BAC Water)?",
+            "a": "Es agua estéril que contiene un 0.9% de alcohol bencílico, utilizada para reconstituir péptidos y prevenir el crecimiento microbiano."
+          },
+          {
+            "q": "¿Qué tamaños de agua bacteriostática están disponibles?",
+            "a": "Ofrecemos viales estériles en múltiples tamaños, incluidos 3 ml y 10 ml, suministrados en paquetes de 10 unidades."
           }
         ]
       }
@@ -1287,9 +1578,18 @@
     "relatedProducts": "Productos Relacionados",
     "relatedTitle": "Compuestos de Investigación Relacionados",
     "ValueBoxes": [
-      { "title": "Pureza Verificada", "desc": "Cada término de nuestro glosario está respaldado por datos analíticos y estándares de laboratorio de EE. UU." },
-      { "title": "Síntesis Nacional", "desc": "Fabricado en EE. UU. para garantizar un control total sobre las especificaciones e identidad química." },
-      { "title": "Adquisición Rápida", "desc": "Pedidos al por mayor simplificados para instituciones profesionales e investigadores autorizados." }
+      {
+        "title": "Pureza Verificada",
+        "desc": "Cada término de nuestro glosario está respaldado por datos analíticos y estándares de laboratorio de EE. UU."
+      },
+      {
+        "title": "Síntesis Nacional",
+        "desc": "Fabricado en EE. UU. para garantizar un control total sobre las especificaciones e identidad química."
+      },
+      {
+        "title": "Adquisición Rápida",
+        "desc": "Pedidos al por mayor simplificados para instituciones profesionales e investigadores autorizados."
+      }
     ],
     "Search": {
       "placeholder": "Buscar términos técnicos (ej., HPLC, GLP-1)...",
@@ -1395,114 +1695,134 @@
       "dropshipping": "Envío Directo"
     }
   },
-  "Legal": {
-    "Privacy": {
-      "title": "Política de Privacidad",
-      "content": "99 Purity Wholesale se compromete a proteger su privacidad. Esta política describe cómo recopilamos, usamos y protegemos la información que proporciona al utilizar nuestra plataforma mayorista. Solo recopilamos información comercial esencial requerida para transacciones B2B y verificación de cumplimiento. Sus datos nunca se venden a terceros y están protegidos por cifrado estándar de la industria."
-    },
-    "Terms": {
-      "title": "Términos de Servicio",
-      "content": "Todos los productos suministrados por 99 Purity Wholesale son estrictamente para investigación de laboratorio y pruebas in vitro por profesionales autorizados. No son para consumo humano, uso terapéutico o aplicación clínica. Al acceder a este sitio y realizar un pedido, confirma que es un profesional autorizado o un investigador autorizado y acepta todas las pautas de cumplimiento y seguridad descritas en nuestro acuerdo comercial B2B."
-    },
-    "Disclaimer": {
-      "title": "Descargo de Responsabilidad de Uso en Investigación",
-      "content": "Los compuestos de 99 Purity Wholesale NO están destinados para su uso como aditivos alimentarios, medicamentos, cosméticos, productos químicos domésticos u otras aplicaciones inapropiadas. La inclusión de un material en este sitio no constituye una licencia para su uso en infracción de ninguna patente. Se supone que todos los clientes son profesionales capacitados que comprenden los riesgos asociados con los productos químicos de investigación."
-    }
-  },
   "WholesaleApplication": {
-      "metadata": {
-        "title": "Solicitar una Cuenta Mayorista | 99 Purity Wholesale — Péptidos de Investigación a Granel EE. UU.",
-        "description": "Solicite una cuenta de péptidos mayorista verificada con 99 Purity Wholesale. Acceda a precios a granel en más de 50 péptidos de grado de investigación. Fabricados en EE. UU., verificados por COA. Solo para profesionales autorizados."
-      },
-      "banner": "⚠️ Todos los productos son exclusivamente para uso en investigación de laboratorio. No aptos para el consumo humano. Solo para profesionales autorizados.",
-      "hero": {
-        "badge": "Cuenta Mayorista B2B",
-        "title": "Solicite Precios de Péptidos al Por Mayor",
-        "subtitle": "Únase a más de 200 cuentas B2B verificadas — farmacias de compuestos, clínicas de bienestar, distribuidores autorizados e instalaciones de investigación — que se abastecen de péptidos de grado de investigación a granel del proveedor mayorista nacional más confiable de América."
-      },
-      "benefitsSection": {
-        "title": "Lo que obtiene como cuenta mayorista verificada",
-        "subtitle": "Las cuentas B2B verificadas reciben acceso completo al catálogo, precios por niveles y soporte dedicado de nuestro equipo con sede en EE. UU.",
-        "items": {
-          "catalog": { "title": "Más de 50 Compuestos de Investigación", "desc": "Acceso completo al catálogo en las categorías de GLP-1, hormona del crecimiento, curación, nootrópicos, antienvejecimiento, cosmética y auxiliares." },
-          "purity": { "title": "Pureza ≥99% Garantizada", "desc": "Cada producto verificado independientemente por laboratorios acreditados de EE. UU. con documentación COA emparejada por lote." },
-          "pricing": { "title": "Precios Mayoristas por Niveles", "desc": "Precios basados en el volumen con 4 niveles: Desde Inicio (1–9 kits) hasta el Nivel 3 (40+ kits) con el máximo margen a escala empresarial." },
-          "shipping": { "title": "Envío Nacional Rápido en EE. UU.", "desc": "Cumplimiento prioritario desde nuestra instalación en EE. UU. — sin retrasos en aduanas internacionales, sin riesgo de cadena de frío." },
-          "support": { "title": "Soporte B2B Dedicado", "desc": "Acceso directo por WhatsApp y correo electrónico a nuestro equipo B2B. Respuesta típica en 2 horas hábiles." },
-          "services": { "title": "Envío Directo y Marca Privada", "desc": "Las cuentas de volumen que califiquen pueden acceder a nuestro programa de envío directo y servicios de empaque de marca privada." }
-        }
-      },
-      "eligibility": {
-        "title": "Requisitos de Elegibilidad",
-        "description": "99 Purity Wholesale es un proveedor mayorista solo para B2B. Para calificar para una cuenta mayorista, los compradores deben cumplir con los siguientes criterios y aceptar nuestros términos de uso de investigación.",
-        "items": [
-          "Clínica, farmacia, distribuidor o institución de investigación con licencia",
-          "Empresa con sede en EE. UU. con registro comercial válido",
-          "Pedido inicial mínimo: 10 unidades (1 kit) por producto",
-          "Acuerdo con los términos y condiciones de solo para uso en investigación",
-          "No para reventa a consumidores finales o al público en general"
-        ]
-      },
-      "pricing": {
-        "title": "Niveles de Precios",
-        "footer": "Precios actuales proporcionados tras la aprobación de la cuenta verificada. Los precios no se publican públicamente.",
-        "tiers": {
-          "start": { "name": "Inicio", "kits": "1–9 Kits", "desc": "Acceso de nivel de entrada. Ideal para nuevas clínicas y distribuidores que evalúan nuestro catálogo." },
-          "tier1": { "name": "Nivel 1", "kits": "10–19 Kits", "desc": "Precios de nivel de crecimiento. Reorden constante con márgenes mejorados por unidad." },
-          "tier2": { "name": "Nivel 2", "kits": "20–39 Kits", "desc": "Volumen establecido. Descuento significativo con cumplimiento prioritario." },
-          "tier3": { "name": "Nivel 3", "kits": "40+ Kits", "desc": "Precios empresariales. Máximos márgenes para operaciones de alto volumen." }
-        }
-      },
-      "form": {
-        "title": "Envíe su Solicitud Mayorista",
-        "subtitle": "Nuestro equipo B2B revisa todas las solicitudes en un plazo de 1 día hábil. Los campos marcados con * son obligatorios.",
-        "attestation": {
-          "title": "Atestación de Uso en Investigación",
-          "content": "Al enviar esta solicitud, confirmo que: (1) Soy un profesional autorizado o representante autorizado de una institución de investigación calificada; (2) Los productos se utilizarán únicamente para fines de investigación y laboratorio; (3) Los productos no se utilizarán para consumo humano, tratamiento clínico o reventa a consumidores finales; (4) Acepto la responsabilidad total por el cumplimiento de todas las leyes aplicables.",
-          "label": "Confirmo la atestación anterior y acepto los términos de solo para uso en investigación. *"
+    "metadata": {
+      "title": "Solicitar una Cuenta Mayorista | 99 Purity Wholesale — Péptidos de Investigación a Granel EE. UU.",
+      "description": "Solicite una cuenta de péptidos mayorista verificada con 99 Purity Wholesale. Acceda a precios a granel en más de 50 péptidos de grado de investigación. Fabricados en EE. UU., verificados por COA. Solo para profesionales autorizados."
+    },
+    "banner": "⚠️ Todos los productos son exclusivamente para uso en investigación de laboratorio. No aptos para el consumo humano. Solo para profesionales autorizados.",
+    "hero": {
+      "badge": "Cuenta Mayorista B2B",
+      "title": "Solicite Precios de Péptidos al Por Mayor",
+      "subtitle": "Únase a más de 200 cuentas B2B verificadas — farmacias de compuestos, clínicas de bienestar, distribuidores autorizados e instalaciones de investigación — que se abastecen de péptidos de grado de investigación a granel del proveedor mayorista nacional más confiable de América."
+    },
+    "benefitsSection": {
+      "title": "Lo que obtiene como cuenta mayorista verificada",
+      "subtitle": "Las cuentas B2B verificadas reciben acceso completo al catálogo, precios por niveles y soporte dedicado de nuestro equipo con sede en EE. UU.",
+      "items": {
+        "catalog": {
+          "title": "Más de 50 Compuestos de Investigación",
+          "desc": "Acceso completo al catálogo en las categorías de GLP-1, hormona del crecimiento, curación, nootrópicos, antienvejecimiento, cosmética y auxiliares."
         },
-        "fields": {
-          "businessName": "Nombre de la Empresa *",
-          "businessNamePlaceholder": "El nombre de su empresa",
-          "businessType": "Tipo de Empresa *",
-          "businessTypeDefault": "Seleccione el tipo de empresa",
-          "businessTypes": [
-            "Farmacia de Compuestos",
-            "Clínica de Bienestar",
-            "Spa Médico",
-            "Distribuidor Autorizado",
-            "Institución de Investigación",
-            "Práctica de Medicina Funcional",
-            "Práctica de Antienvejecimiento / Longevidad",
-            "Otro Profesional Autorizado"
-          ],
-          "fullName": "Nombre Completo *",
-          "fullNamePlaceholder": "Su nombre completo",
-          "email": "Correo Electrónico de la Empresa *",
-          "emailPlaceholder": "correo@suempresa.com",
-          "state": "Estado *",
-          "statePlaceholder": "ej. Texas",
-          "volume": "Volumen Mensual Estimado *",
-          "volumeDefault": "Seleccione el rango de volumen",
-          "volumeTiers": [
-            "1–9 kits/mes (Nivel de Inicio)",
-            "10–19 kits/mes (Nivel 1)",
-            "20–39 kits/mes (Nivel 2)",
-            "40+ kits/mes (Nivel 3)"
-          ],
-          "products": "Productos Primarios de Interés *",
-          "productsPlaceholder": "ej. Semaglutida, BPC-157, Ipamorelin, TB-500...",
-          "contactMethod": "Método de Contacto Preferido",
-          "notes": "Notas Adicionales",
-          "notesPlaceholder": "Cualquier requisito específico, pregunta o contexto sobre su programa...",
-          "submit": "Enviar Solicitud Mayorista"
+        "purity": {
+          "title": "Pureza ≥99% Garantizada",
+          "desc": "Cada producto verificado independientemente por laboratorios acreditados de EE. UU. con documentación COA emparejada por lote."
         },
-        "footer": "La información de la solicitud se mantiene estrictamente confidencial. Nuestro equipo B2B responderá en un plazo de 1 día hábil con detalles de precios e información de configuración de la cuenta. Al enviar, confirma que todos los productos serán utilizados únicamente para fines de investigación y laboratorio por profesionales autorizados."
-      },
-      "fastTrack": {
-        "text": "¿Necesita una respuesta más rápida? Salte el formulario y envíenos un mensaje directamente.",
-        "whatsapp": "Solicitar por WhatsApp",
-        "email": "Solicitud por Correo"
+        "pricing": {
+          "title": "Precios Mayoristas por Niveles",
+          "desc": "Precios basados en el volumen con 4 niveles: Desde Inicio (1–9 kits) hasta el Nivel 3 (40+ kits) con el máximo margen a escala empresarial."
+        },
+        "shipping": {
+          "title": "Envío Nacional Rápido en EE. UU.",
+          "desc": "Cumplimiento prioritario desde nuestra instalación en EE. UU. — sin retrasos en aduanas internacionales, sin riesgo de cadena de frío."
+        },
+        "support": {
+          "title": "Soporte B2B Dedicado",
+          "desc": "Acceso directo por WhatsApp y correo electrónico a nuestro equipo B2B. Respuesta típica en 2 horas hábiles."
+        },
+        "services": {
+          "title": "Envío Directo y Marca Privada",
+          "desc": "Las cuentas de volumen que califiquen pueden acceder a nuestro programa de envío directo y servicios de empaque de marca privada."
+        }
       }
+    },
+    "eligibility": {
+      "title": "Requisitos de Elegibilidad",
+      "description": "99 Purity Wholesale es un proveedor mayorista solo para B2B. Para calificar para una cuenta mayorista, los compradores deben cumplir con los siguientes criterios y aceptar nuestros términos de uso de investigación.",
+      "items": [
+        "Clínica, farmacia, distribuidor o institución de investigación con licencia",
+        "Empresa con sede en EE. UU. con registro comercial válido",
+        "Pedido inicial mínimo: 10 unidades (1 kit) por producto",
+        "Acuerdo con los términos y condiciones de solo para uso en investigación",
+        "No para reventa a consumidores finales o al público en general"
+      ]
+    },
+    "pricing": {
+      "title": "Niveles de Precios",
+      "footer": "Precios actuales proporcionados tras la aprobación de la cuenta verificada. Los precios no se publican públicamente.",
+      "tiers": {
+        "start": {
+          "name": "Inicio",
+          "kits": "1–9 Kits",
+          "desc": "Acceso de nivel de entrada. Ideal para nuevas clínicas y distribuidores que evalúan nuestro catálogo."
+        },
+        "tier1": {
+          "name": "Nivel 1",
+          "kits": "10–19 Kits",
+          "desc": "Precios de nivel de crecimiento. Reorden constante con márgenes mejorados por unidad."
+        },
+        "tier2": {
+          "name": "Nivel 2",
+          "kits": "20–39 Kits",
+          "desc": "Volumen establecido. Descuento significativo con cumplimiento prioritario."
+        },
+        "tier3": {
+          "name": "Nivel 3",
+          "kits": "40+ Kits",
+          "desc": "Precios empresariales. Máximos márgenes para operaciones de alto volumen."
+        }
+      }
+    },
+    "form": {
+      "title": "Envíe su Solicitud Mayorista",
+      "subtitle": "Nuestro equipo B2B revisa todas las solicitudes en un plazo de 1 día hábil. Los campos marcados con * son obligatorios.",
+      "attestation": {
+        "title": "Atestación de Uso en Investigación",
+        "content": "Al enviar esta solicitud, confirmo que: (1) Soy un profesional autorizado o representante autorizado de una institución de investigación calificada; (2) Los productos se utilizarán únicamente para fines de investigación y laboratorio; (3) Los productos no se utilizarán para consumo humano, tratamiento clínico o reventa a consumidores finales; (4) Acepto la responsabilidad total por el cumplimiento de todas las leyes aplicables.",
+        "label": "Confirmo la atestación anterior y acepto los términos de solo para uso en investigación. *"
+      },
+      "fields": {
+        "businessName": "Nombre de la Empresa *",
+        "businessNamePlaceholder": "El nombre de su empresa",
+        "businessType": "Tipo de Empresa *",
+        "businessTypeDefault": "Seleccione el tipo de empresa",
+        "businessTypes": [
+          "Farmacia de Compuestos",
+          "Clínica de Bienestar",
+          "Spa Médico",
+          "Distribuidor Autorizado",
+          "Institución de Investigación",
+          "Práctica de Medicina Funcional",
+          "Práctica de Antienvejecimiento / Longevidad",
+          "Otro Profesional Autorizado"
+        ],
+        "fullName": "Nombre Completo *",
+        "fullNamePlaceholder": "Su nombre completo",
+        "email": "Correo Electrónico de la Empresa *",
+        "emailPlaceholder": "correo@suempresa.com",
+        "state": "Estado *",
+        "statePlaceholder": "ej. Texas",
+        "volume": "Volumen Mensual Estimado *",
+        "volumeDefault": "Seleccione el rango de volumen",
+        "volumeTiers": [
+          "1–9 kits/mes (Nivel de Inicio)",
+          "10–19 kits/mes (Nivel 1)",
+          "20–39 kits/mes (Nivel 2)",
+          "40+ kits/mes (Nivel 3)"
+        ],
+        "products": "Productos Primarios de Interés *",
+        "productsPlaceholder": "ej. Semaglutida, BPC-157, Ipamorelin, TB-500...",
+        "contactMethod": "Método de Contacto Preferido",
+        "notes": "Notas Adicionales",
+        "notesPlaceholder": "Cualquier requisito específico, pregunta o contexto sobre su programa...",
+        "submit": "Enviar Solicitud Mayorista"
+      },
+      "footer": "La información de la solicitud se mantiene estrictamente confidencial. Nuestro equipo B2B responderá en un plazo de 1 día hábil con detalles de precios e información de configuración de la cuenta. Al enviar, confirma que todos los productos serán utilizados únicamente para fines de investigación y laboratorio por profesionales autorizados."
+    },
+    "fastTrack": {
+      "text": "¿Necesita una respuesta más rápida? Salte el formulario y envíenos un mensaje directamente.",
+      "whatsapp": "Solicitar por WhatsApp",
+      "email": "Solicitud por Correo"
+    }
   }
 }

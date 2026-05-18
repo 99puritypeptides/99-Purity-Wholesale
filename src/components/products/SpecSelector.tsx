@@ -29,6 +29,12 @@ export default function SpecSelector({
   const [selectedSpec, setSelectedSpec] = useState(defaultSpec || specs[0]);
   const [selectedKitSize, setSelectedKitSize] = useState(defaultKitSize || kitSizes[0]);
 
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('product-spec-change', { detail: { spec: selectedSpec } }));
+    }
+  }, [selectedSpec]);
+
   const pillBaseClasses = "border px-5 py-2.5 rounded-full text-xs font-dm-sans font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer flex-shrink-0";
   const defaultPillClasses = "border-black/10 text-black/60 bg-white hover:bg-black/5 hover:border-black/25 hover:text-black";
   const selectedPillClasses = "border-black bg-black text-white";

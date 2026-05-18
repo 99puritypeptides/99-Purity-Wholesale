@@ -7,6 +7,7 @@ interface ProductGalleryProps {
   images: string[];
   productName: string;
   categoryName: string;
+  specImagesMap?: Record<string, string>;
 }
 
 // Parses filenames like "Semaglutide 10mg.jpg" to return "10MG"
@@ -32,10 +33,27 @@ const getDosageLabel = (filename: string) => {
   return "SPEC"; // Default fallback
 };
 
-export default function ProductGallery({ images, productName, categoryName }: ProductGalleryProps) {
+export default function ProductGallery({ images, productName, categoryName, specImagesMap }: ProductGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isZoomed, setIsZoomed] = useState(false);
+
+  React.useEffect(() => {
+    const handleSpecChange = (e: Event) => {
+      const customEvent = e as CustomEvent<{ spec: string }>;
+      const spec = customEvent.detail.spec;
+      if (specImagesMap && specImagesMap[spec]) {
+        const targetImg = specImagesMap[spec];
+        const idx = images.indexOf(targetImg);
+        if (idx !== -1) {
+          setActiveIndex(idx);
+        }
+      }
+    };
+
+    window.addEventListener('product-spec-change', handleSpecChange);
+    return () => window.removeEventListener('product-spec-change', handleSpecChange);
+  }, [images, specImagesMap]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();

@@ -45,7 +45,7 @@ const productImagesMap = {
   "pt-141": "PT-141 10mg.jpg",
   "retatrutide": "Retatrutide 10mg.jpg",
   "semaglutide": "Semaglutide 5mg.jpg",
-  "sermorelin": "Sermorelin 10mg.jpg",
+  "sermorelin-acetate": "Sermorelin 10mg.jpg",
   "ss-31": "SS-31 50mg.jpg",
   "tb-500": "TB-500 10mg.jpg",
   "tesamorelin": "Tesamorelin 5mg.jpg",

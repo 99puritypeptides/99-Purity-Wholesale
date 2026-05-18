@@ -1,15 +1,26 @@
 import { notFound } from 'next/navigation';
-import { AlertTriangle, Mail, Zap, CheckCircle2, ArrowRight, ShieldCheck, FlaskConical } from 'lucide-react';
+import { Zap, CheckCircle2, ShieldCheck, FlaskConical, ChevronRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import productsData from '@/data/products.json';
 import AddToInquiryButton from '@/components/products/AddToInquiryButton';
+import { FadeIn } from '@/components/shared/Motion';
+import GlobalCTA from '@/components/layout/GlobalCTA';
+import FaqSection from '@/components/shared/FaqSection';
 
 export async function generateMetadata({ params }: { params: { locale: string; category: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'CategoryDetail' });
   
-  // Validate if category exists in translations
-  const categories = ['glp1-metabolic-peptides', 'growth-hormone', 'healing-recovery-peptides', 'cognitive-nootropic', 'anti-aging-longevity', 'cosmetic-aesthetic', 'ancillaries'];
+  const categories = [
+    'metabolic-research',
+    'cognitive-function',
+    'sleep-cycle-investigation',
+    'growth-factor-research',
+    'recovery-research',
+    'cellular-health-research',
+    'aminos',
+    'essentials'
+  ];
   if (!categories.includes(params.category)) return {};
 
   return {
@@ -18,216 +29,353 @@ export async function generateMetadata({ params }: { params: { locale: string; c
   };
 }
 
-const productImagesMap = {
+const productImagesMap: Record<string, string> = {
   "5-amino-1mq": "5-Amino-1MQ 10mg.jpg",
-  "aod9604": "AOD 2mg.jpg",
-  "b12": "B12.png",
   "bpc-157": "BPC-157 5mg.jpg",
   "bpc-5mg-tb-5mg": "BPC-157.TB-500 5.5mg.jpg",
   "bpc-10mg-tb-10mg": "BPC-157.TB-500 10.10mg.jpg",
   "cagrilintide": "Cagrilintide.jpg",
   "cjc-1295-ipam": "CJC-1295.Ipamorelin 10.10mg.jpg",
-  "dsip": "DSIP 10mg.jpg",
   "epithalon": "Epithalon 10mg.jpg",
+  "foxo4": "FOX04 10mg.jpg",
   "ghk-cu": "GHK-CU 50mg.jpg",
   "glow-blend": "GLOW.jpg",
+  "klow-blend": "KLOW.jpg",
   "ipamorelin": "Ipamorelin 5mg.jpg",
   "kpv": "KPV 10mg.jpg",
-  "melanotan-i": "MT - 1 10mg.jpg",
-  "melanotan-ii": "MT-2 10mg.jpg",
+  "ll37": "LL37 5mg.jpg",
   "mots-c": "Mots-c 10mg.jpg",
   "nad": "NAD+ 500mg.jpg",
-  "pt-141": "PT-141 10mg.jpg",
   "retatrutide": "Retatrutide 10mg.jpg",
-  "semaglutide": "Semaglutide 5mg.jpg",
-  "sermorelin": "Sermorelin 10mg.jpg",
+  "selank": "SELANK 5mg.png",
+  "semaglutide": "Semaglutide 10mg.jpg",
+  "semax": "SEMAX 5mg.png",
+  "sermorelin-acetate": "Sermorelin 10mg.jpg",
+  "snap-8": "Snap 8 10mg.jpg",
   "ss-31": "SS-31 50mg.jpg",
-  "tb-500": "TB-500 10mg.jpg",
+  "tb-500": "TB-500 5mg - 3ml.jpg",
   "tesamorelin": "Tesamorelin 5mg.jpg",
-  "tesofensine": "Tesofensine 500mcg.png",
-  "tirzepatide": "Tirzepatide 10mg.jpg"
+  "tirzepatide": "Tirzepatide 10mg.jpg",
+  "vip": "VIP 10mg.jpg",
+  "mic-blend": "MIC BLEND.png"
 };
+
+// Dynamic helper to build 8 robust, localized B2B wholesale peptide FAQs
+function getFAQList(locale: string, categoryTitle: string, categoryFaqs: {q: string, a: string}[]) {
+  const isEs = locale === 'es';
+  
+  const generalFaqs = isEs ? [
+    {
+      q: `¿Cómo se verifica la pureza de los compuestos de la categoría ${categoryTitle}?`,
+      a: "Todos los péptidos se someten a rigurosas pruebas analíticas en laboratorios acreditados de EE. UU. utilizando cromatografía líquida de alta resolución (HPLC) y espectrometría de masas (MS) para confirmar una pureza ≥99% y la identidad de la secuencia."
+    },
+    {
+      q: "¿Sus instalaciones cumplen con las directrices cGMP de EE. UU.?",
+      a: "Sí, todos los compuestos se sintetizan en laboratorios de última generación que cumplen con las directrices de buenas prácticas de fabricación vigentes (cGMP), garantizando un estricto control de calidad, esterilidad y reproducibilidad de lote a lote."
+    },
+    {
+      q: "¿Cómo se envían los péptidos liofilizados al por mayor?",
+      a: "Nuestros péptidos se envían liofilizados (polvo liofilizado) en viales sellados al vacío. La liofilización garantiza la estabilidad durante el tránsito doméstico y elimina la necesidad de transporte refrigerado de cadena de frío."
+    },
+    {
+      q: "¿Cuáles son las condiciones óptimas de almacenamiento para la estabilidad?",
+      a: "Para la estabilidad a largo plazo, los viales liofilizados deben almacenarse a -20 °C o menos. Una vez reconstituidos con agua bacteriostática, deben mantenerse refrigerados a 2-8 °C y utilizarse en un plazo de 30 días."
+    },
+    {
+      q: "¿Cómo funcionan los descuentos por volumen para cuentas B2B?",
+      a: "Ofrecemos una estructura de precios escalonada basada en el volumen total del pedido. Sus descuentos se aplican automáticamente en viales individuales o kits, independientemente de la categoría de péptido ordenada."
+    },
+    {
+      q: "¿Cuál es el pedido mínimo para el programa de compras al por mayor?",
+      a: "El pedido mínimo inicial es de 10 unidades (1 kit completo de viales) por producto. Esto nos permite mantener un embalaje clínico estéril y ofrecer precios preferenciales al por mayor."
+    },
+    {
+      q: "¿Ofrecen servicios de marca privada o síntesis personalizada?",
+      a: "Sí, ofrecemos servicios integrales de marca privada (Private Label) para clínicas y laboratorios autorizados, incluyendo viales personalizados, cajas de kit con marca propia y especificaciones de concentración exclusivas."
+    },
+    {
+      q: "¿Se pueden utilizar estos compuestos para consumo terapéutico directo?",
+      a: "No. Todos los productos químicos suministrados en nuestro catálogo al por mayor están destinados estrictamente a investigación de laboratorio e investigación in vitro. No están aprobados para uso terapéutico o consumo humano."
+    }
+  ] : [
+    {
+      q: `How is the purity of compounds in the ${categoryTitle} category verified?`,
+      a: "Every single batch of peptides undergoes rigorous analytical testing at accredited U.S. laboratories using High-Performance Liquid Chromatography (HPLC) and Mass Spectrometry (MS) to confirm sequence identity and ≥99% purity levels."
+    },
+    {
+      q: "Are your synthesis facilities cGMP compliant?",
+      a: "Yes, all compounds are synthesized in state-of-the-art facilities complying with current Good Manufacturing Practices (cGMP) guidelines, ensuring sterile compounding, strict environment controls, and lot-to-lot reproducibility."
+    },
+    {
+      q: "How are the lyophilized peptides shipped for wholesale orders?",
+      a: "Our peptides are shipped in lyophilized (freeze-dried) powder form in vacuum-sealed vials. Lyophilization ensures maximum compound stability during transit and eliminates cold-chain requirements during shipping."
+    },
+    {
+      q: "What are the recommended storage and stability guidelines?",
+      a: "For long-term storage, lyophilized vials should be kept at -20°C or below. Once reconstituted with sterile bacteriostatic water, compounds must be kept refrigerated at 2-8°C and utilized within 30 days."
+    },
+    {
+      q: "How do volume tier discounts apply to wholesale orders?",
+      a: "We offer a highly scalable B2B discount structure based on your total catalog volume. The tier discount applies automatically across all product kits and compounding supplies in your cart."
+    },
+    {
+      q: "What is the Minimum Order Quantity (MOQ) for wholesale accounts?",
+      a: "Our standard wholesale MOQ is 10 units (1 kit) per product specification. This allows us to ship sterile clinical batch lots and provide tiered pricing models."
+    },
+    {
+      q: "Do you offer private labeling or custom synthesis services?",
+      a: "Yes. We offer fully customized B2B solutions including custom peptide synthesis, private labeling, branded boxes, and specialized vial sizes for clinics, spas, and laboratories."
+    },
+    {
+      q: "Are these compounds approved for direct human consumption?",
+      a: "No. All products listed in our wholesale catalog are synthesized exclusively for laboratory research and in vitro study. They are not approved for diagnostic, therapeutic, or direct human administration."
+    }
+  ];
+
+  const merged = [...categoryFaqs, ...generalFaqs];
+  return merged.slice(0, Math.max(8, categoryFaqs.length));
+}
 
 export default async function CategoryPage({ params }: { params: { locale: string; category: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'CategoryDetail' });
   const ct = await getTranslations({ locale: params.locale, namespace: 'CategoryTemplate' });
+  const tDetail = await getTranslations({ locale: params.locale, namespace: 'ProductDetail' });
   
-  const categoryKeys = ['glp1-metabolic-peptides', 'growth-hormone', 'healing-recovery-peptides', 'cognitive-nootropic', 'anti-aging-longevity', 'cosmetic-aesthetic', 'ancillaries'];
+  const categoryKeys = [
+    'metabolic-research',
+    'cognitive-function',
+    'sleep-cycle-investigation',
+    'growth-factor-research',
+    'recovery-research',
+    'cellular-health-research',
+    'aminos',
+    'essentials'
+  ];
   
   if (!categoryKeys.includes(params.category)) notFound();
 
   const products = productsData.filter(p => p.category === params.category);
 
-  return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
-      <div className="bg-yellow-900/20 border-b border-yellow-700/30 text-yellow-500 py-3 px-4 text-center text-sm font-dm-mono flex items-center justify-center gap-2">
-        <AlertTriangle className="w-4 h-4 flex-shrink-0" /> {ct('banner')}
-      </div>
+  // Fetch category FAQs and dynamic list expansion to at least 8 FAQs
+  const categoryFaqs = (t.raw(`categories.${params.category}.faqs`) as {q: string, a: string}[]) || [];
+  const faqs = getFAQList(params.locale, t(`categories.${params.category}.title`), categoryFaqs);
 
-      {/* Hero */}
-      <section className="relative overflow-hidden py-20 border-b border-white/5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
-        <div className="container mx-auto px-4 relative z-10 max-w-5xl">
-          <div className="flex items-center gap-2 mb-6 text-white/30 font-dm-mono text-xs uppercase tracking-widest">
-            <Link href="/" className="hover:text-brand-accent">{ct('home')}</Link><span>/</span>
-            <Link href="/products" className="hover:text-brand-accent">{ct('products')}</Link><span>/</span>
-            <span className="text-brand-accent">{t(`categories.${params.category}.title`)}</span>
-          </div>
-          <div className="inline-block bg-brand-accent/10 text-brand-accent px-4 py-1.5 rounded-full font-dm-mono text-sm mb-6 border border-brand-accent/20">
-            {t(`categories.${params.category}.badge`)}
-          </div>
-          <h1 className="text-5xl md:text-6xl font-rajdhani font-bold mb-6 text-white tracking-tight">
-            {t(`categories.${params.category}.title`)}
-          </h1>
-          <p className="text-xl text-gray-400 font-dm-sans leading-relaxed max-w-3xl">
-            {t(`categories.${params.category}.desc`)}
-          </p>
-          <div className="flex flex-wrap gap-3 mt-8">
-            {['≥99% Purity', 'Batch COA', 'U.S. Made', `${products.length} ${ct('products')}`].map(b => (
-              <span key={b} className="bg-white/5 border border-white/10 text-white/50 px-3 py-1 rounded-full font-dm-mono text-xs">{b}</span>
-            ))}
-          </div>
+  return (
+    <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
+
+      {/* Hero Section - Elegant Light Off-White Linen with safety header padding */}
+      <section className="relative overflow-hidden pt-44 pb-24 md:pt-56 md:pb-28 border-b border-black/5 bg-[#F8F8F6]">
+        {/* Light Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-5xl relative z-10">
+          <FadeIn>
+            {/* Breadcrumb Navigation */}
+            <div className="flex items-center gap-2 mb-8 text-black/30 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
+              <Link href="/" className="hover:text-black">{ct('home')}</Link>
+              <span>/</span>
+              <Link href="/products" className="hover:text-black">{ct('products')}</Link>
+              <span>/</span>
+              <span className="text-black/60">{t(`categories.${params.category}.title`)}</span>
+            </div>
+
+            {/* Badge */}
+            <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
+              {t(`categories.${params.category}.badge`)}
+            </div>
+
+            {/* Header */}
+            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+              {t(`categories.${params.category}.title`)}
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl leading-relaxed">
+              {t(`categories.${params.category}.desc`)}
+            </p>
+
+            {/* Specification Badges Tray */}
+            <div className="flex flex-wrap gap-2.5 mt-10">
+              {['≥99% Purity', 'Batch COA', 'U.S. Made', `${products.length} ${ct('products')}`].map(b => (
+                <span 
+                  key={b} 
+                  className="bg-white border border-black/5 text-black/60 px-4 py-1.5 rounded-full font-dm-mono text-[10px] font-bold uppercase tracking-wider shadow-sm"
+                >
+                  {b}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map(product => {
+      {/* Products Grid - Consistent Light Linen Section */}
+      <section className="py-24 md:py-32 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
+        {/* Subtle Light Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {products.map((product, idx) => {
               const productImage = productImagesMap[product.slug as keyof typeof productImagesMap];
               return (
-                <div key={product.name} className="bg-[#0e131b] border border-white/5 rounded-xl p-6 md:p-8 hover:border-brand-accent/30 transition-all flex flex-col group/card">
-                  {/* Luxury Product Image Showcase */}
-                  <div className="relative aspect-square w-full rounded-xl border border-white/10 bg-black/40 overflow-hidden flex items-center justify-center mb-6 shadow-lg group-hover/card:border-brand-accent/20 transition-colors">
-                    {productImage ? (
-                      <img 
-                        src={encodeURI(`/Product images/${productImage}`)}
-                        alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105"
-                      />
-                    ) : (
-                      <div className="flex flex-col items-center justify-center text-center p-6 text-gray-600">
-                        <FlaskConical className="w-12 h-12 text-brand-accent/40 mb-2 group-hover/card:text-brand-accent/60 transition-colors" />
-                        <span className="text-[10px] font-dm-mono uppercase tracking-[0.2em] text-white/30">Research Only</span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <h3 className="text-3xl font-rajdhani font-bold text-white mb-4 border-b border-white/10 pb-4 group-hover/card:text-brand-accent transition-colors">{product.name}</h3>
-                  {product.cas && <div className="text-gray-500 font-dm-mono text-xs mb-4">CAS: {product.cas}</div>}
-                  <div className="mb-6 flex-grow">
-                    <h4 className="text-sm font-dm-mono text-gray-500 mb-3 uppercase tracking-wider">{ct('availableSpecs')}</h4>
-                    <ul className="space-y-2">
-                      {product.specs.map(spec => (
-                        <li key={spec} className="flex items-center gap-2 text-gray-300 font-dm-sans"><CheckCircle2 className="w-4 h-4 text-brand-accent" />{spec}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="bg-black/50 p-4 rounded-lg mb-6 border border-white/5">
-                    <div className="flex justify-between mb-2"><span className="text-gray-400 text-sm">{ct('moq')}</span><span className="text-white font-bold font-dm-mono">{ct('units')}</span></div>
-                    <div className="flex justify-between"><span className="text-gray-400 text-sm">{ct('pricing')}</span><span className="text-brand-accent font-bold font-dm-mono text-sm border border-brand-accent/30 px-2 py-1 rounded bg-brand-accent/10">{ct('contact')}</span></div>
-                  </div>
-                  <div className="flex flex-col gap-3">
-                    <Link href={`/products/${product.category}/${product.slug}`} className="w-full bg-transparent border border-brand-accent text-brand-accent hover:bg-brand-accent/10 font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">{ct('viewDetails')}</Link>
+                <FadeIn key={product.slug} delay={0.05 * idx} className="h-full">
+                  <div className="group relative bg-white border border-black/5 rounded-[2.2rem] p-6 hover:border-brand-accent/35 transition-all duration-500 flex flex-col hover:-translate-y-2 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_90px_rgba(0,0,0,0.05)] overflow-hidden h-full">
+                    {/* Grainy Noise Overlay for premium luxury depth */}
+                    <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                     
-                    {(() => {
-                      const [spec, kitSizeStr] = product.specs[0].split('×');
-                      return (
-                        <AddToInquiryButton
-                          productId={product.slug}
-                          productName={product.name}
-                          category={t(`categories.${params.category}.title`)}
-                          spec={spec}
-                          kitSize={parseInt(kitSizeStr)}
-                          categoryPage={`/products/${product.category}`}
-                        />
-                      );
-                    })()}
+                    <Link href={`/products/${product.category}/${product.slug}`} className="flex flex-col h-full relative z-10">
+                      {/* Luxury Product Thumbnail Showcase */}
+                      <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
+                        {productImage ? (
+                          <img 
+                            src={encodeURI(`/Product images/${productImage}`)}
+                            alt={product.name}
+                            className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                          />
+                        ) : (
+                          <div className="flex flex-col items-center justify-center text-center p-4 text-black/20 relative z-10">
+                            <FlaskConical className="w-10 h-10 text-black/10 mb-2 group-hover:text-brand-accent/50 transition-colors" />
+                            <span className="text-[9px] font-dm-mono uppercase tracking-[0.15em] text-black/20">Research Only</span>
+                          </div>
+                        )}
+                      </div>
 
-                    <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(ct('whatsappMsg', { name: product.name }))}`} target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366]/20 text-[#25D366] font-bold py-3 rounded-md transition-colors font-rajdhani uppercase tracking-wider flex items-center justify-center gap-2">
-                      <Zap className="w-5 h-5" /> {ct('whatsappPricing')}
-                    </a>
+                      {/* Category Tag */}
+                      <div className="mb-3.5">
+                        <span className="text-[8px] font-dm-mono font-bold text-black/40 uppercase tracking-[0.2em] px-2.5 py-1 bg-black/5 rounded-full border border-black/5 group-hover:border-black/15 group-hover:text-black transition-all duration-300">
+                          {product.category.replace(/-/g, ' ')}
+                        </span>
+                      </div>
+                      
+                      {/* Title */}
+                      <h3 className="text-lg font-absans font-bold text-black mb-2 leading-tight group-hover:text-black/80 transition-colors duration-300 uppercase tracking-tight">
+                        {product.name}
+                      </h3>
+                      
+                      {/* Short localized Description */}
+                      <p className="text-xs text-black/50 font-archia leading-relaxed font-medium line-clamp-2 mb-6 group-hover:text-black/70 transition-colors duration-300 flex-grow">
+                        {tDetail.has(`descriptions.${product.slug}`) ? tDetail(`descriptions.${product.slug}`) : product.description}
+                      </p>
+                    </Link>
+
+                    {/* Inquiry & Details Action Drawer */}
+                    <div className="flex flex-col gap-4 pt-5 border-t border-black/5 mt-auto relative z-10">
+                      {(() => {
+                        const [spec, kitSizeStr] = product.specs[0].split('×');
+                        return (
+                          <AddToInquiryButton
+                            productId={product.slug}
+                            productName={product.name}
+                            category={product.category}
+                            spec={spec}
+                            kitSize={parseInt(kitSizeStr)}
+                            categoryPage={`/products/${product.category}`}
+                          />
+                        );
+                      })()}
+                      
+                      <div className="flex items-center justify-between mt-1">
+                        <div className="text-[9px] font-dm-mono font-bold text-black/30 uppercase tracking-widest">
+                          {product.specs.length} Specs
+                        </div>
+                        
+                        <Link 
+                          href={`/products/${product.category}/${product.slug}`} 
+                          className="flex items-center gap-1 text-black/50 text-[10px] font-dm-mono font-bold uppercase tracking-widest transition-colors hover:text-black"
+                        >
+                          Details <ChevronRight className="w-3.5 h-3.5 ml-0.5 transform transition-transform group-hover:translate-x-0.5" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </FadeIn>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* SEO Content */}
-      <section className="py-20 bg-[#060B17] border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-12">
-            <div className="lg:w-2/3 space-y-6">
-              <h2 className="text-3xl font-rajdhani font-bold text-white">
-                {ct('aboutTitle', { title: t(`categories.${params.category}.title`) })}
-              </h2>
-              <p className="text-gray-300 font-dm-sans leading-relaxed text-lg">
-                {t(`categories.${params.category}.seoP1`)}
-              </p>
-              <p className="text-gray-400 font-dm-sans leading-relaxed">
-                {t(`categories.${params.category}.seoP2`)}
-              </p>
+      {/* SEO Narrative & Clinical Guarantees Section - Contrast Off-White/Linen Grid */}
+      <section className="py-24 md:py-32 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
+        {/* Light Noise Texture */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            {/* Left Portion: Compound Dynamic SEO Narrative */}
+            <div className="lg:col-span-7 space-y-8">
+              <FadeIn>
+                <h2 className="text-3xl md:text-4xl font-bold font-absans text-black uppercase tracking-tight mb-8">
+                  {ct('aboutTitle', { title: t(`categories.${params.category}.title`) })}
+                </h2>
+                <p className="text-black/60 font-archia leading-relaxed text-sm md:text-base font-medium mb-6">
+                  {t(`categories.${params.category}.seoP1`)}
+                </p>
+                <p className="text-black/40 font-archia leading-relaxed text-sm font-medium">
+                  {t(`categories.${params.category}.seoP2`)}
+                </p>
+              </FadeIn>
             </div>
-            <div className="lg:w-1/3">
-              <div className="bg-[#0e131b] border border-brand-accent/20 rounded-2xl p-8 sticky top-24">
-                <ShieldCheck className="w-8 h-8 text-brand-accent mb-4" />
-                <h3 className="text-xl font-rajdhani font-bold text-white mb-4">
-                  {t('guarantee.title')}
-                </h3>
-                <ul className="space-y-3">
-                  {(t.raw('guarantee.items') as string[]).map(p => (
-                    <li key={p} className="flex items-start gap-2 text-gray-400 font-dm-sans text-sm"><CheckCircle2 className="w-4 h-4 text-brand-accent mt-0.5 flex-shrink-0" />{p}</li>
-                  ))}
-                </ul>
-                <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="mt-6 w-full bg-brand-accent text-brand-bg font-bold py-3 rounded-xl flex items-center justify-center gap-2 font-rajdhani uppercase tracking-wider text-sm hover:bg-[#3EABC0] transition-colors">
-                  <Zap className="w-4 h-4" /> {t('cta.getPricing')}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-20 border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-rajdhani font-bold text-white mb-8 text-center">
-            {ct('faqTitle', { title: t(`categories.${params.category}.title`) })}
-          </h2>
-          <div className="space-y-3">
-            {(t.raw(`categories.${params.category}.faqs`) as {q: string, a: string}[]).map((faq, i) => (
-              <details key={i} className="group bg-[#0e131b] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-accent/20 transition-colors">
-                <summary className="flex items-center justify-between p-7 cursor-pointer list-none gap-4">
-                  <h3 className="text-white font-rajdhani font-bold text-lg group-open:text-brand-accent transition-colors">{faq.q}</h3>
-                  <div className="w-7 h-7 rounded-full border border-white/10 flex items-center justify-center text-white/40 group-open:text-brand-accent flex-shrink-0 text-lg leading-none">
-                    <span className="group-open:hidden">+</span><span className="hidden group-open:block">−</span>
+            {/* Right Portion: Certified Guarantees Card */}
+            <div className="lg:col-span-5">
+              <FadeIn delay={0.1}>
+                <div className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 sticky top-28 shadow-sm hover:border-black/15 transition-all">
+                  <div className="w-12 h-12 rounded-full bg-black/5 flex items-center justify-center mb-6 border border-black/5">
+                    <ShieldCheck className="w-6 h-6 text-black" />
                   </div>
-                </summary>
-                <div className="px-7 pb-7"><p className="text-gray-400 font-dm-sans leading-relaxed">{faq.a}</p></div>
-              </details>
-            ))}
+                  
+                  <h3 className="text-2xl font-bold font-absans text-black mb-6 uppercase tracking-wide">
+                    {t('guarantee.title')}
+                  </h3>
+                  
+                  <ul className="space-y-4 mb-8 pl-0">
+                    {(t.raw('guarantee.items') as string[]).map(p => (
+                      <li key={p} className="flex items-start gap-3 text-black/60 font-archia text-sm font-medium">
+                        <CheckCircle2 className="w-4 h-4 text-black/40 mt-0.5 flex-shrink-0" />
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a 
+                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full bg-black hover:bg-black/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 font-dm-sans text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg active:scale-95 whitespace-nowrap"
+                  >
+                    <Zap className="w-4 h-4" /> {t('cta.getPricing')}
+                  </a>
+                </div>
+              </FadeIn>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-[#060B17] border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl font-rajdhani font-bold text-white mb-4">
-            {t('cta.title', { title: t(`categories.${params.category}.title`) })}
-          </h2>
-          <p className="text-gray-400 font-dm-sans mb-8">
-            {t('cta.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-brand-accent hover:bg-[#3EABC0] text-brand-bg font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider"><Zap className="w-5 h-5" /> {t('cta.whatsapp')}</a>
-            <Link href="/products" className="inline-flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-bold py-4 px-8 rounded-xl font-rajdhani text-lg uppercase tracking-wider hover:bg-white/10"><ArrowRight className="w-5 h-5" /> {t('cta.catalog')}</Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* FAQs Section - Uniform Homepage Styling Component */}
+      <FaqSection 
+        title={ct('faqTitle', { title: t(`categories.${params.category}.title`) })}
+        subtitle={t(`categories.${params.category}.desc`)}
+        items={faqs}
+        eyebrow="(FAQ)"
+        theme="light"
+      />
+
+      {/* Bottom Global B2B Call-To-Action Block */}
+      <GlobalCTA 
+        badge={t(`categories.${params.category}.badge`)}
+        title={t(`categories.${params.category}.title`)}
+        subtitle={t(`categories.${params.category}.desc`)}
+        primaryCtaText="WhatsApp Sales"
+        primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20high-volume%20peptide%20sourcing%20and%20receiving%20the%20wholesale%20price%20list."
+        secondaryCtaText="Email Laboratory"
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
+
+    </main>
   );
 }

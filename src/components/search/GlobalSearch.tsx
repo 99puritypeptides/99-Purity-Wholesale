@@ -159,10 +159,10 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 px-2">
                   {[
-                    { id: 'glp1-metabolic-peptides', name: 'Metabolic & GLP-1', icon: Activity },
-                    { id: 'growth-hormone', name: 'Growth Hormone', icon: TrendingUp },
-                    { id: 'healing-recovery-peptides', name: 'Healing & Recovery', icon: Microscope },
-                    { id: 'anti-aging-longevity', name: 'Anti-Aging & Longevity', icon: Sparkles },
+                    { id: 'metabolic-research', name: 'Metabolic Research', icon: Activity },
+                    { id: 'growth-factor-research', name: 'Growth Factor Research', icon: TrendingUp },
+                    { id: 'recovery-research', name: 'Recovery Research', icon: Microscope },
+                    { id: 'cellular-health-research', name: 'Cellular Health Research', icon: Sparkles },
                   ].map(cat => (
                     <Link
                       key={cat.id}
