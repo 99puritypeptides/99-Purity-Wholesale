@@ -26,7 +26,7 @@
       "badge": "El Proveedor de Péptidos Mayorista de Confianza en América",
       "authorized": "Proveedor de Investigación Autorizado",
       "explore": "Explorar Todo",
-      "institutions": "200+ Instituciones",
+      "institutions": "Instituciones Verificadas",
       "partners": "Socios Verificados",
       "badges": {
         "usMade": "Hecho en EE. UU.",
@@ -380,6 +380,7 @@
     "nav": {
       "products": "Productos",
       "quality": "Calidad",
+      "calculator": "Calculadora",
       "services": "Servicios",
       "blog": "Blog",
       "locations": "Ubicaciones",
@@ -388,7 +389,7 @@
       "search": "Buscar"
     },
     "whatsapp": {
-      "mockupTitle": "Soporte 99 Purity",
+      "mockupTitle": "99 Purity Wholesale",
       "mockupSubtitle": "Acceso Institucional",
       "mockupWelcome": "Bienvenido al Conserje B2B de 99 Purity. Seleccione un módulo de adquisición para comenzar su consulta directa encriptada.",
       "tooltipTitle": "Soporte Institucional",
@@ -415,9 +416,9 @@
           "text": "Hola, estoy consultando sobre los servicios de síntesis de compuestos personalizados para un proyecto de investigación específico."
         },
         "distribution": {
-          "label": "Distribución Internacional",
-          "desc": "Logística Global",
-          "text": "Hola, estoy interesado en convertirme en un distribuidor regional de sus compuestos de investigación fuera de los EE. UU."
+          "label": "Consulta de Distribución en EE. UU.",
+          "desc": "Distribución Regional",
+          "text": "Hola, estoy interesado en convertirme en distribuidor regional autorizado de sus compuestos de investigación dentro de los Estados Unidos. ¿Podría compartir los requisitos para una asociación de distribución mayorista?"
         },
         "status": {
           "label": "Soporte de Estado de Pedido",
@@ -445,6 +446,18 @@
       "whatsapp": "Enviar Consulta por WhatsApp",
       "email": "Enviar Consulta por Correo",
       "disclaimer": "Solo para uso de investigación y laboratorio. Solo profesionales autorizados.",
+      "progressBar": {
+        "shippingGoal": "Agregue {count} {count, plural, one {kit} other {kits}} más para desbloquear el envío gratuito a temperatura controlada",
+        "tier1Goal": "Agregue {count} {count, plural, one {kit} other {kits}} más para calificar para el precio mayorista de Nivel 1 (10% de descuento)",
+        "tier2Goal": "Agregue {count} {count, plural, one {kit} other {kits}} más para calificar para el precio mayorista de Nivel 2 (15% de descuento)",
+        "tier3Goal": "Agregue {count} {count, plural, one {kit} other {kits}} más para calificar para el precio mayorista de Nivel 3 Enterprise (20% de descuento)",
+        "maxUnlocked": "¡Nivel de descuento Enterprise máximo desbloqueado! (20% de descuento)",
+        "kitsCount": "{count} / 40 Kits",
+        "starter": "Nivel Inicial",
+        "tier1": "Nivel 1: Crecimiento",
+        "tier2": "Nivel 2: Establecido",
+        "tier3": "Nivel 3: Enterprise"
+      },
       "empty": {
         "title": "Lista de Consulta Vacía",
         "desc": "Explore nuestro catálogo de compuestos verificados para comenzar a construir su solicitud de adquisición.",
@@ -497,12 +510,12 @@
       "partnerProgram": "Programa de Socios",
       "refundPolicy": "Política de Reembolso",
       "complianceTitle": "Cumplimiento",
-      "desc": "99 Purity Wholesale es el principal proveedor nacional de péptidos de investigación de alta pureza de Estados Unidos. Nos especializamos en la distribución de péptidos a granel para clínicas de bienestar, farmacias de compuestos e instituciones de investigación en todo el país. Nuestro catálogo fabricado en EE. UU. es probado independientemente por HPLC para garantizar una pureza ≥99%, proporcionando el abastecimiento nacional confiable requerido para estándares de laboratorio precisos.",
+      "desc": "99 Purity Wholesale es un proveedor B2B con sede en EE. UU. de péptidos de investigación al por mayor, que atiende a farmacias de compuestos, clínicas de bienestar y distribuidores autorizados en los 50 estados. Cada compuesto de nuestro catálogo se sintetiza a nivel nacional y es verificado de forma independiente por Freedom Diagnostic mediante HPLC de fase reversa y análisis LC-MS para confirmar una pureza ≥99%. La documentación de Certificado de Análisis emparejada por lote se incluye con cada pedido mayorista.",
       "copyright": "99 PURITY © {year}. TODOS LOS DERECHOS RESERVADOS.",
       "startNow": "Empezar Ahora",
       "backToTop": "VOLVER ARRIBA",
       "welcome": "De nada.",
-      "creditLab": "Excelencia en Laboratorio Mayorista",
+      "creditLab": "Proveedor de Péptidos al Por Mayor en EE. UU.",
       "creditUSA": "Fabricado en EE. UU.",
       "creditBy": "Diseñado y Desarrollado por"
     }
@@ -550,6 +563,8 @@
       "fields": {
         "businessName": "Nombre del Negocio",
         "businessType": "Tipo de Negocio",
+        "email": "Correo Electrónico",
+        "phone": "Número de Contacto",
         "state": "Estado",
         "products": "Productos Principales de Interés",
         "volume": "Volumen Mensual Estimado",
@@ -733,8 +748,8 @@
           "label": "Estándar de Pureza"
         },
         {
-          "num": "200+",
-          "label": "Clientes B2B"
+          "num": "US Lab",
+          "label": "Fabricación Doméstica"
         },
         {
           "num": "50",
@@ -801,11 +816,11 @@
   "Meta": {
     "homeTitle": "99 Purity Wholesale | Péptidos al por Mayor Estados Unidos",
     "homeDesc": "Proveedor de 99 Purity Wholesale fabricado en América. Péptidos de investigación premium para profesionales autorizados con pureza garantizada del 99%+.",
-    "productsTitle": "Catálogo de 99 Purity Wholesale | Péptidos al por Mayor",
+    "productsTitle": "Catálogo de Péptidos al por Mayor",
     "productsDesc": "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
-    "servicesTitle": "Servicios B2B de Péptidos al por Mayor | 99 Purity Wholesale",
+    "servicesTitle": "Servicios B2B de Péptidos al por Mayor",
     "servicesDesc": "Proveedor de péptidos al por mayor en EE. UU. que ofrece dropshipping, marca propia, desarrollo web y soporte de lanzamiento para clínicas, farmacias y distribuidores.",
-    "servicesOgTitle": "Servicios Comerciales de Péptidos B2B — Diseñados para el Crecimiento | 99 Purity Wholesale",
+    "servicesOgTitle": "Servicios Comerciales de Péptidos B2B — Diseñados para el Crecimiento",
     "servicesOgDesc": "Desde dropshipping y marca propia hasta desarrollo web y estrategia de distribución: 99 Purity Wholesale es el motor operativo para su negocio de compuestos de investigación.",
     "servicesKeywords": {
       "k1": "servicios de proveedor de péptidos al por mayor",
@@ -820,16 +835,20 @@
       "k10": "proveedor de péptidos para farmacia de compuestos",
       "k11": "infraestructura de péptidos B2B"
     },
-    "aboutTitle": "Sobre 99 Purity Wholesale | Péptidos Fabricados en América",
+    "aboutTitle": "Sobre Nosotros | Péptidos Fabricados en América",
     "aboutDesc": "Conozca 99 Purity Wholesale. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
-    "contactTitle": "Contacto | Consultas sobre 99 Purity Wholesale",
+    "contactTitle": "Contacto | Consultas de Péptidos al por Mayor",
     "contactDesc": "Comuníquese con nuestro equipo en EE. UU. para precios, pedidos por volumen y programas de envío directo.",
-    "locationsTitle": "Ubicaciones de 99 Purity Wholesale | Todos los 50 Estados",
+    "locationsTitle": "Ubicaciones de Péptidos al por Mayor | Todos los 50 Estados",
     "locationsDesc": "Cumplimiento nacional rápido y seguro a instituciones de investigación en todo Estados Unidos con 99 Purity Wholesale.",
-    "productTitle": "{name} — Suministro Mayorista a Granel | 99 Purity Wholesale",
+    "blogTitle": "Centro de Conocimiento Mayorista | Guías de Investigación y Análisis COA",
+    "blogDesc": "Guías de expertos sobre abastecimiento de péptidos al por mayor en EE. UU., evaluación de documentación COA, adquisición de GLP-1, programas de envío directo y consideraciones de cumplimiento para farmacias de compuestos y clínicas de bienestar.",
+    "productTitle": "{name} — Suministro Mayorista a Granel",
     "productDesc": "Compre {name} al por mayor con un ≥99% de pureza. Fabricado en EE. UU., COA de lote verificado, precios B2B por niveles. Envío nacional rápido. Solo para uso en investigación.",
     "productOgTitle": "{name} | Péptidos de Investigación al Por Mayor",
-    "productOgDesc": "Suministro mayorista premium de {name}. Pureza ≥99% garantizada. Verificado por HPLC/MS de terceros. Cumplimiento nacional en EE. UU."
+    "productOgDesc": "Suministro mayorista premium de {name}. Pureza ≥99% garantizada. Verificado por HPLC/MS de terceros. Cumplimiento nacional en EE. UU.",
+    "calculatorTitle": "Calculadora de Reconstitución de Péptidos",
+    "calculatorDesc": "Determine las unidades de jeringa exactas y las concentraciones de dosificación para sus compuestos de investigación. Calculadora interactiva visual."
   },
   "ProductsIndex": {
     "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
@@ -934,6 +953,24 @@
     "specsTitle": "Especificaciones del Producto",
     "availableSizes": "Tamaños Disponibles",
     "storageDetails": "Detalles de Almacenamiento",
+    "passportTitle": "Pasaporte de Especificación del Compuesto",
+    "compoundNameLabel": "Nombre del Compuesto",
+    "casRegistryLabel": "Registro CAS",
+    "purityGradeLabel": "Grado de Pureza",
+    "physicalFormLabel": "Forma Física",
+    "recommendedStorageLabel": "Almacenamiento Recomendado",
+    "procurementLimitLabel": "Límite de Adquisición",
+    "moqValue": "10 Viales (MOQ de 1 Kit)",
+    "physicalForms": {
+      "lyophilized": "Polvo Sólido Liofilizado",
+      "solvent": "Solvente Líquido Estéril",
+      "solution": "Solución Líquida Estéril"
+    },
+    "storageValues": {
+      "standard": "-20°C (Largo Plazo) / +2°C a +8°C (Corto Plazo)",
+      "bacWater": "15°C a 30°C (Temp. Ambiente - No Congelar)",
+      "liquid": "2°C a 8°C (Refrigerar - No Congelar)"
+    },
     "moqHeading": "MOQ Mayorista: 10 Unidades",
     "moqSubtext": "La cantidad mínima de pedido es de 10 unidades (1 kit).",
     "pricingHeading": "Contactar para Precios por Niveles",
@@ -1308,9 +1345,36 @@
       "noCustomsSub": "Cumplimiento 100% Nacional de EE. UU."
     },
     "complianceTitle": "Aviso de Cumplimiento de Investigación",
+    "complianceDesc": "Todos los compuestos suministrados a {city}, {state} son exclusivamente para investigación de laboratorio in vitro y uso académico. Estrictamente no aptos para consumo humano, ni para uso diagnóstico o terapéutico. Los compradores son responsables de garantizar el cumplimiento de todas las normas locales y estatales relativas al manejo de productos químicos de investigación.",
+    "contactTitle": "Contactar con Ventas en {city}",
+    "contactDesc": "Comuníquese con nuestro equipo de ventas B2B dedicado al área de {state} para solicitar nuestra lista de precios al por mayor actual o analizar un pedido al por mayor.",
+    "whatsappCta": "Ventas por WhatsApp",
+    "or": "o",
+    "emailCta": "Consulta por Correo Electrónico",
     "viewCatalog": "Ver Catálogo Completo",
     "whatsappMsg": "Hola, soy un investigador ubicado en {city}, {state} en busca de precios de 99 Purity Wholesale.",
-    "emailSubject": "Consulta de 99 Purity Wholesale - {city}, {state}"
+    "emailSubject": "Consulta de 99 Purity Wholesale - {city}, {state}",
+    "whyTitle": "Por qué los profesionales del área de {city} eligen 99 Purity Wholesale",
+    "catTitle": "Categorías de péptidos al por mayor disponibles para compradores de {city}",
+    "otherRegions": "Otras regiones que servimos",
+    "viewHub": "Ver centro local",
+    "applyCta": "Solicitar cuenta al por mayor",
+    "applyMsg": "¿Nuevo en las compras al por mayor? Solicite una cuenta verificada.",
+    "accountDetails": "Detalles de la cuenta al por mayor",
+    "details": {
+      "moq": "MOQ",
+      "moqVal": "10 unidades por producto",
+      "purity": "Pureza",
+      "purityVal": "≥99% (COA verificado)",
+      "fulfillment": "Cumplimiento",
+      "fulfillmentVal": "2–4 días hábiles",
+      "payment": "Pago",
+      "paymentVal": "Bitcoin · Zelle · Transferencia Bancaria",
+      "shipping": "Envío",
+      "shippingVal": "Solo envío nacional en EE. UU.",
+      "buyers": "Compradores",
+      "buyersVal": "Solo profesionales autorizados"
+    }
   },
   "CategoryTemplate": {
     "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",
@@ -1329,28 +1393,28 @@
     "whatsappMsg": "Hola, necesito precios mayoristas para {name}"
   },
   "QualityPage": {
-    "badge": "Estándares Inquebrantables",
+    "badge": "Pureza Verificada por Terceros",
     "title": "Prueba en Cada Vial",
-    "subtitle": "En la industria de la investigación, las suposiciones destruyen los datos. Confiamos en una validación analítica estricta, asegurando que cada compuesto que llega a su laboratorio supere el 99% de pureza. No excepciones.",
+    "subtitle": "En investigación, la integridad de su compuesto determina la integridad de sus datos. Cada lote suministrado por 99 Purity Wholesale es verificado de forma independiente por Freedom Diagnostic mediante HPLC de fase reversa y análisis LC-MS para confirmar una pureza ≥99% antes del envío.",
     "pipeline": {
       "title": "Nuestra Línea Analítica",
-      "subtitle": "Una secuencia rigurosa de síntesis, purificación y verificación garantiza una precisión absoluta de la secuencia.",
+      "subtitle": "Una secuencia rigurosa de síntesis doméstica, pruebas de laboratorio independientes y documentación específica por lote — aplicada a cada compuesto antes de su envío.",
       "step1": {
-        "title": "1. Producción y Síntesis",
-        "desc": "Los compuestos se sintetizan bajo estrictas condiciones que cumplen con las cGMP utilizando síntesis de péptidos en fase sólida (SPPS), lo que garantiza la fidelidad estructural desde la primera cadena de aminoácidos."
+        "title": "1. Síntesis en EE. UU.",
+        "desc": "Todos los compuestos se sintetizan a nivel nacional mediante síntesis de péptidos en fase sólida (SPPS) — el método establecido para péptidos de grado de investigación. La producción doméstica proporciona supervisión directa sobre el abastecimiento de materias primas y las condiciones de síntesis."
       },
       "step2": {
-        "title": "2. Pruebas Independientes",
-        "desc": "Las muestras se envían a laboratorios analíticos independientes con sede en EE. UU. para Cromatografía Líquida de Alta Resolución (HPLC) y Espectrometría de Masas (MS) para verificar una pureza ≥99%."
+        "title": "2. Pruebas por Freedom Diagnostic",
+        "desc": "Cada lote de producción se envía a Freedom Diagnostic, nuestro laboratorio analítico independiente en EE. UU. El equipo HPLC de fase reversa y LC-MS confirma la identidad de la secuencia y el porcentaje de pureza. Ningún lote sale sin un informe aprobado."
       },
       "step3": {
         "title": "3. COA Emparejado por Lote",
-        "desc": "Se genera un Certificado de Análisis único para cada lote de producción. No utilizamos informes de pruebas genéricos o desactualizados. Lo que ve es exactamente lo que hay en su vial."
+        "desc": "Cada lote aprobado recibe un Certificado de Análisis único de Freedom Diagnostic — vinculado al número de lote específico, no a una referencia genérica. Su COA se envía con su pedido y puede verificarse mediante el ID de lote en cualquier momento."
       }
     },
     "comparison": {
       "title": "El Estándar 99PW",
-      "subtitle": "Cómo nos comparamos con los proveedores extranjeros típicos y distribuidores no verificados.",
+      "subtitle": "Una comparación estructurada entre el suministro doméstico verificado de forma independiente y los distribuidores extranjeros típicos.",
       "headers": {
         "criteria": "Criterios",
         "ours": "99 Purity Wholesale",
@@ -1359,53 +1423,124 @@
       "rows": {
         "purity": {
           "crit": "Estándar de Pureza",
-          "ours": "Estrictamente ≥ 99%",
-          "theirs": "95% - 98% (A menudo falsificado)"
+          "ours": "Estrictamente ≥99% — sin excepciones",
+          "theirs": "95%–98% típico; a menudo no verificable"
         },
         "testing": {
           "crit": "Pruebas Analíticas",
-          "ours": "Laboratorios Independientes de EE. UU.",
-          "theirs": "Internas o ninguna"
+          "ours": "Freedom Diagnostic (Lab Independiente en EE. UU.)",
+          "theirs": "Lab interno o afiliado — conflicto de interés"
         },
         "coa": {
           "crit": "Validez del COA",
-          "ours": "Emparejado por lote y verificable",
-          "theirs": "Genérico / Photoshop"
+          "ours": "Emparejado por lote, rastreable y verificable",
+          "theirs": "Plantilla genérica o documento alterado"
         },
         "support": {
-          "crit": "Soporte al Cliente",
-          "ours": "Basado en EE. UU., respuesta en 24h",
-          "theirs": "Comunicación lenta y poco confiable"
+          "crit": "Soporte B2B",
+          "ours": "Equipo en EE. UU., respuesta en 2 horas hábiles",
+          "theirs": "Soporte lento o sin respuesta en zona horaria diferente"
         },
         "shipping": {
           "crit": "Envío y Cumplimiento",
-          "ours": "Nacional rápido (Sin aduanas)",
-          "theirs": "Riesgo de aduanas internacionales"
+          "ours": "Nacional EE. UU. — sin exposición a aduanas",
+          "theirs": "Tránsito internacional con riesgo aduanero"
         }
       }
     },
     "library": {
       "title": "Biblioteca de Documentos COA",
-      "subtitle": "Acceda a informes analíticos emparejados por lote para nuestro catálogo.",
-      "placeholder": "Buscar por nombre de producto...",
+      "subtitle": "Busque en nuestro catálogo y acceda a los Certificados de Análisis emparejados por lote de Freedom Diagnostic.",
+      "placeholder": "Buscar por nombre de producto o categoría...",
       "headers": {
         "name": "Nombre del Producto",
         "category": "Categoría",
         "batch": "Último Lote",
         "action": "Acción"
       },
-      "verified": "Verificado",
-      "download": "Descargar PDF",
+      "verified": "FD Verificado",
+      "download": "Descargar COA",
       "empty": "No se encontraron productos que coincidan con \"{searchTerm}\"."
     },
     "trust": {
-      "title": "Confianza Institucional Inquebrantable",
-      "desc": "Nos asociamos con instituciones académicas líderes, instalaciones de investigación privadas e investigadores independientes en todo el mundo. Nuestro compromiso con las prácticas estrictas alineadas con cGMP y la verificación independiente garantiza que sus datos se construyan sobre una base de excelencia de 99 Purity Wholesale.",
+      "title": "Verificación que Puede Leer",
+      "desc": "Cada afirmación de calidad en 99 Purity Wholesale es rastreable a evidencia documentada. Freedom Diagnostic produce informes HPLC y LC-MS emparejados por lote para cada lote de producción. Suministramos péptidos de investigación al por mayor en los 50 estados de EE. UU. con documentación COA adjunta a cada pedido — no como un complemento, sino como condición estándar de suministro.",
       "badges": {
-        "us": "Instalaciones en EE. UU.",
-        "cgmp": "Alineado con cGMP",
-        "qa": "QA Independiente"
+        "us": "Fabricación en EE. UU.",
+        "cgmp": "Verificado por Freedom Diagnostic",
+        "qa": "Probado con HPLC y LC-MS"
       }
+    },
+    "cta": {
+      "badge": "Solicitar Documentación de Lote",
+      "title": "Verifique Antes de Ordenar",
+      "subtitle": "Solicite un COA de muestra para cualquier compuesto de nuestro catálogo antes de comprometerse con una cuenta mayorista. Nuestro equipo B2B responde en 2 horas hábiles."
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes sobre Calidad y Pruebas",
+      "subtitle": "Respuestas detalladas sobre nuestros estándares de pureza, metodología analítica, verificación por Freedom Diagnostic y proceso de documentación COA.",
+      "items": [
+        {
+          "q": "¿Qué significa una pureza ≥99% para péptidos de investigación al por mayor?",
+          "a": "Una pureza ≥99% significa que al menos 99 de cada 100 moléculas en un vial dado son el péptido objetivo con la secuencia correcta. Este umbral — verificado mediante HPLC de fase reversa y análisis LC-MS en [Freedom Diagnostic](https://freedomdiagnostic.com) — descarta secuencias truncadas, impurezas de síntesis y subproductos de oxidación que pueden distorsionar los resultados de los ensayos.",
+          "link": "/quality#coa-library",
+          "linkText": "Ver Biblioteca COA"
+        },
+        {
+          "q": "¿Quién es Freedom Diagnostic y qué función desempeña?",
+          "a": "Freedom Diagnostic es nuestro laboratorio analítico independiente con sede en EE. UU. Cada lote de producción se envía físicamente a sus instalaciones, donde el equipo HPLC y LC-MS confirma la identidad de la secuencia del péptido y el porcentaje de pureza antes de que cualquier producto salga de nuestro almacén.",
+          "link": "/services",
+          "linkText": "Nuestro Proceso de Calidad"
+        },
+        {
+          "q": "¿Qué es un Certificado de Análisis (COA) emparejado por lote?",
+          "a": "Un COA emparejado por lote es un informe de prueba de laboratorio generado para un lote de producción específico — no una plantilla ni un resultado reutilizado. Incluye el nombre del compuesto, número de lote, cromatograma HPLC, datos de espectrometría de masas y el porcentaje de pureza confirmado. Cada pedido de 99 Purity Wholesale incluye el COA correspondiente a ese lote exacto.",
+          "link": "/quality#coa-library",
+          "linkText": "Explorar Biblioteca COA"
+        },
+        {
+          "q": "¿Cuál es la diferencia entre HPLC y LC-MS en las pruebas de péptidos?",
+          "a": "El HPLC de fase reversa separa los compuestos por hidrofobicidad y mide la pureza como porcentaje del área del pico integrado total. El LC-MS añade confirmación del peso molecular, verificando que el compuesto detectado tiene la identidad de secuencia correcta. Usar ambos métodos en conjunto es el estándar analítico de oro para péptidos de grado de investigación."
+        },
+        {
+          "q": "¿Todos los compuestos de su catálogo incluyen un COA?",
+          "a": "Sí. Cada compuesto en nuestro catálogo de productos recibe un COA emparejado por lote de Freedom Diagnostic antes de estar disponible para compra al por mayor. No ofrecemos productos que no hayan superado la verificación de pureza independiente.",
+          "link": "/quality#coa-library",
+          "linkText": "Buscar en Biblioteca COA"
+        },
+        {
+          "q": "¿En qué se diferencia la pureza de un péptido de su potencia?",
+          "a": "La pureza describe qué porcentaje del material es el compuesto peptídico objetivo frente a impurezas. La potencia describe qué tan biológicamente activo es ese compuesto en un contexto de ensayo específico. 99 Purity Wholesale garantiza la pureza verificada por instrumentación analítica — la potencia para un punto final de investigación específico está fuera del alcance de la documentación COA."
+        },
+        {
+          "q": "¿Qué sucede si un lote no alcanza el ≥99% de pureza?",
+          "a": "Cualquier lote de producción que no supere el umbral de pureza ≥99% en las pruebas de Freedom Diagnostic es rechazado y no se incorpora al catálogo mayorista. No descontamos ni recomercializamos lotes fallidos. Solo los lotes con un COA aprobado están disponibles para pedidos.",
+          "link": "/services",
+          "linkText": "Detalles de Cuenta Mayorista"
+        },
+        {
+          "q": "¿Por cuánto tiempo son válidos los documentos COA y cómo deben almacenarse?",
+          "a": "Un COA refleja la pureza de un lote en el momento de la prueba y no tiene fecha de caducidad como documento — es un registro permanente vinculado a ese número de lote. Sin embargo, la integridad real del compuesto se ve afectada por las condiciones de almacenamiento. Recomendamos almacenar los péptidos liofilizados sellados a -20°C para máxima estabilidad a largo plazo."
+        },
+        {
+          "q": "¿Puedo solicitar un COA de muestra antes de realizar un pedido mayorista?",
+          "a": "Sí. Las cuentas mayoristas potenciales pueden solicitar documentación COA de muestra para cualquier compuesto de nuestro catálogo antes de enviar un pedido. Contáctenos por WhatsApp o correo electrónico para solicitar la documentación de lote de su compuesto de interés.",
+          "link": "https://wa.me/18437439007",
+          "linkText": "Solicitar por WhatsApp"
+        },
+        {
+          "q": "¿Cómo se compara su estándar de pureza con los proveedores de péptidos en el extranjero?",
+          "a": "La mayoría de los proveedores extranjeros operan con estándares de pureza del 95%–98%, con COAs producidos por laboratorios internos o afiliados — un conflicto de interés fundamental. 99 Purity Wholesale utiliza exclusivamente pruebas independientes de terceros a través de Freedom Diagnostic, aplica un mínimo de ≥99% sin excepciones y envía desde EE. UU. sin exposición aduanera.",
+          "link": "/quality#comparison",
+          "linkText": "Ver Comparación Completa"
+        },
+        {
+          "q": "¿Qué es la síntesis de péptidos en fase sólida (SPPS)?",
+          "a": "La SPPS es el método estándar para la fabricación de péptidos de investigación. Los aminoácidos se ensamblan secuencialmente en un soporte de resina sólida, construyendo la cadena peptídica objetivo un residuo a la vez. El péptido crudo resultante se purifica y se envía a Freedom Diagnostic para verificación analítica antes de que se libere cualquier lote al catálogo mayorista.",
+          "link": "/products",
+          "linkText": "Explorar Catálogo"
+        }
+      ]
     }
   },
   "CategoryDetail": {
@@ -1683,8 +1818,9 @@
     "subtitle": "Guías de expertos, análisis de mercado y recursos de cumplimiento para farmacias de compuestos, clínicas de bienestar y distribuidores autorizados que se abastecen de péptidos de grado de investigación a granel en EE. UU.",
     "readMore": "Leer Artículo",
     "back": "Volver a los Artículos",
-    "ctaTitle": "¿Listo para Mejorar su Cadena de Suministro?",
-    "ctaSubtitle": "Conéctese con nuestro equipo mayorista para conocer los precios actuales y los COA.",
+    "ctaBadge": "Iniciar su Cuenta Mayorista",
+    "ctaTitle": "¿Listo para Abastecer Péptidos al Por Mayor?",
+    "ctaSubtitle": "Solicite una cuenta B2B verificada para recibir precios mayoristas por niveles, documentación COA emparejada por lote de Freedom Diagnostic y soporte directo de nuestro equipo en EE. UU.",
     "whatsapp": "Chatee con Nosotros en WhatsApp",
     "tags": {
       "pricing": "Precios Mayoristas",
@@ -1693,11 +1829,59 @@
       "compliance": "Cumplimiento",
       "glp1": "Investigación GLP-1",
       "dropshipping": "Envío Directo"
+    },
+    "FAQ": {
+      "title": "Preguntas Frecuentes del Centro de Conocimiento",
+      "subtitle": "Preguntas sobre los temas que cubrimos, cómo se produce el contenido y cómo usar estas guías al evaluar un proveedor de péptidos mayoristas.",
+      "items": [
+        {
+          "q": "¿Qué temas cubre el Centro de Conocimiento de 99 Purity Wholesale?",
+          "a": "Nuestro compendio cubre estrategia de abastecimiento mayorista, metodología de verificación de COA, adquisición de péptidos GLP-1 para distribuidores autorizados, marcos de precios por niveles, estructuras de programas de envío directo y etiquetado privado, consideraciones de cumplimiento para farmacias de compuestos y criterios de evaluación de proveedores.",
+          "link": "/products",
+          "linkText": "Explorar Catálogo"
+        },
+        {
+          "q": "¿Quién escribe y revisa el contenido de este blog?",
+          "a": "El contenido es producido por el equipo de 99 Purity Wholesale, basándose en la experiencia operativa directa en el abastecimiento y suministro de péptidos de grado de investigación en el mercado estadounidense. Nuestra división minorista [99puritypeptides.com](https://99puritypeptides.com) proporciona contexto de adquisición que informa la precisión práctica de nuestras guías."
+        },
+        {
+          "q": "¿Son relevantes los artículos sobre cumplimiento de péptidos para mi estado específico?",
+          "a": "Nuestros artículos sobre cumplimiento abordan consideraciones a nivel federal que se aplican en los 50 estados, incluidos los requisitos de solo uso para investigación y los estándares de documentación COA. Los matices regulatorios específicos de cada estado varían — recomendamos consultar a la autoridad de licencias de su jurisdicción. Nuestra [página de servicios](/services) cubre cómo se estructuran las cuentas mayoristas.",
+          "link": "/services",
+          "linkText": "Ver Servicios Mayoristas"
+        },
+        {
+          "q": "¿Cómo me ayudan los artículos sobre evaluación de COA a evaluar un proveedor de péptidos?",
+          "a": "Nuestras guías de COA explican lo que contiene un Certificado de Análisis legítimo de un laboratorio independiente en EE. UU.: trazabilidad del número de lote, cromatograma HPLC, confirmación de identidad por LC-MS y porcentaje de pureza. Leerlos junto con la documentación real de un proveedor le da un marco para identificar señales de alerta. Vea nuestra [página de calidad](/quality) para ver cómo estructuramos nuestra propia documentación COA con Freedom Diagnostic.",
+          "link": "/quality",
+          "linkText": "Nuestros Estándares COA"
+        },
+        {
+          "q": "¿Con qué frecuencia se publica nuevo contenido en el Centro de Conocimiento?",
+          "a": "Publicamos cuando tenemos algo sustancial que contribuir — no con un calendario editorial forzado. Cada artículo está diseñado para satisfacer una necesidad informativa específica: una pregunta de evaluación de proveedor, una decisión de nivel de precios o un punto de referencia de cumplimiento. Calidad sobre frecuencia, coherente con nuestra forma de abordar la verificación de compuestos."
+        },
+        {
+          "q": "¿Sus artículos incluyen datos de precios actuales de péptidos?",
+          "a": "Analizamos los marcos de niveles de precios y los umbrales de volumen mayorista en términos estructurales — no cifras específicas en dólares, que varían según el volumen, el compuesto y las condiciones del mercado. Para precios mayoristas actuales, contáctenos directamente por [WhatsApp](https://wa.me/18437439007). Las cuentas mayoristas verificadas reciben una lista de precios por niveles tras la aprobación.",
+          "link": "https://wa.me/18437439007",
+          "linkText": "Solicitar Precios Actuales"
+        },
+        {
+          "q": "¿Puedo citar o referenciar artículos de este compendio de investigación?",
+          "a": "Sí. Puede citar nuestros artículos con atribución a 99 Purity Wholesale y un enlace a la URL del artículo original. Todo el contenido está escrito para proporcionar contexto industrial preciso y rastreable. Si escribe para una publicación comercial y necesita aclaración sobre alguna afirmación técnica, contáctenos por [correo electrónico](mailto:sales@99puritypeptides.com)."
+        },
+        {
+          "q": "¿En qué se diferencia este blog del contenido general de marketing de péptidos?",
+          "a": "La mayoría del contenido de proveedores de péptidos está escrito para convertir visitantes en clientes. Nuestro Centro de Conocimiento está escrito para responder las preguntas específicas de abastecimiento, cumplimiento y documentación que los profesionales autorizados hacen antes de entrar en una relación mayorista. Los artículos citan metodología de pruebas verificable (HPLC, LC-MS), laboratorios nombrados (Freedom Diagnostic) y estructuras de programas documentadas.",
+          "link": "/quality",
+          "linkText": "Nuestros Estándares de Pruebas"
+        }
+      ]
     }
   },
   "WholesaleApplication": {
     "metadata": {
-      "title": "Solicitar una Cuenta Mayorista | 99 Purity Wholesale — Péptidos de Investigación a Granel EE. UU.",
+      "title": "Solicitar una Cuenta Mayorista | Péptidos de Investigación a Granel",
       "description": "Solicite una cuenta de péptidos mayorista verificada con 99 Purity Wholesale. Acceda a precios a granel en más de 50 péptidos de grado de investigación. Fabricados en EE. UU., verificados por COA. Solo para profesionales autorizados."
     },
     "banner": "⚠️ Todos los productos son exclusivamente para uso en investigación de laboratorio. No aptos para el consumo humano. Solo para profesionales autorizados.",
@@ -1824,5 +2008,87 @@
       "whatsapp": "Solicitar por WhatsApp",
       "email": "Solicitud por Correo"
     }
+  },
+  "Research": {
+    "readPaper": "Leer Artículo de Investigación",
+    "backToProduct": "Volver a Detalles del Producto",
+    "academicTitle": "Biblioteca de Investigación Clínica 99 Purity",
+    "specifications": "Especificaciones Técnicas",
+    "mechanism": "Mecanismo y Señalización",
+    "benefits": "Direcciones Primarias de Investigación",
+    "publications": "Citas Científicas",
+    "disclaimer": "Descargo de Responsabilidad Académico",
+    "purityReport": "Verificación HPLC del Lote",
+    "cas": "Número de Registro CAS",
+    "storage": "Almacenamiento Óptimo",
+    "formula": "Fórmula Molecular",
+    "molarMass": "Masa Molar",
+    "purity": "Pureza del Ensayo",
+    "sequence": "Secuencia",
+    "abstract": "Resumen y Descripción General",
+    "simulatedAssay": "Cromatograma de Ensayo HPLC (Estándar de Referencia)",
+    "retentionTime": "Tiempo de Retención",
+    "peakPurity": "Pureza del Pico",
+    "pdfReport": "Reporte PDF",
+    "faqs": [
+      {
+        "q": "¿Cuál es el grado principal de estos compuestos?",
+        "a": "Todos los compuestos son estándares de referencia analíticos sintetizados a un nivel de pureza de ≥99.0%, verificado por HPLC y espectrometría de masas."
+      },
+      {
+        "q": "¿Están estos péptidos destinados al consumo humano?",
+        "a": "No. Bajo ninguna circunstancia este material debe utilizarse para el consumo humano con fines de diagnóstico, terapéuticos o recreativos. La investigación muestra que la administración a organismos vivos está estrictamente restringida a ensayos de laboratorio e in-vitro aprobados."
+      },
+      {
+        "q": "¿Cómo muestra la investigación que deben almacenarse estos péptidos?",
+        "a": "La investigación muestra que los péptidos liofilizados son estables a temperatura ambiente por períodos cortos, pero deben almacenarse a -20°C para estabilidad a largo plazo. Una vez reconstituidos, deben mantenerse de 2°C a 8°C y usarse dentro de una ventana limitada para evitar la degradación."
+      },
+      {
+        "q": "¿Qué es la reconstitución y qué disolvente debe utilizarse?",
+        "a": "La reconstitución es el proceso de disolver el polvo liofilizado. La investigación muestra que el agua bacteriostática estéril o la solución salina fisiológica estéril son los disolventes estándar utilizados para preservar la estabilidad de los péptidos y prevenir el crecimiento microbiano."
+      },
+      {
+        "q": "¿Qué representa el cromatograma HPLC?",
+        "a": "El cromatograma HPLC (Cromatografía Líquida de Alta Resolución) representa el perfil de pureza molecular del lote. La investigación muestra que un único pico dominante con un área de pureza de ≥99% indica la ausencia de subproductos de síntesis y contaminantes."
+      },
+      {
+        "q": "¿Se pueden combinar estos compuestos de investigación en un solo estudio?",
+        "a": "Sí. La investigación preclínica muestra que ciertos péptidos, como el BPC-157 y el TB-500, exhiben vías de señalización sinérgicas durante la reparación de tejidos. Sin embargo, la administración dual debe calibrarse cuidadosamente en modelos de laboratorio."
+      },
+      {
+        "q": "¿Por qué es importante la variación de la masa molar y la fórmula molecular?",
+        "a": "La fórmula molecular y la masa molar son identificadores dactilares. La investigación muestra que verificar estas propiedades mediante espectrometría de masas garantiza la integridad estructural de la secuencia del péptido, confirmando que coincide con el estándar de referencia."
+      },
+      {
+        "q": "¿Qué documentación se proporciona para el cumplimiento regulatorio?",
+        "a": "Cada envío va acompañado de un Certificado de Análisis (COA) específico del lote que contiene la verificación de pureza por HPLC, la validación estructural por espectrometría de masas y las hojas de datos de seguridad (SDS) para el cumplimiento del laboratorio."
+      }
+    ]
+  },
+  "Calculator": {
+    "title": "Calculadora de Reconstitución de Péptidos",
+    "subtitle": "Determine el volumen exacto, la concentración de dosificación y las unidades de jeringa necesarias para sus compuestos de investigación.",
+    "vialSizeLabel": "Cantidad del Vial",
+    "vialSizeSub": "Seleccione la masa total del péptido en el vial (mg)",
+    "waterVolumeLabel": "Volumen de Diluyente",
+    "waterVolumeSub": "Seleccione el volumen de agua bacteriostática a añadir (mL)",
+    "syringeSizeLabel": "Capacidad de la Jeringa",
+    "syringeSizeSub": "Seleccione el tamaño y las unidades de la jeringa",
+    "targetDoseLabel": "Dosis Deseada",
+    "targetDoseSub": "Ingrese la cantidad de dosis objetivo (mcg)",
+    "results": {
+      "title": "Especificaciones Calculadas",
+      "mcgPerUnit": "mcg por unidad",
+      "mcgPerUnitDesc": "Concentración del compuesto activo por unidad de jeringa",
+      "unitsRequired": "Unidades de Jeringa",
+      "unitsRequiredDesc": "Unidades exactas a extraer con el émbolo",
+      "dosesPerVial": "Dosis por Vial",
+      "dosesPerVialDesc": "Dosis estándar estimadas en un vial"
+    },
+    "procureCta": "Adquirir Accesorios y Diluyentes",
+    "procureDesc": "¿Necesita agua bacteriostática, jeringas de mezcla o viales estériles para su laboratorio? Envíe una consulta directamente a nuestro equipo de soporte mayorista.",
+    "procureMsg": "Hola, estoy buscando ordenar agua bacteriostática y suministros de laboratorio.",
+    "warningTitle": "Solo para Uso de Investigación",
+    "warningText": "Esta herramienta se proporciona únicamente para cálculos de laboratorio y diseño de ensayos in vitro por profesionales científicos certificados. Todos los compuestos están destinados estrictamente para fines de investigación y no deben administrarse a humanos o animales."
   }
 }

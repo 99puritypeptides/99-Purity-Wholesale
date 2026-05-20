@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { MessageSquare, X, Send, ShieldCheck, CheckCheck, Landmark, Globe, Microscope, HelpCircle, Truck, FileText, UserPlus, Sparkles } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useNestedSmoothScroll } from '@/hooks/useNestedSmoothScroll';
 
 export default function FloatingWhatsApp() {
   const t = useTranslations('Layout');
@@ -11,6 +12,8 @@ export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(false);
   const [mounted, setMounted] = useState(false);
   const phoneContainerRef = useRef<HTMLDivElement>(null);
+
+  const whatsappScrollRef = useNestedSmoothScroll<HTMLDivElement>({ enabled: isOpen });
 
   useEffect(() => {
     setMounted(true);
@@ -90,7 +93,7 @@ export default function FloatingWhatsApp() {
   if (!mounted) return null;
 
   return (
-    <div className="fixed bottom-8 right-8 z-[100]" ref={phoneContainerRef}>
+    <div className="fixed bottom-8 right-8 z-[100] print:hidden" ref={phoneContainerRef}>
       
       {/* --- ATTRACTIVE TOOLTIP --- */}
       <div 
@@ -109,9 +112,9 @@ export default function FloatingWhatsApp() {
           {/* Close Tooltip Button */}
           <button 
             onClick={() => setShowTooltip(false)}
-            className="ml-2 p-1 hover:bg-white/5 rounded-lg transition-colors opacity-0 group-hover:opacity-100"
+            className="ml-2 p-1 text-white/40 hover:text-white hover:bg-white/10 rounded-lg transition-all"
           >
-            <X className="w-3 h-3 text-white/20" />
+            <X className="w-3 h-3" />
           </button>
           {/* Tooltip Arrow */}
           <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-black border-r border-b border-white/10 rotate-45" />
@@ -153,7 +156,7 @@ export default function FloatingWhatsApp() {
               </div>
             </div>
           </div>
-          <div className="flex-1 overflow-y-auto px-6 py-6 space-y-4 custom-scrollbar relative z-40 bg-white">
+          <div ref={whatsappScrollRef} className="flex-1 overflow-y-auto px-6 py-6 space-y-4 custom-scrollbar relative z-40 bg-white" data-lenis-prevent>
             <div className="mb-8">
                <div className="bg-gray-50 rounded-2xl p-5 border border-black/[0.03]">
                   <p className="text-[12px] leading-relaxed text-black/60 font-medium">{t('whatsapp.mockupWelcome')}</p>

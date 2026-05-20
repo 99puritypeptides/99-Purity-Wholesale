@@ -45,13 +45,13 @@ export default function Footer() {
         { label: t('footer.privacy'), href: '/privacy' },
         { label: t('footer.terms'), href: '/terms' },
         { label: t('footer.refundPolicy'), href: '/refund-policy' },
-        { label: t('footer.complianceTitle'), href: '/quality#compliance' },
+        { label: t('footer.complianceTitle'), href: '/compliance' },
       ]
     }
   ];
 
   return (
-    <footer className="relative z-20 bg-white pt-6 md:pt-10 pb-20 md:pb-10 px-4 md:px-6 overflow-hidden font-archia">
+    <footer className="relative z-20 bg-white pt-6 md:pt-10 pb-20 md:pb-10 px-4 md:px-6 overflow-hidden font-archia print:hidden">
       <div className="max-w-[1800px] mx-auto bg-[#000000] rounded-[3rem] md:rounded-[5rem] p-8 pb-32 md:p-20 md:pb-40 relative overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.3)]">
 
         {/* Large Branding Background Text - Refined Institutional Style */}

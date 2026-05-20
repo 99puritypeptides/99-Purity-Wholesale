@@ -7,7 +7,7 @@ export default function StatsBar() {
   const stats = [
     { key: 'purity', num: '≥99.0%', icon: ShieldCheck },
     { key: 'compounds', num: 'HPLC', icon: Activity },
-    { key: 'clients', num: '200+', icon: Users },
+    { key: 'clients', num: 'COA', icon: Users },
     { key: 'coverage', num: 'USA', icon: Globe2 }
   ];
 

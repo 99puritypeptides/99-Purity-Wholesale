@@ -50,12 +50,12 @@ export default function BlogFAQ({ faqs }: BlogFAQProps) {
           >
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between p-6 text-left focus:outline-none transition-colors"
+              className="w-full flex items-center justify-between p-6 text-left focus:outline-none transition-colors gap-4"
             >
               <span className="font-bold text-white text-lg font-rajdhani tracking-wide">
                 {faq.question}
               </span>
-              <div className={`p-2 rounded-lg bg-white/5 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-brand-accent' : 'text-gray-500'}`}>
+              <div className={`p-2 rounded-lg bg-white/5 flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-brand-accent' : 'text-gray-500'}`}>
                 <ChevronDown className="w-5 h-5" />
               </div>
             </button>

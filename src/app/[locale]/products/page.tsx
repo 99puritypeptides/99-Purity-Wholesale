@@ -14,7 +14,6 @@ import {
 import productsData from '@/data/products.json';
 import ProductDirectory from '@/components/products/ProductDirectory';
 import GlobalCTA from '@/components/layout/GlobalCTA';
-import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
 import FaqSection from '@/components/shared/FaqSection';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -94,7 +93,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
 
         <div className="relative z-20 max-w-4xl w-full text-center flex flex-col items-center">
           {/* Premium Status Badge */}
-          <FadeIn delay={0.1}>
+          <div>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-white/5 border border-white/10 rounded-full backdrop-blur-xl mb-6">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
@@ -104,27 +103,27 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                 Institutional Sourcing Catalog
               </span>
             </div>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.2}>
-            <h1 className="font-absans text-4xl md:text-7xl font-bold leading-[1.1] tracking-tighter uppercase mb-6 text-white drop-shadow-lg">
+          <div>
+             <h1 className="reveal-text font-absans text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tighter uppercase mb-6 text-white drop-shadow-lg break-words w-full">
               {t('title')}
             </h1>
-          </FadeIn>
+          </div>
 
-          <FadeIn delay={0.3}>
-            <p className="font-archia text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto font-medium">
+          <div>
+            <p className="reveal-text font-archia text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto font-medium">
               {t('subtitle')}
             </p>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
       {/* MOQ/Wholesale Info Banner - Redesigned as Cinematic Dark Cards */}
       <section className="relative z-20 bg-[#090C11] border-b border-white/5 py-10">
         <div className="max-w-6xl mx-auto px-6">
-          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+             <div className="reveal-card group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
                 <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
                    <ShieldCheck className="w-4 h-4" />
                 </div>
@@ -132,8 +131,8 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                    <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">{t('moqTitle')}</h3>
                    <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">{t('moqText')}</p>
                 </div>
-             </StaggerItem>
-             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+             </div>
+             <div className="reveal-card group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
                 <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
                    <Truck className="w-4 h-4" />
                 </div>
@@ -141,8 +140,8 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                    <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">Nationwide Fulfillment</h3>
                    <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">Secure 50-state U.S. priority logistics</p>
                 </div>
-             </StaggerItem>
-             <StaggerItem className="group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
+             </div>
+             <div className="reveal-card group flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-0.5">
                 <div className="w-10 h-10 rounded-lg bg-white/10 text-white flex items-center justify-center flex-shrink-0 group-hover:bg-brand-accent group-hover:text-black transition-all duration-500">
                    <Award className="w-4 h-4" />
                 </div>
@@ -150,8 +149,8 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
                    <h3 className="text-xs font-dm-mono font-bold uppercase tracking-widest text-white mb-1.5">Purity Guaranteed</h3>
                    <p className="text-white/60 text-xs font-archia leading-relaxed font-medium">Batch-matched COA and HPLC verification</p>
                 </div>
-             </StaggerItem>
-          </StaggerContainer>
+             </div>
+          </div>
         </div>
       </section>
 
@@ -165,7 +164,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
             <span className="text-[10px] font-dm-mono font-bold uppercase tracking-[0.3em] text-black/40 block mb-3">
               [ laboratory procurement terminal ]
             </span>
-            <h2 className="font-absans text-3xl md:text-5xl font-bold text-black uppercase tracking-tight">
+            <h2 className="reveal-text font-absans text-3xl md:text-5xl font-bold text-black uppercase tracking-tight">
               Instant Compound Discovery
             </h2>
           </div>
@@ -187,24 +186,24 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
-            <FadeIn className="max-w-3xl">
+            <div className="max-w-3xl">
               <div className="inline-flex items-center gap-3 mb-6">
                 <div className="w-10 h-px bg-white/20" />
                 <span className="text-[10px] font-dm-mono font-bold uppercase tracking-[0.4em] text-white/40">RESEARCH LIBRARY</span>
               </div>
-              <h2 className="font-absans text-4xl md:text-7xl font-bold text-white leading-none tracking-tighter uppercase">
+              <h2 className="reveal-text font-absans text-4xl md:text-7xl font-bold text-white leading-none tracking-tighter uppercase">
                 Product
                 <span className="text-white/20 italic font-medium lowercase ml-4">Categories</span>
               </h2>
-              <p className="mt-8 max-w-xl font-archia text-lg text-white/40 leading-relaxed font-medium">
+              <p className="reveal-text mt-8 max-w-xl font-archia text-lg text-white/40 leading-relaxed font-medium">
                 Explore our specialized catalog of domestic-manufactured research compounds verified for purity.
               </p>
-            </FadeIn>
+            </div>
           </div>
 
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {categories.map((cat) => (
-              <StaggerItem key={cat.id}>
+              <div key={cat.id} className="reveal-card">
                 <div className="group relative h-[460px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20">
                   <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
@@ -225,9 +224,9 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
 
                   <Link href={`/products/${cat.id}`} className="absolute inset-0 z-20"></Link>
                 </div>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 

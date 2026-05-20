@@ -62,7 +62,7 @@ export default function AddToInquiryButton({
   };
 
   // Determine button styles based on state
-  let buttonClasses = "font-dm-sans font-bold text-xs py-2.5 px-5 rounded-full transition-all duration-300 uppercase tracking-wider border ";
+  let buttonClasses = "font-dm-sans font-bold text-[10px] sm:text-xs py-2.5 px-2.5 sm:px-5 rounded-full transition-all duration-300 uppercase tracking-wider border ";
   let buttonText = t('add');
 
   if (showAdded) {

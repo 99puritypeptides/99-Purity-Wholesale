@@ -55,6 +55,30 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
   "5-amino-1mq": {
     "10mg": "5-Amino-1MQ 10mg.jpg"
   },
+  "adamax": {
+    "5mg": "adamax-5mg.webp",
+    "10mg": "adamax-10mg.webp"
+  },
+  "adipotide-fttp": {
+    "2mg": "adipotide-fttp-2mg.webp",
+    "5mg": "adipotide-fttp-5mg.webp",
+    "10mg": "adipotide-fttp-10mg.webp"
+  },
+  "aod9604": {
+    "5mg": "aod9604-5mg.webp",
+    "10mg": "aod9604-10mg.webp"
+  },
+  "b12": {
+    "10mg": "b12-10mg.webp"
+  },
+  "b7-33": {
+    "2mg": "b7-33-2mg.webp",
+    "10mg": "b7-33-10mg.webp"
+  },
+  "bac-water": {
+    "3ml": "bac-water-3ml.webp",
+    "10ml": "bac-water-10ml.webp"
+  },
   "bpc-157": {
     "5mg": "BPC-157 5mg.jpg",
     "10mg": "BPC-157 10mg.jpg"
@@ -65,17 +89,42 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
   "bpc-10mg-tb-10mg": {
     "20mg": "BPC-157.TB-500 10.10mg.jpg"
   },
+  "cagrilintide": {
+    "5mg": "cagrilintide-5mg.webp",
+    "10mg": "Cagrilintide.jpg"
+  },
+  "cagrisema": {
+    "5mg": "cagrisema-2.5+2.5-5mg.webp"
+  },
+  "cjc-1295-dac": {
+    "5mg": "cjc-1295-dac=5mg.webp"
+  },
+  "cjc-1295-no-dac": {
+    "5mg": "cjc-1295-no-dac-5mg.webp",
+    "10mg": "cjc-1295-no-dac-10mg.webp"
+  },
   "cjc-1295-ipam": {
     "10mg": "CJC-1295.Ipamorelin 10.10mg.jpg"
   },
-  "cagrilintide": {
-    "10mg": "Cagrilintide.jpg"
+  "dihexa": {
+    "10mg": "dihexa-10mg.webp"
+  },
+  "dsip": {
+    "5mg": "dsip-5mg.webp"
+  },
+  "dulaglutide": {
+    "5mg": "dulaglutide-5mg.webp",
+    "10mg": "dulaglutide-10mg.webp"
   },
   "epithalon": {
     "10mg": "Epithalon 10mg.jpg"
   },
   "foxo4": {
+    "2mg": "foxo4-2mg.webp",
     "10mg": "FOX04 10mg.jpg"
+  },
+  "foxo4-dri": {
+    "10mg": "foxo4-dri-10mg.webp"
   },
   "ghk-cu": {
     "50mg": "GHK-CU 50mg.jpg",
@@ -87,15 +136,29 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
   "klow-blend": {
     "80mg": "KLOW.jpg"
   },
+  "glutathione": {
+    "600mg": "glutathione-600mg.webp",
+    "1500mg": "glutathione-1500mg.webp"
+  },
   "ipamorelin": {
     "5mg": "Ipamorelin 5mg.jpg",
     "10mg": "Ipamorelin 10mg.jpg"
   },
   "kpv": {
+    "5mg": "kpv-5mg.webp",
     "10mg": "KPV 10mg.jpg"
+  },
+  "l-carnitine": {
+    "1200mg": "l-carnitine-1200mg.webp"
+  },
+  "lipo-c": {
+    "10ml": "lipo-c-10ml.webp"
   },
   "ll37": {
     "5mg": "LL37 5mg.jpg"
+  },
+  "mic-blend": {
+    "10mg": "mic-lipo-c+b12-10mg.webp"
   },
   "mots-c": {
     "10mg": "Mots-c 10mg.jpg",
@@ -107,29 +170,37 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
     "1000mg": "NAD 1000mg.jpg"
   },
   "retatrutide": {
+    "5mg": "retatrutide-5mg.webp",
     "10mg": "Retatrutide 10mg.jpg",
+    "15mg": "retatrutide-15mg.webp",
     "20mg": "Retatrutide 20mg.jpg",
-    "30mg": "Retatrutide 30mg.jpg"
+    "30mg": "Retatrutide 30mg.jpg",
+    "60mg": "retatrutide-60mg.webp"
   },
   "selank": {
-    "5mg": "SELANK 5mg.png",
+    "5mg": "selank-5mg.webp",
     "10mg": "Selank 10mg.jpg"
   },
   "semaglutide": {
     "10mg": "Semaglutide 10mg.jpg",
-    "20mg": "Semaglutide 20mg.jpg"
+    "15mg": "semaglutide-15mg.webp",
+    "20mg": "Semaglutide 20mg.jpg",
+    "30mg": "semaglutide-30mg.webp"
   },
   "semax": {
-    "5mg": "SEMAX 5mg.png",
+    "5mg": "semax-5mg.webp",
     "10mg": "Semax 10mg.jpg"
   },
   "sermorelin-acetate": {
+    "5mg": "semorelin-acetate-5mg.webp",
     "10mg": "Sermorelin 10mg.jpg"
   },
   "snap-8": {
-    "10mg": "Snap 8 10mg.jpg"
+    "10mg": "Snap 8 10mg.jpg",
+    "100mg": "snap-8-100mg.webp"
   },
   "ss-31": {
+    "10mg": "ss-31-10mg.webp",
     "50mg": "SS-31 50mg.jpg"
   },
   "tb-500": {
@@ -141,23 +212,34 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
     "10mg": "Tesamorelin 10mg.jpg",
     "20mg": "Tesamorelin 20mg.jpg"
   },
+  "thymalin-thymulin": {
+    "10mg": "thymalin-thymylin-10mg.webp"
+  },
+  "thymosin-alpha-1": {
+    "5mg": "thymosin-alpha-1-5mg.webp",
+    "10mg": "thymosin-alpha-1-10mg.webp"
+  },
   "tirzepatide": {
+    "5mg": "tirzepatide-5mg.webp",
     "10mg": "Tirzepatide 10mg.jpg",
+    "15mg": "tirzepatide-15mg.webp",
     "20mg": "Tirzepatide 20mg.jpg",
-    "30mg": "Tirzepatide 30mg.jpg",
-    "60mg": "Tirzepatide 60mg.jpg"
+    "30mg": "tirzepatide-30mg.webp",
+    "40mg": "tirzepatide-40mg.webp",
+    "50mg": "tirzepatide-50mg.webp",
+    "60mg": "Tirzepatide 60mg.jpg",
+    "80mg": "tirzepatide-80-mg.webp"
   },
   "vip": {
+    "5mg": "vip-5mg.webp",
     "10mg": "VIP 10mg.jpg"
-  },
-  "mic-blend": {
-    "10mg": "MIC BLEND.png"
   }
 };
 
 export default async function ProductPage({ params }: { params: { locale: string, category: string, slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'ProductDetail' });
   const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
+  const tr = await getTranslations({ locale: params.locale, namespace: 'Research' });
   const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
 
   if (!product) {
@@ -169,16 +251,69 @@ export default async function ProductPage({ params }: { params: { locale: string
 
   // Dynamically enrich descriptions and define 8 comprehensive localized FAQs at runtime
   const isEs = params.locale === 'es';
+  const isLiquid = product.slug === 'bac-water' || product.slug === 'lipo-c';
+
+  let physicalForm = t('physicalForms.lyophilized');
+  let recommendedStorage = t('storageValues.standard');
+
+  if (product.slug === 'bac-water') {
+    physicalForm = t('physicalForms.solvent');
+    recommendedStorage = t('storageValues.bacWater');
+  } else if (product.slug === 'lipo-c') {
+    physicalForm = t('physicalForms.solution');
+    recommendedStorage = t('storageValues.liquid');
+  }
   
   const descExtension = isEs 
-    ? ` Este compuesto liofilizado se sintetiza y purifica con el único propósito de investigación científica. Este material se proporciona estrictamente para fines de investigación de laboratorio e investigación in-vitro en entornos académicos y de desarrollo controlados. No está diseñado, aprobado ni destinado bajo ninguna circunstancia para el consumo humano, uso clínico, diagnóstico médico o administración terapéutica directa.`
-    : ` This lyophilized compound is synthesized and purified for the sole purpose of scientific investigation. This material is supplied strictly for laboratory research purposes and in-vitro scientific testing in controlled developmental or academic settings. It is not designed, approved, or intended under any circumstances for human consumption, clinical application, medical diagnostics, or direct therapeutic administration.`;
+    ? ` Este compuesto ${isLiquid ? 'líquido' : 'liofilizado'} se sintetiza y purifica con el único propósito de investigación científica. Este material se proporciona estrictamente para fines de investigación de laboratorio e investigación in-vitro en entornos académicos y de desarrollo controlados. No está diseñado, aprobado ni destinado bajo ninguna circunstancia para el consumo humano, uso clínico, diagnóstico médico o administración terapéutica directa.`
+    : ` This ${isLiquid ? 'liquid' : 'lyophilized'} compound is synthesized and purified for the sole purpose of scientific investigation. This material is supplied strictly for laboratory research purposes and in-vitro scientific testing in controlled developmental or academic settings. It is not designed, approved, or intended under any circumstances for human consumption, clinical application, medical diagnostics, or direct therapeutic administration.`;
 
   const originalDesc = t.has(`descriptions.${product.slug}`) 
     ? t(`descriptions.${product.slug}`) 
     : product.description;
     
   const enrichedDescription = `${originalDesc}${descExtension}`;
+
+  // Dynamic FAQ values for physical form and storage to optimize for SEO/AEO/GEO/search engines
+  const formQ_En = product.slug === 'bac-water'
+    ? `What is the physical form of wholesale Bacteriostatic Water?`
+    : (product.slug === 'lipo-c'
+      ? `What is the physical form of wholesale Lipo-C?`
+      : `What is the physical form of wholesale ${product.name}?`);
+
+  const formA_En = product.slug === 'bac-water'
+    ? `Bacteriostatic Water is supplied as a sterile, clear, colorless liquid solvent containing 0.9% benzyl alcohol, which serves as a preservative to prevent bacterial growth. It is shipped in premium glass vials, ready for research use in reconstituting lyophilized compounds.`
+    : (product.slug === 'lipo-c'
+      ? `Lipo-C is supplied as a sterile liquid solution. It contains a specialized compounded mixture of lipotropic agents (Methionine, Inositol, Choline) and other essential compounds pre-dissolved in a sterile liquid carrier, optimized for in-vitro research testing.`
+      : `${product.name} is supplied in the form of a lyophilized (freeze-dried) solid powder or cake in vacuum-sealed glass vials. This solid state is designed to protect the molecular stability of the peptide during transit and storage. It must be reconstituted with a sterile solvent prior to starting in-vitro laboratory assays.`);
+
+  const storageQ_En = `What are the recommended storage temperatures and stability limits for ${product.name}?`;
+
+  const storageA_En = product.slug === 'bac-water'
+    ? `Bacteriostatic Water should be stored at controlled room temperature between 15°C and 30°C (59°F to 86°F). Do not freeze, as freezing compromises the vial's integrity and degrades the benzyl alcohol preservative. Keep in a dry place protected from light. Once opened/punctured, the vial remains stable for up to 28 days before it must be discarded.`
+    : (product.slug === 'lipo-c'
+      ? `Lipo-C liquid solution must be stored refrigerated between 2°C and 8°C (36°F to 46°F). Do not freeze, as sub-zero temperatures can cause active lipotropic ingredients to precipitate out of the liquid solution. Keep the vial upright, away from direct heat and light.`
+      : `Lyophilized (Dry Powder) ${product.name} must be stored at -20°C for long-term preservation (up to 36 months) or refrigerated at 2°C to 8°C for short-term active study (up to 24 months). Protect from direct light. Important: Prior to opening, allow the dry vial to reach room temperature to prevent condensation and moisture absorption. Once reconstituted into liquid form, the solution must be refrigerated at 2°C to 8°C and analyzed or used within 8 to 30 days. Do not freeze the reconstituted liquid solution, as repeated freeze-thaw cycles cause rapid chemical degradation.`);
+
+  const formQ_Es = product.slug === 'bac-water'
+    ? `¿Cuál es la forma física del agua bacteriostática al por mayor?`
+    : (product.slug === 'lipo-c'
+      ? `¿Cuál es la forma física de Lipo-C al por mayor?`
+      : `¿Cuál es la forma física de ${product.name} al por mayor?`);
+
+  const formA_Es = product.slug === 'bac-water'
+    ? `El agua bacteriostática se suministra como un solvente líquido estéril, claro e incoloro que contiene alcohol bencílico al 0.9%, el cual actúa como conservante para prevenir el crecimiento bacteriano. Se envía en viales de vidrio de alta calidad, listo para su uso en la reconstitución de compuestos liofilizados.`
+    : (product.slug === 'lipo-c'
+      ? `Lipo-C se suministra como una solución líquida estéril. Contiene una mezcla compuesta especializada de agentes lipotrópicos (metionina, inositol, colina) y otros compuestos esenciales predisueltos en un vehículo líquido estéril, optimizado para pruebas de investigación in vitro.`
+      : `${product.name} se suministra en forma de polvo sólido liofilizado (secado por congelación) en viales de vidrio sellados al vacío. Este estado sólido está diseñado para proteger la estabilidad molecular del péptido durante el tránsito y almacenamiento. Debe reconstituirse con un solvente estéril antes de iniciar los ensayos de laboratorio in-vitro.`);
+
+  const storageQ_Es = `¿Cuáles son las temperaturas de almacenamiento recomendadas y los límites de estabilidad para ${product.name}?`;
+
+  const storageA_Es = product.slug === 'bac-water'
+    ? `El agua bacteriostática debe almacenarse a temperatura ambiente controlada entre 15°C y 30°C (59°F a 86°F). No congelar, ya que la congelación compromete la integridad del vial y degrada el conservante de alcohol bencílico. Manténgase en un lugar seco y protegido de la luz. Una vez abierto o perforado, el vial permanece estable por hasta 28 días antes de que deba desecharse.`
+    : (product.slug === 'lipo-c'
+      ? `La solución líquida Lipo-C debe almacenarse refrigerada entre 2°C y 8°C (36°F a 46°F). No congelar, ya que las temperaturas bajo cero pueden hacer que los ingredientes lipotrópicos activos se precipiten fuera de la solución líquida. Mantenga el vial en posición vertical, lejos de la luz directa y del calor.`
+      : `El ${product.name} liofilizado (polvo seco) debe almacenarse a -20°C para conservación a largo plazo (hasta 36 meses) o refrigerado a 2°C a 8°C para estudios activos a corto plazo (hasta 24 meses). Proteger de la luz directa. Importante: Antes de abrir, permita que el vial seco alcance la temperatura ambiente para evitar la condensación y la absorción de humedad. Una vez reconstituido en forma líquida, la solución debe refrigerarse a 2°C a 8°C y analizarse o usarse dentro de 8 a 30 días. No congele la solución líquida reconstituida, ya que los ciclos repetidos de congelación y descongelación causan una degradación química rápida.`);
 
   const faqs = isEs ? [
     {
@@ -194,6 +329,14 @@ export default async function ProductPage({ params }: { params: { locale: string
       a: `La cantidad mínima de pedido para ${product.name} al por mayor es de 10 viales (lo que equivale a 1 kit estándar). Nos especializamos en la adquisición y suministro comercial a granel para instituciones de investigación, laboratorios y marcas de distribución, por lo que no realizamos ventas de viales individuales.`
     },
     {
+      q: formQ_Es,
+      a: formA_Es
+    },
+    {
+      q: storageQ_Es,
+      a: storageA_Es
+    },
+    {
       q: `¿Puedo solicitar concentraciones personalizadas o tamaños de vial para ${product.name}?`,
       a: `Sí. Los socios comerciales calificados que requieran especificaciones de investigación particulares pueden coordinar tamaños de viales personalizados, variaciones de concentración o formulaciones liofilizadas a medida. Póngase en contacto con nuestro equipo de ventas a granel para definir sus requisitos.`
     },
@@ -204,10 +347,6 @@ export default async function ProductPage({ params }: { params: { locale: string
     {
       q: `¿Puedo ver el informe de HPLC para el lote actual de ${product.name} antes de realizar un pedido?`,
       a: `Sí. Los directores de laboratorio y socios comerciales acreditados pueden solicitar el informe de HPLC y espectrometría de masas del lote de producción actual haciendo clic en el botón 'Solicitar COA' en esta página antes de confirmar su pedido.`
-    },
-    {
-      q: `¿Cuáles son las condiciones de almacenamiento recomendadas para ${product.name} liofilizado?`,
-      a: `El ${product.name} liofilizado debe mantenerse almacenado a largo plazo a una temperatura constante de -20°C para mantener su estabilidad óptima. Para uso experimental activo a corto plazo, el compuesto liofilizado se puede almacenar refrigerado de +2°C a +8°C por hasta 24 meses.`
     },
     {
       q: `¿Proporciona 99 Purity pautas de reconstitución o instrucciones de dosificación para ${product.name}?`,
@@ -227,6 +366,14 @@ export default async function ProductPage({ params }: { params: { locale: string
       a: `The minimum order quantity for wholesale ${product.name} is 10 vials (which constitutes 1 standard kit). We specialize in commercial bulk supply for research institutions, laboratories, and distribution brands, and do not fulfill retail or single-vial inquiries.`
     },
     {
+      q: formQ_En,
+      a: formA_En
+    },
+    {
+      q: storageQ_En,
+      a: storageA_En
+    },
+    {
       q: `Can I request custom spec concentrations or vial sizes for wholesale ${product.name}?`,
       a: `Yes. Qualified procurement partners requiring specific experimental profiles can request custom concentration sizes, alternative vial counts, or custom lyophilized compound blending. Please contact our corporate sales desk to define your parameters.`
     },
@@ -237,10 +384,6 @@ export default async function ProductPage({ params }: { params: { locale: string
     {
       q: `Can I view the HPLC report for the current batch of ${product.name} before placing an order?`,
       a: `Yes. Qualified laboratory directors and commercial buyers can request the HPLC and Mass Spectrometry report for the current manufacturing batch by clicking the 'Request COA' button on this page prior to order confirmation.`
-    },
-    {
-      q: `What are the recommended storage conditions for wholesale lyophilized ${product.name}?`,
-      a: `Lyophilized ${product.name} should be stored at a stable -20°C for long-term molecular preservation. For active short-term laboratory use, the lyophilized compound can be kept refrigerated at +2°C to +8°C, remaining stable for up to 24 months.`
     },
     {
       q: `Does 99 Purity provide reconstitution instructions or laboratory dilution guidelines for ${product.name}?`,
@@ -311,32 +454,32 @@ export default async function ProductPage({ params }: { params: { locale: string
                   <div className="w-full">
                     <div className="flex items-center gap-2 mb-6">
                       <Beaker className="w-3.5 h-3.5 text-black/30" />
-                      <span className="font-absans text-[10px] font-bold uppercase tracking-wider text-black/80">Compound Specification Passport</span>
+                      <span className="font-absans text-[10px] font-bold uppercase tracking-wider text-black/80">{t('passportTitle')}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-y-6 gap-x-8 text-sm leading-tight">
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">Compound Name</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('compoundNameLabel')}</span>
                         <span className="font-bold text-black text-sm uppercase">{product.name}</span>
                       </div>
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">CAS Registry</span>
-                        <span className="font-dm-mono font-bold text-black/80 text-sm">{product.cas !== 'N/A' ? product.cas : 'N/A (Peptide)'}</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('casRegistryLabel')}</span>
+                        <span className="font-dm-mono font-bold text-black/80 text-sm">{product.cas !== 'N/A' && product.cas !== 'Blend' ? product.cas : (product.cas === 'Blend' ? (isEs ? 'Mezcla' : 'Blend') : (isEs ? 'N/A (Peptide)' : 'N/A (Peptide)'))}</span>
                       </div>
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">Purity Grade</span>
-                        <span className="font-bold text-emerald-600 text-sm">≥99.0% (HPLC Verified)</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('purityGradeLabel')}</span>
+                        <span className="font-bold text-emerald-600 text-sm">≥99.0% ({isEs ? 'Verificado por HPLC' : 'HPLC Verified'})</span>
                       </div>
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">Physical Form</span>
-                        <span className="font-bold text-black/70 text-sm">Lyophilized Solid Powder</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('physicalFormLabel')}</span>
+                        <span className="font-bold text-black/70 text-sm">{physicalForm}</span>
                       </div>
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">Recommended Storage</span>
-                        <span className="font-bold text-black/70 text-sm">-20°C to +4°C</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('recommendedStorageLabel')}</span>
+                        <span className="font-bold text-black/70 text-sm">{recommendedStorage}</span>
                       </div>
                       <div>
-                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">Procurement Limit</span>
-                        <span className="font-bold text-black/70 text-sm">10 Vials (1 Kit MOQ)</span>
+                        <span className="text-black/45 block mb-1.5 uppercase tracking-wider font-bold text-[9px]">{t('procurementLimitLabel')}</span>
+                        <span className="font-bold text-black/70 text-sm">{t('moqValue')}</span>
                       </div>
                     </div>
                   </div>
@@ -361,7 +504,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <h1 className="font-absans text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-black mb-6 leading-none">
+                <h1 className="reveal-text font-absans text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-black mb-6 leading-none">
                   {product.name}
                 </h1>
               </FadeIn>
@@ -373,7 +516,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               </FadeIn>
 
               {/* Symmetrical white card for Selector controls */}
-              <FadeIn delay={0.3} className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.02)] w-full">
+              <FadeIn delay={0.3} className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.02)] w-full mb-6">
                 <SpecSelector
                   productId={product.slug}
                   productName={product.name}
@@ -382,6 +525,40 @@ export default async function ProductPage({ params }: { params: { locale: string
                   specs={Array.from(new Set(product.specs.map(s => s.split('×')[0])))}
                   kitSizes={Array.from(new Set(product.specs.map(s => parseInt(s.split('×')[1]))))}
                 />
+              </FadeIn>
+
+              {/* Dynamic Research Paper Card */}
+              <FadeIn delay={0.32}>
+                <div className="bg-gradient-to-r from-black via-zinc-900 to-zinc-950 text-white rounded-[2.5rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] w-full mb-6 relative overflow-hidden group border border-white/5">
+                  <div className="absolute -right-16 -top-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all duration-700 pointer-events-none" />
+                  
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <FlaskConical className="w-4 h-4 text-emerald-400 animate-pulse" />
+                        <span className="text-[10px] font-dm-mono uppercase tracking-widest text-emerald-400 font-bold">
+                          {tr('academicTitle')}
+                        </span>
+                      </div>
+                      <h3 className="reveal-text font-absans text-xl md:text-2xl font-bold uppercase tracking-tight text-white mb-2 leading-none">
+                        {product.name}
+                      </h3>
+                      <p className="text-xs text-white/60 font-archia max-w-md">
+                        {isEs 
+                          ? "Acceda a datos científicos detallados, mecanismos celulares y resultados de pureza del lote para este compuesto de investigación."
+                          : "Access in-depth scientific literature, cellular signaling pathways, and HPLC batch verification for this compound."}
+                      </p>
+                    </div>
+                    
+                    <Link
+                      href={`/products/${product.category}/${product.slug}/research`}
+                      className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-dm-sans font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-emerald-500/20 whitespace-nowrap self-start md:self-auto"
+                    >
+                      <span>{tr('readPaper')}</span>
+                      <ChevronRight className="w-4 h-4 text-black" />
+                    </Link>
+                  </div>
+                </div>
               </FadeIn>
 
               {/* Share Product component renders beautifully in light mode beneath selector card */}
@@ -407,7 +584,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               
               {/* Technical Specifications Card */}
               <FadeIn className="bg-white border border-black/5 rounded-[2.2rem] p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)]">
-                <h3 className="font-absans text-2xl md:text-3xl font-bold uppercase tracking-tight text-black mb-8 flex items-center gap-3 border-b border-black/5 pb-4">
+                <h3 className="reveal-text font-absans text-2xl md:text-3xl font-bold uppercase tracking-tight text-black mb-8 flex items-center gap-3 border-b border-black/5 pb-4">
                   <Beaker className="w-6 h-6 text-black/40" />
                   {t('specsTitle')}
                 </h3>
@@ -435,7 +612,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                   </div>
                   
                   <div className="md:col-span-8 bg-black/[0.01] border border-black/5 rounded-2xl p-6">
-                    <h4 className="text-black font-bold font-absans text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <h4 className="reveal-text text-black font-bold font-absans text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
                       <Zap className="w-4 h-4 text-black/40" />
                       {t('pricingHeading')}
                     </h4>
@@ -466,7 +643,7 @@ export default async function ProductPage({ params }: { params: { locale: string
             {/* Right Column: Sticky Sidebar pricing block */}
             <div className="lg:col-span-4 relative">
               <FadeIn className="sticky top-24 bg-white border border-black/10 rounded-[2.2rem] p-8 shadow-[0_30px_60px_rgba(0,0,0,0.04)]">
-                <h3 className="font-absans text-3xl font-bold uppercase tracking-tight text-black mb-3">{t('requestPricingTitle')}</h3>
+                <h3 className="reveal-text font-absans text-3xl font-bold uppercase tracking-tight text-black mb-3">{t('requestPricingTitle')}</h3>
                 <p className="text-black/50 font-archia text-sm font-medium mb-8 leading-relaxed">
                   {t('requestPricingDesc', { name: product.name })}
                 </p>
@@ -508,7 +685,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
           {/* Expanded AEO & SEO Scientific Dossier Card - Now Full Width! */}
           <FadeIn className="bg-white border border-black/5 rounded-[2.2rem] p-8 md:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.02)] w-full">
-            <h3 className="font-absans text-2xl md:text-3xl font-bold uppercase tracking-tight text-black mb-2">
+            <h3 className="reveal-text font-absans text-2xl md:text-3xl font-bold uppercase tracking-tight text-black mb-2">
               {isEs ? "Dossier Clínico e Índice Técnico" : "Clinical Dossier & Technical Digest"}
             </h3>
             <p className="text-xs font-dm-sans font-bold text-black/40 uppercase tracking-widest mb-6">
@@ -550,7 +727,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
             {/* Analytical Quality Assurance Loops */}
             <div className="border-t border-black/5 pt-8 mt-8">
-              <h4 className="font-absans font-bold text-sm uppercase tracking-wider text-black mb-3">
+              <h4 className="reveal-text font-absans font-bold text-sm uppercase tracking-wider text-black mb-3">
                 {isEs ? "Protocolo de Control de Calidad Analítica" : "Analytical Quality Assurance Loop"}
               </h4>
               <p className="text-xs text-black/55 font-archia leading-relaxed font-medium mb-6">

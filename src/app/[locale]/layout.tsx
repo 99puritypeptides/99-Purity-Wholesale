@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
 import MainContentWrapper from '@/components/layout/MainContentWrapper';
+import SmoothScrollProvider from '@/components/shared/SmoothScrollProvider';
 import '../globals.css';
 
 const absans = localFont({
@@ -59,6 +60,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     description: t('homeDesc'),
     keywords: [
+      '99 purity peptides',
+      'peptides wholesale',
+      'wholesale peptides in US',
       'wholesale peptides USA',
       'bulk peptide supplier United States',
       'research grade peptides wholesale',
@@ -71,9 +75,12 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       'private label peptides USA',
       'bulk GLP-1 peptides',
       'wholesale tirzepatide',
+      'peptide supplier for compounding pharmacy',
       'peptide supplier for wellness clinic',
       '99 purity wholesale',
       'COA verified peptides wholesale',
+      'Freedom Diagnostic peptides',
+      'domestic peptide manufacturer',
     ],
     icons: {
       icon: '/images/99pw-logo.webp',
@@ -138,17 +145,19 @@ export default async function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "99 Purity Wholesale",
-    "alternateName": "99 Purity Wholesale",
-    "description": "America's trusted wholesale peptide supplier. U.S.-manufactured, ≥99% purity research-grade peptides for compounding pharmacies, wellness clinics, and licensed distributors.",
-    "url": "https://99puritypeptides.com",
-    "logo": "https://99puritypeptides.com/images/99pw-logo.webp",
+    "alternateName": ["99 Purity Wholesale", "99PurityWholesale"],
+    "description": "B2B-exclusive wholesale peptide supplier in the United States. U.S.-manufactured, ≥99% purity research-grade peptides independently verified by Freedom Diagnostic for compounding pharmacies, wellness clinics, and licensed distributors.",
+    "url": "https://99puritywholesale.com",
+    "logo": "https://99puritywholesale.com/images/99pw-logo.webp",
+    "sameAs": [
+      "https://99puritypeptides.com"
+    ],
     "contactPoint": [
       {
         "@type": "ContactPoint",
         "contactType": "sales",
         "availableLanguage": ["English", "Spanish"],
-        "areaServed": "US",
-        "contactOption": "TollFree"
+        "areaServed": "US"
       }
     ],
     "areaServed": {
@@ -157,13 +166,16 @@ export default async function RootLayout({
     },
     "knowsAbout": [
       "Wholesale Peptides USA",
-      "Research Grade Peptides",
+      "99 Purity Peptides",
+      "Research Grade Peptides Wholesale",
       "GLP-1 Peptides Wholesale",
       "BPC-157 Bulk Supply",
       "Semaglutide Wholesale",
-      "Compounding Pharmacy Peptides",
-      "Private Label Peptides",
-      "Peptide Dropshipping"
+      "Compounding Pharmacy Peptide Supply",
+      "Private Label Peptides USA",
+      "Peptide Dropshipping Program",
+      "HPLC Verified Peptide Purity",
+      "Freedom Diagnostic COA Verification"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -179,24 +191,27 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} suppressHydrationWarning className="scroll-smooth">
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <script
+          id="org-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} ${absans.variable} ${goku.variable} ${meshed.variable} ${archia.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <CartProvider>
-            <Header />
-            <MainContentWrapper>
-              {children}
-            </MainContentWrapper>
-            <Footer />
-            <FloatingWhatsApp />
-            <CartDrawer />
-          </CartProvider>
+          <SmoothScrollProvider>
+            <CartProvider>
+              <Header />
+              <MainContentWrapper>
+                {children}
+              </MainContentWrapper>
+              <Footer />
+              <FloatingWhatsApp />
+              <CartDrawer />
+            </CartProvider>
+          </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>

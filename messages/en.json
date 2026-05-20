@@ -10,8 +10,8 @@
         "sub": "Third-Party Verified"
       },
       "clients": {
-        "label": "B2B Clients",
-        "sub": "Clinics · Pharmacies · Labs"
+        "label": "COA Verified",
+        "sub": "Every Batch Documented"
       },
       "coverage": {
         "label": "U.S. Coverage",
@@ -19,14 +19,14 @@
       }
     },
     "Hero": {
-      "title": "America's Trusted Wholesale Peptide Supplier",
-      "subtitle": "Premium U.S.-manufactured research peptides for licensed professionals. Guaranteed 99%+ purity with independent batch-matched COAs.",
-      "primaryCta": "Contact via WhatsApp",
+      "title": "Wholesale Peptides in the USA — U.S. Manufactured. Freedom Diagnostic Verified.",
+      "subtitle": "The B2B-exclusive wholesale peptide supplier for compounding pharmacies, wellness clinics, and licensed distributors. Every batch independently tested at ≥99% purity by Freedom Diagnostic — batch-matched COAs on every order.",
+      "primaryCta": "Request Pricing on WhatsApp",
       "secondaryCta": "View Catalog",
-      "badge": "America's Trusted Wholesale Peptide Supplier",
-      "authorized": "Authorized Research Supplier",
+      "badge": "B2B-Only Wholesale Peptide Supplier — United States",
+      "authorized": "Verified U.S. Research Supplier",
       "explore": "Explore",
-      "institutions": "200+ Institutions",
+      "institutions": "Verified Institutions",
       "partners": "Verified Partners",
       "badges": {
         "usMade": "U.S. Made",
@@ -40,28 +40,28 @@
     "Differentiators": {
       "lab": {
         "title": "U.S. Laboratory",
-        "description": "Domestic synthesis ensuring the highest standards of quality control."
+        "description": "Every batch synthesized on U.S. soil — no imported raws, no repackaged overseas compounds."
       },
       "coa": {
         "title": "Batch-Matched COA",
-        "description": "Verified purity reports available for every single lot."
+        "description": "Freedom Diagnostic-verified HPLC and MS reports — downloadable before and after purchase."
       },
       "pricing": {
         "title": "Tiered Pricing",
-        "description": "Scalable margins tailored for your growth."
+        "description": "Four wholesale tiers from Start to Enterprise — pricing built for clinics, pharmacies, and distributors."
       },
       "support": {
         "title": "B2B Support",
-        "description": "Dedicated account managers via WhatsApp."
+        "description": "WhatsApp and email B2B support with dedicated contacts for every verified wholesale account."
       },
-      "shippingDesc": "Fast, discrete global logistics for pharmaceutical-grade peptides.",
+      "shippingDesc": "Priority domestic fulfillment — 2 to 4 business days to any U.S. state, no customs exposure.",
       "institutionalStandard": "Institutional Standard",
       "laboratory": "Laboratory"
     },
     "Categories": {
       "badge": "Wholesale Catalog",
-      "title": "Precision Research Library",
-      "subtitle": "Explore our specialized catalog of domestic-manufactured research compounds verified for purity.",
+      "title": "50+ U.S.-Manufactured Research Compounds",
+      "subtitle": "Every compound in our catalog is synthesized domestically, independently verified at ≥99% purity by Freedom Diagnostic, and available at tiered wholesale pricing for licensed professionals.",
       "items": {
         "bpc": {
           "name": "BPC-157",
@@ -97,7 +97,7 @@
     "BestSellers": {
       "badge": "Bestselling Compounds",
       "title": "High-Volume Wholesale Favorites",
-      "subtitle": "Our most frequently requested research compounds, manufactured to ≥99% purity and trusted by 200+ institutions nationwide.",
+      "subtitle": "Our most frequently requested research compounds, manufactured to ≥99% purity and independently verified by Freedom Diagnostic laboratories.",
       "items": [
         {
           "name": "Semaglutide",
@@ -154,7 +154,7 @@
     },
     "Quality": {
       "title": "Uncompromising Analytical Quality",
-      "description": "Every batch undergoes rigorous HPLC and MS analysis to ensure purity levels exceeding 99%. Our B2B clients receive full documentation with every shipment.",
+      "description": "Every batch is independently tested by Freedom Diagnostic using reversed-phase HPLC and LC-MS analysis, confirming ≥99% purity before any shipment is released. Batch-matched COAs are available to download before and after purchase — no exceptions.",
       "batchReport": "Batch Report",
       "downloads": {
         "bpc": "Download BPC-157 COA",
@@ -222,10 +222,10 @@
       ],
       "verifiedClient": "Verified Client",
       "institutionalTrust": [
-        "GMP Certified Facility",
-        "HPLC Tested Purity",
-        "CLIA Registered",
-        "SECURE B2B PORTAL"
+        "U.S. Domestic Manufacturing",
+        "HPLC & LC-MS Tested",
+        "Freedom Diagnostic Verified",
+        "Batch-Matched COA on Every Order"
       ]
     },
     "Services": {
@@ -307,46 +307,46 @@
     "FAQ": {
       "badge": "Common Questions",
       "title": "Frequently Asked Questions",
-      "subtitle": "Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity Wholesale. We understand that navigating the world of laboratory research compounds can be complex. We've compiled these frequently asked questions to guide your procurement and compliance journey.",
+      "subtitle": "Everything licensed professionals need to know about sourcing bulk peptides from 99 Purity Wholesale — from purity standards and COA documentation to wholesale pricing and compounding pharmacy supply.",
       "items": [
         {
-          "q": "What makes 99 Purity Wholesale different from other wholesale peptide suppliers?",
-          "a": "We are a U.S.-based manufacturer — not an importer or repackager. Every batch is synthesized domestically and independently tested by accredited U.S. third-party laboratories. Every product ships with a batch-matched Certificate of Analysis (COA) confirming ≥99% purity via HPLC and Mass Spectrometry."
+          "q": "What is a 99% purity peptide?",
+          "a": "A 99% purity peptide is a research-grade compound in which at least 99% of the measured content is the target peptide sequence, with no more than 1% comprising synthesis by-products, degradation artifacts, or impurities. Purity is determined by reversed-phase High-Performance Liquid Chromatography (HPLC), often confirmed by Liquid Chromatography-Mass Spectrometry (LC-MS) for identity verification. At 99 Purity Wholesale, all products are independently verified at ≥99% purity by [Freedom Diagnostic](/quality) — a U.S. third-party laboratory — before any batch is released for shipment."
+        },
+        {
+          "q": "Where can I buy wholesale peptides in the US?",
+          "a": "99 Purity Wholesale is a U.S.-based, B2B-exclusive wholesale peptide supplier serving licensed professionals across [all 50 states](/locations). We supply compounding pharmacies, wellness clinics, medical spas, and licensed distributors with domestically manufactured, ≥99% purity research peptides at [tiered wholesale pricing](/wholesale-application). All orders ship from our U.S. facility with no international customs exposure."
+        },
+        {
+          "q": "What makes 99 Purity Wholesale the best peptide supplier for compounding pharmacies?",
+          "a": "Compounding pharmacies require consistent purity, documented batch provenance, and procurement-ready COA records. We meet all three: every batch is independently tested by [Freedom Diagnostic](/quality) using reversed-phase HPLC and LC-MS, producing a [batch-matched Certificate of Analysis](/quality) that is downloadable before and after purchase. Our supply chain is 100% domestic — no imported raws, no repackaging, no customs risk. We carry GLP-1 compounds, growth hormone secretagogues, healing peptides, and more across [50+ research-grade SKUs](/products)."
         },
         {
           "q": "Who qualifies to purchase wholesale peptides from 99 Purity Wholesale?",
-          "a": "Our products are sold strictly to licensed professionals and qualified research institutions — including compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All purchases require buyer attestation of professional status."
+          "a": "Our products are sold strictly to licensed professionals and qualified research institutions — including compounding pharmacies, wellness clinics, medical spas, licensed distributors, and academic research facilities. All purchases require buyer attestation of professional status. [Apply for a wholesale account](/wholesale-application) to begin the verification process. Products are for laboratory and research use only — see our [research use disclaimer](/legal/disclaimer)."
         },
         {
           "q": "What is the minimum order quantity (MOQ) for wholesale peptides?",
-          "a": "Our minimum order is 10 units (1 kit) per product specification. Volume discounts activate at 10, 20, and 40+ kits through our tiered pricing program. Contact our team for current pricing."
+          "a": "Our minimum order is 10 units (1 kit) per product specification. Volume discounts activate at 10, 20, and 40+ kits through our [four-tier wholesale pricing program](/wholesale-application). Contact our team via [WhatsApp](/contact) for current pricing by product and volume."
         },
         {
-          "q": "Do you offer bulk peptides for compounding pharmacies?",
-          "a": "Yes. Compounding pharmacies are one of our primary B2B client segments. We supply bulk research-grade peptides including GLP-1 compounds, growth hormone secretagogues, and healing peptides with full COA documentation suitable for pharmacy procurement records."
-        },
-        {
-          "q": "What payment methods do you accept for wholesale orders?",
-          "a": "We accept Bitcoin, Zelle, and bank transfer (ACH/Wire). These methods are available to all verified wholesale accounts. Contact our team for payment instructions after your account is approved."
-        },
-        {
-          "q": "Can I get a COA before placing a wholesale order?",
-          "a": "Yes. Certificates of Analysis for current batches are available upon request before purchase. Our Quality Hub also maintains a downloadable COA library for your reference."
+          "q": "Can I get a Certificate of Analysis (COA) before placing a wholesale order?",
+          "a": "Yes. [Freedom Diagnostic](/quality)-issued Certificates of Analysis for current batches are available on request before purchase. Every COA includes reversed-phase HPLC chromatograms confirming ≥99% purity and LC-MS data confirming molecular identity. Our [Quality Hub](/quality) also maintains a downloadable COA library for ongoing reference."
         },
         {
           "q": "Do you offer private label or white label peptide services?",
-          "a": "Yes. We offer private label packaging for qualifying volume accounts. Your brand, your label, our ≥99% purity laboratory quality. Inquire via WhatsApp to discuss minimum volumes and customization options."
+          "a": "Yes. We offer [private label packaging](/services) for qualifying volume accounts. Your brand, your label — backed by ≥99% purity verified by [Freedom Diagnostic](/quality). Inquire via [WhatsApp](/contact) to discuss minimum volumes and customization options."
         },
         {
           "q": "How fast does wholesale peptide shipping take within the USA?",
-          "a": "Domestic orders typically ship within 1–2 business days after payment confirmation. Delivery to most U.S. states is 2–4 business days via priority shipping. No international customs delays — 100% U.S. domestic fulfillment."
+          "a": "Domestic orders typically ship within 1–2 business days after payment confirmation. Delivery to most U.S. states is 2–4 business days via priority domestic shipping. No international customs delays — 100% U.S. domestic fulfillment. See our [locations page](/locations) for state-specific delivery information."
         }
       ]
     },
     "FinalCta": {
       "badge": "Ready to Order?",
       "title": "Request Wholesale Peptide Pricing Today",
-      "subtitle": "Join 200+ compounding pharmacies, wellness clinics, and licensed distributors sourcing research-grade bulk peptides from America's most trusted wholesale supplier.",
+      "subtitle": "Trusted by compounding pharmacies, wellness clinics, and licensed distributors nationwide — sourcing research-grade bulk peptides from a U.S. domestic supplier they can verify.",
       "whatsapp": "Request Pricing on WhatsApp",
       "email": "Email Wholesale Inquiry",
       "msg": "Hi, I'd like to request wholesale peptide pricing."
@@ -380,6 +380,7 @@
     "nav": {
       "products": "Products",
       "quality": "Quality",
+      "calculator": "Calculator",
       "services": "Services",
       "blog": "Blog",
       "locations": "Locations",
@@ -388,7 +389,7 @@
       "search": "Search"
     },
     "whatsapp": {
-      "mockupTitle": "99 Purity Support",
+      "mockupTitle": "99 Purity Wholesale",
       "mockupSubtitle": "Institutional Access",
       "mockupWelcome": "Welcome to the 99 Purity B2B Concierge. Please select a procurement module to begin your direct encrypted inquiry.",
       "tooltipTitle": "Institutional Support",
@@ -415,9 +416,9 @@
           "text": "Hello, I am inquiring about custom compound synthesis services for a specific research project."
         },
         "distribution": {
-          "label": "International Distribution",
-          "desc": "Global Logistics",
-          "text": "Hi, I am interested in becoming a regional distributor for your research compounds outside the US."
+          "label": "U.S. Distribution Inquiry",
+          "desc": "Regional Distribution",
+          "text": "Hi, I am interested in becoming an authorized regional distributor of your research compounds within the United States. Could you share the requirements for a wholesale distribution partnership?"
         },
         "status": {
           "label": "Order Status Support",
@@ -445,6 +446,18 @@
       "whatsapp": "Send Inquiry via WhatsApp",
       "email": "Send Inquiry via Email",
       "disclaimer": "For research and laboratory use only. Licensed professionals only.",
+      "progressBar": {
+        "shippingGoal": "Add {count} more {count, plural, one {kit} other {kits}} to unlock free temperature-controlled shipping",
+        "tier1Goal": "Add {count} more {count, plural, one {kit} other {kits}} to qualify for Tier 1 wholesale pricing (10% off)",
+        "tier2Goal": "Add {count} more {count, plural, one {kit} other {kits}} to qualify for Tier 2 wholesale pricing (15% off)",
+        "tier3Goal": "Add {count} more {count, plural, one {kit} other {kits}} to qualify for Tier 3 Enterprise pricing (20% off)",
+        "maxUnlocked": "Maximum Enterprise discount tier unlocked! (20% off)",
+        "kitsCount": "{count} / 40 Kits",
+        "starter": "Start Tier",
+        "tier1": "Tier 1: Growth",
+        "tier2": "Tier 2: Established",
+        "tier3": "Tier 3: Enterprise"
+      },
       "empty": {
         "title": "Inquiry List Empty",
         "desc": "Browse our verified compound catalog to begin building your wholesale procurement request.",
@@ -497,12 +510,12 @@
       "partnerProgram": "Partner Program",
       "refundPolicy": "Refund Policy",
       "complianceTitle": "Compliance",
-      "desc": "99 Purity Wholesale is America's premier domestic supplier of high-purity research peptides. We specialize in bulk peptide distribution for wellness clinics, compounding pharmacies, and research institutions nationwide. Our USA-manufactured catalog is independently HPLC-tested to guarantee ≥99% purity, providing the reliable domestic sourcing required for precise laboratory standards.",
+      "desc": "99 Purity Wholesale is a U.S.-based B2B supplier of wholesale research peptides, serving compounding pharmacies, wellness clinics, and licensed distributors across all 50 states. Every compound in our catalog is synthesized domestically and independently verified by Freedom Diagnostic via reversed-phase HPLC and LC-MS analysis to confirm ≥99% purity. Batch-matched Certificate of Analysis documentation ships with every wholesale order.",
       "copyright": "99 PURITY © {year}. ALL RIGHTS RESERVED.",
       "startNow": "Start Now",
       "backToTop": "BACK TO TOP",
       "welcome": "You're welcome.",
-      "creditLab": "Wholesale Laboratory Excellence",
+      "creditLab": "U.S. Research Peptide Supplier",
       "creditUSA": "USA Manufactured",
       "creditBy": "Designed & Developed by"
     }
@@ -550,6 +563,8 @@
       "fields": {
         "businessName": "Business Name",
         "businessType": "Business Type",
+        "email": "Email Address",
+        "phone": "Contact Number",
         "state": "State",
         "products": "Primary Products of Interest",
         "volume": "Estimated Monthly Volume",
@@ -593,26 +608,26 @@
   },
   "About": {
     "Hero": {
-      "title": "99 Purity Wholesale: Made in America. Trusted by Professionals.",
-      "subtitle": "Discover the story behind our commitment to purity, transparency, and B2B partnership.",
-      "badge": "America's Trusted Wholesale Peptide Supplier",
-      "p1": "Since our founding, 99 Purity Wholesale has operated on a single principle: licensed professionals and qualified researchers in the United States deserve a domestic peptide supplier they can trust — one that backs every claim with data, every batch with a COA, and every client relationship with genuine partnership."
+      "title": "About 99 Purity Wholesale — U.S. Manufacturer. B2B Wholesale Supplier.",
+      "subtitle": "The domestic peptide supplier behind 99 Purity Wholesale — our supply chain, our lab partner, and our commitment to verified B2B pricing for licensed professionals across the United States.",
+      "badge": "Our Story & Quality Standards",
+      "p1": "99 Purity Wholesale operates on a single principle: licensed professionals and qualified researchers in the United States deserve a domestic peptide supplier they can verify — one that backs every claim with data, every batch with a Freedom Diagnostic COA, and every client relationship with genuine B2B partnership."
     },
     "Story": {
       "badge": "Our Story",
       "title": "Built in America. Built for Professionals.",
       "p1": "99 Purity Wholesale began with a simple conviction: the U.S. peptide market deserved a domestic supplier that professionals could actually trust. No repackaged imports. No mystery purity. No gray-market sourcing.",
       "p2": "We built our operation from the ground up — U.S. laboratory, U.S. testing, and U.S. team — so that compounding pharmacies, wellness clinics, and licensed researchers had a reliable domestic source for research-grade peptides at competitive wholesale pricing.",
-      "p3": "Today, we serve over 200 B2B clients across the United States, providing a comprehensive catalog, tiered pricing, and full COA documentation on every order.",
-      "p4": "Our catalog spans over 50 research compounds across 7 categories — from GLP-1 metabolic peptides and growth hormone secretagogues to healing compounds, nootropics, anti-aging peptides, and cosmetic research compounds. Every product is manufactured in our U.S. facility, independently tested, and shipped with a batch-matched Certificate of Analysis.",
+      "p3": "99 Purity Wholesale is the B2B arm of our domestic peptide operation — the same supply chain and Freedom Diagnostic-verified COAs that power our retail division at 99puritypeptides.com, now available to licensed professionals and institutions at wholesale pricing and volume.",
+      "p4": "Our catalog spans 50+ research compounds across 8 categories — GLP-1 metabolic peptides, growth hormone secretagogues, healing and recovery compounds, cognitive nootropics, cellular health research, sleep cycle compounds, amino acids, and essentials. Every compound is synthesized in our U.S. facility, independently tested by Freedom Diagnostic, and shipped with a batch-matched Certificate of Analysis.",
       "features": [
         {
           "title": "U.S. Laboratory",
           "desc": "Synthesized in America — not imported, not repackaged. True domestic manufacturing."
         },
         {
-          "title": "Third-Party Tested",
-          "desc": "Every batch independently verified by accredited U.S. laboratories via HPLC & MS."
+          "title": "Freedom Diagnostic Verified",
+          "desc": "Every batch independently verified by Freedom Diagnostic — a U.S. third-party laboratory — via reversed-phase HPLC and LC-MS."
         },
         {
           "title": "≥99% Purity",
@@ -627,8 +642,8 @@
           "desc": "Fast domestic fulfillment with no international customs risk or cold-chain failure."
         },
         {
-          "title": "200+ Clients",
-          "desc": "Growing network of compounding pharmacies, wellness clinics, and distributors."
+          "title": "Retail Division",
+          "desc": "Our retail arm — 99puritypeptides.com — runs on the same domestic supply chain and purity standards we extend to wholesale partners."
         }
       ]
     },
@@ -642,12 +657,12 @@
       "purity": {
         "title": "Purity",
         "desc": "≥99% in every product, verified by independent third-party labs, not just claimed.",
-        "longDesc": "We do not ship any product that fails to meet our ≥99% purity threshold. If a batch fails, it does not ship — period. This is not a marketing claim; it is our operating standard, enforced by third-party verification."
+        "longDesc": "We do not ship any product that fails to meet our ≥99% purity threshold. If a batch fails, it does not ship — period. This is not a marketing claim; it is our operating standard, enforced by independent third-party verification from Freedom Diagnostic."
       },
       "transparency": {
         "title": "Transparency",
         "desc": "Every batch has a Certificate of Analysis. No excuses, no exceptions. We prove our quality.",
-        "longDesc": "Our COA library is open to every client. Request a batch-specific COA before you order. Review our testing methodology. Ask questions. Transparency is not optional — it is the foundation of every B2B relationship we build."
+        "longDesc": "Every COA is issued by Freedom Diagnostic and is available for download before and after purchase. Request a batch-specific COA before you order. Review the HPLC chromatograms and LC-MS identity data yourself. Transparency is not optional — it is the foundation of every B2B relationship we build."
       },
       "partnership": {
         "title": "Partnership",
@@ -665,8 +680,8 @@
           "desc": "Solid-phase peptide synthesis (SPPS) in our domestic facility under strict quality controls."
         },
         {
-          "title": "Third-Party Testing",
-          "desc": "Independent U.S. labs run HPLC and Mass Spectrometry to confirm ≥99% purity on each batch."
+          "title": "Freedom Diagnostic Testing",
+          "desc": "Freedom Diagnostic — an independent U.S. third-party laboratory — runs reversed-phase HPLC and LC-MS analysis to confirm ≥99% purity on every batch before release."
         },
         {
           "title": "Batch COA Issued",
@@ -681,7 +696,7 @@
     "Clients": {
       "badge": "Our Clients",
       "title": "Who Sources From 99 Purity Wholesale",
-      "subtitle": "We are a B2B-only wholesale supplier. Our clients are licensed professionals and qualified research institutions across the United States who require consistent, verified, research-grade peptide supply at competitive wholesale pricing.",
+      "subtitle": "We are a B2B-only wholesale peptide supplier serving licensed professionals and qualified research institutions across all 50 U.S. states. Every client requires consistent, Freedom Diagnostic-verified, research-grade peptide supply at competitive wholesale pricing.",
       "items": [
         {
           "label": "Compounding Pharmacies",
@@ -702,18 +717,23 @@
         {
           "label": "Anti-Aging & Longevity Practices",
           "desc": "Specialized practices focused on longevity and cellular research applications."
+        },
+        {
+          "label": "Retail Peptide Operators",
+          "desc": "Businesses running direct-to-consumer peptide storefronts. Our own retail division, 99puritypeptides.com, operates on this same domestic supply chain."
         }
       ],
       "whyTitle": "Why Professionals Choose Us",
       "whyPoints": [
-        "Domestic U.S. manufacturing — no import risk",
+        "Domestic U.S. manufacturing — no imported raws, no repackaged overseas compounds",
         "Batch-matched COAs downloadable before and after purchase",
-        "HPLC and Mass Spectrometry purity verification on every lot",
-        "50+ compounds across 7 research categories",
+        "Freedom Diagnostic-verified HPLC and LC-MS purity confirmation on every batch",
+        "50+ compounds across 8 research categories",
         "Tiered wholesale pricing (Start → Tier 3) with volume incentives",
         "No cold chain required — stable lyophilized formulations",
         "WhatsApp + Email B2B support with fast response times",
         "Private label and dropshipping programs available",
+        "Retail-proven supply chain — same standards powering 99puritypeptides.com",
         "Bitcoin, Zelle, and bank transfer accepted"
       ]
     },
@@ -733,15 +753,15 @@
           "label": "Purity Standard"
         },
         {
-          "num": "200+",
-          "label": "B2B Clients"
+          "num": "US Lab",
+          "label": "Domestic Manufacturing"
         },
         {
           "num": "50",
           "label": "States Served"
         },
         {
-          "num": "7",
+          "num": "8",
           "label": "Research Categories"
         }
       ]
@@ -777,11 +797,60 @@
       ]
     },
     "Cta": {
-      "title": "Have questions about our background, lab practices, or sourcing?",
-      "subtitle": "We welcome the conversation. Reach out to our U.S.-based team.",
+      "title": "Ready to verify our quality standards before you order?",
+      "subtitle": "Request a Freedom Diagnostic COA, ask about our supply chain, or discuss wholesale pricing. Our U.S. team responds via WhatsApp within one business day.",
       "whatsapp": "Chat on WhatsApp",
       "email": "Send an Email",
-      "msg": "Hi, I have a question about 99 Purity Wholesale wholesale sourcing."
+      "msg": "Hi, I'd like to verify your quality standards before placing a wholesale order."
+    },
+    "FAQ": {
+      "badge": "About 99 Purity Wholesale",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the questions licensed professionals ask before sourcing from 99 Purity Wholesale — covering our identity, lab partner, supply chain, and compliance standards.",
+      "items": [
+        {
+          "q": "Who is 99 Purity Wholesale?",
+          "a": "99 Purity Wholesale is a U.S.-based, B2B-exclusive wholesale peptide supplier serving licensed professionals across all 50 states. We supply compounding pharmacies, wellness clinics, medical spas, and licensed distributors with domestically manufactured, ≥99% purity research peptides — independently verified by [Freedom Diagnostic](/quality) — at [tiered wholesale pricing](/wholesale-application). We also operate a retail division at [99puritypeptides.com](https://99puritypeptides.com) under the same domestic supply chain.",
+          "link": "/products",
+          "linkText": "Browse Our Catalog"
+        },
+        {
+          "q": "What independent laboratory tests your peptides?",
+          "a": "Every batch is tested by [Freedom Diagnostic](/quality), an independent U.S. third-party laboratory. Testing includes reversed-phase High-Performance Liquid Chromatography (HPLC) to confirm ≥99% purity, and Liquid Chromatography-Mass Spectrometry (LC-MS) to confirm molecular identity. [Batch-matched Certificates of Analysis](/quality) are available to download before and after purchase — no request required for COA access.",
+          "link": "/quality",
+          "linkText": "View Our Quality Standards"
+        },
+        {
+          "q": "Where are your peptides manufactured?",
+          "a": "All peptides supplied by 99 Purity Wholesale are synthesized in a U.S. domestic facility using [solid-phase peptide synthesis (SPPS)](/glossary). We do not source from overseas manufacturers or repackage imported raws. Domestic manufacturing eliminates international customs risk and ensures consistent [quality control](/quality) from synthesis to shipment.",
+          "link": "/quality",
+          "linkText": "Our Manufacturing Process"
+        },
+        {
+          "q": "How do I verify purity before placing a wholesale order?",
+          "a": "Request a [batch-matched Certificate of Analysis](/quality) from Freedom Diagnostic before committing to any order. Every COA includes reversed-phase HPLC chromatograms confirming ≥99% purity and LC-MS data confirming molecular identity. Our [Quality Hub](/quality) maintains a downloadable COA library for ongoing reference. We actively encourage every new wholesale partner to review documentation before their first order.",
+          "link": "/quality",
+          "linkText": "Visit Our COA Library"
+        },
+        {
+          "q": "Do you operate a retail division as well?",
+          "a": "Yes. 99 Purity Wholesale operates a retail division at [99puritypeptides.com](https://99puritypeptides.com), which sells research-grade peptides directly to individual licensed buyers. The wholesale site is our B2B arm — offering the same domestic supply chain and [Freedom Diagnostic](/quality)-verified quality at [tiered wholesale pricing](/wholesale-application) for compounding pharmacies, distributors, clinics, and research institutions.",
+          "link": "https://99puritypeptides.com",
+          "linkText": "Visit Our Retail Division"
+        },
+        {
+          "q": "What types of businesses qualify for a wholesale account?",
+          "a": "Eligible wholesale accounts include compounding pharmacies, wellness clinics, medical spas, licensed distributors, research facilities, and retail peptide operators. All buyers must attest to their licensed professional status and agree to our [research-use-only terms](/legal/disclaimer). [Applications](/wholesale-application) are individually reviewed and approved before pricing access is granted.",
+          "link": "/wholesale-application",
+          "linkText": "Apply for Wholesale Access"
+        },
+        {
+          "q": "What are your research use compliance requirements?",
+          "a": "All products supplied by 99 Purity Wholesale are designated for in vitro laboratory research only. They are not for human consumption, therapeutic application, or diagnostic use. Buyers are legally responsible for ensuring all downstream use complies with applicable local, state, and federal regulations. Our [services page](/services) outlines B2B program requirements in full.",
+          "link": "/legal/disclaimer",
+          "linkText": "Read Our Disclaimer"
+        }
+      ]
     }
   },
   "Legal": {
@@ -799,14 +868,14 @@
     }
   },
   "Meta": {
-    "homeTitle": "99 Purity Wholesale | Wholesale Peptides United States",
-    "homeDesc": "America's Made 99 Purity Wholesale Provider. Premium research peptides for licensed professionals with guaranteed 99%+ purity.",
-    "productsTitle": "99 Purity Wholesale Catalog | Wholesale Peptides",
+    "homeTitle": "Wholesale Peptides USA | ≥99% Purity | 99 Purity Wholesale",
+    "homeDesc": "Buy wholesale peptides in the US from 99 Purity Wholesale. U.S.-manufactured, ≥99% purity, Freedom Diagnostic-verified COAs. B2B pricing for compounding pharmacies, wellness clinics, and licensed distributors.",
+    "productsTitle": "Wholesale Peptide Catalog",
     "productsDesc": "High-quality America's made peptides for qualified institutions and researchers. View our wholesale catalog.",
-    "servicesTitle": "Wholesale Peptide B2B Services | 99 Purity Wholesale",
-    "servicesDesc": "U.S.-based wholesale peptide supplier offering dropshipping, private label, website development, and launch support for clinics, pharmacies & distributors.",
-    "servicesOgTitle": "B2B Peptide Business Services — Built for Growth | 99 Purity Wholesale",
-    "servicesOgDesc": "From dropshipping and private label to website builds and distribution strategy — 99 Purity Wholesale is the operational backbone for your research compound business.",
+    "servicesTitle": "Peptide Dropshipping, Private Label & Wholesale Services",
+    "servicesDesc": "U.S.-manufactured, ≥99% purity research peptides for B2B professionals. Dropshipping, private label, launch support, and website development for compounding pharmacies, wellness clinics, and licensed distributors.",
+    "servicesOgTitle": "Wholesale Peptide B2B Services — Dropshipping, Private Label & Launch Support",
+    "servicesOgDesc": "From dropshipping and private label to website development and distribution strategy — 99 Purity Wholesale provides the B2B infrastructure licensed professionals need to build a research compound business.",
     "servicesKeywords": {
       "k1": "wholesale peptide supplier services",
       "k2": "peptide dropshipping program USA",
@@ -820,16 +889,20 @@
       "k10": "peptide supplier for compounding pharmacy",
       "k11": "B2B peptide infrastructure"
     },
-    "aboutTitle": "About 99 Purity Wholesale | America's Made Peptides",
-    "aboutDesc": "Meet 99 Purity Wholesale. Domestic synthesis, rigorous testing, and trusted B2B partnership.",
-    "contactTitle": "Contact | 99 Purity Wholesale Inquiries",
+    "aboutTitle": "About Us | U.S. Domestic Manufacturer & Quality Standards",
+    "aboutDesc": "99 Purity Wholesale is a U.S. domestic peptide manufacturer supplying compounding pharmacies, wellness clinics, and licensed distributors. Every batch independently tested at ≥99% purity by Freedom Diagnostic.",
+    "contactTitle": "Contact | Wholesale Inquiries",
     "contactDesc": "Reach out to our U.S. team for pricing, volume orders, and dropshipping programs.",
-    "locationsTitle": "99 Purity Wholesale Locations | All 50 States",
+    "locationsTitle": "Wholesale Peptide Locations | All 50 States",
     "locationsDesc": "Fast and secure domestic fulfillment to research institutions across the United States with 99 Purity Wholesale.",
-    "productTitle": "{name} — Wholesale Bulk Supply | 99 Purity Wholesale",
+    "blogTitle": "Wholesale Peptide Knowledge Hub | Research Guides & COA Analysis",
+    "blogDesc": "Expert guides on sourcing wholesale peptides in the USA, evaluating COA documentation, GLP-1 procurement, dropshipping programs, and compliance considerations for compounding pharmacies and wellness clinics.",
+    "productTitle": "{name} — Wholesale Bulk Supply",
     "productDesc": "Buy {name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping. Research use only.",
     "productOgTitle": "{name} | Bulk Wholesale Research Peptides",
-    "productOgDesc": "Premium {name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment."
+    "productOgDesc": "Premium {name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment.",
+    "calculatorTitle": "Peptide Reconstitution Calculator",
+    "calculatorDesc": "Determine exact syringe units and dosage concentrations for your research compounds. Visual interactive calculator."
   },
   "ProductsIndex": {
     "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",
@@ -934,6 +1007,24 @@
     "specsTitle": "Product Specifications",
     "availableSizes": "Available Sizes",
     "storageDetails": "Storage Details",
+    "passportTitle": "Compound Specification Passport",
+    "compoundNameLabel": "Compound Name",
+    "casRegistryLabel": "CAS Registry",
+    "purityGradeLabel": "Purity Grade",
+    "physicalFormLabel": "Physical Form",
+    "recommendedStorageLabel": "Recommended Storage",
+    "procurementLimitLabel": "Procurement Limit",
+    "moqValue": "10 Vials (1 Kit MOQ)",
+    "physicalForms": {
+      "lyophilized": "Lyophilized Solid Powder",
+      "solvent": "Sterile Liquid Solvent",
+      "solution": "Sterile Liquid Solution"
+    },
+    "storageValues": {
+      "standard": "-20°C (Long-Term) / +2°C to +8°C (Short-Term)",
+      "bacWater": "15°C to 30°C (Room Temp - Do Not Freeze)",
+      "liquid": "2°C to 8°C (Refrigerate - Do Not Freeze)"
+    },
     "moqHeading": "Wholesale MOQ: 10 Units",
     "moqSubtext": "Minimum order quantity is 10 units (1 kit).",
     "pricingHeading": "Contact for Tiered Pricing",
@@ -1034,8 +1125,8 @@
   },
   "Services": {
     "badge": "Serving Licensed Professionals Across the United States",
-    "title": "Wholesale Peptide Business Services for Serious Operators",
-    "subtitle": "99 Purity Wholesale is more than a U.S. wholesale peptide supplier. We are the operational backbone behind some of the fastest-growing research compound businesses in America — providing the infrastructure, branding, fulfillment, and digital presence that turns a product idea into a scalable, profitable operation.",
+    "title": "Wholesale Peptide Services — Dropshipping, Private Label & B2B Launch Support",
+    "subtitle": "99 Purity Wholesale is more than a wholesale peptide supplier. We provide the operational infrastructure — branding, fulfillment, private label, and digital presence — that licensed professionals need to build or scale a research compound business in the United States.",
     "heroStats": {
       "stat1Num": "50+",
       "stat1Label": "Research Compounds in Catalog",
@@ -1053,7 +1144,7 @@
     },
     "trustBar": {
       "t1": "U.S.-Based Laboratory & Fulfillment",
-      "t2": "Batch-Matched COA on Every Order",
+      "t2": "Freedom Diagnostic COA on Every Order",
       "t3": "Serving Clinics, Pharmacies & Distributors",
       "t4": "Nationwide Shipping from U.S. Facilities",
       "t5": "Discreet B2B Packaging Available"
@@ -1061,7 +1152,7 @@
     "intro": {
       "badge": "B2B Growth Solutions",
       "title": "Everything You Need to Build and Scale a Research Compound Business",
-      "desc": "Whether you are launching your first wholesale peptide line, scaling an existing compounding pharmacy operation, or building a private label research compound brand from scratch — 99 Purity Wholesale provides the infrastructure to make it happen. Our B2B services are designed exclusively for licensed professionals, distributors, and entrepreneurs operating within the U.S. research compound market. Every program is backed by our ≥99% purity standard and U.S.-based manufacturing."
+      "desc": "Whether you are launching your first wholesale peptide line, scaling an existing compounding pharmacy operation, or building a private label research compound brand from scratch — 99 Purity Wholesale provides the infrastructure to make it happen. Our B2B services are designed exclusively for licensed professionals, distributors, and entrepreneurs operating within the U.S. research compound market. Every program is backed by our ≥99% purity standard, Freedom Diagnostic verification, and U.S.-based manufacturing."
     },
     "items": {
       "dropshipping": {
@@ -1084,7 +1175,7 @@
       "launch-support": {
         "eyebrow": "Business Development",
         "title": "Research Peptide Business Launch Support",
-        "desc": "Launching a wholesale peptide business or adding research compounds to your existing practice requires more than product access — it demands strategic clarity. Our launch support program provides hands-on guidance across product selection for your specific market, B2B pricing architecture, initial inventory procurement strategy, and operational setup. We have guided dozens of U.S. clinics, compounding pharmacies, and distributors through their first wholesale peptide order and beyond. Avoid costly startup mistakes with experienced infrastructure behind every decision.",
+        "desc": "Launching a wholesale peptide business or adding research compounds to your existing practice requires more than product access — it demands strategic clarity. Drawing on our direct experience operating in the U.S. research compound market, our launch support program provides structured, hands-on guidance through product selection for your specific market, B2B pricing architecture, initial inventory procurement strategy, and operational setup. Avoid costly startup mistakes with experienced infrastructure behind every decision.",
         "tags": {
           "t1": "start a peptide business",
           "t2": "wholesale peptide launch",
@@ -1135,7 +1226,7 @@
       "private-label": {
         "eyebrow": "Brand Equity",
         "title": "Private Label & White Label Research Peptides",
-        "desc": "Build lasting brand equity in the research compound market with your own custom-labeled, ≥99% purity peptides — manufactured in the United States and packaged under your brand identity. Our private label program supports qualifying volume accounts with custom labeling, branded packaging design consultation, and batch-matched COA documentation issued under your product line. Every private label batch meets the same ≥99% purity standard verified by third-party U.S. laboratory testing. Launch a shelf-ready research compound product line without building a manufacturing operation.",
+        "desc": "Build lasting brand equity in the research compound market with your own custom-labeled, ≥99% purity peptides — manufactured in the United States and packaged under your brand identity. Our private label program supports qualifying volume accounts with custom labeling, branded packaging design consultation, and batch-matched COA documentation issued under your product line. Every private label batch meets the same ≥99% purity standard verified by Freedom Diagnostic — our independent U.S. third-party testing laboratory. Launch a shelf-ready research compound product line without building a manufacturing operation.",
         "tags": {
           "t1": "private label peptides USA",
           "t2": "white label research compounds",
@@ -1171,9 +1262,9 @@
       "badge": "Why Partner With Us",
       "title": "The Only U.S. Wholesale Peptide Supplier That Grows With You",
       "col1Label": "U.S. Manufacturing. Zero Compromise.",
-      "col1Text": "Every compound we supply is manufactured in our U.S.-based laboratory — never sourced overseas, never repackaged from unknown origins. You get traceable, domestic-origin supply with ≥99% purity verified by independent third-party laboratory testing.",
-      "col2Label": "Batch-Matched COA on Every Shipment",
-      "col2Text": "We don't just claim purity — we document it. Every order ships with a batch-matched Certificate of Analysis from an accredited U.S. testing laboratory. Your clients get proof. You get credibility.",
+      "col1Text": "Every compound we supply is manufactured in our U.S.-based laboratory — never sourced overseas, never repackaged from unknown origins. You get traceable, domestic-origin supply with ≥99% purity verified by Freedom Diagnostic, our independent U.S. third-party laboratory.",
+      "col2Label": "Freedom Diagnostic COA on Every Shipment",
+      "col2Text": "We don't just claim purity — we document it. Every order ships with a batch-matched Certificate of Analysis issued by Freedom Diagnostic — downloadable before and after purchase. Your clients get verifiable proof. You get credibility.",
       "col3Label": "We Build Businesses, Not Just Transactions",
       "col3Text": "Our B2B services exist because we understand that your success is our growth. From your first wholesale peptide order to building a multi-state distribution network — we provide the infrastructure other suppliers simply don't offer."
     },
@@ -1192,51 +1283,51 @@
       "items": [
         {
           "q": "Do I need to be a licensed professional to access your B2B services?",
-          "a": "Yes. All 99 Purity Peptides B2B services—including bulk catalog access, white-label packaging, dropshipping fulfillment, and custom laboratory synthesis—are strictly available to licensed professionals, medical wellness clinics, compounding pharmacies, and verified research entities. Business credential validation is required during onboarding."
+          "a": "Yes. All [99 Purity Wholesale](/about) B2B services — including bulk catalog access, white-label packaging, dropshipping fulfillment, and private label programs — are strictly available to licensed professionals, medical wellness clinics, compounding pharmacies, and verified research entities. Business credential validation is required during [onboarding](/wholesale-application)."
         },
         {
           "q": "What is the minimum order volume for your wholesale peptide dropshipping program?",
-          "a": "Our wholesale dropshipping program features no massive upfront inventory storage fees. However, to maintain your custom brand integration and secure our highest-tier pricing brackets, we require a minimum commitment of 20 unit fulfillments per month. This threshold is discussed and adjusted based on your specific compound catalog during onboarding."
+          "a": "Our [dropshipping program](/services) has no upfront inventory storage fees. Volume commitments and pricing bracket thresholds are discussed during onboarding and adjusted based on your specific compound catalog and monthly fulfillment needs. Contact us via [WhatsApp](/contact) to discuss your projected volume."
         },
         {
           "q": "How long does it take to launch a custom private label or white label peptide line?",
-          "a": "The end-to-end timeline for launching a custom private label peptide product line ranges from 2 to 4 weeks. This includes business verification, label compliance review, packaging and custom branding finalization, synthesis verification of your selected batches, and direct integration into our domestic logistics pipeline."
+          "a": "The end-to-end timeline for launching a custom [private label peptide](/services) line typically ranges from 2 to 4 weeks. This includes business verification, label compliance review, packaging and branding finalization, batch verification by [Freedom Diagnostic](/quality), and integration into our domestic fulfillment pipeline."
         },
         {
           "q": "Can I use your website development or launch support if I source compounds elsewhere?",
-          "a": "No. Our high-performance digital infrastructure services—such as custom Next.js portal development, automated compliance routing, and business calculators—are premium value-added B2B benefits reserved exclusively for active, high-volume B2B accounts that source their lyophilized peptides through 99 Purity Wholesale."
+          "a": "No. Our digital infrastructure services — including custom Next.js portal development and compliance-ready storefronts — are reserved exclusively for active [wholesale accounts](/wholesale-application) that source research compounds through 99 Purity Wholesale. This ensures every site we build is backed by verifiable [Freedom Diagnostic](/quality)-verified supply."
         },
         {
           "q": "How do you guarantee the purity of compounds shipped in dropshipping or private label orders?",
-          "a": "Every single peptide batch manufactured in our U.S. laboratories undergoes rigorous double-pass High-Performance Liquid Chromatography (HPLC) and Mass Spectrometry (LC-MS) analysis. Each dropshipped or private-labeled order is matched directly to its verified batch Certificate of Analysis (COA) confirming a minimum purity of ≥99%."
+          "a": "Every batch is independently tested by [Freedom Diagnostic](/quality) using reversed-phase High-Performance Liquid Chromatography (HPLC) and Liquid Chromatography-Mass Spectrometry (LC-MS) analysis. Each dropshipped or private-labeled order is matched to its [batch-matched Certificate of Analysis](/quality) confirming a minimum purity of ≥99% before release."
         },
         {
           "q": "What payment methods do you accept for high-volume wholesale peptide contracts?",
-          "a": "To ensure immediate transaction clearance and operational speed, we accept Bitcoin (BTC) for immediate domestic processing, Zelle for mid-tier transactions, and standard corporate bank transfers (ACH/Wire) for high-volume contract manufacturing accounts. Customized billing cycles are available for qualified long-term partners."
+          "a": "We accept Bitcoin (BTC), Zelle, and standard bank transfers (ACH/Wire) for all wholesale and service contracts. Customized billing arrangements are available for qualified long-term partners. [Contact us](/contact) to discuss payment options for your account tier."
         },
         {
           "q": "Are dropshipped and private label peptides shipped under cold chain packaging?",
-          "a": "Our peptides are synthesized and purified to the highest industry standards, then lyophilized into a highly stable solid powder form. Lyophilized peptides remain molecularly stable at room temperatures during standard domestic shipping, eliminating the need for cold-chain transit. However, we utilize vacuum-sealed, thermally buffered B2B packaging to ensure complete environmental protection."
+          "a": "Cold chain is not required. All peptides are [lyophilized](/glossary) — converted into a stable solid powder form that remains molecularly stable at room temperature during standard domestic shipping. Orders ship in vacuum-sealed, thermally buffered packaging. No dry ice, no temperature monitoring, no cold-chain overhead."
         },
         {
-          "q": "Do you offer custom peptide synthesis for unique research concentrations or novel sequences?",
-          "a": "Yes. Our U.S.-based chemical synthesis laboratories can formulate custom concentration sizes, custom milligram weights (e.g., custom 20mg BPC-157 or 50mg Tirzepatide vials), or custom amino acid sequences for qualified B2B partners. Custom synthesis runs require a minimum batch contract volume which will be detailed during consultation."
+          "q": "Do you offer custom peptide synthesis for unique research concentrations?",
+          "a": "Yes, for qualified B2B partners. Custom concentration sizes and milligram weights — such as custom 20mg BPC-157 or 15mg Tirzepatide vials — can be discussed during consultation. Custom synthesis requires a minimum batch contract volume. [Reach out via WhatsApp](/contact) to discuss your specific research requirements."
         },
         {
-          "q": "How are shipping, customs delays, and tracking handled for dropshipped orders?",
-          "a": "Since all of our manufacturing, warehousing, and fulfillment operations are located domestically within the United States, your dropshipped orders face zero international customs risks, border delays, or seizure exposures. We ship all B2B parcels via express couriers with automated API tracking sent directly to your sales portal."
+          "q": "How are shipping and tracking handled for dropshipped orders?",
+          "a": "Because all manufacturing and fulfillment is [U.S. domestic](/locations), dropshipped orders face zero international customs risks, border delays, or seizure exposure. Orders ship via priority domestic carrier within 1–2 business days of payment confirmation, with tracking provided directly to your account."
         },
         {
-          "q": "What are the legal compliance frameworks surrounding white labeling research compounds?",
-          "a": "All materials supplied under our private label and white label programs are strictly labeled and designated for laboratory, analytical, and in-vitro scientific research applications only. Resellers are legally responsible for ensuring their product marketing, digital storefronts, and target clients operate fully within these legal research-use frameworks."
+          "q": "What are the legal compliance requirements for white labeling research compounds?",
+          "a": "All materials supplied under our [private label and white label](/services) programs are strictly designated for laboratory, analytical, and in-vitro scientific research applications only. Resellers are legally responsible for ensuring their marketing, storefronts, and end clients operate fully within applicable research-use frameworks. Review our [Research Use Only Disclaimer](/legal/disclaimer) for full requirements."
         },
         {
-          "q": "Can I request batch-matched HPLC report verification before my dropship fulfillment?",
-          "a": "Yes. Transparency is a core pillar of our B2B partnership. Business partners can request batch-matched HPLC and Mass Spectrometry reports for the specific manufacturing lot currently allocated to their inventory or fulfillment queue at any time."
+          "q": "Can I request a batch-matched COA before my dropship order ships?",
+          "a": "Yes. [Freedom Diagnostic](/quality)-issued batch COAs for any active lot are available on request before shipment. Every COA includes reversed-phase HPLC chromatograms and LC-MS identity data. Our [Quality Hub](/quality) maintains a downloadable COA library for ongoing reference."
         },
         {
-          "q": "What support channels do B2B clients have access to for operational issues?",
-          "a": "All wholesale, dropshipping, and private label partners are assigned a dedicated U.S. B2B Account Manager. You receive direct access to our priority WhatsApp hotline and direct email desks, ensuring any logistical, technical, or custom ordering inquiries are fully resolved within 2 business hours."
+          "q": "What support do wholesale and dropshipping partners have access to?",
+          "a": "All wholesale, dropshipping, and private label partners receive direct access to our B2B support team via [WhatsApp](/contact) and email. Logistical, technical, COA, and custom ordering inquiries are handled with priority response. [Apply for a wholesale account](/wholesale-application) to get started."
         }
       ]
     }
@@ -1356,28 +1447,28 @@
     "whatsappMsg": "Hi, I need wholesale pricing for {name}"
   },
   "QualityPage": {
-    "badge": "Unwavering Standards",
+    "badge": "Third-Party Verified Purity",
     "title": "Proof in Every Vial",
-    "subtitle": "In the research industry, assumptions destroy data. We rely on strict analytical validation, ensuring every compound that reaches your lab exceeds 99% purity. No exceptions.",
+    "subtitle": "In research, the integrity of your compound determines the integrity of your data. Every batch supplied by 99 Purity Wholesale is independently verified by Freedom Diagnostic using reversed-phase HPLC and LC-MS analysis to confirm ≥99% purity before shipment.",
     "pipeline": {
       "title": "Our Analytical Pipeline",
-      "subtitle": "A rigorous sequence of synthesis, purification, and verification ensures absolute sequence accuracy.",
+      "subtitle": "A rigorous sequence of domestic synthesis, independent laboratory testing, and batch-specific documentation — applied to every compound before it ships.",
       "step1": {
-        "title": "1. Production & Synthesis",
-        "desc": "Compounds are synthesized under strict cGMP-compliant conditions using solid-phase peptide synthesis (SPPS), ensuring structural fidelity from the very first amino acid chain."
+        "title": "1. U.S.-Based Synthesis",
+        "desc": "All compounds are synthesized domestically using solid-phase peptide synthesis (SPPS) — the established method for research-grade peptides. Domestic production provides direct oversight over raw material sourcing and synthesis conditions."
       },
       "step2": {
-        "title": "2. Independent Testing",
-        "desc": "Samples are sent to independent U.S. analytical laboratories for High-Performance Liquid Chromatography (HPLC) and Mass Spectrometry (MS) to verify ≥99% purity."
+        "title": "2. Freedom Diagnostic Testing",
+        "desc": "Every production batch is shipped to Freedom Diagnostic, our independent U.S. analytical laboratory. Reversed-phase HPLC and LC-MS instrumentation confirms sequence identity and purity percentage. No batch ships without a passing report."
       },
       "step3": {
         "title": "3. Batch-Matched COA",
-        "desc": "A unique Certificate of Analysis is generated for every production lot. We don't use generic or outdated test reports. What you see is exactly what's in your vial."
+        "desc": "Every passing batch receives a unique Certificate of Analysis from Freedom Diagnostic — tied to the specific lot number, not a generic reference. Your COA ships with your order and can be cross-referenced by batch ID at any time."
       }
     },
     "comparison": {
       "title": "The 99PW Standard",
-      "subtitle": "How we compare to typical overseas suppliers and unverified distributors.",
+      "subtitle": "A side-by-side look at what separates independently verified domestic supply from typical overseas distributors.",
       "headers": {
         "criteria": "Criteria",
         "ours": "99 Purity Wholesale",
@@ -1386,53 +1477,128 @@
       "rows": {
         "purity": {
           "crit": "Purity Standard",
-          "ours": "Strictly ≥ 99%",
-          "theirs": "95% - 98% (Often falsified)"
+          "ours": "Strictly ≥99% — no exceptions",
+          "theirs": "95%–98% typical; often unverifiable"
         },
         "testing": {
           "crit": "Analytical Testing",
-          "ours": "Independent U.S. Labs",
-          "theirs": "In-house or none"
+          "ours": "Freedom Diagnostic (Independent U.S. Lab)",
+          "theirs": "In-house or affiliated lab — conflict of interest"
         },
         "coa": {
           "crit": "COA Validity",
-          "ours": "Batch-matched & verifiable",
-          "theirs": "Generic / Photoshopped"
+          "ours": "Batch-matched, lot-traceable, verifiable",
+          "theirs": "Generic template or altered document"
         },
         "support": {
-          "crit": "Client Support",
-          "ours": "U.S.-based, 24h response",
-          "theirs": "Slow, unreliable communication"
+          "crit": "B2B Support",
+          "ours": "U.S.-based team, 2-hour business response",
+          "theirs": "Slow or unresponsive cross-timezone support"
         },
         "shipping": {
           "crit": "Shipping & Fulfillment",
-          "ours": "Fast Domestic (No Customs)",
-          "theirs": "International customs risk"
+          "ours": "Domestic U.S. — no customs exposure",
+          "theirs": "International transit with customs risk"
         }
       }
     },
     "library": {
       "title": "COA Document Library",
-      "subtitle": "Access batch-matched analytical reports for our catalog.",
-      "placeholder": "Search by product name...",
+      "subtitle": "Search our catalog and access batch-matched Certificate of Analysis documents from Freedom Diagnostic.",
+      "placeholder": "Search by product name or category...",
       "headers": {
         "name": "Product Name",
         "category": "Category",
         "batch": "Latest Batch",
         "action": "Action"
       },
-      "verified": "Verified",
-      "download": "Download PDF",
+      "verified": "FD Verified",
+      "download": "Download COA",
       "empty": "No products found matching \"{searchTerm}\"."
     },
     "trust": {
-      "title": "Unwavering Institutional Trust",
-      "desc": "We partner with leading academic institutions, private research facilities, and independent investigators worldwide. Our commitment to strict cGMP-aligned practices and independent verification ensures your data is built on a foundation of 99 Purity Wholesale excellence.",
+      "title": "Verification You Can Read",
+      "desc": "Every quality claim at 99 Purity Wholesale traces back to documented evidence. Freedom Diagnostic produces batch-matched HPLC and LC-MS reports for every production lot. We supply wholesale research peptides across all 50 U.S. states with COA documentation attached to every order — not as an add-on, but as a standard condition of supply.",
       "badges": {
-        "us": "U.S. Facilities",
-        "cgmp": "cGMP Aligned",
-        "qa": "Independent QA"
+        "us": "U.S. Manufactured",
+        "cgmp": "Freedom Diagnostic Verified",
+        "qa": "HPLC & LC-MS Tested"
       }
+    },
+    "cta": {
+      "badge": "Request Batch Documentation",
+      "title": "Verify Before You Order",
+      "subtitle": "Request a sample COA for any compound in our catalog before committing to a wholesale account. Our B2B team responds within 2 business hours."
+    },
+    "FAQ": {
+      "title": "Quality & Testing FAQ",
+      "subtitle": "Detailed answers to the most common questions about our purity standards, analytical methodology, Freedom Diagnostic verification, and COA documentation process.",
+      "items": [
+        {
+          "q": "What does ≥99% purity mean for wholesale research peptides?",
+          "a": "Purity ≥99% means at least 99 of every 100 molecules in a given vial are the correctly sequenced target peptide. This threshold — verified by reversed-phase HPLC and LC-MS analysis at [Freedom Diagnostic](https://freedomdiagnostic.com) — rules out truncated sequences, synthesis impurities, and oxidation byproducts that can distort assay results. Industry convention considers anything below 98% unsuitable for reliable in-vitro or in-vivo research use.",
+          "link": "/quality#coa-library",
+          "linkText": "View COA Library"
+        },
+        {
+          "q": "Who is Freedom Diagnostic and what role do they play?",
+          "a": "Freedom Diagnostic is our named independent U.S. analytical laboratory. Every production batch is physically shipped to their facility, where HPLC and LC-MS instrumentation confirms both peptide sequence identity and purity percentage before any product ships from our warehouse. Results are issued as a batch-matched Certificate of Analysis — tied to a specific lot number, not a generic reference standard.",
+          "link": "/services",
+          "linkText": "Our Full Quality Process"
+        },
+        {
+          "q": "What is a batch-matched Certificate of Analysis (COA)?",
+          "a": "A batch-matched COA is a laboratory test report generated for a specific production lot — not a template, generic document, or reused result. It lists the compound name, lot number, HPLC chromatogram, mass spectrometry data, and confirmed purity percentage. Every order from 99 Purity Wholesale ships with the COA corresponding to that exact batch, so you can trace the document back to the same vials you received.",
+          "link": "/quality#coa-library",
+          "linkText": "Browse COA Library"
+        },
+        {
+          "q": "What is the difference between HPLC and LC-MS in peptide testing?",
+          "a": "Reversed-phase HPLC (High-Performance Liquid Chromatography) separates compounds by hydrophobicity and measures purity as a percentage of the total integrated peak area. LC-MS (Liquid Chromatography–Mass Spectrometry) adds molecular weight confirmation, verifying that the detected compound has the correct sequence identity — not just that a pure compound is present. Using both methods together is the analytical gold standard for research-grade peptides."
+        },
+        {
+          "q": "Do all compounds in your catalog come with a COA?",
+          "a": "Yes. Every compound listed in our [product catalog](/products) is assigned a batch-matched COA from Freedom Diagnostic before it is made available for wholesale purchase. We do not offer products that have not passed independent purity verification. The COA document ships with your order and is also available for pre-order review on request.",
+          "link": "/quality#coa-library",
+          "linkText": "Search COA Library"
+        },
+        {
+          "q": "How is peptide purity different from peptide potency?",
+          "a": "Purity describes what percentage of the material is the intended peptide compound versus impurities. Potency describes how biologically active that compound is in a specific assay context. A peptide can be ≥99% pure but still exhibit variable potency depending on reconstitution protocol, storage conditions, and the research application. 99 Purity Wholesale guarantees purity as verified by analytical instrumentation — potency for a specific research endpoint is outside the scope of COA documentation."
+        },
+        {
+          "q": "Are your peptides manufactured in a GMP-compliant facility?",
+          "a": "Our compounds are synthesized in a U.S.-based facility using solid-phase peptide synthesis (SPPS). Independent third-party verification through Freedom Diagnostic serves as our primary quality assurance mechanism. We do not hold an FDA drug manufacturing license, as our products are supplied strictly for licensed research use — not for human administration. We apply rigorous synthesis and handling standards consistent with research-grade supply."
+        },
+        {
+          "q": "What happens if a batch fails to meet ≥99% purity?",
+          "a": "Any production lot that fails the ≥99% purity threshold in Freedom Diagnostic testing is rejected and not released into the wholesale catalog. We do not discount or remarket failing batches under any circumstances. Only lots with a passing COA are made available for order. This no-exceptions rejection policy is the foundation of our quality guarantee to [wholesale accounts](/services#pricing).",
+          "link": "/services",
+          "linkText": "Wholesale Account Details"
+        },
+        {
+          "q": "How long are COA documents valid and how should they be stored?",
+          "a": "A COA reflects the purity of a batch at the time of testing and does not expire as a document — it is a permanent record tied to that lot number. However, actual compound integrity is affected by storage conditions over time. We recommend storing lyophilized peptides sealed at -20°C for long-term stability, retaining the COA as a reference document throughout your research project."
+        },
+        {
+          "q": "Can I request a sample COA before placing a wholesale order?",
+          "a": "Yes. Prospective wholesale accounts can request sample COA documentation for any compound in our catalog prior to submitting an order. Contact our B2B team via [WhatsApp](https://wa.me/18437439007) or email at [sales@99puritypeptides.com](mailto:sales@99puritypeptides.com) to request the batch documentation for your compound of interest.",
+          "link": "https://wa.me/18437439007",
+          "linkText": "Request via WhatsApp"
+        },
+        {
+          "q": "How does your purity standard compare to overseas peptide suppliers?",
+          "a": "Most overseas suppliers operate at 95%–98% purity standards, with COAs produced by in-house or affiliated labs — a fundamental conflict of interest. 99 Purity Wholesale uses exclusively independent third-party testing through Freedom Diagnostic, enforces a ≥99% minimum with no exceptions, and ships from within the U.S. with no customs exposure. See our [full comparison table](/quality#comparison) for a structured breakdown.",
+          "link": "/quality#comparison",
+          "linkText": "View Full Comparison"
+        },
+        {
+          "q": "What is solid-phase peptide synthesis (SPPS)?",
+          "a": "SPPS is the industry-standard method for manufacturing research peptides. Amino acids are assembled sequentially on a solid resin support, building the target peptide chain one residue at a time. This method allows precise control over sequence fidelity and minimizes the byproduct profile. The resulting crude peptide is then purified and submitted to Freedom Diagnostic for analytical verification before any batch is released to the wholesale catalog.",
+          "link": "/products",
+          "linkText": "Browse Peptide Catalog"
+        }
+      ]
     }
   },
   "CategoryDetail": {
@@ -1710,8 +1876,9 @@
     "subtitle": "Expert guides, market analysis, and compliance resources for compounding pharmacies, wellness clinics, and licensed distributors sourcing bulk research-grade peptides in the USA.",
     "readMore": "Read Article",
     "back": "Back to Articles",
-    "ctaTitle": "Ready to Upgrade Your Supply Chain?",
-    "ctaSubtitle": "Connect with our wholesale team for current pricing and COAs.",
+    "ctaBadge": "Start Your Wholesale Account",
+    "ctaTitle": "Ready to Source Wholesale Peptides?",
+    "ctaSubtitle": "Apply for a verified B2B account to receive tiered wholesale pricing, batch-matched COA documentation from Freedom Diagnostic, and direct support from our U.S.-based team.",
     "whatsapp": "WhatsApp Us Now",
     "tags": {
       "pricing": "Wholesale Pricing",
@@ -1720,18 +1887,66 @@
       "compliance": "Compliance",
       "glp1": "GLP-1 Research",
       "dropshipping": "Dropshipping"
+    },
+    "FAQ": {
+      "title": "Knowledge Hub FAQ",
+      "subtitle": "Questions about the topics we cover, how content is produced, and how to use these guides when evaluating a wholesale peptide supplier.",
+      "items": [
+        {
+          "q": "What topics does the 99 Purity Wholesale Knowledge Hub cover?",
+          "a": "Our research compendium covers wholesale peptide sourcing strategy, COA verification methodology, GLP-1 peptide procurement for licensed distributors, pricing tier frameworks, dropshipping and private label program structures, compliance considerations for compounding pharmacies, and supplier evaluation criteria. Every article is written from a B2B supply chain perspective — oriented toward professionals procuring bulk research-grade peptides, not general consumers.",
+          "link": "/products",
+          "linkText": "Browse Peptide Catalog"
+        },
+        {
+          "q": "Who writes and reviews the content on this blog?",
+          "a": "Content is produced by the 99 Purity Wholesale team, drawing on direct operational experience sourcing and supplying research-grade peptides in the U.S. market. Our retail division [99puritypeptides.com](https://99puritypeptides.com) provides day-to-day procurement context that informs the practical accuracy of our guides. All technical claims about purity, testing methodology, and COA standards are anchored to our documented processes with Freedom Diagnostic."
+        },
+        {
+          "q": "Are articles about peptide compliance relevant to my specific state?",
+          "a": "Our compliance-focused articles address federal-level considerations that apply across all 50 states, including research-use-only requirements, COA documentation standards, and labeling obligations for licensed professionals. State-specific regulatory nuances vary — we recommend consulting your jurisdiction's licensing authority for state-level requirements. Our [services page](/services) covers how wholesale accounts are structured within U.S. regulatory context.",
+          "link": "/services",
+          "linkText": "View Wholesale Services"
+        },
+        {
+          "q": "How do COA evaluation articles help me assess a peptide supplier?",
+          "a": "Our COA guides explain what a legitimate Certificate of Analysis from an independent U.S. lab contains — lot number traceability, HPLC chromatogram, LC-MS identity confirmation, and a purity percentage. Reading these alongside a supplier's actual documentation gives you a framework to identify red flags: generic documents, missing lot numbers, or in-house testing that removes third-party independence. See our [Quality page](/quality) for how we structure our own COA documentation with Freedom Diagnostic.",
+          "link": "/quality",
+          "linkText": "Our COA Standards"
+        },
+        {
+          "q": "How often is new content published on the Knowledge Hub?",
+          "a": "We publish when we have something substantive to contribute — not on a forced editorial schedule. Each article is designed to serve a specific informational need: a supplier evaluation question, a pricing tier decision, or a compliance reference point. Quality over frequency is the operating principle here, consistent with how we approach compound verification."
+        },
+        {
+          "q": "Do your articles include current peptide pricing data?",
+          "a": "We discuss pricing tier frameworks and wholesale volume thresholds in structural terms — not specific dollar figures, which shift based on volume, compound, and market conditions. For current wholesale pricing on any compound, contact our B2B team directly via [WhatsApp](https://wa.me/18437439007). Verified wholesale accounts receive a tiered price list upon account approval.",
+          "link": "https://wa.me/18437439007",
+          "linkText": "Request Current Pricing"
+        },
+        {
+          "q": "Can I cite or reference articles from this research compendium?",
+          "a": "Yes. You are welcome to cite our articles with attribution to 99 Purity Wholesale and a link to the original article URL. All content is written to provide accurate, traceable industry context. If you are writing for a trade publication or research context and need source clarification on any technical claim, contact us directly via [email](mailto:sales@99puritypeptides.com)."
+        },
+        {
+          "q": "How is this blog different from general peptide marketing content?",
+          "a": "Most peptide supplier content is written to convert browsers into customers. Our Knowledge Hub is written to answer the specific sourcing, compliance, and documentation questions that licensed professionals ask before entering a wholesale relationship. Articles cite verifiable testing methodology (HPLC, LC-MS), named third-party labs (Freedom Diagnostic), and documented program structures — not unsupported claims. We aim to be a citable reference, not just a product showcase.",
+          "link": "/quality",
+          "linkText": "Our Testing Standards"
+        }
+      ]
     }
   },
   "WholesaleApplication": {
     "metadata": {
-      "title": "Apply for a Wholesale Account | 99 Purity Wholesale — Bulk Research Peptides USA",
+      "title": "Apply for a Wholesale Account | Bulk Research Peptides",
       "description": "Apply for a verified wholesale peptide account with 99 Purity Wholesale. Access bulk pricing on 50+ research-grade peptides. U.S.-manufactured, COA-verified. For licensed professionals only."
     },
     "banner": "⚠️ All products are for laboratory research use only. Not for human consumption. For licensed professionals only.",
     "hero": {
       "badge": "B2B Wholesale Account",
       "title": "Apply for Wholesale Peptide Pricing",
-      "subtitle": "Join 200+ verified B2B accounts — compounding pharmacies, wellness clinics, licensed distributors, and research facilities — sourcing bulk research-grade peptides from America's most trusted domestic wholesale supplier."
+      "subtitle": "Access verified wholesale pricing — trusted by compounding pharmacies, wellness clinics, licensed distributors, and research facilities sourcing bulk research-grade peptides from a U.S. domestic supplier they can verify."
     },
     "benefitsSection": {
       "title": "What You Get as a Verified Wholesale Account",
@@ -1851,5 +2066,87 @@
       "whatsapp": "Apply via WhatsApp",
       "email": "Email Application"
     }
+  },
+  "Research": {
+    "readPaper": "Read Research Paper",
+    "backToProduct": "Back to Product Details",
+    "academicTitle": "99 Purity Clinical Research Library",
+    "specifications": "Technical Specifications",
+    "mechanism": "Mechanism & Signaling",
+    "benefits": "Primary Research Directions",
+    "publications": "Scientific Citations",
+    "disclaimer": "Academic Disclaimer",
+    "purityReport": "Lot HPLC Verification",
+    "cas": "CAS Registry Number",
+    "storage": "Optimal Storage",
+    "formula": "Molecular Formula",
+    "molarMass": "Molar Mass",
+    "purity": "Assay Purity",
+    "sequence": "Sequence",
+    "abstract": "Abstract & Overview",
+    "simulatedAssay": "HPLC Assay Chromatogram (Reference Standard)",
+    "retentionTime": "Retention Time",
+    "peakPurity": "Peak Purity",
+    "pdfReport": "PDF Report",
+    "faqs": [
+      {
+        "q": "What is the primary grade of these compounds?",
+        "a": "All compounds are analytical reference standards synthesized at a purity level of ≥99.0%, verified by HPLC and Mass Spectrometry."
+      },
+      {
+        "q": "Are these peptides intended for human consumption?",
+        "a": "No. Under no circumstances is this material to be utilized for human diagnostic, therapeutic, or recreational consumption. Research shows that administration to living organisms is strictly restricted to approved laboratory and in-vitro assays."
+      },
+      {
+        "q": "How does research show these peptides should be stored?",
+        "a": "Research shows that lyophilized peptides are stable at room temperature for short periods, but must be stored at -20°C for long-term stability. Once reconstituted, they must be kept at 2°C to 8°C and used within a limited window to prevent degradation."
+      },
+      {
+        "q": "What is reconstitution and what solvent should be used?",
+        "a": "Reconstitution is the process of dissolving the lyophilized powder. Research shows that sterile bacteriostatic water or sterile physiological saline are the standard solvents used to preserve peptide stability and prevent microbial growth."
+      },
+      {
+        "q": "What does the HPLC chromatogram represent?",
+        "a": "The HPLC (High-Performance Liquid Chromatography) chromatogram represents the molecular purity profile of the batch. Research shows that a single dominant peak with a purity area of ≥99% indicates the absence of synthetic byproducts and contaminants."
+      },
+      {
+        "q": "Can these research compounds be combined in a single study?",
+        "a": "Yes. Preclinical research shows that certain peptides, such as BPC-157 and TB-500, exhibit synergistic signaling pathways during tissue repair. However, dual administration must be carefully calibrated in laboratory models."
+      },
+      {
+        "q": "Why is molar mass and molecular formula variance important?",
+        "a": "Molecular formula and molar mass are fingerprinted identifiers. Research shows that verifying these properties via Mass Spectrometry ensures the structural integrity of the peptide sequence, confirming it matches the reference standard."
+      },
+      {
+        "q": "What documentation is provided for regulatory compliance?",
+        "a": "Every shipment is accompanied by a batch-specific Certificate of Analysis (COA) containing HPLC purity verification, Mass Spectrometry structural validation, and safety data sheets (SDS) for laboratory compliance."
+      }
+    ]
+  },
+  "Calculator": {
+    "title": "Peptide Reconstitution Calculator",
+    "subtitle": "Determine the exact volume, dosage concentration, and syringe units required for your research compounds.",
+    "vialSizeLabel": "Vial Quantity",
+    "vialSizeSub": "Select total peptide mass in the vial (mg)",
+    "waterVolumeLabel": "Diluent Volume",
+    "waterVolumeSub": "Select volume of Bacteriostatic Water to add (mL)",
+    "syringeSizeLabel": "Syringe Capacity",
+    "syringeSizeSub": "Select syringe size and units",
+    "targetDoseLabel": "Desired Dose",
+    "targetDoseSub": "Enter target dosage amount (mcg)",
+    "results": {
+      "title": "Calculated Specifications",
+      "mcgPerUnit": "mcg per unit",
+      "mcgPerUnitDesc": "Active compound concentration per syringe unit",
+      "unitsRequired": "Syringe Units",
+      "unitsRequiredDesc": "Exact units to draw on the plunger",
+      "dosesPerVial": "Doses per Vial",
+      "dosesPerVialDesc": "Estimated standard doses in one vial"
+    },
+    "procureCta": "Procure Ancillaries & Diluents",
+    "procureDesc": "Need Bacteriostatic Water, mixing syringes, or sterile vials for your lab? Send an inquiry directly to our wholesale support team.",
+    "procureMsg": "Hi, I am looking to order bacteriostatic water and laboratory supplies.",
+    "warningTitle": "Research Use Only",
+    "warningText": "This tool is provided solely for laboratory calculations and in vitro assay design by certified scientific professionals. All compounds are intended strictly for research purposes and must not be administered to humans or animals."
   }
 }

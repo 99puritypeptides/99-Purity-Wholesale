@@ -6,6 +6,7 @@ import { Link, useRouter } from '@/i18n/routing';
 import productsData from '@/data/products.json';
 import { useTranslations } from 'next-intl';
 import { getSearchEngine } from '@/lib/search';
+import { useNestedSmoothScroll } from '@/hooks/useNestedSmoothScroll';
 
 interface GlobalSearchProps {
   isOpen: boolean;
@@ -18,6 +19,8 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
   const [results, setResults] = useState<any[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+
+  const searchScrollRef = useNestedSmoothScroll<HTMLDivElement>({ enabled: isOpen });
 
   // Memoize search engine to avoid recreating on every render
   const searchEngine = useMemo(() => getSearchEngine(productsData), []);
@@ -108,7 +111,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
         </div>
 
         {/* Results / Suggestions Area */}
-        <div className="relative z-10 max-h-[55vh] overflow-y-auto no-scrollbar pb-6 px-4 md:px-6">
+        <div ref={searchScrollRef} className="relative z-10 max-h-[55vh] overflow-y-auto no-scrollbar pb-6 px-4 md:px-6" data-lenis-prevent>
           {query.length > 0 ? (
             results.length > 0 ? (
               <div className="py-4 space-y-1">

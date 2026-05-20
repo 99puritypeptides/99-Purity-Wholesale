@@ -1,9 +1,9 @@
 import { getAllPosts } from '@/utils/mdx';
 import { Link } from '@/i18n/routing';
-import { ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { FadeIn } from '@/components/shared/Motion';
 import GlobalCTA from '@/components/layout/GlobalCTA';
+import FaqSection from '@/components/shared/FaqSection';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
@@ -17,7 +17,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 function getPostCardImage(slug: string, index: number): string {
   const normSlug = slug.toLowerCase();
   if (normSlug.includes('glp') || normSlug.includes('weight')) {
-    return '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png';
+    return '/Product images/Semaglutide 10mg.jpg';
   }
   if (normSlug.includes('bpc') || normSlug.includes('recovery')) {
     return '/Product images/BPC-157 10mg.jpg';
@@ -29,7 +29,7 @@ function getPostCardImage(slug: string, index: number): string {
     return '/lab_quality_bg_1778896760027.png';
   }
   if (normSlug.includes('pharmacy') || normSlug.includes('spas')) {
-    return '/Product images/HAIR, SKIN, & NAILS BLEND.png';
+    return '/Product images/GLOW.jpg';
   }
   if (normSlug.includes('private-label')) {
     return '/Product images/GLOW.jpg';
@@ -65,47 +65,45 @@ export default async function BlogIndex({ params }: { params: { locale: string }
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-          <FadeIn>
+          <div>
             <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
               {t('badge')}
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+            <h1 className="reveal-text text-4xl sm:text-6xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6 break-words w-full">
               {t('title')}
             </h1>
             
-            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="reveal-text text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed mb-10">
               {t('subtitle')}
             </p>
             
             {/* Elegant Tag Filters Tray */}
-            <div className="flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
+            <div className="reveal-grid flex flex-wrap items-center justify-center gap-3 max-w-2xl mx-auto">
               {tags.map((tag) => (
                 <span 
                   key={tag} 
-                  className="bg-white border border-black/5 text-black/60 px-4 py-1.5 rounded-full font-dm-mono text-[10px] font-bold uppercase tracking-wider shadow-sm hover:border-black/15 transition-all"
+                  className="reveal-card bg-white border border-black/5 text-black/60 px-4 py-1.5 rounded-full font-dm-mono text-[10px] font-bold uppercase tracking-wider shadow-sm hover:border-black/15 transition-all"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-          </FadeIn>
+          </div>
         </div>
       </section>
 
       {/* Standalone Widescreen Clinical Laboratory Breakout Card */}
       <section className="bg-[#F8F8F6] py-8 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
-          <FadeIn>
-            <div className="relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
-              <img 
-                src="/lab_quality_bg_1778896760027.png"
-                alt="99 Purity Wholesale Analytical Research Compendium"
-                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
-            </div>
-          </FadeIn>
+          <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
+            <img 
+              src="/lab_quality_bg_1778896760027.png"
+              alt="99 Purity Wholesale Analytical Research Compendium"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
+          </div>
         </div>
       </section>
 
@@ -115,9 +113,9 @@ export default async function BlogIndex({ params }: { params: { locale: string }
         <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {posts.map((post, idx) => (
-              <FadeIn key={post.slug} delay={0.05 * idx} className="h-full">
+              <div key={post.slug} className="reveal-card h-full">
                 <Link href={`/blog/${post.slug}`} className="group block h-full">
                   <div className="bg-[#090C12] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-brand-accent/30 hover:bg-[#0E131C] transition-all duration-500 shadow-2xl flex flex-col h-full group">
                     
@@ -169,17 +167,27 @@ export default async function BlogIndex({ params }: { params: { locale: string }
 
                   </div>
                 </Link>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FaqSection
+        id="blog-faq"
+        eyebrow="(FAQ)"
+        title={t('FAQ.title')}
+        subtitle={t('FAQ.subtitle')}
+        items={t.raw('FAQ.items') as any[]}
+        theme="light"
+      />
+
       {/* Global B2B Call-To-Action Segment */}
-      <GlobalCTA 
-        badge={t('badge')}
-        title={t('title')}
-        subtitle="Browse our comprehensive research compendium, highlighting synthesis benchmarks, purity metrics, and clinical dossier reviews."
+      <GlobalCTA
+        badge={t('ctaBadge')}
+        title={t('ctaTitle')}
+        subtitle={t('ctaSubtitle')}
         primaryCtaText="WhatsApp Sales"
         primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20your%20verified%20batch%20quality%20and%20receiving%20the%20wholesale%20price%20list."
         secondaryCtaText="Email Laboratory"

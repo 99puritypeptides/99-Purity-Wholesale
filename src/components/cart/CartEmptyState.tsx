@@ -13,10 +13,10 @@ export default function CartEmptyState() {
     <div className="flex flex-col items-center justify-center py-20 px-10 text-center">
       {/* Premium Visual Indicator */}
       <div className="relative mb-10">
-        <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center text-white/20">
+        <div className="w-20 h-20 rounded-3xl bg-[#13a7b7]/5 border border-[#13a7b7]/10 flex items-center justify-center text-[#13a7b7]/40 shadow-[0_0_20px_rgba(19,167,183,0.05)]">
           <FlaskConical className="w-8 h-8" />
         </div>
-        <div className="absolute -inset-4 bg-white/5 blur-2xl rounded-full opacity-50 animate-pulse" />
+        <div className="absolute -inset-4 bg-[#13a7b7]/5 blur-2xl rounded-full opacity-50 animate-pulse" />
       </div>
 
       <h3 className="font-absans font-bold text-xl text-white uppercase tracking-tighter mb-4">

@@ -4,6 +4,7 @@ import React from 'react';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import { CartItem as CartItemType } from '@/types/cart';
 import { useCart } from '@/context/CartContext';
+import { Link } from '@/i18n/routing';
 
 interface CartItemProps {
   item: CartItemType;
@@ -26,13 +27,23 @@ export default function CartItem({ item }: CartItemProps) {
         <div className="flex items-start justify-between gap-4">
           <div className="flex flex-col gap-1.5">
             <h4 className="font-absans font-bold text-lg text-white leading-tight tracking-tight uppercase">
-              {item.productName}
+              <Link 
+                href={`/products/${item.category}/${item.productId}`}
+                onClick={() => dispatch({ type: 'CLOSE_DRAWER' })}
+                className="hover:text-[#13a7b7] transition-colors cursor-pointer"
+              >
+                {item.productName}
+              </Link>
             </h4>
             <div className="flex items-center gap-2">
-              <span className="text-[9px] font-bold text-white/30 uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded">
-                {item.category}
-              </span>
-              <span className="text-[9px] font-bold text-[#F1FF85]/60 uppercase tracking-widest">
+              <Link
+                href={`/products/${item.category}`}
+                onClick={() => dispatch({ type: 'CLOSE_DRAWER' })}
+                className="text-[9px] font-bold text-white/30 hover:text-white/60 uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded transition-colors"
+              >
+                {item.category.replace(/-/g, ' ')}
+              </Link>
+              <span className="text-[9px] font-bold text-[#13a7b7] uppercase tracking-widest bg-[#13a7b7]/10 border border-[#13a7b7]/20 px-2 py-0.5 rounded-md">
                 {item.spec}
               </span>
             </div>

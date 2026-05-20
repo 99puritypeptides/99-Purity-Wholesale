@@ -2,7 +2,11 @@ import { notFound } from 'next/navigation';
 import { MapPin, Mail, Zap, ShieldAlert, CheckCircle2, Package, ArrowRight, FlaskConical, ShieldCheck, Truck } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import locationsData from '@/data/locations.json';
+import productsData from '@/data/products.json';
 import { getTranslations } from 'next-intl/server';
+import FaqSection from '@/components/shared/FaqSection';
+import GlobalCTA from '@/components/layout/GlobalCTA';
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
 
 export async function generateStaticParams() {
   return locationsData.map((loc) => ({ slug: loc.slug }));
@@ -23,9 +27,12 @@ export async function generateMetadata({ params }: { params: { locale: string; s
 
 export default async function LocationTemplatePage({ params }: { params: { locale: string; slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'LocationDetail' });
+  const homeT = await getTranslations({ locale: params.locale, namespace: 'Index' });
   const location = locationsData.find((loc) => loc.slug === params.slug);
 
   if (!location) notFound();
+
+  const faqItems = homeT.raw('FAQ.items') as any[];
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -53,126 +60,139 @@ export default async function LocationTemplatePage({ params }: { params: { local
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-brand-bg text-brand-text">
+    <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-
-      {/* Research Use Banner */}
-      <div className="bg-amber-900/20 border-b border-amber-600/20 py-2 px-4 text-center">
-        <p className="text-amber-500/80 font-dm-mono text-xs uppercase tracking-widest">
-          {t('banner')}
-        </p>
-      </div>
+      {/* Grain overlay */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 border-b border-white/5 bg-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-brand-accent/8 via-black to-black"></div>
-        <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8 text-white/30 font-dm-mono text-xs uppercase tracking-widest">
-            <Link href="/" className="hover:text-brand-accent transition-colors">{t('home')}</Link>
-            <span>/</span>
-            <Link href="/locations" className="hover:text-brand-accent transition-colors">{t('locations')}</Link>
-            <span>/</span>
-            <span className="text-brand-accent">{location.city}, {location.state}</span>
-          </div>
+      <section className="relative overflow-hidden pt-44 pb-20 md:pt-56 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <FadeIn>
+            {/* Breadcrumb */}
+            <div className="flex flex-wrap items-center gap-2 mb-8 text-black/35 font-dm-mono text-[10px] uppercase tracking-[0.2em] font-bold">
+              <Link href="/" className="hover:text-[#13a7b7] transition-colors">{t('home')}</Link>
+              <span>/</span>
+              <Link href="/locations" className="hover:text-[#13a7b7] transition-colors">{t('locations')}</Link>
+              <span>/</span>
+              <span className="text-[#13a7b7]">{location.city}, {location.state}</span>
+            </div>
 
-          <div className="flex items-center gap-2 mb-4">
-            <MapPin className="w-5 h-5 text-brand-accent" />
-            <span className="text-brand-accent font-dm-mono text-sm uppercase tracking-wider">
-              {location.state} · {location.region} {t('regionSuffix')}
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-rajdhani font-bold mb-8 text-white tracking-tight max-w-5xl leading-tight">
-            {location.h1}
-          </h1>
-          <p className="text-xl text-gray-400 font-dm-sans leading-relaxed max-w-3xl">
-            {location.intro}
-          </p>
-
-          {/* Quick Trust Badges */}
-          <div className="flex flex-wrap gap-4 mt-10">
-            {['🇺🇸 U.S. Manufactured', '≥99% Purity', 'Batch COA Verified', 'B2B Only', '2–4 Day Delivery'].map((badge) => (
-              <span key={badge} className="bg-white/5 border border-white/10 text-white/60 px-4 py-1.5 rounded-full font-dm-mono text-xs uppercase tracking-wider">
-                {badge}
+            <div className="flex items-center gap-2 mb-4">
+              <MapPin className="w-4 h-4 text-[#13a7b7]" />
+              <span className="text-[#13a7b7] font-dm-mono text-[10px] font-bold uppercase tracking-widest">
+                {location.state} · {location.region} {t('regionSuffix')}
               </span>
-            ))}
-          </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-absans text-black uppercase tracking-tight max-w-5xl leading-tight mb-8">
+              {location.h1}
+            </h1>
+            <p className="text-base md:text-lg text-black/60 font-archia leading-relaxed max-w-3xl font-medium">
+              {location.intro}
+            </p>
+
+            {/* Quick Trust Badges */}
+            <div className="flex flex-wrap gap-2 mt-10">
+              {['🇺🇸 U.S. Manufactured', '≥99% Purity', 'Batch COA Verified', 'B2B Only', '2–4 Day Delivery'].map((badge) => (
+                <span key={badge} className="bg-white border border-black/5 text-black/60 px-4 py-2 rounded-full font-dm-mono text-[9px] uppercase tracking-wider font-semibold shadow-sm">
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Main Content Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-7xl">
+      <section className="py-20 relative z-10">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
             {/* Left: Rich Content */}
-            <div className="lg:col-span-8 space-y-12">
+            <div className="lg:col-span-8 space-y-16">
 
               {/* Body Content */}
-              <div className="space-y-6">
-                <h2 className="text-3xl font-rajdhani font-bold text-white">
+              <FadeIn className="space-y-6">
+                <h2 className="text-3xl font-absans font-bold text-black uppercase tracking-tight">
                   {t('contactTitle', { city: location.city })}
                 </h2>
-                <p className="text-gray-300 font-dm-sans leading-relaxed text-lg">{location.bodyP1}</p>
-                <p className="text-gray-400 font-dm-sans leading-relaxed">{location.bodyP2}</p>
-                <p className="text-gray-400 font-dm-sans leading-relaxed">{location.bodyP3}</p>
-              </div>
+                <div className="space-y-4 text-black/60 font-archia font-medium leading-relaxed text-sm md:text-base">
+                  <p className="text-black/85 font-semibold leading-relaxed">{location.bodyP1}</p>
+                  <p>{location.bodyP2}</p>
+                  <p>{location.bodyP3}</p>
+                </div>
+              </FadeIn>
 
               {/* Popular Products */}
-              <div>
-                <h2 className="text-3xl font-rajdhani font-bold text-white mb-4">
+              <FadeIn className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 shadow-sm">
+                <h2 className="text-2xl md:text-3xl font-absans font-bold text-black uppercase tracking-tight mb-4">
                   {t('topTitle', { city: location.city })}
                 </h2>
-                <p className="text-gray-400 font-dm-sans mb-8">
+                <p className="text-black/50 font-archia font-semibold text-sm mb-8">
                   {t('topDesc', { city: location.city })}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {location.popularProducts.map((product, idx) => (
-                    <div key={idx} className="bg-[#0e131b] border border-white/5 p-5 rounded-xl flex items-center justify-between group hover:border-brand-accent/30 transition-all">
-                      <div>
-                        <span className="font-rajdhani font-bold text-white text-lg">{product}</span>
-                        <div className="text-brand-accent font-dm-mono text-xs uppercase tracking-widest mt-1">{t('researchGrade')} · {t('puritySuffix')}</div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-brand-accent/50 group-hover:text-brand-accent transition-colors" />
-                      </div>
-                    </div>
-                  ))}
+                  {location.popularProducts.map((product, idx) => {
+                    const matchedProduct = productsData.find(
+                      (p) => p.name.toLowerCase() === product.toLowerCase()
+                    );
+                    const href = matchedProduct 
+                      ? `/products/${matchedProduct.category}/${matchedProduct.slug}`
+                      : '/products';
+
+                    return (
+                      <Link 
+                        key={idx} 
+                        href={href}
+                        className="bg-[#F8F8F6] border border-black/5 p-6 rounded-2xl flex items-center justify-between group hover:border-[#13a7b7]/30 hover:bg-white hover:shadow-md transition-all duration-300"
+                      >
+                        <div>
+                          <span className="font-absans font-bold text-black text-lg uppercase tracking-tight group-hover:text-[#13a7b7] transition-colors">{product}</span>
+                          <div className="text-[#13a7b7] font-dm-mono text-[9px] font-bold uppercase tracking-widest mt-1.5">{t('researchGrade')} · {t('puritySuffix')}</div>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-white border border-black/5 flex items-center justify-center group-hover:border-[#13a7b7]/30 transition-colors shadow-sm">
+                          <CheckCircle2 className="w-4 h-4 text-black/30 group-hover:text-[#13a7b7] transition-colors" />
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
-                <div className="mt-6">
-                  <Link href="/products" className="inline-flex items-center gap-2 text-brand-accent font-dm-mono text-sm uppercase tracking-wider hover:text-white transition-colors">
+                <div className="mt-8 pt-6 border-t border-black/5">
+                  <Link href="/products" className="inline-flex items-center gap-2 text-[#13a7b7] font-dm-mono text-xs uppercase tracking-widest hover:text-black transition-colors font-bold">
                     {t('viewCatalog')} <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-              </div>
+              </FadeIn>
 
               {/* Why Choose Us for This Location */}
-              <div className="bg-brand-accent/5 border border-brand-accent/20 rounded-2xl p-8">
-                <h2 className="text-2xl font-rajdhani font-bold text-white mb-6">
+              <FadeIn className="bg-[#13a7b7]/5 border border-[#13a7b7]/10 rounded-[2.5rem] p-8 md:p-10">
+                <h2 className="text-2xl font-absans font-bold text-black uppercase tracking-tight mb-6">
                   {t('whyTitle', { city: location.city })}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {location.whyUs.map((point, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 font-dm-sans text-sm">{point}</span>
+                      <CheckCircle2 className="w-5 h-5 text-[#13a7b7] mt-0.5 flex-shrink-0" />
+                      <span className="text-black/75 font-archia text-sm font-semibold leading-relaxed">{point}</span>
                     </div>
                   ))}
                 </div>
-              </div>
+              </FadeIn>
 
               {/* Shipping Info */}
-              <div className="bg-[#0e131b] border border-white/5 rounded-2xl p-8">
-                <div className="flex items-start gap-4 mb-6">
-                  <Truck className="w-8 h-8 text-brand-accent flex-shrink-0" />
+              <FadeIn className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 shadow-sm">
+                <div className="flex items-start gap-5 mb-8">
+                  <div className="w-12 h-12 rounded-2xl bg-[#F8F8F6] border border-black/5 flex items-center justify-center flex-shrink-0">
+                    <Truck className="w-6 h-6 text-black/55" />
+                  </div>
                   <div>
-                    <h3 className="text-2xl font-rajdhani font-bold text-white mb-2">
+                    <h3 className="text-2xl font-absans font-bold text-black uppercase tracking-tight mb-2">
                       {t('fastShippingTitle', { state: location.state })}
                     </h3>
-                    <p className="text-gray-400 font-dm-sans text-sm leading-relaxed">
+                    <p className="text-black/50 font-archia font-semibold text-sm leading-relaxed">
                       {t('fastShippingDesc', { city: location.city })}
                     </p>
                   </div>
@@ -183,20 +203,22 @@ export default async function LocationTemplatePage({ params }: { params: { local
                     { icon: ShieldCheck, label: t('shippingPoints.discreet'), sub: t('shippingPoints.discreetSub') },
                     { icon: CheckCircle2, label: t('shippingPoints.noCustoms'), sub: t('shippingPoints.noCustomsSub') },
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-white/5 rounded-xl p-4">
-                      <item.icon className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
+                    <div key={i} className="flex flex-col justify-between bg-[#F8F8F6] border border-black/5 rounded-2xl p-5 hover:border-[#13a7b7]/20 transition-all">
+                      <div className="w-9 h-9 rounded-xl bg-white border border-black/5 flex items-center justify-center mb-4">
+                        <item.icon className="w-4 h-4 text-black/55" />
+                      </div>
                       <div>
-                        <div className="text-white font-rajdhani font-bold text-sm">{item.label}</div>
-                        <div className="text-gray-500 font-dm-sans text-xs mt-1">{item.sub}</div>
+                        <div className="text-black font-absans font-bold text-sm uppercase tracking-wide">{item.label}</div>
+                        <div className="text-black/40 font-archia font-semibold text-[10px] leading-relaxed mt-1">{item.sub}</div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </FadeIn>
 
               {/* SEO Content: What We Supply */}
-              <div>
-                <h2 className="text-3xl font-rajdhani font-bold text-white mb-6">
+              <FadeIn className="space-y-6">
+                <h2 className="text-2xl md:text-3xl font-absans font-bold text-black uppercase tracking-tight">
                   {t('catTitle', { city: location.city })}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -208,79 +230,100 @@ export default async function LocationTemplatePage({ params }: { params: { local
                     { cat: 'Anti-Aging & Longevity', products: 'Epithalon, MOTS-c, NAD+, Thymalin, SS-31' },
                     { cat: 'Cosmetic & Aesthetic', products: 'GHK-Cu, Snap-8, AOD9604, 5-AMINO-1MQ' },
                   ].map((item, i) => (
-                    <div key={i} className="bg-[#0e131b] border border-white/5 rounded-xl p-5 hover:border-brand-accent/20 transition-all">
-                      <div className="flex items-start gap-3">
-                        <FlaskConical className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
+                    <div key={i} className="bg-white border border-black/5 rounded-2xl p-6 hover:border-[#13a7b7]/25 transition-all shadow-sm">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-xl bg-[#F8F8F6] border border-black/5 flex items-center justify-center flex-shrink-0">
+                          <FlaskConical className="w-5 h-5 text-black/55" />
+                        </div>
                         <div>
-                          <div className="text-white font-rajdhani font-bold text-sm mb-1">{item.cat}</div>
-                          <div className="text-gray-500 font-dm-sans text-xs">{item.products}</div>
+                          <div className="text-black font-absans font-bold text-sm uppercase tracking-wide mb-1.5">{item.cat}</div>
+                          <div className="text-black/45 font-archia font-medium text-[11px] leading-relaxed flex flex-wrap gap-x-1 gap-y-0.5">
+                            {item.products.split(', ').map((prodName, pIdx, arr) => {
+                              const matched = productsData.find(
+                                (p) => p.name.toLowerCase() === prodName.toLowerCase()
+                              );
+                              const href = matched 
+                                ? `/products/${matched.category}/${matched.slug}`
+                                : '/products';
+                              return (
+                                <span key={prodName} className="inline-flex items-center">
+                                  <Link href={href} className="hover:text-[#13a7b7] hover:underline transition-colors font-semibold">
+                                    {prodName}
+                                  </Link>
+                                  {pIdx < arr.length - 1 && <span className="text-black/30 ml-0.5">,</span>}
+                                </span>
+                              );
+                            })}
+                          </div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
+              </FadeIn>
 
               {/* Compliance Note */}
-              <div className="bg-yellow-900/10 border border-yellow-700/30 rounded-xl p-6 flex gap-4">
-                <ShieldAlert className="w-8 h-8 text-yellow-500 flex-shrink-0 mt-0.5" />
+              <FadeIn className="bg-amber-500/5 border border-amber-500/10 rounded-[2rem] p-6 flex gap-4">
+                <ShieldAlert className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-rajdhani font-bold text-yellow-500 text-lg mb-2">{t('complianceTitle')}</h4>
-                  <p className="text-sm text-yellow-500/80 font-dm-sans leading-relaxed">
+                  <h4 className="font-absans font-bold text-amber-700 text-sm uppercase tracking-wider mb-1.5">{t('complianceTitle')}</h4>
+                  <p className="text-xs text-amber-950/60 font-archia font-semibold leading-relaxed">
                     {t('complianceDesc', { city: location.city, state: location.state })}
                   </p>
                 </div>
-              </div>
+              </FadeIn>
             </div>
 
             {/* Right: Sticky Sidebar CTAs */}
             <div className="lg:col-span-4 relative">
-              <div className="sticky top-24 space-y-6">
+              <div className="sticky top-28 md:top-36 space-y-6">
 
                 {/* Primary CTA Card */}
-                <div className="bg-[#0B0F15] border border-white/10 rounded-2xl p-6 shadow-2xl">
-                  <h3 className="text-2xl font-rajdhani font-bold text-white mb-2">
-                    {t('trendingTitle', { city: location.city })}
+                <div className="bg-[#0D0E10] text-white border border-white/5 rounded-[2.5rem] p-6 md:p-8 shadow-2xl relative overflow-hidden group">
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                  
+                  <h3 className="text-xl md:text-2xl font-absans font-bold text-white uppercase tracking-tight mb-2">
+                    {t('contactTitle', { city: location.city })}
                   </h3>
-                  <p className="text-gray-400 font-dm-sans mb-6 text-sm leading-relaxed">
+                  <p className="text-white/40 font-archia font-medium text-xs leading-relaxed mb-8">
                     {t('contactDesc', { state: location.state })}
                   </p>
 
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     <a
                       href={`https://wa.me/18437439007?text=${encodeURIComponent(t('whatsappMsg', { city: location.city, state: location.state }))}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-brand-accent hover:bg-[#3EABC0] text-[#090C11] font-bold py-4 rounded-xl transition-all font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(79,195,208,0.3)] hover:shadow-[0_0_25px_rgba(79,195,208,0.5)]"
+                      className="w-full bg-white hover:bg-white/90 text-black font-bold py-4 rounded-xl transition-all font-absans text-[11px] uppercase tracking-widest flex items-center justify-center gap-2.5 shadow-lg"
                     >
-                      <Zap className="w-5 h-5" /> {t('whatsappCta')}
+                      <Zap className="w-4 h-4 fill-current animate-pulse" /> {t('whatsappCta')}
                     </a>
 
-                    <div className="relative flex items-center py-1">
+                    <div className="relative flex items-center py-2">
                       <div className="flex-grow border-t border-white/10"></div>
-                      <span className="flex-shrink-0 mx-4 text-gray-500 font-dm-mono text-xs uppercase">{t('or')}</span>
+                      <span className="flex-shrink-0 mx-4 text-white/30 font-dm-mono text-[9px] uppercase tracking-widest font-bold">{t('or')}</span>
                       <div className="flex-grow border-t border-white/10"></div>
                     </div>
 
                     <a
                       href={`mailto:sales@99puritypeptides.com?subject=${encodeURIComponent(t('emailSubject', { city: location.city, state: location.state }))}`}
-                      className="w-full bg-[#0e131b] border border-white/20 hover:border-brand-accent hover:bg-white/5 text-white font-bold py-4 rounded-xl transition-all font-rajdhani text-lg uppercase tracking-wider flex items-center justify-center gap-3"
+                      className="w-full bg-white/5 border border-white/10 hover:border-white hover:bg-white/10 text-white font-bold py-4 rounded-xl transition-all font-absans text-[11px] uppercase tracking-widest flex items-center justify-center gap-2.5"
                     >
-                      <Mail className="w-5 h-5" /> {t('emailCta')}
+                      <Mail className="w-4 h-4" /> {t('emailCta')}
                     </a>
                   </div>
 
-                  <div className="mt-6 pt-5 border-t border-white/5 text-center">
-                    <Link href="/products" className="text-brand-accent hover:text-white font-dm-mono text-sm uppercase tracking-wider transition-colors inline-flex items-center gap-2">
-                      {t('viewCatalog')} <ArrowRight className="w-4 h-4" />
+                  <div className="mt-8 pt-6 border-t border-white/5 text-center">
+                    <Link href="/products" className="text-white hover:text-white/70 font-dm-mono text-[10px] uppercase tracking-widest transition-colors inline-flex items-center gap-2 font-bold">
+                      {t('viewCatalog')} <ArrowRight className="w-3.5 h-3.5 text-white/50 group-hover:text-white transition-colors" />
                     </Link>
                   </div>
                 </div>
 
                 {/* Quick Info Card */}
-                <div className="bg-[#0e131b] border border-white/5 rounded-2xl p-6">
-                  <h4 className="text-lg font-rajdhani font-bold text-white mb-4">{t('accountDetails')}</h4>
-                  <div className="space-y-3">
+                <div className="bg-white border border-black/5 rounded-[2.5rem] p-6 md:p-8 shadow-sm">
+                  <h4 className="text-base font-absans font-bold text-black uppercase tracking-wider mb-6">{t('accountDetails')}</h4>
+                  <div className="space-y-4">
                     {[
                       { label: t('details.moq'), value: t('details.moqVal') },
                       { label: t('details.purity'), value: t('details.purityVal') },
@@ -289,22 +332,22 @@ export default async function LocationTemplatePage({ params }: { params: { local
                       { label: t('details.shipping'), value: t('details.shippingVal') },
                       { label: t('details.buyers'), value: t('details.buyersVal') },
                     ].map((item) => (
-                      <div key={item.label} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0">
-                        <span className="text-gray-500 font-dm-mono text-xs uppercase tracking-wider">{item.label}</span>
-                        <span className="text-white font-dm-sans text-sm text-right">{item.value}</span>
+                      <div key={item.label} className="flex items-center justify-between py-2 border-b border-black/5 last:border-0">
+                        <span className="text-black/40 font-dm-mono text-[9px] uppercase tracking-widest font-bold">{item.label}</span>
+                        <span className="text-black/85 font-archia font-bold text-xs text-right leading-tight">{item.value}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Apply CTA */}
-                <div className="bg-brand-accent/5 border border-brand-accent/20 rounded-2xl p-6 text-center">
-                  <p className="text-white/60 font-dm-sans text-sm mb-4">{t('applyMsg')}</p>
+                <div className="bg-[#13a7b7]/5 border border-[#13a7b7]/10 rounded-[2.5rem] p-6 text-center">
+                  <p className="text-black/50 font-archia font-semibold text-xs leading-relaxed mb-5">{t('applyMsg')}</p>
                   <Link
                     href="/wholesale-application"
-                    className="inline-flex items-center gap-2 bg-brand-accent/10 border border-brand-accent/30 text-brand-accent hover:bg-brand-accent/20 font-bold py-3 px-6 rounded-xl transition-all font-rajdhani uppercase tracking-wider text-sm"
+                    className="w-full inline-flex items-center justify-center gap-2 bg-[#13a7b7]/10 border border-[#13a7b7]/30 text-[#13a7b7] hover:bg-[#13a7b7]/25 font-bold py-3.5 px-6 rounded-xl transition-all font-absans uppercase tracking-widest text-[10px]"
                   >
-                    {t('applyCta')} <ArrowRight className="w-4 h-4" />
+                    {t('applyCta')} <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               </div>
@@ -315,31 +358,55 @@ export default async function LocationTemplatePage({ params }: { params: { local
       </section>
 
       {/* Related Locations */}
-      <section className="py-20 bg-[#0B0F15] border-t border-white/5">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-3xl font-rajdhani font-bold text-white mb-8">{t('otherRegions')}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {locationsData
-              .filter((loc) => loc.slug !== params.slug)
-              .slice(0, 4)
-              .map((loc) => (
-                <Link key={loc.slug} href={`/locations/${loc.slug}`} className="group block">
-                  <div className="bg-[#0e131b] border border-white/5 rounded-xl p-5 hover:border-brand-accent/30 transition-all">
-                    <div className="flex items-center gap-2 mb-2">
-                      <MapPin className="w-4 h-4 text-brand-accent" />
-                      <span className="text-brand-accent font-dm-mono text-xs uppercase">{loc.state}</span>
+      <section className="py-24 bg-white border-t border-black/5">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <FadeIn>
+            <h2 className="text-3xl font-absans font-bold text-black uppercase tracking-tight mb-8">{t('otherRegions')}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {locationsData
+                .filter((loc) => loc.slug !== params.slug)
+                .slice(0, 4)
+                .map((loc) => (
+                  <Link key={loc.slug} href={`/locations/${loc.slug}`} className="group block">
+                    <div className="bg-[#F8F8F6] border border-black/5 rounded-2xl p-6 hover:border-[#13a7b7]/30 hover:bg-white hover:shadow-md transition-all duration-300">
+                      <div className="flex items-center gap-2 mb-3">
+                        <MapPin className="w-3.5 h-3.5 text-[#13a7b7]" />
+                        <span className="text-[#13a7b7] font-dm-mono text-[9px] font-bold uppercase tracking-wider">{loc.state}</span>
+                      </div>
+                      <div className="text-black font-absans font-bold text-xl group-hover:text-[#13a7b7] transition-colors uppercase tracking-tight mb-4">{loc.city}</div>
+                      <div className="text-black/40 font-archia font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1">
+                        {t('viewHub')} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
-                    <div className="text-white font-rajdhani font-bold text-lg group-hover:text-brand-accent transition-colors">{loc.city}</div>
-                    <div className="text-gray-500 font-dm-sans text-xs mt-1 flex items-center gap-1">
-                      {t('viewHub')} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-          </div>
+                  </Link>
+                ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-    </div>
+      {/* FAQ Segment */}
+      {faqItems && faqItems.length > 0 && (
+        <FaqSection 
+          title={homeT('FAQ.title')}
+          subtitle={homeT('FAQ.subtitle')}
+          items={faqItems}
+          eyebrow="(FAQ)"
+          theme="light"
+        />
+      )}
+
+      {/* Global CTA */}
+      <GlobalCTA 
+        badge={homeT('FinalCta.badge')}
+        title={homeT('FinalCta.title')}
+        subtitle={homeT('FinalCta.subtitle')}
+        primaryCtaText={homeT('FinalCta.whatsapp')}
+        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(homeT('FinalCta.msg'))}`}
+        secondaryCtaText={homeT('FinalCta.email')}
+        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+      />
+
+    </main>
   );
 }

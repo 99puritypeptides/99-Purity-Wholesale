@@ -16,15 +16,15 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
 
   if (normSlug.includes('glp') || normSlug.includes('weight') || normSlug.includes('tirzepatide') || normSlug.includes('semaglutide')) {
     compounds.push(
-      { name: 'GLP-3 (GLP-1/GIP/GCG)', img: '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png', desc: 'Triple agonist peptide formulation.' },
+      { name: 'Tirzepatide 30mg', img: '/Product images/Tirzepatide 30mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
       { name: 'Tirzepatide 10mg', img: '/Product images/Tirzepatide 10mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
       { name: 'Semaglutide 10mg', img: '/Product images/Semaglutide 10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' }
     );
     images.push(
-      '/Product images/GLP- 1 10mg.png',
-      '/Product images/GLP-3 (GLP-1GIPGCG) 20mg.png',
+      '/Product images/Semaglutide 20mg.jpg',
+      '/Product images/Tirzepatide 30mg.jpg',
       '/lab_quality_bg_1778896760027.png',
-      '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 5 kit.png'
+      '/Product images/Semaglutide 10mg.jpg'
     );
   } else if (normSlug.includes('bpc') || normSlug.includes('tb500') || normSlug.includes('recovery')) {
     compounds.push(
@@ -33,7 +33,7 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
       { name: 'TB-500 10mg', img: '/Product images/TB-500 10mg.jpg', desc: 'Synthetic fraction of thymosin beta-4.' }
     );
     images.push(
-      '/Product images/BPC-157 20mg.jpg',
+      '/Product images/BPC-157 10mg.jpg',
       '/Product images/BPC-157.TB-500 5.5mg.jpg',
       '/images/hero-lab.png',
       '/Product images/BPC-157 5mg.jpg'
@@ -41,30 +41,30 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
   } else if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
     compounds.push(
       { name: 'NAD+ 500mg', img: '/Product images/NAD+ 500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' },
-      { name: '5-Amino-1MQ 50mg', img: '/Product images/5-Amino-1MQ 50mg.png', desc: 'Targeted NNMT cellular enzyme inhibitor.' },
+      { name: '5-Amino-1MQ 10mg', img: '/Product images/5-Amino-1MQ 10mg.jpg', desc: 'Targeted NNMT cellular enzyme inhibitor.' },
       { name: 'Epithalon 10mg', img: '/Product images/Epithalon 10mg.jpg', desc: 'Telomerase activator research peptide.' }
     );
     images.push(
-      '/Product images/NAD 1000mg.png',
+      '/Product images/NAD 1000mg.jpg',
       '/Product images/5-Amino-1MQ 10mg.jpg',
       '/images/hero-lab-bg.png',
-      '/Product images/5-Amino-1MQ 50mg.png'
+      '/Product images/Epithalon 10mg.jpg'
     );
   } else if (normSlug.includes('private-label') || normSlug.includes('start-peptide') || normSlug.includes('launch') || normSlug.includes('business')) {
     compounds.push(
-      { name: 'GLP-3 Kit (Custom branded)', img: '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png', desc: 'Private label kit customization.' },
-      { name: 'Hair, Skin & Nail Blend', img: '/Product images/HAIR, SKIN, & NAILS BLEND.png', desc: 'GHK-Cu dynamic skin formulation.' },
+      { name: 'Custom Peptide Kit', img: '/Product images/KLOW.jpg', desc: 'Private label kit customization.' },
+      { name: 'Hair, Skin & Nail Blend', img: '/Product images/GLOW.jpg', desc: 'GHK-Cu dynamic skin formulation.' },
       { name: 'BPC-157 10mg', img: '/Product images/BPC-157 10mg.jpg', desc: 'High-demand clinic starter stock.' }
     );
     images.push(
       '/Product images/GLOW.jpg',
-      '/Product images/ENERGY LIPO BLEND.png',
+      '/Product images/mic-lipo-c+b12-10mg.webp',
       '/lab_quality_bg_1778896760027.png',
-      '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 5 kit.png'
+      '/Product images/Semaglutide 10mg.jpg'
     );
   } else {
     compounds.push(
-      { name: 'GLP-3 (GLP-1/GIP/GCG)', img: '/Product images/GLP-3 (GLP-1GIPGCG) 10mg 10 kit.png', desc: 'Triple agonist peptide formulation.' },
+      { name: 'Semaglutide 10mg', img: '/Product images/Semaglutide 10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' },
       { name: 'BPC-157 10mg', img: '/Product images/BPC-157 10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
       { name: 'NAD+ 500mg', img: '/Product images/NAD+ 500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' }
     );

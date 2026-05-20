@@ -7,6 +7,7 @@ import { Link, useRouter, usePathname } from '@/i18n/routing';
 import { Menu, X, Search, Globe, ChevronDown, Check, Command, FlaskConical, ShieldCheck, Newspaper, Info, Phone, LayoutGrid, ArrowRight } from 'lucide-react';
 import GlobalSearch from '@/components/search/GlobalSearch';
 import CartIcon from '@/components/cart/CartIcon';
+import { useNestedSmoothScroll } from '@/hooks/useNestedSmoothScroll';
 
 export default function Header() {
   const t = useTranslations('Layout');
@@ -16,6 +17,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const mobileMenuScrollRef = useNestedSmoothScroll<HTMLDivElement>({ enabled: isMobileMenuOpen });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +58,7 @@ export default function Header() {
   return (
     <>
       <header 
-        className="fixed top-0 left-0 w-full z-[60] px-3 md:px-6 py-4 md:py-5"
+        className="fixed top-0 left-0 w-full z-[60] px-3 md:px-6 py-4 md:py-5 print:hidden"
       >
         <div className="max-w-[1650px] mx-auto bg-white rounded-full shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-black/5 p-1.5 md:p-2 flex justify-between items-center min-h-[60px] md:min-h-[78px]">
           {/* Logo Section */}
@@ -152,6 +155,14 @@ export default function Header() {
               className="text-[11px] font-bold text-black/70 hover:text-black transition-colors relative group py-1 uppercase tracking-widest whitespace-nowrap"
             >
               {t('nav.quality')}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+
+            <Link 
+              href="/calculator" 
+              className="text-[11px] font-bold text-black/70 hover:text-black transition-colors relative group py-1 uppercase tracking-widest whitespace-nowrap"
+            >
+              {t('nav.calculator')}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
@@ -275,7 +286,7 @@ export default function Header() {
       <div className={`fixed inset-0 z-[55] bg-white transition-all duration-700 ease-in-out ${
         isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
       }`}>
-        <div className="h-full flex flex-col pt-24 pb-10 px-6 md:px-12 overflow-y-auto bg-[radial-gradient(circle_at_top_right,rgba(0,0,0,0.02),transparent_40%)]">
+        <div ref={mobileMenuScrollRef} className="h-full flex flex-col pt-24 pb-10 px-6 md:px-12 overflow-y-auto bg-[radial-gradient(circle_at_top_right,rgba(0,0,0,0.02),transparent_40%)]" data-lenis-prevent>
           {/* Section 1: Research Products */}
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-6 px-2">
@@ -331,6 +342,7 @@ export default function Header() {
             <div className="flex flex-col gap-1">
               {[
                 { href: '/quality', label: t('nav.quality'), icon: ShieldCheck, desc: 'Purity & Testing Standards' },
+                { href: '/calculator', label: t('nav.calculator'), icon: FlaskConical, desc: 'Reconstitution Utility' },
                 { href: '/services', label: t('nav.services'), icon: LayoutGrid, desc: 'Wholesale Solutions' },
                 { href: '/blog', label: t('nav.blog'), icon: Newspaper, desc: 'Research Updates & Insights' },
                 { href: '/about', label: t('nav.about'), icon: Info, desc: 'Our Laboratory Mission' }

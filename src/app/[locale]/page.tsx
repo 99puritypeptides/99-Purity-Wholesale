@@ -11,7 +11,7 @@ import FaqSection from '@/components/shared/FaqSection';
 const cardBase = 'group relative overflow-hidden rounded-lg border border-[#16202f]/10 bg-white/[0.82] p-7 shadow-[0_22px_70px_rgba(19,32,52,0.09)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-[#13a7b7]/35 hover:shadow-[0_30px_90px_rgba(19,32,52,0.14)]';
 const eyebrow = 'font-absans text-[10px] font-bold uppercase tracking-[0.4em] opacity-40';
 const sectionPad = 'py-32 md:py-48';
-const heading = 'font-absans text-4xl font-bold leading-none tracking-tighter uppercase md:text-6xl lg:text-7xl';
+const heading = 'font-absans text-3xl sm:text-4xl font-bold leading-[1.1] sm:leading-none tracking-tighter uppercase md:text-6xl lg:text-7xl';
 
 type BestSellerItem = { name: string; spec: string; desc: string };
 type TierItem = { name: string; label: string; kits: string; description: string };
@@ -73,7 +73,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <h1 className="font-absans text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter uppercase mb-8 lg:mb-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+            <h1 className="reveal-text font-absans text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tighter uppercase mb-8 lg:mb-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
               {t('Hero.title')}
             </h1>
           </FadeIn>
@@ -111,14 +111,14 @@ export default async function HomePage({ params }: { params: { locale: string } 
         {/* Minimal Institutional Bar (4 Points) */}
         <FadeIn direction="none" delay={0.8} className="relative lg:absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-3xl border-t border-white/5 mt-16 lg:mt-0">
           <div className="max-w-[1800px] mx-auto px-6 lg:px-10 py-8 lg:py-10">
-            <StaggerContainer staggerDelay={0.15} className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20">
+            <div className="reveal-grid grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20">
                {[
                  { label: 'Verified Purity', val: '99%+', icon: ShieldCheck },
                  { label: 'Batch Tested', val: 'HPLC/MS', icon: BarChart3 },
-                 { label: 'B2B Partners', val: '200+', icon: Building2 },
+                 { label: 'Retail & B2B', val: 'US-Made', icon: Building2 },
                  { label: 'Domestic Source', val: 'USA Origin', icon: Globe }
                ].map((stat) => (
-                 <StaggerItem key={stat.label} className="group flex items-center gap-4 lg:gap-5">
+                 <div key={stat.label} className="reveal-card group flex items-center gap-4 lg:gap-5">
                     <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-white group-hover:text-black transition-all duration-500">
                        <stat.icon className="w-4 h-4 lg:w-5 lg:h-5" />
                     </div>
@@ -126,17 +126,26 @@ export default async function HomePage({ params }: { params: { locale: string } 
                        <div className="text-lg lg:text-xl font-absans font-bold text-white tracking-tighter mb-0.5">{stat.val}</div>
                        <div className="text-[7px] lg:text-[8px] font-bold uppercase tracking-[0.3em] text-white/20 group-hover:text-white/40 transition-colors">{stat.label}</div>
                     </div>
-                 </StaggerItem>
+                 </div>
                ))}
-            </StaggerContainer>
+            </div>
           </div>
         </FadeIn>
       </section>
 
+      {/* Visual divider line drawing */}
+      <div className="w-full bg-white relative z-20 py-2">
+        <div className="container mx-auto px-6 lg:px-12">
+          <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+            <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+          </svg>
+        </div>
+      </div>
+
       {/* --- SECTION 2: INSTITUTIONAL GRADE --- */}
       <section className="relative py-32 md:py-48 px-6 bg-white overflow-hidden">
         {/* Visual Anchor Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="reveal-parallax absolute inset-0 z-0">
           <Image
             src="/section2-bg.png"
             alt="Laboratory Precision"
@@ -156,7 +165,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     {t('Differentiators.institutionalStandard')}
                   </span>
                </div>
-               <h2 className="font-absans text-4xl md:text-7xl lg:text-8xl font-bold leading-[0.85] tracking-tighter uppercase mb-12">
+               <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.1] sm:leading-[0.85] tracking-tighter uppercase mb-12">
                  {t('Differentiators.lab.title').split('Laboratory')[0]}
                  <span className="text-black/10 italic block">{t('Differentiators.laboratory')}</span>
                </h2>
@@ -165,13 +174,13 @@ export default async function HomePage({ params }: { params: { locale: string } 
                </p>
             </FadeIn>
 
-            <StaggerContainer className="lg:col-span-5">
+            <div className="lg:col-span-5 reveal-grid">
                <div className="grid grid-cols-1 gap-12">
                  {[
                    { title: t('Differentiators.coa.title'), desc: t('Differentiators.coa.description'), num: '01' },
                    { title: t('Differentiators.support.title'), desc: t('Differentiators.support.description'), num: '02' }
                  ].map((item, i) => (
-                   <StaggerItem key={i} className="group p-10 bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.02)] border border-black/5 transition-all hover:shadow-[0_40px_80px_rgba(0,0,0,0.05)] hover:-translate-y-1">
+                   <div key={i} className="reveal-card group p-10 bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.02)] border border-black/5 transition-all hover:shadow-[0_40px_80px_rgba(0,0,0,0.05)] hover:-translate-y-1">
                      <div className="flex justify-between items-start mb-8">
                         <span className="text-[10px] font-bold text-black/20 font-dm-mono">{item.num}</span>
                         <div className="w-8 h-8 rounded-full border border-black/10 flex items-center justify-center text-black/20 group-hover:text-black group-hover:border-black transition-colors">
@@ -180,15 +189,23 @@ export default async function HomePage({ params }: { params: { locale: string } 
                      </div>
                      <h3 className="font-absans text-3xl font-bold uppercase tracking-tight mb-4">{item.title}</h3>
                      <p className="font-archia text-black/50 leading-relaxed">{item.desc}</p>
-                   </StaggerItem>
+                   </div>
                  ))}
                </div>
-            </StaggerContainer>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="relative z-10 overflow-hidden bg-[#090C11] py-32 md:py-48">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -198,7 +215,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                 <div className="w-10 h-px bg-white/20" />
                 <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{t('Categories.badge')}</span>
               </div>
-              <h2 className="font-absans text-5xl md:text-7xl font-bold text-white leading-none tracking-tighter uppercase">
+              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-7xl font-bold text-white leading-[1.1] sm:leading-none tracking-tighter uppercase">
                 {t('Categories.title').split('Library')[0]}
                 <span className="text-white/20 italic font-medium lowercase ml-4">Library</span>
               </h2>
@@ -213,7 +230,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </FadeIn>
           </div>
 
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="reveal-grid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               { id: 'metabolic-research', icon: Zap },
               { id: 'cognitive-function', icon: Microscope },
@@ -224,7 +241,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               { id: 'aminos', icon: Globe },
               { id: 'essentials', icon: Truck },
             ].map((cat, idx) => (
-              <StaggerItem key={cat.id}>
+              <div key={cat.id} className="reveal-card">
                 <Link 
                   href={`/products#${cat.id}`} 
                   className="group relative h-[400px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20"
@@ -245,10 +262,10 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     </div>
                   </div>
                 </Link>
-              </StaggerItem>
+              </div>
             ))}
 
-            <StaggerItem>
+            <div className="reveal-card">
               <Link href="/products" className="group relative h-[400px] w-full block rounded-[2.5rem] bg-white p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2">
                 <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                 <div className="flex h-full flex-col items-start justify-between relative z-10">
@@ -265,12 +282,20 @@ export default async function HomePage({ params }: { params: { locale: string } 
                   </div>
                 </div>
               </Link>
-            </StaggerItem>
-          </StaggerContainer>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="relative z-10 bg-[#F2F2F2] py-32 md:py-48 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         {/* Subtle Light Grain Texture */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
@@ -280,7 +305,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <div className="w-10 h-px bg-black/10" />
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{t('BestSellers.badge')}</span>
             </div>
-            <h2 className="font-absans text-4xl md:text-6xl font-bold text-black leading-[0.9] tracking-tighter uppercase">
+            <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-[1.1] sm:leading-[0.9] tracking-tighter uppercase">
               {t('BestSellers.title').split('Compounds')[0]}
               <span className="text-black/20 italic font-medium lowercase block md:inline md:ml-4">Compounds</span>
             </h2>
@@ -289,28 +314,28 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </p>
           </FadeIn>
 
-          <StaggerContainer className="grid grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-4">
+          <div className="reveal-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {(t.raw('BestSellers.items') as BestSellerItem[]).slice(0, 8).map((p, i) => {
               const slug = bestSellerSlugs[i];
               const cat = bestSellerCats[i];
 
               const bestSellerImages: Record<string, string> = {
                 'semaglutide': '/Product images/Semaglutide 10mg.jpg',
-                'tirzepatide': '/Product images/Tirzepatide 10mg.jpg',
-                'retatrutide': '/Product images/Retatrutide 10mg.jpg',
-                'bpc-157': '/Product images/BPC-157 10mg.jpg',
-                'tb-500': '/Product images/TB-500 10mg.jpg',
-                'ipamorelin': '/Product images/Ipamorelin 10mg.jpg',
-                'cjc-1295-no-dac': '/Product images/CJC-1295.Ipamorelin 10.10mg.jpg',
-                'nad': '/Product images/NAD+ 500mg.jpg',
+                'tirzepatide': '/Product images/tirzepatide-5mg.webp',
+                'retatrutide': '/Product images/retatrutide-5mg.webp',
+                'bpc-157': '/Product images/BPC-157 5mg.jpg',
+                'tb-500': '/Product images/TB-500 5mg - 3ml.jpg',
+                'ipamorelin': '/Product images/Ipamorelin 5mg.jpg',
+                'cjc-1295-ipam': '/Product images/CJC-1295.Ipamorelin 10.10mg.jpg',
+                'nad': '/Product images/NAD 100mg.jpg',
                 'epithalon': '/Product images/Epithalon 10mg.jpg'
               };
               const productImg = bestSellerImages[slug] || '/Product images/Semaglutide 10mg.jpg';
 
               return (
-                <StaggerItem 
+                <div 
                   key={slug} 
-                  className="group relative flex flex-col h-[420px] sm:h-[530px] rounded-[1.5rem] sm:rounded-[2rem] bg-white border border-black/[0.03] p-4 sm:p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
+                  className="reveal-card group relative flex flex-col h-[480px] rounded-[1.5rem] bg-white border border-black/[0.03] p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
                   <Link 
                     href={`/products/${cat}/${slug}`} 
@@ -318,7 +343,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                   >
                     <div className="flex-grow flex flex-col">
                       {/* Beautiful Seamless Floating Product Image */}
-                      <div className="relative w-full h-36 sm:h-48 flex items-center justify-center mb-3 sm:mb-4 overflow-hidden">
+                      <div className="relative w-full h-40 flex items-center justify-center mb-4 overflow-hidden">
                         <img 
                           src={productImg} 
                           alt={p.name} 
@@ -326,37 +351,37 @@ export default async function HomePage({ params }: { params: { locale: string } 
                         />
                       </div>
 
-                      <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                        <span className="px-2 sm:px-3 py-1 rounded-full bg-black text-white text-[7px] sm:text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="px-3 py-1 rounded-full bg-black text-white text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
                         <div className="h-px flex-grow bg-black/5" />
                       </div>
                       
-                      <h3 className="font-absans text-sm sm:text-2xl font-bold text-black tracking-tight mb-2 group-hover:text-black/60 transition-colors uppercase line-clamp-1 sm:line-clamp-none">{p.name}</h3>
-                      <p className="font-archia text-[9px] sm:text-xs leading-relaxed text-black/40 line-clamp-2 sm:line-clamp-3 mb-2 sm:mb-3">{p.desc}</p>
+                      <h3 className="font-absans text-lg font-bold text-black tracking-tight mb-2 group-hover:text-black/60 transition-colors uppercase line-clamp-1">{p.name}</h3>
+                      <p className="font-archia text-xs leading-relaxed text-black/40 line-clamp-2 mb-3">{p.desc}</p>
                       
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6 pt-3 sm:pt-4 border-t border-black/5 mt-auto">
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-black/5 mt-auto">
                         <div>
-                          <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-widest text-black/30 mb-0.5 sm:mb-1">{t('BestSellers.technicalGrade')}</div>
-                          <div className="font-archia text-[9px] sm:text-xs font-bold text-black">{p.spec}</div>
+                          <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-1">{t('BestSellers.technicalGrade')}</div>
+                          <div className="font-archia text-xs font-bold text-black">{p.spec}</div>
                         </div>
-                        <div className="text-left sm:text-right">
-                          <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-widest text-black/30 mb-0.5 sm:mb-1">{t('BestSellers.verifiedPurity')}</div>
-                          <div className="font-archia text-[9px] sm:text-xs font-bold text-emerald-600">&ge;99.0%</div>
+                        <div className="text-right">
+                          <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-1">{t('BestSellers.verifiedPurity')}</div>
+                          <div className="font-archia text-xs font-bold text-emerald-600">&ge;99.0%</div>
                         </div>
                       </div>
                     </div>
 
                     <div 
-                      className="mt-4 sm:mt-6 relative inline-flex items-center justify-center gap-2 sm:gap-4 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-black text-white overflow-hidden transition-all group-hover:pr-12"
+                      className="mt-6 relative inline-flex items-center justify-center gap-4 py-4 rounded-2xl bg-black text-white overflow-hidden transition-all group-hover:pr-12"
                     >
-                      <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">{t('BestSellers.viewSpecs')}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">{t('BestSellers.viewSpecs')}</span>
                       <ArrowRight className="h-4 w-4 absolute right-8 opacity-0 transition-all group-hover:opacity-100 group-hover:right-6" />
                     </div>
                   </Link>
-                </StaggerItem>
+                </div>
               );
             })}
-          </StaggerContainer>
+          </div>
 
           <FadeIn direction="up" delay={0.2} className="mt-24 flex justify-center">
             <Link 
@@ -378,6 +403,14 @@ export default async function HomePage({ params }: { params: { locale: string } 
       </section>
 
       <section className="relative z-10 border-y border-white/5 bg-[#0B0E14] text-white py-32 md:py-48">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto grid grid-cols-1 gap-14 px-6 lg:grid-cols-2 lg:px-12 relative z-10">
@@ -386,7 +419,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <div className="w-10 h-px bg-white/20" />
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{t('Quality.technicalStandard')}</span>
             </div>
-            <h2 className="font-absans text-4xl md:text-7xl font-bold leading-[0.9] tracking-tighter uppercase mb-8">
+            <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-7xl font-bold leading-[1.1] sm:leading-[0.9] tracking-tighter uppercase mb-8">
               {t('Quality.title').split('Verification')[0]}
               <span className="text-white/20 italic font-medium lowercase block mt-2">{t('Quality.verification')}</span>
             </h2>
@@ -398,24 +431,47 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </Link>
           </FadeIn>
 
-          <StaggerContainer className="grid gap-6 lg:col-span-1">
-            {qualityDownloads.map((item) => (
-              <StaggerItem key={item} className="group relative flex items-center justify-between gap-5 rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 overflow-hidden transition-all hover:bg-white/[0.08] hover:border-white/20">
-                <div className="relative z-10">
-                  <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/20 mb-3">{t('Quality.batchReport')}</div>
-                  <span className="block font-absans text-2xl font-bold text-white uppercase tracking-tight">{t(`Quality.downloads.${item}` as never)}</span>
+          <div className="reveal-grid grid gap-6 lg:col-span-1">
+            {qualityDownloads.map((item) => {
+              const nameMap: Record<string, string> = {
+                bpc: 'BPC-157',
+                sema: 'Semaglutide',
+                tirz: 'Tirzepatide'
+              };
+              const name = nameMap[item] || item;
+              return (
+                <div key={item} className="reveal-card">
+                  <a 
+                    href={`https://wa.me/18437439007?text=${encodeURIComponent(`Hi, I'd like to request the batch COA report for ${name}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center justify-between gap-4 rounded-[1.5rem] sm:rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 sm:p-8 overflow-hidden transition-all duration-500 hover:bg-white/[0.08] hover:border-white/20 text-left"
+                  >
+                    <div className="relative z-10 flex-grow">
+                      <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/20 mb-2 sm:mb-3">{t('Quality.batchReport')}</div>
+                      <span className="block font-absans text-base xs:text-lg sm:text-2xl font-bold text-white uppercase tracking-tight leading-tight">{t(`Quality.downloads.${item}` as never)}</span>
+                    </div>
+                    <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white flex-shrink-0 transition-all group-hover:bg-white group-hover:text-black">
+                      <Download className="h-5 w-5 sm:h-6 sm:w-6" />
+                    </div>
+                    <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none" />
+                  </a>
                 </div>
-                <button className="relative z-10 w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white transition-all group-hover:bg-white group-hover:text-black">
-                  <Download className="h-6 w-6" />
-                </button>
-                <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none" />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       <section className="relative z-10 bg-[#F4F6F4] py-32 md:py-48" id="wholesale-tiers">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -425,16 +481,16 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <span className={eyebrow}>{t('Tiers.badge')}</span>
               <div className="w-10 h-px bg-black/10" />
             </div>
-            <h2 className={`${heading} mt-5`}>{t('Tiers.title')}</h2>
+            <h2 className={`reveal-text ${heading} mt-5`}>{t('Tiers.title')}</h2>
             <p className="mt-8 font-archia text-lg leading-relaxed text-black/40">{t('Tiers.description')}</p>
           </FadeIn>
           
-          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="reveal-grid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {tierKeys.map((tierKey, i) => {
               const tier = (t.raw('Tiers.items') as Record<TierKey, TierItem>)[tierKey];
               const isPremium = i >= 2;
               return (
-                <StaggerItem key={tierKey} className="h-full">
+                <div key={tierKey} className="h-full reveal-card">
                   <div className={`group relative flex flex-col h-full rounded-[2.5rem] border transition-all duration-700 p-10 overflow-hidden ${isPremium ? 'bg-black text-white border-white/10 hover:shadow-[0_40px_80px_rgba(0,0,0,0.4)]' : 'bg-white text-black border-black/5 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2'}`}>
                     {isPremium && <span className="absolute right-10 top-10 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[9px] font-bold uppercase tracking-widest text-white">{t('Tiers.bestValue')}</span>}
                     
@@ -455,26 +511,33 @@ export default async function HomePage({ params }: { params: { locale: string } 
                       {t('Tiers.getPricng')}
                     </a>
                   </div>
-                </StaggerItem>
+                </div>
               );
             })}
-          </StaggerContainer>
+          </div>
           <p className="mx-auto mt-14 max-w-3xl text-center font-archia text-[10px] font-bold uppercase tracking-[0.2em] text-black/30">{t('Tiers.onRequests')}</p>
         </div>
       </section>
 
       <section className="relative z-10 py-24 bg-black overflow-hidden border-y border-white/5">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="reveal-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
               { id: 'compounds', stat: '50+', icon: FlaskConical },
               { id: 'purity', stat: '99%+', icon: ShieldCheck },
-              { id: 'clients', stat: '200+', icon: Building2 },
+              { id: 'clients', stat: 'COA', icon: Building2 },
               { id: 'coverage', stat: '50 States', icon: Globe },
             ].map((s, idx) => (
-              <StaggerItem 
+              <div 
                 key={s.id} 
-                className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white/[0.03] border border-white/10 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-1"
+                className="reveal-card group relative p-8 md:p-10 rounded-[2.5rem] bg-white/[0.03] border border-white/10 transition-all duration-500 hover:bg-white/[0.07] hover:border-white/20 hover:-translate-y-1"
               >
                 <div className="flex flex-col gap-8 relative z-10">
                    <div className="flex justify-between items-start">
@@ -501,13 +564,21 @@ export default async function HomePage({ params }: { params: { locale: string } 
                 
                 {/* Subtle Technical Grid Line */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-0 bg-gradient-to-b from-white/20 to-transparent group-hover:h-full transition-all duration-700" />
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
       <section className={`relative z-10 bg-[#E8EAE6] ${sectionPad}`} id="testimonials">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="container mx-auto px-6 lg:px-12">
           {/* Testimonials Header */}
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-20">
@@ -515,7 +586,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-black/40 mb-6 block">
                 [ {t('Testimonials.badge')} ]
               </span>
-              <h2 className="font-absans text-4xl md:text-8xl font-bold text-black leading-[0.9] uppercase tracking-tighter">
+              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-8xl font-bold text-black leading-[1.1] sm:leading-[0.9] uppercase tracking-tighter">
                 {t('Testimonials.title')}
               </h2>
             </FadeIn>
@@ -528,9 +599,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </FadeIn>
           </div>
 
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-8">
             {(t.raw('Testimonials.items') as TestimonialItem[]).map((test, i) => (
-              <StaggerItem key={i} className="group relative bg-white p-10 md:p-14 rounded-[2.5rem] flex flex-col min-h-[450px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_100px_rgba(0,0,0,0.06)]">
+              <div key={i} className="reveal-card group relative bg-white p-10 md:p-14 rounded-[2.5rem] flex flex-col min-h-[450px] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_100px_rgba(0,0,0,0.06)]">
                 {/* Large Decorative Quote Icon */}
                 <div className="absolute top-10 right-10 text-black/5 transition-colors group-hover:text-black/10">
                    <svg width="60" height="60" viewBox="0 0 60 60" fill="currentColor">
@@ -558,9 +629,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     </span>
                   </div>
                 </div>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
 
           {/* Institutional Trust Bar */}
           <div className="mt-20 pt-10 border-t border-black/10 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100">
@@ -572,13 +643,21 @@ export default async function HomePage({ params }: { params: { locale: string } 
       </section>
 
       <section className={`relative z-10 bg-[#F9F9F7] ${sectionPad}`}>
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-24">
             <FadeIn className="max-w-3xl">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-black/40 mb-6 block">
                 [ {t('Services.badge')} ]
               </span>
-              <h2 className="font-absans text-4xl md:text-8xl font-bold text-black leading-[0.9] uppercase tracking-tighter mb-10">
+              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-8xl font-bold text-black leading-[1.1] sm:leading-[0.9] uppercase tracking-tighter mb-10">
                 {t('Services.title')}
               </h2>
             </FadeIn>
@@ -589,12 +668,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </FadeIn>
           </div>
 
-          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
             {serviceItems.map((s) => {
               const service = (t.raw('Services.items') as Record<ServiceKey, ServiceItem>)[s.key];
               
               return (
-                <StaggerItem key={s.key} className="h-full">
+                <div key={s.key} className="h-full reveal-card">
                   <div className="group h-full bg-white border border-black/5 p-10 md:p-14 rounded-[2rem] flex flex-col md:flex-row gap-10 transition-all duration-500 hover:border-black/20 hover:shadow-[0_40px_100px_rgba(0,0,0,0.04)]">
                     <div className="shrink-0">
                       <div className="w-16 h-16 rounded-2xl bg-black text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
@@ -619,50 +698,58 @@ export default async function HomePage({ params }: { params: { locale: string } 
                       </ul>
                     </div>
                   </div>
-                </StaggerItem>
+                </div>
               );
             })}
-          </StaggerContainer>
+          </div>
 
           {/* New Section CTA */}
-          <ScaleIn className="relative overflow-hidden bg-black rounded-[3rem] p-12 md:p-24 text-white">
+          <div className="reveal-card-3d relative overflow-hidden bg-black rounded-[3rem] p-12 md:p-24 text-white">
              <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-                <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="200" cy="200" r="180" stroke="white" strokeWidth="1" strokeDasharray="10 10" />
-                  <circle cx="200" cy="200" r="140" stroke="white" strokeWidth="0.5" />
-                  <circle cx="200" cy="200" r="100" stroke="white" strokeWidth="2" strokeDasharray="5 5" />
-                </svg>
-             </div>
+                 <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <circle cx="200" cy="200" r="180" stroke="white" strokeWidth="1" strokeDasharray="10 10" />
+                   <circle cx="200" cy="200" r="140" stroke="white" strokeWidth="0.5" />
+                   <circle cx="200" cy="200" r="100" stroke="white" strokeWidth="2" strokeDasharray="5 5" />
+                 </svg>
+              </div>
 
-             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                   <h3 className="font-absans text-5xl md:text-7xl font-bold uppercase leading-none tracking-tighter mb-8" dangerouslySetInnerHTML={{ __html: t('Services.scaleTitle') }} />
-                   <p className="font-archia text-lg text-white/50 max-w-md">
-                      {t('Services.scaleSubtitle')}
-                   </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-6">
-                   <Link 
-                      href="/services" 
-                      className="group flex-1 bg-white text-black px-10 py-6 rounded-full font-bold uppercase tracking-widest text-center flex items-center justify-center gap-4 hover:bg-[#F1FF85] transition-all"
-                   >
-                      {t('Services.guide')}
-                      <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                   </Link>
-                   <Link 
-                      href="/wholesale-application"
-                      className="group flex-1 border border-white/20 text-white px-10 py-6 rounded-full font-bold uppercase tracking-widest text-center flex items-center justify-center gap-4 hover:bg-white hover:text-black transition-all"
-                   >
-                      {t('Services.wholesaleApp')}
-                      <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
-                   </Link>
-                </div>
-             </div>
-          </ScaleIn>
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                 <div>
+                    <h3 className="font-absans text-3xl sm:text-4xl md:text-7xl font-bold uppercase leading-[1.1] sm:leading-none tracking-tighter mb-8" dangerouslySetInnerHTML={{ __html: t('Services.scaleTitle') }} />
+                    <p className="font-archia text-lg text-white/50 max-w-md">
+                       {t('Services.scaleSubtitle')}
+                    </p>
+                 </div>
+                 <div className="flex flex-col sm:flex-row gap-6">
+                    <Link 
+                       href="/services" 
+                       className="group flex-1 bg-white text-black px-10 py-6 rounded-full font-bold uppercase tracking-widest text-center flex items-center justify-center gap-4 hover:bg-[#F1FF85] transition-all"
+                    >
+                       {t('Services.guide')}
+                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                    <Link 
+                       href="/wholesale-application"
+                       className="group flex-1 border border-white/20 text-white px-10 py-6 rounded-full font-bold uppercase tracking-widest text-center flex items-center justify-center gap-4 hover:bg-white hover:text-black transition-all"
+                    >
+                       {t('Services.wholesaleApp')}
+                       <ArrowUpRight className="w-5 h-5 transition-transform group-hover:rotate-45" />
+                    </Link>
+                 </div>
+              </div>
+          </div>
         </div>
       </section>
 
       <section className={`relative z-10 bg-[#F2F4F2] ${sectionPad}`}>
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
         <div className="container mx-auto px-6 lg:px-12">
           {/* Insights Header Bar */}
           <div className="flex justify-between items-center border-b border-black/10 pb-4 mb-12">
@@ -674,7 +761,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
           <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
             <div className="max-w-4xl">
-              <h2 className="font-absans text-4xl md:text-8xl font-bold text-black leading-[0.9] uppercase tracking-tighter">
+              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-8xl font-bold text-black leading-[1.1] sm:leading-[0.9] uppercase tracking-tighter">
                 {t('Blog.title')}
               </h2>
             </div>
@@ -687,9 +774,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </Link>
           </div>
 
-          <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-8">
             {(t.raw('Blog.items') as BlogItem[]).map((post, i) => (
-              <StaggerItem key={post.slug} className="h-full">
+              <div key={post.slug} className="h-full reveal-card">
                 <Link 
                   href={`/blog/${post.slug}`} 
                   className="group relative h-full bg-white border border-black/5 p-10 md:p-12 flex flex-col min-h-[420px] transition-all hover:border-black/20 hover:shadow-[0_40px_80px_rgba(0,0,0,0.04)]"
@@ -719,9 +806,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     </div>
                   </div>
                 </Link>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 

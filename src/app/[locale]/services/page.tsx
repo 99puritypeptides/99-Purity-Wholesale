@@ -2,7 +2,6 @@ import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, Ch
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import GlobalCTA from '@/components/layout/GlobalCTA';
-import { FadeIn } from '@/components/shared/Motion';
 import FaqSection from '@/components/shared/FaqSection';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
@@ -56,6 +55,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   };
 }
 
+function stripLinks(text: string) {
+  return text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+}
+
 export default async function ServicesPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Services' });
   const faqs = t.raw('faq.items') as { q: string; a: string }[];
@@ -67,7 +70,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       "name": f.q,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": f.a
+        "text": stripLinks(f.a)
       }
     }))
   };
@@ -203,16 +206,16 @@ export default async function ServicesPage({ params }: { params: { locale: strin
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
-          <FadeIn>
+          <div>
             <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
               {t('badge')}
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+            <h1 className="reveal-text text-4xl sm:text-6xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6 break-words w-full">
               {t('title')}
             </h1>
             
-            <p className="text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed mb-10">
+            <p className="reveal-text text-lg md:text-xl font-archia font-semibold text-black/75 max-w-3xl mx-auto leading-relaxed mb-10">
               {t('subtitle')}
             </p>
 
@@ -237,21 +240,21 @@ export default async function ServicesPage({ params }: { params: { locale: strin
             </div>
 
             {/* Hero Stats Row - 4 numbers in a horizontal strip */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto pt-12 border-t border-black/5 mt-16">
+            <div className="reveal-grid grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto pt-12 border-t border-black/5 mt-16">
               {[
                 { num: t('heroStats.stat1Num'), label: t('heroStats.stat1Label') },
                 { num: t('heroStats.stat2Num'), label: t('heroStats.stat2Label') },
                 { num: t('heroStats.stat3Num'), label: t('heroStats.stat3Label') },
                 { num: t('heroStats.stat4Num'), label: t('heroStats.stat4Label') }
               ].map((stat, i) => (
-                <div key={i} className="flex flex-col items-center justify-center p-6 bg-white border border-black/5 rounded-[2rem] hover:border-black/15 transition-all duration-500 shadow-sm">
+                <div key={i} className="reveal-card flex flex-col items-center justify-center p-6 bg-white border border-black/5 rounded-[2rem] hover:border-black/15 transition-all duration-500 shadow-sm">
                   <span className="text-3xl md:text-4xl font-bold font-absans text-black mb-1">{stat.num}</span>
                   <span className="text-[9px] md:text-[10px] font-bold font-dm-mono uppercase tracking-[0.2em] text-black/40 text-center leading-normal max-w-[160px]">{stat.label}</span>
                 </div>
               ))}
             </div>
 
-          </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -289,25 +292,25 @@ export default async function ServicesPage({ params }: { params: { locale: strin
           
           {/* SECTION 3 — SECTION INTRO */}
           <div className="text-center mb-20">
-            <FadeIn>
+            <div>
               <div className="inline-block bg-white/5 border border-white/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-white/60 mb-6">
                 {t('intro.badge')}
               </div>
               
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold font-absans text-white uppercase tracking-tight leading-none mb-6 max-w-4xl mx-auto">
+              <h2 className="reveal-text text-3xl md:text-5xl lg:text-6xl font-bold font-absans text-white uppercase tracking-tight leading-none mb-6 max-w-4xl mx-auto">
                 {t('intro.title')}
               </h2>
               
-              <p className="text-sm md:text-base font-archia font-medium text-white/55 max-w-3xl mx-auto leading-relaxed">
+              <p className="reveal-text text-sm md:text-base font-archia font-medium text-white/55 max-w-3xl mx-auto leading-relaxed">
                 {t('intro.desc')}
               </p>
-            </FadeIn>
+            </div>
           </div>
 
           {/* SECTION 4 — SERVICE CARDS (2-column grid desktop, 1-column mobile) */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="reveal-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, i) => (
-              <FadeIn key={service.id} delay={0.05 * i} className="bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:border-white/20 hover:bg-white/[0.03] transition-all duration-500 shadow-2xl flex flex-col group relative overflow-hidden">
+              <div key={service.id} className="reveal-card bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:border-white/20 hover:bg-white/[0.03] transition-all duration-500 shadow-2xl flex flex-col group relative overflow-hidden">
                 {/* Card Top Row: Icon and Eyebrow */}
                 <div className="flex items-center justify-between mb-8">
                   {/* Clean Dark-Glass Icon Badge */}
@@ -363,7 +366,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
                    <PhoneCall className="w-3.5 h-3.5" />
                    {service.ctaText}
                  </a>
-              </FadeIn>
+              </div>
             ))}
           </div>
         </div>
@@ -372,17 +375,15 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       {/* Standalone Widescreen Clinical Laboratory Breakout Card */}
       <section className="bg-[#F8F8F6] pt-24 pb-8 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
-          <FadeIn>
-            <div className="relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
-              {/* Pristine Full-Color Clinical Laboratory v2 Visual */}
-              <img 
-                src="/images/hero-lab-bg-v2.png"
-                alt="99 Purity Wholesale Certified Quality Control Laboratory"
-                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
-            </div>
-          </FadeIn>
+          <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
+            {/* Pristine Full-Color Clinical Laboratory v2 Visual */}
+            <img 
+              src="/images/hero-lab-bg-v2.png"
+              alt="99 Purity Wholesale Certified Quality Control Laboratory"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
+          </div>
         </div>
       </section>
 
@@ -390,18 +391,18 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       <section className="py-24 md:py-32 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center mb-16">
-            <FadeIn>
+            <div>
               <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
                 {t('whyPartner.badge')}
               </div>
               
-              <h2 className="text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight max-w-4xl mx-auto">
+              <h2 className="reveal-text text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight max-w-4xl mx-auto">
                 {t('whyPartner.title')}
               </h2>
-            </FadeIn>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: FlaskConical, label: t('whyPartner.col1Label'), text: t('whyPartner.col1Text'), num: '01' },
               { icon: ClipboardCheck, label: t('whyPartner.col2Label'), text: t('whyPartner.col2Text'), num: '02' },
@@ -409,7 +410,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
             ].map((col, i) => {
               const IconComponent = col.icon;
               return (
-                <FadeIn key={i} delay={0.1 * i} className="bg-white border border-black/5 rounded-[2.5rem] p-8 hover:border-brand-accent/30 hover:shadow-[0_20px_50px_rgba(19,32,52,0.02)] transition-all duration-500 flex flex-col items-start relative overflow-hidden">
+                <div key={i} className="reveal-card bg-white border border-black/5 rounded-[2.5rem] p-8 hover:border-brand-accent/30 hover:shadow-[0_20px_50px_rgba(19,32,52,0.02)] transition-all duration-500 flex flex-col items-start relative overflow-hidden">
                   <div className="flex justify-between items-center w-full mb-6">
                     <div className="w-12 h-12 bg-black/5 rounded-2xl flex items-center justify-center border border-black/5">
                       <IconComponent className="w-5 h-5 text-black/60" />
@@ -422,7 +423,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
                   <p className="text-black/55 font-archia text-xs leading-relaxed font-medium">
                     {col.text}
                   </p>
-                </FadeIn>
+                </div>
               );
             })}
           </div>
@@ -433,22 +434,22 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       <section className="py-24 md:py-32 bg-[#F8F8F6] border-b border-black/5 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-6xl relative z-10">
           <div className="text-center mb-16">
-            <FadeIn>
+            <div>
               <div className="inline-block bg-black/5 border border-black/5 px-5 py-2 rounded-full text-[10px] font-bold font-dm-sans uppercase tracking-widest text-black/60 mb-6">
                 {t('stepsSubtitle')}
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
+              <h2 className="reveal-text text-3xl md:text-5xl font-bold font-absans text-black uppercase tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
                 {t('stepsTitle')}
               </h2>
-            </FadeIn>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {/* Desktop connecting line */}
             <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-black/10 to-transparent -translate-y-1/2"></div>
             
             {/* Step 1 */}
-            <FadeIn delay={0.1} className="bg-white border border-black/5 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/15 transition-all duration-300 hover:-translate-y-1 shadow-sm">
+            <div className="reveal-card bg-white border border-black/5 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/15 transition-all duration-300 hover:-translate-y-1 shadow-sm">
               <div className="w-16 h-16 bg-[#F8F8F6] rounded-full flex items-center justify-center mx-auto mb-6 border border-black/5">
                 <PhoneCall className="w-5 h-5 text-black/60" />
               </div>
@@ -457,10 +458,10 @@ export default async function ServicesPage({ params }: { params: { locale: strin
               <p className="text-black/55 font-archia text-xs leading-relaxed font-medium">
                 {t('step1Desc')}
               </p>
-            </FadeIn>
+            </div>
 
             {/* Step 2 */}
-            <FadeIn delay={0.2} className="bg-white border border-black/5 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/15 transition-all duration-300 hover:-translate-y-1 shadow-sm">
+            <div className="reveal-card bg-white border border-black/5 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/15 transition-all duration-300 hover:-translate-y-1 shadow-sm">
               <div className="w-16 h-16 bg-[#F8F8F6] rounded-full flex items-center justify-center mx-auto mb-6 border border-black/5">
                 <ClipboardCheck className="w-5 h-5 text-black/60" />
               </div>
@@ -469,10 +470,10 @@ export default async function ServicesPage({ params }: { params: { locale: strin
               <p className="text-black/55 font-archia text-xs leading-relaxed font-medium">
                 {t('step2Desc')}
               </p>
-            </FadeIn>
+            </div>
 
             {/* Step 3 */}
-            <FadeIn delay={0.3} className="bg-white border border-black/15 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/25 transition-all duration-300 hover:-translate-y-1 shadow-md">
+            <div className="reveal-card bg-white border border-black/15 rounded-[2.2rem] p-8 text-center relative z-10 hover:border-black/25 transition-all duration-300 hover:-translate-y-1 shadow-md">
               <div className="w-16 h-16 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-6 border border-black/10">
                 <CheckCircle2 className="w-5 h-5 text-black/70" />
               </div>
@@ -481,7 +482,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
               <p className="text-black/55 font-archia text-xs leading-relaxed font-medium">
                 {t('step3Desc')}
               </p>
-            </FadeIn>
+            </div>
           </div>
         </div>
       </section>

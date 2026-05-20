@@ -24,40 +24,58 @@ export async function generateMetadata({ params }: { params: { locale: string; c
   if (!categories.includes(params.category)) return {};
 
   return {
-    title: `${t(`categories.${params.category}.title`)} — Wholesale Bulk Supply | 99 Purity Wholesale`,
+    title: `${t(`categories.${params.category}.title`)} — Wholesale Bulk Supply`,
     description: t(`categories.${params.category}.desc`),
   };
 }
 
 const productImagesMap: Record<string, string> = {
   "5-amino-1mq": "5-Amino-1MQ 10mg.jpg",
+  "adamax": "adamax-5mg.webp",
+  "adipotide-fttp": "adipotide-fttp-2mg.webp",
+  "aod9604": "aod9604-5mg.webp",
+  "b12": "b12-10mg.webp",
+  "b7-33": "b7-33-2mg.webp",
+  "bac-water": "bac-water-3ml.webp",
   "bpc-157": "BPC-157 5mg.jpg",
   "bpc-5mg-tb-5mg": "BPC-157.TB-500 5.5mg.jpg",
   "bpc-10mg-tb-10mg": "BPC-157.TB-500 10.10mg.jpg",
-  "cagrilintide": "Cagrilintide.jpg",
+  "cagrilintide": "cagrilintide-5mg.webp",
+  "cagrisema": "cagrisema-2.5+2.5-5mg.webp",
+  "cjc-1295-dac": "cjc-1295-dac=5mg.webp",
+  "cjc-1295-no-dac": "cjc-1295-no-dac-5mg.webp",
   "cjc-1295-ipam": "CJC-1295.Ipamorelin 10.10mg.jpg",
+  "dihexa": "dihexa-10mg.webp",
+  "dsip": "dsip-5mg.webp",
+  "dulaglutide": "dulaglutide-5mg.webp",
   "epithalon": "Epithalon 10mg.jpg",
-  "foxo4": "FOX04 10mg.jpg",
+  "foxo4": "foxo4-2mg.webp",
+  "foxo4-dri": "foxo4-dri-10mg.webp",
   "ghk-cu": "GHK-CU 50mg.jpg",
   "glow-blend": "GLOW.jpg",
   "klow-blend": "KLOW.jpg",
+  "glutathione": "glutathione-600mg.webp",
   "ipamorelin": "Ipamorelin 5mg.jpg",
-  "kpv": "KPV 10mg.jpg",
+  "kpv": "kpv-5mg.webp",
+  "l-carnitine": "l-carnitine-1200mg.webp",
+  "lipo-c": "lipo-c-10ml.webp",
   "ll37": "LL37 5mg.jpg",
+  "mic-blend": "mic-lipo-c+b12-10mg.webp",
   "mots-c": "Mots-c 10mg.jpg",
-  "nad": "NAD+ 500mg.jpg",
-  "retatrutide": "Retatrutide 10mg.jpg",
-  "selank": "SELANK 5mg.png",
+  "nad": "NAD 100mg.jpg",
+  "retatrutide": "retatrutide-5mg.webp",
+  "selank": "selank-5mg.webp",
   "semaglutide": "Semaglutide 10mg.jpg",
-  "semax": "SEMAX 5mg.png",
-  "sermorelin-acetate": "Sermorelin 10mg.jpg",
+  "semax": "semax-5mg.webp",
+  "sermorelin-acetate": "semorelin-acetate-5mg.webp",
   "snap-8": "Snap 8 10mg.jpg",
-  "ss-31": "SS-31 50mg.jpg",
+  "ss-31": "ss-31-10mg.webp",
   "tb-500": "TB-500 5mg - 3ml.jpg",
   "tesamorelin": "Tesamorelin 5mg.jpg",
-  "tirzepatide": "Tirzepatide 10mg.jpg",
-  "vip": "VIP 10mg.jpg",
-  "mic-blend": "MIC BLEND.png"
+  "thymalin-thymulin": "thymalin-thymylin-10mg.webp",
+  "thymosin-alpha-1": "thymosin-alpha-1-5mg.webp",
+  "tirzepatide": "tirzepatide-5mg.webp",
+  "vip": "vip-5mg.webp"
 };
 
 // Dynamic helper to build 8 robust, localized B2B wholesale peptide FAQs
@@ -185,7 +203,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
             </div>
 
             {/* Header */}
-            <h1 className="text-5xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-absans text-black uppercase tracking-tight leading-none mb-6 break-words w-full">
               {t(`categories.${params.category}.title`)}
             </h1>
 
@@ -214,19 +232,19 @@ export default async function CategoryPage({ params }: { params: { locale: strin
         {/* Subtle Light Noise Texture */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         
-        <div className="container mx-auto px-6 max-w-7xl relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="container mx-auto px-2 sm:px-6 max-w-7xl relative z-20">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
             {products.map((product, idx) => {
               const productImage = productImagesMap[product.slug as keyof typeof productImagesMap];
               return (
                 <FadeIn key={product.slug} delay={0.05 * idx} className="h-full">
-                  <div className="group relative bg-white border border-black/5 rounded-[2.2rem] p-6 hover:border-brand-accent/35 transition-all duration-500 flex flex-col hover:-translate-y-2 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_90px_rgba(0,0,0,0.05)] overflow-hidden h-full">
+                  <div className="group relative bg-white border border-black/5 rounded-[1.25rem] sm:rounded-[2.2rem] p-3 sm:p-6 hover:border-brand-accent/35 transition-all duration-500 flex flex-col hover:-translate-y-2 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_90px_rgba(0,0,0,0.05)] overflow-hidden h-full">
                     {/* Grainy Noise Overlay for premium luxury depth */}
                     <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                     
                     <Link href={`/products/${product.category}/${product.slug}`} className="flex flex-col h-full relative z-10">
                       {/* Luxury Product Thumbnail Showcase */}
-                      <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
+                      <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500">
                         {productImage ? (
                           <img 
                             src={encodeURI(`/Product images/${productImage}`)}
@@ -240,27 +258,27 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                           </div>
                         )}
                       </div>
-
+ 
                       {/* Category Tag */}
-                      <div className="mb-3.5">
-                        <span className="text-[8px] font-dm-mono font-bold text-black/40 uppercase tracking-[0.2em] px-2.5 py-1 bg-black/5 rounded-full border border-black/5 group-hover:border-black/15 group-hover:text-black transition-all duration-300">
+                      <div className="mb-2.5 sm:mb-3.5">
+                        <span className="text-[8px] font-dm-mono font-bold text-black/40 uppercase tracking-[0.2em] px-2 py-0.5 sm:px-2.5 sm:py-1 bg-black/5 rounded-full border border-black/5 group-hover:border-black/15 group-hover:text-black transition-all duration-300">
                           {product.category.replace(/-/g, ' ')}
                         </span>
                       </div>
                       
                       {/* Title */}
-                      <h3 className="text-lg font-absans font-bold text-black mb-2 leading-tight group-hover:text-black/80 transition-colors duration-300 uppercase tracking-tight">
+                      <h3 className="text-xs sm:text-base md:text-lg font-absans font-bold text-black mb-1 sm:mb-2 leading-tight group-hover:text-black/80 transition-colors duration-300 uppercase tracking-tight line-clamp-1 sm:line-clamp-none">
                         {product.name}
                       </h3>
                       
                       {/* Short localized Description */}
-                      <p className="text-xs text-black/50 font-archia leading-relaxed font-medium line-clamp-2 mb-6 group-hover:text-black/70 transition-colors duration-300 flex-grow">
+                      <p className="text-[10px] sm:text-xs text-black/50 font-archia leading-relaxed font-medium line-clamp-2 mb-3 sm:mb-6 group-hover:text-black/70 transition-colors duration-300 flex-grow">
                         {tDetail.has(`descriptions.${product.slug}`) ? tDetail(`descriptions.${product.slug}`) : product.description}
                       </p>
                     </Link>
-
+ 
                     {/* Inquiry & Details Action Drawer */}
-                    <div className="flex flex-col gap-4 pt-5 border-t border-black/5 mt-auto relative z-10">
+                    <div className="flex flex-col gap-2.5 sm:gap-4 pt-3 sm:pt-5 border-t border-black/5 mt-auto relative z-10">
                       {(() => {
                         const [spec, kitSizeStr] = product.specs[0].split('×');
                         return (

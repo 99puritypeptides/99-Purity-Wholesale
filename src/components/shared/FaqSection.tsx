@@ -6,6 +6,8 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motio
 interface FaqItem {
   q: string;
   a: string;
+  link?: string;
+  linkText?: string;
 }
 
 interface FaqSectionProps {
@@ -14,7 +16,29 @@ interface FaqSectionProps {
   title: string;
   subtitle?: string;
   items: FaqItem[];
-  theme?: 'light' | 'dark';
+  theme?: 'light' | 'dark' | 'white';
+}
+
+function renderAnswer(text: string, isLight: boolean) {
+  const segments = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return segments.map((segment, i) => {
+    const match = segment.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (match) {
+      const [, label, href] = match;
+      const isExternal = href.startsWith('http');
+      return (
+        <a
+          key={i}
+          href={href}
+          {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className={`underline underline-offset-2 decoration-current/40 hover:decoration-current transition-all ${isLight ? 'text-black/75' : 'text-white/75'}`}
+        >
+          {label}
+        </a>
+      );
+    }
+    return <React.Fragment key={i}>{segment}</React.Fragment>;
+  });
 }
 
 export default function FaqSection({
@@ -27,10 +51,10 @@ export default function FaqSection({
 }: FaqSectionProps) {
   if (!items || items.length === 0) return null;
 
-  const isLight = theme === 'light';
+  const isLight = theme === 'light' || theme === 'white';
 
   // Theme-specific CSS classes
-  const sectionBg = isLight ? 'bg-[#F8F8F6] text-black' : 'bg-[#090C11] text-white';
+  const sectionBg = theme === 'white' ? 'bg-white text-black' : (isLight ? 'bg-[#F8F8F6] text-black' : 'bg-[#090C11] text-white');
   const borderCol = isLight ? 'border-black/10' : 'border-white/10';
   const borderCardCol = isLight ? 'border-black/5 bg-white' : 'border-white/5 bg-white/[0.02]';
   const textMuted = isLight ? 'text-black/40' : 'text-white/40';
@@ -109,9 +133,18 @@ export default function FaqSection({
                 <h3 className="font-absans text-xl md:text-2xl font-bold mb-6 leading-tight">
                   {faq.q}
                 </h3>
-                <p className="font-archia text-sm md:text-base leading-relaxed opacity-60 font-medium">
-                  {faq.a}
+                <p className="font-archia text-sm md:text-base leading-relaxed opacity-60 font-medium flex-1">
+                  {renderAnswer(faq.a, isLight)}
                 </p>
+                {faq.link && (
+                  <a
+                    href={faq.link}
+                    {...(faq.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className={`mt-6 inline-flex items-center gap-2 text-[11px] font-dm-mono font-bold uppercase tracking-widest transition-opacity hover:opacity-100 ${isLight ? 'opacity-40 text-black' : 'opacity-40 text-white'}`}
+                  >
+                    {faq.linkText ?? 'Learn more'} →
+                  </a>
+                )}
               </StaggerItem>
             );
           })}
@@ -135,21 +168,30 @@ export default function FaqSection({
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-8 outline-none">
                     <div className="flex items-center gap-6">
-                      <span className="text-[10px] font-dm-mono font-bold uppercase tracking-widest opacity-30">
+                      <span className="text-[10px] font-dm-mono font-bold uppercase tracking-widest opacity-30 flex-shrink-0">
                         {(i + 1).toString().padStart(2, '0')}
                       </span>
                       <h3 className="font-absans text-lg md:text-xl font-bold transition-colors duration-300 group-hover:opacity-75">
                         {faq.q}
                       </h3>
                     </div>
-                    <div className={`flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-300 group-open:rotate-45 ${isLight ? 'border-black/10 text-black/40' : 'border-white/10 text-white/40'}`}>
+                    <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border transition-all duration-300 group-open:rotate-45 ${isLight ? 'border-black/10 text-black/40' : 'border-white/10 text-white/40'}`}>
                       <span className="text-2xl leading-none font-light">+</span>
                     </div>
                   </summary>
                   <div className="pb-10 pl-16">
                     <p className="font-archia text-sm md:text-base leading-relaxed opacity-65 max-w-3xl font-medium">
-                      {faq.a}
+                      {renderAnswer(faq.a, isLight)}
                     </p>
+                    {faq.link && (
+                      <a
+                        href={faq.link}
+                        {...(faq.link.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        className={`mt-4 inline-flex items-center gap-2 text-[11px] font-dm-mono font-bold uppercase tracking-widest transition-opacity hover:opacity-100 ${isLight ? 'opacity-40 text-black' : 'opacity-40 text-white'}`}
+                      >
+                        {faq.linkText ?? 'Learn more'} →
+                      </a>
+                    )}
                   </div>
                 </details>
               );
