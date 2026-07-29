@@ -197,7 +197,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
                                 (prod) => prod.name.toLowerCase() === p.toLowerCase()
                               );
                               const href = matchedProduct 
-                                ? `/products/${matchedProduct.category}/${matchedProduct.slug}`
+                                ? `/products/`
                                 : '/products';
                               
                               return (

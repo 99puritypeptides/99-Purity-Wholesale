@@ -11,13 +11,13 @@ import ProductGallery from '@/components/products/ProductGallery';
 import AddToInquiryButton from '@/components/products/AddToInquiryButton';
 
 
-export async function generateMetadata({ params }: { params: { locale: string; category: string; slug: string } }) {
+export async function generateMetadata({ params }: { params: { locale: string; slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Meta' });
-  const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
+  const product = productsData.find(p => p.slug === params.slug);
   if (!product) return {};
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
-  const url = `${baseUrl}/${params.locale}/products/${params.category}/${params.slug}`;
+  const url = `${baseUrl}/${params.locale}/products/${params.slug}`;
 
   const ogTitle = t('productOgTitle', { name: product.name });
   const ogDesc = t('productOgDesc', { name: product.name });
@@ -240,11 +240,11 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
   }
 };
 
-export default async function ProductPage({ params }: { params: { locale: string, category: string, slug: string } }) {
+export default async function ProductPage({ params }: { params: { locale: string, slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'ProductDetail' });
   const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
   const tr = await getTranslations({ locale: params.locale, namespace: 'Research' });
-  const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
+  const product = productsData.find(p => p.slug === params.slug);
 
   if (!product) {
     notFound();
@@ -577,7 +577,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                     </div>
                     
                     <Link
-                      href={`/products/${product.category}/${product.slug}/research`}
+                      href={`/products//research`}
                       className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-dm-sans font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-emerald-500/20 whitespace-nowrap self-start md:self-auto"
                     >
                       <span>{tr('readPaper')}</span>
@@ -591,7 +591,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               <FadeIn delay={0.35}>
                 <ShareProduct 
                   title={product.name} 
-                  url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale}/products/${product.category}/${product.slug}`}
+                  url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale}/products/`}
                 />
               </FadeIn>
             </div>
@@ -821,7 +821,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                     {/* Grainy Noise Overlay for premium luxury depth */}
                     <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                     
-                    <Link href={`/products/${rp.category}/${rp.slug}`} className="flex flex-col h-full relative z-10">
+                    <Link href={`/products/`} className="flex flex-col h-full relative z-10">
                       {/* Luxury Product Thumbnail Showcase */}
                       <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
                         {productImage ? (
@@ -869,7 +869,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                         </div>
                         
                         <Link 
-                          href={`/products/${rp.category}/${rp.slug}`} 
+                          href={`/products/`} 
                           className="flex items-center gap-1 text-black/50 text-[10px] font-dm-mono font-bold uppercase tracking-widest transition-colors hover:text-black"
                         >
                           Details <ChevronRight className="w-3.5 h-3.5 ml-0.5 transform transition-transform group-hover:translate-x-0.5" />

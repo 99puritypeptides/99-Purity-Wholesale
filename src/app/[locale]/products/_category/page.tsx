@@ -243,7 +243,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                     {/* Grainy Noise Overlay for premium luxury depth */}
                     <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                     
-                    <Link href={`/products/${product.category}/${product.slug}`} className="flex flex-col h-full relative z-10">
+                    <Link href={`/products/`} className="flex flex-col h-full relative z-10">
                       {/* Luxury Product Thumbnail Showcase */}
                       <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500">
                         {productImage ? (
@@ -300,7 +300,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                         </div>
                         
                         <Link 
-                          href={`/products/${product.category}/${product.slug}`} 
+                          href={`/products/`} 
                           className="flex items-center gap-1 text-black/50 text-[10px] font-dm-mono font-bold uppercase tracking-widest transition-colors hover:text-black"
                         >
                           Details <ChevronRight className="w-3.5 h-3.5 ml-0.5 transform transition-transform group-hover:translate-x-0.5" />

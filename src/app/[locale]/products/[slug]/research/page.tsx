@@ -20,12 +20,12 @@ import FaqSection from '@/components/shared/FaqSection';
 import { curatedResearch, productLookup } from '@/data/researchDb';
 import type { ResearchData } from '@/data/researchDb';
 
-export async function generateMetadata({ params }: { params: { locale: string, category: string, slug: string } }) {
+export async function generateMetadata({ params }: { params: { locale: string, slug: string } }) {
   const titleStr = params.slug.replace(/-/g, ' ').toUpperCase();
   return {
     title: `Research: ${titleStr}`,
     description: `Research data and clinical trials for ${titleStr}.`,
-    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.category}/${params.slug}/research` }
+    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.slug}/research` }
   };
 }
 
@@ -133,13 +133,13 @@ const getResearchData = (slug: string, category: string, name: string, isEs: boo
 export default async function ResearchPaperPage({ 
   params 
 }: { 
-  params: { locale: string; category: string; slug: string } 
+  params: { locale: string; slug: string } 
 }) {
   const isEs = params.locale === 'es';
   const t = await getTranslations({ locale: params.locale, namespace: 'Research' });
   const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
   
-  const product = productsData.find(p => p.slug === params.slug && p.category === params.category);
+  const product = productsData.find(p => p.slug === params.slug);
   if (!product) {
     notFound();
   }
@@ -259,7 +259,7 @@ export default async function ResearchPaperPage({
         <header className="sticky top-[70px] md:top-[90px] z-40 bg-[#F8F8F6]/85 backdrop-blur-xl border-b border-black/5 py-4">
           <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
             <Link 
-              href={`/products/${product.category}/${product.slug}`} 
+              href={`/products/`} 
               className="inline-flex items-center gap-2 text-xs font-dm-mono text-zinc-500 hover:text-black transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />

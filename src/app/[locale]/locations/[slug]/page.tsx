@@ -170,7 +170,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
                       (p) => p.name.toLowerCase() === product.toLowerCase()
                     );
                     const href = matchedProduct 
-                      ? `/products/${matchedProduct.category}/${matchedProduct.slug}`
+                      ? `/products/`
                       : '/products';
 
                     return (
@@ -299,7 +299,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
                                 (p) => p.name.toLowerCase() === prodName.toLowerCase()
                               );
                               const href = matched 
-                                ? `/products/${matched.category}/${matched.slug}`
+                                ? `/products/`
                                 : '/products';
                               return (
                                 <span key={prodName} className="inline-flex items-center">

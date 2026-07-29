@@ -47,14 +47,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const prefix = locale === 'en' ? '' : `/${locale}`;
     for (const product of productsData) {
       sitemapEntries.push({
-        url: `${baseUrl}${prefix}/products/${product.category}/${product.slug}`,
+        url: `${baseUrl}${prefix}/products/${product.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.9,
       });
       // also add research pages
       sitemapEntries.push({
-        url: `${baseUrl}${prefix}/products/${product.category}/${product.slug}/research`,
+        url: `${baseUrl}${prefix}/products/${product.slug}/research`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.7,
