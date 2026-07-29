@@ -28,7 +28,7 @@ export default function CartItem({ item }: CartItemProps) {
           <div className="flex flex-col gap-1.5">
             <h4 className="font-absans font-bold text-lg text-black leading-tight tracking-tight uppercase">
               <Link 
-                href={`/products/`}
+                href={`/products/${item.productId}`}
                 onClick={() => dispatch({ type: 'CLOSE_DRAWER' })}
                 className="hover:text-[#13a7b7] transition-colors cursor-pointer"
               >

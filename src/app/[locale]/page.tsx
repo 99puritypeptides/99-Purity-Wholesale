@@ -359,7 +359,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                   className="reveal-card group relative flex flex-col h-[480px] rounded-[1.5rem] bg-white border border-black/[0.03] p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
                   <Link 
-                    href={`/products/`} 
+                    href={`/products/${product.slug}`} 
                     className="flex flex-col h-full w-full text-left"
                   >
                     <div className="flex-grow flex flex-col">

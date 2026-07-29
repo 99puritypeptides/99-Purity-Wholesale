@@ -23,17 +23,17 @@ interface ProductDirectoryProps {
 }
 
 const productImagesMap = {
-  "5-amino-1mq": "5-amino-1mq-10mg.jpg",
+  "5-amino-1mq": "5-AMINO-1MQ 50mg.webp",
   "adamax": "adamax-5mg.webp",
   "adipotide-fttp": "adipotide-fttp-2mg.webp",
   "aod9604": "aod9604-5mg.webp",
   "b12": "b12-10mg.webp",
   "b7-33": "b7-33-2mg.webp",
-  "bac-water": "bac-water-3ml.webp",
-  "bpc-157": "bpc-157-5mg.jpg",
-  "bpc-5mg-tb-5mg": "bpc-157-tb-500-5-5mg.jpg",
+  "bac-water": "BAC WATER 3ML.webp",
+  "bpc-157": "BPC-157 5mg-5.webp",
+  "bpc-5mg-tb-5mg": "BPC-157 TB-500 MIX 5mg 5mg-2.webp",
   "bpc-10mg-tb-10mg": "bpc-157-tb-500-10-10mg.jpg",
-  "cagrilintide": "cagrilintide-5mg.webp",
+  "cagrilintide": "CAGRILINTIDE 10mg.webp",
   "cagrisema": "cagrisema-2-5-2-5-5mg.webp",
   "cjc-1295-dac": "cjc-1295-dac5mg.webp",
   "cjc-1295-no-dac": "cjc-1295-no-dac-5mg.webp",
@@ -41,34 +41,77 @@ const productImagesMap = {
   "dihexa": "dihexa-10mg.webp",
   "dsip": "dsip-5mg.webp",
   "dulaglutide": "dulaglutide-5mg.webp",
-  "epithalon": "epithalon-10mg.jpg",
+  "epithalon": "EPITHALON 10mg.webp",
   "foxo4": "foxo4-2mg.webp",
   "foxo4-dri": "foxo4-dri-10mg.webp",
-  "ghk-cu": "ghk-cu-50mg.jpg",
+  "ghk-cu": "GHK-CU 50mg-1.webp",
   "glow-blend": "glow-hair-skin-nail-blend.jpg",
   "klow-blend": "klow-custom-peptide-kit.jpg",
   "glutathione": "glutathione-600mg.webp",
-  "ipamorelin": "ipamorelin-5mg.jpg",
-  "kpv": "kpv-5mg.webp",
+  "ipamorelin": "IPAMORELIN 5mg-2.webp",
+  "kpv": "KPV 10mg.webp",
   "l-carnitine": "l-carnitine-1200mg.webp",
-  "lipo-c": "lipo-c-10ml.webp",
+  "lipo-c": "LIPO-C.webp",
   "ll37": "ll37-5mg.jpg",
   "mic-blend": "mic-lipo-c-b12-10mg.webp",
-  "mots-c": "mots-c-10mg.jpg",
-  "nad": "nad-100mg.jpg",
-  "retatrutide": "retatrutide-5mg.webp",
-  "selank": "selank-5mg.webp",
-  "semaglutide": "semaglutide-10mg.jpg",
-  "semax": "semax-5mg.webp",
+  "mots-c": "MOTS-C 10mg-1.webp",
+  "nad": "NAD+ 500mg-1.webp",
+  "retatrutide": "RETATRUTIDE 10mg-6.webp",
+  "selank": "SELANK 10mg.webp",
+  "semaglutide": "SEMAGLUTIDE 5mg-2.webp",
+  "semax": "SEMAX 10mg.webp",
   "sermorelin-acetate": "semorelin-acetate-5mg.webp",
-  "snap-8": "snap-8-10mg.jpg",
+  "snap-8": "SNAP 8  10mg.webp",
   "ss-31": "ss-31-10mg.webp",
-  "tb-500": "tb-500-5mg-3ml.jpg",
-  "tesamorelin": "tesamorelin-5mg.jpg",
+  "tb-500": "TB-500  5mg-2.webp",
+  "tesamorelin": "TESAMORELIN 10mg-1.webp",
   "thymalin-thymulin": "thymalin-thymylin-10mg.webp",
-  "thymosin-alpha-1": "thymosin-alpha-1-5mg.webp",
-  "tirzepatide": "tirzepatide-5mg.webp",
-  "vip": "vip-5mg.webp"
+  "thymosin-alpha-1": "Thymosin Alpha 1mg.webp",
+  "tirzepatide": "TIRZEPATIDE 10mg-3.webp",
+  "vip": "vip-5mg.webp",
+  "glutathione-600-1500": "GLUTATHIONE  200mg ml.webp",
+  "epitalon-spray": "EPITALON spray 10mg.webp",
+  "aod-9604-5mg-10mg": "AOD9604  5mg-2.webp",
+  "cjc-1295-ipamorelin": "CJC 1295 IPAMORELIN 5mg 5mg-2.webp",
+  "10-needles": "10 Needles-1.webp",
+  "l-carnitine-600mg": "L-CARNATINE 600mg 20mg.webp",
+  "h-frag": "H FRAG.webp",
+  "ghrp-2-10mg": "GHRP-2  10mg.webp",
+  "ss-31-elamipretide": "SS-31 10mg-1.webp",
+  "ahk-cu-50mg-100mg": "AHK-CU 50mg-1.webp",
+  "pt-141-bremelanotide": "PT-141 10mg.webp",
+  "kisspeptin": "KISSPEPTIN  10mg.webp",
+  "mt-1-10mg": "MT-1 10mg.webp",
+  "semax-spray": "SEMAX spray 5mg.webp",
+  "selank-spray": "SELANK spray 100mcg.webp",
+  "semax-selank-spray": "SEMAX + SELANK  spray 300mcg.webp",
+  "l-carnitine-400mg": "L-CARNATINE 400mg 20mg.webp",
+  "l-carnitine-200mg": "L-CARNATINE 200mg 20ml.webp",
+  "oxytocin-spray": "OXYTOCIN spray10mg.webp",
+  "pt-141-spray": "PT-141  spray 10mg.webp",
+  "dsip-spray": "DSIP spray 10mg.webp",
+  "kpv-spray": "KPV spray 5mg.webp",
+  "nad-spray": "NAD+ spray 50mg.webp",
+  "glow": "GLOW 70mg.webp",
+  "klow": "KLOW.webp",
+  "ara-290-10mg": "ARA-290  10mg.webp",
+  "ghrp-6-10mg": "GHRP-6  10mg.webp",
+  "sermorelin": "SERMORELIN 10mg.webp",
+  "igf-1-lr3": "IGF1 LR31mg-2.webp",
+  "dhea-10mg": "DHEA 10mg.webp",
+  "hcg-5000-iu": "HCG  5000 IU.webp",
+  "mt-2-melanotan-ii": "MT-2 10mg.webp",
+  "vip-vasoactive-intestinal-peptide": "VIP 10mg.webp",
+  "vip-spray": "VIP spray 10mg.webp",
+  "mt-2-spray": "MT-2 spray 10mg.webp",
+  "ghk-cu-spray": "GHK-CU spray 50mg.webp",
+  "bpc-157-spray": "BPC-157 spray 5mg.webp",
+  "dsip-delta-sleep-inducing-peptide": "DSIP 10mg.webp",
+  "cjc-1295-no-dac-10mg": "CJC-1295 No DAC  10mg.webp",
+  "cjc-1295-dac-5mg": "CJC W DAC  5mg.webp",
+  "semax-selank-blend": "SEMAX SELANK 10 10.webp",
+  "hcg-10000-iu": "HCG  10000 IU.webp",
+  "tesamorelin-ipamorelin-research-peptide": "TESA IPA 6mg 3mg.webp",
 };
 
 export default function ProductDirectory({ products, categories }: ProductDirectoryProps) {
@@ -158,7 +201,7 @@ export default function ProductDirectory({ products, categories }: ProductDirect
               <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#F8F8F6] via-[#F8F8F6]/80 to-transparent pointer-events-none z-20" />
               <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#F8F8F6] via-[#F8F8F6]/80 to-transparent pointer-events-none z-20" />
 
-              <div ref={categoryScrollRef} className="flex items-center justify-start gap-3 overflow-x-auto pb-4 px-10 scroll-smooth [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-black/5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-black/15 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-black/25 transition-all duration-300" data-lenis-prevent>
+              <div className="flex items-center justify-start gap-3 overflow-x-auto pb-4 px-10 scroll-smooth [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-black/5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-black/15 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-black/25 transition-all duration-300" data-lenis-prevent>
                 <button
                   onClick={() => setActiveCategory('all')}
                   className={`px-6 py-3 rounded-full font-dm-sans text-[10px] font-bold uppercase tracking-wider border flex items-center gap-2.5 transition-all duration-300 flex-shrink-0 cursor-pointer ${
@@ -216,7 +259,7 @@ export default function ProductDirectory({ products, categories }: ProductDirect
                   {/* Grainy Noise Overlay for premium luxury depth */}
                   <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                   
-                  <Link href={`/products/`} className="flex flex-col h-full relative z-10">
+                  <Link href={`/products/${product.slug}`} className="flex flex-col h-full relative z-10">
                     {/* Luxury Product Thumbnail Showcase */}
                     <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500">
                       
@@ -270,7 +313,7 @@ export default function ProductDirectory({ products, categories }: ProductDirect
                       </div>
                       
                       <Link 
-                        href={`/products/`} 
+                        href={`/products/${product.slug}`} 
                         className="flex items-center gap-1 text-black/50 text-[10px] font-dm-mono font-bold uppercase tracking-widest transition-colors hover:text-black"
                       >
                         Details <ChevronRight className="w-3.5 h-3.5 ml-0.5 transform transition-transform group-hover:translate-x-0.5" />

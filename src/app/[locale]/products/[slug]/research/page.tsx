@@ -259,7 +259,7 @@ export default async function ResearchPaperPage({
         <header className="sticky top-[70px] md:top-[90px] z-40 bg-[#F8F8F6]/85 backdrop-blur-xl border-b border-black/5 py-4">
           <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
             <Link 
-              href={`/products/`} 
+              href={`/products/${params.slug}`} 
               className="inline-flex items-center gap-2 text-xs font-dm-mono text-zinc-500 hover:text-black transition-colors"
             >
               <ChevronLeft className="w-4 h-4" />

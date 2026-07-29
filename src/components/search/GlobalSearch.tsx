@@ -123,7 +123,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
                   {results.map((product) => (
                     <Link
                       key={product.slug}
-                      href={`/products/`}
+                      href={`/products/${product.slug}`}
                       onClick={onClose}
                       className="flex items-center justify-between p-4 rounded-[1.5rem] hover:bg-white/5 group transition-all"
                     >

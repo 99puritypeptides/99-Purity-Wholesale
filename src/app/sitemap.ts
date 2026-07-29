@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import productsData from '@/data/products.json';
 import locationsData from '@/data/locations.json';
 import { getAllPosts } from '@/utils/mdx';
+import servicesRegistry from '@/data/services-content/index';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
@@ -38,6 +39,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: route === '' ? 1 : 0.8,
+      });
+    }
+  }
+
+  // Add category pages
+  const categories = Array.from(new Set(productsData.map(p => p.category)));
+  for (const locale of locales) {
+    const prefix = locale === 'en' ? '' : `/${locale}`;
+    for (const category of categories) {
+      sitemapEntries.push({
+        url: `${baseUrl}${prefix}/products/${category}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
+  }
+
+  // Add service pages
+  const services = Object.keys(servicesRegistry);
+  for (const locale of locales) {
+    const prefix = locale === 'en' ? '' : `/${locale}`;
+    for (const service of services) {
+      sitemapEntries.push({
+        url: `${baseUrl}${prefix}/services/${service}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.8,
       });
     }
   }

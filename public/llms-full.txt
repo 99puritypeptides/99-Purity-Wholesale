@@ -1,0 +1,91 @@
+# 99 Purity Wholesale - Comprehensive LLM Context & Developer Documentation
+
+## 1. Project Overview & Business Logic
+99 Purity Wholesale is a high-end, premium B2B e-commerce platform designed exclusively for laboratory and research procurement. It specializes in high-purity research peptides, amino acids, and chemical compounds. 
+
+**Core Differentiator:** 
+The platform operates on an "Inquiry/Quote" model rather than direct B2C checkout. Users browse products (sold in bulk Kits, e.g., "10mg × 10 Vials"), add them to an Inquiry Cart, and submit a Request for Quote (RFQ) to the sales team.
+
+## 2. Technology Stack & Frameworks
+- **Core Framework:** Next.js 14 (App Router methodology)
+- **Language:** TypeScript (Strict typing for components and data models)
+- **Styling:** Tailwind CSS (utility-first), utilizing custom theme variables for luxury aesthetics (glassmorphism, gradients).
+- **Animations:** Framer Motion (page transitions, micro-interactions) & GSAP/Lenis (Smooth Scrolling).
+- **Internationalization (i18n):** `next-intl` handling middleware routing for English (`en`) and Spanish (`es`).
+- **Icons:** `lucide-react`
+- **PWA (Progressive Web App):** Configured via `next-pwa` for offline capabilities and mobile installability.
+
+## 3. Architecture & Directory Structure
+```text
+/
+├── public/                 # Static public assets
+│   ├── product-images/     # High-res .webp images (89 active products)
+│   ├── locales/            # JSON dictionary files for translations (en.json, es.json)
+│   └── sw.js               # Service Worker for PWA
+├── src/
+│   ├── app/                # Next.js App Router root
+│   │   ├── [locale]/       # Dynamic locale segment for i18n
+│   │   ├── api/            # Serverless API Routes (e.g., /api/og for dynamic images)
+│   │   ├── sitemap.ts      # Dynamic XML sitemap generator
+│   │   └── robots.ts       # Robots.txt generator
+│   ├── components/         # Reusable React components (Client & Server)
+│   │   ├── products/       # Product grids, cards, AddToInquiry buttons
+│   │   ├── cart/           # Shopping/Inquiry Cart drawer and logic
+│   │   ├── search/         # Command-palette style global search
+│   │   ├── layout/         # Site Header, Footer, and Navigation
+│   │   └── ui/             # Micro-components (buttons, inputs)
+│   ├── data/               # Static JSON Databases (Source of Truth)
+│   │   ├── products.json   # 89 compounds, specs, and categories
+│   │   ├── locations.json  # 50 US States + major cities for Local SEO
+│   │   └── services.json   # Available lab services (HPLC testing, etc.)
+│   ├── hooks/              # Custom React Hooks
+│   │   ├── useNestedSmoothScroll.ts # Lenis scroll integration
+│   │   └── useCart.ts      # Context hook for inquiry state
+│   ├── i18n/               # next-intl configuration and routing
+│   └── lib/                # Utility functions and search engines (Fuzzy search)
+```
+
+## 4. Data Models & State Management
+### Product Schema (`src/data/products.json`)
+The source of truth for the catalog.
+- `name` (string): e.g., "BPC-157 / TB-500 Blend"
+- `slug` (string): URL identifier (e.g., `bpc-157-tb-500-blend`)
+- `category` (string): e.g., `recovery-research`
+- `specs` (string[]): Pack sizes available (e.g., `["5mg×10", "10mg×10"]`)
+- `description` (string): SEO-optimized scientific description.
+
+### Cart State (`CartProvider`)
+State is managed globally via React Context. The cart tracks `items` (which include `productId`, `spec`, and `quantity`) and syncs with `localStorage` to persist inquiries across sessions.
+
+## 5. UI/UX Design System
+- **Typography:** Custom fonts are heavily utilized:
+  - `font-absans`: Used for bold, modern headlines.
+  - `font-archia`: Used for technical copy and body text.
+  - `font-dm-mono`: Used for technical specs, badges, and small caps.
+  - `font-dm-sans`: Used for general UI text.
+- **Aesthetics:** The site uses a "scientific luxury" theme featuring:
+  - Blurry backdrops (`backdrop-blur-xl`)
+  - Subtle noise overlays (`bg-[url('.../noise.svg')]`) for texture.
+  - Minimalist monochromatic palettes with sharp accent colors.
+
+## 6. Advanced Implementations
+- **Image Mapping Engine:** Because product images are static, they are mapped explicitly in `src/components/products/ProductDirectory.tsx` (for the grid) and `src/app/[locale]/products/[slug]/page.tsx` (for individual pages mapped by spec).
+- **Fuzzy Search:** Built into `src/lib/search.ts` to allow users to quickly search for complex chemical names with typo tolerance.
+- **Peptide Calculator:** A complex client-side tool allowing researchers to input vial capacity and bacteriostatic water volume to calculate exact dosage per syringe tick mark.
+
+## 7. SEO & Indexing Strategy
+- **Flattened URLs:** Products are accessed via `/products/[slug]` (removing the category sub-path) to maximize URL authority.
+- **Dynamic Sitemap:** `sitemap.ts` programmatically loops through `products.json` and `locations.json` to generate over 300+ valid URLs, including localized prefixes (e.g., `/es/products/bpc-157`).
+- **Open Graph (OG) Images:** Dynamic OG images are generated using Next.js Image Response (`/api/og`) to create shareable link previews.
+- **Robots.txt:** Explicitly blocks `/api/` and internal Next.js assets to preserve crawl budget.
+
+## 8. Deployment & Build Notes
+- Runs on Vercel (or standard Node.js server using `npm run start`).
+- Requires `npm run build` to pre-render the massive static footprint (SSG) of location pages and product research pages.
+- Edge runtime is selectively used/disabled depending on static generation requirements.
+
+## 9. Target Market & Demand Generation
+- **Target Audience:** The primary demographics are compounding pharmacies, independent research laboratories, universities, and bio-tech startups. 
+- **Wholesale Demand Drivers:** The site targets high-volume B2B buyers looking for rigorously tested (HPLC & Mass Spectrometry) compounds with verifiable Certificates of Analysis (COAs). 
+- **SEO Keyword Focus:** The architecture (flattened URLs and location pages) is specifically designed to capture localized B2B search demand (e.g., "wholesale research peptides in [State/City]").
+- **Value Proposition:** 99%+ purity guaranteed, batch-matched testing, and secure US-based priority logistics.

@@ -8,10 +8,20 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: [
+          '/_next/',
+          '/api/',
+          '/static/',
+        ],
       },
       {
         userAgent: ['Google-Extended', 'GPTBot', 'ClaudeBot', 'PerplexityBot', 'anthropic-ai'],
         allow: '/',
+        disallow: [
+          '/_next/',
+          '/api/',
+          '/static/',
+        ],
       }
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

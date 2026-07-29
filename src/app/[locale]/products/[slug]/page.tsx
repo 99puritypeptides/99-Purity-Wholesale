@@ -55,189 +55,286 @@ export async function generateMetadata({ params }: { params: { locale: string; s
   };
 }
 
-const productSpecImagesMap: Record<string, Record<string, string>> = {
+const productSpecImagesMap = {
   "5-amino-1mq": {
-    "10mg": "5-amino-1mq-10mg.jpg"
+    "10mg": "5-AMINO-1MQ 50mg.webp",
   },
   "adamax": {
     "5mg": "adamax-5mg.webp",
-    "10mg": "adamax-10mg.webp"
+    "10mg": "adamax-10mg.webp",
   },
   "adipotide-fttp": {
     "2mg": "adipotide-fttp-2mg.webp",
     "5mg": "adipotide-fttp-5mg.webp",
-    "10mg": "adipotide-fttp-10mg.webp"
+    "10mg": "adipotide-fttp-10mg.webp",
   },
   "aod9604": {
     "5mg": "aod9604-5mg.webp",
-    "10mg": "aod9604-10mg.webp"
+    "10mg": "aod9604-10mg.webp",
   },
   "b12": {
-    "10mg": "b12-10mg.webp"
+    "10mg": "b12-10mg.webp",
   },
   "b7-33": {
     "2mg": "b7-33-2mg.webp",
-    "10mg": "b7-33-10mg.webp"
+    "10mg": "b7-33-10mg.webp",
   },
   "bac-water": {
-    "3ml": "bac-water-3ml.webp",
-    "10ml": "bac-water-10ml.webp"
+    "10mg": "BAC WATER 3ML.webp",
   },
   "bpc-157": {
-    "5mg": "bpc-157-5mg.jpg",
-    "10mg": "bpc-157-10mg.jpg"
+    "10mg": "BPC-157 5mg-5.webp",
   },
   "bpc-5mg-tb-5mg": {
-    "10mg": "bpc-157-tb-500-5-5mg.jpg"
+    "10mg": "BPC-157 TB-500 MIX 5mg 5mg-2.webp",
   },
   "bpc-10mg-tb-10mg": {
-    "20mg": "bpc-157-tb-500-10-10mg.jpg"
+    "20mg": "bpc-157-tb-500-10-10mg.jpg",
   },
   "cagrilintide": {
-    "5mg": "cagrilintide-5mg.webp",
-    "10mg": "cagrilintide.jpg"
+    "10mg": "CAGRILINTIDE 10mg.webp",
   },
   "cagrisema": {
-    "5mg": "cagrisema-2.5+2.5-5mg.webp"
+    "5mg": "cagrisema-2.5+2.5-5mg.webp",
   },
   "cjc-1295-dac": {
-    "5mg": "cjc-1295-dac5mg.webp"
+    "5mg": "cjc-1295-dac5mg.webp",
   },
   "cjc-1295-no-dac": {
     "5mg": "cjc-1295-no-dac-5mg.webp",
-    "10mg": "cjc-1295-no-dac-10mg.webp"
+    "10mg": "cjc-1295-no-dac-10mg.webp",
   },
   "cjc-1295-ipam": {
-    "10mg": "cjc-1295-ipamorelin-10-10mg.jpg"
+    "10mg": "cjc-1295-ipamorelin-10-10mg.jpg",
   },
   "dihexa": {
-    "10mg": "dihexa-10mg.webp"
+    "10mg": "dihexa-10mg.webp",
   },
   "dsip": {
-    "5mg": "dsip-5mg.webp"
+    "5mg": "dsip-5mg.webp",
   },
   "dulaglutide": {
     "5mg": "dulaglutide-5mg.webp",
-    "10mg": "dulaglutide-10mg.webp"
+    "10mg": "dulaglutide-10mg.webp",
   },
   "epithalon": {
-    "10mg": "epithalon-10mg.jpg"
+    "10mg": "EPITHALON 10mg.webp",
   },
   "foxo4": {
     "2mg": "foxo4-2mg.webp",
-    "10mg": "fox04-10mg.jpg"
+    "10mg": "fox04-10mg.jpg",
   },
   "foxo4-dri": {
-    "10mg": "foxo4-dri-10mg.webp"
+    "10mg": "foxo4-dri-10mg.webp",
   },
   "ghk-cu": {
-    "50mg": "ghk-cu-50mg.jpg",
-    "100mg": "ghk-cu-100mg.jpg"
+    "10mg": "GHK-CU 50mg-1.webp",
   },
   "glow-blend": {
-    "70mg": "glow-hair-skin-nail-blend.jpg"
+    "70mg": "glow-hair-skin-nail-blend.jpg",
   },
   "klow-blend": {
-    "80mg": "klow-custom-peptide-kit.jpg"
+    "80mg": "klow-custom-peptide-kit.jpg",
   },
   "glutathione": {
     "600mg": "glutathione-600mg.webp",
-    "1500mg": "glutathione-1500mg.webp"
+    "1500mg": "glutathione-1500mg.webp",
   },
   "ipamorelin": {
-    "5mg": "ipamorelin-5mg.jpg",
-    "10mg": "ipamorelin-10mg.jpg"
+    "10mg": "IPAMORELIN 5mg-2.webp",
   },
   "kpv": {
-    "5mg": "kpv-5mg.webp",
-    "10mg": "kpv-10mg.jpg"
+    "10mg": "KPV 10mg.webp",
   },
   "l-carnitine": {
-    "1200mg": "l-carnitine-1200mg.webp"
+    "1200mg": "l-carnitine-1200mg.webp",
   },
   "lipo-c": {
-    "10ml": "lipo-c-10ml.webp"
+    "10mg": "LIPO-C.webp",
   },
   "ll37": {
-    "5mg": "ll37-5mg.jpg"
+    "5mg": "ll37-5mg.jpg",
   },
   "mic-blend": {
-    "10mg": "mic-lipo-c+b12-10mg.webp"
+    "10mg": "mic-lipo-c+b12-10mg.webp",
   },
   "mots-c": {
-    "10mg": "mots-c-10mg.jpg",
-    "40mg": "mots-c-40mg.jpg"
+    "10mg": "MOTS-C 10mg-1.webp",
   },
   "nad": {
-    "100mg": "nad-100mg.jpg",
-    "500mg": "NAD+ 500mg.jpg",
-    "1000mg": "nad-1000mg.jpg"
+    "10mg": "NAD+ 500mg-1.webp",
   },
   "retatrutide": {
-    "5mg": "retatrutide-5mg.webp",
-    "10mg": "retatrutide-10mg.jpg",
-    "15mg": "retatrutide-15mg.webp",
-    "20mg": "retatrutide-20mg.jpg",
-    "30mg": "retatrutide-30mg.jpg",
-    "60mg": "retatrutide-60mg.webp"
+    "10mg": "RETATRUTIDE 10mg-6.webp",
   },
   "selank": {
-    "5mg": "selank-5mg.webp",
-    "10mg": "selank-10mg.jpg"
+    "10mg": "SELANK 10mg.webp",
   },
   "semaglutide": {
-    "10mg": "semaglutide-10mg.jpg",
-    "15mg": "semaglutide-15mg.webp",
-    "20mg": "semaglutide-20mg.jpg",
-    "30mg": "semaglutide-30mg.webp"
+    "10mg": "SEMAGLUTIDE 5mg-2.webp",
   },
   "semax": {
-    "5mg": "semax-5mg.webp",
-    "10mg": "semax-10mg.jpg"
+    "10mg": "SEMAX 10mg.webp",
   },
   "sermorelin-acetate": {
     "5mg": "semorelin-acetate-5mg.webp",
-    "10mg": "sermorelin-10mg.jpg"
+    "10mg": "sermorelin-10mg.jpg",
   },
   "snap-8": {
-    "10mg": "snap-8-10mg.jpg",
-    "100mg": "snap-8-100mg.webp"
+    "10mg": "SNAP 8  10mg.webp",
   },
   "ss-31": {
     "10mg": "ss-31-10mg.webp",
-    "50mg": "ss-31-50mg.jpg"
+    "50mg": "ss-31-50mg.jpg",
   },
   "tb-500": {
-    "5mg": "tb-500-5mg-3ml.jpg",
-    "10mg": "tb-500-10mg.jpg"
+    "10mg": "TB-500  5mg-2.webp",
   },
   "tesamorelin": {
-    "5mg": "tesamorelin-5mg.jpg",
-    "10mg": "tesamorelin-10mg.jpg",
-    "20mg": "tesamorelin-20mg.jpg"
+    "10mg": "TESAMORELIN 10mg-1.webp",
   },
   "thymalin-thymulin": {
-    "10mg": "thymalin-thymylin-10mg.webp"
+    "10mg": "thymalin-thymylin-10mg.webp",
   },
   "thymosin-alpha-1": {
-    "5mg": "thymosin-alpha-1-5mg.webp",
-    "10mg": "thymosin-alpha-1-10mg.webp"
+    "10mg": "Thymosin Alpha 1mg.webp",
   },
   "tirzepatide": {
-    "5mg": "tirzepatide-5mg.webp",
-    "10mg": "tirzepatide-10mg.jpg",
-    "15mg": "tirzepatide-15mg.webp",
-    "20mg": "tirzepatide-20mg.jpg",
-    "30mg": "tirzepatide-30mg.webp",
-    "40mg": "tirzepatide-40mg.webp",
-    "50mg": "tirzepatide-50mg.webp",
-    "60mg": "tirzepatide-60mg.jpg",
-    "80mg": "tirzepatide-80-mg.webp"
+    "10mg": "TIRZEPATIDE 10mg-3.webp",
   },
   "vip": {
     "5mg": "vip-5mg.webp",
-    "10mg": "vip-10mg.jpg"
-  }
+    "10mg": "vip-10mg.jpg",
+  },
+  "glutathione-600-1500": {
+    "10mg": "GLUTATHIONE  200mg ml.webp",
+  },
+  "epitalon-spray": {
+    "10mg": "EPITALON spray 10mg.webp",
+  },
+  "aod-9604-5mg-10mg": {
+    "10mg": "AOD9604  5mg-2.webp",
+  },
+  "cjc-1295-ipamorelin": {
+    "10mg": "CJC 1295 IPAMORELIN 5mg 5mg-2.webp",
+  },
+  "10-needles": {
+    "10mg": "10 Needles-1.webp",
+  },
+  "l-carnitine-600mg": {
+    "10mg": "L-CARNATINE 600mg 20mg.webp",
+  },
+  "h-frag": {
+    "10mg": "H FRAG.webp",
+  },
+  "ghrp-2-10mg": {
+    "10mg": "GHRP-2  10mg.webp",
+  },
+  "ss-31-elamipretide": {
+    "10mg": "SS-31 10mg-1.webp",
+  },
+  "ahk-cu-50mg-100mg": {
+    "10mg": "AHK-CU 50mg-1.webp",
+  },
+  "pt-141-bremelanotide": {
+    "10mg": "PT-141 10mg.webp",
+  },
+  "kisspeptin": {
+    "10mg": "KISSPEPTIN  10mg.webp",
+  },
+  "mt-1-10mg": {
+    "10mg": "MT-1 10mg.webp",
+  },
+  "semax-spray": {
+    "10mg": "SEMAX spray 5mg.webp",
+  },
+  "selank-spray": {
+    "10mg": "SELANK spray 100mcg.webp",
+  },
+  "semax-selank-spray": {
+    "10mg": "SEMAX + SELANK  spray 300mcg.webp",
+  },
+  "l-carnitine-400mg": {
+    "10mg": "L-CARNATINE 400mg 20mg.webp",
+  },
+  "l-carnitine-200mg": {
+    "10mg": "L-CARNATINE 200mg 20ml.webp",
+  },
+  "oxytocin-spray": {
+    "10mg": "OXYTOCIN spray10mg.webp",
+  },
+  "pt-141-spray": {
+    "10mg": "PT-141  spray 10mg.webp",
+  },
+  "dsip-spray": {
+    "10mg": "DSIP spray 10mg.webp",
+  },
+  "kpv-spray": {
+    "10mg": "KPV spray 5mg.webp",
+  },
+  "nad-spray": {
+    "10mg": "NAD+ spray 50mg.webp",
+  },
+  "glow": {
+    "10mg": "GLOW 70mg.webp",
+  },
+  "klow": {
+    "10mg": "KLOW.webp",
+  },
+  "ara-290-10mg": {
+    "10mg": "ARA-290  10mg.webp",
+  },
+  "ghrp-6-10mg": {
+    "10mg": "GHRP-6  10mg.webp",
+  },
+  "sermorelin": {
+    "10mg": "SERMORELIN 10mg.webp",
+  },
+  "igf-1-lr3": {
+    "10mg": "IGF1 LR31mg-2.webp",
+  },
+  "dhea-10mg": {
+    "10mg": "DHEA 10mg.webp",
+  },
+  "hcg-5000-iu": {
+    "10mg": "HCG  5000 IU.webp",
+  },
+  "mt-2-melanotan-ii": {
+    "10mg": "MT-2 10mg.webp",
+  },
+  "vip-vasoactive-intestinal-peptide": {
+    "10mg": "VIP 10mg.webp",
+  },
+  "vip-spray": {
+    "10mg": "VIP spray 10mg.webp",
+  },
+  "mt-2-spray": {
+    "10mg": "MT-2 spray 10mg.webp",
+  },
+  "ghk-cu-spray": {
+    "10mg": "GHK-CU spray 50mg.webp",
+  },
+  "bpc-157-spray": {
+    "10mg": "BPC-157 spray 5mg.webp",
+  },
+  "dsip-delta-sleep-inducing-peptide": {
+    "10mg": "DSIP 10mg.webp",
+  },
+  "cjc-1295-no-dac-10mg": {
+    "10mg": "CJC-1295 No DAC  10mg.webp",
+  },
+  "cjc-1295-dac-5mg": {
+    "10mg": "CJC W DAC  5mg.webp",
+  },
+  "semax-selank-blend": {
+    "10mg": "SEMAX SELANK 10 10.webp",
+  },
+  "hcg-10000-iu": {
+    "10mg": "HCG  10000 IU.webp",
+  },
+  "tesamorelin-ipamorelin-research-peptide": {
+    "10mg": "TESA IPA 6mg 3mg.webp",
+  },
 };
 
 export default async function ProductPage({ params }: { params: { locale: string, slug: string } }) {
@@ -821,7 +918,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                     {/* Grainy Noise Overlay for premium luxury depth */}
                     <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
                     
-                    <Link href={`/products/`} className="flex flex-col h-full relative z-10">
+                    <Link href={`/products/${rp.slug}`} className="flex flex-col h-full relative z-10">
                       {/* Luxury Product Thumbnail Showcase */}
                       <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
                         {productImage ? (
@@ -869,7 +966,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                         </div>
                         
                         <Link 
-                          href={`/products/`} 
+                          href={`/products/${rp.slug}`} 
                           className="flex items-center gap-1 text-black/50 text-[10px] font-dm-mono font-bold uppercase tracking-widest transition-colors hover:text-black"
                         >
                           Details <ChevronRight className="w-3.5 h-3.5 ml-0.5 transform transition-transform group-hover:translate-x-0.5" />
