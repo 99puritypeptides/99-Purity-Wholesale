@@ -379,7 +379,7 @@
     "announcement": "For licensed professionals and researchers only",
     "nav": {
       "products": "Products",
-      "quality": "Quality",
+      "coa": "COAs",
       "calculator": "Calculator",
       "services": "Services",
       "blog": "Blog",
@@ -439,7 +439,7 @@
     },
     "selectLanguage": "Select Language",
     "cart": {
-      "title": "Inquiry List",
+      "title": "Inquiry Cart",
       "registered": "Registered Compounds",
       "productCount": "{count} {count, plural, one {product} other {products}} in your inquiry",
       "clear": "Clear all",
@@ -459,7 +459,7 @@
         "tier3": "Tier 3: Enterprise"
       },
       "empty": {
-        "title": "Inquiry List Empty",
+        "title": "Inquiry Cart Empty",
         "desc": "Browse our verified compound catalog to begin building your wholesale procurement request.",
         "cta": "Browse Catalog"
       }
@@ -494,8 +494,8 @@
         "USDT"
       ],
       "letsTalk": "Let's talk",
-      "disclaimer": "Disclaimer",
-      "disclaimerContent": "All compounds are strictly for in vitro laboratory research and analytical testing by licensed professionals. Not for human or veterinary consumption, therapeutic use, or clinical application. Buyers assume all regulatory responsibility.",
+      "disclaimer": "CRITICAL REGULATORY DISCLAIMER",
+      "disclaimerContent": "IMPORTANT NOTICE: All compounds supplied by 99 Purity Wholesale are strictly for in vitro laboratory research, analytical testing, and manufacturing purposes by qualified professionals only. These products are NOT FDA-approved and are categorically NOT intended for human or veterinary consumption, clinical diagnostics, therapeutic use, or any form of dietary supplementation. Introduction of these compounds into the human or animal body is strictly prohibited by law. 99 Purity Wholesale does not provide medical advice, dosing instructions, or treatment guidelines. By purchasing, the buyer acknowledges full compliance with all local, state, and federal regulations regarding the handling, storage, and application of research chemicals, and assumes all liability for their use.",
       "rights": "All rights reserved.",
       "compliance": "* All research compounds are for laboratory use only. Not for human consumption.",
       "privacy": "Privacy",
@@ -505,7 +505,7 @@
       "instTitle": "Institutional",
       "legalTitle": "Legal",
       "categories": "Categories",
-      "wholesaleApp": "Wholesale App",
+      "wholesaleApp": "Wholesale Application",
       "fulfillment": "Fulfillment",
       "partnerProgram": "Partner Program",
       "refundPolicy": "Refund Policy",
@@ -517,7 +517,14 @@
       "welcome": "You're welcome.",
       "creditLab": "U.S. Research Peptide Supplier",
       "creditUSA": "USA Manufactured",
-      "creditBy": "Designed & Developed by"
+      "creditBy": "Designed & Developed by",
+      "dropshipping": "Dropshipping",
+      "privateLabel": "Private Label",
+      "webDev": "Web Development",
+      "servicesTitle": "Our Services",
+      "launchSupport": "Brand Launch",
+      "salesDist": "Sales & Distribution",
+      "fulfillmentConsulting": "Fulfillment Consulting"
     }
   },
   "NotFound": {
@@ -868,9 +875,9 @@
     }
   },
   "Meta": {
-    "homeTitle": "Wholesale Peptides USA | ≥99% Purity | 99 Purity Wholesale",
+    "homeTitle": "Buy Peptides Online USA | Wholesale Bulk Supplier | 99 Purity Wholesale",
     "homeDesc": "Buy wholesale peptides in the US from 99 Purity Wholesale. U.S.-manufactured, ≥99% purity, Freedom Diagnostic-verified COAs. B2B pricing for compounding pharmacies, wellness clinics, and licensed distributors.",
-    "productsTitle": "Wholesale Peptide Catalog",
+    "productsTitle": "Research Peptides for Sale | High Purity Catalog",
     "productsDesc": "High-quality America's made peptides for qualified institutions and researchers. View our wholesale catalog.",
     "servicesTitle": "Peptide Dropshipping, Private Label & Wholesale Services",
     "servicesDesc": "U.S.-manufactured, ≥99% purity research peptides for B2B professionals. Dropshipping, private label, launch support, and website development for compounding pharmacies, wellness clinics, and licensed distributors.",
@@ -897,7 +904,7 @@
     "locationsDesc": "Fast and secure domestic fulfillment to research institutions across the United States with 99 Purity Wholesale.",
     "blogTitle": "Wholesale Peptide Knowledge Hub | Research Guides & COA Analysis",
     "blogDesc": "Expert guides on sourcing wholesale peptides in the USA, evaluating COA documentation, GLP-1 procurement, dropshipping programs, and compliance considerations for compounding pharmacies and wellness clinics.",
-    "productTitle": "{name} — Wholesale Bulk Supply",
+    "productTitle": "{name} - Wholesale Bulk Supply",
     "productDesc": "Buy {name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping. Research use only.",
     "productOgTitle": "{name} | Bulk Wholesale Research Peptides",
     "productOgDesc": "Premium {name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment.",
@@ -1446,10 +1453,10 @@
     "faqTitle": "{title} FAQ",
     "whatsappMsg": "Hi, I need wholesale pricing for {name}"
   },
-  "QualityPage": {
+  "COAPage": {
     "badge": "Third-Party Verified Purity",
-    "title": "Proof in Every Vial",
-    "subtitle": "In research, the integrity of your compound determines the integrity of your data. Every batch supplied by 99 Purity Wholesale is independently verified by Freedom Diagnostic using reversed-phase HPLC and LC-MS analysis to confirm ≥99% purity before shipment.",
+    "title": "Certificates of Analysis",
+    "subtitle": "In research, the integrity of your compound determines the integrity of your data. Search our complete database of Certificates of Analysis. Every batch is independently verified by Freedom Diagnostic using reversed-phase HPLC and LC-MS analysis.",
     "pipeline": {
       "title": "Our Analytical Pipeline",
       "subtitle": "A rigorous sequence of domestic synthesis, independent laboratory testing, and batch-specific documentation — applied to every compound before it ships.",
@@ -1582,8 +1589,8 @@
         },
         {
           "q": "Can I request a sample COA before placing a wholesale order?",
-          "a": "Yes. Prospective wholesale accounts can request sample COA documentation for any compound in our catalog prior to submitting an order. Contact our B2B team via [WhatsApp](https://wa.me/18437439007) or email at [sales@99puritypeptides.com](mailto:sales@99puritypeptides.com) to request the batch documentation for your compound of interest.",
-          "link": "https://wa.me/18437439007",
+          "a": "Yes. Prospective wholesale accounts can request sample COA documentation for any compound in our catalog prior to submitting an order. Contact our B2B team via [WhatsApp](https://wa.me/18433307365) or email at [sales@99puritypeptides.com](mailto:sales@99puritypeptides.com) to request the batch documentation for your compound of interest.",
+          "link": "https://wa.me/18433307365",
           "linkText": "Request via WhatsApp"
         },
         {
@@ -1597,6 +1604,53 @@
           "a": "SPPS is the industry-standard method for manufacturing research peptides. Amino acids are assembled sequentially on a solid resin support, building the target peptide chain one residue at a time. This method allows precise control over sequence fidelity and minimizes the byproduct profile. The resulting crude peptide is then purified and submitted to Freedom Diagnostic for analytical verification before any batch is released to the wholesale catalog.",
           "link": "/products",
           "linkText": "Browse Peptide Catalog"
+        }
+      ]
+    },
+    "howToRead": {
+      "title": "How to Read a COA",
+      "subtitle": "Understanding the analytical data behind your compound.",
+      "steps": [
+        {
+          "id": "01",
+          "title": "Batch Identification",
+          "desc": "The Lot Number directly corresponds to the tracking ID on your physical vial, ensuring full traceability."
+        },
+        {
+          "id": "02",
+          "title": "HPLC Purity",
+          "desc": "Reversed-phase High-Performance Liquid Chromatography separates the sample. We require ≥99% target compound peak area."
+        },
+        {
+          "id": "03",
+          "title": "LC-MS Identity",
+          "desc": "Mass Spectrometry confirms the exact molecular weight, verifying the specific amino acid sequence."
+        },
+        {
+          "id": "04",
+          "title": "Independent Sign-off",
+          "desc": "Every document carries the signature of the Freedom Diagnostic laboratory director, certifying the results."
+        }
+      ]
+    },
+    "parameters": {
+      "title": "Our Testing Parameters",
+      "subtitle": "Beyond basic purity. What we test for and why it matters.",
+      "cards": [
+        {
+          "title": "Sequence Identity",
+          "subtitle": "Via Mass Spectrometry",
+          "desc": "Ensures the synthesized peptide exactly matches the target amino acid sequence with zero truncation or deletion errors."
+        },
+        {
+          "title": "Compound Purity",
+          "subtitle": "Via HPLC",
+          "desc": "Quantifies the exact percentage of the target compound versus synthesis byproducts. Our strict minimum is ≥99%."
+        },
+        {
+          "title": "TFA & Moisture",
+          "subtitle": "Via Karl Fischer",
+          "desc": "Monitors Trifluoroacetic acid and water content to guarantee maximum stability, accurate dosing, and shelf life."
         }
       ]
     }
@@ -1920,8 +1974,8 @@
         },
         {
           "q": "Do your articles include current peptide pricing data?",
-          "a": "We discuss pricing tier frameworks and wholesale volume thresholds in structural terms — not specific dollar figures, which shift based on volume, compound, and market conditions. For current wholesale pricing on any compound, contact our B2B team directly via [WhatsApp](https://wa.me/18437439007). Verified wholesale accounts receive a tiered price list upon account approval.",
-          "link": "https://wa.me/18437439007",
+          "a": "We discuss pricing tier frameworks and wholesale volume thresholds in structural terms — not specific dollar figures, which shift based on volume, compound, and market conditions. For current wholesale pricing on any compound, contact our B2B team directly via [WhatsApp](https://wa.me/18433307365). Verified wholesale accounts receive a tiered price list upon account approval.",
+          "link": "https://wa.me/18433307365",
           "linkText": "Request Current Pricing"
         },
         {
@@ -2057,7 +2111,9 @@
         "contactMethod": "Preferred Contact Method",
         "notes": "Additional Notes",
         "notesPlaceholder": "Any specific requirements, questions, or context about your program...",
-        "submit": "Submit Wholesale Application"
+        "submit": "Submit Wholesale Application",
+        "phone": "Phone Number",
+        "phonePlaceholder": "e.g., +1 (555) 123-4567"
       },
       "footer": "Application information is kept strictly confidential. Our B2B team will respond within 1 business day with pricing details and account setup information. By submitting, you confirm all products will be used for research and laboratory purposes only by licensed professionals."
     },

@@ -17,7 +17,7 @@ export default function Footer() {
       links: [
         { label: t('nav.products'), href: '/products' },
         { label: t('footer.categories'), href: '/products#categories' },
-        { label: t('nav.quality'), href: '/quality' },
+        { label: t('nav.coa'), href: '/certificates-of-analysis' },
         { label: t('nav.blog'), href: '/blog' },
       ]
     },
@@ -27,15 +27,25 @@ export default function Footer() {
         { label: t('nav.services'), href: '/services' },
         { label: t('nav.about'), href: '/about' },
         { label: t('nav.contact'), href: '/contact' },
+        { label: t('nav.calculator'), href: '/peptide-calculator' },
         { label: t('footer.glossary'), href: '/glossary' },
+      ]
+    },
+    {
+      title: t('footer.servicesTitle'),
+      links: [
+        { label: t('footer.dropshipping'), href: '/services#dropshipping' },
+        { label: t('footer.launchSupport'), href: '/services#launch-support' },
+        { label: t('footer.webDev'), href: '/services#website-development' },
+        { label: t('footer.salesDist'), href: '/services#sales-distribution' },
+        { label: t('footer.privateLabel'), href: '/services#private-label' },
+        { label: t('footer.fulfillmentConsulting'), href: '/services#fulfillment-consulting' },
       ]
     },
     {
       title: t('footer.instTitle'),
       links: [
         { label: t('footer.wholesaleApp'), href: '/wholesale-application' },
-        { label: t('footer.fulfillment'), href: '/services#fulfillment' },
-        { label: t('footer.partnerProgram'), href: '/services#partners' },
         { label: t('footer.locations'), href: '/locations' },
       ]
     },
@@ -89,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Main Links Grid */}
-        <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-24 mb-20">
+        <div className="relative z-10 grid grid-cols-2 md:grid-cols-5 gap-10 lg:gap-16 mb-20">
           {footerLinks.map((column) => (
             <div key={column.title}>
               <h4 className="text-white/30 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.3em] mb-8">

@@ -1,13 +1,37 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle, Mail, CheckCircle2 } from "lucide-react";
 import FaqSection from "@/components/shared/FaqSection";
+import { submitContactForm } from "@/app/actions/formActions";
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
   const locale = useLocale();
   const isEs = locale === "es";
+
+  const [isPending, setIsPending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPending(true);
+    setErrorMessage(null);
+    setIsSuccess(false);
+
+    const formData = new FormData(e.currentTarget);
+    const result = await submitContactForm(null, formData);
+
+    setIsPending(false);
+    if (result.success) {
+      setIsSuccess(true);
+      (e.target as HTMLFormElement).reset();
+    } else {
+      setErrorMessage(result.error || (isEs ? "Ocurrió un error al enviar el formulario." : "An error occurred while submitting the form."));
+    }
+  };
 
   const faqItems = ["q1", "q2", "q3", "q4", "q5", "q6", "q7"];
   const faqs = faqItems.map((id) => ({
@@ -16,7 +40,7 @@ export default function ContactPage() {
   }));
 
   const handleWhatsAppClick = () => {
-    const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "18437439007").replace(/\D/g, '');
+    const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "18433307365").replace(/\D/g, '');
     const message = isEs
       ? "Hola, me gustaría conocer sus precios y niveles mayoristas. Mi negocio es "
       : "Hi, I'd like to learn about your wholesale pricing and tiers. My business is a ";
@@ -139,55 +163,42 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <form action="https://formspree.io/f/placeholder" method="POST" className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                        {t("Form.fields.businessName")}
-                      </label>
-                      <input
-                        type="text"
-                        name="businessName"
-                        required
-                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium"
-                      />
+                {isSuccess && (
+                  <div className="p-6 bg-emerald-50 border border-emerald-200/50 text-emerald-800 rounded-2xl flex items-start gap-3.5 mb-6">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-sm uppercase tracking-wider">{isEs ? "¡Inscripción Recibida!" : "Inquiry Received!"}</h4>
+                      <p className="text-xs text-emerald-700/90 font-medium mt-1 leading-relaxed">
+                        {isEs ? "Gracias por contactarnos. Nuestro equipo revisará sus datos y se comunicará con usted a la brevedad." : "Thank you for reaching out. Our team will review your credentials and follow up with you shortly."}
+                      </p>
                     </div>
-                    <div className="space-y-2">
-                      <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                        {t("Form.fields.businessType")}
-                      </label>
-                      <div className="relative">
-                        <select
-                          name="businessType"
-                          required
-                          className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all appearance-none font-archia text-sm font-medium cursor-pointer"
-                        >
-                          <option value="" disabled selected>
-                            {isEs ? "Seleccionar..." : "Select..."}
-                          </option>
-                          <option value="clinic">
-                            {isEs ? "Clínica de Bienestar" : "Wellness Clinic"}
-                          </option>
-                          <option value="pharmacy">
-                            {isEs ? "Farmacia de Compuestos" : "Compounding Pharmacy"}
-                          </option>
-                          <option value="distributor">
-                            {isEs ? "Distribuidor" : "Distributor"}
-                          </option>
-                          <option value="research">
-                            {isEs ? "Centro de Investigación" : "Research Facility"}
-                          </option>
-                          <option value="other">
-                            {isEs ? "Otro" : "Other"}
-                          </option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-black/40">
-                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                          </svg>
-                        </div>
-                      </div>
+                  </div>
+                )}
+
+                {errorMessage && (
+                  <div className="p-6 bg-rose-50 border border-rose-200/50 text-rose-800 rounded-2xl flex items-start gap-3.5 mb-6">
+                    <div className="w-5 h-5 bg-rose-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="text-rose-700 font-bold text-xs">!</span>
                     </div>
+                    <div>
+                      <h4 className="font-bold text-sm uppercase tracking-wider">{isEs ? "Error al Enviar" : "Submission Failed"}</h4>
+                      <p className="text-xs text-rose-700/90 font-medium mt-1 leading-relaxed">{errorMessage}</p>
+                    </div>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
+                      {isEs ? "Nombre Completo" : "Full Name"}
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      disabled={isPending}
+                      className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium disabled:opacity-50"
+                    />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -199,7 +210,8 @@ export default function ContactPage() {
                         type="email"
                         name="email"
                         required
-                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium"
+                        disabled={isPending}
+                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium disabled:opacity-50"
                       />
                     </div>
                     <div className="space-y-2">
@@ -209,104 +221,32 @@ export default function ContactPage() {
                       <input
                         type="tel"
                         name="phone"
-                        required
-                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium"
+                        disabled={isPending}
+                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium disabled:opacity-50"
                       />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                        {t("Form.fields.state")}
-                      </label>
-                      <input
-                        type="text"
-                        name="state"
-                        required
-                        className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-sm font-medium"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                        {t("Form.fields.volume")}
-                      </label>
-                      <div className="relative">
-                        <select
-                          name="volume"
-                          required
-                          className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all appearance-none font-archia text-sm font-medium cursor-pointer"
-                        >
-                          <option value="" disabled selected>
-                            {isEs ? "Seleccionar..." : "Select..."}
-                          </option>
-                          <option value="under50">
-                            {isEs ? "Menos de 50 viales/mes" : "Under 50 vials/mo"}
-                          </option>
-                          <option value="50-200">
-                            {isEs ? "50 - 200 viales/mes" : "50 - 200 vials/mo"}
-                          </option>
-                          <option value="200-500">
-                            {isEs ? "200 - 500 viales/mes" : "200 - 500 vials/mo"}
-                          </option>
-                          <option value="500+">
-                            {isEs ? "Más de 500 viales/mes" : "500+ vials/mo"}
-                          </option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-black/40">
-                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                          </svg>
-                        </div>
-                      </div>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                      {t("Form.fields.products")}
+                      {isEs ? "Mensaje" : "Message"}
                     </label>
                     <textarea
-                      name="products"
-                      rows={3}
+                      name="message"
+                      rows={5}
                       required
-                      placeholder="e.g. BPC-157, Semaglutide, Tirzepatide..."
-                      className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all resize-none font-archia text-sm font-medium"
+                      disabled={isPending}
+                      placeholder={isEs ? "¿En qué podemos ayudarle?" : "How can we help you?"}
+                      className="w-full bg-[#F8F8F6] border border-black/5 rounded-xl px-4 py-3.5 text-black placeholder-slate-400 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all resize-none font-archia text-sm font-medium disabled:opacity-50"
                     ></textarea>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="block text-black/40 font-dm-mono text-[10px] font-bold uppercase tracking-widest">
-                      {t("Form.fields.contactMethod")}
-                    </label>
-                    <div className="flex space-x-6">
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="contactMethod"
-                          value="whatsapp"
-                          defaultChecked
-                          className="text-[#13a7b7] focus:ring-[#13a7b7] bg-[#F8F8F6] border-black/10"
-                        />
-                        <span className="text-black/70 font-archia text-sm font-medium">WhatsApp</span>
-                      </label>
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input
-                          type="radio"
-                          name="contactMethod"
-                          value="email"
-                          className="text-[#13a7b7] focus:ring-[#13a7b7] bg-[#F8F8F6] border-black/10"
-                        />
-                        <span className="text-black/70 font-archia text-sm font-medium">Email</span>
-                      </label>
-                    </div>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-black hover:bg-black/85 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_10px_30px_rgba(0,0,0,0.15)] font-archia tracking-wider uppercase text-xs mt-4 cursor-pointer"
+                    disabled={isPending}
+                    className="w-full bg-black hover:bg-black/85 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_10px_30px_rgba(0,0,0,0.15)] font-archia tracking-wider uppercase text-xs mt-4 disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    {t("Form.fields.submit")}
+                    {isPending ? (isEs ? "Enviando..." : "Sending...") : t("Form.fields.submit")}
                   </button>
                 </form>
               </div>

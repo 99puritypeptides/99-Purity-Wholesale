@@ -26,52 +26,53 @@ export async function generateMetadata({ params }: { params: { locale: string; c
   return {
     title: `${t(`categories.${params.category}.title`)} — Wholesale Bulk Supply`,
     description: t(`categories.${params.category}.desc`),
+    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.category}` },
   };
 }
 
 const productImagesMap: Record<string, string> = {
-  "5-amino-1mq": "5-Amino-1MQ 10mg.jpg",
+  "5-amino-1mq": "5-amino-1mq-10mg.jpg",
   "adamax": "adamax-5mg.webp",
   "adipotide-fttp": "adipotide-fttp-2mg.webp",
   "aod9604": "aod9604-5mg.webp",
   "b12": "b12-10mg.webp",
   "b7-33": "b7-33-2mg.webp",
   "bac-water": "bac-water-3ml.webp",
-  "bpc-157": "BPC-157 5mg.jpg",
-  "bpc-5mg-tb-5mg": "BPC-157.TB-500 5.5mg.jpg",
-  "bpc-10mg-tb-10mg": "BPC-157.TB-500 10.10mg.jpg",
+  "bpc-157": "bpc-157-5mg.jpg",
+  "bpc-5mg-tb-5mg": "bpc-157-tb-500-5-5mg.jpg",
+  "bpc-10mg-tb-10mg": "bpc-157-tb-500-10-10mg.jpg",
   "cagrilintide": "cagrilintide-5mg.webp",
-  "cagrisema": "cagrisema-2.5+2.5-5mg.webp",
-  "cjc-1295-dac": "cjc-1295-dac=5mg.webp",
+  "cagrisema": "cagrisema-2-5-2-5-5mg.webp",
+  "cjc-1295-dac": "cjc-1295-dac5mg.webp",
   "cjc-1295-no-dac": "cjc-1295-no-dac-5mg.webp",
-  "cjc-1295-ipam": "CJC-1295.Ipamorelin 10.10mg.jpg",
+  "cjc-1295-ipam": "cjc-1295-ipamorelin-10-10mg.jpg",
   "dihexa": "dihexa-10mg.webp",
   "dsip": "dsip-5mg.webp",
   "dulaglutide": "dulaglutide-5mg.webp",
-  "epithalon": "Epithalon 10mg.jpg",
+  "epithalon": "epithalon-10mg.jpg",
   "foxo4": "foxo4-2mg.webp",
   "foxo4-dri": "foxo4-dri-10mg.webp",
-  "ghk-cu": "GHK-CU 50mg.jpg",
-  "glow-blend": "GLOW.jpg",
-  "klow-blend": "KLOW.jpg",
+  "ghk-cu": "ghk-cu-50mg.jpg",
+  "glow-blend": "glow-hair-skin-nail-blend.jpg",
+  "klow-blend": "klow-custom-peptide-kit.jpg",
   "glutathione": "glutathione-600mg.webp",
-  "ipamorelin": "Ipamorelin 5mg.jpg",
+  "ipamorelin": "ipamorelin-5mg.jpg",
   "kpv": "kpv-5mg.webp",
   "l-carnitine": "l-carnitine-1200mg.webp",
   "lipo-c": "lipo-c-10ml.webp",
-  "ll37": "LL37 5mg.jpg",
-  "mic-blend": "mic-lipo-c+b12-10mg.webp",
-  "mots-c": "Mots-c 10mg.jpg",
-  "nad": "NAD 100mg.jpg",
+  "ll37": "ll37-5mg.jpg",
+  "mic-blend": "mic-lipo-c-b12-10mg.webp",
+  "mots-c": "mots-c-10mg.jpg",
+  "nad": "nad-100mg.jpg",
   "retatrutide": "retatrutide-5mg.webp",
   "selank": "selank-5mg.webp",
-  "semaglutide": "Semaglutide 10mg.jpg",
+  "semaglutide": "semaglutide-10mg.jpg",
   "semax": "semax-5mg.webp",
   "sermorelin-acetate": "semorelin-acetate-5mg.webp",
-  "snap-8": "Snap 8 10mg.jpg",
+  "snap-8": "snap-8-10mg.jpg",
   "ss-31": "ss-31-10mg.webp",
-  "tb-500": "TB-500 5mg - 3ml.jpg",
-  "tesamorelin": "Tesamorelin 5mg.jpg",
+  "tb-500": "tb-500-5mg-3ml.jpg",
+  "tesamorelin": "tesamorelin-5mg.jpg",
   "thymalin-thymulin": "thymalin-thymylin-10mg.webp",
   "thymosin-alpha-1": "thymosin-alpha-1-5mg.webp",
   "tirzepatide": "tirzepatide-5mg.webp",
@@ -247,7 +248,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                       <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500">
                         {productImage ? (
                           <img 
-                            src={encodeURI(`/Product images/${productImage}`)}
+                            src={encodeURI(`/product-images/${productImage}`)}
                             alt={product.name}
                             className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                           />
@@ -359,7 +360,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                   </ul>
                   
                   <a 
-                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}`} 
+                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18433307365').replace(/\D/g, '')}`} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="w-full bg-black hover:bg-black/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 font-dm-sans text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg active:scale-95 whitespace-nowrap"
@@ -389,7 +390,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
         title={t(`categories.${params.category}.title`)}
         subtitle={t(`categories.${params.category}.desc`)}
         primaryCtaText="WhatsApp Sales"
-        primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20high-volume%20peptide%20sourcing%20and%20receiving%20the%20wholesale%20price%20list."
+        primaryCtaHref="https://wa.me/18433307365?text=Hi,%20I'm%20interested%20in%20high-volume%20peptide%20sourcing%20and%20receiving%20the%20wholesale%20price%20list."
         secondaryCtaText="Email Laboratory"
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

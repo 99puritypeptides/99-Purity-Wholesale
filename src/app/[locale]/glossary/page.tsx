@@ -10,6 +10,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('Hero.title'),
     description: t('Hero.subtitle'),
+  
+    alternates: { canonical: `/${locale === 'en' ? '' : locale}/glossary` },
   };
 }
 
@@ -32,8 +34,24 @@ export default async function GlossaryPage({ params: { locale } }: { params: { l
   const rawTitle = t('Hero.title');
   const titleParts = rawTitle.includes('&') ? rawTitle.split('&') : [rawTitle, ''];
 
+  const definedTermSetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${locale === 'en' ? '' : locale + '/'}glossary`,
+    'name': rawTitle,
+    'hasDefinedTerm': terms.map(term => ({
+      '@type': 'DefinedTerm',
+      'name': term.title,
+      'description': term.definition
+    }))
+  };
+
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32 relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
+      />
       {/* Grain overlay */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 

@@ -207,10 +207,10 @@ export default function CartProgressBar({ items }: CartProgressBarProps) {
   ];
 
   return (
-    <div className="mb-4 bg-white/[0.02] backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col gap-3.5 relative overflow-visible select-none shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+    <div className="mb-4 bg-white border border-black/5 rounded-2xl p-4 flex flex-col gap-3.5 relative overflow-visible select-none shadow-sm">
       {/* Top line: Next Goal & Kits Progress */}
       <div className="flex items-center justify-between text-[10px] leading-tight">
-        <span className="font-archia font-medium text-white/50 tracking-wide pr-2">
+        <span className="font-archia font-medium text-black/50 tracking-wide pr-2">
           {tipMessage}
         </span>
         <span className="font-archia font-bold text-[#13a7b7] tracking-wider shrink-0">
@@ -219,10 +219,10 @@ export default function CartProgressBar({ items }: CartProgressBarProps) {
       </div>
 
       {/* Progress Track */}
-      <div className="relative my-2.5 h-1 w-full bg-white/5 rounded-full">
+      <div className="relative my-2.5 h-1 w-full bg-black/5 rounded-full">
         {/* Progress Fill */}
         <div
-          className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#13a7b7]/60 to-[#13a7b7] rounded-full transition-all duration-700 ease-out shadow-[0_0_8px_rgba(19,167,183,0.4)]"
+          className="absolute top-0 left-0 h-full bg-gradient-to-r from-[#13a7b7]/60 to-[#13a7b7] rounded-full transition-all duration-700 ease-out shadow-[0_0_8px_rgba(19,167,183,0.3)]"
           style={{ width: `${progressPercent}%` }}
         />
 
@@ -241,8 +241,8 @@ export default function CartProgressBar({ items }: CartProgressBarProps) {
               <div
                 className={`w-3.5 h-3.5 rounded-full border transition-all duration-500 flex items-center justify-center ${
                   ms.unlocked
-                    ? "bg-[#13a7b7] border-[#13a7b7] shadow-[0_0_10px_rgba(19,167,183,0.8)]"
-                    : "bg-[#141414] border-white/10"
+                    ? "bg-[#13a7b7] border-[#13a7b7] shadow-[0_0_10px_rgba(19,167,183,0.5)]"
+                    : "bg-[#F8F8F6] border-black/10"
                 }`}
               >
                 {/* Active Inner Dot or Glow */}
@@ -253,7 +253,7 @@ export default function CartProgressBar({ items }: CartProgressBarProps) {
 
               {/* Tooltip Popup */}
               <div
-                className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-44 bg-[#0D0D0D]/95 border border-white/10 rounded-xl p-2.5 text-[9px] text-white/80 leading-relaxed shadow-[0_8px_20px_rgba(0,0,0,0.5)] transition-all duration-300 pointer-events-none z-50 ${
+                className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-44 bg-white border border-black/5 rounded-xl p-2.5 text-[9px] text-black/80 leading-relaxed shadow-lg transition-all duration-300 pointer-events-none z-50 ${
                   hoveredMilestone === ms.id
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 translate-y-1 scale-95"
@@ -263,9 +263,9 @@ export default function CartProgressBar({ items }: CartProgressBarProps) {
                   <Icon className="w-3 h-3 shrink-0" />
                   <span>{ms.label}</span>
                 </div>
-                <div className="font-archia text-white/50">{ms.desc}</div>
+                <div className="font-archia text-black/50">{ms.desc}</div>
                 {/* Tooltip Arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-1.5 h-1.5 border-r border-b border-white/10 bg-[#0D0D0D] rotate-45 -translate-y-[3.5px]" />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-1.5 h-1.5 border-r border-b border-black/5 bg-white rotate-45 -translate-y-[3.5px]" />
               </div>
             </div>
           );

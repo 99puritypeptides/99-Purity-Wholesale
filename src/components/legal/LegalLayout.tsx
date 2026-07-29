@@ -149,7 +149,7 @@ export default function LegalLayout({ title, badge, lastUpdated, sections }: Leg
         title="B2B Research Supply Partners"
         subtitle="Contact our procurement desk via WhatsApp or Email to discuss wholesale credentials and ordering accounts."
         primaryCtaText="Chat on WhatsApp"
-        primaryCtaHref="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account."
+        primaryCtaHref="https://wa.me/18433307365?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account."
         secondaryCtaText="Email Operations"
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

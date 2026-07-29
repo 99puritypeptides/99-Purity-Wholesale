@@ -14,6 +14,15 @@ const withPWA = withPWAInit({
 const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+  async redirects() {
+    return [
+      {
+        source: '/quality',
+        destination: '/certificates-of-analysis',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withPWA(withNextIntl(nextConfig));

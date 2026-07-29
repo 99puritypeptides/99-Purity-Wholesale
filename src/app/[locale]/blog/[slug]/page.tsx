@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation';
 import BlogFAQ from '@/components/blog/BlogFAQ';
 import { getTranslations } from 'next-intl/server';
 import { FadeIn } from '@/components/shared/Motion';
+import ArticleSchema from '@/components/seo/ArticleSchema';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 // Dynamic helper to serve contextual images and compounds based on post content keywords
 function getRelatedImages(slug: string, title: string): { images: string[], compounds: { name: string, img: string, desc: string }[] } {
@@ -16,63 +18,63 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
 
   if (normSlug.includes('glp') || normSlug.includes('weight') || normSlug.includes('tirzepatide') || normSlug.includes('semaglutide')) {
     compounds.push(
-      { name: 'Tirzepatide 30mg', img: '/Product images/Tirzepatide 30mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
-      { name: 'Tirzepatide 10mg', img: '/Product images/Tirzepatide 10mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
-      { name: 'Semaglutide 10mg', img: '/Product images/Semaglutide 10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' }
+      { name: 'Tirzepatide 30mg', img: '/product-images/tirzepatide-30mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
+      { name: 'Tirzepatide 10mg', img: '/product-images/tirzepatide-10mg.jpg', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
+      { name: 'Semaglutide 10mg', img: '/product-images/semaglutide-10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' }
     );
     images.push(
-      '/Product images/Semaglutide 20mg.jpg',
-      '/Product images/Tirzepatide 30mg.jpg',
+      '/product-images/semaglutide-20mg.jpg',
+      '/product-images/tirzepatide-30mg.jpg',
       '/lab_quality_bg_1778896760027.png',
-      '/Product images/Semaglutide 10mg.jpg'
+      '/product-images/semaglutide-10mg.jpg'
     );
   } else if (normSlug.includes('bpc') || normSlug.includes('tb500') || normSlug.includes('recovery')) {
     compounds.push(
-      { name: 'BPC-157 10mg', img: '/Product images/BPC-157 10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
-      { name: 'BPC-157 + TB-500', img: '/Product images/BPC-157.TB-500 10.10mg.jpg', desc: 'Synergistic cellular recovery blend.' },
-      { name: 'TB-500 10mg', img: '/Product images/TB-500 10mg.jpg', desc: 'Synthetic fraction of thymosin beta-4.' }
+      { name: 'BPC-157 10mg', img: '/product-images/bpc-157-10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
+      { name: 'BPC-157 + TB-500', img: '/product-images/bpc-157-tb-500-10-10mg.jpg', desc: 'Synergistic cellular recovery blend.' },
+      { name: 'TB-500 10mg', img: '/product-images/tb-500-10mg.jpg', desc: 'Synthetic fraction of thymosin beta-4.' }
     );
     images.push(
-      '/Product images/BPC-157 10mg.jpg',
-      '/Product images/BPC-157.TB-500 5.5mg.jpg',
+      '/product-images/bpc-157-10mg.jpg',
+      '/product-images/bpc-157-tb-500-5-5mg.jpg',
       '/images/hero-lab.png',
-      '/Product images/BPC-157 5mg.jpg'
+      '/product-images/bpc-157-5mg.jpg'
     );
   } else if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
     compounds.push(
-      { name: 'NAD+ 500mg', img: '/Product images/NAD+ 500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' },
-      { name: '5-Amino-1MQ 10mg', img: '/Product images/5-Amino-1MQ 10mg.jpg', desc: 'Targeted NNMT cellular enzyme inhibitor.' },
-      { name: 'Epithalon 10mg', img: '/Product images/Epithalon 10mg.jpg', desc: 'Telomerase activator research peptide.' }
+      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' },
+      { name: '5-Amino-1MQ 10mg', img: '/product-images/5-amino-1mq-10mg.jpg', desc: 'Targeted NNMT cellular enzyme inhibitor.' },
+      { name: 'Epithalon 10mg', img: '/product-images/epithalon-10mg.jpg', desc: 'Telomerase activator research peptide.' }
     );
     images.push(
-      '/Product images/NAD 1000mg.jpg',
-      '/Product images/5-Amino-1MQ 10mg.jpg',
+      '/product-images/nad-1000mg.jpg',
+      '/product-images/5-amino-1mq-10mg.jpg',
       '/images/hero-lab-bg.png',
-      '/Product images/Epithalon 10mg.jpg'
+      '/product-images/epithalon-10mg.jpg'
     );
   } else if (normSlug.includes('private-label') || normSlug.includes('start-peptide') || normSlug.includes('launch') || normSlug.includes('business')) {
     compounds.push(
-      { name: 'Custom Peptide Kit', img: '/Product images/KLOW.jpg', desc: 'Private label kit customization.' },
-      { name: 'Hair, Skin & Nail Blend', img: '/Product images/GLOW.jpg', desc: 'GHK-Cu dynamic skin formulation.' },
-      { name: 'BPC-157 10mg', img: '/Product images/BPC-157 10mg.jpg', desc: 'High-demand clinic starter stock.' }
+      { name: 'Custom Peptide Kit', img: '/product-images/klow-custom-peptide-kit.jpg', desc: 'Private label kit customization.' },
+      { name: 'Hair, Skin & Nail Blend', img: '/product-images/glow-hair-skin-nail-blend.jpg', desc: 'GHK-Cu dynamic skin formulation.' },
+      { name: 'BPC-157 10mg', img: '/product-images/bpc-157-10mg.jpg', desc: 'High-demand clinic starter stock.' }
     );
     images.push(
-      '/Product images/GLOW.jpg',
-      '/Product images/mic-lipo-c+b12-10mg.webp',
+      '/product-images/glow-hair-skin-nail-blend.jpg',
+      '/product-images/mic-lipo-c-b12-10mg.webp',
       '/lab_quality_bg_1778896760027.png',
-      '/Product images/Semaglutide 10mg.jpg'
+      '/product-images/semaglutide-10mg.jpg'
     );
   } else {
     compounds.push(
-      { name: 'Semaglutide 10mg', img: '/Product images/Semaglutide 10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' },
-      { name: 'BPC-157 10mg', img: '/Product images/BPC-157 10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
-      { name: 'NAD+ 500mg', img: '/Product images/NAD+ 500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' }
+      { name: 'Semaglutide 10mg', img: '/product-images/semaglutide-10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' },
+      { name: 'BPC-157 10mg', img: '/product-images/bpc-157-10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
+      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' }
     );
     images.push(
       '/images/vial_kit_luxury.png',
       '/images/chromatography_lab.png',
       '/images/analytical_verification.png',
-      '/Product images/BPC-157.TB-500 10.10mg.jpg'
+      '/product-images/bpc-157-tb-500-10-10mg.jpg'
     );
   }
 
@@ -110,11 +112,24 @@ const mdxComponents = {
   ),
   img: (props: any) => (
     <div className="my-10 overflow-hidden rounded-[2.5rem] border border-white/10 shadow-2xl relative group max-w-4xl mx-auto aspect-[16/9]">
-      <img className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105" {...props} />
+      <img className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105" alt={props.alt || 'Research image'} {...props} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
     </div>
   ),
 };
+
+export async function generateMetadata({ params }: { params: { locale: string, slug: string } }) {
+  try {
+    const post = await getPostBySlug(params.slug);
+    return {
+      title: `${post.meta.title}`,
+      description: post.meta.desc || post.meta.title,
+      alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/blog/${params.slug}` },
+    };
+  } catch (e) {
+    return {};
+  }
+}
 
 export default async function BlogPost({ params }: { params: { locale: string, slug: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
@@ -127,6 +142,17 @@ export default async function BlogPost({ params }: { params: { locale: string, s
 
     return (
       <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
+        <ArticleSchema 
+          title={post.meta.title}
+          description={post.meta.desc || post.meta.title}
+          image={images.length > 0 ? `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}${images[0]}` : `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`}
+          datePublished={post.meta.date}
+          url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}blog/${params.slug}`}
+        />
+        <BreadcrumbSchema items={[
+          { name: 'Blog', item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}blog` },
+          { name: post.meta.title, item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}blog/${params.slug}` }
+        ]} />
         
         {/* Post Header - Elegant Light Off-White Linen Hero */}
         <section className="relative overflow-hidden pt-52 pb-20 md:pt-64 md:pb-28 border-b border-black/5 bg-[#F8F8F6]">
@@ -219,7 +245,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
                     </div>
                     
                     <a 
-                      href={`https://wa.me/18437439007?text=${encodeURIComponent(t('whatsapp'))}`} 
+                      href={`https://wa.me/18433307365?text=${encodeURIComponent(t('whatsapp'))}`} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white px-8 py-4 rounded-xl font-bold font-dm-sans text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg hover:-translate-y-0.5 whitespace-nowrap"

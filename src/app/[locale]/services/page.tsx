@@ -1,4 +1,4 @@
-import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, CheckCircle2, Settings, ShieldCheck, Award, Users, Globe, Lock, FlaskConical, ClipboardCheck, Handshake } from 'lucide-react';
+import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, CheckCircle2, Settings, ShieldCheck, Award, Users, Globe, Lock, FlaskConical, ClipboardCheck, Handshake, ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import GlobalCTA from '@/components/layout/GlobalCTA';
@@ -222,7 +222,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
             {/* Two CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <a 
-                href={`https://wa.me/18437439007?text=${encodeURIComponent(t('heroCta.msg'))}`} 
+                href={`https://wa.me/18433307365?text=${encodeURIComponent(t('heroCta.msg'))}`} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group relative flex w-full sm:w-auto items-center justify-center gap-3 px-10 py-5 bg-black hover:bg-black/90 text-white rounded-xl font-bold uppercase tracking-[0.2em] text-[10px] lg:text-xs transition-all shadow-lg active:scale-95 whitespace-nowrap"
@@ -311,6 +311,11 @@ export default async function ServicesPage({ params }: { params: { locale: strin
           <div className="reveal-grid grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <div key={service.id} className="reveal-card bg-white/[0.02] border border-white/5 rounded-[2.5rem] p-8 md:p-10 hover:border-white/20 hover:bg-white/[0.03] transition-all duration-500 shadow-2xl flex flex-col group relative overflow-hidden">
+                {/* Full Card Overlay Link */}
+                <Link href={`/services/${service.id}` as any} className="absolute inset-0 z-10">
+                  <span className="sr-only">View Details for {service.title}</span>
+                </Link>
+                
                 {/* Card Top Row: Icon and Eyebrow */}
                 <div className="flex items-center justify-between mb-8">
                   {/* Clean Dark-Glass Icon Badge */}
@@ -357,20 +362,26 @@ export default async function ServicesPage({ params }: { params: { locale: strin
                   </ul>
                 </div>
                 
-                 <a 
-                   href={`https://wa.me/18437439007?text=${encodeURIComponent(service.whatsappMsg)}`}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="w-full bg-white border border-white text-black hover:bg-transparent hover:text-white hover:border-white/30 transition-all duration-300 font-bold font-dm-sans text-[10px] md:text-xs uppercase tracking-[0.2em] py-4 rounded-xl flex items-center justify-center gap-2 active:scale-98"
-                 >
-                   <PhoneCall className="w-3.5 h-3.5" />
-                   {service.ctaText}
-                 </a>
+                <div className="flex flex-col gap-3 relative z-20 pointer-events-none">
+                  <a 
+                    href={`https://wa.me/18433307365?text=${encodeURIComponent(service.whatsappMsg)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-white border border-white text-black hover:bg-transparent hover:text-white hover:border-white/30 transition-all duration-300 font-bold font-dm-sans text-[10px] md:text-xs uppercase tracking-[0.2em] py-4 rounded-xl flex items-center justify-center gap-2 active:scale-98 pointer-events-auto"
+                  >
+                    <PhoneCall className="w-3.5 h-3.5" />
+                    {service.ctaText}
+                  </a>
+                  <div className="w-full border border-white/10 text-white/50 group-hover:text-white group-hover:border-white/30 transition-all duration-300 font-bold font-dm-sans text-[10px] uppercase tracking-[0.2em] py-3.5 rounded-xl flex items-center justify-center gap-2">
+                    View Full Details <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Standalone Widescreen Clinical Laboratory Breakout Card */}
       <section className="bg-[#F8F8F6] pt-24 pb-8 relative overflow-hidden">
@@ -502,7 +513,7 @@ export default async function ServicesPage({ params }: { params: { locale: strin
         title={t('scheduleCta')}
         subtitle={t('subtitle')}
         primaryCtaText="WhatsApp Sales"
-        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(t('scheduleMsg'))}`}
+        primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(t('scheduleMsg'))}`}
         secondaryCtaText="Email Laboratory"
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

@@ -50,6 +50,10 @@ const dmMono = DM_Mono({
   variable: '--font-dm-mono',
 });
 
+export const viewport = {
+  themeColor: '#4FC3D0',
+};
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
@@ -62,28 +66,12 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     keywords: [
       '99 purity peptides',
       'peptides wholesale',
-      'wholesale peptides in US',
-      'wholesale peptides USA',
-      'bulk peptide supplier United States',
-      'research grade peptides wholesale',
+      'research grade peptides',
       'wholesale peptide supplier',
-      'US manufactured peptides',
-      'bulk semaglutide wholesale',
-      'wholesale BPC-157',
-      'compounding pharmacy peptides',
-      'peptide dropshipping program',
-      'private label peptides USA',
-      'bulk GLP-1 peptides',
-      'wholesale tirzepatide',
-      'peptide supplier for compounding pharmacy',
-      'peptide supplier for wellness clinic',
-      '99 purity wholesale',
-      'COA verified peptides wholesale',
-      'Freedom Diagnostic peptides',
-      'domestic peptide manufacturer',
+      'US manufactured peptides'
     ],
     icons: {
-      icon: '/images/99pw-logo.webp',
+      icon: '/favicon.ico',
       apple: '/images/99pw-logo.webp',
     },
     openGraph: {
@@ -107,7 +95,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       images: [`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`],
     },
     manifest: '/manifest.json',
-    themeColor: '#4FC3D0',
     appleWebApp: {
       capable: true,
       statusBarStyle: 'default',
@@ -125,6 +112,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
         'max-snippet': -1,
       },
     },
+  
+    alternates: { canonical: `/${locale === 'en' ? '' : locale}` },
   };
 }
 
@@ -175,7 +164,10 @@ export default async function RootLayout({
       "Private Label Peptides USA",
       "Peptide Dropshipping Program",
       "HPLC Verified Peptide Purity",
-      "Freedom Diagnostic COA Verification"
+      "Freedom Diagnostic COA Verification",
+      "Tirzepatide Bulk Suppy",
+      "Research Chemicals Wholesale",
+      "Peptide Synthesis USA"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -217,4 +209,3 @@ export default async function RootLayout({
     </html>
   );
 }
-

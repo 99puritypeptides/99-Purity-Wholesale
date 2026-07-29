@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { locale: string; c
 
 const productSpecImagesMap: Record<string, Record<string, string>> = {
   "5-amino-1mq": {
-    "10mg": "5-Amino-1MQ 10mg.jpg"
+    "10mg": "5-amino-1mq-10mg.jpg"
   },
   "adamax": {
     "5mg": "adamax-5mg.webp",
@@ -80,31 +80,31 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
     "10ml": "bac-water-10ml.webp"
   },
   "bpc-157": {
-    "5mg": "BPC-157 5mg.jpg",
-    "10mg": "BPC-157 10mg.jpg"
+    "5mg": "bpc-157-5mg.jpg",
+    "10mg": "bpc-157-10mg.jpg"
   },
   "bpc-5mg-tb-5mg": {
-    "10mg": "BPC-157.TB-500 5.5mg.jpg"
+    "10mg": "bpc-157-tb-500-5-5mg.jpg"
   },
   "bpc-10mg-tb-10mg": {
-    "20mg": "BPC-157.TB-500 10.10mg.jpg"
+    "20mg": "bpc-157-tb-500-10-10mg.jpg"
   },
   "cagrilintide": {
     "5mg": "cagrilintide-5mg.webp",
-    "10mg": "Cagrilintide.jpg"
+    "10mg": "cagrilintide.jpg"
   },
   "cagrisema": {
     "5mg": "cagrisema-2.5+2.5-5mg.webp"
   },
   "cjc-1295-dac": {
-    "5mg": "cjc-1295-dac=5mg.webp"
+    "5mg": "cjc-1295-dac5mg.webp"
   },
   "cjc-1295-no-dac": {
     "5mg": "cjc-1295-no-dac-5mg.webp",
     "10mg": "cjc-1295-no-dac-10mg.webp"
   },
   "cjc-1295-ipam": {
-    "10mg": "CJC-1295.Ipamorelin 10.10mg.jpg"
+    "10mg": "cjc-1295-ipamorelin-10-10mg.jpg"
   },
   "dihexa": {
     "10mg": "dihexa-10mg.webp"
@@ -117,36 +117,36 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
     "10mg": "dulaglutide-10mg.webp"
   },
   "epithalon": {
-    "10mg": "Epithalon 10mg.jpg"
+    "10mg": "epithalon-10mg.jpg"
   },
   "foxo4": {
     "2mg": "foxo4-2mg.webp",
-    "10mg": "FOX04 10mg.jpg"
+    "10mg": "fox04-10mg.jpg"
   },
   "foxo4-dri": {
     "10mg": "foxo4-dri-10mg.webp"
   },
   "ghk-cu": {
-    "50mg": "GHK-CU 50mg.jpg",
-    "100mg": "GHK-CU 100mg.jpg"
+    "50mg": "ghk-cu-50mg.jpg",
+    "100mg": "ghk-cu-100mg.jpg"
   },
   "glow-blend": {
-    "70mg": "GLOW.jpg"
+    "70mg": "glow-hair-skin-nail-blend.jpg"
   },
   "klow-blend": {
-    "80mg": "KLOW.jpg"
+    "80mg": "klow-custom-peptide-kit.jpg"
   },
   "glutathione": {
     "600mg": "glutathione-600mg.webp",
     "1500mg": "glutathione-1500mg.webp"
   },
   "ipamorelin": {
-    "5mg": "Ipamorelin 5mg.jpg",
-    "10mg": "Ipamorelin 10mg.jpg"
+    "5mg": "ipamorelin-5mg.jpg",
+    "10mg": "ipamorelin-10mg.jpg"
   },
   "kpv": {
     "5mg": "kpv-5mg.webp",
-    "10mg": "KPV 10mg.jpg"
+    "10mg": "kpv-10mg.jpg"
   },
   "l-carnitine": {
     "1200mg": "l-carnitine-1200mg.webp"
@@ -155,62 +155,62 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
     "10ml": "lipo-c-10ml.webp"
   },
   "ll37": {
-    "5mg": "LL37 5mg.jpg"
+    "5mg": "ll37-5mg.jpg"
   },
   "mic-blend": {
     "10mg": "mic-lipo-c+b12-10mg.webp"
   },
   "mots-c": {
-    "10mg": "Mots-c 10mg.jpg",
-    "40mg": "Mots-c 40mg.jpg"
+    "10mg": "mots-c-10mg.jpg",
+    "40mg": "mots-c-40mg.jpg"
   },
   "nad": {
-    "100mg": "NAD 100mg.jpg",
+    "100mg": "nad-100mg.jpg",
     "500mg": "NAD+ 500mg.jpg",
-    "1000mg": "NAD 1000mg.jpg"
+    "1000mg": "nad-1000mg.jpg"
   },
   "retatrutide": {
     "5mg": "retatrutide-5mg.webp",
-    "10mg": "Retatrutide 10mg.jpg",
+    "10mg": "retatrutide-10mg.jpg",
     "15mg": "retatrutide-15mg.webp",
-    "20mg": "Retatrutide 20mg.jpg",
-    "30mg": "Retatrutide 30mg.jpg",
+    "20mg": "retatrutide-20mg.jpg",
+    "30mg": "retatrutide-30mg.jpg",
     "60mg": "retatrutide-60mg.webp"
   },
   "selank": {
     "5mg": "selank-5mg.webp",
-    "10mg": "Selank 10mg.jpg"
+    "10mg": "selank-10mg.jpg"
   },
   "semaglutide": {
-    "10mg": "Semaglutide 10mg.jpg",
+    "10mg": "semaglutide-10mg.jpg",
     "15mg": "semaglutide-15mg.webp",
-    "20mg": "Semaglutide 20mg.jpg",
+    "20mg": "semaglutide-20mg.jpg",
     "30mg": "semaglutide-30mg.webp"
   },
   "semax": {
     "5mg": "semax-5mg.webp",
-    "10mg": "Semax 10mg.jpg"
+    "10mg": "semax-10mg.jpg"
   },
   "sermorelin-acetate": {
     "5mg": "semorelin-acetate-5mg.webp",
-    "10mg": "Sermorelin 10mg.jpg"
+    "10mg": "sermorelin-10mg.jpg"
   },
   "snap-8": {
-    "10mg": "Snap 8 10mg.jpg",
+    "10mg": "snap-8-10mg.jpg",
     "100mg": "snap-8-100mg.webp"
   },
   "ss-31": {
     "10mg": "ss-31-10mg.webp",
-    "50mg": "SS-31 50mg.jpg"
+    "50mg": "ss-31-50mg.jpg"
   },
   "tb-500": {
-    "5mg": "TB-500 5mg - 3ml.jpg",
-    "10mg": "TB-500 10mg.jpg"
+    "5mg": "tb-500-5mg-3ml.jpg",
+    "10mg": "tb-500-10mg.jpg"
   },
   "tesamorelin": {
-    "5mg": "Tesamorelin 5mg.jpg",
-    "10mg": "Tesamorelin 10mg.jpg",
-    "20mg": "Tesamorelin 20mg.jpg"
+    "5mg": "tesamorelin-5mg.jpg",
+    "10mg": "tesamorelin-10mg.jpg",
+    "20mg": "tesamorelin-20mg.jpg"
   },
   "thymalin-thymulin": {
     "10mg": "thymalin-thymylin-10mg.webp"
@@ -221,18 +221,18 @@ const productSpecImagesMap: Record<string, Record<string, string>> = {
   },
   "tirzepatide": {
     "5mg": "tirzepatide-5mg.webp",
-    "10mg": "Tirzepatide 10mg.jpg",
+    "10mg": "tirzepatide-10mg.jpg",
     "15mg": "tirzepatide-15mg.webp",
-    "20mg": "Tirzepatide 20mg.jpg",
+    "20mg": "tirzepatide-20mg.jpg",
     "30mg": "tirzepatide-30mg.webp",
     "40mg": "tirzepatide-40mg.webp",
     "50mg": "tirzepatide-50mg.webp",
-    "60mg": "Tirzepatide 60mg.jpg",
+    "60mg": "tirzepatide-60mg.jpg",
     "80mg": "tirzepatide-80-mg.webp"
   },
   "vip": {
     "5mg": "vip-5mg.webp",
-    "10mg": "VIP 10mg.jpg"
+    "10mg": "vip-10mg.jpg"
   }
 };
 
@@ -432,7 +432,7 @@ export default async function ProductPage({ params }: { params: { locale: string
         {/* Subtle Light Grain Texture */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-        <div className="container mx-auto px-6 max-w-7xl relative z-20">
+        <div className="container mx-auto px-6 max-w-[1600px] relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             {/* Left Column: Combined Product Showcase & Technical Passport Card (Symmetrical & Dense!) */}
@@ -576,7 +576,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
       {/* Details & Specs body fold */}
       <section className="bg-[#F8F8F6] text-black pb-16 md:pb-24 relative overflow-hidden">
-        <div className="container mx-auto px-6 max-w-7xl relative z-10 space-y-12 md:space-y-16">
+        <div className="container mx-auto px-6 max-w-[1600px] relative z-10 space-y-12 md:space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
             {/* Left Column: Specs */}
@@ -650,7 +650,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                 
                 <div className="space-y-4">
                   <a 
-                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} 
+                    href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18433307365').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="w-full bg-black border border-black hover:bg-transparent hover:text-black hover:border-black text-white font-bold py-4 rounded-full transition-all font-dm-sans text-xs uppercase tracking-wider flex items-center justify-center gap-2.5"
@@ -775,7 +775,7 @@ export default async function ProductPage({ params }: { params: { locale: string
       {/* Related Products Grid */}
       {relatedProducts.length > 0 && (
         <section className="bg-[#F8F8F6] border-t border-black/5 py-20 relative overflow-hidden">
-          <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="container mx-auto px-6 max-w-[1600px] relative z-10">
             <h2 className="font-absans text-3xl md:text-4xl font-bold uppercase tracking-tight text-black mb-10">{t('relatedTitle')}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -800,8 +800,8 @@ export default async function ProductPage({ params }: { params: { locale: string
                       <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
                         {productImage ? (
                           <img 
-                            src={encodeURI(`/Product images/${productImage}`)}
-                            alt={rp.name}
+                            src={encodeURI(`/product-images/${productImage}`)}
+                            alt={`${rp.name} High Purity Wholesale Research Peptide`}
                             className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                           />
                         ) : (
@@ -861,7 +861,7 @@ export default async function ProductPage({ params }: { params: { locale: string
       {/* Mobile Sticky CTA Footer (only visible on small screens) */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-black/10 z-50 lg:hidden shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
         <a 
-          href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} 
+          href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18433307365').replace(/\D/g, '')}?text=${encodeURIComponent(t('whatsappMsg', { name: product.name }))}`} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="w-full bg-black border border-black text-white font-bold py-3.5 rounded-full transition-all font-dm-sans text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"

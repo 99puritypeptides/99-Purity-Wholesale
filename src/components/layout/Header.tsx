@@ -151,15 +151,15 @@ export default function Header() {
             </Link>
 
             <Link 
-              href="/quality" 
+              href="/certificates-of-analysis" 
               className="text-[11px] font-bold text-black/70 hover:text-black transition-colors relative group py-1 uppercase tracking-widest whitespace-nowrap"
             >
-              {t('nav.quality')}
+              {t('nav.coa')}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
 
             <Link 
-              href="/calculator" 
+              href="/peptide-calculator" 
               className="text-[11px] font-bold text-black/70 hover:text-black transition-colors relative group py-1 uppercase tracking-widest whitespace-nowrap"
             >
               {t('nav.calculator')}
@@ -341,7 +341,7 @@ export default function Header() {
             
             <div className="flex flex-col gap-1">
               {[
-                { href: '/quality', label: t('nav.quality'), icon: ShieldCheck, desc: 'Purity & Testing Standards' },
+                { href: '/certificates-of-analysis', label: t('nav.coa'), icon: ShieldCheck, desc: 'Purity & Testing Standards' },
                 { href: '/calculator', label: t('nav.calculator'), icon: FlaskConical, desc: 'Reconstitution Utility' },
                 { href: '/services', label: t('nav.services'), icon: LayoutGrid, desc: 'Wholesale Solutions' },
                 { href: '/blog', label: t('nav.blog'), icon: Newspaper, desc: 'Research Updates & Insights' },

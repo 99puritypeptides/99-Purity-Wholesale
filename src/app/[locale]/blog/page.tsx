@@ -10,6 +10,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: t('blogTitle'),
     description: t('blogDesc'),
+  
+    alternates: { canonical: `/${locale === 'en' ? '' : locale}/blog` },
   };
 }
 
@@ -17,22 +19,22 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 function getPostCardImage(slug: string, index: number): string {
   const normSlug = slug.toLowerCase();
   if (normSlug.includes('glp') || normSlug.includes('weight')) {
-    return '/Product images/Semaglutide 10mg.jpg';
+    return '/product-images/semaglutide-10mg.jpg';
   }
   if (normSlug.includes('bpc') || normSlug.includes('recovery')) {
-    return '/Product images/BPC-157 10mg.jpg';
+    return '/product-images/bpc-157-10mg.jpg';
   }
   if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
-    return '/Product images/NAD+ 500mg.jpg';
+    return '/product-images/nad-plus-500mg.jpg';
   }
   if (normSlug.includes('coa') || normSlug.includes('quality') || normSlug.includes('read-coa')) {
     return '/lab_quality_bg_1778896760027.png';
   }
   if (normSlug.includes('pharmacy') || normSlug.includes('spas')) {
-    return '/Product images/GLOW.jpg';
+    return '/product-images/glow-hair-skin-nail-blend.jpg';
   }
   if (normSlug.includes('private-label')) {
-    return '/Product images/GLOW.jpg';
+    return '/product-images/glow-hair-skin-nail-blend.jpg';
   }
   
   const defaults = [
@@ -189,7 +191,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
         title={t('ctaTitle')}
         subtitle={t('ctaSubtitle')}
         primaryCtaText="WhatsApp Sales"
-        primaryCtaHref="https://wa.me/18437439007?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20your%20verified%20batch%20quality%20and%20receiving%20the%20wholesale%20price%20list."
+        primaryCtaHref="https://wa.me/18433307365?text=Hi,%20I'm%20interested%20in%20learning%20more%20about%20your%20verified%20batch%20quality%20and%20receiving%20the%20wholesale%20price%20list."
         secondaryCtaText="Email Laboratory"
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

@@ -17,7 +17,7 @@ export default function CartSummary({ items }: CartSummaryProps) {
   
   const handleWhatsAppInquiry = () => {
     const message = buildInquiryMessage(items);
-    const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18437439007').replace(/\D/g, '');
+    const phone = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '18433307365').replace(/\D/g, '');
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message.whatsapp)}`;
     window.open(url, '_blank');
   };
@@ -36,14 +36,14 @@ export default function CartSummary({ items }: CartSummaryProps) {
       {/* Top Row: Count and Clear */}
       <div className="flex items-center justify-between">
         <div className="flex flex-col">
-          <span className="text-[9px] font-bold text-white/30 uppercase tracking-[0.2em]">Procurement</span>
-          <span className="text-xs font-archia font-bold text-white">
+          <span className="text-[9px] font-bold text-black/40 uppercase tracking-[0.2em]">Procurement</span>
+          <span className="text-xs font-archia font-bold text-black">
             {t('productCount', { count: items.length })}
           </span>
         </div>
         <button
           onClick={() => dispatch({ type: 'CLEAR_CART' })}
-          className="text-white/20 hover:text-red-400 text-[9px] font-bold uppercase tracking-widest transition-colors"
+          className="text-black/40 hover:text-red-500 text-[9px] font-bold uppercase tracking-widest transition-colors"
         >
           {t('clear')}
         </button>
@@ -54,7 +54,7 @@ export default function CartSummary({ items }: CartSummaryProps) {
         {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppInquiry}
-          className="group flex items-center justify-center gap-3 bg-white text-black font-absans font-bold text-[11px] w-full py-4 rounded-xl transition-all hover:bg-gray-100 active:scale-95 shadow-lg"
+          className="group flex items-center justify-center gap-3 bg-black text-white font-absans font-bold text-[11px] w-full py-4 rounded-xl transition-all hover:bg-black/90 active:scale-95 shadow-lg"
         >
           <MessageSquare className="w-4 h-4" />
           <span className="uppercase tracking-widest">{t('whatsapp')}</span>
@@ -64,15 +64,15 @@ export default function CartSummary({ items }: CartSummaryProps) {
         {/* Email Button */}
         <button
           onClick={handleEmailInquiry}
-          className="group flex items-center justify-center gap-3 bg-white/5 border border-white/10 text-white font-absans font-bold text-[11px] w-full py-4 rounded-xl transition-all hover:bg-white/10 hover:border-white/20"
+          className="group flex items-center justify-center gap-3 bg-white border border-black/10 text-black font-absans font-bold text-[11px] w-full py-4 rounded-xl transition-all hover:bg-black/5 hover:border-black/20"
         >
           <Mail className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
-          <span className="uppercase tracking-widest text-white/60 group-hover:text-white transition-colors">{t('email')}</span>
+          <span className="uppercase tracking-widest text-black/60 group-hover:text-black transition-colors">{t('email')}</span>
         </button>
       </div>
 
       {/* Disclaimer */}
-      <p className="font-archia text-[9px] text-white/20 text-center leading-relaxed italic px-4">
+      <p className="font-archia text-[9px] text-black/30 text-center leading-relaxed italic px-4">
         &ldquo;{t('disclaimer')}&rdquo;
       </p>
     </div>

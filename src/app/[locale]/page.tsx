@@ -22,6 +22,17 @@ type FaqItem = { q: string; a: string };
 type TierKey = 'starter' | 'tier1' | 'tier2' | 'tier3';
 type ServiceKey = 'dropshipping' | 'privateLabel' | 'launch' | 'web';
 
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+  return {
+    title: t('homeTitle'),
+    description: t('homeDesc'),
+    alternates: {
+      canonical: `/${locale === 'en' ? '' : locale}`
+    }
+  };
+}
+
 export default async function HomePage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Index' });
   const pt = await getTranslations({ locale: params.locale, namespace: 'ProductsIndex' });
@@ -40,7 +51,17 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
   return (
     <div className="home-light relative overflow-hidden bg-white text-[#101827] selection:bg-[#13a7b7]/20">
-
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '99 Purity Wholesale',
+            url: 'https://99puritywholesale.com',
+          })
+        }}
+      />
       {/* --- HERO SECTION: RESEARCH PORTAL --- */}
       <section className="relative min-h-screen lg:h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white px-6 py-20 lg:py-0">
         {/* Cinematic Dark Background */}
@@ -320,17 +341,17 @@ export default async function HomePage({ params }: { params: { locale: string } 
               const cat = bestSellerCats[i];
 
               const bestSellerImages: Record<string, string> = {
-                'semaglutide': '/Product images/Semaglutide 10mg.jpg',
-                'tirzepatide': '/Product images/tirzepatide-5mg.webp',
-                'retatrutide': '/Product images/retatrutide-5mg.webp',
-                'bpc-157': '/Product images/BPC-157 5mg.jpg',
-                'tb-500': '/Product images/TB-500 5mg - 3ml.jpg',
-                'ipamorelin': '/Product images/Ipamorelin 5mg.jpg',
-                'cjc-1295-ipam': '/Product images/CJC-1295.Ipamorelin 10.10mg.jpg',
-                'nad': '/Product images/NAD 100mg.jpg',
-                'epithalon': '/Product images/Epithalon 10mg.jpg'
+                'semaglutide': '/product-images/semaglutide-10mg.jpg',
+                'tirzepatide': '/product-images/tirzepatide-5mg.webp',
+                'retatrutide': '/product-images/retatrutide-5mg.webp',
+                'bpc-157': '/product-images/bpc-157-5mg.jpg',
+                'tb-500': '/product-images/tb-500-5mg-3ml.jpg',
+                'ipamorelin': '/product-images/ipamorelin-5mg.jpg',
+                'cjc-1295-ipam': '/product-images/cjc-1295-ipamorelin-10-10mg.jpg',
+                'nad': '/product-images/nad-100mg.jpg',
+                'epithalon': '/product-images/epithalon-10mg.jpg'
               };
-              const productImg = bestSellerImages[slug] || '/Product images/Semaglutide 10mg.jpg';
+              const productImg = bestSellerImages[slug] || '/product-images/semaglutide-10mg.jpg';
 
               return (
                 <div 
@@ -346,7 +367,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                       <div className="relative w-full h-40 flex items-center justify-center mb-4 overflow-hidden">
                         <img 
                           src={productImg} 
-                          alt={p.name} 
+                          alt={`${p.name} High Purity Wholesale Research Peptide`}
                           className="h-full object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] filter group-hover:scale-105 transition-transform duration-700 ease-out" 
                         />
                       </div>
@@ -442,7 +463,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
               return (
                 <div key={item} className="reveal-card">
                   <a 
-                    href={`https://wa.me/18437439007?text=${encodeURIComponent(`Hi, I'd like to request the batch COA report for ${name}.`)}`}
+                    href={`https://wa.me/18433307365?text=${encodeURIComponent(`Hi, I'd like to request the batch COA report for ${name}.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative flex items-center justify-between gap-4 rounded-[1.5rem] sm:rounded-[2rem] border border-white/10 bg-white/[0.03] p-5 sm:p-8 overflow-hidden transition-all duration-500 hover:bg-white/[0.08] hover:border-white/20 text-left"
@@ -503,7 +524,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     <p className={`font-archia text-sm leading-relaxed flex-grow ${isPremium ? 'text-white/40' : 'text-black/40'}`}>{tier.description}</p>
                     
                     <a 
-                      href={`https://wa.me/18437439007?text=${encodeURIComponent(`Hi, I'd like to learn about wholesale tier ${tier.name} pricing.`)}`} 
+                      href={`https://wa.me/18433307365?text=${encodeURIComponent(`Hi, I'd like to learn about wholesale tier ${tier.name} pricing.`)}`} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className={`mt-10 inline-flex w-full items-center justify-center rounded-2xl py-5 text-[10px] font-bold uppercase tracking-widest transition-all ${isPremium ? 'bg-white text-black hover:bg-white/90' : 'bg-black text-white hover:bg-black/90'}`}
@@ -825,7 +846,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         title={t('FinalCta.title')}
         subtitle={t('FinalCta.subtitle')}
         primaryCtaText={t('FinalCta.whatsapp')}
-        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(t('FinalCta.msg'))}`}
+        primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(t('FinalCta.msg'))}`}
         secondaryCtaText={t('FinalCta.email')}
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

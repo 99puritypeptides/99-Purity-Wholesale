@@ -2,13 +2,15 @@ import { getTranslations } from 'next-intl/server';
 import { CheckCircle2, ShieldCheck, FlaskConical, Users, Truck, Award, ArrowRight, Zap, MessageCircle, Mail } from 'lucide-react';
 import FaqSection from '@/components/shared/FaqSection';
 import GlobalCTA from '@/components/layout/GlobalCTA';
+import WholesaleForm from '@/components/wholesale/WholesaleForm';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'WholesaleApplication' });
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
-    robots: 'noindex, follow',
+  
+    alternates: { canonical: `/${locale === 'en' ? '' : locale}/wholesale-application` },
   };
 }
 
@@ -181,161 +183,7 @@ export default async function WholesaleApplicationPage({ params: { locale } }: {
             </p>
           </div>
 
-          <div className="reveal-card">
-            <form
-              action="https://formspree.io/f/placeholder"
-              method="POST"
-              className="bg-[#F8F8F6] border border-black/5 rounded-[2.5rem] p-6 md:p-12 shadow-sm space-y-6"
-            >
-              {/* Attestation disclaimer banner */}
-              <div className="bg-[#13a7b7]/5 border border-[#13a7b7]/10 rounded-2xl p-6 md:p-8">
-                <h3 className="text-[#0b7f8c] font-absans font-bold text-base uppercase tracking-tight mb-3">
-                  {t('form.attestation.title')}
-                </h3>
-                <p className="text-black/60 font-archia font-medium text-xs leading-relaxed mb-6">
-                  {t('form.attestation.content')}
-                </p>
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" name="attestation" required className="mt-1 w-4 h-4 accent-[#13a7b7] rounded cursor-pointer" />
-                  <span className="text-black font-archia font-bold text-xs select-none">
-                    {t('form.attestation.label')}
-                  </span>
-                </label>
-              </div>
-
-              {/* Form Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.businessName')}
-                  </label>
-                  <input 
-                    type="text" 
-                    name="businessName" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm" 
-                    placeholder={t('form.fields.businessNamePlaceholder')} 
-                  />
-                </div>
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.businessType')}
-                  </label>
-                  <select 
-                    name="businessType" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold shadow-sm cursor-pointer"
-                  >
-                    <option value="">{t('form.fields.businessTypeDefault')}</option>
-                    {Array.isArray(t.raw('form.fields.businessTypes')) && (t.raw('form.fields.businessTypes') as string[]).map(type => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.fullName')}
-                  </label>
-                  <input 
-                    type="text" 
-                    name="fullName" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm" 
-                    placeholder={t('form.fields.fullNamePlaceholder')} 
-                  />
-                </div>
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.email')}
-                  </label>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm" 
-                    placeholder={t('form.fields.emailPlaceholder')} 
-                  />
-                </div>
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.state')}
-                  </label>
-                  <input 
-                    type="text" 
-                    name="state" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm" 
-                    placeholder={t('form.fields.statePlaceholder')} 
-                  />
-                </div>
-                <div>
-                  <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                    {t('form.fields.volume')}
-                  </label>
-                  <select 
-                    name="monthlyVolume" 
-                    required 
-                    className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold shadow-sm cursor-pointer"
-                  >
-                    <option value="">{t('form.fields.volumeDefault')}</option>
-                    {Array.isArray(t.raw('form.fields.volumeTiers')) && (t.raw('form.fields.volumeTiers') as string[]).map(tier => (
-                      <option key={tier} value={tier}>{tier}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                  {t('form.fields.products')}
-                </label>
-                <textarea 
-                  name="products" 
-                  required 
-                  rows={3} 
-                  className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm resize-none" 
-                  placeholder={t('form.fields.productsPlaceholder')} 
-                />
-              </div>
-
-              <div>
-                <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                  {t('form.fields.contactMethod')}
-                </label>
-                <div className="flex gap-6 mt-1">
-                  {['WhatsApp', 'Email'].map((m) => (
-                    <label key={m} className="flex items-center gap-2 cursor-pointer select-none">
-                      <input type="radio" name="contactMethod" value={m} className="accent-[#13a7b7] w-4 h-4 cursor-pointer" />
-                      <span className="text-black/75 font-archia text-xs font-bold">{m}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-black/55 font-dm-mono text-[9px] uppercase tracking-widest mb-2 font-bold">
-                  {t('form.fields.notes')}
-                </label>
-                <textarea 
-                  name="notes" 
-                  rows={3} 
-                  className="w-full bg-white border border-black/5 text-black rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#13a7b7] focus:ring-1 focus:ring-[#13a7b7] transition-all font-archia text-xs font-semibold placeholder:text-black/35 shadow-sm resize-none" 
-                  placeholder={t('form.fields.notesPlaceholder')} 
-                />
-              </div>
-
-              <button 
-                type="submit" 
-                className="w-full bg-black hover:bg-black/90 text-white font-bold py-4 rounded-xl font-absans text-[11px] uppercase tracking-widest transition-all shadow-md cursor-pointer"
-              >
-                {t('form.fields.submit')}
-              </button>
-
-              <p className="text-black/45 font-archia font-semibold text-[10px] text-center leading-relaxed max-w-lg mx-auto">
-                {t('form.footer')}
-              </p>
-            </form>
-          </div>
+          <WholesaleForm />
         </div>
       </section>
 
@@ -355,7 +203,7 @@ export default async function WholesaleApplicationPage({ params: { locale } }: {
         title="Ready to Fast-Track Your Approval?"
         subtitle={t('fastTrack.text')}
         primaryCtaText={t('fastTrack.whatsapp')}
-        primaryCtaHref="https://wa.me/18437439007?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account."
+        primaryCtaHref="https://wa.me/18433307365?text=Hi%2C%20I%27d%20like%20to%20apply%20for%20a%20wholesale%20peptide%20account."
         secondaryCtaText={t('fastTrack.email')}
         secondaryCtaHref="mailto:wholesale@99puritypeptides.com"
       />

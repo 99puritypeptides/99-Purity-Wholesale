@@ -22,11 +22,11 @@ export default function CartItem({ item }: CartItemProps) {
   };
 
   return (
-    <div className="group relative bg-white/5 border border-white/5 rounded-2xl p-6 transition-all hover:bg-white/10 hover:border-white/10">
+    <div className="group relative bg-white border border-black/5 rounded-2xl p-6 transition-all hover:shadow-md hover:border-black/10">
       <div className="flex flex-col gap-5">
         <div className="flex items-start justify-between gap-4">
           <div className="flex flex-col gap-1.5">
-            <h4 className="font-absans font-bold text-lg text-white leading-tight tracking-tight uppercase">
+            <h4 className="font-absans font-bold text-lg text-black leading-tight tracking-tight uppercase">
               <Link 
                 href={`/products/${item.category}/${item.productId}`}
                 onClick={() => dispatch({ type: 'CLOSE_DRAWER' })}
@@ -39,7 +39,7 @@ export default function CartItem({ item }: CartItemProps) {
               <Link
                 href={`/products/${item.category}`}
                 onClick={() => dispatch({ type: 'CLOSE_DRAWER' })}
-                className="text-[9px] font-bold text-white/30 hover:text-white/60 uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded transition-colors"
+                className="text-[9px] font-bold text-black/40 hover:text-black/60 uppercase tracking-widest bg-black/5 px-2 py-0.5 rounded transition-colors"
               >
                 {item.category.replace(/-/g, ' ')}
               </Link>
@@ -51,34 +51,34 @@ export default function CartItem({ item }: CartItemProps) {
           
           <button
             onClick={() => dispatch({ type: 'REMOVE_ITEM', payload: { id: item.id } })}
-            className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center text-white/20 hover:bg-red-500/10 hover:text-red-400 transition-all"
+            className="w-10 h-10 rounded-xl bg-black/5 flex items-center justify-center text-black/40 hover:bg-red-50 hover:text-red-500 transition-all"
             aria-label="Remove item"
           >
             <Trash2 className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="flex items-center justify-between mt-2 pt-5 border-t border-white/5">
+        <div className="flex items-center justify-between mt-2 pt-5 border-t border-black/5">
           <div className="flex flex-col gap-1">
-            <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest">Inquiry Volume</div>
-            <div className="text-sm font-archia font-medium text-white/80">
+            <div className="text-[10px] font-bold text-black/40 uppercase tracking-widest">Inquiry Volume</div>
+            <div className="text-sm font-archia font-medium text-black/80">
               {item.kitSize} Vials &times; {item.quantity} Kits
             </div>
           </div>
 
-          <div className="flex items-center bg-black/40 rounded-xl border border-white/10 p-1">
+          <div className="flex items-center bg-[#F8F8F6] rounded-xl border border-black/10 p-1">
             <button
               onClick={() => handleUpdateQuantity(item.quantity - 1)}
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-white/40 hover:bg-white/10 hover:text-white transition-all"
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-black/40 hover:bg-white hover:text-black hover:shadow-sm transition-all"
             >
               <Minus className="w-3 h-3" />
             </button>
-            <span className="w-10 text-center font-archia font-bold text-white text-sm">
+            <span className="w-10 text-center font-archia font-bold text-black text-sm">
               {item.quantity}
             </span>
             <button
               onClick={() => handleUpdateQuantity(item.quantity + 1)}
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-white/40 hover:bg-white/10 hover:text-white transition-all"
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-black/40 hover:bg-white hover:text-black hover:shadow-sm transition-all"
             >
               <Plus className="w-3 h-3" />
             </button>

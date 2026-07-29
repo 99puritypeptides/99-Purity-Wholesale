@@ -2,12 +2,14 @@ import { getTranslations } from 'next-intl/server';
 import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import CalculatorClient from '@/components/calculator/CalculatorClient';
+import CalculatorContent from '@/components/calculator/CalculatorContent';
+import CalculatorFaq from '@/components/calculator/CalculatorFaq';
 import { FlaskConical } from 'lucide-react';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
-  const url = `${baseUrl}/${locale}/calculator`;
+  const url = `${baseUrl}/${locale}/peptide-calculator`;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -74,8 +76,14 @@ export default async function CalculatorPage({ params }: { params: { locale: str
             <div className="reveal-card">
               <CalculatorClient />
             </div>
+
+            {/* Pillar SEO Content */}
+            <CalculatorContent />
           </div>
         </section>
+        
+        {/* Real-World FAQs (Global Component handles its own container) */}
+        <CalculatorFaq />
       </main>
     </NextIntlClientProvider>
   );

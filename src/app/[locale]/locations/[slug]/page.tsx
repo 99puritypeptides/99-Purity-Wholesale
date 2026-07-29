@@ -7,6 +7,7 @@ import { getTranslations } from 'next-intl/server';
 import FaqSection from '@/components/shared/FaqSection';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 export async function generateStaticParams() {
   return locationsData.map((loc) => ({ slug: loc.slug }));
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
       title: location.metaTitle,
       description: location.metaDesc,
     },
+    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/locations/${params.slug}` },
   };
 }
 
@@ -33,6 +35,20 @@ export default async function LocationTemplatePage({ params }: { params: { local
   if (!location) notFound();
 
   const faqItems = homeT.raw('FAQ.items') as any[];
+
+  
+  const faqSchema = location.localFaqs ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: location.localFaqs.map((faq: any) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a
+      }
+    }))
+  } : null;
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -65,6 +81,18 @@ export default async function LocationTemplatePage({ params }: { params: { local
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      <BreadcrumbSchema items={[
+        { name: 'Locations', item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}locations` },
+        { name: `${location.city}, ${location.state}`, item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}locations/${location.slug}` }
+      ]} />
       {/* Grain overlay */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
@@ -123,6 +151,8 @@ export default async function LocationTemplatePage({ params }: { params: { local
                   <p className="text-black/85 font-semibold leading-relaxed">{location.bodyP1}</p>
                   <p>{location.bodyP2}</p>
                   <p>{location.bodyP3}</p>
+                  {location.bodyP4 && <p>{location.bodyP4}</p>}
+                  {location.bodyP5 && <p>{location.bodyP5}</p>}
                 </div>
               </FadeIn>
 
@@ -181,6 +211,32 @@ export default async function LocationTemplatePage({ params }: { params: { local
                   ))}
                 </div>
               </FadeIn>
+
+              
+              {/* Institutions Served (GEO Content) */}
+              {location.institutionsServed && (
+                <FadeIn className="space-y-4">
+                  <h3 className="text-xl md:text-2xl font-absans font-bold text-black uppercase tracking-tight border-b border-black/10 pb-4">
+                    Institutions Served in {location.city}
+                  </h3>
+                  <p className="text-black/75 font-archia font-medium leading-relaxed text-sm md:text-base">
+                    {location.institutionsServed}
+                  </p>
+                </FadeIn>
+              )}
+
+              {/* Local Logistics (GEO Content) */}
+              {location.logisticsDetails && (
+                <FadeIn className="space-y-4">
+                  <h3 className="text-xl md:text-2xl font-absans font-bold text-black uppercase tracking-tight border-b border-black/10 pb-4">
+                    Priority Wholesale Logistics to {location.state}
+                  </h3>
+                  <p className="text-black/75 font-archia font-medium leading-relaxed text-sm md:text-base">
+                    {location.logisticsDetails}
+                  </p>
+                </FadeIn>
+              )}
+
 
               {/* Shipping Info */}
               <FadeIn className="bg-white border border-black/5 rounded-[2.5rem] p-8 md:p-10 shadow-sm">
@@ -291,7 +347,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
 
                   <div className="space-y-4">
                     <a
-                      href={`https://wa.me/18437439007?text=${encodeURIComponent(t('whatsappMsg', { city: location.city, state: location.state }))}`}
+                      href={`https://wa.me/18433307365?text=${encodeURIComponent(t('whatsappMsg', { city: location.city, state: location.state }))}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-white hover:bg-white/90 text-black font-bold py-4 rounded-xl transition-all font-absans text-[11px] uppercase tracking-widest flex items-center justify-center gap-2.5 shadow-lg"
@@ -385,28 +441,25 @@ export default async function LocationTemplatePage({ params }: { params: { local
         </div>
       </section>
 
-      {/* FAQ Segment */}
-      {faqItems && faqItems.length > 0 && (
+      
+      {/* FAQ Segment (AEO Content) */}
+      {(location.localFaqs && location.localFaqs.length > 0) ? (
         <FaqSection 
-          title={homeT('FAQ.title')}
-          subtitle={homeT('FAQ.subtitle')}
-          items={faqItems}
-          eyebrow="(FAQ)"
-          theme="light"
+          title={`Frequently Asked Questions in ${location.city}`}
+          subtitle={`Wholesale peptide procurement information for ${location.state} businesses.`}
+          items={location.localFaqs}
+          eyebrow="Local FAQ"
         />
+      ) : (
+        faqItems && faqItems.length > 0 && (
+          <FaqSection 
+            title={homeT('FAQ.title')}
+            subtitle={homeT('FAQ.subtitle')}
+            items={faqItems}
+            eyebrow="(FAQ)"
+          />
+        )
       )}
-
-      {/* Global CTA */}
-      <GlobalCTA 
-        badge={homeT('FinalCta.badge')}
-        title={homeT('FinalCta.title')}
-        subtitle={homeT('FinalCta.subtitle')}
-        primaryCtaText={homeT('FinalCta.whatsapp')}
-        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(homeT('FinalCta.msg'))}`}
-        secondaryCtaText={homeT('FinalCta.email')}
-        secondaryCtaHref="mailto:sales@99puritypeptides.com"
-      />
-
-    </main>
+</main>
   );
 }

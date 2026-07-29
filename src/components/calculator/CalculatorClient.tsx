@@ -313,7 +313,7 @@ export default function CalculatorClient() {
               {t('procureDesc')}
             </p>
             <a 
-              href={`https://wa.me/18437439007?text=${encodeURIComponent(t('procureMsg'))}`}
+              href={`https://wa.me/18433307365?text=${encodeURIComponent(t('procureMsg'))}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-white hover:bg-white/90 text-black rounded-xl font-bold uppercase tracking-[0.2em] text-[11px] lg:text-sm transition-all active:scale-98"

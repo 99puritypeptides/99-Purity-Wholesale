@@ -1,6 +1,5 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import {
   ShieldCheck, Search, Users, FlaskConical, Globe,
   Award, CheckCircle2, Microscope, Star, Truck
@@ -8,8 +7,19 @@ import {
 import GlobalCTA from "@/components/layout/GlobalCTA";
 import FaqSection from "@/components/shared/FaqSection";
 
-export default function AboutPage() {
-  const t = useTranslations("About");
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'About' });
+  return {
+    title: `${t('Hero.title')}`,
+    description: t('Hero.subtitle'),
+    alternates: {
+      canonical: `/${locale === 'en' ? '' : locale}/about`
+    }
+  };
+}
+
+export default async function AboutPage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'About' });
 
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
@@ -91,21 +101,23 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative mt-16 lg:mt-0 px-6 pb-12 lg:pb-0">
               <div className="reveal-card relative w-full max-w-md mx-auto aspect-[4/5]">
                 {/* Base Card: Pristine Laboratory Setting */}
-                <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 group">
-                  <img 
+                <div className="w-full h-full rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 group relative">
+                  <Image 
                     src="/images/hero-lab.png"
                     alt="Pristine Peptide Chromatography Laboratory"
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                 </div>
                 
                 {/* Overlapping Floating Product Kit Card */}
-                <div className="absolute -bottom-10 -left-6 md:-left-12 w-2/3 aspect-[4/3] rounded-3xl overflow-hidden border-[6px] border-[#05080C] shadow-[0_20px_50px_rgba(0,0,0,0.6)] z-20 group/kit transition-transform duration-500 hover:scale-105 hover:-rotate-1">
-                  <img 
-                    src="/Product images/GLOW.jpg"
+                <div className="absolute -bottom-10 -left-6 md:-left-12 w-2/3 aspect-[4/3] rounded-3xl overflow-hidden border-[6px] border-[#05080C] shadow-[0_20px_50px_rgba(0,0,0,0.6)] z-20 group/kit transition-transform duration-500 hover:scale-105 hover:-rotate-1 relative">
+                  <Image 
+                    src="/product-images/glow-hair-skin-nail-blend.jpg"
                     alt="Certified 99 Purity Peptide Vial Kit"
-                    className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover/kit:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-[1.2s] group-hover/kit:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
                 </div>
@@ -121,10 +133,11 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
             {/* Pristine Full-Color Clinical Laboratory Research Visual */}
-            <img 
+            <Image 
               src="/images/hero-lab-bg.png"
               alt="99 Purity Wholesale Analytical Research Laboratory"
-              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
           </div>
@@ -273,10 +286,11 @@ export default function AboutPage() {
               <div className="reveal-card bg-white/5 border border-white/5 rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[500px] flex flex-col group transition-all duration-500 hover:border-white/10">
                 {/* Top Portion: High-End Pristine Quality Control Lab Showcase (100% Relatable & Local) */}
                 <div className="h-56 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="/lab_quality_bg_1778896760027.png" 
                     alt="Quality Verification Clinical Testing Laboratory"
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-[1.5s] group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#05080C] via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-6 left-8 right-6 z-10">
@@ -377,7 +391,7 @@ export default function AboutPage() {
         title={t('Cta.subtitle')}
         subtitle="Connect with our Laboratory Operations team directly to discuss high-volume procurement or specialized research needs."
         primaryCtaText={t('Cta.whatsapp')}
-        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(t('Cta.msg'))}`}
+        primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(t('Cta.msg'))}`}
         secondaryCtaText={t('Cta.email')}
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

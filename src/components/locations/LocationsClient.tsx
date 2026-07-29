@@ -269,7 +269,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`https://wa.me/18437439007?text=${encodeURIComponent(t('requestPricingForState'))}`}
+                href={`https://wa.me/18433307365?text=${encodeURIComponent(t('requestPricingForState'))}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-4 px-8 rounded-full transition-all font-absans text-xs uppercase tracking-widest shadow-[0_10px_30px_rgba(37,211,102,0.15)]"
@@ -349,7 +349,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
         title={homeT('FinalCta.title')}
         subtitle={homeT('FinalCta.subtitle')}
         primaryCtaText={homeT('FinalCta.whatsapp')}
-        primaryCtaHref={`https://wa.me/18437439007?text=${encodeURIComponent(homeT('FinalCta.msg'))}`}
+        primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(homeT('FinalCta.msg'))}`}
         secondaryCtaText={homeT('FinalCta.email')}
         secondaryCtaHref="mailto:sales@99puritypeptides.com"
       />

@@ -22,6 +22,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('productsTitle'),
     description: t('productsDesc'),
     openGraph: { title: t('productsTitle'), description: t('productsDesc') },
+  
+    alternates: { canonical: `/${locale === 'en' ? '' : locale}/products` },
   };
 }
 
@@ -244,7 +246,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         title="Bulk Sourcing Redefined"
         subtitle="Access tiered pricing, verified purity, and priority domestic fulfillment for your research institution or clinical practice."
         primaryCtaText="WhatsApp Sales"
-        primaryCtaHref="https://wa.me/18437439007"
+        primaryCtaHref="https://wa.me/18433307365"
         secondaryCtaText="Wholesale Application"
         secondaryCtaHref="/wholesale-application"
       />

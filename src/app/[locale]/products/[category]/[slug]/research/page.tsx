@@ -20,6 +20,16 @@ import FaqSection from '@/components/shared/FaqSection';
 import { curatedResearch, productLookup } from '@/data/researchDb';
 import type { ResearchData } from '@/data/researchDb';
 
+export async function generateMetadata({ params }: { params: { locale: string, category: string, slug: string } }) {
+  const titleStr = params.slug.replace(/-/g, ' ').toUpperCase();
+  return {
+    title: `Research: ${titleStr}`,
+    description: `Research data and clinical trials for ${titleStr}.`,
+    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.category}/${params.slug}/research` }
+  };
+}
+
+
 // Retrieve research data from curated or lookup database, or generate fallback
 const getResearchData = (slug: string, category: string, name: string, isEs: boolean): ResearchData => {
   const normalizedSlug = slug.toLowerCase();
@@ -169,7 +179,7 @@ export default async function ResearchPaperPage({
           }
         `}} />
         <div className="text-center border-b-2 border-black pb-4 mb-6">
-          <h1 className="text-2xl font-bold uppercase tracking-wider">99 Purity Wholesale</h1>
+          <div className="text-2xl font-bold uppercase tracking-wider">99 Purity Wholesale</div>
           <p className="text-xs uppercase tracking-widest text-gray-500 mt-1">Clinical Research & Reference Standard Compendium</p>
           <div className="flex justify-between mt-4 text-[10px] font-mono">
             <span>REF: 99PW-RP-{product.slug.toUpperCase()}</span>

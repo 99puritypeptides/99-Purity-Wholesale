@@ -10,7 +10,7 @@ interface ProductGalleryProps {
   specImagesMap?: Record<string, string>;
 }
 
-// Parses filenames like "Semaglutide 10mg.jpg" to return "10MG"
+// Parses filenames like "semaglutide-10mg.jpg" to return "10MG"
 const getDosageLabel = (filename: string) => {
   // Try to match standard milligram or microgram patterns
   const match = filename.match(/(\d+(?:\.\d+)?\s*(?:mg|mcg|g)(?:\s*-\s*\d+\s*ml|\s*\d+\s*kit)?)/i);
@@ -88,8 +88,8 @@ export default function ProductGallery({ images, productName, categoryName, spec
         className={`relative aspect-square w-full rounded-2xl bg-black/[0.01] border border-black/5 overflow-hidden flex items-center justify-center group/img ${isZoomed ? 'cursor-none' : 'cursor-default'}`}
       >
         <img 
-          src={encodeURI(`/Product images/${currentImage}`)}
-          alt={`${productName} - View ${activeIndex + 1}`}
+          src={encodeURI(`/product-images/${currentImage}`)}
+          alt={`${productName} Wholesale Reference Standard - View ${activeIndex + 1}`}
           className="w-[90%] h-[90%] object-contain rounded-2xl transition-transform duration-200 ease-out mix-blend-multiply brightness-[1.05] contrast-[1.02]"
           style={{
             transform: isZoomed ? 'scale(1.8)' : 'scale(1)',
@@ -153,8 +153,8 @@ export default function ProductGallery({ images, productName, categoryName, spec
                   {/* Thumbnail Image */}
                   <div className="w-[75%] h-[75%] flex items-center justify-center overflow-hidden mb-1">
                     <img 
-                      src={encodeURI(`/Product images/${img}`)}
-                      alt={`${productName} thumbnail ${dosage}`}
+                      src={encodeURI(`/product-images/${img}`)}
+                      alt={`${productName} Wholesale Reference Standard - View ${idx + 1}`}
                       className="h-full object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>

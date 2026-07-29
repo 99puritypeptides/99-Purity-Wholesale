@@ -64,8 +64,25 @@ export default function FaqSection({
   const textAccent = isLight ? 'group-open:text-brand-accent' : 'group-open:text-brand-accent';
   const starLineColor = isLight ? 'black' : '#4FC3D0';
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a
+      }
+    }))
+  };
+
   return (
     <section className={`relative z-10 py-24 md:py-32 overflow-hidden transition-colors duration-300 ${sectionBg}`} id={id}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Subtle Grain Background in dark mode */}
       {!isLight && (
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
