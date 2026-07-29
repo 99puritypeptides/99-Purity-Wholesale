@@ -9,6 +9,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const url = `${baseUrl}/${locale}/services`;
 
+  const ogTitle = t('servicesOgTitle');
+  const ogDesc = t('servicesOgDesc');
+  const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent('B2B Wholesale Services')}&desc=${encodeURIComponent(ogDesc)}&category=Services`;
+
   return {
     metadataBase: new URL(baseUrl),
     title: t('servicesTitle'),
@@ -17,13 +21,13 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
       canonical: url,
     },
     openGraph: {
-      title: t('servicesOgTitle'),
-      description: t('servicesOgDesc'),
+      title: ogTitle,
+      description: ogDesc,
       url: url,
       siteName: '99 Purity Wholesale',
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: ogUrlImage,
           width: 1200,
           height: 630,
           alt: '99 Purity Wholesale B2B Services',
@@ -36,7 +40,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
       card: 'summary_large_image',
       title: t('servicesTitle'),
       description: t('servicesDesc'),
-      images: [`${baseUrl}/og-image.png`],
+      images: [ogUrlImage],
     },
     robots: 'index, follow',
     keywords: [

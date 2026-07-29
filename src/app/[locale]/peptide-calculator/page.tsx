@@ -11,21 +11,25 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const url = `${baseUrl}/${locale}/peptide-calculator`;
 
+  const ogTitle = t('calculatorTitle');
+  const ogDesc = t('calculatorDesc');
+  const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent('Peptide Reconstitution Calculator')}&desc=${encodeURIComponent(ogDesc)}&category=Research%20Tools`;
+
   return {
     metadataBase: new URL(baseUrl),
-    title: t('calculatorTitle'),
-    description: t('calculatorDesc'),
+    title: ogTitle,
+    description: ogDesc,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: t('calculatorTitle'),
-      description: t('calculatorDesc'),
+      title: ogTitle,
+      description: ogDesc,
       url: url,
       siteName: '99 Purity Wholesale',
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: ogUrlImage,
           width: 1200,
           height: 630,
           alt: '99 Purity Wholesale Peptide Reconstitution Calculator',
@@ -36,9 +40,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('calculatorTitle'),
-      description: t('calculatorDesc'),
-      images: [`${baseUrl}/og-image.png`],
+      title: ogTitle,
+      description: ogDesc,
+      images: [ogUrlImage],
     },
     robots: 'index, follow',
   };

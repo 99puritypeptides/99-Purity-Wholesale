@@ -56,13 +56,18 @@ export const viewport = {
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Meta' });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
+  const ogTitle = t('homeTitle');
+  const ogDesc = t('homeDesc');
+  const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent('99 Purity Wholesale')}&desc=${encodeURIComponent(ogDesc)}&category=Wholesale%20Supplier`;
+
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'),
+    metadataBase: new URL(baseUrl),
     title: {
-      default: t('homeTitle'),
+      default: ogTitle,
       template: '%s | 99 Purity Wholesale',
     },
-    description: t('homeDesc'),
+    description: ogDesc,
     keywords: [
       '99 purity peptides',
       'peptides wholesale',
@@ -77,11 +82,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: {
       type: 'website',
       siteName: '99 Purity Wholesale',
-      title: t('homeTitle'),
-      description: t('homeDesc'),
+      title: ogTitle,
+      description: ogDesc,
       images: [
         {
-          url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`,
+          url: ogUrlImage,
           width: 1200,
           height: 630,
           alt: '99 Purity Wholesale — Wholesale Peptide Supplier USA',
@@ -90,9 +95,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('homeTitle'),
-      description: t('homeDesc'),
-      images: [`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`],
+      title: ogTitle,
+      description: ogDesc,
+      images: [ogUrlImage],
     },
     manifest: '/manifest.json',
     appleWebApp: {
@@ -185,6 +190,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <link rel="alternate" type="text/markdown" href="/llms.txt" />
         <script
           id="org-schema"
           type="application/ld+json"

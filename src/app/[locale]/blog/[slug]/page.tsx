@@ -121,11 +121,38 @@ const mdxComponents = {
 export async function generateMetadata({ params }: { params: { locale: string, slug: string } }) {
   try {
     const post = await getPostBySlug(params.slug);
-    return {
-      title: `${post.meta.title}`,
-      description: post.meta.desc || post.meta.title,
-      alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/blog/${params.slug}` },
-    };
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
+      const url = `${baseUrl}/${params.locale === 'en' ? '' : params.locale + '/'}blog/${params.slug}`;
+      const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent(post.meta.title)}&desc=${encodeURIComponent(post.meta.desc || post.meta.title)}&category=Clinical%20Research%20Blog`;
+
+      return {
+        metadataBase: new URL(baseUrl),
+        title: `${post.meta.title}`,
+        description: post.meta.desc || post.meta.title,
+        alternates: { canonical: url },
+        openGraph: {
+          title: post.meta.title,
+          description: post.meta.desc || post.meta.title,
+          url: url,
+          siteName: '99 Purity Wholesale',
+          images: [
+            {
+              url: ogUrlImage,
+              width: 1200,
+              height: 630,
+              alt: post.meta.title,
+            },
+          ],
+          locale: params.locale,
+          type: 'article',
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title: post.meta.title,
+          description: post.meta.desc || post.meta.title,
+          images: [ogUrlImage],
+        },
+      };
   } catch (e) {
     return {};
   }
