@@ -14,15 +14,22 @@ export default function Header() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const mobileMenuScrollRef = useNestedSmoothScroll<HTMLDivElement>({ enabled: isMobileMenuOpen });
 
   useEffect(() => {
+    let lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollY = currentScrollY;
     };
     
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -58,7 +65,7 @@ export default function Header() {
   return (
     <>
       <header 
-        className="fixed top-0 left-0 w-full z-[60] px-3 md:px-6 py-4 md:py-5 print:hidden"
+        className={`fixed top-0 left-0 w-full z-[60] px-3 md:px-6 py-4 md:py-5 print:hidden transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}
       >
         <div className="max-w-[1650px] mx-auto bg-white rounded-full shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-black/5 p-1.5 md:p-2 flex justify-between items-center min-h-[60px] md:min-h-[78px]">
           {/* Logo Section */}

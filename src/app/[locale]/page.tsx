@@ -341,30 +341,30 @@ export default async function HomePage({ params }: { params: { locale: string } 
               const cat = bestSellerCats[i];
 
               const bestSellerImages: Record<string, string> = {
-                'semaglutide': '/product-images/semaglutide-10mg.jpg',
-                'tirzepatide': '/product-images/tirzepatide-5mg.webp',
-                'retatrutide': '/product-images/retatrutide-5mg.webp',
-                'bpc-157': '/product-images/bpc-157-5mg.jpg',
-                'tb-500': '/product-images/tb-500-5mg-3ml.jpg',
-                'ipamorelin': '/product-images/ipamorelin-5mg.jpg',
-                'cjc-1295-ipam': '/product-images/cjc-1295-ipamorelin-10-10mg.jpg',
-                'nad': '/product-images/nad-100mg.jpg',
-                'epithalon': '/product-images/epithalon-10mg.jpg'
+                'semaglutide': '/product-images/SEMAGLUTIDE 5mg-2.webp',
+                'tirzepatide': '/product-images/TIRZEPATIDE 10mg-3.webp',
+                'retatrutide': '/product-images/RETATRUTIDE 10mg-6.webp',
+                'bpc-157': '/product-images/BPC-157 5mg-5.webp',
+                'tb-500': '/product-images/TB-500  5mg-2.webp',
+                'ipamorelin': '/product-images/IPAMORELIN 5mg-2.webp',
+                'cjc-1295-ipam': '/product-images/CJC 1295 IPAMORELIN 5mg 5mg-2.webp',
+                'nad': '/product-images/NAD+ 500mg-1.webp',
+                'epithalon': '/product-images/EPITHALON 10mg.webp'
               };
-              const productImg = bestSellerImages[slug] || '/product-images/semaglutide-10mg.jpg';
+              const productImg = bestSellerImages[slug] || '/product-images/SEMAGLUTIDE 5mg-2.webp';
 
               return (
                 <div 
                   key={slug} 
-                  className="reveal-card group relative flex flex-col h-[480px] rounded-[1.5rem] bg-white border border-black/[0.03] p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
+                  className="reveal-card group relative flex flex-col h-[520px] rounded-[1.5rem] bg-white border border-black/[0.03] p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
                 >
                   <Link 
-                    href={`/products/${product.slug}`} 
+                    href={`/products/${slug}`} 
                     className="flex flex-col h-full w-full text-left"
                   >
                     <div className="flex-grow flex flex-col">
                       {/* Beautiful Seamless Floating Product Image */}
-                      <div className="relative w-full h-40 flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="relative w-full h-60 flex items-center justify-center mb-4 overflow-hidden">
                         <img 
                           src={productImg} 
                           alt={`${p.name} High Purity Wholesale Research Peptide`}

@@ -674,7 +674,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                     </div>
                     
                     <Link
-                      href={`/products//research`}
+                      href={`/products/${product.slug}/research`}
                       className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-dm-sans font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-full transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-emerald-500/20 whitespace-nowrap self-start md:self-auto"
                     >
                       <span>{tr('readPaper')}</span>
