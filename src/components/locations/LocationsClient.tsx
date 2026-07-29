@@ -351,7 +351,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
         primaryCtaText={homeT('FinalCta.whatsapp')}
         primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(homeT('FinalCta.msg'))}`}
         secondaryCtaText={homeT('FinalCta.email')}
-        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+        secondaryCtaHref="mailto:wholesale@99puritypeptides.com"
       />
 
     </main>

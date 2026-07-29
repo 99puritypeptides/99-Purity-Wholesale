@@ -848,7 +848,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         primaryCtaText={t('FinalCta.whatsapp')}
         primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(t('FinalCta.msg'))}`}
         secondaryCtaText={t('FinalCta.email')}
-        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+        secondaryCtaHref="mailto:wholesale@99puritypeptides.com"
       />
     </div>
   );

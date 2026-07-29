@@ -393,7 +393,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
         primaryCtaText={t('Cta.whatsapp')}
         primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(t('Cta.msg'))}`}
         secondaryCtaText={t('Cta.email')}
-        secondaryCtaHref="mailto:sales@99puritypeptides.com"
+        secondaryCtaHref="mailto:wholesale@99puritypeptides.com"
       />
 
     </main>
