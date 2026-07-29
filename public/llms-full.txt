@@ -20,8 +20,8 @@ The platform operates on an "Inquiry/Quote" model rather than direct B2C checkou
 /
 ├── public/                 # Static public assets
 │   ├── product-images/     # High-res .webp images (89 active products)
-│   ├── locales/            # JSON dictionary files for translations (en.json, es.json)
 │   └── sw.js               # Service Worker for PWA
+├── messages/                # JSON dictionary files for translations (en.json, es.json)
 ├── src/
 │   ├── app/                # Next.js App Router root
 │   │   ├── [locale]/       # Dynamic locale segment for i18n
@@ -32,12 +32,13 @@ The platform operates on an "Inquiry/Quote" model rather than direct B2C checkou
 │   │   ├── products/       # Product grids, cards, AddToInquiry buttons
 │   │   ├── cart/           # Shopping/Inquiry Cart drawer and logic
 │   │   ├── search/         # Command-palette style global search
+│   │   ├── seo/            # Shared JSON-LD schema components (BreadcrumbSchema, FaqSchema, ArticleSchema)
 │   │   ├── layout/         # Site Header, Footer, and Navigation
-│   │   └── ui/             # Micro-components (buttons, inputs)
-│   ├── data/               # Static JSON Databases (Source of Truth)
+│   │   └── ui/              # Micro-components (buttons, inputs)
+│   ├── data/               # Static JSON/TS Databases (Source of Truth)
 │   │   ├── products.json   # 89 compounds, specs, and categories
 │   │   ├── locations.json  # 50 US States + major cities for Local SEO
-│   │   └── services.json   # Available lab services (HPLC testing, etc.)
+│   │   └── services-content/ # Per-service content modules (dropshipping, private-label, etc.) + index.ts registry
 │   ├── hooks/              # Custom React Hooks
 │   │   ├── useNestedSmoothScroll.ts # Lenis scroll integration
 │   │   └── useCart.ts      # Context hook for inquiry state
@@ -75,9 +76,11 @@ State is managed globally via React Context. The cart tracks `items` (which incl
 
 ## 7. SEO & Indexing Strategy
 - **Flattened URLs:** Products are accessed via `/products/[slug]` (removing the category sub-path) to maximize URL authority.
-- **Dynamic Sitemap:** `sitemap.ts` programmatically loops through `products.json` and `locations.json` to generate over 300+ valid URLs, including localized prefixes (e.g., `/es/products/bpc-157`).
+- **Dynamic Sitemap:** `sitemap.ts` programmatically loops through `products.json`, `locations.json`, `services-content`, and MDX blog posts to generate 1,000+ valid URLs across both locales, each with reciprocal `hreflang` (`alternates.languages`) entries linking the en/es versions.
+- **Hreflang:** Every page's `generateMetadata` sets `alternates.languages` (en-US / es / x-default) in addition to `canonical`.
+- **Structured Data:** JSON-LD is emitted per page type — `Organization` (site-wide), `Product`, `Service`, `LocalBusiness`, `FAQPage`, `Article`, `BreadcrumbList`, `DefinedTermSet` (glossary), `WebApplication` (peptide calculator). Ratings/review counts are intentionally omitted from `Product`/`Organization` schema since there is no real review system — fabricated `aggregateRating` values are a Google structured-data policy violation.
 - **Open Graph (OG) Images:** Dynamic OG images are generated using Next.js Image Response (`/api/og`) to create shareable link previews.
-- **Robots.txt:** Explicitly blocks `/api/` and internal Next.js assets to preserve crawl budget.
+- **Robots.txt:** `src/app/robots.ts` explicitly blocks `/api/`, `/_next/`, and `/static/`, and explicitly allow-lists AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, anthropic-ai).
 
 ## 8. Deployment & Build Notes
 - Runs on Vercel (or standard Node.js server using `npm run start`).

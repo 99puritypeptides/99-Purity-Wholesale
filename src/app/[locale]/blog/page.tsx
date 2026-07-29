@@ -11,7 +11,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('blogTitle'),
     description: t('blogDesc'),
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/blog` },
+    alternates: {
+      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
+      languages: { 'en-US': '/blog', es: '/es/blog', 'x-default': '/blog' },
+    },
   };
 }
 

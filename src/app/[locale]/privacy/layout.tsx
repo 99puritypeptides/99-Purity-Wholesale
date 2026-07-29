@@ -6,7 +6,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `Privacy Policy`,
     description: `Privacy policy and B2B data handling practices for 99 Purity Wholesale.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/privacy` }
+    alternates: {
+      canonical: locale === 'en' ? '/privacy' : `/${locale}/privacy`,
+      languages: { 'en-US': '/privacy', es: '/es/privacy', 'x-default': '/privacy' },
+    }
   };
 }
 

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import FaqSchema from '@/components/seo/FaqSchema';
 
 interface FAQItem {
   question: string;
@@ -17,27 +18,10 @@ export default function BlogFAQ({ faqs }: BlogFAQProps) {
 
   if (!faqs || faqs.length === 0) return null;
 
-  // Generate FAQ Schema JSON-LD for SEO
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
   return (
     <div className="mt-20 border-t border-white/5 pt-16">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      
+      <FaqSchema items={faqs.map(faq => ({ q: faq.question, a: faq.answer }))} />
+
       <h2 className="text-3xl font-rajdhani font-bold text-white mb-8 tracking-tight">
         Frequently Asked Questions
       </h2>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
+import FaqSchema from '@/components/seo/FaqSchema';
 
 interface FaqItem {
   q: string;
@@ -17,6 +18,8 @@ interface FaqSectionProps {
   subtitle?: string;
   items: FaqItem[];
   theme?: 'light' | 'dark' | 'white';
+  /** Set to false when the caller renders its own <FaqSchema> (e.g. with markdown-stripped answer text) to avoid emitting duplicate JSON-LD. */
+  includeSchema?: boolean;
 }
 
 function renderAnswer(text: string, isLight: boolean) {
@@ -47,7 +50,8 @@ export default function FaqSection({
   title,
   subtitle,
   items = [],
-  theme = 'light'
+  theme = 'light',
+  includeSchema = true,
 }: FaqSectionProps) {
   if (!items || items.length === 0) return null;
 
@@ -64,25 +68,9 @@ export default function FaqSection({
   const textAccent = isLight ? 'group-open:text-brand-accent' : 'group-open:text-brand-accent';
   const starLineColor = isLight ? 'black' : '#4FC3D0';
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: f.a
-      }
-    }))
-  };
-
   return (
     <section className={`relative z-10 py-24 md:py-32 overflow-hidden transition-colors duration-300 ${sectionBg}`} id={id}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {includeSchema && <FaqSchema items={items} />}
       {/* Subtle Grain Background in dark mode */}
       {!isLight && (
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />

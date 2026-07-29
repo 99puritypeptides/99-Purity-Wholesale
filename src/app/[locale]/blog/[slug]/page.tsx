@@ -9,6 +9,16 @@ import { FadeIn } from '@/components/shared/Motion';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
+// Builds a descriptive alt string from an image filename, e.g. "/product-images/semaglutide-20mg.jpg" -> "Semaglutide 20mg"
+function humanizeImageAlt(path: string): string {
+  const filename = path.split('/').pop() || path;
+  const withoutExt = filename.replace(/\.(jpg|jpeg|png|webp|avif)$/i, '');
+  return withoutExt
+    .split('-')
+    .map(word => (/^\d/.test(word) ? word : word.charAt(0).toUpperCase() + word.slice(1)))
+    .join(' ');
+}
+
 // Dynamic helper to serve contextual images and compounds based on post content keywords
 function getRelatedImages(slug: string, title: string): { images: string[], compounds: { name: string, img: string, desc: string }[] } {
   const normSlug = slug.toLowerCase();
@@ -129,7 +139,14 @@ export async function generateMetadata({ params }: { params: { locale: string, s
         metadataBase: new URL(baseUrl),
         title: `${post.meta.title}`,
         description: post.meta.desc || post.meta.title,
-        alternates: { canonical: url },
+        alternates: {
+          canonical: url,
+          languages: {
+            'en-US': `${baseUrl}/blog/${params.slug}`,
+            es: `${baseUrl}/es/blog/${params.slug}`,
+            'x-default': `${baseUrl}/blog/${params.slug}`,
+          },
+        },
         openGraph: {
           title: post.meta.title,
           description: post.meta.desc || post.meta.title,
@@ -235,7 +252,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
                           <div className="my-14 relative overflow-hidden rounded-[2.5rem] h-[280px] md:h-[420px] border border-white/5 shadow-2xl group">
                             <img 
                               src={images[index % images.length]}
-                              alt={`Analytical reference visual ${index + 1}`}
+                              alt={`${humanizeImageAlt(images[index % images.length])} — Research Compound Reference Image`}
                               className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
@@ -348,7 +365,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
                     <div className="grid grid-cols-2 gap-3">
                       {images.slice(1, 5).map((img, idx) => (
                         <div key={idx} className="aspect-[4/3] rounded-xl overflow-hidden bg-white/5 border border-white/5 relative group shadow-lg">
-                          <img src={img} alt="Synthesis process lot" className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-105" />
+                          <img src={img} alt={`${humanizeImageAlt(img)} — Laboratory Synthesis and Quality Verification`} className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-105" />
                           <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors pointer-events-none" />
                         </div>
                       ))}

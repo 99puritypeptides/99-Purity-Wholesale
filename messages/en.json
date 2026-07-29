@@ -875,9 +875,9 @@
     }
   },
   "Meta": {
-    "homeTitle": "Wholesale Peptides USA | Bulk Research Peptides for Sale | 99 Purity",
+    "homeTitle": "Wholesale Research Peptides | Premium Bulk Kits | 99 Purity",
     "homeDesc": "Buy bulk research peptides online at wholesale prices. 99 Purity Wholesale offers ≥99% purity USA-made peptides with third-party COAs. Exclusive B2B supply for clinics, pharmacies, and licensed researchers.",
-    "productsTitle": "Research Peptides for Sale | High Purity Catalog",
+    "productsTitle": "Wholesale Peptide Catalog & Research Compounds | 99 Purity Wholesale",
     "productsDesc": "High-quality America's made peptides for qualified institutions and researchers. View our wholesale catalog.",
     "servicesTitle": "Peptide Dropshipping, Private Label & Wholesale Services",
     "servicesDesc": "U.S.-manufactured, ≥99% purity research peptides for B2B professionals. Dropshipping, private label, launch support, and website development for compounding pharmacies, wellness clinics, and licensed distributors.",
@@ -898,6 +898,8 @@
     },
     "aboutTitle": "About Us | U.S. Domestic Manufacturer & Quality Standards",
     "aboutDesc": "99 Purity Wholesale is a U.S. domestic peptide manufacturer supplying compounding pharmacies, wellness clinics, and licensed distributors. Every batch independently tested at ≥99% purity by Freedom Diagnostic.",
+    "coaTitle": "Certificates of Analysis (COA) | Batch-Matched Purity Tests",
+    "coaDesc": "View and verify the Certificates of Analysis (COA) for all wholesale research peptides. 99%+ HPLC/MS verified purity guaranteed by independent U.S. laboratories.",
     "contactTitle": "Contact | Wholesale Inquiries",
     "contactDesc": "Reach out to our U.S. team for pricing, volume orders, and dropshipping programs.",
     "locationsTitle": "Wholesale Peptide Locations | All 50 States",
@@ -908,8 +910,8 @@
     "productDesc": "Buy {name} wholesale at ≥99% purity. U.S.-manufactured, batch COA verified, tiered B2B pricing. Fast domestic shipping. Research use only.",
     "productOgTitle": "{name} | Bulk Wholesale Research Peptides",
     "productOgDesc": "Premium {name} wholesale supply. ≥99% Purity Guaranteed. Third-party HPLC/MS verified. U.S. domestic fulfillment.",
-    "calculatorTitle": "Peptide Reconstitution Calculator",
-    "calculatorDesc": "Determine exact syringe units and dosage concentrations for your research compounds. Visual interactive calculator."
+    "calculatorTitle": "Free Peptide Reconstitution Calculator | 99 Purity Wholesale",
+    "calculatorDesc": "Calculate exact BAC water volume, syringe units, and dosage concentration for any research peptide in seconds. Free interactive reconstitution calculator for U-100 and U-50 syringes."
   },
   "ProductsIndex": {
     "banner": "ALL PRODUCTS ARE FOR LABORATORY RESEARCH USE ONLY. NOT FOR HUMAN CONSUMPTION.",

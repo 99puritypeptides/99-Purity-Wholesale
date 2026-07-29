@@ -118,7 +118,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       },
     },
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}` },
+    alternates: {
+      canonical: locale === 'en' ? '/' : `/${locale}`,
+      languages: { 'en-US': '/', es: '/es', 'x-default': '/' },
+    },
   };
 }
 
@@ -178,11 +181,11 @@ export default async function RootLayout({
       "@type": "OfferCatalog",
       "name": "Wholesale Peptide Catalog",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Semaglutide — Wholesale Bulk Supply", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "142" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tirzepatide — Wholesale Bulk Supply", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "187" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "BPC-157 — Wholesale Bulk Supply", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "94" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "TB-500 — Wholesale Bulk Supply", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "86" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ipamorelin — Wholesale Bulk Supply", "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "112" } } }
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Semaglutide — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tirzepatide — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "BPC-157 — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "TB-500 — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ipamorelin — Wholesale Bulk Supply" } }
       ]
     }
   };

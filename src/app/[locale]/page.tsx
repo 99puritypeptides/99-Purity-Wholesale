@@ -28,7 +28,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('homeTitle'),
     description: t('homeDesc'),
     alternates: {
-      canonical: `/${locale === 'en' ? '' : locale}`
+      canonical: locale === 'en' ? '/' : `/${locale}`
     }
   };
 }
@@ -72,7 +72,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
             fill
             className="object-cover opacity-60 grayscale-[0.3] brightness-[0.7]"
             priority
-            unoptimized
+            quality={80}
           />
           {/* Moody Overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
@@ -172,7 +172,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
             alt="Laboratory Precision"
             fill
             className="object-cover opacity-[0.08] grayscale"
-            unoptimized
+            quality={60}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
         </div>

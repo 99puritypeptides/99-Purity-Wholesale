@@ -821,9 +821,9 @@
     }
   },
   "Meta": {
-    "homeTitle": "Péptidos al por Mayor USA | Péptidos de Investigación a Granel | 99 Purity",
+    "homeTitle": "Péptidos de Investigación al por Mayor | Kits a Granel Premium | 99 Purity",
     "homeDesc": "Compre péptidos de investigación a granel en línea a precios de mayorista. 99 Purity Wholesale ofrece péptidos fabricados en EE. UU. con una pureza ≥99% y COA de terceros. Suministro B2B exclusivo para clínicas, farmacias e investigadores autorizados.",
-    "productsTitle": "Catálogo de Péptidos al por Mayor",
+    "productsTitle": "Catálogo de Péptidos al por Mayor y Compuestos de Investigación | 99 Purity Wholesale",
     "productsDesc": "Péptidos fabricados en América de alta calidad para instituciones calificadas e investigadores. Vea nuestro catálogo mayorista.",
     "servicesTitle": "Servicios B2B de Péptidos al por Mayor",
     "servicesDesc": "Proveedor de péptidos al por mayor en EE. UU. que ofrece dropshipping, marca propia, desarrollo web y soporte de lanzamiento para clínicas, farmacias y distribuidores.",
@@ -844,6 +844,8 @@
     },
     "aboutTitle": "Sobre Nosotros | Péptidos Fabricados en América",
     "aboutDesc": "Conozca 99 Purity Wholesale. Síntesis nacional, pruebas rigurosas y asociación B2B de confianza.",
+    "coaTitle": "Certificados de Análisis (COA) | Pruebas de Pureza de Lote",
+    "coaDesc": "Vea y verifique los Certificados de Análisis (COA) de todos los péptidos de investigación al por mayor. Pureza ≥99% verificada por HPLC/MS en laboratorios estadounidenses independientes.",
     "contactTitle": "Contacto | Consultas de Péptidos al por Mayor",
     "contactDesc": "Comuníquese con nuestro equipo en EE. UU. para precios, pedidos por volumen y programas de envío directo.",
     "locationsTitle": "Ubicaciones de Péptidos al por Mayor | Todos los 50 Estados",
@@ -854,8 +856,8 @@
     "productDesc": "Compre {name} al por mayor con un ≥99% de pureza. Fabricado en EE. UU., COA de lote verificado, precios B2B por niveles. Envío nacional rápido. Solo para uso en investigación.",
     "productOgTitle": "{name} | Péptidos de Investigación al Por Mayor",
     "productOgDesc": "Suministro mayorista premium de {name}. Pureza ≥99% garantizada. Verificado por HPLC/MS de terceros. Cumplimiento nacional en EE. UU.",
-    "calculatorTitle": "Calculadora de Reconstitución de Péptidos",
-    "calculatorDesc": "Determine las unidades de jeringa exactas y las concentraciones de dosificación para sus compuestos de investigación. Calculadora interactiva visual."
+    "calculatorTitle": "Calculadora Gratuita de Reconstitución de Péptidos | 99 Purity Wholesale",
+    "calculatorDesc": "Calcule el volumen exacto de agua bacteriostática, las unidades de jeringa y la concentración de dosificación para cualquier péptido de investigación en segundos. Calculadora interactiva gratuita para jeringas U-100 y U-50."
   },
   "ProductsIndex": {
     "banner": "TODOS LOS PRODUCTOS SON EXCLUSIVAMENTE PARA USO EN INVESTIGACIÓN DE LABORATORIO. NO APTOS PARA CONSUMO HUMANO.",

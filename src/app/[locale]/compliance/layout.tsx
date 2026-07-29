@@ -6,7 +6,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `Quality Compliance & Standards`,
     description: `Research Use Only (RUO) framework, safety standards, and HPLC/MS verification compliance.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/compliance` }
+    alternates: {
+      canonical: locale === 'en' ? '/compliance' : `/${locale}/compliance`,
+      languages: { 'en-US': '/compliance', es: '/es/compliance', 'x-default': '/compliance' },
+    }
   };
 }
 

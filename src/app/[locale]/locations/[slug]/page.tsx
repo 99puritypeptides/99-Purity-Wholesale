@@ -16,6 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { locale: string; slug: string } }) {
   const location = locationsData.find((loc) => loc.slug === params.slug);
   if (!location) return {};
+  const path = `/locations/${params.slug}`;
   return {
     title: location.metaTitle,
     description: location.metaDesc,
@@ -23,7 +24,14 @@ export async function generateMetadata({ params }: { params: { locale: string; s
       title: location.metaTitle,
       description: location.metaDesc,
     },
-    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/locations/${params.slug}` },
+    alternates: {
+      canonical: params.locale === 'en' ? path : `/${params.locale}${path}`,
+      languages: {
+        'en-US': path,
+        es: `/es${path}`,
+        'x-default': path,
+      },
+    },
   };
 }
 
@@ -36,19 +44,8 @@ export default async function LocationTemplatePage({ params }: { params: { local
 
   const faqItems = homeT.raw('FAQ.items') as any[];
 
-  
-  const faqSchema = location.localFaqs ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: location.localFaqs.map((faq: any) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a
-      }
-    }))
-  } : null;
+  // FAQ JSON-LD is emitted by whichever <FaqSection> actually renders below
+  // (localFaqs when present, otherwise the general faqItems) — no separate script here.
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -82,13 +79,6 @@ export default async function LocationTemplatePage({ params }: { params: { local
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
-
       <BreadcrumbSchema items={[
         { name: 'Locations', item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}locations` },
         { name: `${location.city}, ${location.state}`, item: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}locations/${location.slug}` }

@@ -4,11 +4,36 @@ import locationsData from '@/data/locations.json';
 import { getAllPosts } from '@/utils/mdx';
 import servicesRegistry from '@/data/services-content/index';
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
+const locales = ['en', 'es'];
+
+type RouteOptions = {
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+  priority: number;
+  lastModified?: Date;
+};
+
+// Pushes one sitemap entry per locale for a given path, with each entry
+// cross-referencing the other locale's URL via alternates.languages (hreflang).
+function addRoute(entries: MetadataRoute.Sitemap, path: string, opts: RouteOptions) {
+  const enUrl = `${baseUrl}${path}`;
+  const esUrl = `${baseUrl}/es${path}`;
+  for (const locale of locales) {
+    entries.push({
+      url: locale === 'en' ? enUrl : esUrl,
+      changeFrequency: opts.changeFrequency,
+      priority: opts.priority,
+      ...(opts.lastModified ? { lastModified: opts.lastModified } : {}),
+      alternates: {
+        languages: { 'en-US': enUrl, es: esUrl, 'x-default': enUrl },
+      },
+    });
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
-  const locales = ['en', 'es'];
-  
-  // Base static routes
+  // Base static routes. Note: /legal/disclaimer, /legal/privacy, /legal/terms are
+  // intentionally excluded — they are redirect stubs to /compliance, /privacy, /terms.
   const staticRoutes = [
     '',
     '/about',
@@ -18,105 +43,53 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/contact',
     '/glossary',
     '/locations',
-    '/legal/disclaimer',
-    '/legal/privacy',
-    '/legal/terms',
     '/products',
     '/refund-policy',
     '/services',
     '/wholesale-application',
-    '/blog'
+    '/blog',
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Add static routes
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`;
-    for (const route of staticRoutes) {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: route === '' ? 1 : 0.8,
-      });
-    }
+  for (const route of staticRoutes) {
+    addRoute(sitemapEntries, route, {
+      changeFrequency: 'weekly',
+      priority: route === '' ? 1 : 0.8,
+    });
   }
 
-  // Add category pages
+  // Category pages
   const categories = Array.from(new Set(productsData.map(p => p.category)));
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`;
-    for (const category of categories) {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}/products/${category}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      });
-    }
+  for (const category of categories) {
+    addRoute(sitemapEntries, `/products/${category}`, { changeFrequency: 'weekly', priority: 0.8 });
   }
 
-  // Add service pages
-  const services = Object.keys(servicesRegistry);
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`;
-    for (const service of services) {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}/services/${service}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.8,
-      });
-    }
+  // Service pages
+  for (const service of Object.keys(servicesRegistry)) {
+    addRoute(sitemapEntries, `/services/${service}`, { changeFrequency: 'monthly', priority: 0.8 });
   }
 
-  // Add products
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`;
-    for (const product of productsData) {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}/products/${product.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      });
-      // also add research pages
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}/products/${product.slug}/research`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      });
-    }
+  // Products (+ research pages)
+  for (const product of productsData) {
+    addRoute(sitemapEntries, `/products/${product.slug}`, { changeFrequency: 'weekly', priority: 0.9 });
+    addRoute(sitemapEntries, `/products/${product.slug}/research`, { changeFrequency: 'monthly', priority: 0.7 });
   }
 
-  // Add locations
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`;
-    for (const loc of locationsData) {
-      sitemapEntries.push({
-        url: `${baseUrl}${prefix}/locations/${loc.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      });
-    }
+  // Locations
+  for (const loc of locationsData) {
+    addRoute(sitemapEntries, `/locations/${loc.slug}`, { changeFrequency: 'monthly', priority: 0.7 });
   }
 
-  // Add blog posts
+  // Blog posts — real per-post lastModified from content frontmatter
   try {
     const posts = await getAllPosts();
-    for (const locale of locales) {
-      const prefix = locale === 'en' ? '' : `/${locale}`;
-      for (const post of posts) {
-        sitemapEntries.push({
-          url: `${baseUrl}${prefix}/blog/${post.slug}`,
-          lastModified: new Date(post.meta?.date || new Date()),
-          changeFrequency: 'monthly',
-          priority: 0.6,
-        });
-      }
+    for (const post of posts) {
+      addRoute(sitemapEntries, `/blog/${post.slug}`, {
+        changeFrequency: 'monthly',
+        priority: 0.6,
+        lastModified: post.meta?.date ? new Date(post.meta.date) : undefined,
+      });
     }
   } catch (error) {
     console.error('Error loading blog posts for sitemap', error);

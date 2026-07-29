@@ -23,10 +23,18 @@ export async function generateMetadata({ params }: { params: { locale: string; c
   ];
   if (!categories.includes(params.category)) return {};
 
+  const path = `/products/${params.category}`;
   return {
     title: `${t(`categories.${params.category}.title`)} — Wholesale Bulk Supply`,
     description: t(`categories.${params.category}.desc`),
-    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.category}` },
+    alternates: {
+      canonical: params.locale === 'en' ? path : `/${params.locale}${path}`,
+      languages: {
+        'en-US': path,
+        es: `/es${path}`,
+        'x-default': path,
+      },
+    },
   };
 }
 
@@ -249,7 +257,7 @@ export default async function CategoryPage({ params }: { params: { locale: strin
                         {productImage ? (
                           <img 
                             src={encodeURI(`/product-images/${productImage}`)}
-                            alt={product.name}
+                            alt={`${product.name} High Purity Wholesale Research Peptide`}
                             className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                           />
                         ) : (

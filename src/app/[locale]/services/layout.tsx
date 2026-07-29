@@ -6,7 +6,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `${title}`,
     description: `Explore our ${title} at 99 Purity Wholesale.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/services` }
+    alternates: {
+      canonical: locale === 'en' ? '/services' : `/${locale}/services`,
+      languages: { 'en-US': '/services', es: '/es/services', 'x-default': '/services' },
+    }
   };
 }
 

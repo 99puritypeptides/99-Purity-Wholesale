@@ -42,7 +42,14 @@ export async function generateMetadata({ params }: { params: { locale: string; s
     title: service.meta.title,
     description: service.meta.description,
     keywords: service.meta.keywords,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        'en-US': `${baseUrl}/services/${params.slug}`,
+        es: `${baseUrl}/es/services/${params.slug}`,
+        'x-default': `${baseUrl}/services/${params.slug}`,
+      },
+    },
     openGraph: {
       title: service.meta.title,
       description: service.meta.description,
@@ -82,16 +89,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
     url: `${baseUrl}/${localePrefix}services/${service.slug}`,
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: service.faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
+  // FAQ JSON-LD is emitted by the <FaqSection> below (which renders this same faqItems array) — no separate script here.
   const HeroIcon = SERVICE_ICONS[params.slug] || Package;
   const faqItems = service.faqs.map((f) => ({ q: f.q, a: f.a }));
 
@@ -99,7 +97,6 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       {/* Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <BreadcrumbSchema items={[
         { name: 'Services', item: `${baseUrl}/${localePrefix}services` },
         { name: service.hero.h1, item: `${baseUrl}/${localePrefix}services/${service.slug}` },

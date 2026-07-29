@@ -5,7 +5,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `Disclaimer`,
     description: `Review our Disclaimer policies.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/legal/disclaimer` }
+    alternates: { canonical: locale === 'en' ? '/legal/disclaimer' : `/${locale}/legal/disclaimer` }
   };
 }
 

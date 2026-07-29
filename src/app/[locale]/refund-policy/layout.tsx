@@ -6,7 +6,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `Refund & Replacement Policy`,
     description: `Return, replacement, and HPLC verification policies for 99 Purity Wholesale orders.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/refund-policy` }
+    alternates: {
+      canonical: locale === 'en' ? '/refund-policy' : `/${locale}/refund-policy`,
+      languages: { 'en-US': '/refund-policy', es: '/es/refund-policy', 'x-default': '/refund-policy' },
+    }
   };
 }
 

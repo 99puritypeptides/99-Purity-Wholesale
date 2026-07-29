@@ -3,11 +3,13 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
+import FaqSchema from '@/components/seo/FaqSchema';
 
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'Meta'});
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
-  const url = `${baseUrl}/${locale}/services`;
+  const path = '/services';
+  const url = locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${locale}${path}`;
 
   const ogTitle = t('servicesOgTitle');
   const ogDesc = t('servicesOgDesc');
@@ -19,6 +21,11 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     description: t('servicesDesc'),
     alternates: {
       canonical: url,
+      languages: {
+        'en-US': `${baseUrl}${path}`,
+        es: `${baseUrl}/es${path}`,
+        'x-default': `${baseUrl}${path}`,
+      },
     },
     openGraph: {
       title: ogTitle,
@@ -66,18 +73,9 @@ function stripLinks(text: string) {
 export default async function ServicesPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Services' });
   const faqs = t.raw('faq.items') as { q: string; a: string }[];
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": stripLinks(f.a)
-      }
-    }))
-  };
+  // Schema text needs markdown links stripped to plain text; the visual <FaqSection> below
+  // needs the raw markdown to render real links, so it renders with includeSchema={false}.
+  const faqSchemaItems = faqs.map(f => ({ q: f.q, a: stripLinks(f.a) }));
 
   const services = [
     {
@@ -198,12 +196,9 @@ export default async function ServicesPage({ params }: { params: { locale: strin
 
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
-      {/* FAQ Schema */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      
+      {/* FAQ Schema (markdown-stripped; see faqSchemaItems above) */}
+      <FaqSchema items={faqSchemaItems} />
+
       {/* Hero Section - Elegant Light Off-White Linen */}
       <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
         {/* Light Noise Texture */}
@@ -503,12 +498,13 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       </section>
 
       {/* SECTION 7 — FAQ (SEO-Rich Accordion) */}
-      <FaqSection 
+      <FaqSection
         id="services-faq"
         eyebrow="FAQ"
         title={t('faq.title')}
         items={faqs}
         theme="light"
+        includeSchema={false}
       />
 
       {/* Global B2B Call-To-Action Segment (Dark Theme) */}

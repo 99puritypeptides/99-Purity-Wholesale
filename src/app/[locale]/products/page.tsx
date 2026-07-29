@@ -23,7 +23,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: t('productsDesc'),
     openGraph: { title: t('productsTitle'), description: t('productsDesc') },
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/products` },
+    alternates: {
+      canonical: locale === 'en' ? '/products' : `/${locale}/products`,
+      languages: { 'en-US': '/products', es: '/es/products', 'x-default': '/products' },
+    },
   };
 }
 
@@ -69,18 +72,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
 
   const faqs = t.raw('faqs') as { q: string; a: string }[];
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(f => ({
-      "@type": "Question",
-      "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-      }
-    }))
-  };
+  // FAQ JSON-LD is emitted by the <FaqSection> below (which renders this same faqs array) — no separate script here.
 
   return (
     <div className="flex flex-col min-h-screen bg-[#05080C] text-brand-text -mt-24 md:-mt-32">
@@ -249,11 +241,6 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         primaryCtaHref="https://wa.me/18433307365"
         secondaryCtaText="Wholesale Application"
         secondaryCtaHref="/wholesale-application"
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </div>
   );

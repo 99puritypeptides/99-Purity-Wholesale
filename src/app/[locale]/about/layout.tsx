@@ -6,7 +6,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     title: t('aboutTitle'),
     description: t('aboutDesc'),
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/about` },
+    alternates: {
+      canonical: locale === 'en' ? '/about' : `/${locale}/about`,
+      languages: { 'en-US': '/about', es: '/es/about', 'x-default': '/about' },
+    },
   };
 }
 

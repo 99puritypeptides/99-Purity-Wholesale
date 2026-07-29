@@ -8,7 +8,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('locationsTitle'),
     description: t('locationsDesc'),
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/locations` },
+    alternates: {
+      canonical: locale === 'en' ? '/locations' : `/${locale}/locations`,
+      languages: { 'en-US': '/locations', es: '/es/locations', 'x-default': '/locations' },
+    },
   };
 }
 

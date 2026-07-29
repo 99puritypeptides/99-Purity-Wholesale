@@ -25,7 +25,14 @@ export async function generateMetadata({ params }: { params: { locale: string, s
   return {
     title: `Research: ${titleStr}`,
     description: `Research data and clinical trials for ${titleStr}.`,
-    alternates: { canonical: `/${params.locale === 'en' ? '' : params.locale}/products/${params.slug}/research` }
+    alternates: {
+      canonical: params.locale === 'en' ? `/products/${params.slug}/research` : `/${params.locale}/products/${params.slug}/research`,
+      languages: {
+        'en-US': `/products/${params.slug}/research`,
+        es: `/es/products/${params.slug}/research`,
+        'x-default': `/products/${params.slug}/research`,
+      },
+    }
   };
 }
 

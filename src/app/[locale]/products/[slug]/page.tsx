@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: { params: { locale: string; s
   if (!product) return {};
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
-  const url = `${baseUrl}/${params.locale}/products/${params.slug}`;
+  const path = `/products/${params.slug}`;
+  const url = params.locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${params.locale}${path}`;
 
   const ogTitle = t('productOgTitle', { name: product.name });
   const ogDesc = t('productOgDesc', { name: product.name });
@@ -29,6 +30,11 @@ export async function generateMetadata({ params }: { params: { locale: string; s
     description: t('productDesc', { name: product.name }),
     alternates: {
       canonical: url,
+      languages: {
+        'en-US': `${baseUrl}${path}`,
+        es: `${baseUrl}/es${path}`,
+        'x-default': `${baseUrl}${path}`,
+      },
     },
     openGraph: {
       title: ogTitle,
@@ -492,35 +498,26 @@ export default async function ProductPage({ params }: { params: { locale: string
     }
   ];
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
+  // FAQ JSON-LD is emitted by the <FaqSection> below (which renders this same `faqs` array) — no separate script here.
 
-  // Generate realistic B2B review count for aggregateRating (deterministic based on slug length to keep it stable)
-  const reviewCount = 80 + (product.slug.length * 3);
+  // Get product spec images map
+  const specImagesMap = productSpecImagesMap[product.slug as keyof typeof productSpecImagesMap] || {};
+  const images = Object.values(specImagesMap);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
 
+  // No aggregateRating/offers: there is no real review system or public pricing to source them from —
+  // fabricated values here would violate Google's structured-data policy on reviews/ratings.
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.name,
     description: enrichedDescription,
-    image: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`,
+    image: images.length ? `${baseUrl}/product-images/${encodeURI(images[0] as string)}` : `${baseUrl}/og-image.png`,
     sku: product.slug,
     brand: {
       '@type': 'Brand',
       name: '99 Purity Wholesale'
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: reviewCount.toString()
-    }
   };
 
   // Find related products (same category, different slug, max 3)
@@ -528,13 +525,8 @@ export default async function ProductPage({ params }: { params: { locale: string
     .filter(p => p.category === product.category && p.slug !== product.slug)
     .slice(0, 3);
 
-  // Get product spec images map
-  const specImagesMap = productSpecImagesMap[product.slug as keyof typeof productSpecImagesMap] || {};
-  const images = Object.values(specImagesMap);
-
   return (
     <div className="flex flex-col min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       
       {/* Breadcrumbs Fold */}

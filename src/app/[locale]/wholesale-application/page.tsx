@@ -10,7 +10,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('metadata.title'),
     description: t('metadata.description'),
   
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/wholesale-application` },
+    alternates: {
+      canonical: locale === 'en' ? '/wholesale-application' : `/${locale}/wholesale-application`,
+      languages: { 'en-US': '/wholesale-application', es: '/es/wholesale-application', 'x-default': '/wholesale-application' },
+    },
   };
 }
 

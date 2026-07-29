@@ -6,7 +6,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return {
     title: `Terms of Service`,
     description: `Terms of Service and wholesale laboratory research guidelines for 99 Purity Wholesale.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/terms` }
+    alternates: {
+      canonical: locale === 'en' ? '/terms' : `/${locale}/terms`,
+      languages: { 'en-US': '/terms', es: '/es/terms', 'x-default': '/terms' },
+    }
   };
 }
 

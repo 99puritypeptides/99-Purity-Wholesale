@@ -1,12 +1,15 @@
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: 'Layout' });
-  const title = t('nav.quality') || 'Quality';
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+  
   return {
-    title: `${title}`,
-    description: `Explore our ${title} at 99 Purity Wholesale.`,
-    alternates: { canonical: `/${locale === 'en' ? '' : locale}/quality` }
+    title: t('coaTitle'),
+    description: t('coaDesc'),
+    alternates: {
+      canonical: locale === 'en' ? '/certificates-of-analysis' : `/${locale}/certificates-of-analysis`,
+      languages: { 'en-US': '/certificates-of-analysis', es: '/es/certificates-of-analysis', 'x-default': '/certificates-of-analysis' },
+    }
   };
 }
 

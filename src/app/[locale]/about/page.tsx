@@ -13,7 +13,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: `${t('Hero.title')}`,
     description: t('Hero.subtitle'),
     alternates: {
-      canonical: `/${locale === 'en' ? '' : locale}/about`
+      canonical: locale === 'en' ? '/about' : `/${locale}/about`
     }
   };
 }
