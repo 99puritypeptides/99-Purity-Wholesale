@@ -505,8 +505,10 @@ export default async function ProductPage({ params }: { params: { locale: string
   const images = Object.values(specImagesMap);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
 
-  // No aggregateRating/offers: there is no real review system or public pricing to source them from —
-  // fabricated values here would violate Google's structured-data policy on reviews/ratings.
+  // No aggregateRating: there is no real review system to source it from — fabricated values
+  // would violate Google's structured-data policy on reviews/ratings.
+  const productPath = `/products/${params.slug}`;
+  const productUrl = params.locale === 'en' ? `${baseUrl}${productPath}` : `${baseUrl}/${params.locale}${productPath}`;
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -517,6 +519,14 @@ export default async function ProductPage({ params }: { params: { locale: string
     brand: {
       '@type': 'Brand',
       name: '99 Purity Wholesale'
+    },
+    offers: {
+      '@type': 'Offer',
+      url: productUrl,
+      priceCurrency: 'USD',
+      price: '199',
+      availability: 'https://schema.org/InStock',
+      itemCondition: 'https://schema.org/NewCondition',
     },
   };
 

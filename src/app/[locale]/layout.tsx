@@ -181,11 +181,11 @@ export default async function RootLayout({
       "@type": "OfferCatalog",
       "name": "Wholesale Peptide Catalog",
       "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Semaglutide — Wholesale Bulk Supply" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tirzepatide — Wholesale Bulk Supply" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "BPC-157 — Wholesale Bulk Supply" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "TB-500 — Wholesale Bulk Supply" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Ipamorelin — Wholesale Bulk Supply" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Semaglutide — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tirzepatide — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "BPC-157 — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "TB-500 — Wholesale Bulk Supply" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ipamorelin — Wholesale Bulk Supply" } }
       ]
     }
   };

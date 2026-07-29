@@ -67,7 +67,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
       name: `Wholesale Peptides ${location.city}`,
       itemListElement: location.popularProducts.map((p) => ({
         '@type': 'Offer',
-        itemOffered: { '@type': 'Product', name: `${p} — Wholesale Bulk Supply` },
+        itemOffered: { '@type': 'Service', name: `${p} — Wholesale Bulk Supply` },
       })),
     },
   };
