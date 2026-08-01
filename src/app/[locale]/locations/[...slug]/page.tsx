@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
 
   return {
     metadataBase: new URL(baseUrl),
-    title: locData.metaTitle,
+    title: locData.metaTitle.replace(/\s*\|\s*99 Purity Wholesale.*$/i, '').trim(),
     description: locData.metaDesc,
     alternates: {
       canonical: url,

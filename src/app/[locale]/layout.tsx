@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
 import MainContentWrapper from '@/components/layout/MainContentWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScrollProvider';
+import Script from 'next/script';
 import '../globals.css';
 
 const absans = localFont({
@@ -68,6 +69,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       template: '%s | 99 Purity Wholesale',
     },
     description: ogDesc,
+    authors: [{ name: '99 Purity Wholesale', url: baseUrl }],
+    creator: '99 Purity Wholesale',
+    publisher: '99 Purity Wholesale',
     keywords: [
       '99 purity peptides',
       'peptides wholesale',
@@ -190,6 +194,8 @@ export default async function RootLayout({
     }
   };
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || 'G-C9PFGXE8NT';
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -198,6 +204,25 @@ export default async function RootLayout({
           id="org-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {/* Google Analytics GA4 */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        />
+        <Script
+          id="google-analytics-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
         />
       </head>
       <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} ${absans.variable} ${goku.variable} ${meshed.variable} ${archia.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>

@@ -7,7 +7,7 @@ const locationsPath = path.join(__dirname, 'src', 'data', 'locations.json');
 const cities = JSON.parse(fs.readFileSync(citiesPath, 'utf8'));
 const locations = JSON.parse(fs.readFileSync(locationsPath, 'utf8'));
 
-const baseUrl = 'https://99puritypeptides.com';
+const baseUrl = 'https://99puritywholesale.com';
 
 const rows = [
   ['Type', 'Region/Country', 'State', 'City', 'Relative URL', 'Full Production URL', 'H1 Title', 'Meta Title']
@@ -22,8 +22,8 @@ locations.forEach(loc => {
   rows.push([
     isCountry ? 'Country Hub' : 'State Hub',
     loc.region || '',
-    isCountry ? '' : loc.city,
-    isCountry ? '' : loc.city,
+    isCountry ? '' : loc.city, // State name for state hubs, empty for country
+    '',                        // City is empty for State Hubs
     relativeUrl,
     `${baseUrl}${relativeUrl}`,
     loc.h1 || `Wholesale Peptides in ${loc.city}`,
@@ -54,21 +54,30 @@ function escapeCsv(val) {
   return `"${str}"`;
 }
 
-const csvContent = rows.map(r => r.map(escapeCsv).join(',')).join('\r\n');
+// Prepend UTF-8 BOM so Excel opens columns cleanly
+const csvContent = '\uFEFF' + rows.map(r => r.map(escapeCsv).join(',')).join('\r\n');
 
 // Write to workspace
 const workspaceCsvPath = path.join(__dirname, 'new_urls_sitemap.csv');
 fs.writeFileSync(workspaceCsvPath, csvContent, 'utf8');
 
-// Write to Downloads folder
+// Write to Downloads & Desktop
 const downloadsDir = path.join('C:', 'Users', 'ADIL RAZA KHAN', 'Downloads');
-const downloadsCsvPath = path.join(downloadsDir, '99_Purity_All_New_URLs.csv');
+const desktopDir = path.join('C:', 'Users', 'ADIL RAZA KHAN', 'OneDrive', 'Desktop');
 
-try {
-  fs.writeFileSync(downloadsCsvPath, csvContent, 'utf8');
-  console.log(`Saved successfully to Downloads: ${downloadsCsvPath}`);
-} catch (e) {
-  console.log(`Could not write to Downloads directly (${e.message}), saved to workspace: ${workspaceCsvPath}`);
-}
+const targetFiles = [
+  path.join(downloadsDir, '99_Purity_Wholesale_Location_URLs.csv'),
+  path.join(downloadsDir, '99_Purity_All_New_URLs.csv'),
+  path.join(desktopDir, '99_Purity_Wholesale_Location_URLs.csv')
+];
+
+targetFiles.forEach(filePath => {
+  try {
+    fs.writeFileSync(filePath, csvContent, 'utf8');
+    console.log(`Saved successfully: ${filePath}`);
+  } catch (e) {
+    console.log(`Could not write to ${filePath} (${e.message})`);
+  }
+});
 
 console.log(`Total URLs exported: ${rows.length - 1} (${locations.length} States/Hubs, ${cities.length} Cities)`);
