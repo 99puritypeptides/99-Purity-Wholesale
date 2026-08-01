@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import productsData from '@/data/products.json';
 import locationsData from '@/data/locations.json';
+import citiesData from '@/data/cities.json';
 import { getAllPosts } from '@/utils/mdx';
 import servicesRegistry from '@/data/services-content/index';
 
@@ -76,9 +77,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     addRoute(sitemapEntries, `/products/${product.slug}/research`, { changeFrequency: 'monthly', priority: 0.7 });
   }
 
-  // Locations
+  // Locations (country + states)
   for (const loc of locationsData) {
-    addRoute(sitemapEntries, `/locations/${loc.slug}`, { changeFrequency: 'monthly', priority: 0.7 });
+    const isCountry = loc.city === loc.region;
+    const countrySlug = loc.region.toLowerCase().replace(/ /g, '-');
+    const path = isCountry ? `/locations/${countrySlug}` : `/locations/${countrySlug}/${loc.slug}`;
+    addRoute(sitemapEntries, path, { changeFrequency: 'monthly', priority: 0.7 });
+  }
+
+  // Locations (cities)
+  for (const city of citiesData) {
+    const countrySlug = city.region.toLowerCase().replace(/ /g, '-');
+    const path = `/locations/${countrySlug}/${city.stateSlug}/${city.slug}`;
+    addRoute(sitemapEntries, path, { changeFrequency: 'monthly', priority: 0.6 });
   }
 
   // Blog posts — real per-post lastModified from content frontmatter

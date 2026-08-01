@@ -156,7 +156,7 @@ export default function FaqSection({
         </StaggerContainer>
 
         {/* Remaining FAQs Accordion */}
-        {items.length > 3 && (
+        {items.length > 1 && (
           <div className={`space-y-0 border-t ${borderCol}`}>
             {items.map((faq, i) => {
               const isAccordionDesktop = i >= 3;

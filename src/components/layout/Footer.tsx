@@ -4,6 +4,12 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { ArrowUpRight, Globe, ShieldCheck, Mail, FlaskConical, LayoutGrid } from 'lucide-react';
+import citiesData from '@/data/cities.json';
+
+// States with dedicated city-level content get footer priority — deepest linking value.
+const footerStates = Array.from(
+  new Map(citiesData.map((c) => [c.stateSlug, c.state])).entries()
+).sort((a, b) => a[1].localeCompare(b[1]));
 
 export default function Footer() {
   const t = useTranslations('Layout');
@@ -47,6 +53,10 @@ export default function Footer() {
       links: [
         { label: t('footer.wholesaleApp'), href: '/wholesale-application' },
         { label: t('footer.locations'), href: '/locations' },
+        ...footerStates.map(([slug, name]) => ({
+          label: name,
+          href: `/locations/united-states/${slug}`,
+        })),
       ]
     },
     {

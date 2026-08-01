@@ -2,13 +2,15 @@
 
 import React, { useState, useMemo } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import { MapPin, ArrowRight, ShieldCheck, Truck, FlaskConical, Search, X, ArrowUpRight, MessageCircle } from 'lucide-react';
-import { Link, useRouter } from '@/i18n/routing';
+import { MapPin, ShieldCheck, Truck, FlaskConical, Search, X, ArrowRight, MessageCircle, ArrowUpRight } from 'lucide-react';
+import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
-import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
+import { FadeIn } from '@/components/shared/Motion';
 import FaqSection from '@/components/shared/FaqSection';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import { motion, AnimatePresence } from 'framer-motion';
+import citiesData from '@/data/cities.json';
+import CityDropdown from '@/components/locations/CityDropdown';
 
 interface LocationHub {
   slug: string;
@@ -16,6 +18,8 @@ interface LocationHub {
   state: string;
   region: string;
   intro: string;
+  introEs?: string;
+  bodyP1?: string;
   popularProducts: string[];
 }
 
@@ -28,12 +32,11 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
   const homeT = useTranslations('Index');
   const locale = useLocale();
   const isEs = locale === 'es';
-  const router = useRouter();
-  
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('All');
 
-  const regions = ['All', 'Southwest', 'Southeast', 'West Coast', 'Mountain', 'Northeast'];
+  const regions = ['All', 'United States'];
 
   const filteredLocations = useMemo(() => {
     return locations.filter((loc) => {
@@ -49,8 +52,8 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
 
   const faqItems = useMemo(() => {
     try {
-      return homeT.raw('FAQ.items') as any[];
-    } catch (e) {
+      return homeT.raw('FAQ.items') as { q: string; a: string }[];
+    } catch {
       return [];
     }
   }, [homeT]);
@@ -74,6 +77,26 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
             <p className="text-base md:text-lg font-archia font-semibold text-black/65 mb-8 max-w-3xl mx-auto leading-relaxed">
               {t('desc')}
             </p>
+
+            {/* Hero CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 mb-10 max-w-md sm:max-w-none mx-auto">
+              <a
+                href="#pricing-inquiry"
+                className="inline-flex items-center justify-center gap-3 bg-[#0D0E10] hover:bg-[#13a7b7] text-white px-8 py-4 rounded-2xl font-absans text-xs uppercase tracking-widest font-bold shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_10px_30px_rgba(19,167,183,0.3)] transition-all duration-300 group"
+              >
+                <span>{t('requestPricing')}</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+
+              <Link
+                href="/products"
+                className="inline-flex items-center justify-center gap-3 bg-white hover:bg-black/5 text-black/80 hover:text-black border border-black/10 px-8 py-4 rounded-2xl font-absans text-xs uppercase tracking-widest font-bold shadow-sm hover:border-[#13a7b7]/30 transition-all duration-300 group"
+              >
+                <FlaskConical className="w-4 h-4 text-[#13a7b7] transition-transform duration-300 group-hover:scale-110" />
+                <span>{t('exploreCatalog')}</span>
+              </Link>
+            </div>
+
             <div className="flex flex-wrap items-center justify-center gap-6 text-black/40 font-dm-mono text-[10px] uppercase tracking-widest">
               <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#13a7b7]" /> {t('purityGuaranteed')}</span>
               <span className="flex items-center gap-2"><Truck className="w-4 h-4 text-[#13a7b7]" /> {t('domesticDelivery')}</span>
@@ -105,7 +128,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
               <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-black/35" />
               <input 
                 type="text" 
-                placeholder="Search by city, state, or compound..." 
+                placeholder={isEs ? "Buscar por ciudad, estado o compuesto..." : "Search by city, state, or compound..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-14 pr-12 py-4 bg-[#F8F8F6] border border-black/5 rounded-full font-archia text-sm text-black placeholder:text-black/35 focus:border-[#13a7b7]/30 focus:ring-1 focus:ring-[#13a7b7]/30 outline-none transition-all shadow-sm font-semibold"
@@ -123,19 +146,24 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
 
           {/* Region Tabs */}
           <FadeIn delay={0.15} className="flex flex-wrap justify-center gap-2 mb-16 z-20 relative">
-            {regions.map((reg) => (
-              <button
-                key={reg}
-                onClick={() => setSelectedRegion(reg)}
-                className={`px-5 py-2.5 rounded-full font-dm-mono text-[10px] uppercase tracking-widest transition-all ${
-                  selectedRegion === reg
-                    ? 'bg-black text-white shadow-md'
-                    : 'bg-[#F8F8F6] border border-black/5 text-black/60 hover:bg-black/5 hover:text-black'
-                }`}
-              >
-                {reg}
-              </button>
-            ))}
+            {regions.map((reg) => {
+              const displayReg = isEs 
+                ? (reg === 'All' ? 'Todos' : (reg === 'United States' ? 'Estados Unidos' : reg))
+                : reg;
+              return (
+                <button
+                  key={reg}
+                  onClick={() => setSelectedRegion(reg)}
+                  className={`px-5 py-2.5 rounded-full font-dm-mono text-[10px] uppercase tracking-widest transition-all ${
+                    selectedRegion === reg
+                      ? 'bg-black text-white shadow-md'
+                      : 'bg-[#F8F8F6] border border-black/5 text-black/60 hover:bg-black/5 hover:text-black'
+                  }`}
+                >
+                  {displayReg}
+                </button>
+              );
+            })}
           </FadeIn>
 
           {/* Dynamic Grid */}
@@ -144,7 +172,12 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[300px]"
           >
             <AnimatePresence mode="popLayout">
-              {filteredLocations.map((loc) => (
+              {filteredLocations.map((loc) => {
+                const isCountryCard = loc.city === loc.region; // Country hub has city and region the same
+                const countrySlug = loc.region.toLowerCase().replace(/ /g, '-');
+                const linkPath = isCountryCard ? countrySlug : `${countrySlug}/${loc.slug}`;
+                
+                return (
                 <motion.div
                   layout
                   key={loc.slug}
@@ -154,68 +187,89 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   className="h-full"
                 >
-                  <Link href={`/locations/${loc.slug}`} className="group block h-full">
-                    <div className="relative overflow-hidden bg-[#F8F8F6] border border-black/[0.05] rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1.5 hover:bg-white hover:border-[#13a7b7]/25 hover:shadow-[0_40px_100px_rgba(0,0,0,0.06)] flex flex-col justify-between h-full group">
-                      
+                  <div className="group block h-full">
+                    <div className={`relative overflow-hidden border rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-1.5 flex flex-col justify-between h-full group ${
+                      isCountryCard
+                        ? 'bg-[#05080C] border-white/10 text-white hover:border-[#13a7b7]/40 hover:shadow-[0_40px_100px_rgba(19,167,183,0.15)]'
+                        : 'bg-[#F8F8F6] border-black/[0.05] text-black hover:bg-white hover:border-[#13a7b7]/25 hover:shadow-[0_40px_100px_rgba(0,0,0,0.06)]'
+                    }`}>
+
                       {/* Subtle Map Pin Background decoration */}
                       <div className="absolute -top-10 -right-10 opacity-[0.01] group-hover:opacity-[0.03] group-hover:scale-110 transition-all duration-700 pointer-events-none">
-                        <MapPin className="w-48 h-48 text-black" strokeWidth={1} />
+                        <MapPin className={`w-48 h-48 ${isCountryCard ? 'text-white' : 'text-black'}`} strokeWidth={1} />
                       </div>
 
                       <div className="relative z-10 flex-grow">
+                        <Link href={`/locations/${linkPath}`} className="block">
                         {/* Top Metadata Row */}
                         <div className="flex items-center justify-between mb-8">
-                          <div className="flex items-center gap-1.5 px-3 py-1 bg-[#13a7b7]/10 border border-[#13a7b7]/15 text-[#0b7f8c] rounded-full">
+                          <div className={`flex items-center gap-1.5 px-3 py-1 border rounded-full ${
+                            isCountryCard 
+                              ? 'bg-[#13a7b7]/20 border-[#13a7b7]/30 text-[#1ed4e8]' 
+                              : 'bg-[#13a7b7]/10 border-[#13a7b7]/15 text-[#0b7f8c]'
+                          }`}>
                             <MapPin className="w-3 h-3" />
-                            <span className="font-dm-mono text-[9px] font-bold uppercase tracking-widest">{loc.state}</span>
+                            <span className="font-dm-mono text-[9px] font-bold uppercase tracking-widest">
+                              {isEs && loc.region === 'United States' ? 'Estados Unidos' : loc.region}
+                            </span>
                           </div>
-                          <span className="text-black/35 font-dm-mono text-[9px] font-bold uppercase tracking-widest">{loc.region}</span>
+                          <span className={`${isCountryCard ? 'text-white/40' : 'text-black/35'} font-dm-mono text-[9px] font-bold uppercase tracking-widest`}>{isCountryCard ? t('nationalHub') : t('stateHub')}</span>
                         </div>
 
                         {/* Title and Animated Accent Line */}
                         <div className="mb-4">
-                          <h3 className="text-3xl font-absans font-bold text-black uppercase tracking-tighter leading-none group-hover:text-[#13a7b7] transition-colors duration-300">
-                            {loc.city}
+                          <h3 className={`text-3xl font-absans font-bold uppercase tracking-tighter leading-none transition-colors duration-300 ${
+                            isCountryCard ? 'text-white group-hover:text-[#13a7b7]' : 'text-black group-hover:text-[#13a7b7]'
+                          }`}>
+                            {isEs && isCountryCard ? 'Estados Unidos' : loc.city}
                           </h3>
                           <div className="w-8 h-[2px] bg-[#13a7b7] mt-3 group-hover:w-16 transition-all duration-500" />
                         </div>
 
                         {/* Intro description */}
-                        <p className="text-black/55 font-archia font-medium mb-8 text-xs leading-relaxed line-clamp-3 group-hover:text-black/75 transition-colors duration-300">
-                          {loc.intro}
+                        <p className={`font-archia font-medium mb-8 text-xs leading-relaxed line-clamp-3 transition-colors duration-300 ${
+                          isCountryCard ? 'text-white/60 group-hover:text-white/80' : 'text-black/55 group-hover:text-black/75'
+                        }`}>
+                          {isEs && loc.introEs ? loc.introEs : (loc.bodyP1 || loc.intro)}
                         </p>
+                        </Link>
 
                         {/* Top Compounds Section */}
                         <div className="mb-8">
-                          <div className="text-black/35 font-dm-mono text-[9px] font-bold uppercase tracking-widest mb-3.5 flex items-center gap-2">
+                          <div className={`font-dm-mono text-[9px] font-bold uppercase tracking-widest mb-3.5 flex items-center gap-2 ${
+                            isCountryCard ? 'text-white/40' : 'text-black/35'
+                          }`}>
                             <span className="w-1 h-1 rounded-full bg-[#13a7b7]" />
                             {t('topLocalCompounds')}
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {loc.popularProducts.slice(0, 3).map((p) => {
                               const matchedProduct = productsData.find(
-                                (prod) => prod.name.toLowerCase() === p.toLowerCase()
+                                (prod: { name: string }) => prod.name.toLowerCase() === p.toLowerCase()
                               );
-                              const href = matchedProduct 
-                                ? `/products/`
+                              const href = matchedProduct
+                                ? `/products/${matchedProduct.slug}`
                                 : '/products';
-                              
+
                               return (
-                                <span 
-                                  key={p} 
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                    e.stopPropagation();
-                                    router.push(href);
-                                  }}
-                                  className="bg-white border border-black/5 text-black/70 hover:bg-black hover:text-white hover:border-black px-3 py-1.5 rounded-full text-[10px] font-dm-mono font-bold tracking-tight transition-all duration-300 cursor-pointer relative z-20"
+                                <Link
+                                  key={p}
+                                  href={href}
+                                  onClick={(e) => e.stopPropagation()}
+                                  className={`px-3 py-1.5 rounded-full text-[10px] font-dm-mono font-bold tracking-tight transition-all duration-300 relative z-20 ${
+                                    isCountryCard
+                                      ? 'bg-white/5 border border-white/10 text-white/70 hover:bg-white hover:text-black hover:border-white'
+                                      : 'bg-white border border-black/5 text-black/70 hover:bg-black hover:text-white hover:border-black'
+                                  }`}
                                 >
                                   {p}
-                                </span>
+                                </Link>
                               );
                             })}
                             {loc.popularProducts.length > 3 && (
-                              <span className="text-[#13a7b7] bg-[#13a7b7]/10 px-2.5 py-1 rounded-full text-[9px] font-dm-mono font-bold self-center">
+                              <span className={`px-2.5 py-1 rounded-full text-[9px] font-dm-mono font-bold self-center ${
+                                isCountryCard ? 'text-[#1ed4e8] bg-[#13a7b7]/20' : 'text-[#13a7b7] bg-[#13a7b7]/10'
+                              }`}>
                                 +{loc.popularProducts.length - 3} {isEs ? "más" : "more"}
                               </span>
                             )}
@@ -224,19 +278,29 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
                       </div>
 
                       {/* Card Footer */}
-                      <div className="mt-auto pt-6 border-t border-black/5 flex items-center justify-between relative z-10">
-                        <span className="text-black/45 font-absans font-bold uppercase tracking-widest text-[10px] group-hover:text-[#13a7b7] transition-colors duration-300">
-                          {t('viewRegionalHub')}
-                        </span>
-                        <div className="w-9 h-9 rounded-full bg-black/5 text-black group-hover:bg-black group-hover:text-white transition-all duration-300 flex items-center justify-center">
+                      <div className={`mt-auto pt-6 border-t flex items-center justify-between relative z-10 ${
+                        isCountryCard ? 'border-white/10' : 'border-black/5'
+                      }`}>
+                        <CityDropdown 
+                          cities={citiesData.filter(c => c.stateSlug === loc.slug)}
+                          stateLink={linkPath}
+                          isCountryCard={isCountryCard}
+                          viewRegionalHubText={t('discoverState', { state: isEs && isCountryCard ? 'Estados Unidos' : loc.city })}
+                        />
+                        <div className={`w-9 h-9 rounded-full transition-all duration-300 flex items-center justify-center ${
+                          isCountryCard 
+                            ? 'bg-white/10 text-white group-hover:bg-white group-hover:text-black' 
+                            : 'bg-black/5 text-black group-hover:bg-black group-hover:text-white'
+                        }`}>
                           <ArrowUpRight className="w-4 h-4" />
                         </div>
                       </div>
 
                     </div>
-                  </Link>
+                  </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </AnimatePresence>
           </motion.div>
 
@@ -244,9 +308,13 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
           {filteredLocations.length === 0 && (
             <FadeIn className="text-center py-20 bg-[#F8F8F6] rounded-[2rem] border border-black/5">
               <MapPin className="w-12 h-12 text-black/20 mx-auto mb-4" />
-              <h3 className="text-lg font-absans font-bold text-black uppercase tracking-tight mb-2">No Regional Hubs Found</h3>
+              <h3 className="text-lg font-absans font-bold text-black uppercase tracking-tight mb-2">
+                {isEs ? "No se encontraron centros regionales" : "No Regional Hubs Found"}
+              </h3>
               <p className="text-black/50 font-archia text-sm max-w-md mx-auto px-6">
-                We couldn't find any regional hubs matching your search query. We ship peptide compounds to all 50 states.
+                {isEs 
+                  ? "No pudimos encontrar ningún centro regional que coincida con su búsqueda. Realizamos envíos de péptidos a todos los 50 estados."
+                  : "We couldn't find any regional hubs matching your search query. We ship peptide compounds to all 50 states."}
               </p>
             </FadeIn>
           )}
@@ -255,7 +323,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
       </section>
 
       {/* All 50 States Banner */}
-      <section className="py-24 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
+      <section id="pricing-inquiry" className="scroll-mt-36 py-24 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
         {/* Dark Grain Texture */}
         <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         

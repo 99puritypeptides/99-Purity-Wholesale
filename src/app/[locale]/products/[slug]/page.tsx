@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
-import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, Box, FlaskConical } from 'lucide-react';
+import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, Box, FlaskConical, MapPin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
+import locationsData from '@/data/locations.json';
+import citiesData from '@/data/cities.json';
 import { getTranslations } from 'next-intl/server';
 import SpecSelector from '@/components/products/SpecSelector';
 import ShareProduct from '@/components/products/ShareProduct';
@@ -535,6 +537,21 @@ export default async function ProductPage({ params }: { params: { locale: string
     .filter(p => p.category === product.category && p.slug !== product.slug)
     .slice(0, 3);
 
+  // Cross-link to city/state location pages that actually list this compound as a popular product
+  const matchedCities = citiesData
+    .filter(c => c.popularProducts.some(p => p.toLowerCase() === product.name.toLowerCase()))
+    .map(c => ({
+      label: c.city,
+      href: `/locations/${c.region.toLowerCase().replace(/ /g, '-')}/${c.stateSlug}/${c.slug}`,
+    }));
+  const matchedStates = locationsData
+    .filter(l => l.slug !== 'united-states' && (l.popularProducts || []).some((p: string) => p.toLowerCase() === product.name.toLowerCase()))
+    .map(l => ({
+      label: l.city,
+      href: `/locations/${l.region.toLowerCase().replace(/ /g, '-')}/${l.slug}`,
+    }));
+  const matchedLocations = [...matchedCities, ...matchedStates].slice(0, 8);
+
   return (
     <div className="flex flex-col min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
@@ -690,7 +707,7 @@ export default async function ProductPage({ params }: { params: { locale: string
               <FadeIn delay={0.35}>
                 <ShareProduct 
                   title={product.name} 
-                  url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale}/products/`}
+                  url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale}/products/${product.slug}`}
                 />
               </FadeIn>
             </div>
@@ -982,6 +999,40 @@ export default async function ProductPage({ params }: { params: { locale: string
           </div>
         </section>
       )}
+
+      {/* Available For Wholesale In — Location Cross-Links */}
+      <section className="bg-white border-t border-black/5 py-16 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-[1600px] relative z-10">
+          <h2 className="font-absans text-2xl md:text-3xl font-bold uppercase tracking-tight text-black mb-2">
+            {isEs ? `${product.name} Al Por Mayor Disponible En` : `Wholesale ${product.name} Available In`}
+          </h2>
+          <p className="text-black/50 font-archia font-medium text-sm mb-8 max-w-2xl">
+            {isEs
+              ? 'Suministramos a instituciones y laboratorios autorizados en todo Estados Unidos. Explore nuestros centros regionales para conocer los plazos de entrega y la cobertura local.'
+              : 'We supply licensed institutions and laboratories nationwide. Browse our regional hubs for local delivery timelines and coverage.'}
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {matchedLocations.length > 0 ? (
+              matchedLocations.map((loc) => (
+                <Link
+                  key={loc.href}
+                  href={loc.href}
+                  className="inline-flex items-center gap-2 bg-[#F8F8F6] border border-black/5 hover:border-[#13a7b7]/30 hover:bg-white text-black/70 hover:text-[#13a7b7] px-5 py-2.5 rounded-full font-archia text-xs font-semibold transition-all"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#13a7b7]/60" />
+                  {loc.label}
+                </Link>
+              ))
+            ) : null}
+            <Link
+              href="/locations"
+              className="inline-flex items-center gap-2 bg-black text-white hover:bg-black/80 px-5 py-2.5 rounded-full font-archia text-xs font-bold transition-all"
+            >
+              {isEs ? 'Ver Todas las Ubicaciones' : 'Browse All Locations'} <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Mobile Sticky CTA Footer (only visible on small screens) */}
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-black/10 z-50 lg:hidden shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">

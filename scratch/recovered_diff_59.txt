@@ -1,0 +1,57 @@
+Created At: 2026-07-31T02:24:59+05:30
+Completed At: 2026-07-31T02:25:06+05:30
+
+				The command failed with exit code: 1
+				Output:
+				warning: in the working copy of 'src/data/locations.json', LF will be replaced by CRLF the next time Git touches it
+diff --git a/src/data/locations.json b/src/data/locations.json
+index ae46aca..f2f06a7 100644
+--- a/src/data/locations.json
++++ b/src/data/locations.json
+@@ -1,749 +1,2705 @@
+ [
+   {
+-    "slug": "texas-dallas",
+-    "city": "Dallas",
+-    "state": "Texas",
+-    "region": "Southwest",
+-    "h1": "Wholesale Peptide Supplier in Dallas, Texas — Research-Grade Bulk Supply",
+-    "metaTitle": "Wholesale Peptides Dallas, Texas | Bulk Research-Grade Supply",
+-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Dallas, TX. ≥99% purity, batch COA verified, fast U.S. domestic shipping. GLP-1, BPC-157, TB-500 & more.",
+-    "intro": "Dallas–Fort Worth is one of the fastest-growing hubs for advanced wellness clinics, compounding pharmacies, and medical research in the United States. The DFW metroplex is home to hundreds of licensed medical facilities, anti-aging practices, and research institutions that depend on a reliable domestic peptide supply chain. 99 Purity Wholesale serves the Dallas wholesale market with U.S.-manufactured, ≥99% purity research compounds — backed by batch-matched COA documentation on every order.",
+-    "bodyP1": "The Dallas–Fort Worth wellness market has seen substantial expansion over the past several years, with a significant increase in licensed compounding pharmacies, functional medicine practices, and medical spa operations across suburbs including Plano, Frisco, Irving, Southlake, and Highland Park. These licensed facilities require consistent, verified peptide supply from a domestic source they can trust.",
+-    "bodyP2": "99 Purity Wholesale fulfills wholesale peptide orders to Dallas-area institutions from our U.S. domestic facility. Every batch is synthesized in America, independently tested by U.S. accredited laboratories, and shipped via priority domestic carrier — arriving in the Dallas area within 2–4 business days of payment confirmation. No international customs exposure. No cold-chain risk in transit.",
+-    "bodyP3": "Licensed professionals and research institutions in the Dallas area can access our complete wholesale catalog of 50+ research-grade compounds across 7 categories: GLP-1 and metabolic peptides, growth hormone secretagogues, healing and recovery compounds, cognitive and nootropic peptides, anti-aging and longevity compounds, cosmetic research compounds, and ancillaries.",
+-    "whyUs": [
+-      "U.S.-manufactured — synthesized domestically, not imported",
+-      "≥99% purity on every compound, verified by independent U.S. labs",
+-      "Batch-matched COA documentation with every shipment",
+-      "Fast domestic fulfillment to Dallas — 2–4 business days",
+-      "Tiered wholesale pricing: Start through Tier 3",
+-      "WhatsApp and email B2B support with fast response times",
+-      "Private label and dropshipping programs available"
+-    ],
++    "slug": "united-states",
++    "city": "United States",
++    "state": "United States",
++    "region": "United States",
++    "h1": "Wholesale Peptide Supplier in United States — Research-Grade Bulk Supply",
++    "metaTitle": "Wholesale Peptides United States | Bulk Research-Grade Supply",
++    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in United States. ≥99% purity, batch COA verified, fast domestic shipping.",
++    "intro": "We supply research institutions and licensed professionals in United States with U.S.-manufactured research-grade peptides at wholesale pricing. Every batch includes independent third-party COA documentation.",
++    "introEs": "Suministramos a instituciones de investigación y profesionales autorizados en United States péptidos de grado de investigación fabricados en EE. UU. a precios de mayorista. Cada lote incluye documentación COA de terceros independientes.",
+     "popularProducts": [
+       "Semaglutide",
+       "Tirzepatide",
+       "BPC-157",
+-      "CJC-1295 w/ DAC",
+-      "Ipamorelin",
+-      "TB-500"
++      "Retatrutide",
++      "TB-500",
++      "Ipamorelin"
+     ],
+     "localKeywords": [
+-      "wholesale peptides Dallas",
+-      "peptide supplier Dallas Texas",
+
