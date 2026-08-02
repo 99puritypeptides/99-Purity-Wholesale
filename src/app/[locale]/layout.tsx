@@ -80,8 +80,16 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       'US manufactured peptides'
     ],
     icons: {
-      icon: '/favicon.ico',
-      apple: '/images/99pw-logo.webp',
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/icons/icon-192x192.png', type: 'image/png', sizes: '192x192' },
+        { url: '/icons/icon-512x512.png', type: 'image/png', sizes: '512x512' },
+      ],
+      apple: [
+        { url: '/images/99pw-logo.webp', sizes: '180x180', type: 'image/webp' },
+        { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      ],
+      shortcut: '/favicon.ico',
     },
     openGraph: {
       type: 'website',
@@ -199,6 +207,11 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png" />
+        <link rel="apple-touch-icon" href="/images/99pw-logo.webp" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="alternate" type="text/markdown" href="/llms.txt" />
         <script
           id="org-schema"
