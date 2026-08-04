@@ -80,13 +80,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       'US manufactured peptides'
     ],
     icons: {
-      icon: [
-        { url: '/icons/icon-192x192.png', type: 'image/png', sizes: '192x192' },
-        { url: '/icons/icon-512x512.png', type: 'image/png', sizes: '512x512' },
-      ],
       apple: [
         { url: '/images/99pw-logo.webp', sizes: '180x180', type: 'image/webp' },
-        { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
       ],
     },
     openGraph: {
