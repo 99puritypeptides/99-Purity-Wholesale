@@ -4,14 +4,16 @@ import FaqSection from '@/components/shared/FaqSection';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import WholesaleForm from '@/components/wholesale/WholesaleForm';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'WholesaleApplication' });
   return {
     title: t('metadata.title'),
     description: t('metadata.description'),
   
     alternates: {
-      canonical: locale === 'en' ? '/wholesale-application' : `/${locale}/wholesale-application`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/wholesale-application' : `/${locale}/wholesale-application`}`,
       languages: { 'en-US': '/wholesale-application', es: '/es/wholesale-application', 'x-default': '/wholesale-application' },
     },
   };

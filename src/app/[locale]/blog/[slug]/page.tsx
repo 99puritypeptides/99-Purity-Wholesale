@@ -128,7 +128,9 @@ const mdxComponents = {
   ),
 };
 
-export async function generateMetadata({ params }: { params: { locale: string, slug: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   try {
     const post = await getPostBySlug(params.slug);
       const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
@@ -140,7 +142,7 @@ export async function generateMetadata({ params }: { params: { locale: string, s
         title: `${post.meta.title}`,
         description: post.meta.desc || post.meta.title,
         alternates: {
-          canonical: url,
+          canonical: `https://99puritywholesale.com${url}`,
           languages: {
             'en-US': `${baseUrl}/blog/${params.slug}`,
             es: `${baseUrl}/es/blog/${params.slug}`,

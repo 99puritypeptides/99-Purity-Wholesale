@@ -8,6 +8,7 @@ import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
 import MainContentWrapper from '@/components/layout/MainContentWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScrollProvider';
 import Script from 'next/script';
+import { notFound } from 'next/navigation';
 import '../globals.css';
 
 const absans = localFont({
@@ -55,8 +56,10 @@ export const viewport = {
   themeColor: '#4FC3D0',
 };
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale, namespace: 'Meta' });
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
+  const t = await getTranslations({ locale: locale || 'en', namespace: 'Meta' });
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const ogTitle = t('homeTitle');
   const ogDesc = t('homeDesc');
@@ -69,7 +72,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       template: '%s | 99 Purity Wholesale',
     },
     description: ogDesc,
-    authors: [{ name: '99 Purity Wholesale', url: baseUrl }],
+    authors: [{ name: '99 Purity Wholesale' }],
     creator: '99 Purity Wholesale',
     publisher: '99 Purity Wholesale',
     keywords: [
@@ -124,7 +127,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     },
   
     alternates: {
-      canonical: locale === 'en' ? '/' : `/${locale}`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/' : `/${locale}`}`,
       languages: { 'en-US': '/', es: '/es', 'x-default': '/' },
     },
   };
@@ -134,14 +137,23 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 import { CartProvider } from '@/context/CartContext';
 import CartDrawer from '@/components/cart/CartDrawer';
 
-export default async function RootLayout({
-  children,
-  params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const messages = await getMessages({ locale });
+import { setRequestLocale } from 'next-intl/server';
+
+export const revalidate = 3600;
+
+export default async function RootLayout(props: any) {
+  const children = props.children;
+  const params = await props.params;
+  const locale = params?.locale || 'en';
+
+  if (!['en', 'es'].includes(locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const currentLocale = locale || 'en';
+  const messages = await getMessages({ locale: currentLocale });
 
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -227,7 +239,7 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${dmSans.className} ${rajdhani.variable} ${dmSans.variable} ${dmMono.variable} ${absans.variable} ${goku.variable} ${meshed.variable} ${archia.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={locale} timeZone="America/New_York">
           <SmoothScrollProvider>
             <CartProvider>
               <Header />

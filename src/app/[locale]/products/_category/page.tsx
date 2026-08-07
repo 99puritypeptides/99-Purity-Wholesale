@@ -8,7 +8,9 @@ import { FadeIn } from '@/components/shared/Motion';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
 
-export async function generateMetadata({ params }: { params: { locale: string; category: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale: params.locale, namespace: 'CategoryDetail' });
   
   const categories = [
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }: { params: { locale: string; c
     title: `${t(`categories.${params.category}.title`)} — Wholesale Bulk Supply`,
     description: t(`categories.${params.category}.desc`),
     alternates: {
-      canonical: params.locale === 'en' ? path : `/${params.locale}${path}`,
+      canonical: `https://99puritywholesale.com${params.locale === 'en' ? path : `/${params.locale}${path}`}`,
       languages: {
         'en-US': path,
         es: `/es${path}`,

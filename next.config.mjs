@@ -21,6 +21,21 @@ const nextConfig = {
         destination: '/certificates-of-analysis',
         permanent: true,
       },
+      {
+        source: '/legal/terms',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/legal/privacy',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/legal/disclaimer',
+        destination: '/compliance',
+        permanent: true,
+      }
     ];
   },
 };

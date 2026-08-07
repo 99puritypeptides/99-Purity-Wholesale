@@ -20,13 +20,15 @@ import FaqSection from '@/components/shared/FaqSection';
 import { curatedResearch, productLookup } from '@/data/researchDb';
 import type { ResearchData } from '@/data/researchDb';
 
-export async function generateMetadata({ params }: { params: { locale: string, slug: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const titleStr = params.slug.replace(/-/g, ' ').toUpperCase();
   return {
     title: `Research: ${titleStr}`,
     description: `Research data and clinical trials for ${titleStr}.`,
     alternates: {
-      canonical: params.locale === 'en' ? `/products/${params.slug}/research` : `/${params.locale}/products/${params.slug}/research`,
+      canonical: `https://99puritywholesale.com${params.locale === 'en' ? `/products/${params.slug}/research` : `/${params.locale}/products/${params.slug}/research`}`,
       languages: {
         'en-US': `/products/${params.slug}/research`,
         es: `/es/products/${params.slug}/research`,

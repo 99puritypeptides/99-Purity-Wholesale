@@ -5,7 +5,9 @@ import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
 import FaqSchema from '@/components/seo/FaqSchema';
 
-export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({locale, namespace: 'Meta'});
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const path = '/services';
@@ -20,7 +22,7 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
     title: t('servicesTitle'),
     description: t('servicesDesc'),
     alternates: {
-      canonical: url,
+      canonical: `https://99puritywholesale.com${url}`,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,

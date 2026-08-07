@@ -16,7 +16,9 @@ import ProductDirectory from '@/components/products/ProductDirectory';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('productsTitle'),
@@ -24,7 +26,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     openGraph: { title: t('productsTitle'), description: t('productsDesc') },
   
     alternates: {
-      canonical: locale === 'en' ? '/products' : `/${locale}/products`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/products' : `/${locale}/products`}`,
       languages: { 'en-US': '/products', es: '/es/products', 'x-default': '/products' },
     },
   };

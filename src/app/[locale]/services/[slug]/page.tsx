@@ -31,7 +31,9 @@ export async function generateStaticParams() {
   return Object.keys(servicesRegistry).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string; slug: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const service = servicesRegistry[params.slug];
   if (!service) return {};
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
@@ -43,7 +45,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
     description: service.meta.description,
     keywords: service.meta.keywords,
     alternates: {
-      canonical: url,
+      canonical: `https://99puritywholesale.com${url}`,
       languages: {
         'en-US': `${baseUrl}/services/${params.slug}`,
         es: `${baseUrl}/es/services/${params.slug}`,

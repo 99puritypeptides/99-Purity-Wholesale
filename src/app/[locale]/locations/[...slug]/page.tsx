@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { MapPin, Mail, Zap, ShieldAlert, CheckCircle2, Package, ArrowRight, FlaskConical, ShieldCheck, Truck, Microscope, GraduationCap, Building2, Briefcase } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import locationsData from '@/data/locations.json';
@@ -36,7 +36,9 @@ export async function generateStaticParams() {
   return [...stateParams, ...cityParams];
 }
 
-export async function generateMetadata({ params }: { params: { locale: string; slug: string[] } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const isCity = params.slug.length === 3;
   const targetSlug = params.slug[params.slug.length - 1];
   const location: any = isCity 
@@ -56,7 +58,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
     title: locData.metaTitle.replace(/\s*\|\s*99 Purity Wholesale.*$/i, '').trim(),
     description: locData.metaDesc,
     alternates: {
-      canonical: url,
+      canonical: `https://99puritywholesale.com${url}`,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,
@@ -99,7 +101,19 @@ export default async function LocationTemplatePage({ params }: { params: { local
     ? citiesData.find((loc) => loc.slug === targetSlug)
     : locationsData.find((loc) => loc.slug === targetSlug);
     
-  if (!location) notFound();
+  if (!location) {
+    if (isCity) {
+      const stateSlug = params.slug[1];
+      const stateHubExists = locationsData.some((loc) => loc.slug === stateSlug);
+      if (stateHubExists) {
+        const redirectPath = params.locale === 'en'
+          ? `/locations/united-states/${stateSlug}`
+          : `/es/locations/united-states/${stateSlug}`;
+        permanentRedirect(redirectPath);
+      }
+    }
+    notFound();
+  }
 
   const locData = getLocalizedLocation(location, params.locale, isCity);
 
@@ -641,14 +655,15 @@ export default async function LocationTemplatePage({ params }: { params: { local
         <div className="container mx-auto px-6 max-w-7xl">
           <FadeIn>
             <h2 className="text-3xl font-absans font-bold text-black uppercase tracking-tight mb-8">
-              {isCity ? (isEs ? `Áreas Cercanas en ${location.state}` : `Nearby Areas in ${location.state}`) : t('otherRegions')}
+              {isCity ? (isEs ? `Ciudades Cercanas en ${location.state}` : `Nearby Cities in ${location.state}`) : t('otherRegions')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {isCity && location.nearbyCities ? (
-                location.nearbyCities.map((nearbyCityName: string, idx: number) => {
-                  const nearbySlug = nearbyCityName.toLowerCase().replace(/ /g, '-');
+              {isCity ? (
+                citiesData
+                  .filter((c) => c.stateSlug === location.stateSlug && c.slug !== location.slug)
+                  .map((nearbyCity, idx: number) => {
                   return (
-                    <Link key={idx} href={`/locations/${location.region.toLowerCase().replace(/ /g, '-')}/${location.stateSlug}/${nearbySlug}`} className="group block">
+                    <Link key={idx} href={`/locations/${location.region.toLowerCase().replace(/ /g, '-')}/${location.stateSlug}/${nearbyCity.slug}`} className="group block">
                       <div className="bg-[#F8F8F6] border border-black/5 rounded-2xl p-6 hover:border-[#13a7b7]/30 hover:bg-white hover:shadow-md transition-all duration-300">
                         <div className="flex items-center gap-2 mb-3">
                           <MapPin className="w-3.5 h-3.5 text-[#13a7b7]" />
@@ -656,7 +671,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
                             {isEs ? 'Ciudad Cercana' : 'Nearby City'}
                           </span>
                         </div>
-                        <div className="text-black font-absans font-bold text-xl group-hover:text-[#13a7b7] transition-colors uppercase tracking-tight mb-4">{nearbyCityName}</div>
+                        <div className="text-black font-absans font-bold text-xl group-hover:text-[#13a7b7] transition-colors uppercase tracking-tight mb-4">{nearbyCity.city}</div>
                         <div className="text-black/40 font-archia font-semibold text-[10px] uppercase tracking-wider flex items-center gap-1">
                           {t('viewHub')} <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                         </div>

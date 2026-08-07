@@ -7,13 +7,15 @@ import {
 import GlobalCTA from "@/components/layout/GlobalCTA";
 import FaqSection from "@/components/shared/FaqSection";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'About' });
   return {
     title: `${t('Hero.title')}`,
     description: t('Hero.subtitle'),
     alternates: {
-      canonical: locale === 'en' ? '/about' : `/${locale}/about`
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/about' : `/${locale}/about`}`
     }
   };
 }

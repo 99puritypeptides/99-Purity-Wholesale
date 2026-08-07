@@ -804,6 +804,55 @@
       "whatsapp": "Chatear por WhatsApp",
       "email": "Enviar un Correo",
       "msg": "Hola, tengo una pregunta sobre el abastecimiento mayorista de 99 Purity Wholesale."
+    },
+    "FAQ": {
+      "badge": "About 99 Purity Wholesale",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the questions licensed professionals ask before sourcing from 99 Purity Wholesale — covering our identity, lab partner, supply chain, and compliance standards.",
+      "items": [
+        {
+          "q": "Who is 99 Purity Wholesale?",
+          "a": "99 Purity Wholesale is a U.S.-based, B2B-exclusive wholesale peptide supplier serving licensed professionals across all 50 states. We supply compounding pharmacies, wellness clinics, medical spas, and licensed distributors with domestically manufactured, ≥99% purity research peptides — independently verified by [Freedom Diagnostic](/quality) — at [tiered wholesale pricing](/wholesale-application). We also operate a retail division at [99puritypeptides.com](https://99puritypeptides.com) under the same domestic supply chain.",
+          "link": "/products",
+          "linkText": "Browse Our Catalog"
+        },
+        {
+          "q": "What independent laboratory tests your peptides?",
+          "a": "Every batch is tested by [Freedom Diagnostic](/quality), an independent U.S. third-party laboratory. Testing includes reversed-phase High-Performance Liquid Chromatography (HPLC) to confirm ≥99% purity, and Liquid Chromatography-Mass Spectrometry (LC-MS) to confirm molecular identity. [Batch-matched Certificates of Analysis](/quality) are available to download before and after purchase — no request required for COA access.",
+          "link": "/quality",
+          "linkText": "View Our Quality Standards"
+        },
+        {
+          "q": "Where are your peptides manufactured?",
+          "a": "All peptides supplied by 99 Purity Wholesale are synthesized in a U.S. domestic facility using [solid-phase peptide synthesis (SPPS)](/glossary). We do not source from overseas manufacturers or repackage imported raws. Domestic manufacturing eliminates international customs risk and ensures consistent [quality control](/quality) from synthesis to shipment.",
+          "link": "/quality",
+          "linkText": "Our Manufacturing Process"
+        },
+        {
+          "q": "How do I verify purity before placing a wholesale order?",
+          "a": "Request a [batch-matched Certificate of Analysis](/quality) from Freedom Diagnostic before committing to any order. Every COA includes reversed-phase HPLC chromatograms confirming ≥99% purity and LC-MS data confirming molecular identity. Our [Quality Hub](/quality) maintains a downloadable COA library for ongoing reference. We actively encourage every new wholesale partner to review documentation before their first order.",
+          "link": "/quality",
+          "linkText": "Visit Our COA Library"
+        },
+        {
+          "q": "Do you operate a retail division as well?",
+          "a": "Yes. 99 Purity Wholesale operates a retail division at [99puritypeptides.com](https://99puritypeptides.com), which sells research-grade peptides directly to individual licensed buyers. The wholesale site is our B2B arm — offering the same domestic supply chain and [Freedom Diagnostic](/quality)-verified quality at [tiered wholesale pricing](/wholesale-application) for compounding pharmacies, distributors, clinics, and research institutions.",
+          "link": "https://99puritypeptides.com",
+          "linkText": "Visit Our Retail Division"
+        },
+        {
+          "q": "What types of businesses qualify for a wholesale account?",
+          "a": "Eligible wholesale accounts include compounding pharmacies, wellness clinics, medical spas, licensed distributors, research facilities, and retail peptide operators. All buyers must attest to their licensed professional status and agree to our [research-use-only terms](/legal/disclaimer). [Applications](/wholesale-application) are individually reviewed and approved before pricing access is granted.",
+          "link": "/wholesale-application",
+          "linkText": "Apply for Wholesale Access"
+        },
+        {
+          "q": "What are your research use compliance requirements?",
+          "a": "All products supplied by 99 Purity Wholesale are designated for in vitro laboratory research only. They are not for human consumption, therapeutic application, or diagnostic use. Buyers are legally responsible for ensuring all downstream use complies with applicable local, state, and federal regulations. Our [services page](/services) outlines B2B program requirements in full.",
+          "link": "/legal/disclaimer",
+          "linkText": "Read Our Disclaimer"
+        }
+      ]
     }
   },
   "Legal": {

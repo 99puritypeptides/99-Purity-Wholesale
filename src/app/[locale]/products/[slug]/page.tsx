@@ -13,7 +13,9 @@ import ProductGallery from '@/components/products/ProductGallery';
 import AddToInquiryButton from '@/components/products/AddToInquiryButton';
 
 
-export async function generateMetadata({ params }: { params: { locale: string; slug: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale: params.locale, namespace: 'Meta' });
   const product = productsData.find(p => p.slug === params.slug);
   if (!product) return {};
@@ -31,7 +33,7 @@ export async function generateMetadata({ params }: { params: { locale: string; s
     title: t('productTitle', { name: product.name }),
     description: t('productDesc', { name: product.name }),
     alternates: {
-      canonical: url,
+      canonical: `https://99puritywholesale.com${url}`,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,

@@ -142,9 +142,11 @@ function initScrollReveals() {
 
   // 2. Split-text slide-in reveals (.reveal-text)
   const textElements = document.querySelectorAll('.reveal-text');
+  const isMobile = window.innerWidth < 768; // Skip heavy DOM parsing on mobile
+  
   textElements.forEach((el) => {
     const htmlEl = el as HTMLElement;
-    if (!htmlEl.classList.contains('is-split')) {
+    if (!htmlEl.classList.contains('is-split') && !isMobile) {
       splitTextWords(htmlEl);
       htmlEl.classList.add('is-split');
     }

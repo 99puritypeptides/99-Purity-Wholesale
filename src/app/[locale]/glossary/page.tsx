@@ -5,14 +5,16 @@ import GlobalCTA from '@/components/layout/GlobalCTA';
 import { FadeIn } from '@/components/shared/Motion';
 import GlossaryClient, { GlossaryTerm, ValueBox } from '@/components/glossary/GlossaryClient';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Glossary' });
   return {
     title: t('Hero.title'),
     description: t('Hero.subtitle'),
   
     alternates: {
-      canonical: locale === 'en' ? '/glossary' : `/${locale}/glossary`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/glossary' : `/${locale}/glossary`}`,
       languages: { 'en-US': '/glossary', es: '/es/glossary', 'x-default': '/glossary' },
     },
   };

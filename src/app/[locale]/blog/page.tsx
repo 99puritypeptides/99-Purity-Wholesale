@@ -5,14 +5,16 @@ import { getTranslations } from 'next-intl/server';
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('blogTitle'),
     description: t('blogDesc'),
   
     alternates: {
-      canonical: locale === 'en' ? '/blog' : `/${locale}/blog`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/blog' : `/${locale}/blog`}`,
       languages: { 'en-US': '/blog', es: '/es/blog', 'x-default': '/blog' },
     },
   };

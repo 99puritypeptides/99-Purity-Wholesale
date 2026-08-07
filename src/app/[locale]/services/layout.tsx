@@ -1,13 +1,15 @@
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Layout' });
   const title = t('nav.services') || 'Services';
   return {
     title: `${title}`,
     description: `Explore our ${title} at 99 Purity Wholesale.`,
     alternates: {
-      canonical: locale === 'en' ? '/services' : `/${locale}/services`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/services' : `/${locale}/services`}`,
       languages: { 'en-US': '/services', es: '/es/services', 'x-default': '/services' },
     }
   };

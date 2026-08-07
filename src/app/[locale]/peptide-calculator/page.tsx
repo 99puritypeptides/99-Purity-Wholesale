@@ -6,7 +6,9 @@ import CalculatorContent from '@/components/calculator/CalculatorContent';
 import CalculatorFaq from '@/components/calculator/CalculatorFaq';
 import { FlaskConical } from 'lucide-react';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Meta' });
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const path = '/peptide-calculator';
@@ -29,7 +31,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       'U-100 syringe calculator',
     ],
     alternates: {
-      canonical: url,
+      canonical: `https://99puritywholesale.com${url}`,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,

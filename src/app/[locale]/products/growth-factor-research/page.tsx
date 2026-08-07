@@ -1,6 +1,8 @@
 import CategoryPage, { generateMetadata as dynamicGenerateMetadata } from '../_category/page';
 
-export async function generateMetadata({ params }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   return dynamicGenerateMetadata({ params: { ...params, category: 'growth-factor-research' } });
 }
 

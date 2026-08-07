@@ -22,13 +22,15 @@ type FaqItem = { q: string; a: string };
 type TierKey = 'starter' | 'tier1' | 'tier2' | 'tier3';
 type ServiceKey = 'dropshipping' | 'privateLabel' | 'launch' | 'web';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
     title: t('homeTitle'),
     description: t('homeDesc'),
     alternates: {
-      canonical: locale === 'en' ? '/' : `/${locale}`
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/' : `/${locale}`}`
     }
   };
 }

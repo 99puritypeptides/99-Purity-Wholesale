@@ -1,13 +1,15 @@
 import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata(props: any) {
+  const params = props?.params || {};
+  const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Layout' });
   // Fallback to title string since some namespaces might not have nav fields for legal
   return {
     title: `Refund & Replacement Policy`,
     description: `Return, replacement, and HPLC verification policies for 99 Purity Wholesale orders.`,
     alternates: {
-      canonical: locale === 'en' ? '/refund-policy' : `/${locale}/refund-policy`,
+      canonical: `https://99puritywholesale.com${locale === 'en' ? '/refund-policy' : `/${locale}/refund-policy`}`,
       languages: { 'en-US': '/refund-policy', es: '/es/refund-policy', 'x-default': '/refund-policy' },
     }
   };
