@@ -58,7 +58,7 @@ export async function generateMetadata(props: any) {
     title: locData.metaTitle.replace(/\s*\|\s*99 Purity Wholesale.*$/i, '').trim(),
     description: locData.metaDesc,
     alternates: {
-      canonical: `https://99puritywholesale.com${url}`,
+      canonical: url,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,
