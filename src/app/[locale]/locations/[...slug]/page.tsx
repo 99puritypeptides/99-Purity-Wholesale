@@ -496,7 +496,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
               </FadeIn>
 
               {/* Quality, Compliance & Testing Standards (State only) */}
-              {!isCity && <QualityStandardsSection />}
+              {!isCity && <QualityStandardsSection locationSlug={location.slug} />}
 
               {/* SEO Content: What We Supply (State only) */}
               {!isCity && (

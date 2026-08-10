@@ -33,7 +33,7 @@ export async function generateMetadata(props: any) {
     title: t('productTitle', { name: product.name }),
     description: t('productDesc', { name: product.name }),
     alternates: {
-      canonical: `https://99puritywholesale.com${url}`,
+      canonical: url,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,

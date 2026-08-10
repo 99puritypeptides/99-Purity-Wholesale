@@ -84,7 +84,7 @@ export async function generateMetadata(props: any) {
     ],
     icons: {
       apple: [
-        { url: '/images/99pw-logo.webp', sizes: '180x180', type: 'image/webp' },
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
       ],
     },
     openGraph: {
@@ -112,7 +112,7 @@ export async function generateMetadata(props: any) {
       capable: true,
       statusBarStyle: 'default',
       title: '99 Purity Wholesale',
-      startupImage: '/images/99pw-logo.webp',
+      startupImage: '/apple-touch-icon.png',
     },
     robots: {
       index: true,
@@ -234,6 +234,20 @@ export default async function RootLayout(props: any) {
               gtag('config', '${gaId}', {
                 page_path: window.location.pathname,
               });
+            `,
+          }}
+        />
+        {/* Microsoft Clarity */}
+        <Script
+          id="microsoft-clarity-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "y0e2foir0t");
             `,
           }}
         />

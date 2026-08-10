@@ -168,7 +168,7 @@ export function getLocalizedLocation(location: any, locale: string, isCity: bool
     if (qLower.includes('independent') || qLower.includes('verified') || qLower.includes('third-party') || qLower.includes('coa')) {
       return {
         q: `¿Los compuestos de investigación están verificados por laboratorios independientes de EE. UU.?`,
-        a: `Sí, cada lote suministrado incluye un Certificado de Análisis (COA) emitido por un laboratorio analítico externo acreditado con certificación ISO en EE. UU., verificando una pureza ≥99% mediante HPLC y espectrometría de masas.`
+        a: `Sí, cada lote suministrado incluye un Certificado de Análisis (COA) emitido por un laboratorio analítico externo independiente en EE. UU., verificando una pureza ≥99% mediante HPLC y espectrometría de masas.`
       };
     }
 

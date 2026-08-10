@@ -31,7 +31,7 @@ export async function generateMetadata(props: any) {
       'U-100 syringe calculator',
     ],
     alternates: {
-      canonical: `https://99puritywholesale.com${url}`,
+      canonical: url,
       languages: {
         'en-US': `${baseUrl}${path}`,
         es: `${baseUrl}/es${path}`,

@@ -142,7 +142,7 @@ export async function generateMetadata(props: any) {
         title: `${post.meta.title}`,
         description: post.meta.desc || post.meta.title,
         alternates: {
-          canonical: `https://99puritywholesale.com${url}`,
+          canonical: url,
           languages: {
             'en-US': `${baseUrl}/blog/${params.slug}`,
             es: `${baseUrl}/es/blog/${params.slug}`,

@@ -45,7 +45,7 @@ export async function generateMetadata(props: any) {
     description: service.meta.description,
     keywords: service.meta.keywords,
     alternates: {
-      canonical: `https://99puritywholesale.com${url}`,
+      canonical: url,
       languages: {
         'en-US': `${baseUrl}/services/${params.slug}`,
         es: `${baseUrl}/es/services/${params.slug}`,
