@@ -1394,9 +1394,9 @@
     "researchGrade": "Grado de Investigación",
     "puritySuffix": "Pureza ≥99%",
     "trendingTitle": "Compuestos de Investigación en Tendencia en {city}",
-    "trendingDesc": "Según los datos recientes de adquisición al por mayor de laboratorios y clínicas de bienestar en el área de {city}, estos son actualmente los compuestos más investigados en su región:",
+    "trendingDesc": "Los siguientes compuestos son solicitados con frecuencia para investigación y evaluación de laboratorio en el área de {city}:",
     "topTitle": "Principales Péptidos al Por Mayor en {city}",
-    "topDesc": "Según los datos de adquisición al por mayor de instalaciones autorizadas del área de {city}, estos compuestos se encuentran entre los más solicitados activamente en esta región:",
+    "topDesc": "Estos compuestos de investigación de alta pureza son solicitados con frecuencia por laboratorios e instalaciones autorizadas B2B en el área de {city}:",
     "fastShippingTitle": "Cumplimiento Nacional Rápido para {state}",
     "fastShippingDesc": "Dado que enviamos desde dentro de los Estados Unidos, los laboratorios en {city} no enfrentan retrasos en aduanas internacionales, confiscaciones de paquetes o pérdida de integridad de la cadena de frío. Los pedidos se procesan inmediatamente después de la confirmación del pago.",
     "shippingPoints": {

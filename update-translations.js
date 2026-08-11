@@ -124,7 +124,7 @@ const newEn = {
   LocationDetail: {
     hub: "{city}, {state} Hub",
     trendingTitle: "Trending Research Compounds in {city}",
-    trendingDesc: "Based on recent wholesale procurement data from {city}-area laboratories and wellness clinics, these are currently the most heavily researched compounds in your region:",
+    trendingDesc: "The following compounds are frequently requested for research and laboratory evaluation in the {city} area:",
     fastShippingTitle: "Fast Domestic Fulfillment to {state}",
     fastShippingDesc: "Because we ship from within the United States, laboratories in {city} do not face international customs delays, package seizures, or cold-chain integrity loss. Orders are processed immediately upon payment confirmation.",
     shippingPoints: {

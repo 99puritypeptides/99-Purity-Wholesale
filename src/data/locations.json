@@ -198,10 +198,13 @@
     "state": "United States",
     "region": "United States",
     "h1": "Wholesale Peptide Supplier in Arizona — Research-Grade Bulk Supply",
+    "h1Es": "Proveedor Mayorista de Péptidos en Arizona — Suministro a Granel Grado de Investigación",
     "metaTitle": "Wholesale Peptides Arizona | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Arizona. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "Arizona's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de Arizona, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "metaTitleEs": "Péptidos al Por Mayor Arizona | Suministro de Grado de Investigación a Granel",
+    "metaDesc": "99 Purity Wholesale supplies bulk, ≥99% purity research peptides to licensed professionals across Phoenix, Scottsdale, and Tucson, Arizona — verification COAs and 2–4 day domestic shipping.",
+    "metaDescEs": "Suministro de péptidos de investigación al por mayor con pureza ≥99% a profesionales en Phoenix, Scottsdale y Tucson, Arizona. Envío nacional en 2-4 días.",
+    "intro": "99 Purity Wholesale supplies bulk, ≥99% purity research peptides to licensed professionals, wellness practices, and research facilities across Arizona, including the Phoenix, Scottsdale, and Tucson metro areas. All orders are fulfilled domestically with batch-matched Certificate of Analysis verification.",
+    "introEs": "Suministro mayorista de péptidos de investigación con pureza ≥99% para profesionales, clínicas de bienestar y centros de investigación en Arizona, incluyendo Phoenix, Scottsdale y Tucson. Todo con verificación COA por lote.",
     "popularProducts": [
       "NAD+",
       "Ipamorelin",
@@ -213,38 +216,66 @@
       "bulk research peptides Arizona",
       "GLP-1 peptides wholesale Arizona"
     ],
-    "bodyP1": "Arizona is home to one of the most active longevity and wellness-clinic markets in the country, concentrated in Scottsdale and metro Phoenix, and 99 Purity Wholesale is built to serve that market at true wholesale scale. Our B2B accounts across Arizona include anti-aging and longevity practices, medical spas, compounding pharmacies, and independent research organizations working alongside the state's growing translational-research base, anchored by institutions like the prominent research institutes (TGen) in Phoenix.",
-    "bodyP2": "Every compound we distribute is synthesized domestically to a strict ≥99% purity standard, independently verified by third-party U.S. laboratories, and shipped with a batch-matched Certificate of Analysis — critical documentation for any clinic that needs to stand behind what it's dispensing, or a lab that needs to defend its data. Arizona's summer heat is a genuine cold-chain risk for peptide compounds in transit, and we don't treat it as a footnote: shipments automatically receive upgraded thermal insulation and phase-change cooling materials during peak-heat months.",
-    "bodyP3": "Standard delivery runs 2 to 4 business days via priority carrier regardless of season. For longevity and wellness-clinic accounts managing recurring, high-frequency orders, our tiered wholesale pricing structure rewards volume, and established accounts can move to Net-30 terms. This is a wholesale-only relationship — we do not sell to the general public.",
+    "bodyP1": "Arizona's research and clinical sectors are anchored by two distinct metropolitan clusters. The Phoenix-Scottsdale corridor is home to one of the nation's most active markets for longevity, regenerative, and functional-medicine clinics, alongside a dedicated downtown biomedical research district focused on genomics and precision medicine. In southern Arizona, the ecosystem centers around Tucson's university-affiliated science and technology parks. Our B2B supply network serves compounding pharmacies, medical spas, longevity practices, and independent laboratories across the entire state, offering a reliable, domestic source of high-purity research compounds.",
+    "bodyP1Es": "Los sectores clínico y de investigación de Arizona están anclados en dos áreas metropolitanas distintas. El corredor Phoenix-Scottsdale alberga uno de los mercados más activos del país para clínicas de longevidad, medicina regenerativa y funcional, junto con un distrito de investigación biomédica en el centro de la ciudad enfocado en genómica. En el sur de Arizona, el ecosistema se centra en los parques científicos y tecnológicos afiliados a la universidad en Tucson. Nuestra red de suministro B2B atiende a farmacias de formulación magistral, centros de medicina estética y laboratorios independientes en todo el estado.",
+    "bodyP2": "Every peptide we distribute is synthesized domestically to a strict ≥99% purity standard, independently verified by an accredited U.S. analytical testing laboratory using reversed-phase HPLC and mass spectrometry. Each shipment is accompanied by a batch-matched Certificate of Analysis (COA) to ensure complete traceability for compliance and experimental integrity. Because Arizona's desert climate presents unique temperature challenges for sensitive biochemicals in transit, we implement specialized logistics protocols—including upgraded thermal insulation and phase-change cooling packs—during high-temperature months to safeguard compound stability from our facility to your laboratory door.",
+    "bodyP2Es": "Cada péptido que distribuimos es sintetizado nacionalmente bajo un estricto estándar de pureza ≥99%, verificado de forma independiente por un laboratorio de pruebas analíticas acreditado en EE. UU. mediante HPLC de fase reversa y espectrometría de masas. Cada envío se acompaña de un Certificado de Análisis (COA) específico del lote para garantizar una trazabilidad completa. Debido a que el clima desértico de Arizona presenta desafíos de temperatura únicos durante el transporte, implementamos protocolos de embalaje térmico reforzado durante los meses más cálidos.",
+    "bodyP3": "Standard delivery to Arizona averages 2 to 4 business days via priority carrier, eliminating international customs holds and border inspections. To support recurring clinical and laboratory operations, we offer tiered wholesale pricing structures, dedicated account support, and Net-30 payment terms for established accounts. Please note that we sell exclusively to licensed B2B professionals and research organizations purchasing for laboratory evaluation; we do not supply the general public.",
+    "bodyP3Es": "El tiempo de entrega estándar a Arizona es de 2 a 4 días hábiles mediante transporte nacional prioritario, eliminando demoras aduaneras. Ofrecemos precios mayoristas escalonados para compras recurrentes y condiciones de pago a 30 días (Net-30) para cuentas consolidadas. Operamos exclusivamente bajo un modelo B2B, suministrando únicamente a profesionales autorizados y entidades de investigación.",
     "bodyP4": "",
     "bodyP5": "",
     "whyUs": [
       "U.S.-manufactured — synthesized domestically, not imported",
       "≥99% purity on every compound, verified by independent U.S. labs",
       "Batch-matched COA documentation with every shipment",
-      "Fast domestic fulfillment to Arizona",
+      "Fast domestic fulfillment to Arizona, with heat-protective packaging built for the Southwest climate",
       "Tiered wholesale pricing for B2B buyers"
     ],
-    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across Arizona.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to Arizona, completely bypassing international customs delays.",
+    "whyUsEs": [
+      "Fabricado en EE. UU. — sintetizado nacionalmente sin intermediarios de importación",
+      "Pureza garantizada ≥99%, verificado por laboratorios analíticos independientes de EE. UU.",
+      "Documentación COA específica de lote enviada con cada pedido",
+      "Envío nacional rápido a Arizona con embalaje térmico especial para el clima del suroeste",
+      "Precios mayoristas B2B escalonados según el volumen de compra"
+    ],
+    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, longevity clinics, medical spas, and independent laboratories throughout Arizona, adapting our shipping protocols to handle the state's regional logistics requirements.",
+    "institutionsServedEs": "Suministramos péptidos a farmacias de formulación magistral, clínicas de longevidad, spas médicos y laboratorios independientes en toda Arizona, adaptando el embalaje a las exigencias logísticas de la región.",
+    "logisticsDetails": "Orders bound for Arizona are dispatched through our domestic distribution network via priority ground and air channels, avoiding international customs delays. During high-heat seasons, all shipments include specialized climate-protective packaging to ensure compounds remain stable throughout transit.",
+    "logisticsDetailsEs": "Los pedidos para Arizona se envían a través de nuestra red de distribución nacional mediante canales terrestres y aéreos prioritarios. En verano, todos los envíos incluyen protección térmica especial para preservar la estabilidad de los compuestos.",
     "localFaqs": [
       {
         "q": "What is the standard delivery time for wholesale peptides to Arizona?",
-        "a": "Orders shipped to Arizona typically arrive within 2-4 business days via priority domestic carrier."
+        "a": "Standard priority delivery to Arizona cities—including Phoenix, Tucson, Scottsdale, Mesa, and Tempe—averages 2 to 4 business days from order confirmation.",
+        "qEs": "¿Cuál es el plazo de entrega habitual para pedidos mayoristas de péptidos en Arizona?",
+        "aEs": "El envío prioritario estándar a ciudades de Arizona (como Phoenix, Tucson, Scottsdale, Mesa y Tempe) demora entre 2 y 4 días hábiles desde la confirmación del pedido."
       },
       {
         "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "a": "Yes. Every batch is verified by an independent, accredited U.S. analytical testing laboratory using HPLC and mass spectrometry. A batch-matched Certificate of Analysis verifying ≥99% purity is provided with every shipment.",
+        "qEs": "¿Los compuestos de investigación están verificados por laboratorios independientes de EE. UU.?",
+        "aEs": "Sí. Cada lote es verificado por un laboratorio de pruebas analíticas acreditado en EE. UU. mediante HPLC y espectrometría de masas, y se entrega con su Certificado de Análisis correspondiente que confirma una pureza ≥99%."
       },
       {
         "q": "Is it legal to buy bulk research peptides in Arizona?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "a": "Under federal and Arizona state regulations, these peptides are classified and sold strictly as Research Use Only (RUO) compounds for in-vitro laboratory research and analytical testing. They are not approved for human consumption, therapeutic, or diagnostic use. B2B buyers are responsible for ensuring compliance with all applicable federal, state, and local regulations prior to purchase.",
+        "qEs": "¿Es legal adquirir péptidos de investigación al por mayor en Arizona?",
+        "aEs": "Bajo las regulaciones federales y estatales de Arizona, estos péptidos se clasifican y venden exclusivamente para investigación de laboratorio in vitro y pruebas analíticas. No están autorizados para consumo humano. Los compradores son responsables de cumplir con la normativa vigente."
+      },
+      {
+        "q": "Does 99 Purity Wholesale account for Arizona's summer heat when shipping?",
+        "a": "Yes. While our lyophilized (freeze-dried) peptides are stable at ambient room temperature, we recognize the extreme summer heat in Arizona. During peak-heat months, all shipments destined for Arizona automatically receive upgraded insulation and phase-change cooling packs to ensure the structural and molecular integrity of the compounds remains fully preserved during transit.",
+        "qEs": "¿Cómo garantizan la estabilidad de los péptidos durante el envío a Arizona en verano?",
+        "aEs": "Aunque los péptidos liofilizados son estables a temperatura ambiente, en los meses de calor extremo en Arizona incorporamos aislamiento reforzado y acumuladores de frío de cambio de fase para proteger la integridad molecular de los compuestos durante el transporte."
       }
     ],
-    "researchInstitutions": "Arizona's research landscape includes the prominent research institutes (TGen) in Phoenix, major regional medical centers's Arizona campus, and a dense concentration of independent longevity and functional-medicine clinics centered in Scottsdale — one of the most active wellness-clinic markets in the country.",
-    "universities": "leading state universities and the leading state universities both maintain substantial biomedical and pharmaceutical-sciences research programs, with ASU's prominent research institutes and the leading state universities's Cancer Center among the state's most active research units.",
-    "biotechOverview": "Metro Phoenix has built a growing bioscience cluster anchored by TGen and the Phoenix Biomedical Campus, while Tucson's research base centers on the leading state universities — together supporting a steadily expanding base of research-focused buyers statewide.",
-    "industriesWeSupply": "We supply longevity and anti-aging clinics, medical spas, compounding pharmacies, and independent research laboratories across Arizona, with climate-controlled shipping protocols automatically applied during the state's high-heat summer months."
+    "researchInstitutions": "Arizona's biomedical research landscape includes genomics research centers in downtown Phoenix, major regional medical campuses, and a dense concentration of longevity and wellness practices centered in the Scottsdale area. We supply these independent laboratories and clinical facilities with high-purity research compounds for in-vitro evaluation.",
+    "researchInstitutionsEs": "El panorama de investigación biomédica de Arizona incluye centros de investigación genómica en Phoenix, grandes campus médicos regionales y clínicas de bienestar en Scottsdale. Suministramos compuestos de alta pureza para evaluación in vitro a estas instalaciones.",
+    "universities": "The state's major public research university systems maintain active research programs in pharmaceutical sciences, biochemistry, and biomedical engineering. We support these academic laboratories with domestically synthesized reference materials and lot-traceable purity documentation.",
+    "universitiesEs": "Las principales universidades públicas de investigación del estado mantienen programas en ciencias farmacéuticas, bioquímica e ingeniería biomédica. Apoyamos a estos laboratorios académicos con materiales de referencia sintetizados localmente.",
+    "biotechOverview": "Metro Phoenix features an expanding bioscience corridor focused on translational medicine and clinical technology, while Tucson's life-science base centers on university-affiliated research parks. A statewide industry association connects these clusters, fostering a collaborative ecosystem for biotechnology research.",
+    "biotechOverviewEs": "El área de Phoenix cuenta con un corredor biosanitario enfocado en medicina traslacional, mientras que el sector científico de Tucson se organiza en torno a parques de investigación. Una asociación industrial estatal conecta estos núcleos.",
+    "industriesWeSupply": "We supply wellness and longevity clinics, medical spas, compounding pharmacies, and independent contract research laboratories across Arizona, with heat-protective shipping standards automatically applied during summer months.",
+    "industriesWeSupplyEs": "Abastecemos a clínicas de bienestar, spas médicos, farmacias de formulación magistral y laboratorios de investigación por contrato en Arizona, con embalaje térmico reforzado en verano."
   },
   {
     "slug": "arkansas",
@@ -252,10 +283,13 @@
     "state": "United States",
     "region": "United States",
     "h1": "Wholesale Peptide Supplier in Arkansas — Research-Grade Bulk Supply",
-    "metaTitle": "Wholesale Peptides Arkansas | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Arkansas. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "Arkansas's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de Arkansas, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "h1Es": "Proveedor Mayorista de Péptidos en Arkansas — Suministro a Granel Grado de Investigación",
+    "metaTitle": "Wholesale Research Peptides Arkansas | UAMS & NWA Supply | 99 Purity Wholesale",
+    "metaTitleEs": "Péptidos de Investigación al Por Mayor Arkansas | UAMS y NWA | 99 Purity",
+    "metaDesc": "99 Purity Wholesale supplies bulk, U.S.-manufactured research peptides to licensed Arkansas professionals — ≥99% purity, batch COA verified, 2–4 day domestic delivery.",
+    "metaDescEs": "Suministro de péptidos de investigación a granel y fabricados en EE. UU. para profesionales en Arkansas. Pureza ≥99%, verificación COA, entrega nacional en 2-4 días.",
+    "intro": "99 Purity Wholesale supplies research-grade, U.S.-manufactured peptides to compounding pharmacies, wellness practices, and research laboratories across Arkansas. Every order ships domestically from our U.S. facility, with ≥99% purity and a batch-matched Certificate of Analysis included.",
+    "introEs": "Suministro mayorista de péptidos de investigación fabricados en EE. UU. con pureza ≥99% para profesionales y laboratorios en Arkansas. Cada lote cuenta con su respectivo Certificado de Análisis (COA) de laboratorios independientes.",
     "popularProducts": [
       "BPC-157",
       "TB-500",
@@ -267,9 +301,12 @@
       "bulk research peptides Arkansas",
       "GLP-1 peptides wholesale Arkansas"
     ],
-    "bodyP1": "99 Purity Wholesale supplies research-grade, U.S.-manufactured peptides to compounding pharmacies, wellness practices, and research laboratories across Arkansas, with a fulfillment model designed around the state's two distinct centers of demand: the clinical and academic research base at UAMS in Little Rock, and the fast-growing wellness and functional-medicine market expanding across Northwest Arkansas around Fayetteville and Bentonville.",
-    "bodyP2": "We also maintain meaningful capacity for veterinary and agricultural research buyers, an area where Arkansas's broader agricultural economy drives genuine demand for animal-model peptide compounds distinct from human-research applications. Regardless of end use, every batch we ship carries the same ≥99% purity guarantee, verified independently by third-party U.S. laboratories via HPLC and mass spectrometry, with the Certificate of Analysis for that specific batch included in every shipment.",
-    "bodyP3": "Arkansas-based accounts are fulfilled from our domestic distribution facility with standard transit of 3 to 4 business days via priority carrier, and our wholesale pricing scales in tiers based on order volume. Onboarding requires a valid Business EIN, a completed wholesale application, and a signed research-use declaration; we do not sell to individual consumers under any circumstance. Frequently requested compounds among our Arkansas institutional partners include BPC-157 and TB-500.",
+    "bodyP1": "99 Purity Wholesale supplies research-grade, U.S.-manufactured peptides to compounding pharmacies, wellness practices, and research laboratories across Arkansas. Demand in the state centers on two distinct hubs: the academic and clinical research base anchored by the state's main health sciences university in Little Rock — the administrative home of a statewide biosciences research consortium — and the fast-growing wellness and medical-education corridor in Northwest Arkansas around Fayetteville and Bentonville, where a new private medical school opened its first class in 2025.",
+    "bodyP1Es": "99 Purity Wholesale suministra péptidos de investigación fabricados en EE. UU. a farmacias de formulación magistral, clínicas de bienestar y laboratorios de investigación en Arkansas. La demanda se concentra en dos núcleos: la base académica y de investigación clínica de la universidad de ciencias de la salud pública en Little Rock (sede del consorcio estatal de investigación de biociencias) y el corredor de bienestar y educación médica en el noroeste de Arkansas (Fayetteville y Bentonville), donde una nueva escuela de medicina privada inició clases en 2025.",
+    "bodyP2": "We also maintain capacity for veterinary and agricultural research buyers, an area where the state's agricultural economy is relevant given the university agricultural division's role as a founding member of the statewide biosciences consortium. Every batch we ship is independently verified by third-party U.S. laboratories to meet our strict ≥99% purity standards, utilizing high-performance liquid chromatography (HPLC) and mass spectrometry to verify composition. This ensures the chemical baseline of your experiments remains a reliable constant across batches, with no international customs inspections or border delays to negotiate.",
+    "bodyP2Es": "También contamos con capacidad de suministro para compradores de investigación veterinaria y agrícola, un área relevante para la economía agrícola de Arkansas debido al papel de la división agrícola universitaria como miembro fundador del consorcio estatal de biociencias. Cada lote se somete a verificación de pureza analítica en laboratorios de EE. UU. mediante HPLC y espectrometría de masas. Esto garantiza una consistencia total entre lotes sin aduanas ni retrasos de tránsito internacional.",
+    "bodyP3": "Arkansas-based accounts are fulfilled from our domestic distribution facility with standard transit of 2 to 4 business days via priority carrier, and wholesale pricing scales in tiers based on order volume. Onboarding requires a valid Business EIN, a completed wholesale application, and a signed research-use declaration; we do not sell to individual consumers under any circumstance. To verify a specific batch before ordering, browse our published Certificate of Analysis library.",
+    "bodyP3Es": "Las cuentas de Arkansas se procesan desde nuestro centro de distribución nacional, con plazos de entrega de 2 a 4 días hábiles mediante transporte prioritario. Ofrecemos precios escalonados según el volumen y registro mediante EIN y declaración de uso exclusivo en investigación. Para verificar un lote antes de realizar su pedido, puede consultar nuestra biblioteca pública de Certificados de Análisis (COA).",
     "bodyP4": "",
     "bodyP5": "",
     "whyUs": [
@@ -279,26 +316,75 @@
       "Fast domestic fulfillment to Arkansas",
       "Tiered wholesale pricing for B2B buyers"
     ],
+    "whyUsEs": [
+      "Fabricado en EE. UU. — sintetizado nacionalmente sin intermediarios de importación",
+      "Pureza garantizada ≥99%, verificado por laboratorios analíticos independientes de EE. UU.",
+      "Documentación COA específica de lote enviada con cada pedido",
+      "Envío nacional rápido a Arkansas",
+      "Precios mayoristas B2B escalonados según el volumen de compra"
+    ],
     "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across Arkansas.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to Arkansas, completely bypassing international customs delays.",
+    "institutionsServedEs": "Suministramos péptidos a farmacias de formulación magistral autorizadas, consultas de medicina funcional, spas médicos y laboratorios de investigación independientes en Arkansas.",
+    "logisticsDetails": "Our domestic distribution network is designed to support fast, priority delivery to Arkansas. Because everything ships from within the United States, clients skip international customs delays, import package inspections, and transit delays.",
+    "logisticsDetailsEs": "Nuestra red de distribución nacional está diseñada para un envío rápido a Arkansas. Al ser envíos domésticos de origen en EE. UU., los clientes evitan los procesos y retenciones de aduanas internacionales.",
     "localFaqs": [
       {
         "q": "What is the standard delivery time for wholesale peptides to Arkansas?",
-        "a": "Orders shipped to Arkansas typically arrive within 2-4 business days via priority domestic carrier."
+        "a": "Orders shipped to Arkansas typically arrive within 2–4 business days via priority domestic carrier.",
+        "qEs": "¿Cuál es el plazo de entrega habitual para pedidos de péptidos en Arkansas?",
+        "aEs": "Los pedidos para Arkansas suelen llegar en un plazo de 2 a 4 días hábiles a través de transporte nacional prioritario."
       },
       {
         "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from a third-party U.S. laboratory verifying ≥99% purity.",
+        "qEs": "¿Los compuestos de investigación están verificados por laboratorios independientes de EE. UU.?",
+        "aEs": "Cada lote incluye su correspondiente Certificado de Análisis (COA) de laboratorios analíticos independientes de EE. UU. que confirma una pureza ≥99%."
       },
       {
-        "q": "Is it legal to buy bulk research peptides in Arkansas?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "q": "What is 99 Purity Wholesale's policy on research-use compliance for Arkansas buyers?",
+        "a": "99 Purity Wholesale sells exclusively under a Research Use Only (RUO) framework to licensed professionals and qualified institutional buyers. We require a valid Business EIN, a completed wholesale application, and a signed research-use declaration before shipping any order. We do not provide legal advice, and buyers are responsible for ensuring their purchase, storage, and use of research compounds complies with all applicable federal, Arkansas, and local requirements.",
+        "qEs": "¿Cuál es la política de 99 Purity Wholesale sobre cumplimiento de uso en investigación para Arkansas?",
+        "aEs": "Vendemos únicamente bajo el marco de Solo Uso en Investigación (RUO) a profesionales autorizados y compradores institucionales. Requerimos EIN y declaración de uso firmada. No ofrecemos asesoría legal; el comprador es responsable de cumplir con las leyes federales, estatales de Arkansas y locales."
+      },
+      {
+        "q": "Is Arkansas home to research institutions relevant to peptide research?",
+        "a": "Yes. The state's public health sciences university in Little Rock anchors local clinical and translational research activity. This institution also administers a statewide biosciences consortium that includes public university departments and independent pediatric research centers. Additionally, Northwest Arkansas has emerged as a newer hub for medical education and research following the opening of a new private medical school in Bentonville in 2025. (These educational and research initiatives are referenced as regional context only.)",
+        "qEs": "¿Existen instituciones de investigación relevantes para el estudio de péptidos en Arkansas?",
+        "aEs": "Sí. La universidad pública de ciencias de la salud del estado en Little Rock lidera la investigación clínica y traslacional. Esta entidad administra un consorcio de investigación de biociencias que conecta a universidades y centros pediátricos independientes. Asimismo, el noroeste del estado cuenta con una nueva escuela de medicina privada en Bentonville fundada en 2025."
+      },
+      {
+        "q": "What are the requirements to open a B2B wholesale peptide account?",
+        "a": "To partner with us as a bulk buyer, your organization must operate within a relevant scientific, medical, or research capacity. We require a valid Business Employer Identification Number (EIN) or international equivalent, a completed wholesale application detailing your research intent, and verification that the peptides will be used strictly for in-vitro research or laboratory purposes. We do not sell to the general public.",
+        "qEs": "¿Cuáles son los requisitos para abrir una cuenta mayorista B2B?",
+        "aEs": "Su organización debe operar en un ámbito científico o de investigación. Requerimos EIN comercial, solicitud mayorista completa y la declaración de uso exclusivo en laboratorio in vitro. No vendemos al público general."
+      },
+      {
+        "q": "Are your Certificates of Analysis (COAs) generated by independent laboratories?",
+        "a": "Yes. Every batch we distribute is tested by independent, third-party analytical laboratories in the United States, via HPLC for purity and mass spectrometry for molecular weight verification. The COA for your specific batch ships with every order.",
+        "qEs": "¿Los Certificados de Análisis (COA) son emitidos por laboratorios independientes?",
+        "aEs": "Sí. Cada lote es analizado por laboratorios analíticos independientes de EE. UU. mediante HPLC para pureza y espectrometría de masas para peso molecular. El COA específico se incluye en cada envío."
+      },
+      {
+        "q": "Do you supply bulk GLP-1 agonists like Semaglutide and Tirzepatide to Arkansas research buyers?",
+        "a": "Yes. We supply bulk quantities of Semaglutide, Tirzepatide, and Retatrutide to qualified research institutions and wholesale accounts, including buyers in Arkansas.",
+        "qEs": "¿Suministran agonistas GLP-1 a granel como Semaglutide y Tirzepatide a compradores en Arkansas?",
+        "aEs": "Sí. Suministramos Semaglutide, Tirzepatide y Retatrutide a granel para instituciones de investigación y cuentas mayoristas autorizadas en Arkansas."
+      },
+      {
+        "q": "What is the typical turnaround time for a bulk wholesale order?",
+        "a": "For in-stock compounds, orders are processed and dispatched within 24 hours of payment verification. Standard domestic shipping takes 2 to 4 business days depending on your regional zone. Custom synthesis or ultra-high volume orders may require a slightly extended lead time.",
+        "qEs": "¿Cuál es el tiempo de procesamiento habitual para un pedido mayorista a granel?",
+        "aEs": "Para compuestos en stock, procesamos y despachamos el envío dentro de las 24 horas posteriores al pago. El transporte nacional tarda de 2 a 4 días hábiles según la región."
       }
     ],
-    "researchInstitutions": "The leading state universities for Medical Sciences (UAMS) in Little Rock anchors the state's clinical and translational research activity, complemented by the Arkansas Children's prominent research institutes and a smaller network of independent labs serving the state's healthcare and wellness sectors.",
-    "universities": "UAMS leads Arkansas's biomedical research output, while the leading state universities in Fayetteville contributes significant agricultural and life-sciences research relevant to veterinary and animal-model peptide applications.",
-    "biotechOverview": "Arkansas's life-sciences sector is modest in scale relative to neighboring states, concentrated around Little Rock's medical research district, with growing wellness and functional-medicine activity in the fast-growing Northwest Arkansas region around Fayetteville and Bentonville.",
-    "industriesWeSupply": "We supply compounding pharmacies, wellness clinics, and independent research and agricultural laboratories across Arkansas, from Little Rock's medical district to the expanding Northwest Arkansas market. Compounds frequently sourced by our Arkansas accounts include TB-500 and Semaglutide."
+    "researchInstitutions": "The public health sciences university in Little Rock anchors the state's clinical and translational research activity, hosting specialized institutes spanning cancer, neuroscience, aging, and eye research. This institution also serves as the administrative home of a statewide biosciences research consortium that connects public universities and independent pediatric research centers across the region.",
+    "researchInstitutionsEs": "La universidad pública de ciencias de la salud en Little Rock lidera la investigación clínica y traslacional del estado, albergando institutos especializados en oncología, neurociencia, envejecimiento y oftalmología. Esta institución también sirve como sede administrativa de un consorcio de investigación biosanitaria estatal que conecta a universidades públicas y centros pediátricos independientes.",
+    "universities": "While the medical campus in Little Rock leads the state's biomedical research output, the public land-grant university in Fayetteville contributes cell and molecular biology, biotechnology, and agricultural life-sciences research relevant to veterinary and animal-model peptide applications. Other public campuses in northeastern Arkansas also contribute to the statewide biosciences consortium.",
+    "universitiesEs": "Mientras que el campus médico en Little Rock lidera la producción de investigación biomédica, la universidad pública en Fayetteville aporta estudios en biología celular, biotecnología y ciencias agrícolas aplicadas a modelos animales. Otros campus públicos del noreste del estado también participan en el consorcio estatal de biociencias.",
+    "biotechOverview": "The regional life-sciences sector is concentrated around the medical research district in Little Rock and coordinated in part through a statewide biosciences consortium and regional trade groups. Northwest Arkansas represents a fast-growing node in this landscape, reinforced by the opening of a new private medical school in Bentonville.",
+    "biotechOverviewEs": "El sector biotecnológico de Arkansas es de escala moderada, concentrado en Little Rock y coordinado por ABI y la asociación BIOArkansas. El noroeste es un núcleo de rápido crecimiento potenciado por la apertura de la Escuela de Medicina Alice L. Walton en Bentonville en 2025.",
+    "industriesWeSupply": "We supply compounding pharmacies, wellness clinics, and independent research and agricultural laboratories across Arkansas, from Little Rock's medical district to the expanding Northwest Arkansas market.",
+    "industriesWeSupplyEs": "Abastecemos a farmacias de formulación magistral, clínicas de bienestar y laboratorios de investigación independientes y agrícolas en todo el estado de Arkansas, desde Little Rock hasta el noroeste."
   },
   {
     "slug": "california",

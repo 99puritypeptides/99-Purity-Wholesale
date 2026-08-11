@@ -1399,9 +1399,9 @@
     "researchGrade": "Research Grade",
     "puritySuffix": "≥99% Purity",
     "trendingTitle": "Trending Research Compounds in {city}",
-    "trendingDesc": "Based on recent wholesale procurement data from laboratories and wellness clinics in the {city} area, these are currently the most researched compounds in your region:",
+    "trendingDesc": "The following compounds are frequently requested for research and laboratory evaluation in the {city} area:",
     "topTitle": "Top Wholesale Peptides in {city}",
-    "topDesc": "Based on wholesale procurement data from {city}-area licensed facilities, these compounds are among the most actively sourced in this region:",
+    "topDesc": "These high-purity research compounds are frequently requested by licensed B2B facilities and laboratories in the {city} area:",
     "fastShippingTitle": "Fast Domestic Fulfillment to {state}",
     "fastShippingDesc": "Because we ship from within the United States, laboratories in {city} face no international customs delays, package seizures, or cold-chain integrity loss. Orders are processed immediately upon payment confirmation.",
     "shippingPoints": {

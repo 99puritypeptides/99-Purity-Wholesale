@@ -124,6 +124,7 @@ export default function ProductDirectory({ products, categories }: ProductDirect
   const categoryScrollRef = useNestedSmoothScroll<HTMLDivElement>({ orientation: 'horizontal' });
 
   useEffect(() => {
+    if (!searchParams) return;
     const q = searchParams.get('q');
     const cat = searchParams.get('cat');
     if (q) setSearchQuery(q);
