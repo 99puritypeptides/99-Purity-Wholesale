@@ -490,6 +490,7 @@
       "paymentList": [
         "Bitcoin (BTC)",
         "Zelle",
+        "Stripe",
         "Bank Transfer",
         "USDT"
       ],
@@ -741,7 +742,7 @@
         "WhatsApp + Email B2B support with fast response times",
         "Private label and dropshipping programs available",
         "Retail-proven supply chain — same standards powering 99puritypeptides.com",
-        "Bitcoin, Zelle, and bank transfer accepted"
+        "Bitcoin, Zelle, Stripe, and bank transfer accepted"
       ]
     },
     "Stats": {
@@ -1312,7 +1313,7 @@
         },
         {
           "q": "What payment methods do you accept for high-volume wholesale peptide contracts?",
-          "a": "We accept Bitcoin (BTC), Zelle, and standard bank transfers (ACH/Wire) for all wholesale and service contracts. Customized billing arrangements are available for qualified long-term partners. [Contact us](/contact) to discuss payment options for your account tier."
+          "a": "We accept Bitcoin (BTC), Zelle, Stripe, and standard bank transfers (ACH/Wire) for all wholesale and service contracts. Customized billing arrangements are available for qualified long-term partners. [Contact us](/contact) to discuss payment options for your account tier."
         },
         {
           "q": "Are dropshipped and private label peptides shipped under cold chain packaging?",
@@ -1439,7 +1440,7 @@
       "fulfillment": "Fulfillment",
       "fulfillmentVal": "2–4 business days",
       "payment": "Payment",
-      "paymentVal": "Bitcoin · Zelle · Bank Transfer",
+      "paymentVal": "Bitcoin · Zelle · Stripe · Bank Transfer",
       "shipping": "Shipping",
       "shippingVal": "U.S. domestic only",
       "buyers": "Buyers",

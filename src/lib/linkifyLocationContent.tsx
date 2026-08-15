@@ -63,6 +63,34 @@ export function linkifyText(text: string, opts: LinkifyOptions = {}): React.Reac
   const { excludeTerms = [], maxLinks = 5, usedHrefs } = opts;
   if (!text) return text;
 
+  // Handle explicit markdown links [label](url) first
+  if (/\[[^\]]+\]\([^)]+\)/.test(text)) {
+    const segments = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+    return (
+      <>
+        {segments.map((segment, i) => {
+          const match = segment.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+          if (match) {
+            const [, label, rawHref] = match;
+            const href = rawHref.replace(/^https?:\/\/99puritywholesale\.com/, '');
+            const isExternal = href.startsWith('http');
+            return (
+              <Link
+                key={i}
+                href={href}
+                {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                className="text-[#13a7b7] hover:underline font-semibold"
+              >
+                {label}
+              </Link>
+            );
+          }
+          return linkifyText(segment, opts);
+        })}
+      </>
+    );
+  }
+
   const excludeSet = new Set(excludeTerms.filter(Boolean).map((t) => t.toLowerCase()));
 
   type Match = { start: number; end: number; term: string; href: string };

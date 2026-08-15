@@ -391,15 +391,16 @@
     "city": "California",
     "state": "United States",
     "region": "United States",
-    "h1": "Wholesale Peptide Supplier in California — Research-Grade Bulk Supply",
-    "metaTitle": "Wholesale Peptides California | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in California. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "California's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de California, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "h1": "Wholesale Peptide Supplier in California for Research Use",
+    "metaTitle": "Wholesale Peptide Supplier in California | 99 Purity",
+    "metaDesc": "Wholesale peptide supplier for California research labs and biotech buyers. ≥99% purity, batch COAs, tiered pricing, domestic shipping. Apply for an account.",
+    "intro": "99 Purity Wholesale is a B2B wholesale supplier of research-grade peptides, working with research laboratories, biotech companies, and other qualified institutional buyers across California. Every account goes through a verification process, and every wholesale shipment ships with batch-specific purity documentation. As a peptide supplier for California research operations, this page covers what's available, how testing and documentation work, and how to open a wholesale account.",
+    "introEs": "99 Purity Wholesale es un proveedor mayorista B2B de péptidos de grado de investigación, que trabaja con laboratorios de investigación, empresas de biotecnología y otros compradores institucionales cualificados en California. Cada cuenta pasa por un proceso de verificación y cada envío al por mayor incluye documentación de pureza específica del lote.",
     "popularProducts": [
       "Tirzepatide",
-      "Retatrutide",
-      "BPC-157"
+      "Semaglutide",
+      "BPC-157",
+      "Ipamorelin"
     ],
     "localKeywords": [
       "wholesale peptides California",
@@ -407,53 +408,92 @@
       "bulk research peptides California",
       "GLP-1 peptides wholesale California"
     ],
-    "bodyP1": "California represents the single largest and most sophisticated research market we serve, spanning the South San Francisco biotech corridor, San Diego's Torrey Pines research cluster, and a rapidly expanding longevity and wellness-clinic scene in Los Angeles and Orange County. California-based biotech firms, CROs, and university-affiliated labs operate in an environment where self-certified purity claims simply do not hold up to scrutiny.",
-    "bodyP2": "Every compound we distribute here is backed by independent, third-party laboratory verification via HPLC and mass spectrometry, with a batch-matched Certificate of Analysis provided before you ever need to ask for one. Our California wholesale accounts range from early-stage biotech startups sourcing for discovery-phase receptor studies to established compounding pharmacies and medical spas serving the state's dense wellness-clinic market, and our catalog is sized to support both without inventory gaps.",
-    "bodyP3": "Fulfillment to California is fast: standard priority-carrier transit runs 2 to 3 business days to the Bay Area, Los Angeles, and San Diego, with orders dispatched within 1 to 2 business days of payment confirmation. Given California's transaction volume, we extend our most competitive tiered pricing here, and established biotech and CRO accounts frequently qualify for Net-30 terms.",
-    "bodyP4": "",
+    "bodyP1": "California is home to one of the largest concentrations of biotech companies, research laboratories, and university-affiliated research programs in the country. 99 Purity Wholesale works as a research peptide supplier for California buyers through a standard wholesale account process — the same process used for buyers in any other state we serve, so account requirements don't change based on where you're located. This page is built for procurement contacts evaluating us as a supplier, not for individual or consumer orders. We don't sell to the general public.",
+    "bodyP2": "Compounds distributed by 99 Purity Wholesale are independently tested rather than sold on manufacturer claims alone. Testing methods include HPLC to quantify the concentration of the active compound against a ≥99% purity threshold, and LC-MS (mass spectrometry) to confirm molecular weight and structural integrity. A Certificate of Analysis (COA) matched to the specific batch shipped is provided with wholesale orders. Batch COAs can be reviewed through the [Certificate of Analysis library](https://99puritywholesale.com/certificates-of-analysis) before or after placing an order. A ≥99% purity result from independent lab testing reflects the chemical purity of the compound — it doesn't indicate FDA approval or clinical-grade status, since these compounds are not approved drugs.",
+    "bodyP3": "All research compounds are synthesized domestically in the United States and shipped from within the U.S. Because orders move through domestic distribution networks, California shipments do not undergo international customs processing. Based on typical priority-carrier transit, delivery to California generally falls in the 2–4 business day range after an order ships — this is a general estimate rather than a guaranteed delivery window, and exact processing and transit timelines are confirmed when you place an order.",
+    "bodyP4": "Compounds supplied by 99 Purity Wholesale are intended strictly for in-vitro laboratory research, analytical testing, and manufacturing purposes carried out by qualified professionals. They are not FDA-approved and are not intended for human consumption, veterinary use, diagnostic use, or therapeutic application. We don't provide dosing instructions or treatment guidance. Buyers are responsible for determining and complying with all applicable federal, state, and local requirements that apply to their purchase, handling, and use of research compounds.",
     "bodyP5": "",
     "whyUs": [
-      "U.S.-manufactured — synthesized domestically, not imported",
-      "≥99% purity on every compound, verified by independent U.S. labs",
-      "Batch-matched COA documentation with every shipment",
-      "Fast domestic fulfillment to California",
-      "Tiered wholesale pricing for B2B buyers"
+      "U.S.-synthesized & manufactured domestically",
+      "≥99% purity verified by HPLC & LC-MS testing",
+      "Batch-matched Certificate of Analysis with every order",
+      "Fast 2–4 day domestic shipping",
+      "Tiered wholesale pricing for verified B2B accounts"
     ],
-    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across California.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to California, completely bypassing international customs delays.",
+    "institutionsServed": "99 Purity Wholesale works with research laboratories, biotech companies, CROs, and other institutional buyers who order on a recurring wholesale basis rather than placing single retail purchases. Opening an account requires a valid Business EIN and a signed research-use declaration.",
+    "logisticsDetails": "All research compounds are synthesized domestically in the United States and shipped from within the U.S. Because orders move through domestic distribution networks, California shipments do not undergo international customs processing. Priority-carrier transit to California generally falls in the 2–4 business day range as an estimate.",
     "localFaqs": [
       {
-        "q": "What is the standard delivery time for wholesale peptides to California?",
-        "a": "Orders shipped to California typically arrive within 2-4 business days via priority domestic carrier."
+        "q": "Does 99 Purity Wholesale supply research peptides to California?",
+        "a": "Yes. As a wholesale peptide supplier serving California, we accept inquiries from qualified B2B buyers statewide, subject to standard account verification."
       },
       {
-        "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "q": "What research peptides are available to California buyers?",
+        "a": "The catalog includes Tirzepatide, Semaglutide, BPC-157, Ipamorelin, and additional bulk peptides and amino acids, available through the [full catalog](https://99puritywholesale.com/products)."
       },
       {
-        "q": "Is it legal to buy bulk research peptides in California?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "q": "Is a Certificate of Analysis provided with wholesale orders?",
+        "a": "Yes. A batch-matched COA is provided with every wholesale shipment, and COAs can also be reviewed in advance through the [COA library](https://99puritywholesale.com/certificates-of-analysis)."
+      },
+      {
+        "q": "What purity standard are compounds tested to?",
+        "a": "Compounds are tested to a ≥99% purity threshold using HPLC and LC-MS, independently verified by a third-party lab before the batch ships."
+      },
+      {
+        "q": "Do I need a business account to order?",
+        "a": "Yes. 99 Purity Wholesale is a B2B-only supplier. Opening an account requires a Business EIN and a signed research-use declaration — we don't sell to individual consumers."
+      },
+      {
+        "q": "Which California cities do you serve?",
+        "a": "We work with verified B2B buyers in Los Angeles, San Diego, San Francisco and the Bay Area, San Jose, and Sacramento, each with its own dedicated location page."
+      },
+      {
+        "q": "Is wholesale pricing tiered by order volume?",
+        "a": "Yes. Wholesale pricing is requested and quoted per account once verified, and is tiered based on expected order volume rather than a single flat rate."
+      },
+      {
+        "q": "What is the minimum order quantity, and what payment methods are accepted?",
+        "a": "Minimum Order Quantity (MOQ) is 10 units (1 kit) per product. Accepted payment methods are Bitcoin, Zelle, Stripe, and Bank Transfer."
+      },
+      {
+        "q": "How long does domestic shipping to California typically take?",
+        "a": "Priority-carrier transit to California generally falls in the 2–4 business day range as an estimate. Because compounds are synthesized domestically and shipped within the U.S., orders route through standard domestic carrier logistics rather than international import channels."
+      },
+      {
+        "q": "How is compound purity verified before shipment?",
+        "a": "Each batch is independently tested via HPLC and LC-MS, with results documented in a Certificate of Analysis before it ships."
+      },
+      {
+        "q": "How does a California business start a wholesale account?",
+        "a": "Submit a [wholesale application](https://99puritywholesale.com/wholesale-application) with your Business EIN and research-use declaration. Applications are typically reviewed within one business day."
+      },
+      {
+        "q": "Where can I ask questions before applying?",
+        "a": "[Contact the wholesale team](https://99puritywholesale.com/contact) with any questions about account requirements, product availability, or documentation before submitting an application."
       }
     ],
-    "researchInstitutions": "California hosts the country's densest concentration of biotech and pharmaceutical research institutions, including the South San Francisco (\"Genentown\") corridor, San Diego's Torrey Pines and UTC biotech cluster, and independent research organizations spanning the Bay Area, Los Angeles, and San Diego.",
-    "universities": "The state's academic research base includes leading state universities, UC San Francisco, UC Berkeley, UC San Diego, Caltech, and USC — collectively among the most active biomedical and pharmaceutical-sciences research programs in the country.",
-    "biotechOverview": "California's biotech ecosystem is the largest in the United States by both funding and headcount, anchored by South San Francisco, San Diego, and a fast-emerging Los Angeles life-sciences and longevity-clinic scene, supported by dense venture capital and academic research infrastructure.",
-    "industriesWeSupply": "We supply biotech startups, CROs, university labs, compounding pharmacies, and medical spas across California's major research and wellness hubs, including the Bay Area, San Diego, Los Angeles, and Orange County."
+    "researchInstitutions": "California is home to one of the largest concentrations of biotech companies, research laboratories, and university-affiliated research programs in the country.",
+    "universities": "Academic and institutional research programs across California rely on high-purity, batch-verified research compounds for in-vitro laboratory studies.",
+    "biotechOverview": "California's life sciences sector spans major research hubs including the South San Francisco biotech corridor, San Diego's Torrey Pines cluster, Los Angeles, San Jose, and Sacramento.",
+    "industriesWeSupply": "We supply biotech companies, contract research organizations (CROs), academic research laboratories, and qualified institutional buyers across California."
   },
   {
     "slug": "colorado",
     "city": "Colorado",
     "state": "United States",
     "region": "United States",
-    "h1": "Wholesale Peptide Supplier in Colorado — Research-Grade Bulk Supply",
-    "metaTitle": "Wholesale Peptides Colorado | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Colorado. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "Colorado's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de Colorado, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "h1": "Wholesale Research Peptides in Colorado",
+    "metaTitle": "Wholesale Research Peptides Colorado | 99 Purity",
+    "metaDesc": "U.S. B2B supplier of research-grade peptides for Colorado labs & institutions. ≥99% purity target verified by Freedom Diagnostic, batch COAs, 2-4 day shipping.",
+    "intro": "Research institutions, qualified laboratories, academic departments, licensed distributors, and compounding-pharmacy procurement teams across Colorado access high-purity, batch-verified research peptides through 99 Purity Wholesale’s domestic B2B platform. Every compound batch is targeted at ≥99% purity (verified via peak-area HPLC analysis), confirmed for molecular identity by LC-MS, and shipped with a batch-matched Certificate of Analysis (COA) issued by Freedom Diagnostic, an independent U.S. analytical testing laboratory. All catalog items are sold strictly for laboratory research and analytical applications — not for human or veterinary consumption.",
+    "introEs": "Las instituciones de investigación, laboratorios cualificados, departamentos académicos y distribuidores en Colorado acceden a péptidos de investigación con pureza ≥99% y COA emparejado por lote verificado por Freedom Diagnostic.",
     "popularProducts": [
       "BPC-157",
       "TB-500",
-      "CJC-1295"
+      "Tirzepatide",
+      "Semaglutide",
+      "Retatrutide",
+      "Ipamorelin"
     ],
     "localKeywords": [
       "wholesale peptides Colorado",
@@ -461,53 +501,76 @@
       "bulk research peptides Colorado",
       "GLP-1 peptides wholesale Colorado"
     ],
-    "bodyP1": "Colorado's Denver–Boulder corridor has one of the most active sports-medicine, longevity, and functional-medicine clinic markets in the Mountain West, and 99 Purity Wholesale supplies the compounding pharmacies, recovery clinics, and independent research labs operating in it with U.S.-manufactured, batch-verified research peptides at true wholesale pricing.",
-    "bodyP2": "The state's altitude-training and sports-performance culture drives real, sustained demand for regenerative and recovery-focused compounds, and we maintain deep inventory across that category specifically because of it. Every compound shipped to Colorado carries the same non-negotiable standard: synthesized domestically to ≥99% purity, tested independently by third-party U.S. laboratories, and shipped with the exact batch's Certificate of Analysis.",
-    "bodyP3": "Standard fulfillment to Denver, Boulder, and the broader Front Range runs 2 to 3 business days via priority domestic carrier, with orders processed within 1 to 2 business days of payment. Wholesale pricing is tiered by volume, and we do not sell to individual consumers under any circumstance.",
-    "bodyP4": "",
+    "bodyP1": "Research procurement teams require supply partners that document purity batch-by-batch, hold pricing steady at volume, and fulfill recurring orders without operational friction. 99 Purity Wholesale operates exclusively as a B2B supplier, maintaining tiered pricing structured around order volume and a 10-unit minimum order quantity (MOQ) per SKU. Eligible buyer categories include independent and institutional research laboratories, academic research departments, licensed distributors, compounding-pharmacy procurement teams (where eligible for non-clinical research materials), wellness-clinic procurement teams, and authorized private-label or dropshipping partners. Every product is labeled and sold strictly for laboratory and research use — no treatment, therapeutic, dosing, recovery, weight-loss, or performance claims are made in account communications for any compound.",
+    "bodyP2": "Chemical purity claims require verifiable documentation that quality control (QC) officers can independently audit. Every production lot is tested by Freedom Diagnostic, an independent U.S. analytical testing laboratory, using reversed-phase High-Performance Liquid Chromatography (HPLC) to verify peak-area purity against a ≥99.0% target and Liquid Chromatography–Mass Spectrometry (LC-MS) to confirm molecular identity. Lot-level traceability enables cross-referencing shipped batches with master analytical testing records signed off by independent laboratory analysts. Every order includes a batch-matched Certificate of Analysis (COA) tied directly to the lot number shipped. Sample COAs and analytical methodology summaries can be reviewed prior to ordering via our [Certificate of Analysis Library](/certificates-of-analysis).",
+    "bodyP3": "Domestic fulfillment and order tracking are standardized across all Colorado accounts — including Denver, Boulder, Colorado Springs, Aurora, Fort Collins, and the Front Range research corridor. Geographic location does not alter account terms, documentation, or pricing structures. All research compounds ship from within the U.S., bypassing international customs processing. Tracking details are transmitted automatically upon dispatch. For recurring standing orders, tracking notifications generate automatically with each scheduled cycle. Estimated transit timelines can be confirmed during the quote request process.",
+    "bodyP4": "Compounds supplied by 99 Purity Wholesale are intended strictly for in-vitro laboratory research, analytical testing, and non-clinical applications carried out by qualified professionals. They are not FDA-approved and are not intended for human consumption, veterinary use, diagnostic use, or therapeutic application. We do not provide dosing instructions or treatment guidance. Colorado state oversight operates alongside federal guidelines governing research chemicals. While general business registration and facility verification apply to entities purchasing research-use-only materials, buyers are responsible for independently verifying local, state, and institutional compliance standards. Geographic coverage references physical shipping availability only; 99 Purity Wholesale claims no official partnership, endorsement, or supply agreement with any Colorado university, state agency, or research institution.",
     "bodyP5": "",
     "whyUs": [
-      "U.S.-manufactured — synthesized domestically, not imported",
-      "≥99% purity on every compound, verified by independent U.S. labs",
-      "Batch-matched COA documentation with every shipment",
-      "Fast domestic fulfillment to Colorado",
-      "Tiered wholesale pricing for B2B buyers"
+      "U.S. domestic fulfillment with priority tracking",
+      "≥99% purity target verified by Freedom Diagnostic (HPLC & LC-MS)",
+      "Batch-matched Certificate of Analysis with every order",
+      "Lot-level traceability and independent laboratory sign-off",
+      "Tiered wholesale pricing & 10-unit MOQ for verified B2B accounts"
     ],
-    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across Colorado.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to Colorado, completely bypassing international customs delays.",
+    "institutionsServed": "We supply independent and institutional research laboratories, academic research departments, licensed distributors, qualified compounding-pharmacy procurement teams, and commercial partners across Colorado.",
+    "logisticsDetails": "All research compounds are synthesized domestically in the United States and shipped from within the U.S. Because orders move through domestic distribution networks, Colorado shipments do not undergo international customs processing. Priority-carrier transit to Colorado generally falls in the 2–4 business day range as an estimate.",
     "localFaqs": [
       {
-        "q": "What is the standard delivery time for wholesale peptides to Colorado?",
-        "a": "Orders shipped to Colorado typically arrive within 2-4 business days via priority domestic carrier."
+        "q": "Where can qualified buyers purchase wholesale research peptides in Colorado?",
+        "a": "Qualified institutional buyers can apply for a B2B wholesale account through 99 Purity Wholesale via our [Wholesale Application](/wholesale-application). All products are supplied strictly for laboratory and research use only."
       },
       {
-        "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "q": "What is the minimum order quantity (MOQ) and what payment methods are accepted?",
+        "a": "Minimum Order Quantity (MOQ) is 10 units (1 kit) per product SKU. Accepted payment methods are Bitcoin, Zelle, Stripe, and Bank Transfer."
       },
       {
-        "q": "Is it legal to buy bulk research peptides in Colorado?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "q": "How is compound purity verified before shipment?",
+        "a": "Every production lot undergoes reversed-phase HPLC and LC-MS testing by Freedom Diagnostic, an independent U.S. laboratory, confirming ≥99% purity and molecular identity. A batch-matched COA is included with every order."
+      },
+      {
+        "q": "How long does domestic shipping to Colorado take?",
+        "a": "Priority-carrier transit to Colorado destinations (including Denver, Boulder, and Colorado Springs) generally takes 2 to 4 business days following dispatch. Because compounds route through domestic carrier logistics, orders bypass international customs."
+      },
+      {
+        "q": "Are sample Certificates of Analysis available before ordering?",
+        "a": "Yes. Batch-matched sample COAs and testing methodology summaries can be reviewed anytime in our [Certificate of Analysis Library](/certificates-of-analysis)."
+      },
+      {
+        "q": "Are research peptides intended for human or veterinary use?",
+        "a": "No. All compounds are intended strictly for in-vitro laboratory research and analytical testing. They are not FDA-approved and are not for human or veterinary consumption."
+      },
+      {
+        "q": "Does 99 Purity Wholesale offer private-label or dropshipping services?",
+        "a": "Yes. Eligible distributors and commercial partners can access private-label packaging and dropship fulfillment through our [Wholesale Application](/wholesale-application)."
+      },
+      {
+        "q": "How can a Colorado business open a wholesale account?",
+        "a": "Submit a [Wholesale Application](/wholesale-application) with your Business EIN and research-use declaration. Applications are reviewed within 1 business day."
       }
     ],
-    "researchInstitutions": "The University of Colorado Anschutz Medical Campus in Aurora is one of the largest academic medical research centers in the region, complemented by a dense cluster of independent longevity, sports-medicine, and functional-medicine research clinics across the Denver–Boulder corridor.",
-    "universities": "The University of Colorado Boulder and the CU Anschutz Medical Campus lead the state's academic research output, with active programs in biochemistry, pharmaceutical sciences, and integrative and sports medicine.",
-    "biotechOverview": "Boulder has developed a recognized biotech and health-innovation cluster over the past two decades, while metro Denver's wellness and longevity-clinic market is among the most active in the Mountain West, driven in part by the region's sports-performance and altitude-training culture.",
-    "industriesWeSupply": "We supply sports-medicine and longevity clinics, compounding pharmacies, wellness practices, and independent research laboratories across the Denver–Boulder corridor and statewide."
+    "researchInstitutions": "Colorado is home to active life-sciences and academic research hubs, anchored by the Denver–Boulder corridor, medical research centers in Aurora, and institutional laboratories statewide.",
+    "universities": "Academic and institutional research programs across Colorado rely on high-purity, batch-verified research compounds for in-vitro laboratory studies.",
+    "biotechOverview": "Colorado's life sciences sector spans major research hubs including the Denver–Boulder innovation corridor, academic research groups, medical research institutions, and secondary biotech hubs in Colorado Springs and Fort Collins.",
+    "industriesWeSupply": "We supply independent research laboratories, academic research departments, licensed chemical distributors, compounding pharmacies, and qualified institutional buyers across Colorado."
   },
   {
     "slug": "connecticut",
     "city": "Connecticut",
     "state": "United States",
     "region": "United States",
-    "h1": "Wholesale Peptide Supplier in Connecticut — Research-Grade Bulk Supply",
+    "h1": "Wholesale Research Peptide Supplier for Connecticut Buyers",
     "metaTitle": "Wholesale Peptides Connecticut | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Connecticut. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "Connecticut's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de Connecticut, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "metaDesc": "U.S. B2B supplier of research-grade peptides for Connecticut labs & institutions. ≥99% purity target verified by Freedom Diagnostic, batch COAs, 2-4 day shipping.",
+    "intro": "Research institutions, qualified laboratories, academic departments, licensed distributors, and compounding-pharmacy procurement teams across Connecticut access high-purity, batch-verified research peptides through 99 Purity Wholesale’s domestic B2B platform. Every compound batch is targeted at ≥99% purity (verified via peak-area HPLC analysis), confirmed for molecular identity by LC-MS, and shipped with a batch-matched Certificate of Analysis (COA) issued by Freedom Diagnostic, an independent U.S. analytical testing laboratory.",
+    "introEs": "Las instituciones de investigación, laboratorios cualificados, departamentos académicos y distribuidores en Connecticut acceden a péptidos de investigación con pureza ≥99% y COA emparejado por lote verificado por Freedom Diagnostic.",
     "popularProducts": [
       "Semaglutide",
       "Tirzepatide",
-      "DSIP"
+      "Retatrutide",
+      "BPC-157",
+      "TB-500",
+      "NAD+"
     ],
     "localKeywords": [
       "wholesale peptides Connecticut",
@@ -515,32 +578,56 @@
       "bulk research peptides Connecticut",
       "GLP-1 peptides wholesale Connecticut"
     ],
-    "bodyP1": "Connecticut has one of the longest-established pharmaceutical R&D traditions in the country, historically centered on Pfizer's major research campus in Groton and leading state universities's biomedical programs in New Haven, and that legacy shapes the kind of B2B buyer we serve here: compounding pharmacies, CROs, and university-affiliated labs that expect pharmaceutical-grade documentation as a baseline, not a bonus.",
-    "bodyP2": "Every compound we distribute to Connecticut-based accounts is manufactured domestically to a strict ≥99% purity standard and independently verified by third-party U.S. laboratories via HPLC and mass spectrometry, with the batch-specific Certificate of Analysis included in every shipment — no exceptions, no upsells for documentation that should be standard.",
-    "bodyP3": "Connecticut's position within the broader New York–Boston life-sciences corridor means our accounts here benefit from some of the fastest fulfillment in our national network: standard priority-carrier transit runs 2 to 3 business days, with orders dispatched within 1 to 2 business days of payment confirmation. Wholesale pricing is structured in volume tiers, with Net-30 terms available to established institutional accounts.",
-    "bodyP4": "",
+    "bodyP1": "Connecticut's research economy is unusually dense for its size. Between university-affiliated research programs, hospital and health-system laboratories, established pharmaceutical companies, and independent contract research organizations (CROs), the state supports a research corridor running from New Haven and Hartford through Fairfield County and along the shoreline toward Groton and New London. We sell exclusively to verified B2B accounts with a valid Business Employer Identification Number (EIN) and a documented research use case.",
+    "bodyP2": "Chemical purity claims require verifiable documentation that quality control (QC) officers can independently audit. Every production lot is physically sent to Freedom Diagnostic, an independent U.S. analytical testing laboratory, where reversed-phase HPLC quantifies purity (≥99% peak area target) and LC-MS confirms exact molecular weight and amino acid sequence. Batches are also checked for TFA and moisture content via Karl Fischer titration. Any lot that fails the ≥99% threshold is rejected outright and never discounted or remarketed. Each passing batch receives a lot-matched Certificate of Analysis carrying the signature of the Freedom Diagnostic laboratory director, tied directly to the tracking ID printed on your physical vial. Sample COAs and analytical methodology summaries can be reviewed prior to ordering via our [Certificate of Analysis Library](/certificates-of-analysis).",
+    "bodyP3": "Domestic fulfillment and order tracking are standardized across all Connecticut accounts — including New Haven, Hartford, Stamford, Bridgeport, and statewide. We do not claim a local Connecticut office or warehouse; all orders ship from within the United States via domestic priority carrier, with standard delivery arriving within 2 to 4 business days following dispatch. Accounts operate on a standard 10-unit minimum order quantity (MOQ) per SKU with volume-tiered pricing. Accepted payment methods include Bitcoin, Zelle, Stripe, and Bank Transfer.",
+    "bodyP4": "Compounds supplied by 99 Purity Wholesale are intended strictly for in-vitro laboratory research, analytical testing, and non-clinical applications carried out by qualified professionals. They are not FDA-approved and are not intended for human consumption, veterinary use, diagnostic use, or therapeutic application. We do not hold an FDA drug manufacturing license, and we do not provide dosing instructions or treatment guidance. Buyers are responsible for independently verifying local, state, and federal compliance standards. Geographic coverage references physical shipping availability only.",
     "bodyP5": "",
     "whyUs": [
-      "U.S.-manufactured — synthesized domestically, not imported",
-      "≥99% purity on every compound, verified by independent U.S. labs",
-      "Batch-matched COA documentation with every shipment",
-      "Fast domestic fulfillment to Connecticut",
-      "Tiered wholesale pricing for B2B buyers"
+      "U.S. domestic SPPS synthesis & 2–4 day priority shipping",
+      "≥99% purity target verified by Freedom Diagnostic (HPLC & LC-MS)",
+      "TFA & Karl Fischer moisture testing on every batch",
+      "Zero-tolerance rejection policy & lab director signature on COAs",
+      "10-unit MOQ per SKU & volume-tiered pricing for verified B2B accounts"
     ],
-    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across Connecticut.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to Connecticut, completely bypassing international customs delays.",
+    "institutionsServed": "We supply independent and institutional research laboratories, academic research departments, licensed distributors, qualified compounding-pharmacy procurement teams, and commercial partners across Connecticut.",
+    "logisticsDetails": "Orders bound for Connecticut ship from within the U.S. via priority domestic carrier, with typical delivery within 2 to 4 business days. All shipments route through domestic carrier networks without international customs delays.",
     "localFaqs": [
       {
-        "q": "What is the standard delivery time for wholesale peptides to Connecticut?",
-        "a": "Orders shipped to Connecticut typically arrive within 2-4 business days via priority domestic carrier."
+        "q": "Where can qualified buyers purchase wholesale research peptides in Connecticut?",
+        "a": "Qualified institutional buyers can apply for a B2B wholesale account through 99 Purity Wholesale via our [Wholesale Application](/wholesale-application). All products are supplied strictly for laboratory and research use only."
       },
       {
-        "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "q": "What is the minimum order quantity (MOQ) and what payment methods are accepted?",
+        "a": "Minimum Order Quantity (MOQ) is 10 units (1 kit) per product SKU. Accepted payment methods are Bitcoin, Zelle, Stripe, and Bank Transfer."
       },
       {
-        "q": "Is it legal to buy bulk research peptides in Connecticut?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "q": "How is compound purity verified before shipment?",
+        "a": "Every production lot undergoes reversed-phase HPLC, LC-MS, and Karl Fischer TFA/moisture testing by Freedom Diagnostic, an independent U.S. laboratory, confirming ≥99% purity, molecular identity, and stability. A batch-matched COA is included with every order."
+      },
+      {
+        "q": "How long does domestic shipping to Connecticut take?",
+        "a": "Priority-carrier transit to Connecticut destinations (including New Haven, Hartford, and Stamford) generally takes 2 to 4 business days following dispatch. Because compounds route through domestic carrier logistics, orders bypass international customs."
+      },
+      {
+        "q": "Are sample Certificates of Analysis available before ordering?",
+        "a": "Yes. Batch-matched sample COAs and testing methodology summaries can be reviewed anytime in our [Certificate of Analysis Library](/certificates-of-analysis)."
+      },
+      {
+        "q": "What happens if a batch fails the purity threshold?",
+        "a": "Any production lot that fails the ≥99% purity threshold is rejected outright and not released into the wholesale catalog — failing batches are never discounted or remarketed under any circumstances."
+      },
+      {
+        "q": "Are research peptides intended for human or veterinary use?",
+        "a": "No. All compounds are intended strictly for in-vitro laboratory research and analytical testing. They are not FDA-approved and are not for human or veterinary consumption."
+      },
+      {
+        "q": "Does 99 Purity Wholesale offer private-label or dropshipping services?",
+        "a": "Yes. Eligible distributors and commercial partners can access private-label packaging and dropship fulfillment through our [Wholesale Application](/wholesale-application)."
+      },
+      {
+        "q": "How can a Connecticut business open a wholesale account?",
+        "a": "Submit a [Wholesale Application](/wholesale-application) with your Business EIN and research-use declaration. Applications are reviewed within 1 business day."
       }
     ],
     "researchInstitutions": "Connecticut's institutional research base includes leading state universities's biomedical and pharmaceutical research programs in New Haven, Pfizer's longtime R&D campus in Groton, and a growing number of independent contract research organizations serving the broader Northeast corridor.",

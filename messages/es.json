@@ -327,7 +327,7 @@
         },
         {
           "q": "¿Qué métodos de pago aceptan para pedidos al por mayor?",
-          "a": "Aceptamos Bitcoin, Zelle y transferencia bancaria (ACH/Wire). Estos métodos están disponibles para todas las cuentas mayoristas verificadas. Póngase en contacto con nuestro equipo para obtener instrucciones de pago después de que se apruebe su cuenta."
+          "a": "Aceptamos Bitcoin, Zelle, Stripe y transferencia bancaria (ACH/Wire). Estos métodos están disponibles para todas las cuentas mayoristas verificadas. Póngase en contacto con nuestro equipo para obtener instrucciones de pago después de que se apruebe su cuenta."
         },
         {
           "q": "¿Puedo obtener un COA antes de realizar un pedido al por mayor?",
@@ -490,6 +490,7 @@
       "paymentList": [
         "Bitcoin (BTC)",
         "Zelle",
+        "Stripe",
         "Bank Transfer",
         "USDT"
       ],
@@ -736,7 +737,7 @@
         "No se requiere cadena de frío — formulaciones liofilizadas estables",
         "Soporte B2B por WhatsApp y correo electrónico con tiempos de respuesta rápidos",
         "Programas de marca privada y envío directo disponibles",
-        "Se acepta Bitcoin, Zelle y transferencia bancaria"
+        "Se acepta Bitcoin, Zelle, Stripe y transferencia bancaria"
       ]
     },
     "Stats": {
@@ -1307,7 +1308,7 @@
         },
         {
           "q": "¿Qué métodos de pago aceptan para contratos de péptidos al por mayor de gran volumen?",
-          "a": "Para garantizar la liquidación inmediata de las transacciones y la velocidad operativa, aceptamos Bitcoin (BTC) para el procesamiento nacional inmediato, Zelle para transacciones de nivel medio y transferencias bancarias corporativas estándar (ACH/Cable) para cuentas de fabricación por contrato de gran volumen. Los ciclos de facturación personalizados están disponibles para socios calificados a largo plazo."
+          "a": "Para garantizar la liquidación inmediata de las transacciones y la velocidad operativa, aceptamos Bitcoin (BTC) para el procesamiento nacional inmediato, Zelle para transacciones de nivel medio, Stripe y transferencias bancarias corporativas estándar (ACH/Cable) para cuentas de fabricación por contrato de gran volumen. Los ciclos de facturación personalizados están disponibles para socios calificados a largo plazo."
         },
         {
           "q": "¿Se envían los péptidos de dropshipping y marca propia bajo empaque de cadena de frío?",
@@ -1434,7 +1435,7 @@
       "fulfillment": "Cumplimiento",
       "fulfillmentVal": "2–4 días hábiles",
       "payment": "Pago",
-      "paymentVal": "Bitcoin · Zelle · Transferencia Bancaria",
+      "paymentVal": "Bitcoin · Zelle · Stripe · Transferencia Bancaria",
       "shipping": "Envío",
       "shippingVal": "Solo envío nacional en EE. UU.",
       "buyers": "Compradores",

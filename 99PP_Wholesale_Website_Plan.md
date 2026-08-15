@@ -130,7 +130,7 @@ Brief 3-point summary of services (dropshipping, business setup, website develop
 - Legal disclaimer: *"All products are sold strictly for research and laboratory use by licensed professionals. Not for human consumption. Not for retail sale."*
 - Links: Disclaimer · Privacy · Terms · Contact
 - Language switcher
-- Payment methods accepted: Bitcoin · Zelle · Bank Transfer
+- Payment methods accepted: Bitcoin · Zelle · Stripe · Bank Transfer
 
 ---
 
@@ -182,7 +182,7 @@ Products: Glutathione, L-Carnitine, Lipo-C, MIC/Lipo-C+B12, B12, BAC Water, VIP
 Simple table/info block:
 - MOQ: 10 vials per product (as per catalog — all products listed as ×10 packs)
 - Pricing: Tiered — contact for current pricing sheet
-- Payment: Bitcoin · Zelle · Bank Transfer
+- Payment: Bitcoin · Zelle · Stripe · Bank Transfer
 - Turnaround: X business days (fill in)
 
 ---
