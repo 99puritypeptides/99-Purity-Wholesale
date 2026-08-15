@@ -53,9 +53,14 @@ export async function generateMetadata(props: any) {
   const url = params.locale === 'en' ? `${baseUrl}${path}` : `${baseUrl}/${params.locale}${path}`;
   const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent(locData.metaTitle)}&desc=${encodeURIComponent(locData.metaDesc)}&category=Wholesale%20Supplier`;
 
+  const metaTitle = locData.metaTitle;
+  const title = /99 Purity/i.test(metaTitle)
+    ? { absolute: metaTitle }
+    : metaTitle;
+
   return {
     metadataBase: new URL(baseUrl),
-    title: locData.metaTitle.replace(/\s*\|\s*99 Purity Wholesale.*$/i, '').trim(),
+    title,
     description: locData.metaDesc,
     alternates: {
       canonical: url,
