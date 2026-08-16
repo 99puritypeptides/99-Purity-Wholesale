@@ -30,7 +30,7 @@ function getPostCardImage(slug: string, index: number): string {
     return '/product-images/bpc-157-10mg.jpg';
   }
   if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
-    return '/product-images/nad-plus-500mg.jpg';
+    return '/product-images/nad-plus-500mg-1.webp';
   }
   if (normSlug.includes('coa') || normSlug.includes('quality') || normSlug.includes('read-coa')) {
     return '/lab_quality_bg_1778896760027.png';

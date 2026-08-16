@@ -105,7 +105,7 @@ const productSpecImagesMap = {
     "10mg": "CAGRILINTIDE 10mg.webp",
   },
   "cagrisema": {
-    "5mg": "cagrisema-2.5+2.5-5mg.webp",
+    "5mg": "cagrisema-2-5-2-5-5mg.webp",
   },
   "cjc-1295-dac": {
     "5mg": "cjc-1295-dac5mg.webp",
@@ -166,13 +166,13 @@ const productSpecImagesMap = {
     "5mg": "ll37-5mg.jpg",
   },
   "mic-blend": {
-    "10mg": "mic-lipo-c+b12-10mg.webp",
+    "10mg": "mic-lipo-c-b12-10mg.webp",
   },
   "mots-c": {
     "10mg": "MOTS-C 10mg-1.webp",
   },
   "nad": {
-    "10mg": "NAD+ 500mg-1.webp",
+    "10mg": "nad-plus-500mg-1.webp",
   },
   "retatrutide": {
     "10mg": "RETATRUTIDE 10mg-6.webp",
@@ -262,7 +262,7 @@ const productSpecImagesMap = {
     "10mg": "SELANK spray 100mcg.webp",
   },
   "semax-selank-spray": {
-    "10mg": "SEMAX + SELANK  spray 300mcg.webp",
+    "10mg": "semax-plus-selank-spray-300mcg.webp",
   },
   "l-carnitine-400mg": {
     "10mg": "L-CARNATINE 400mg 20mg.webp",
@@ -283,7 +283,7 @@ const productSpecImagesMap = {
     "10mg": "KPV spray 5mg.webp",
   },
   "nad-spray": {
-    "10mg": "NAD+ spray 50mg.webp",
+    "10mg": "nad-plus-spray-50mg.webp",
   },
   "glow": {
     "10mg": "GLOW 70mg.webp",

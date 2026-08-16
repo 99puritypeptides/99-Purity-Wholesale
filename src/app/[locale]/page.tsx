@@ -65,7 +65,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         }}
       />
       {/* --- HERO SECTION: RESEARCH PORTAL --- */}
-      <section className="relative min-h-screen lg:h-screen flex flex-col justify-center items-center overflow-hidden bg-black text-white px-6 py-20 lg:py-0">
+      <section className="relative min-h-screen flex flex-col justify-between items-center overflow-hidden bg-black text-white px-6 pt-32 lg:pt-40 pb-0">
         {/* Cinematic Dark Background */}
         <div className="absolute inset-0">
           <Image
@@ -81,7 +81,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
           <div className="absolute inset-0 bg-radial-vignette opacity-60" />
         </div>
 
-        <div className="relative z-20 max-w-6xl w-full text-center flex flex-col items-center mb-10 lg:mb-0">
+        <div className="relative z-20 max-w-6xl w-full text-center flex flex-col items-center my-auto py-8 lg:py-12">
           {/* Premium Status Badge */}
           <FadeIn delay={0.2}>
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-xl mb-8 lg:mb-12">
@@ -132,7 +132,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         </div>
 
         {/* Minimal Institutional Bar (4 Points) */}
-        <FadeIn direction="none" delay={0.8} className="relative lg:absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-3xl border-t border-white/5 mt-16 lg:mt-0">
+        <FadeIn direction="none" delay={0.8} className="relative w-full bg-black/60 backdrop-blur-3xl border-t border-white/5 mt-12 lg:mt-16">
           <div className="max-w-[1800px] mx-auto px-6 lg:px-10 py-8 lg:py-10">
             <div className="reveal-grid grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-20">
                {[
@@ -350,7 +350,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                 'tb-500': '/product-images/TB-500  5mg-2.webp',
                 'ipamorelin': '/product-images/IPAMORELIN 5mg-2.webp',
                 'cjc-1295-ipam': '/product-images/CJC 1295 IPAMORELIN 5mg 5mg-2.webp',
-                'nad': '/product-images/NAD+ 500mg-1.webp',
+                'nad': '/product-images/nad-plus-500mg-1.webp',
                 'epithalon': '/product-images/EPITHALON 10mg.webp'
               };
               const productImg = bestSellerImages[slug] || '/product-images/SEMAGLUTIDE 5mg-2.webp';

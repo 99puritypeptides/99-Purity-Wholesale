@@ -52,7 +52,7 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
     );
   } else if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
     compounds.push(
-      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' },
+      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg-1.webp', desc: 'Nicotinamide Adenine Dinucleotide.' },
       { name: '5-Amino-1MQ 10mg', img: '/product-images/5-amino-1mq-10mg.jpg', desc: 'Targeted NNMT cellular enzyme inhibitor.' },
       { name: 'Epithalon 10mg', img: '/product-images/epithalon-10mg.jpg', desc: 'Telomerase activator research peptide.' }
     );
@@ -78,7 +78,7 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
     compounds.push(
       { name: 'Semaglutide 10mg', img: '/product-images/semaglutide-10mg.jpg', desc: 'Selective GLP-1 receptor agonist.' },
       { name: 'BPC-157 10mg', img: '/product-images/bpc-157-10mg.jpg', desc: 'Pentadecapeptide for tissue recovery.' },
-      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg.jpg', desc: 'Nicotinamide Adenine Dinucleotide.' }
+      { name: 'NAD+ 500mg', img: '/product-images/nad-plus-500mg-1.webp', desc: 'Nicotinamide Adenine Dinucleotide.' }
     );
     images.push(
       '/images/vial_kit_luxury.png',
