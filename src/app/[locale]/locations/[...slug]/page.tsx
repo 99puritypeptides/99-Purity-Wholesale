@@ -10,6 +10,7 @@ import GlobalCTA from '@/components/layout/GlobalCTA';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/shared/Motion';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import UnitedStatesHubContent from '@/components/locations/UnitedStatesHubContent';
+import DelawareContent from '@/components/locations/DelawareContent';
 import { getUsFaqs } from '@/data/usFaqs';
 import WholesaleOrderingProcess from '@/components/locations/WholesaleOrderingProcess';
 import CompoundSpotlight from '@/components/locations/CompoundSpotlight';
@@ -71,8 +72,8 @@ export async function generateMetadata(props: any) {
       },
     },
     openGraph: {
-      title: locData.metaTitle,
-      description: locData.metaDesc,
+      title: locData.ogTitle || locData.metaTitle,
+      description: locData.ogDesc || locData.metaDesc,
       url: url,
       siteName: '99 Purity Wholesale',
       images: [
@@ -88,8 +89,8 @@ export async function generateMetadata(props: any) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: locData.metaTitle,
-      description: locData.metaDesc,
+      title: locData.ogTitle || locData.metaTitle,
+      description: locData.ogDesc || locData.metaDesc,
       images: [ogUrlImage],
     },
   };
@@ -186,9 +187,13 @@ export default async function LocationTemplatePage({ params }: { params: { local
     },
   };
 
-  const trustBadges = isEs
-    ? ['🇺🇸 Fabricado en EE. UU.', 'Pureza ≥99%', 'COA de Lote Verificado', 'Solo B2B', 'Entrega en 2–4 Días']
-    : ['🇺🇸 U.S. Manufactured', '≥99% Purity', 'Batch COA Verified', 'B2B Only', '2–4 Day Delivery'];
+  const trustBadges = location.slug === 'delaware'
+    ? (isEs
+        ? ['🇺🇸 Envíos en EE. UU.', 'COA de Lote', 'Cuentas B2B', 'Solo Investigación']
+        : ['🇺🇸 U.S. Domestic Fulfillment', 'Lot-Specific COA', 'Verified B2B Accounts', 'Research Use Only'])
+    : (isEs
+        ? ['🇺🇸 Fabricado en EE. UU.', 'Pureza ≥99%', 'COA de Lote Verificado', 'Solo B2B', 'Entrega en 2–4 Días']
+        : ['🇺🇸 U.S. Manufactured', '≥99% Purity', 'Batch COA Verified', 'B2B Only', '2–4 Day Delivery']);
 
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
@@ -296,6 +301,8 @@ export default async function LocationTemplatePage({ params }: { params: { local
             <div className="lg:col-span-8 space-y-16">
               {location.slug === 'united-states' ? (
                 <UnitedStatesHubContent />
+              ) : location.slug === 'delaware' ? (
+                <DelawareContent locale={params.locale} />
               ) : (
                 <>
               {/* Body Content */}
@@ -375,10 +382,10 @@ export default async function LocationTemplatePage({ params }: { params: { local
               {/* Compound Spotlight (State only) */}
               {!isCity && (
                 <CompoundSpotlight
-                  heading={isEs ? `Compuestos de Alta Demanda en la Investigación de ${location.city}` : `High-Demand Compounds Driving ${location.city} Research`}
+                  heading={isEs ? `Compuestos de Investigación Destacados — Suministro para ${location.city}` : `Featured Research Compounds — Supply for ${location.city}`}
                   intro={isEs
-                    ? `Los laboratorios y clínicas autorizadas en ${location.city} confían en un suministro constante de compuestos de investigación verificados. A continuación se presentan los péptidos más solicitados por nuestros socios mayoristas en la región.`
-                    : `Licensed laboratories and clinics in ${location.city} rely on a consistent supply of validated research compounds. Below are the peptides most frequently requested by our wholesale partners in the region.`}
+                    ? `Las organizaciones de investigación en ${location.city} requieren péptidos verificados por lotes para evaluación in vitro. A continuación se presentan algunos de los compuestos disponibles en nuestro catálogo mayorista.`
+                    : `Research organizations in ${location.city} require batch-verified peptides for in-vitro evaluation. Below are key compounds available through our wholesale catalog.`}
                 />
               )}
 
@@ -449,8 +456,8 @@ export default async function LocationTemplatePage({ params }: { params: { local
                 <NationwideLogisticsTable
                   heading={isEs ? `Marco de Distribución Nacional para ${location.city}` : `Nationwide Distribution Framework Serving ${location.city}`}
                   intro={isEs
-                    ? `Los pedidos destinados a ${location.city} se procesan a través de nuestra red regional de distribución, diseñada para minimizar los tiempos de tránsito y proteger la estabilidad molecular en cada región de EE. UU.`
-                    : `Orders bound for ${location.city} are processed through our regional distribution network below, which is designed to minimize transit time and protect molecular stability across every U.S. region.`}
+                    ? `Los pedidos destinados a ${location.city} se envían a través de transportistas nacionales prioritarios desde nuestras instalaciones en EE. UU., evitando el procesamiento aduanero internacional.`
+                    : `Orders bound for ${location.city} are shipped via priority domestic carriers from our U.S. facility, bypassing international customs processing.`}
                 />
               )}
 
@@ -618,24 +625,26 @@ export default async function LocationTemplatePage({ params }: { params: { local
                 </div>
 
                 {/* Quick Info Card */}
-                <div className="bg-white border border-black/5 rounded-[2.5rem] p-6 md:p-8 shadow-sm">
-                  <h4 className="text-base font-absans font-bold text-black uppercase tracking-wider mb-6">{t('accountDetails')}</h4>
-                  <div className="space-y-4">
-                    {[
-                      { label: t('details.moq'), value: t('details.moqVal') },
-                      { label: t('details.purity'), value: t('details.purityVal') },
-                      { label: t('details.fulfillment'), value: t('details.fulfillmentVal') },
-                      { label: t('details.payment'), value: t('details.paymentVal') },
-                      { label: t('details.shipping'), value: t('details.shippingVal') },
-                      { label: t('details.buyers'), value: t('details.buyersVal') },
-                    ].map((item) => (
-                      <div key={item.label} className="flex items-center justify-between py-2 border-b border-black/5 last:border-0">
-                        <span className="text-black/40 font-dm-mono text-[9px] uppercase tracking-widest font-bold">{item.label}</span>
-                        <span className="text-black/85 font-archia font-bold text-xs text-right leading-tight">{item.value}</span>
-                      </div>
-                    ))}
+                {location.slug !== 'delaware' && (
+                  <div className="bg-white border border-black/5 rounded-[2.5rem] p-6 md:p-8 shadow-sm">
+                    <h4 className="text-base font-absans font-bold text-black uppercase tracking-wider mb-6">{t('accountDetails')}</h4>
+                    <div className="space-y-4">
+                      {[
+                        { label: t('details.moq'), value: t('details.moqVal') },
+                        { label: t('details.purity'), value: t('details.purityVal') },
+                        { label: t('details.fulfillment'), value: t('details.fulfillmentVal') },
+                        { label: t('details.payment'), value: t('details.paymentVal') },
+                        { label: t('details.shipping'), value: t('details.shippingVal') },
+                        { label: t('details.buyers'), value: t('details.buyersVal') },
+                      ].map((item) => (
+                        <div key={item.label} className="flex items-center justify-between py-2 border-b border-black/5 last:border-0">
+                          <span className="text-black/40 font-dm-mono text-[9px] uppercase tracking-widest font-bold">{item.label}</span>
+                          <span className="text-black/85 font-archia font-bold text-xs text-right leading-tight">{item.value}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Apply CTA */}
                 <div className="bg-[#13a7b7]/5 border border-[#13a7b7]/10 rounded-[2.5rem] p-6 text-center">
@@ -731,10 +740,14 @@ export default async function LocationTemplatePage({ params }: { params: { local
           subtitle={isEs
             ? `Información de adquisición de péptidos al por mayor para empresas en ${location.city}.`
             : `Wholesale peptide procurement information for ${location.city} businesses.`}
-          items={[
-            ...locData.localFaqs,
-            ...getUsFaqs(params.locale).filter(faq => !locData.localFaqs?.some((lFaq: any) => lFaq.q === faq.q)).slice(0, 5)
-          ]}
+          items={
+            locData.localFaqs.length >= 8
+              ? locData.localFaqs
+              : [
+                  ...locData.localFaqs,
+                  ...getUsFaqs(params.locale).filter(faq => !locData.localFaqs?.some((lFaq: any) => lFaq.q === faq.q)).slice(0, 5)
+                ]
+          }
           eyebrow={isEs ? 'Preguntas Frecuentes Locales' : 'Local FAQ'}
         />
       ) : (

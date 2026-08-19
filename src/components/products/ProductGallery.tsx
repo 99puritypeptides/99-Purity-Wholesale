@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Beaker } from 'lucide-react';
 
 interface ProductGalleryProps {
@@ -87,10 +88,13 @@ export default function ProductGallery({ images, productName, categoryName, spec
         onMouseMove={handleMouseMove}
         className={`relative aspect-square w-full rounded-2xl bg-black/[0.01] border border-black/5 overflow-hidden flex items-center justify-center group/img ${isZoomed ? 'cursor-none' : 'cursor-default'}`}
       >
-        <img 
-          src={encodeURI(`/product-images/${currentImage}`)}
+        <Image 
+          src={`/product-images/${currentImage}`}
           alt={`${productName} Wholesale Reference Standard - View ${activeIndex + 1}`}
-          className="w-[90%] h-[90%] object-contain rounded-2xl transition-transform duration-200 ease-out mix-blend-multiply brightness-[1.05] contrast-[1.02]"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-contain p-[5%] rounded-2xl transition-transform duration-200 ease-out mix-blend-multiply brightness-[1.05] contrast-[1.02]"
           style={{
             transform: isZoomed ? 'scale(1.8)' : 'scale(1)',
             transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`
@@ -151,11 +155,13 @@ export default function ProductGallery({ images, productName, categoryName, spec
                   }`}
                 >
                   {/* Thumbnail Image */}
-                  <div className="w-[75%] h-[75%] flex items-center justify-center overflow-hidden mb-1">
-                    <img 
-                      src={encodeURI(`/product-images/${img}`)}
+                  <div className="relative w-[75%] h-[75%] flex items-center justify-center overflow-hidden mb-1">
+                    <Image 
+                      src={`/product-images/${img}`}
                       alt={`${productName} Wholesale Reference Standard - View ${idx + 1}`}
-                      className="h-full object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="120px"
+                      className="object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   

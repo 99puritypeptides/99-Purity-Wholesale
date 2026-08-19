@@ -100,7 +100,7 @@ export default function Header() {
 
             <div className="relative group/cat">
               <button className="flex items-center gap-1.5 text-[11px] font-bold text-black/70 hover:text-black transition-colors py-1 uppercase tracking-widest">
-                Categories
+                {t('nav.categories')}
                 <ChevronDown className="w-3.5 h-3.5 text-black/20 group-hover/cat:text-black transition-all group-hover/cat:rotate-180" />
               </button>
               

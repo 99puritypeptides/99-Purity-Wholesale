@@ -10,11 +10,18 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
   const lenisRef = useRef<any>(null);
 
   useEffect(() => {
+    // Check if device is mobile or touch; use native scrolling for zero CPU overhead
+    const isTouchOrMobile = typeof window !== 'undefined' && (window.innerWidth < 768 || window.matchMedia('(pointer: coarse)').matches);
+
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
     const lenisInstance = lenisRef.current?.lenis;
     if (lenisInstance) {
+      if (isTouchOrMobile) {
+        lenisInstance.stop();
+        return;
+      }
       // Keep GSAP ScrollTrigger updated on Lenis scroll
       lenisInstance.on('scroll', ScrollTrigger.update);
       (window as any).lenis = lenisInstance;
@@ -22,6 +29,8 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       ScrollTrigger.addEventListener("refresh", () => lenisInstance.resize());
       ScrollTrigger.refresh();
     }
+
+    if (isTouchOrMobile) return;
 
     // High performance frame ticker sync:
     // Drive Lenis animations via GSAP's internal requestAnimationFrame ticker loop.

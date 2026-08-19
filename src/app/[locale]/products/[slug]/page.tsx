@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, Box, FlaskConical, MapPin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
@@ -943,10 +944,12 @@ export default async function ProductPage({ params }: { params: { locale: string
                       {/* Luxury Product Thumbnail Showcase */}
                       <div className="relative aspect-square w-full rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-5 transition-all duration-500">
                         {productImage ? (
-                          <img 
-                            src={encodeURI(`/product-images/${productImage}`)}
+                          <Image 
+                            src={`/product-images/${productImage}`}
                             alt={`${rp.name} High Purity Wholesale Research Peptide`}
-                            className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                            fill
+                            sizes="(max-width: 640px) 50vw, 250px"
+                            className="object-contain p-[5%] rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                           />
                         ) : (
                           <div className="flex flex-col items-center justify-center text-center p-4 text-black/20 relative z-10">

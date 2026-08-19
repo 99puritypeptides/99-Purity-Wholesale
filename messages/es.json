@@ -379,6 +379,7 @@
     "announcement": "Solo para profesionales e investigadores licenciados",
     "nav": {
       "products": "Productos",
+      "categories": "Categorías",
       "coa": "COAs",
       "calculator": "Calculadora",
       "services": "Servicios",
@@ -807,9 +808,9 @@
       "msg": "Hola, tengo una pregunta sobre el abastecimiento mayorista de 99 Purity Wholesale."
     },
     "FAQ": {
-      "badge": "About 99 Purity Wholesale",
-      "title": "Frequently Asked Questions",
-      "subtitle": "Answers to the questions licensed professionals ask before sourcing from 99 Purity Wholesale — covering our identity, lab partner, supply chain, and compliance standards.",
+      "badge": "Acerca de 99 Purity Wholesale",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Respuestas a las preguntas que los profesionales autorizados hacen antes de abastecerse en 99 Purity Wholesale: cubriendo nuestra identidad, laboratorio asociado, cadena de suministro y estándares de cumplimiento.",
       "items": [
         {
           "q": "Who is 99 Purity Wholesale?",
@@ -1465,7 +1466,7 @@
         "badge": "Metabólico",
         "desc": "La categoría líder en la industria para estudios metabólicos y de peso. Agonistas de receptores de alta pureza diseñados para evaluaciones rigurosas in-vitro e in-vivo.",
         "seoP1": "Investigación Metabólica represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Qué péptidos metabólicos ofrecen?",
@@ -1486,7 +1487,7 @@
         "badge": "Cognitivo",
         "desc": "Neuropéptidos de alta pureza desarrollados para la investigación en reparación del sistema nervioso central, señalización cognitiva y neuroprotección.",
         "seoP1": "Función Cognitiva represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Cuál es la aplicación principal de Semax y Selank?",
@@ -1503,7 +1504,7 @@
         "badge": "Investigación del Sueño",
         "desc": "Compuestos neuroquímicos específicos para la investigación de la arquitectura del sueño y estudios científicos sobre vías de inducción del sueño profundo.",
         "seoP1": "Investigación del Ciclo del Sueño represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Para qué se investiga el DSIP?",
@@ -1520,7 +1521,7 @@
         "badge": "Factores de Crecimiento",
         "desc": "Secretagogos premium y sintéticos diseñados para la estimulación del eje somatotropo, estudios de respuesta de la hipófisis y modelos de envejecimiento celular tisular.",
         "seoP1": "Investigación de Factores de Crecimiento represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Qué secretagogos de la hormona del crecimiento ofrecen?",
@@ -1537,7 +1538,7 @@
         "badge": "Recuperación y Cicatrización",
         "desc": "Compuestos de investigación de alto rendimiento enfocados en la regeneración celular, síntesis de tejidos, cicatrización de heridas y modelos de recuperación.",
         "seoP1": "Investigación de Recuperación represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Qué formas de BPC-157 y TB-500 suministran?",
@@ -1554,7 +1555,7 @@
         "badge": "Salud Celular",
         "desc": "Compuestos innovadores diseñados para estudiar la eficiencia mitocondrial, vías de longevidad, remodelación de la piel y sistemas de defensa celular.",
         "seoP1": "Investigación de Salud Celular represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Cuál es el enfoque de la investigación de SS-31 y NAD+?",
@@ -1571,7 +1572,7 @@
         "badge": "Aminoácidos",
         "desc": "Formulaciones puras de aminoácidos y combinaciones lipotrópicas diseñadas para estudiar el metabolismo energético, síntesis celular y vías metabólicas.",
         "seoP1": "Aminoácidos represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Qué contiene la mezcla MIC?",
@@ -1588,7 +1589,7 @@
         "badge": "Esenciales",
         "desc": "Soluciones de reconstitución de laboratorio de la más alta calidad y compuestos de utilidad esenciales requeridos para respaldar protocolos de investigación estándar.",
         "seoP1": "Esenciales represents a key domain of modern biochemical evaluation, biological signaling, and cellular research. Under this specialized category, qualified institutions can access clinical-grade compounds manufactured in the U.S. using state-of-the-art solid-phase synthesis protocols, fully verified to meet strict purity standards.",
-        "seoP2": "All items are packaged lyophilized in sterile vacuum-sealed vials to guarantee maximum compound stability. Batch-matched Certificate of Analysis (COA) documents confirming sequence identity and purity levels are included with every B2B order, backed by fast domestic shipping.",
+        "seoP2": "Todos los productos están envasados liofilizados en viales estériles sellados al vacío para garantizar la máxima estabilidad del compuesto. Se incluyen documentos de Certificado de Análisis (COA) vinculados por lote que confirman la identidad de la secuencia y los niveles de pureza en cada pedido B2B, respaldados por un envío nacional rápido.",
         "faqs": [
           {
             "q": "¿Qué es el agua bacteriostática (BAC Water)?",

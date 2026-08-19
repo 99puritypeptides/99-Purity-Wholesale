@@ -18,7 +18,7 @@ export default function FaqSchema({ items }: FaqSchemaProps) {
       name: f.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: f.a,
+        text: f.a.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'),
       },
     })),
   };

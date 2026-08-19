@@ -15,25 +15,25 @@ const compoundsEn = [
   {
     slug: 'semaglutide',
     name: 'Semaglutide',
-    desc: 'A highly potent GLP-1 receptor agonist utilized extensively in US metabolic and glycemic research. We provide scalable bulk supply with verified amino acid sequences to support advanced longitudinal studies.',
+    desc: 'A GLP-1 receptor agonist utilized in metabolic and glycemic research. We provide scalable bulk supply with verified amino acid sequences to support laboratory studies.',
     tags: ['Metabolic', 'GLP-1'],
   },
   {
     slug: 'tirzepatide',
     name: 'Tirzepatide',
-    desc: 'The pioneering dual GIP/GLP-1 receptor agonist. Our USA-distributed Tirzepatide is synthesized to exacting purity standards, making it the premier choice for cutting-edge cellular receptor signaling research.',
+    desc: 'A dual GIP/GLP-1 receptor agonist. Our USA-distributed Tirzepatide is synthesized to verified purity standards for cellular receptor signaling research.',
     tags: ['Dual-Agonist', 'Research'],
   },
   {
     slug: 'bpc-157',
     name: 'BPC-157',
-    desc: 'Body Protection Compound-157 is a staple in regenerative and tissue repair studies. We supply highly stable, research-grade BPC-157 to orthopedic and gastroenterology research institutions nationwide.',
+    desc: 'Body Protection Compound-157 is utilized in regenerative and tissue repair studies. We supply research-grade BPC-157 to qualified research institutions nationwide.',
     tags: ['Regenerative', 'Gastric'],
   },
   {
     slug: 'retatrutide',
     name: 'Retatrutide',
-    desc: 'The novel triple-agonist (GLP-1/GIP/GCG) representing the next frontier in metabolic modulation. Our Retatrutide enables American researchers to stay ahead of the curve in complex receptor interaction studies.',
+    desc: 'A novel triple-agonist (GLP-1/GIP/GCG) utilized in metabolic research. Our Retatrutide enables researchers to conduct targeted receptor interaction studies.',
     tags: ['Triple-Agonist', 'Metabolic'],
   },
 ];
@@ -42,25 +42,25 @@ const compoundsEs = [
   {
     slug: 'semaglutide',
     name: 'Semaglutide',
-    desc: 'Un agonista del receptor GLP-1 de alta potencia ampliamente utilizado en la investigación metabólica y glucémica en EE. UU. Ofrecemos suministro a granel escalable con secuencias de aminoácidos verificadas para respaldar estudios longitudinales avanzados.',
+    desc: 'Un agonista del receptor GLP-1 utilizado en la investigación metabólica y glucémica en EE. UU. Ofrecemos suministro a granel escalable con secuencias de aminoácidos verificadas para respaldar estudios de laboratorio.',
     tags: ['Metabólico', 'GLP-1'],
   },
   {
     slug: 'tirzepatide',
     name: 'Tirzepatide',
-    desc: 'El innovador agonista dual de los receptores GIP/GLP-1. Nuestro Tirzepatide distribuido en EE. UU. se sintetiza bajo exigentes estándares de pureza, siendo la opción predilecta para la investigación de vanguardia en señalización de receptores celulares.',
+    desc: 'Un agonista dual de los receptores GIP/GLP-1. Nuestro Tirzepatide distribuido en EE. UU. se sintetiza bajo estándares de pureza verificados para la investigación de señalización de receptores celulares.',
     tags: ['Agonista Dual', 'Investigación'],
   },
   {
     slug: 'bpc-157',
     name: 'BPC-157',
-    desc: 'El Body Protection Compound-157 es un pilar fundamental en estudios regenerativos y de reparación tisular. Suministramos BPC-157 de grado de investigación altamente estable a instituciones ortopédicas y de gastroenterología en todo el país.',
+    desc: 'El Body Protection Compound-157 se utiliza en estudios regenerativos y de reparación tisular. Suministramos BPC-157 de grado de investigación a instituciones cualificadas en todo el país.',
     tags: ['Regenerativo', 'Gástrico'],
   },
   {
     slug: 'retatrutide',
     name: 'Retatrutide',
-    desc: 'El novedoso triple agonista (GLP-1/GIP/GCG) que representa la nueva frontera en modulación metabólica. Nuestro Retatrutide permite a los investigadores mantenerse a la vanguardia en estudios complejos de interacción de receptores.',
+    desc: 'Un triple agonista (GLP-1/GIP/GCG) utilizado en la modulación metabólica. Nuestro Retatrutide permite a los investigadores realizar estudios de interacción de receptores.',
     tags: ['Triple Agonista', 'Metabólico'],
   },
 ];

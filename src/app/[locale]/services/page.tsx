@@ -1,4 +1,5 @@
 import { Zap, Package, Rocket, MonitorSmartphone, TrendingUp, Tag, PhoneCall, CheckCircle2, Settings, ShieldCheck, Award, Users, Globe, Lock, FlaskConical, ClipboardCheck, Handshake, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import GlobalCTA from '@/components/layout/GlobalCTA';
@@ -389,10 +390,12 @@ export default async function ServicesPage({ params }: { params: { locale: strin
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
             {/* Pristine Full-Color Clinical Laboratory v2 Visual */}
-            <img 
+            <Image 
               src="/images/hero-lab-bg-v2.png"
               alt="99 Purity Wholesale Certified Quality Control Laboratory"
-              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
           </div>

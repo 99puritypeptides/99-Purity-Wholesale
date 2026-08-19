@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/utils/mdx';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
@@ -10,7 +11,7 @@ export async function generateMetadata(props: any) {
   const locale = params?.locale || 'en';
   const t = await getTranslations({ locale, namespace: 'Meta' });
   return {
-    title: t('blogTitle'),
+    title: { absolute: t('blogTitle') },
     description: t('blogDesc'),
   
     alternates: {
@@ -23,36 +24,54 @@ export async function generateMetadata(props: any) {
 // Curate high-quality, topic-relevant image paths dynamically for blog index cards
 function getPostCardImage(slug: string, index: number): string {
   const normSlug = slug.toLowerCase();
-  if (normSlug.includes('glp') || normSlug.includes('weight')) {
-    return '/product-images/semaglutide-10mg.jpg';
+  if (normSlug.includes('glp') || normSlug.includes('semaglutide') || normSlug.includes('tirzepatide') || normSlug.includes('weight')) {
+    return '/product-images/SEMAGLUTIDE 5mg-2.webp';
   }
   if (normSlug.includes('bpc') || normSlug.includes('recovery')) {
-    return '/product-images/bpc-157-10mg.jpg';
+    return '/product-images/BPC-157 5mg-5.webp';
   }
   if (normSlug.includes('nad') || normSlug.includes('longevity') || normSlug.includes('aging')) {
     return '/product-images/nad-plus-500mg-1.webp';
   }
+  if (normSlug.includes('reconstitution') || normSlug.includes('storage')) {
+    return '/product-images/BAC WATER 3ML.webp';
+  }
+  if (normSlug.includes('verify') || normSlug.includes('supplier') || normSlug.includes('evaluation')) {
+    return '/images/peptide-supplier-verification-coa-audit.jpg';
+  }
   if (normSlug.includes('coa') || normSlug.includes('quality') || normSlug.includes('read-coa')) {
-    return '/lab_quality_bg_1778896760027.png';
+    return '/images/hplc_reference_graph.png';
   }
-  if (normSlug.includes('pharmacy') || normSlug.includes('spas')) {
+  if (normSlug.includes('pharmacy') || normSlug.includes('spas') || normSlug.includes('med-spa')) {
     return '/product-images/glow-hair-skin-nail-blend.jpg';
   }
-  if (normSlug.includes('private-label')) {
-    return '/product-images/glow-hair-skin-nail-blend.jpg';
+  if (normSlug.includes('private-label') || normSlug.includes('product-line') || normSlug.includes('dropship') || normSlug.includes('business') || normSlug.includes('start')) {
+    return '/product-images/klow-custom-peptide-kit.jpg';
+  }
+  if (normSlug.includes('fluorescence') || normSlug.includes('luminescence')) {
+    return '/images/fluorescence-spectrofluorometer-lab.jpg';
+  }
+  if (normSlug.includes('spps') || normSlug.includes('lpps') || normSlug.includes('synthesis')) {
+    return '/images/spps-automated-synthesizer-lab.jpg';
+  }
+  if (normSlug.includes('us-manufactured') || normSlug.includes('imported')) {
+    return '/images/peptide-supplier-batch-traceability-qc.jpg';
   }
   
   const defaults = [
-    '/images/vial_kit_luxury.png',
-    '/images/chromatography_lab.png',
-    '/images/analytical_verification.png'
+    '/product-images/SEMAGLUTIDE 5mg-2.webp',
+    '/product-images/BPC-157 5mg-5.webp',
+    '/product-images/TIRZEPATIDE 10mg-3.webp',
+    '/product-images/RETATRUTIDE 10mg-6.webp',
+    '/product-images/cjc-1295-ipamorelin-10-10mg.jpg',
+    '/product-images/bpc-157-tb-500-10-10mg.jpg'
   ];
   return defaults[index % defaults.length];
 }
 
 export default async function BlogIndex({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'Blog' });
-  const posts = await getAllPosts();
+  const posts = await getAllPosts(params.locale);
 
   const tags = [
     t('tags.pricing'),
@@ -104,10 +123,12 @@ export default async function BlogIndex({ params }: { params: { locale: string }
       <section className="bg-[#F8F8F6] py-8 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
-            <img 
+            <Image 
               src="/lab_quality_bg_1778896760027.png"
               alt="99 Purity Wholesale Analytical Research Compendium"
-              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
           </div>
@@ -128,10 +149,12 @@ export default async function BlogIndex({ params }: { params: { locale: string }
                     
                     {/* Top Portion: Rich Visual Image Header */}
                     <div className="h-56 relative overflow-hidden bg-black/10">
-                      <img 
+                      <Image 
                         src={getPostCardImage(post.slug, idx)} 
                         alt={post.meta.title} 
-                        className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#090C12] via-transparent to-transparent pointer-events-none" />
                       

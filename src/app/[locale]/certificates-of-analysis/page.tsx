@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ShieldCheck, FileText, Check, X, Search, Beaker, FlaskConical, Microscope, Award, Globe, HelpCircle } from 'lucide-react';
 import productsData from '@/data/products.json';
@@ -84,10 +85,12 @@ export default function COAPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="reveal-card-3d relative overflow-hidden rounded-[2.5rem] h-[320px] md:h-[480px] border border-black/5 shadow-sm group">
             {/* Pristine Full-Color Clinical Laboratory v2 Visual */}
-            <img 
+            <Image 
               src="/lab_quality_bg_1778896760027.png"
               alt="99 Purity Wholesale Certified Quality Control Laboratory"
-              className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
           </div>

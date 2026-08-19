@@ -17,6 +17,21 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/work',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/en/work',
+        destination: '/en',
+        permanent: false,
+      },
+      {
+        source: '/es/work',
+        destination: '/es',
+        permanent: false,
+      },
+      {
         source: '/quality',
         destination: '/certificates-of-analysis',
         permanent: true,

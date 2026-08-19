@@ -9,6 +9,8 @@ export interface LocalizedLocationData {
   h1: string;
   metaTitle: string;
   metaDesc: string;
+  ogTitle?: string;
+  ogDesc?: string;
   intro: string;
   bodyP1: string;
   bodyP2: string;
@@ -33,6 +35,8 @@ export function getLocalizedLocation(location: any, locale: string, isCity: bool
       h1: location.h1,
       metaTitle: location.metaTitle,
       metaDesc: location.metaDesc,
+      ogTitle: location.ogTitle,
+      ogDesc: location.ogDesc,
       intro: location.intro,
       bodyP1: location.bodyP1,
       bodyP2: location.bodyP2,

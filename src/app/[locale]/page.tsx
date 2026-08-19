@@ -72,9 +72,10 @@ export default async function HomePage({ params }: { params: { locale: string } 
             src="/hero-dark.png"
             alt="Premium Peptide Research"
             fill
+            sizes="100vw"
             className="object-cover opacity-60 grayscale-[0.3] brightness-[0.7]"
             priority
-            quality={80}
+            quality={70}
           />
           {/* Moody Overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
@@ -367,10 +368,12 @@ export default async function HomePage({ params }: { params: { locale: string } 
                     <div className="flex-grow flex flex-col">
                       {/* Beautiful Seamless Floating Product Image */}
                       <div className="relative w-full h-60 flex items-center justify-center mb-4 overflow-hidden">
-                        <img 
+                        <Image 
                           src={productImg} 
                           alt={`${p.name} High Purity Wholesale Research Peptide`}
-                          className="h-full object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] filter group-hover:scale-105 transition-transform duration-700 ease-out" 
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] filter group-hover:scale-105 transition-transform duration-700 ease-out" 
                         />
                       </div>
 

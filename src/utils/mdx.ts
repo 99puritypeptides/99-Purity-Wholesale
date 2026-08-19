@@ -4,9 +4,13 @@ import matter from 'gray-matter';
 
 const contentDirectory = path.join(process.cwd(), 'src/content/blog');
 
-export async function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.mdx$/, '');
-  const fullPath = path.join(contentDirectory, `${realSlug}.mdx`);
+export async function getPostBySlug(slug: string, locale: string = 'en') {
+  const realSlug = slug.replace(/\.(es\.)?mdx$/, '');
+  
+  const localePath = path.join(contentDirectory, `${realSlug}.${locale}.mdx`);
+  const defaultPath = path.join(contentDirectory, `${realSlug}.mdx`);
+  
+  const fullPath = (locale !== 'en' && fs.existsSync(localePath)) ? localePath : defaultPath;
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   
   const { data, content } = matter(fileContents);
@@ -18,16 +22,24 @@ export async function getPostBySlug(slug: string) {
   };
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(locale: string = 'en') {
+  if (!fs.existsSync(contentDirectory)) return [];
+  
   const files = fs.readdirSync(contentDirectory);
-  const posts = files
-    .filter(file => file.endsWith('.mdx'))
+  // Exclude localized versions (e.g. .es.mdx) when listing unique blog posts
+  const baseFiles = files.filter(file => file.endsWith('.mdx') && !file.includes('.es.'));
+  
+  const posts = baseFiles
     .map(file => {
-      const fullPath = path.join(contentDirectory, file);
+      const realSlug = file.replace(/\.mdx$/, '');
+      const localePath = path.join(contentDirectory, `${realSlug}.${locale}.mdx`);
+      const defaultPath = path.join(contentDirectory, file);
+      
+      const fullPath = (locale !== 'en' && fs.existsSync(localePath)) ? localePath : defaultPath;
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data } = matter(fileContents);
       return {
-        slug: file.replace(/\.mdx$/, ''),
+        slug: realSlug,
         meta: data
       };
     })

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
+import Image from 'next/image';
 import { Search, Filter, ArrowRight, FlaskConical, ChevronRight } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
@@ -265,10 +266,12 @@ export default function ProductDirectory({ products, categories }: ProductDirect
                     <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl bg-white overflow-hidden flex items-center justify-center mb-4 sm:mb-5 transition-all duration-500">
                       
                       {productImage ? (
-                        <img 
-                          src={encodeURI(`/product-images/${productImage}`)}
+                        <Image 
+                          src={`/product-images/${productImage}`}
                           alt={`${product.name} High Purity Wholesale Research Peptide`}
-                          className="w-[90%] h-[90%] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                          className="object-contain p-[5%] rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                         />
                       ) : (
                         <div className="flex flex-col items-center justify-center text-center p-4 text-black/20 relative z-10">

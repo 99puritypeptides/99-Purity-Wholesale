@@ -83,6 +83,15 @@ export async function generateMetadata(props: any) {
       'US manufactured peptides'
     ],
     icons: {
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/icons/icon-48x48.png', sizes: '48x48', type: 'image/png' },
+        { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+      ],
+      shortcut: ['/favicon.ico'],
       apple: [
         { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
       ],
@@ -220,12 +229,12 @@ export default async function RootLayout(props: any) {
         />
         {/* Google Analytics GA4 */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
         />
         <Script
           id="google-analytics-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -240,7 +249,7 @@ export default async function RootLayout(props: any) {
         {/* Microsoft Clarity */}
         <Script
           id="microsoft-clarity-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(c,l,a,r,i,t,y){

@@ -640,54 +640,131 @@
     "city": "Delaware",
     "state": "United States",
     "region": "United States",
-    "h1": "Wholesale Peptide Supplier in Delaware — Research-Grade Bulk Supply",
-    "metaTitle": "Wholesale Peptides Delaware | Bulk Research-Grade Supply",
-    "metaDesc": "99 Purity Wholesale supplies bulk research-grade peptides to licensed professionals in Delaware. ≥99% purity, batch COA verified, fast domestic shipping.",
-    "intro": "Delaware's premier supplier for wholesale peptides, offering top-tier metabolic and regenerative compounds. We partner with licensed professionals to deliver domestic, COA-verified products.",
-    "introEs": "El proveedor principal de péptidos al por mayor de Delaware, ofreciendo compuestos metabólicos y regenerativos de primer nivel. Colaboramos con profesionales para entregar productos verificados por COA.",
+    "h1": "Wholesale Peptide Supplier in Delaware — Research-Grade B2B Supply",
+    "h1Es": "Proveedor Mayorista de Péptidos en Delaware — Suministro a Granel Grado de Investigación",
+    "metaTitle": "Wholesale Peptides Delaware | Research-Grade B2B Supplier",
+    "metaTitleEs": "Péptidos al Por Mayor Delaware | Proveedor B2B Grado de Investigación",
+    "metaDesc": "B2B wholesale research peptides shipped to Delaware. Batch-specific COAs, HPLC/LC-MS testing, and verified wholesale accounts. Apply today.",
+    "metaDescEs": "Péptidos de investigación al por mayor B2B enviados a Delaware. COAs por lote, pruebas HPLC/LC-MS y cuentas verificadas. Solicite hoy.",
+    "intro": "99 Purity Wholesale supplies research peptides to qualified laboratories, distributors, and other B2B buyers across Delaware. Every product ships from within the United States, and every batch is sold with supporting documentation so buyers can verify identity and purity before use.",
+    "introEs": "99 Purity Wholesale suministra péptidos de investigación a laboratorios cualificados, distribuidores y otros compradores B2B en todo Delaware. Todos los productos se envían desde Estados Unidos con documentación que verifica su identidad y pureza.",
     "popularProducts": [
-      "Semaglutide",
-      "NAD+",
-      "BPC-157"
+      "Tirzepatide",
+      "BPC-157",
+      "Sermorelin",
+      "Retatrutide"
     ],
     "localKeywords": [
       "wholesale peptides Delaware",
-      "peptide supplier Delaware",
+      "wholesale research peptides Delaware",
+      "wholesale peptide supplier Delaware",
+      "research peptide supplier Delaware",
       "bulk research peptides Delaware",
-      "GLP-1 peptides wholesale Delaware"
+      "B2B peptide supplier Delaware",
+      "research-use-only peptide supplier Delaware",
+      "research peptides shipped to Delaware",
+      "wholesale peptide pricing Delaware",
+      "research peptides with COA",
+      "HPLC-tested research peptides",
+      "LC-MS verified peptides",
+      "U.S.-manufactured research peptides",
+      "peptide supplier in Delaware",
+      "bulk peptide supplier Delaware",
+      "research chemicals supplier Delaware",
+      "peptide wholesale supplier"
     ],
-    "bodyP1": "Delaware's life-sciences sector is smaller in scale than its larger neighbors, but the compounding pharmacies, wellness practices, and research organizations operating here — many drawn by the state's business-friendly regulatory environment and Wilmington's long history as a chemical and pharmaceutical R&D center — expect the same wholesale-grade documentation and purity standard as any larger market.",
-    "bodyP2": "Every compound distributed to Delaware-based accounts is synthesized domestically to a ≥99% purity threshold, independently tested by third-party U.S. laboratories, and shipped with a batch-matched Certificate of Analysis so pharmacy and research buyers can verify exactly what they're receiving. We know that smaller-volume accounts sometimes assume they'll receive less attention than larger states — that isn't how our distribution network operates.",
-    "bodyP3": "Delaware orders are processed within 1 to 2 business days of payment confirmation and shipped via priority domestic carrier with standard transit of 2 to 3 business days statewide. Our tiered wholesale pricing structure applies equally regardless of account size, and B2B onboarding is the same streamlined process available nationwide. Frequently requested compounds among our Delaware institutional partners include Semaglutide and NAD+.",
-    "bodyP4": "",
-    "bodyP5": "",
+    "bodyP1": "This page covers what a Delaware-based lab, distributor, or research organization needs to know before opening a wholesale account: product categories, documentation standards, pricing structure, ordering process, and research-use restrictions. We work with wholesale accounts only. This is not a consumer storefront, and nothing on this page is intended for individual or retail buyers.",
+    "bodyP1Es": "Esta página cubre lo que un laboratorio, distribuidor u organización de investigación con sede en Delaware necesita saber antes de abrir una cuenta mayorista: categorías de productos, estándares de documentación, estructura de precios, proceso de pedido y restricciones de uso en investigación. Trabajamos únicamente con cuentas mayoristas. Este no es un escaparate para el consumidor final y nada en esta página está destinado a compradores individuales o minoristas.",
+    "bodyP2": "This page is built for procurement and lab-operations contacts evaluating a peptide supplier for business or institutional use, including research laboratories, contract research organizations, distributors, resellers, compounding and manufacturing operations, and analytical testing labs.",
+    "bodyP2Es": "Esta página está diseñada para contactos de adquisición y operaciones de laboratorio que evalúan a un proveedor de péptidos para uso comercial o institucional, incluidos laboratorios de investigación, organizaciones de investigación por contrato, distribuidores, revendedores, operaciones de formulación y fabricación, y laboratorios de pruebas analíticas.",
+    "bodyP3": "Our catalog is organized by category: GLP-1 and metabolic research peptides, growth factor and repair-related peptides, cosmetic and dermal research compounds, and custom and bulk synthesis for accounts with specific sequence or quantity requirements. Full listings, available quantities, and current specifications are maintained on the [product catalog](https://99puritywholesale.com/products).",
+    "bodyP3Es": "Nuestro catálogo se organiza por categoría: péptidos de investigación metabólica y GLP-1, péptidos relacionados con factores de crecimiento y reparación, compuestos de investigación cosmética y dérmica, y síntesis personalizada y a granel para cuentas con requisitos específicos de secuencia o cantidad. Las listas completas, cantidades disponibles y especificaciones actuales se mantienen en el [catálogo de productos](https://99puritywholesale.com/products).",
+    "bodyP4": "Every batch we sell is supplied with a lot-specific certificate of analysis (COA), reflecting identity and purity testing performed using HPLC and LC-MS methods. Buyers can request or review the relevant COA for any batch through our [certificate of analysis library](https://99puritywholesale.com/certificates-of-analysis). If you need a COA in advance of ordering, contact [sales](https://99puritywholesale.com/contact).",
+    "bodyP4Es": "Cada lote que vendemos se suministra con un certificado de análisis (COA) específico para ese lote, que refleja las pruebas de identidad y pureza realizadas mediante métodos HPLC y LC-MS. Los compradores pueden solicitar o revisar el COA relevante para cualquier lote a través de nuestra [biblioteca de certificados de análisis](https://99puritywholesale.com/certificates-of-analysis). Si necesita un COA antes de realizar un pedido, contacte a [ventas](https://99puritywholesale.com/contact).",
+    "bodyP5": "Pricing is structured for volume and account tier rather than published as a flat retail rate. To see wholesale pricing, [apply for a wholesale account](https://99puritywholesale.com/wholesale-application). Opening an account involves a short verification step to confirm your organization is a legitimate B2B entity before releasing pricing or enabling checkout.",
+    "bodyP5Es": "Los precios están estructurados por volumen y nivel de cuenta en lugar de publicarse como una tarifa plana minorista. Para ver los precios al por mayor, [solicite una cuenta mayorista](https://99puritywholesale.com/wholesale-application). La apertura de una cuenta implica un breve paso de verificación para confirmar que su organización es una entidad B2B legítima antes de publicar los precios o habilitar el pago.",
     "whyUs": [
-      "U.S.-manufactured — synthesized domestically, not imported",
-      "≥99% purity on every compound, verified by independent U.S. labs",
-      "Batch-matched COA documentation with every shipment",
-      "Fast domestic fulfillment to Delaware",
-      "Tiered wholesale pricing for B2B buyers"
+      "U.S. domestic fulfillment — every product ships from within the United States to business and institutional addresses.",
+      "Lot-specific documentation — every batch includes a Certificate of Analysis reflecting HPLC and LC-MS testing results.",
+      "B2B-only model — accounts are verified through a short application process to protect catalog pricing for actual business buyers.",
+      "Tiered wholesale pricing — volume rates for bulk or recurring orders, quoted directly by sales upon account approval.",
+      "Custom & bulk synthesis — sequence, purity target, or non-standard volume options available for specialized accounts."
     ],
-    "institutionsServed": "We supply research peptides to licensed compounding pharmacies, functional medicine practices, medical spas, and independent research laboratories across Delaware.",
-    "logisticsDetails": "Our domestic shipping network guarantees fast, priority delivery to Delaware, completely bypassing international customs delays.",
+    "whyUsEs": [
+      "Cumplimiento nacional en EE. UU.: cada producto se envía desde Estados Unidos a direcciones comerciales e institucionales.",
+      "Documentación específica por lote: cada lote incluye un Certificado de Análisis que refleja los resultados de las pruebas HPLC y LC-MS.",
+      "Modelo exclusivo B2B: las cuentas se verifican mediante un breve proceso de solicitud para proteger los precios del catálogo para los compradores comerciales reales.",
+      "Precios mayoristas escalonados: tarifas por volumen para pedidos a granel o recurrentes, cotizadas directamente por ventas tras la aprobación de la cuenta.",
+      "Síntesis personalizada y a granel: opciones de secuencia, objetivo de pureza o volumen no estándar disponibles para cuentas especializadas."
+    ],
+    "researchInstitutions": "Delaware's life-science sector includes biotechnology and chemical research activity centered around the state's major research parks and industrial innovation centers.",
+    "researchInstitutionsEs": "El sector de las ciencias de la vida de Delaware incluye actividades de investigación biotecnológica y química centradas en los principales parques de investigación y centros de innovación industrial del estado.",
+    "universities": "Academic research in Delaware includes activity connected to the University of Delaware and the Delaware Biotechnology Institute (referenced for regional market context only, with no affiliation implied).",
+    "universitiesEs": "La investigación académica en Delaware incluye actividades conectadas con la Universidad de Delaware y el Instituto de Biotecnología de Delaware (referenciados únicamente como contexto del mercado regional, sin sugerir ninguna afiliación).",
+    "biotechOverview": "Delaware maintains a long-standing pharmaceutical and specialty-chemical manufacturing presence, concentrated along the Wilmington, Newark, Dover, and New Castle research corridors.",
+    "biotechOverviewEs": "Delaware mantiene una presencia histórica en la fabricación farmacéutica y de productos químicos especializados, concentrada a lo largo de los corredores de investigación de Wilmington, Newark, Dover y New Castle.",
+    "industriesWeSupply": "We supply B2B wholesale research compounds to qualified research laboratories, contract research organizations (CROs), analytical testing facilities, and verified manufacturing entities across Delaware.",
+    "industriesWeSupplyEs": "Suministramos compuestos de investigación al por mayor B2B a laboratorios de investigación cualificados, organizaciones de investigación por contrato (CRO), instalaciones de pruebas analíticas y entidades de fabricación verificadas en todo Delaware.",
+    "institutionsServed": "We ship to businesses and research organizations throughout Delaware, including in Wilmington, Newark, Dover, and New Castle. The wholesale account process, pricing structure, and documentation described above are identical statewide.",
+    "institutionsServedEs": "Enviamos a empresas e instituciones de investigación en todo Delaware, incluidos Wilmington, Newark, Dover y New Castle. El proceso de cuenta mayorista, la estructura de precios y la documentación descritos son idénticos en todo el estado.",
+    "logisticsDetails": "Once an account is approved, ordering runs through the standard catalog and checkout process, with quote requests available for non-standard quantities. Shipments ship from within the United States to business and institutional addresses via priority carrier.",
+    "logisticsDetailsEs": "Una vez aprobada la cuenta, los pedidos se gestionan a través del catálogo estándar y el proceso de pago, con solicitudes de cotización disponibles para cantidades no estándar. Los envíos se realizan desde Estados Unidos a direcciones comerciales e institucionales mediante transporte prioritario.",
     "localFaqs": [
       {
-        "q": "What is the standard delivery time for wholesale peptides to Delaware?",
-        "a": "Orders shipped to Delaware typically arrive within 2-4 business days via priority domestic carrier."
+        "q": "Does 99 Purity Wholesale ship to Delaware?",
+        "a": "Yes. We ship from within the United States to approved business and institutional accounts throughout Delaware.",
+        "qEs": "¿99 Purity Wholesale realiza envíos a Delaware?",
+        "aEs": "Sí. Enviamos desde Estados Unidos a cuentas comerciales e institucionales aprobadas en todo Delaware."
       },
       {
-        "q": "Are your research compounds verified by independent US-based labs?",
-        "a": "Every batch supplied includes a batch-matched Certificate of Analysis from an independent, third-party U.S. laboratory verifying ≥99% purity."
+        "q": "Who can apply for a wholesale account?",
+        "a": "Research laboratories, distributors, resellers, and manufacturing or compounding operations that can be verified as legitimate B2B entities. We don't sell to individual or retail buyers.",
+        "qEs": "¿Quién puede solicitar una cuenta mayorista?",
+        "aEs": "Laboratorios de investigación, distribuidores, revendedores y operaciones de fabricación o formulación que puedan verificarse como entidades B2B legítimas. No vendemos a compradores individuales ni minoristas."
       },
       {
-        "q": "Is it legal to buy bulk research peptides in Delaware?",
-        "a": "Yes, provided the buyer is a licensed professional purchasing the compounds explicitly for in-vitro laboratory research and analytical testing, strictly avoiding human consumption."
+        "q": "How do I get wholesale pricing?",
+        "a": "Pricing is available to approved accounts. Apply for an account or contact sales to request a quote before applying.",
+        "qEs": "¿Cómo obtengo precios al por mayor?",
+        "aEs": "Los precios están disponibles para cuentas aprobadas. Solicite una cuenta o póngase en contacto con ventas para solicitar una cotización antes de solicitarla."
+      },
+      {
+        "q": "What documentation comes with an order?",
+        "a": "Each batch ships with a lot-specific certificate of analysis reflecting HPLC and LC-MS identity and purity testing.",
+        "qEs": "¿Qué documentación se incluye con un pedido?",
+        "aEs": "Cada lote se envía con un certificado de análisis específico del lote que refleja pruebas de identidad y pureza por HPLC y LC-MS."
+      },
+      {
+        "q": "Can I review a COA before placing an order?",
+        "a": "Yes. COAs are available through our [certificate of analysis library](https://99puritywholesale.com/certificates-of-analysis), or you can request one directly from sales for a specific product or batch.",
+        "qEs": "¿Puedo revisar un COA antes de realizar un pedido?",
+        "aEs": "Sí. Los COA están disponibles a través de nuestra [biblioteca de certificados de análisis](https://99puritywholesale.com/certificates-of-analysis), o puede solicitar uno directamente a ventas para un producto o lote específico."
+      },
+      {
+        "q": "Is bulk or custom-quantity pricing available?",
+        "a": "Yes, for approved accounts. Larger or recurring orders can be quoted directly by sales.",
+        "qEs": "¿Hay precios disponibles para compras a granel o cantidades personalizadas?",
+        "aEs": "Sí, para cuentas aprobadas. Los pedidos grandes o recurrentes pueden ser cotizados directamente por ventas."
+      },
+      {
+        "q": "Does 99 Purity offer custom synthesis or private-label options?",
+        "a": "We offer custom and bulk synthesis for accounts with specific sequence or volume needs. See [services](https://99puritywholesale.com/services) or [contact sales](https://99puritywholesale.com/contact) to discuss requirements.",
+        "qEs": "¿Ofrece 99 Purity opciones de síntesis personalizada o marca privada?",
+        "aEs": "Ofrecemos síntesis personalizada y a granel para cuentas con necesidades específicas de secuencia o volumen. Consulte [servicios](https://99puritywholesale.com/services) o contacte a [ventas](https://99puritywholesale.com/contact) para discutir sus requisitos."
+      },
+      {
+        "q": "What are the research-use restrictions on these products?",
+        "a": "All products are sold for in-vitro laboratory research, analytical testing, and manufacturing use only — not for human or veterinary consumption, diagnostic use, or as dietary supplements. See our [compliance page](https://99puritywholesale.com/compliance) for full terms.",
+        "qEs": "¿Cuáles son las restricciones de uso en investigación para estos productos?",
+        "aEs": "Todos los productos se venden únicamente para investigación de laboratorio in vitro, pruebas analíticas y uso de fabricación — no para consumo humano o veterinario, uso diagnóstico o como suplementos dietéticos. Consulte nuestra [página de cumplimiento](https://99puritywholesale.com/compliance) para ver los términos completos."
+      },
+      {
+        "q": "Do I need to be based in Delaware to order from this page?",
+        "a": "No — this page describes our supply to Delaware specifically, but the account and ordering process is the same nationally. Buyers anywhere in the U.S. can apply through the same [wholesale application](https://99puritywholesale.com/wholesale-application).",
+        "qEs": "¿Necesito estar basado en Delaware para realizar un pedido desde esta página?",
+        "aEs": "No — esta página describe nuestro suministro a Delaware específicamente, pero el proceso de cuenta y pedido es el mismo a nivel nacional. Los compradores de cualquier lugar de EE. UU. pueden solicitarlo a través de la misma [solicitud mayorista](https://99puritywholesale.com/wholesale-application)."
       }
-    ],
-    "researchInstitutions": "prominent research institutes at the leading state universities anchors the state's applied research activity, supported by Wilmington's long history as a chemical and pharmaceutical R&D center and a small but active network of independent research and testing labs.",
-    "universities": "The leading state universities maintains active biopharmaceutical engineering and biotechnology research programs through its prominent research institutes, one of the state's principal sources of life-sciences research activity.",
-    "biotechOverview": "Delaware's biotech and pharmaceutical sector traces back to Wilmington's chemical-industry roots and continues today through a concentration of biopharmaceutical manufacturing and research operations, supported by the state's business-friendly regulatory environment.",
-    "industriesWeSupply": "We supply university research labs, compounding pharmacies, and independent research organizations across Delaware, from Wilmington's research district to the state's smaller coastal and southern communities. Compounds frequently sourced by our Delaware accounts include NAD+ and BPC-157."
+    ]
   },
   {
     "slug": "florida",
