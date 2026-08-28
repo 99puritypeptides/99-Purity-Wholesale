@@ -215,7 +215,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
       ]} />
       
       {/* Grain overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-44 pb-20 md:pt-56 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
@@ -584,7 +584,7 @@ export default async function LocationTemplatePage({ params }: { params: { local
 
                 {/* Primary CTA Card */}
                 <div id="wholesale-inquiry" className="scroll-mt-36 bg-[#0D0E10] text-white border border-white/5 rounded-[2.5rem] p-6 md:p-8 shadow-2xl relative overflow-hidden group">
-                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
                   
                   <h3 className="text-xl md:text-2xl font-absans font-bold text-white uppercase tracking-tight mb-2">
                     {t('contactTitle', { city: location.city })}

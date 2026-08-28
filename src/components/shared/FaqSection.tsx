@@ -73,7 +73,7 @@ export default function FaqSection({
       {includeSchema && <FaqSchema items={items} />}
       {/* Subtle Grain Background in dark mode */}
       {!isLight && (
-        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('/images/noise.svg')]" />
       )}
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">

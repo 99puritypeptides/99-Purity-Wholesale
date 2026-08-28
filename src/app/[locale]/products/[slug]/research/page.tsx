@@ -161,6 +161,9 @@ export default async function ResearchPaperPage({
   // Retrieve translated FAQs array
   const faqs = (t.raw('faqs') || []) as { q: string; a: string }[];
 
+  // Non-chemical SKU: a DNA collection kit has no chromatogram or molecular data.
+  const isDnaKit = product.slug === 'pathway-genetic-optimization-test';
+
   // Generate HPLC SVG chromatogram peak details
   const rt = research.retentionTime;
   return (
@@ -261,7 +264,7 @@ export default async function ResearchPaperPage({
           <div className="absolute inset-0 bg-gradient-to-b from-[#13a7b7]/5 via-transparent to-transparent" />
           <div className="absolute -top-[200px] left-[10%] w-[500px] h-[500px] bg-[#13a7b7]/5 rounded-full blur-[120px]" />
           <div className="absolute top-[100px] right-[5%] w-[400px] h-[400px] bg-zinc-500/5 rounded-full blur-[100px]" />
-          <div className="absolute inset-0 opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.02] bg-[url('/images/noise.svg')]" />
         </div>
 
         {/* Global Navigation Bar */}
@@ -422,6 +425,7 @@ export default async function ResearchPaperPage({
               </FadeIn>
 
               {/* SECTION: HPLC Chromatogram Visualizer */}
+              {!isDnaKit && (
               <FadeIn delay={0.25}>
                 <section id="hplc-report" className="space-y-6 page-break-avoid">
                   <h3 className="font-absans text-lg md:text-xl font-bold uppercase tracking-tight text-[#101827] flex items-center gap-2">
@@ -564,6 +568,7 @@ export default async function ResearchPaperPage({
                   </div>
                 </section>
               </FadeIn>
+              )}
 
               {/* SECTION: Mechanism & Cellular Pathways */}
               <FadeIn delay={0.3}>

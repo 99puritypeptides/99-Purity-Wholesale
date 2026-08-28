@@ -84,7 +84,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-radial-vignette opacity-80 z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-accent/15 via-[#090C11] to-[#090C11] z-10" />
-          <div className="absolute inset-0 opacity-[0.015] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] z-10" />
+          <div className="absolute inset-0 opacity-[0.015] bg-[url('/images/noise.svg')] z-10" />
         </div>
 
         <div className="relative z-20 max-w-4xl w-full text-center flex flex-col items-center">
@@ -153,7 +153,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
       {/* Search Directory Module */}
       <section className="bg-[#F8F8F6] py-16 border-b border-black/5 relative overflow-hidden">
         {/* Subtle Light Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <div className="text-center mb-10">
@@ -178,7 +178,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
 
       {/* Redesigned Categories Library */}
       <section className="relative z-10 overflow-hidden bg-[#060B17] py-24 md:py-32 border-b border-white/5">
-        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
@@ -201,7 +201,7 @@ export default async function ProductsPage({ params: { locale } }: { params: { l
             {categories.map((cat) => (
               <div key={cat.id} className="reveal-card">
                 <div className="group relative h-[460px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20">
-                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
 
                   <div className="flex h-full flex-col justify-between relative z-10">
                     <div>

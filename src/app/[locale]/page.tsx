@@ -96,11 +96,9 @@ export default async function HomePage({ params }: { params: { locale: string } 
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
-            <h1 className="reveal-text font-absans text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tighter uppercase mb-8 lg:mb-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-              {t('Hero.title')}
-            </h1>
-          </FadeIn>
+          <h1 className="font-absans text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tighter uppercase mb-8 lg:mb-10 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+            {t('Hero.title')}
+          </h1>
 
           <FadeIn delay={0.4}>
             <p className="font-archia text-base md:text-xl text-white/40 leading-relaxed mb-10 lg:mb-16 max-w-2xl font-medium">
@@ -230,7 +228,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
@@ -270,7 +268,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
                   href={`/products#${cat.id}`} 
                   className="group relative h-[400px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20"
                 >
-                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
 
                   <div className="flex h-full flex-col justify-between relative z-10">
                     <div>
@@ -291,7 +289,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
             <div className="reveal-card">
               <Link href="/products" className="group relative h-[400px] w-full block rounded-[2.5rem] bg-white p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2">
-                <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/images/noise.svg')]" />
                 <div className="flex h-full flex-col items-start justify-between relative z-10">
                   <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white">
                     <FlaskConical className="h-6 w-6" />
@@ -321,7 +319,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         </div>
 
         {/* Subtle Light Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <FadeIn className="max-w-3xl mb-24">
@@ -437,7 +435,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
         </div>
 
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto grid grid-cols-1 gap-14 px-6 lg:grid-cols-2 lg:px-12 relative z-10">
           <FadeIn className="lg:col-span-1">
@@ -498,7 +496,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
         </div>
 
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <FadeIn className="mx-auto mb-24 max-w-3xl text-center">

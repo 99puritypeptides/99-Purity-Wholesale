@@ -61,7 +61,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       {/* Grain overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
@@ -325,7 +325,7 @@ export default function LocationsClient({ locations }: LocationsClientProps) {
       {/* All 50 States Banner */}
       <section id="pricing-inquiry" className="scroll-mt-36 py-24 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
         {/* Dark Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
           <FadeIn>

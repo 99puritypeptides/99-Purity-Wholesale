@@ -29,7 +29,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       {/* Hero Section - Elegant Light Off-White */}
       <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
         {/* Light Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
           <div>
@@ -55,7 +55,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       {/* Brand Story - Stealth Luxury Black with Overlapping Image Collage */}
       <section className="py-24 md:py-32 bg-[#05080C] text-white relative border-b border-white/5 overflow-hidden">
         {/* Dark Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -249,7 +249,7 @@ export default async function AboutPage({ params: { locale } }: { params: { loca
       {/* Who We Serve - Stealth Luxury Black with Creative Interactive Split Card */}
       <section className="py-24 md:py-32 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
         {/* Dark Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

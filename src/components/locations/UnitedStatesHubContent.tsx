@@ -166,7 +166,7 @@ export default function UnitedStatesHubContent() {
 
       {/* 4. Institutions Served (GEO Content) */}
       <section className="bg-[#05080C] text-white border border-white/5 rounded-[3rem] p-8 md:p-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <FadeIn className="relative z-10 flex flex-col gap-12">
           <div>

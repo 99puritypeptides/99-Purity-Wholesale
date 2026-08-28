@@ -126,9 +126,12 @@ export default function FloatingWhatsApp() {
           {/* Close Tooltip Button */}
           <button 
             onClick={(e) => { e.stopPropagation(); setShowTooltip(false); }}
+            aria-label="Close Support Tooltip"
+            title="Close Support Tooltip"
             className="ml-1 sm:ml-2 p-1 text-white/40 hover:text-white hover:bg-white/10 rounded-lg transition-all"
           >
-            <X className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+            <X className="w-2.5 h-2.5 sm:w-3 sm:h-3" aria-hidden="true" />
+            <span className="sr-only">Close Support Tooltip</span>
           </button>
           {/* Tooltip Arrow */}
           <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-black border-r border-b border-white/10 rotate-45" />

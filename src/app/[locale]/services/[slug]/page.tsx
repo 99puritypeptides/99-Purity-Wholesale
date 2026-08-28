@@ -107,7 +107,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative overflow-hidden pt-44 pb-20 md:pt-56 md:pb-32 bg-[#05080C] text-white">
         {/* Abstract Dark Gradients / Noise */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">

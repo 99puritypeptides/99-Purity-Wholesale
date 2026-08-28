@@ -80,6 +80,7 @@ export default function Header() {
                   alt="99 Purity Wholesale"
                   width={200}
                   height={50}
+                  sizes="(max-width: 768px) 140px, 200px"
                   className="w-auto h-8 md:h-14 object-contain"
                   priority
                 />
@@ -106,7 +107,7 @@ export default function Header() {
               
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[480px] bg-[#0F0F0F] border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.5)] rounded-[2.5rem] p-8 opacity-0 invisible group-hover/cat:opacity-100 group-hover/cat:visible transition-all duration-500 translate-y-2 group-hover/cat:translate-y-0 z-[100] overflow-hidden">
                 {/* Subtle Background Pattern */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-8 px-2">
@@ -185,14 +186,18 @@ export default function Header() {
           {/* Right Actions Section */}
           <div className="flex-1 flex justify-end items-center gap-1 md:gap-5 self-stretch pr-1">
             <div className="relative group/lang hidden sm:block">
-              <button className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-black/[0.03] transition-colors text-black/60 hover:text-black text-[13px] font-bold uppercase">
+              <button 
+                aria-label="Select Language"
+                className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-black/[0.03] transition-colors text-black/60 hover:text-black text-[13px] font-bold uppercase"
+              >
                 <Globe className="w-4 h-4" />
                 {locale}
                 <ChevronDown className="w-3 h-3 opacity-30 group-hover/lang:rotate-180 transition-transform" />
+                <span className="sr-only">Select Language</span>
               </button>
               
               <div className="absolute top-full right-0 mt-6 w-44 bg-[#0F0F0F] border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.5)] rounded-[2rem] p-3 opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible transition-all duration-500 translate-y-2 group-hover/lang:translate-y-0 z-[100] overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
                 
                 <div className="relative z-10 space-y-1">
                   {[
@@ -225,14 +230,17 @@ export default function Header() {
             <div className="relative group/search">
               <button 
                 onClick={() => setIsSearchOpen(true)}
+                aria-label="Search Catalog"
+                title="Search Catalog"
                 className="p-2 md:p-3.5 rounded-full bg-black/[0.03] hover:bg-black/[0.08] transition-colors text-black/70 active:scale-95"
               >
-                <Search className="w-5 md:w-5.5 h-5 md:h-5.5" />
+                <Search className="w-5 md:w-5.5 h-5 md:h-5.5" aria-hidden="true" />
+                <span className="sr-only">Search Catalog</span>
               </button>
 
               {/* Enhanced Stealth Luxury Search Tooltip */}
               <div className="absolute top-full right-0 mt-6 w-72 bg-[#0F0F0F] text-white border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.4)] rounded-[2rem] p-8 opacity-0 invisible group-hover/search:opacity-100 group-hover/search:visible transition-all duration-500 scale-95 group-hover/search:scale-100 translate-y-2 group-hover/search:translate-y-0 z-[100] pointer-events-none overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
                 
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
@@ -276,8 +284,11 @@ export default function Header() {
             <button 
               className="xl:hidden p-2 md:p-3 rounded-full bg-black/5 text-black transition-transform active:scale-90"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle Navigation Menu"
+              title="Toggle Navigation Menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 md:w-7 h-6 md:h-7" /> : <Menu className="w-6 md:w-7 h-6 md:h-7" />}
+              {isMobileMenuOpen ? <X className="w-6 md:w-7 h-6 md:h-7" aria-hidden="true" /> : <Menu className="w-6 md:w-7 h-6 md:h-7" aria-hidden="true" />}
+              <span className="sr-only">Toggle Navigation Menu</span>
             </button>
           </div>
         </div>

@@ -128,7 +128,7 @@ export default async function CalculatorPage({ params }: { params: { locale: str
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
         {/* Light Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-52 pb-12 md:pt-64 md:pb-16 border-b border-black/5 bg-[#F8F8F6]">

@@ -69,7 +69,7 @@ export default function CartDrawer() {
         }`}
       >
         {/* Subtle Grain Overlay */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
         {/* Header */}
         <header className="relative z-10 px-8 py-8 flex items-center justify-between border-b border-black/5 bg-white/50 backdrop-blur-md">
@@ -96,6 +96,7 @@ export default function CartDrawer() {
             aria-label="Close drawer"
           >
             <X className="w-5 h-5 transition-transform group-hover:rotate-90" />
+            <span className="sr-only">Close drawer</span>
           </button>
         </header>
 

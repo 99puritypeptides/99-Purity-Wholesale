@@ -132,53 +132,6 @@ export default function ProductGallery({ images, productName, categoryName, spec
           {getDosageLabel(currentImage)}
         </div>
       </div>
-
-      {/* Multiple Image Thumbnails Grid */}
-      {images.length > 1 && (
-        <div className="flex flex-col gap-2.5">
-          <span className="font-absans text-[9px] font-bold uppercase tracking-[0.25em] text-black/40 block mb-1">
-            Available Concentrated Variations ({images.length})
-          </span>
-          <div className="grid grid-cols-4 gap-3.5 w-full">
-            {images.map((img, idx) => {
-              const isActive = idx === activeIndex;
-              const dosage = getDosageLabel(img);
-
-              return (
-                <button
-                  key={img}
-                  onClick={() => setActiveIndex(idx)}
-                  className={`group relative aspect-square rounded-xl border flex flex-col items-center justify-center p-2.5 bg-white transition-all duration-300 ${
-                    isActive 
-                      ? "border-black shadow-[0_8px_20px_rgba(0,0,0,0.04)] ring-1 ring-black scale-102" 
-                      : "border-black/5 hover:border-black/20 hover:shadow-sm"
-                  }`}
-                >
-                  {/* Thumbnail Image */}
-                  <div className="relative w-[75%] h-[75%] flex items-center justify-center overflow-hidden mb-1">
-                    <Image 
-                      src={`/product-images/${img}`}
-                      alt={`${productName} Wholesale Reference Standard - View ${idx + 1}`}
-                      fill
-                      sizes="120px"
-                      className="object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  
-                  {/* Miniature Label badge */}
-                  <span className={`text-[7px] font-bold font-dm-mono tracking-wider leading-none mt-auto px-1.5 py-0.5 rounded ${
-                    isActive 
-                      ? "bg-black text-white" 
-                      : "bg-black/5 text-black/60 group-hover:bg-black/10 group-hover:text-black"
-                  }`}>
-                    {dosage}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

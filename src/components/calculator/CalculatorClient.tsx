@@ -97,7 +97,7 @@ export default function CalculatorClient() {
       <div className="lg:col-span-7 flex flex-col gap-6">
         {/* Card 1: Reconstitution Parameters */}
         <div className="bg-white border border-black/5 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
           
           <div className="relative z-10 flex flex-col gap-8">
             {/* Vial size input */}
@@ -303,7 +303,7 @@ export default function CalculatorClient() {
 
         {/* Card 2: B2B Procurement Ancillaries */}
         <div className="bg-[#0D0E10] text-white border border-white/5 rounded-[2.5rem] p-8 shadow-xl relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
           
           <div className="relative z-10">
             <h3 className="text-xl font-bold font-absans uppercase tracking-wider mb-3">
@@ -329,7 +329,7 @@ export default function CalculatorClient() {
       <div className="lg:col-span-5 flex flex-col gap-6">
         {/* Result values Panel */}
         <div className="bg-white border border-black/5 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden flex flex-col gap-6">
-          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
 
           <div className="relative z-10">
             <h3 className="text-sm font-bold text-black/40 uppercase tracking-widest mb-6">
@@ -375,7 +375,7 @@ export default function CalculatorClient() {
 
         {/* Syringe SVG Artboard */}
         <div className="bg-white border border-black/5 rounded-[2.5rem] p-8 shadow-sm flex flex-col items-center justify-center relative overflow-hidden min-h-[580px]">
-          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
           
           <div className="relative z-10 w-full flex flex-col items-center">
             {/* SVG Visualizer */}

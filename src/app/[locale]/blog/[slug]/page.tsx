@@ -185,24 +185,23 @@ const mdxComponents = {
 function generateBlogKeywords(title: string, slug: string) {
   const normSlug = slug.toLowerCase();
   const keywords = [
-    title,
     'wholesale research peptides',
     'peptide synthesis',
     'laboratory compliance',
   ];
 
   if (normSlug.includes('spps') || normSlug.includes('lpps') || normSlug.includes('synthesis')) {
-    keywords.push('SPPS peptide synthesis', 'LPPS solution phase', 'hybrid peptide synthesis', 'peptide manufacturing', 'solid phase peptide synthesis');
+    keywords.unshift('SPPS peptide synthesis', 'LPPS solution phase', 'hybrid peptide synthesis', 'peptide manufacturing', 'solid phase peptide synthesis');
   } else if (normSlug.includes('verify') || normSlug.includes('supplier')) {
-    keywords.push('verify peptide supplier', 'COA audit', 'HPLC purity test', 'LC-MS mass spec', 'RUO compliance');
+    keywords.unshift('peptide supplier verification', 'verify peptide supplier', 'COA audit', 'HPLC purity test', 'LC-MS mass spec', 'RUO compliance');
   } else if (normSlug.includes('fluorescence') || normSlug.includes('luminescence')) {
-    keywords.push('fluorescence spectroscopy', 'chemiluminescence assay', 'bioluminescence imaging', 'signal-to-noise ratio', 'spectrofluorometer');
+    keywords.unshift('fluorescence spectroscopy', 'chemiluminescence assay', 'bioluminescence imaging', 'signal-to-noise ratio', 'spectrofluorometer');
   } else if (normSlug.includes('bpc')) {
-    keywords.push('BPC-157 wholesale', 'BPC-157 supplier', 'tissue repair research', 'peptide recovery');
+    keywords.unshift('BPC-157 wholesale', 'BPC-157 supplier', 'tissue repair research', 'peptide recovery');
   } else if (normSlug.includes('glp') || normSlug.includes('semaglutide') || normSlug.includes('tirzepatide')) {
-    keywords.push('GLP-1 wholesale', 'semaglutide research', 'tirzepatide supplier', 'metabolic peptides');
+    keywords.unshift('GLP-1 wholesale', 'semaglutide research', 'tirzepatide supplier', 'metabolic peptides');
   } else if (normSlug.includes('nad')) {
-    keywords.push('NAD+ wholesale', 'NAD+ longevity research', 'cellular health peptides');
+    keywords.unshift('NAD+ wholesale', 'NAD+ longevity research', 'cellular health peptides');
   }
 
   return keywords;
@@ -288,7 +287,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
         {/* Post Header - Elegant Light Off-White Linen Hero */}
         <section className="relative overflow-hidden pt-52 pb-20 md:pt-64 md:pb-28 border-b border-black/5 bg-[#F8F8F6]">
           {/* Light Noise Texture */}
-          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
           
           <div className="container mx-auto px-6 max-w-5xl relative z-10">
             <FadeIn>
@@ -321,7 +320,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
         {/* Post Dynamic 2-Column Content - Stealth Luxury Dark Section */}
         <section className="py-24 md:py-32 bg-[#05080C] text-white border-t border-white/5 relative overflow-hidden">
           {/* Dark Noise Texture */}
-          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+          <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
           
           <div className="container mx-auto px-6 max-w-7xl relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">

@@ -58,7 +58,7 @@ export default async function GlossaryPage({ params: { locale } }: { params: { l
         dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetSchema) }}
       />
       {/* Grain overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-44 pb-20 md:pt-56 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">

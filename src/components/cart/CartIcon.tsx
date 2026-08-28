@@ -23,8 +23,11 @@ export default function CartIcon() {
     <div className="group relative flex items-center">
       <button
         onClick={() => dispatch({ type: 'OPEN_DRAWER' })}
+        aria-label="View Inquiry Cart"
+        title="View Inquiry Cart"
         className="flex items-center gap-3 px-4 py-2 rounded-full hover:bg-black/[0.03] transition-all duration-300 active:scale-95"
       >
+        <span className="sr-only">View Inquiry Cart</span>
         <div className="relative">
           <svg
             width="20"
@@ -62,7 +65,7 @@ export default function CartIcon() {
       {/* Enhanced Stealth Luxury Tooltip */}
       <div className="absolute top-full right-0 mt-6 w-72 bg-[#0F0F0F] text-white border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.4)] rounded-[2rem] p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 scale-95 group-hover:scale-100 translate-y-2 group-hover:translate-y-0 z-[100] pointer-events-none overflow-hidden">
         {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-6">

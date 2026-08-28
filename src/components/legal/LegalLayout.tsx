@@ -64,7 +64,7 @@ export default function LegalLayout({ title, badge, lastUpdated, sections }: Leg
   return (
     <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32 relative overflow-hidden">
       {/* Grain overlay */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
       {/* Hero Header */}
       <section className="relative overflow-hidden pt-44 pb-16 md:pt-56 md:pb-24 border-b border-black/5 bg-[#F8F8F6]">

@@ -32,7 +32,7 @@ export default function GlobalCTA({
     <section className="relative z-10 px-4 md:px-6 py-20 bg-white overflow-hidden">
       <div className="reveal-card-3d max-w-[1400px] mx-auto relative overflow-hidden bg-[#0F0F0F] rounded-[2.5rem] md:rounded-[4rem] px-6 py-24 md:py-32 flex flex-col items-center text-center">
         {/* Subtle Grainy Texture Overlay */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         {/* Badge */}
         {badge && (

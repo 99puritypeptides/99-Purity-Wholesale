@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ShieldCheck, Mail, Zap, CheckCircle2, FileText, Beaker, ChevronRight, Box, FlaskConical, MapPin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import productsData from '@/data/products.json';
+import { getProductContent } from '@/data/productContent';
 import locationsData from '@/data/locations.json';
 import citiesData from '@/data/cities.json';
 import { getTranslations } from 'next-intl/server';
@@ -69,6 +70,218 @@ export async function generateMetadata(props: any) {
 const productSpecImagesMap = {
   "5-amino-1mq": {
     "10mg": "5-AMINO-1MQ 50mg.webp",
+  },
+  "5-amino-1mq-spray": {
+    "50mg": "5-amino-1mq-spray-50mg.jpg",
+  },
+  "tirzepatide-spray": {
+    "10mg": "tirzepatide-spray-10mg.jpg",
+    "20mg": "tirzepatide-spray-20mg.jpg",
+    "30mg": "tirzepatide-spray-30mg.jpg",
+  },
+  "semaglutide-spray": {
+    "5mg": "semaglutide-spray-5mg.jpg",
+    "10mg": "semaglutide-spray-10mg.jpg",
+    "20mg": "semaglutide-spray-20mg.jpg",
+    "30mg": "semaglutide-spray-30mg.jpg",
+  },
+  "retatrutide-spray": {
+    "10mg": "retatrutide-spray-10mg.jpg",
+    "20mg": "retatrutide-spray-20mg.jpg",
+    "30mg": "retatrutide-spray-30mg.jpg",
+    "60mg": "retatrutide-spray-60mg.jpg",
+  },
+  "thymosin-alpha-1-spray": {
+    "10mg": "thymosin-alpha-1-spray-10mg.jpg",
+  },
+  "tesamorelin-spray": {
+    "10mg": "tesamorelin-spray-10mg.jpg",
+    "20mg": "tesamorelin-spray-20mg.jpg",
+  },
+  "tesamorelin-ipamorelin-spray": {
+    "10mg": "tesamorelin-spray-10mg.jpg",
+  },
+  "tb-500-spray": {
+    "5mg": "tb-500-spray-5mg.jpg",
+    "10mg": "tb-500-spray-10mg.jpg",
+  },
+  "snap-8-spray": {
+    "10mg": "snap-8-spray-10mg.jpg",
+    "20mg": "snap-8-spray-20mg.jpg",
+  },
+  "sermorelin-spray": {
+    "10mg": "sermorelin-spray-10mg.jpg",
+    "20mg": "sermorelin-spray-20mg.jpg",
+  },
+  "ss-31-spray": {
+    "10mg": "ss-31-spray-10mg.jpg",
+    "50mg": "ss-31-spray-50mg.jpg",
+  },
+  "mots-c-spray": {
+    "10mg": "mots-c-spray-10mg.jpg",
+    "40mg": "mots-c-spray-40mg.jpg",
+  },
+  "melanotan-1-spray": {
+    "10mg": "melanotan-1-spray-10mg.jpg",
+  },
+  "ll-37-spray": {
+    "1mg": "ll-37-spray-1mg.jpg",
+  },
+  "lipo-c-spray": {
+    "120mg": "lipo-c-spray-120mg.jpg",
+  },
+  "l-carnitine-spray": {
+    "400mg": "l-carnitine-spray-400mg.jpg",
+  },
+  "klow-spray": {
+    "80mg": "klow-blend-spray-80mg.jpg",
+  },
+  "kisspeptin-spray": {
+    "10mg": "kisspeptin-spray-10mg.jpg",
+  },
+  "ipamorelin-spray": {
+    "5mg": "ipamorelin-spray-5mg.jpg",
+    "10mg": "ipamorelin-spray-10mg.jpg",
+  },
+  "igf-1-lr3-spray": {
+    "1mg": "igf-1-lr3-spray-1mg.jpg",
+  },
+  "hcg-spray": {
+    "5000IU": "hcg-spray-5000iu.jpg",
+    "10000IU": "hcg-spray-10000iu.jpg",
+  },
+  "h-frag-spray": {
+    "5mg": "h-frag-spray-5mg.jpg",
+  },
+  "glutathione-spray": {
+    "600mg": "glutathione-spray-600mg.jpg",
+    "1500mg": "glutathione-spray-1500mg.jpg",
+  },
+  "glow-spray": {
+    "70mg": "glow-blend-spray-70mg.jpg",
+  },
+  "ghrp-6-spray": {
+    "10mg": "ghrp-6-spray-10mg.jpg",
+  },
+  "ghrp-2-spray": {
+    "100mg": "ghrp-2-spray-100mg.jpg",
+  },
+  "dihexa-spray": {
+    "10mg": "dihexa-spray-10mg.jpg",
+  },
+  "cjc-1295-ipamorelin-spray": {
+    "10mg": "cjc-1295-ipamorelin-spray-10mg.jpg",
+  },
+  "cjc-1295-dac-spray": {
+    "5mg": "cjc-1295-dac-spray-5mg.jpg",
+  },
+  "cjc-1295-no-dac-spray": {
+    "10mg": "cjc-1295-no-dac-spray-10mg.jpg",
+  },
+  "cagrilintide-spray": {
+    "10mg": "cagrilintide-spray-10mg.jpg",
+  },
+  "bpc-157-tb-500-spray": {
+    "10mg": "bpc-157-tb-500-spray-10mg.jpg",
+    "20mg": "bpc-157-tb-500-spray-20mg.jpg",
+  },
+  "ara-290-spray": {
+    "10mg": "ara-290-spray-10mg.jpg",
+  },
+  "aod9604-spray": {
+    "5mg": "aod9604-spray-5mg.jpg",
+    "10mg": "aod9604-spray-10mg.jpg",
+  },
+  "ahk-cu-spray": {
+    "50mg": "ahk-cu-50mg.png",
+    "100mg": "ahk-cu-100mg.png",
+  },
+  "bioregulator-core-panel": {
+    "20mg": "bioregulator-core-panel.webp",
+  },
+  "bioregulator-full-master-set": {
+    "20mg": "bioregulator-full-master-set.webp",
+  },
+  "bioregulator-cardiovascular": {
+    "20mg": "bioregulator-cardiovascular.webp",
+  },
+  "bioregulator-hepatic-digestive": {
+    "20mg": "bioregulator-hepatic-digestive.webp",
+  },
+  "bioregulator-immune-thymic": {
+    "20mg": "bioregulator-immune-thymic.webp",
+  },
+  "bioregulator-neuro-pineal": {
+    "20mg": "bioregulator-neuro-pineal.webp",
+  },
+  "bioregulator-respiratory": {
+    "20mg": "bioregulator-respiratory.webp",
+  },
+  "bioregulator-urogenital": {
+    "20mg": "bioregulator-urogenital.webp",
+  },
+  "advanced-nootropic": {
+    "50mg": "bundle-advanced-nootropic.webp",
+  },
+  "advanced-repair-immune": {
+    "35mg": "bundle-advanced-repair-immune.webp",
+  },
+  "body-composition-kit": {
+    "20mg": "bundle-body-composition.webp",
+  },
+  "classic-secretagogue": {
+    "10mg": "bundle-classic-secretagogue.webp",
+  },
+  "extended-gh-igf": {
+    "11mg": "bundle-extended-gh-igf.webp",
+  },
+  "gh-secretagogue": {
+    "10mg": "bundle-gh-secretagogue.webp",
+  },
+  "gut-mucosal-panel": {
+    "25mg": "bundle-gut-mucosal-panel.webp",
+  },
+  "incretin-amylin": {
+    "15mg": "bundle-incretin-amylin.webp",
+  },
+  "longevity-mitochondrial": {
+    "170mg": "bundle-longevity-mitochondrial.webp",
+  },
+  "melanocortin-reproductive": {
+    "30mg": "bundle-melanocortin-reproductive.webp",
+  },
+  "metabolic-activation": {
+    "170mg": "bundle-metabolic-activation.webp",
+  },
+  "metabolic-support": {
+    "25mg": "bundle-metabolic-support.webp",
+  },
+  "nad-antioxidant": {
+    "710mg": "bundle-nad-antioxidant.webp",
+  },
+  "neuro-core": {
+    "20mg": "bundle-neuro-core.webp",
+  },
+  "recovery-sleep-stress": {
+    "25mg": "bundle-recovery-sleep-stress.webp",
+  },
+  "repair-trio": {
+    "60mg": "bundle-repair-trio.webp",
+  },
+  "reproductive-hpg-axis": {
+    "20mg": "bundle-reproductive-hpg-axis.webp",
+  },
+  "skin-cosmetic": {
+    "660mg": "bundle-skin-cosmetic.webp",
+  },
+  "vascular-immune-protection": {
+    "31mg": "bundle-vascular-immune-protection.webp",
+  },
+  "senescence-stack": {
+    "20mg": "bundle-senescence-stack.webp",
+  },
+  "pathway-genetic-optimization-test": {
+    "1 Kit": "pathway-genetic-optimization-test.webp",
   },
   "adamax": {
     "5mg": "adamax-5mg.webp",
@@ -363,7 +576,18 @@ export default async function ProductPage({ params }: { params: { locale: string
 
   // Dynamically enrich descriptions and define 8 comprehensive localized FAQs at runtime
   const isEs = params.locale === 'es';
-  const isLiquid = product.slug === 'bac-water' || product.slug === 'lipo-c';
+  // Pre-dissolved metered-spray SKUs. Scoped to slugs that have been content-reviewed —
+  // the older `*-spray` entries still fall through to the lyophilized template copy.
+  const SPRAY_SLUGS = ['5-amino-1mq-spray', 'tirzepatide-spray', 'semaglutide-spray',
+    'retatrutide-spray', 'thymosin-alpha-1-spray', 'tesamorelin-spray', 'tesamorelin-ipamorelin-spray', 'tb-500-spray', 'snap-8-spray', 'sermorelin-spray', 'ss-31-spray', 'mots-c-spray', 'melanotan-1-spray', 'll-37-spray', 'lipo-c-spray', 'l-carnitine-spray', 'klow-spray', 'kisspeptin-spray', 'ipamorelin-spray', 'igf-1-lr3-spray', 'hcg-spray', 'h-frag-spray', 'glutathione-spray', 'glow-spray', 'ghrp-6-spray', 'ghrp-2-spray', 'dihexa-spray', 'cjc-1295-ipamorelin-spray', 'cjc-1295-dac-spray', 'cjc-1295-no-dac-spray', 'cagrilintide-spray', 'bpc-157-tb-500-spray', 'ara-290-spray', 'aod9604-spray', 'ahk-cu-spray'];
+  const isSpray = SPRAY_SLUGS.includes(product.slug);
+  // Non-chemical SKU: a DNA sample collection kit, not a synthesized compound.
+  const isDnaKit = product.slug === 'pathway-genetic-optimization-test';
+  const isLiquid = product.slug === 'bac-water' || product.slug === 'lipo-c' || isSpray;
+
+  // Bespoke, compound-specific FAQs + dossier for SKUs that have them (see productContent.ts).
+  // Everything else keeps the templated copy generated further down.
+  const customContent = getProductContent(product.slug, isEs);
 
   let physicalForm = t('physicalForms.lyophilized');
   let recommendedStorage = t('storageValues.standard');
@@ -374,17 +598,27 @@ export default async function ProductPage({ params }: { params: { locale: string
   } else if (product.slug === 'lipo-c') {
     physicalForm = t('physicalForms.solution');
     recommendedStorage = t('storageValues.liquid');
+  } else if (isSpray) {
+    physicalForm = t('physicalForms.spray');
+    recommendedStorage = t('storageValues.spray');
+  } else if (isDnaKit) {
+    physicalForm = t('physicalForms.dnaKit');
+    recommendedStorage = t('storageValues.dnaKit');
   }
-  
+
+  const dnaKitExtension = isEs
+    ? ` PATHWAY es una herramienta de bienestar y educación, no un diagnóstico, y no está destinada a diagnosticar, tratar, curar ni prevenir enfermedad alguna. El análisis lo realiza TruLab Dx, un laboratorio asociado con certificación CLIA; la certificación CLIA es un programa de los CMS que regula las operaciones de laboratorio y no evalúa si las afirmaciones de salud de una prueba son clínicamente válidas.`
+    : ` PATHWAY is a wellness and education tool, not a diagnostic, and it is not intended to diagnose, treat, cure, or prevent any disease. Analysis is performed by TruLab Dx, a CLIA-certified partner laboratory; CLIA certification is a CMS program regulating laboratory operations and does not evaluate whether a test's health claims are clinically valid.`;
+
   const descExtension = isEs 
-    ? ` Este compuesto ${isLiquid ? 'líquido' : 'liofilizado'} se sintetiza y purifica con el único propósito de investigación científica. Este material se proporciona estrictamente para fines de investigación de laboratorio e investigación in-vitro en entornos académicos y de desarrollo controlados. No está diseñado, aprobado ni destinado bajo ninguna circunstancia para el consumo humano, uso clínico, diagnóstico médico o administración terapéutica directa.`
-    : ` This ${isLiquid ? 'liquid' : 'lyophilized'} compound is synthesized and purified for the sole purpose of scientific investigation. This material is supplied strictly for laboratory research purposes and in-vitro scientific testing in controlled developmental or academic settings. It is not designed, approved, or intended under any circumstances for human consumption, clinical application, medical diagnostics, or direct therapeutic administration.`;
+    ? ` Este compuesto ${isLiquid ? 'líquido' : (isSpray ? 'líquido' : 'liofilizado')} se sintetiza y purifica con el único propósito de investigación científica. Este material se proporciona estrictamente para fines de investigación de laboratorio e investigación in-vitro en entornos académicos y de desarrollo controlados. No está diseñado, aprobado ni destinado bajo ninguna circunstancia para el consumo humano, uso clínico, diagnóstico médico o administración terapéutica directa.`
+    : ` This ${isLiquid ? 'liquid' : (isSpray ? 'liquid' : 'lyophilized')} compound is synthesized and purified for the sole purpose of scientific investigation. This material is supplied strictly for laboratory research purposes and in-vitro scientific testing in controlled developmental or academic settings. It is not designed, approved, or intended under any circumstances for human consumption, clinical application, medical diagnostics, or direct therapeutic administration.`;
 
   const originalDesc = t.has(`descriptions.${product.slug}`) 
     ? t(`descriptions.${product.slug}`) 
     : product.description;
     
-  const enrichedDescription = `${originalDesc}${descExtension}`;
+  const enrichedDescription = `${originalDesc}${isDnaKit ? dnaKitExtension : descExtension}`;
 
   // Dynamic FAQ values for physical form and storage to optimize for SEO/AEO/GEO/search engines
   const formQ_En = product.slug === 'bac-water'
@@ -427,7 +661,7 @@ export default async function ProductPage({ params }: { params: { locale: string
       ? `La solución líquida Lipo-C debe almacenarse refrigerada entre 2°C y 8°C (36°F a 46°F). No congelar, ya que las temperaturas bajo cero pueden hacer que los ingredientes lipotrópicos activos se precipiten fuera de la solución líquida. Mantenga el vial en posición vertical, lejos de la luz directa y del calor.`
       : `El ${product.name} liofilizado (polvo seco) debe almacenarse a -20°C para conservación a largo plazo (hasta 36 meses) o refrigerado a 2°C a 8°C para estudios activos a corto plazo (hasta 24 meses). Proteger de la luz directa. Importante: Antes de abrir, permita que el vial seco alcance la temperatura ambiente para evitar la condensación y la absorción de humedad. Una vez reconstituido en forma líquida, la solución debe refrigerarse a 2°C a 8°C y analizarse o usarse dentro de 8 a 30 días. No congele la solución líquida reconstituida, ya que los ciclos repetidos de congelación y descongelación causan una degradación química rápida.`);
 
-  const faqs = isEs ? [
+  const templateFaqs = isEs ? [
     {
       q: `¿Cuál es el estándar de pureza de ${product.name} al por mayor?`,
       a: `Todos los lotes de ${product.name} se verifican rigurosamente mediante HPLC (cromatografía líquida de alta resolución) y espectrometría de masas para garantizar un nivel de pureza superior al ≥99.0%. Cada envío de distribución incluye informes analíticos específicos del lote para respaldar sus protocolos de investigación de laboratorio.`
@@ -503,7 +737,9 @@ export default async function ProductPage({ params }: { params: { locale: string
     }
   ];
 
-  // FAQ JSON-LD is emitted by the <FaqSection> below (which renders this same `faqs` array) — no separate script here.
+  const faqs = customContent?.faqs ?? templateFaqs;
+
+  // FAQ JSON-LD is emitted as a FAQPage script below, alongside the Product and BreadcrumbList schemas.
 
   // Get product spec images map
   const specImagesMap = productSpecImagesMap[product.slug as keyof typeof productSpecImagesMap] || {};
@@ -535,6 +771,33 @@ export default async function ProductPage({ params }: { params: { locale: string
     },
   };
 
+  // FAQPage markup for the `faqs` array rendered by <FaqSection> below.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  };
+
+  // Home -> Products -> Category -> Product, matching the visible breadcrumb trail.
+  const localeBase = params.locale === 'en' ? baseUrl : `${baseUrl}/${params.locale}`;
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: localeBase },
+      { '@type': 'ListItem', position: 2, name: t('breadcrumbs.products'), item: `${localeBase}/products` },
+      { '@type': 'ListItem', position: 3, name: localizedCategoryName, item: `${localeBase}/products/${product.category}` },
+      { '@type': 'ListItem', position: 4, name: product.name, item: productUrl },
+    ],
+  };
+
   // Find related products (same category, different slug, max 3)
   const relatedProducts = productsData
     .filter(p => p.category === product.category && p.slug !== product.slug)
@@ -558,7 +821,9 @@ export default async function ProductPage({ params }: { params: { locale: string
   return (
     <div className="flex flex-col min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
       {/* Breadcrumbs Fold */}
       <div className="border-b border-black/5 bg-[#F8F8F6] relative z-20 pt-28 md:pt-36">
         <div className="container mx-auto px-6 py-4 flex items-center gap-2 text-xs font-dm-mono text-black/40 overflow-x-auto whitespace-nowrap">
@@ -575,7 +840,7 @@ export default async function ProductPage({ params }: { params: { locale: string
       {/* Light Showcase Section */}
       <section className="relative z-10 bg-[#F8F8F6] py-16 md:py-24 overflow-hidden">
         {/* Subtle Light Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
 
         <div className="container mx-auto px-6 max-w-[1600px] relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -839,13 +1104,17 @@ export default async function ProductPage({ params }: { params: { locale: string
             
             <div className="space-y-6 text-sm text-black/60 font-archia leading-relaxed font-medium">
               <p>
-                {isEs 
+                {customContent
+                  ? customContent.dossier.applicationProfile
+                  : isEs
                   ? `Como reactivo de referencia química de primer nivel, ${product.name} sirve como una sonda molecular de alta fidelidad indispensable para el cribado experimental, los ensayos celulares de alta resolución y el análisis estructural in-vitro. En los campos de la síntesis avanzada de péptidos y el desarrollo biotecnológico, los investigadores de laboratorio utilizan ${product.name} para examinar detalladamente la afinidad de unión a receptores, el acoplamiento celular y las cascadas metabólicas secundarias.`
                   : `As a premier chemical reference reagent, ${product.name} serves as an indispensable, high-fidelity molecular probe for experimental screening, high-resolution cellular assays, and in-vitro structural analysis. In the fields of advanced peptide synthesis and biotechnological development, laboratory researchers utilize ${product.name} to closely examine receptor binding affinity, cell signaling pathways, and secondary metabolic cascades.`
                 }
               </p>
               <p>
-                {isEs
+                {customContent
+                  ? customContent.dossier.qualityAssurance
+                  : isEs
                   ? `Nuestros protocolos de síntesis se ejecutan bajo los estándares industriales más estrictos para garantizar un producto libre de sales residuales o subproductos sintéticos. Con una pureza confirmada que supera el 99.0%, ${product.name} mitiga el riesgo de variables no deseadas en sus ensayos científicos, ofreciendo reproducibilidad de datos de referencia clínicos y de laboratorio.`
                   : `Our synthesis protocols are executed under the most stringent industrial standards to guarantee a product free of residual salts or synthetic byproducts. With a confirmed purity exceeding 99.0%, ${product.name} mitigates the risk of trace variables in your scientific assays, delivering pristine data reproducibility for peer-reviewed clinical and laboratory reference literature.`
                 }
@@ -865,7 +1134,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                 <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Registro CAS" : "CAS Registry"}</strong> {product.cas !== 'N/A' ? product.cas : 'Peptide Specific'}</li>
                 <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Grado Analítico" : "Analytical Grade"}</strong> &ge;99.0% High-Purity Research Standard</li>
                 <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Uso Autorizado" : "Authorized Intended Use"}</strong> Strictly for Laboratory Research Purposes Only</li>
-                <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Distribución" : "Supply Availability"}</strong> Lyophilized Bulk Kits (10-vial standard)</li>
+                <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Distribución" : "Supply Availability"}</strong> {isSpray ? 'Pre-Dissolved Spray Bulk Kits (10-unit standard)' : 'Lyophilized Bulk Kits (10-vial standard)'}</li>
                 <li><strong className="text-black/80 font-bold uppercase text-[9px] tracking-wider block mb-0.5">{isEs ? "Distribuidor Global" : "Global Authorized Distributor"}</strong> 99 Purity Wholesale</li>
               </ul>
             </div>
@@ -876,7 +1145,11 @@ export default async function ProductPage({ params }: { params: { locale: string
                 {isEs ? "Protocolo de Control de Calidad Analítica" : "Analytical Quality Assurance Loop"}
               </h4>
               <p className="text-xs text-black/55 font-archia leading-relaxed font-medium mb-6">
-                {isEs
+                {isSpray
+                  ? (isEs
+                    ? `Cada lote de ${product.name} se somete a un proceso de verificación cromatográfica de doble pasada. Confirmamos la pureza por HPLC de fase reversa y la identidad por la masa exacta del catión mediante Espectrometría de Masas (LC-MS), junto con la verificación de la concentración de la solución dosificada. Las unidades terminadas se filtran en estéril, se purgan con nitrógeno y se envasan en vidrio ámbar para garantizar la estabilidad molecular a largo plazo.`
+                    : `Every lot of ${product.name} undergoes a double-pass chromatography and verification process. We confirm purity by reverse-phase HPLC and identity by exact cation mass using Liquid Chromatography-Mass Spectrometry (LC-MS), alongside metered-solution concentration verification. Finished units are sterile-filtered, nitrogen-purged, and filled into amber glass for long-term molecular stability.`)
+                  : isEs
                   ? `Cada lote sintético de ${product.name} se somete a un riguroso proceso de control de calidad de dos fases. Confirmamos la masa molecular exacta y la alineación de la secuencia de aminoácidos mediante Cromatografía Líquida de Alta Resolución (HPLC) y Espectrometría de Masas (LC-MS). Las muestras terminadas se purgan con nitrógeno y se sellan herméticamente para garantizar la estabilidad molecular a largo plazo.`
                   : `Every synthetic lot of ${product.name} undergoes an exhaustive, double-pass chromatography and verification process. We confirm molecular mass and exact peptide sequence alignment using High-Performance Liquid Chromatography (HPLC) and Liquid Chromatography-Mass Spectrometry (LC-MS). Finished samples are nitrogen-purged and vacuum-sealed for long-term stability.`
                 }
@@ -938,7 +1211,7 @@ export default async function ProductPage({ params }: { params: { locale: string
                     className="group relative bg-white border border-black/5 rounded-[2.2rem] p-6 hover:border-black/15 transition-all duration-500 flex flex-col hover:-translate-y-2 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.06)] overflow-hidden"
                   >
                     {/* Grainy Noise Overlay for premium luxury depth */}
-                    <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+                    <div className="absolute inset-0 opacity-[0.01] pointer-events-none bg-[url('/images/noise.svg')]" />
                     
                     <Link href={`/products/${rp.slug}`} className="flex flex-col h-full relative z-10">
                       {/* Luxury Product Thumbnail Showcase */}

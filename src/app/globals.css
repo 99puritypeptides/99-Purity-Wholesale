@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    background: url('/images/noise.svg');
     opacity: 0.05;
     pointer-events: none;
     border-radius: inherit;

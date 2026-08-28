@@ -83,7 +83,7 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
       {/* Search Command Palette */}
       <div className="relative w-full max-w-3xl bg-[#0A0A0A] border border-white/10 rounded-3xl md:rounded-[2.5rem] shadow-[0_50px_150px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in zoom-in-95 duration-500 ease-out">
         {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         {/* Search Input Area */}
         <div className="relative z-10 p-5 md:p-8 border-b border-white/5 flex items-center gap-4 md:gap-6 transition-all duration-500 focus-within:bg-white/[0.02] group/input">
@@ -101,9 +101,11 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
           />
           <button 
             onClick={onClose} 
+            aria-label="Close Search Palette"
             className="p-2 md:p-3 hover:bg-white/5 rounded-xl md:rounded-2xl transition-all text-white/20 hover:text-white active:scale-90"
           >
             <X className="w-6 h-6" />
+            <span className="sr-only">Close Search Palette</span>
           </button>
 
           {/* Animated Focus Line */}

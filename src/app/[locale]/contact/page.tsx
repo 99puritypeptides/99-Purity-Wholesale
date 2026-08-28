@@ -53,7 +53,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
         {/* Grain Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
           <div>

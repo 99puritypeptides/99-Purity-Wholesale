@@ -11,6 +11,16 @@
     "description": "Buy 5-AMINO-1MQ online. High-quality metabolic research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "5-Amino-1MQ Spray",
+    "slug": "5-amino-1mq-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "50mg×10"
+    ],
+    "cas": "42464-96-0",
+    "description": "Pre-dissolved 5-Amino-1MQ spray for NNMT enzyme inhibition and NAD+ salvage pathway research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Adamax",
     "slug": "adamax",
     "category": "cognitive-function",
@@ -43,6 +53,17 @@
     ],
     "cas": "221231-10-3",
     "description": "Research-use peptide supplied for scientific and analytical testing only. Not for human consumption."
+  },
+  {
+    "name": "AOD9604 Spray",
+    "slug": "aod9604-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "221231-10-3",
+    "description": "Pre-dissolved AOD9604 spray for the modified growth hormone lipolytic domain. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "B7-33",
@@ -98,6 +119,17 @@
     "description": "Combination research peptide blend intended strictly for controlled laboratory research."
   },
   {
+    "name": "BPC-157 + TB-500 Spray",
+    "slug": "bpc-157-tb-500-spray",
+    "category": "recovery-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Pre-dissolved BPC-157 and TB-500 blend spray pairing angiogenic and actin-binding mechanisms. Laboratory use only."
+  },
+  {
     "name": "BPC 10mg+TB 10mg",
     "slug": "bpc-10mg-tb-10mg",
     "category": "recovery-research",
@@ -117,6 +149,16 @@
     ],
     "cas": "141430-65-1",
     "description": "Research-grade peptide for in-vitro and laboratory research applications only."
+  },
+  {
+    "name": "Cagrilintide Spray",
+    "slug": "cagrilintide-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "1415456-99-3",
+    "description": "Pre-dissolved Cagrilintide spray for amylin and calcitonin receptor research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Cagrisema (2.5+2.5)",
@@ -139,6 +181,16 @@
     "description": "Growth hormone releasing hormone analog with Drug Affinity Complex, synthesized for extended stability and receptor studies."
   },
   {
+    "name": "CJC-1295 (with DAC) Spray",
+    "slug": "cjc-1295-dac-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10"
+    ],
+    "cas": "446262-90-4",
+    "description": "Pre-dissolved CJC-1295 with DAC spray for GHRH receptor research with covalent albumin binding. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "CJC-1295 (no DAC)",
     "slug": "cjc-1295-no-dac",
     "category": "growth-factor-research",
@@ -148,6 +200,16 @@
     ],
     "cas": "863288-34-0",
     "description": "GHRH analog without DAC, researched for pulse-mimicking somatotroph axis stimulation and pituitary studies."
+  },
+  {
+    "name": "CJC-1295 (No DAC) Spray",
+    "slug": "cjc-1295-no-dac-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "863288-34-0",
+    "description": "Pre-dissolved CJC-1295 no-DAC spray, the four-substitution GHRH analog. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "CJC-1295 + Ipam.",
@@ -160,6 +222,16 @@
     "description": "Buy CJC-1295 / Ipamorelin blend online. Top-tier USA-made research blend, independently HPLC tested for scientific studies."
   },
   {
+    "name": "CJC-1295 + Ipamorelin Spray",
+    "slug": "cjc-1295-ipamorelin-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Pre-dissolved CJC-1295 and Ipamorelin blend spray pairing GHRH and ghrelin receptor pathways. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Dihexa",
     "slug": "dihexa",
     "category": "cognitive-function",
@@ -168,6 +240,16 @@
     ],
     "cas": "1401708-83-5",
     "description": "Oligopeptide drug candidate researched for high-affinity hepatocyte growth factor (HGF) signaling and synaptic connectivity."
+  },
+  {
+    "name": "Dihexa Spray",
+    "slug": "dihexa-spray",
+    "category": "cognitive-function",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "1401708-83-5",
+    "description": "Pre-dissolved Dihexa spray for hepatocyte growth factor and c-Met signaling research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "DSIP",
@@ -244,6 +326,16 @@
     "description": "Specialized synergistic peptide formulation designed strictly for in-vitro evaluation of skin remodeling and cellular glow pathways."
   },
   {
+    "name": "GLOW Spray",
+    "slug": "glow-spray",
+    "category": "cellular-health-research",
+    "specs": [
+      "70mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Pre-dissolved GLOW spray combining copper tripeptide with tissue repair peptides. Laboratory use only."
+  },
+  {
     "name": "KLOW Blend",
     "slug": "klow-blend",
     "category": "cellular-health-research",
@@ -252,6 +344,16 @@
     ],
     "cas": "Blend",
     "description": "Advanced cellular health and dermal signaling blend supplied strictly for controlled laboratory research."
+  },
+  {
+    "name": "KLOW Spray",
+    "slug": "klow-spray",
+    "category": "cellular-health-research",
+    "specs": [
+      "80mg×10"
+    ],
+    "cas": "Blend",
+    "description": "Pre-dissolved KLOW spray pairing copper tripeptide with repair and anti-inflammatory peptides. Laboratory use only."
   },
   {
     "name": "Glutathione",
@@ -265,6 +367,17 @@
     "description": "High-purity antioxidant compound supplied strictly for controlled laboratory, analytical, and in-vitro applications."
   },
   {
+    "name": "Glutathione Spray",
+    "slug": "glutathione-spray",
+    "category": "recovery-research",
+    "specs": [
+      "600mg×10",
+      "1500mg×10"
+    ],
+    "cas": "70-18-8",
+    "description": "Pre-dissolved Glutathione spray for redox cycling and antioxidant enzyme research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Ipamorelin",
     "slug": "ipamorelin",
     "category": "growth-factor-research",
@@ -274,6 +387,17 @@
     ],
     "cas": "170851-70-4",
     "description": "Buy Ipamorelin peptides online. USA-synthesized, strictly tested for purity. Available for immediate wholesale supply to qualified labs."
+  },
+  {
+    "name": "Ipamorelin Spray",
+    "slug": "ipamorelin-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "170851-70-4",
+    "description": "Pre-dissolved Ipamorelin spray for selective ghrelin receptor research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "KPV",
@@ -297,6 +421,16 @@
     "description": "Research-grade amino acid formulation intended for analytical testing and laboratory metabolic research only."
   },
   {
+    "name": "L-Carnitine Spray",
+    "slug": "l-carnitine-spray",
+    "category": "aminos",
+    "specs": [
+      "400mg×10"
+    ],
+    "cas": "541-15-1",
+    "description": "Pre-dissolved L-Carnitine spray for carnitine shuttle and fatty acid oxidation research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Lipo-C",
     "slug": "lipo-c",
     "category": "aminos",
@@ -307,6 +441,16 @@
     "description": "Lipotropic compound formulation researched for cellular transport mechanism studies and metabolic biology evaluation."
   },
   {
+    "name": "Lipo-C Spray",
+    "slug": "lipo-c-spray",
+    "category": "aminos",
+    "specs": [
+      "120mg×10"
+    ],
+    "cas": "N/A",
+    "description": "Pre-dissolved Lipo-C spray blending methionine, inositol and choline for hepatic lipid metabolism research. Laboratory use only."
+  },
+  {
     "name": "LL37",
     "slug": "ll37",
     "category": "recovery-research",
@@ -315,6 +459,16 @@
     ],
     "cas": "154947-66-7",
     "description": "Antimicrobial peptide synthesized exclusively for academic, investigational, and clinical-preliminary laboratory research."
+  },
+  {
+    "name": "LL-37 Spray",
+    "slug": "ll-37-spray",
+    "category": "recovery-research",
+    "specs": [
+      "1mg×10"
+    ],
+    "cas": "154947-66-7",
+    "description": "Pre-dissolved LL-37 spray, human cathelicidin, for membrane and immune signaling research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "MIC (Lipo C+B12)",
@@ -338,6 +492,17 @@
     ],
     "cas": "1627580-64-6",
     "description": "Research-grade peptide intended for laboratory and analytical applications only."
+  },
+  {
+    "name": "MOTS-c Spray",
+    "slug": "mots-c-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "40mg×10"
+    ],
+    "cas": "1627580-64-6",
+    "description": "Pre-dissolved MOTS-c spray, a mitochondrial-encoded peptide, for AMPK pathway research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "NAD+",
@@ -367,6 +532,19 @@
     "description": "Buy Retatrutide online. Triple hormone receptor agonist verified at >99% purity. High-quality peptides for advanced metabolic research."
   },
   {
+    "name": "Retatrutide Spray",
+    "slug": "retatrutide-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10",
+      "30mg×10",
+      "60mg×10"
+    ],
+    "cas": "2381089-83-2",
+    "description": "Pre-dissolved Retatrutide spray for triple GLP-1/GIP/glucagon receptor agonist research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Selank",
     "slug": "selank",
     "category": "cognitive-function",
@@ -391,6 +569,19 @@
     "description": "Buy wholesale Semaglutide online. USA-manufactured, 99%+ pure GLP-1 receptor agonist for laboratory and metabolic research."
   },
   {
+    "name": "Semaglutide Spray",
+    "slug": "semaglutide-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10",
+      "20mg×10",
+      "30mg×10"
+    ],
+    "cas": "910463-68-2",
+    "description": "Pre-dissolved Semaglutide spray for selective GLP-1 receptor agonist research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Semax",
     "slug": "semax",
     "category": "cognitive-function",
@@ -413,6 +604,17 @@
     "description": "Growth hormone releasing hormone analog studied for pituitary somatotroph stimulation and analytical research."
   },
   {
+    "name": "Sermorelin Spray",
+    "slug": "sermorelin-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10"
+    ],
+    "cas": "86168-78-7",
+    "description": "Pre-dissolved Sermorelin spray, the minimal GHRH fragment, for pituitary receptor research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Snap-8",
     "slug": "snap-8",
     "category": "growth-factor-research",
@@ -422,6 +624,17 @@
     ],
     "cas": "868844-74-0",
     "description": "Octapeptide compound manufactured strictly for dermatological, cellular signaling, and laboratory research applications only."
+  },
+  {
+    "name": "SNAP-8 Spray",
+    "slug": "snap-8-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10"
+    ],
+    "cas": "868844-74-0",
+    "description": "Pre-dissolved SNAP-8 spray for SNARE complex assembly and vesicle exocytosis research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "SS-31",
@@ -435,6 +648,17 @@
     "description": "Research-use peptide for analytical and investigational laboratory applications only."
   },
   {
+    "name": "SS-31 Spray",
+    "slug": "ss-31-spray",
+    "category": "cellular-health-research",
+    "specs": [
+      "10mg×10",
+      "50mg×10"
+    ],
+    "cas": "736992-21-5",
+    "description": "Pre-dissolved SS-31 spray for cardiolipin binding and mitochondrial bioenergetics research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "TB-500",
     "slug": "tb-500",
     "category": "recovery-research",
@@ -444,6 +668,17 @@
     ],
     "cas": "77591-33-4",
     "description": "Buy TB-500 peptides online for recovery research. Premium USA-synthesized Thymosin Beta-4 fragment for analytical laboratory applications."
+  },
+  {
+    "name": "TB-500 Spray",
+    "slug": "tb-500-spray",
+    "category": "recovery-research",
+    "specs": [
+      "5mg×10",
+      "10mg×10"
+    ],
+    "cas": "77591-33-4",
+    "description": "Pre-dissolved TB-500 spray for actin-sequestering and cell migration research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Tesamorelin",
@@ -458,6 +693,17 @@
     "description": "Research-grade peptide supplied for controlled scientific and analytical applications only."
   },
   {
+    "name": "Tesamorelin Spray",
+    "slug": "tesamorelin-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10"
+    ],
+    "cas": "218949-48-5",
+    "description": "Pre-dissolved Tesamorelin spray for GHRH receptor and pituitary signaling research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Thymalin/Thymulin",
     "slug": "thymalin-thymulin",
     "category": "cellular-health-research",
@@ -466,6 +712,296 @@
     ],
     "cas": "63958-64-9",
     "description": "Thymic factor peptide studied for cellular defense, immune response, and endocrine signaling pathways in analytical models."
+  },
+  {
+    "name": "Bioregulator Core Panel",
+    "slug": "bioregulator-core-panel",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×6"
+    ],
+    "cas": "Blend",
+    "description": "Six-vial ultrashort bioregulator panel spanning six organ systems. ≥99.0% HPLC verified per component. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Full Master Set",
+    "slug": "bioregulator-full-master-set",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×16"
+    ],
+    "cas": "Blend",
+    "description": "All sixteen ultrashort bioregulators across seven organ systems. ≥99.0% HPLC verified per vial. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Cardiovascular",
+    "slug": "bioregulator-cardiovascular",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Cardiogen and Vesugen bioregulator pair for cardiac and vascular tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Hepatic / Digestive",
+    "slug": "bioregulator-hepatic-digestive",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Ovagen, Livagen and Pancragen panel for hepatic and digestive tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Immune / Thymic",
+    "slug": "bioregulator-immune-thymic",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Thymalin, Vilon and Crystagen panel for thymic and immune tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Neuro / Pineal",
+    "slug": "bioregulator-neuro-pineal",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Pinealon and Cortagen pair for pineal and cerebral cortex tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Respiratory",
+    "slug": "bioregulator-respiratory",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Chonluten and Bronchogen pair for bronchial and respiratory tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Bioregulator Urogenital",
+    "slug": "bioregulator-urogenital",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Prostamax, Testagen and Vesilute panel for urogenital tissue research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Advanced Nootropic",
+    "slug": "advanced-nootropic",
+    "category": "cognitive-function",
+    "specs": [
+      "50mg×4"
+    ],
+    "cas": "Blend",
+    "description": "Semax, Selank, Dihexa and P-21 four-vial cognitive research kit. ≥99.0% HPLC verified per vial. Laboratory use only."
+  },
+  {
+    "name": "Advanced Repair & Immune",
+    "slug": "advanced-repair-immune",
+    "category": "recovery-research",
+    "specs": [
+      "35mg×4"
+    ],
+    "cas": "Blend",
+    "description": "BPC-157, TB-500, KPV and LL-37 at elevated strengths. ≥99.0% HPLC verified per vial. Laboratory use only."
+  },
+  {
+    "name": "Body Composition Kit",
+    "slug": "body-composition-kit",
+    "category": "metabolic-research",
+    "specs": [
+      "20mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Tesamorelin, Ipamorelin and AOD9604 three-vial metabolic research kit. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Classic Secretagogue",
+    "slug": "classic-secretagogue",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Sermorelin and GHRP-2, the original GHRH plus ghrelin secretagogue pairing. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Extended GH / IGF",
+    "slug": "extended-gh-igf",
+    "category": "growth-factor-research",
+    "specs": [
+      "11mg×3"
+    ],
+    "cas": "Blend",
+    "description": "CJC-1295 with DAC, Ipamorelin and IGF-1 LR3 spanning release through downstream signaling. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "GH Secretagogue",
+    "slug": "gh-secretagogue",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×2"
+    ],
+    "cas": "Blend",
+    "description": "CJC-1295 and Ipamorelin pairing two receptor systems on one secretion pathway. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Gut & Mucosal Panel",
+    "slug": "gut-mucosal-panel",
+    "category": "recovery-research",
+    "specs": [
+      "25mg×3"
+    ],
+    "cas": "Blend",
+    "description": "BPC-157, KPV and Thymosin Alpha-1 for mucosal barrier and immune signaling research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Incretin + Amylin",
+    "slug": "incretin-amylin",
+    "category": "metabolic-research",
+    "specs": [
+      "15mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Retatrutide and Cagrilintide engaging two separate receptor families. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Longevity & Mitochondrial",
+    "slug": "longevity-mitochondrial",
+    "category": "cellular-health-research",
+    "specs": [
+      "170mg×4"
+    ],
+    "cas": "Blend",
+    "description": "Epithalon, NAD+, SS-31 and 5-Amino-1MQ four-vial cellular energy kit. ≥99.0% HPLC verified per vial. Laboratory use only."
+  },
+  {
+    "name": "Melanocortin & Reproductive",
+    "slug": "melanocortin-reproductive",
+    "category": "metabolic-research",
+    "specs": [
+      "30mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Melanotan-II, PT-141 and Kisspeptin-10 across melanocortin and KISS1R targets. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Metabolic Activation",
+    "slug": "metabolic-activation",
+    "category": "metabolic-research",
+    "specs": [
+      "170mg×4"
+    ],
+    "cas": "Blend",
+    "description": "SLU-PP-332, 5-Amino-1MQ, NAD+ and MOTS-c across ERR, NNMT and AMPK research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Metabolic Support",
+    "slug": "metabolic-support",
+    "category": "metabolic-research",
+    "specs": [
+      "25mg×3"
+    ],
+    "cas": "Blend",
+    "description": "Retatrutide, AOD9604 and MOTS-c spanning incretin, lipolytic and mitochondrial targets. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "NAD+ & Antioxidant",
+    "slug": "nad-antioxidant",
+    "category": "cellular-health-research",
+    "specs": [
+      "710mg×3"
+    ],
+    "cas": "Blend",
+    "description": "NAD+ 100mg, Glutathione 600mg and MOTS-c 10mg for redox and mitochondrial research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Neuro Core",
+    "slug": "neuro-core",
+    "category": "cognitive-function",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Semax and Selank, two Pro-Gly-Pro stabilized neuropeptides from unrelated parents. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Recovery, Sleep & Stress",
+    "slug": "recovery-sleep-stress",
+    "category": "sleep-cycle-investigation",
+    "specs": [
+      "25mg×3"
+    ],
+    "cas": "Blend",
+    "description": "DSIP, Selank and Oxytocin across sleep, GABAergic and neuroendocrine research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Repair Trio",
+    "slug": "repair-trio",
+    "category": "recovery-research",
+    "specs": [
+      "60mg×3"
+    ],
+    "cas": "Blend",
+    "description": "BPC-157, TB-500 and GHK-Cu — the only copper-carrying peptide in the range. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Reproductive / HPG-Axis",
+    "slug": "reproductive-hpg-axis",
+    "category": "metabolic-research",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "Gonadorelin and Kisspeptin-10 at two consecutive levels of the HPG axis. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Skin & Cosmetic",
+    "slug": "skin-cosmetic",
+    "category": "cellular-health-research",
+    "specs": [
+      "660mg×3"
+    ],
+    "cas": "Blend",
+    "description": "GHK-Cu, Glutathione and SNAP-8 across matrix, redox and SNARE-complex research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Vascular, Immune & Protection",
+    "slug": "vascular-immune-protection",
+    "category": "recovery-research",
+    "specs": [
+      "31mg×3"
+    ],
+    "cas": "Blend",
+    "description": "VIP, ARA-290 and Thymosin Alpha-1 across VPAC, innate repair and TLR targets. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "Senescence Stack",
+    "slug": "senescence-stack",
+    "category": "cellular-health-research",
+    "specs": [
+      "20mg×2"
+    ],
+    "cas": "Blend",
+    "description": "FOXO4-DRI and Epithalon pairing p53 interaction disruption with telomerase research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
+    "name": "PATHWAY™ Genetic Optimization Test",
+    "slug": "pathway-genetic-optimization-test",
+    "category": "essentials",
+    "specs": [
+      "1 Kit×1"
+    ],
+    "cas": "N/A",
+    "description": "At-home buccal swab DNA collection kit across seven wellness areas. Processed by a CLIA-certified partner laboratory. Not a diagnostic test."
   },
   {
     "name": "Thymosin Alpha-1",
@@ -477,6 +1013,16 @@
     ],
     "cas": "62304-98-7",
     "description": "High-purity thymic peptide researched for immune system modulation, cell viability, and cellular defense models."
+  },
+  {
+    "name": "Thymosin Alpha-1 Spray",
+    "slug": "thymosin-alpha-1-spray",
+    "category": "cellular-health-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "62304-98-7",
+    "description": "Pre-dissolved Thymosin Alpha-1 spray for Toll-like receptor and T-cell signaling research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Tirzepatide",
@@ -495,6 +1041,18 @@
     ],
     "cas": "2023788-19-2",
     "description": "Buy Tirzepatide peptides online. Premium dual GIP/GLP-1 receptor agonist, independently tested for >99% purity. For research use only."
+  },
+  {
+    "name": "Tirzepatide Spray",
+    "slug": "tirzepatide-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10",
+      "20mg×10",
+      "30mg×10"
+    ],
+    "cas": "2023788-19-2",
+    "description": "Pre-dissolved Tirzepatide spray for dual GIP/GLP-1 receptor agonist research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "VIP",
@@ -578,6 +1136,16 @@
     "description": "Buy H Frag wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "H-Frag Spray",
+    "slug": "h-frag-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "5mg×10"
+    ],
+    "cas": "66004-57-7",
+    "description": "Pre-dissolved H-Frag 176-191 spray for the lipolytic growth hormone domain. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Ghrp 2 10mg",
     "slug": "ghrp-2-10mg",
     "category": "metabolic-research",
@@ -586,6 +1154,16 @@
     ],
     "cas": "N/A",
     "description": "Buy Ghrp 2 10mg wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
+  },
+  {
+    "name": "GHRP-2 Spray",
+    "slug": "ghrp-2-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "100mg×10"
+    ],
+    "cas": "158861-67-7",
+    "description": "Pre-dissolved GHRP-2 spray for ghrelin receptor secretagogue research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Ss 31 Elamipretide",
@@ -608,6 +1186,17 @@
     "description": "Buy Ahk Cu 50mg 100mg wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "AHK-Cu Spray",
+    "slug": "ahk-cu-spray",
+    "category": "cellular-health-research",
+    "specs": [
+      "50mg×10",
+      "100mg×10"
+    ],
+    "cas": "682809-81-0",
+    "description": "Pre-dissolved AHK-Cu spray, a copper tripeptide for dermal papilla research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Pt 141 Bremelanotide",
     "slug": "pt-141-bremelanotide",
     "category": "metabolic-research",
@@ -628,6 +1217,16 @@
     "description": "Buy Kisspeptin wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "Kisspeptin Spray",
+    "slug": "kisspeptin-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "374675-21-5",
+    "description": "Pre-dissolved Kisspeptin-10 spray for KISS1R receptor and GnRH signaling research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Mt 1 10mg",
     "slug": "mt-1-10mg",
     "category": "metabolic-research",
@@ -636,6 +1235,16 @@
     ],
     "cas": "N/A",
     "description": "Buy Mt 1 10mg wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
+  },
+  {
+    "name": "Melanotan-1 Spray",
+    "slug": "melanotan-1-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "75921-69-6",
+    "description": "Pre-dissolved Melanotan-1 spray for selective melanocortin-1 receptor research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Semax Spray",
@@ -768,6 +1377,16 @@
     "description": "Buy Ara 290 10mg wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "ARA-290 Spray",
+    "slug": "ara-290-spray",
+    "category": "recovery-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "1208243-50-8",
+    "description": "Pre-dissolved ARA-290 spray for innate repair receptor research, non-erythropoietic. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Ghrp 6 10mg",
     "slug": "ghrp-6-10mg",
     "category": "metabolic-research",
@@ -776,6 +1395,16 @@
     ],
     "cas": "N/A",
     "description": "Buy Ghrp 6 10mg wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
+  },
+  {
+    "name": "GHRP-6 Spray",
+    "slug": "ghrp-6-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "87616-84-0",
+    "description": "Pre-dissolved GHRP-6 spray for ghrelin receptor and appetite signaling research. ≥99.0% HPLC verified. Laboratory use only."
   },
   {
     "name": "Sermorelin",
@@ -798,6 +1427,16 @@
     "description": "Buy Igf 1 Lr3 wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
   },
   {
+    "name": "IGF-1 LR3 Spray",
+    "slug": "igf-1-lr3-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "1mg×10"
+    ],
+    "cas": "946870-92-4",
+    "description": "Pre-dissolved IGF-1 LR3 spray for IGF-1 receptor and binding-protein evasion research. ≥99.0% HPLC verified. Laboratory use only."
+  },
+  {
     "name": "Dhea 10mg",
     "slug": "dhea-10mg",
     "category": "metabolic-research",
@@ -816,6 +1455,17 @@
     ],
     "cas": "N/A",
     "description": "Buy Hcg 5000 IU wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
+  },
+  {
+    "name": "HCG Spray",
+    "slug": "hcg-spray",
+    "category": "metabolic-research",
+    "specs": [
+      "5000IU×10",
+      "10000IU×10"
+    ],
+    "cas": "9002-61-3",
+    "description": "Pre-dissolved HCG spray for luteinizing hormone receptor signaling research. ≥99.0% purity verified. Laboratory use only."
   },
   {
     "name": "Mt 2 Melanotan Ii",
@@ -936,5 +1586,15 @@
     ],
     "cas": "N/A",
     "description": "Buy Tesamorelin Ipamorelin Research Peptide wholesale. High-quality research compound. Independently tested for >99% purity. Laboratory use only."
+  },
+  {
+    "name": "Tesamorelin + Ipamorelin Spray",
+    "slug": "tesamorelin-ipamorelin-spray",
+    "category": "growth-factor-research",
+    "specs": [
+      "10mg×10"
+    ],
+    "cas": "N/A",
+    "description": "Pre-dissolved Tesamorelin and Ipamorelin blend spray pairing GHRH and ghrelin receptor pathways. ≥99.0% HPLC verified. Laboratory use only."
   }
 ]

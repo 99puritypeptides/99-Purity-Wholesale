@@ -149,7 +149,7 @@ export default function CalculatorContent() {
 
       {/* Reconstitution Best Practices */}
       <section className="bg-black text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <h2 className="text-2xl md:text-3xl font-absans font-bold text-white uppercase tracking-tight mb-8 relative z-10">
           Clinical Best Practices: Mixing & Storage

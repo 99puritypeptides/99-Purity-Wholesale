@@ -61,7 +61,7 @@ export default function COAPage() {
       {/* Hero Section - Elegant Light Off-White Linen */}
       <section className="relative overflow-hidden pt-52 pb-24 md:pt-64 md:pb-32 border-b border-black/5 bg-[#F8F8F6]">
         {/* Light Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
           <div>
@@ -359,7 +359,7 @@ export default function COAPage() {
       {/* 3-Step Testing Process - Stealth Luxury Dark Section */}
       <section className="py-24 md:py-32 bg-[#05080C] text-white border-b border-white/5 relative overflow-hidden">
         {/* Dark Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-20">
           
