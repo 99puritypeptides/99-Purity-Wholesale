@@ -1,0 +1,316 @@
+---
+title: "Retatrutide vs. Tirzepatide vs. Semaglutide: The Triple-Agonist Research Guide (2026)"
+seoTitle: "Retatrutide vs Tirzepatide vs Semaglutide (2026)"
+date: "2026-09-01"
+description: "Compare retatrutide, tirzepatide and semaglutide by receptor target, molecular weight and analytical QC requirements for research procurement."
+coverImage: "/images/retatrutide-vs-tirzepatide-vs-semaglutide-cover.jpg"
+tags:
+  - "retatrutide"
+  - "tirzepatide"
+  - "semaglutide"
+  - "triple agonist peptide"
+  - "incretin mimetic"
+  - "metabolic research"
+  - "peptide procurement"
+  - "HPLC"
+  - "LC-MS"
+  - "research use only"
+faqs:
+  - question: "Our lab needs a compound that acts on hepatic lipid metabolism directly, not just through appetite pathways. Which of the three fits?"
+    answer: "Retatrutide is the only one of the three with glucagon receptor (GCGR) activity. GCGR engagement drives hepatic β-oxidation and suppresses de novo lipogenesis inside the hepatocyte itself. Semaglutide and tirzepatide reach the liver indirectly, through downstream metabolic effects. If your model measures intrahepatic triglyceride content or fatty acid oxidation flux, the triple agonist gives you a direct mechanistic handle the other two do not."
+  - question: "We received a COA showing 99.2% HPLC purity but no mass spec data. Is that enough to accept a 39-amino-acid peptide?"
+    answer: "No. HPLC area percent tells you how much of the sample elutes as a single peak. It does not tell you what that peak is. A deletion sequence missing one residue can co-elute with the target on a standard C18 gradient. For 39-mer compounds like tirzepatide and retatrutide, request the LC-MS ion envelope alongside the chromatogram so identity is confirmed independently of purity."
+  - question: "How do we distinguish retatrutide from tirzepatide analytically when both are 39 amino acids?"
+    answer: "Molecular weight separates them cleanly. Retatrutide sits at 4,731.33 g/mol and tirzepatide at 4,813.45 g/mol, roughly 82 Da apart. That gap is far outside instrument error on any modern LC-MS platform. Deconvoluted mass from the multiply charged ion envelope will resolve the two without ambiguity, even though the chromatographic retention times may look similar."
+  - question: "Our lyophilized vials arrived warm after a shipping delay. Do we discard them?"
+    answer: "Not automatically. Lyophilized peptide in a sealed vial is considerably more stable than the same peptide in solution, and short excursions above the target range are usually survivable. The correct response is to test rather than assume. Run an analytical HPLC injection against your reference chromatogram and check for new late-eluting peaks or a shifted main peak area. Document the excursion either way."
+  - question: "Why do our reconstituted stock solutions lose activity faster than the vendor stability data suggests?"
+    answer: "Aqueous stock solutions face problems the lyophilized powder does not: surface adsorption to plasticware, freeze-thaw damage, and oxidation at exposed residues. Aliquot immediately after reconstitution instead of repeatedly thawing one tube. Use low-binding vials for dilute working solutions. Vendor stability data almost always describes the powder, not your working concentration."
+  - question: "We are comparing incretin compounds and keep seeing conflicting EC50 numbers across papers. Why?"
+    answer: "Receptor potency values depend heavily on assay format. Reported EC50 varies with cell line, receptor expression density, whether the readout is cAMP accumulation or β-arrestin recruitment, and incubation time. Published GLP-1R EC50 figures for semaglutide span more than an order of magnitude across assay formats, so any single value is a reference point rather than a fixed constant. Compare values only within a single assay system, never across publications."
+  - question: "What makes these peptides resist enzymatic degradation, and does that matter for in-vitro work?"
+    answer: "All three carry α-aminoisobutyric acid (Aib) substitutions near the N-terminus, which sterically block DPP-4 cleavage. They also carry fatty diacid chains that bind serum albumin and extend circulating half-life. In serum-containing culture media, albumin binding reduces the free fraction available to the receptor, so your effective concentration can be lower than your nominal concentration."
+  - question: "Procurement is asking why the 39-mer compounds cost significantly more per milligram than semaglutide. What justifies the gap?"
+    answer: "Synthesis difficulty scales non-linearly with chain length. A 39-residue sequence requires more coupling cycles than a 31-residue one, and each cycle carries a small failure probability that compounds across the sequence. Aib residues are also sterically hindered and couple less efficiently. Longer sequences produce more closely related impurities, which raises purification burden and lowers final yield."
+  - question: "Can we substitute tirzepatide for retatrutide in a study if retatrutide is on backorder?"
+    answer: "Only if your endpoints do not depend on glucagon receptor signaling. For assays reading GLP-1R or GIPR activation, tirzepatide is a reasonable substitute. For anything measuring hepatic fat oxidation, lipogenesis, or energy expenditure attributable to GCGR, substitution invalidates the comparison. Document the reason for substitution in your methods either way."
+  - question: "Our COA lists a peptide content figure well below the purity figure. Is the vial mislabeled?"
+    answer: "Usually not. Purity and peptide content measure different things. Purity describes the proportion of peptide-related material that is your target compound. Peptide content describes how much of the total vial mass is actually peptide, with the remainder being counterions, residual water and salts. A vial can be 99% pure and still only 80% peptide by mass. Use peptide content when calculating molarity."
+  - question: "How should we document identity for an audit if the supplier COA is the only record?"
+    answer: "Treat the supplier COA as a starting point, not an endpoint. Retain the raw chromatogram and mass spectrum rather than the summary table alone. Record lot number, receipt date, storage conditions and any temperature excursions. Where budget allows, commission independent confirmatory testing on a subset of lots and file both records together. Auditors look for an unbroken chain, not a single certificate."
+  - question: "We keep seeing wholesale listings with no lot-specific documentation. What is the minimum we should require before ordering?"
+    answer: "Insist on lot-specific rather than representative documentation, an HPLC chromatogram with the gradient method stated, LC-MS identity confirmation, peptide content by an appropriate method, and a stated research-use-only designation. Representative COAs describe a lot you did not receive. If a supplier cannot produce lot-matched records, treat that as a sourcing risk rather than a paperwork inconvenience."
+---
+
+## What's the Difference Between Retatrutide, Tirzepatide, and Semaglutide?
+
+> Semaglutide, tirzepatide and retatrutide differ by how many receptors they engage. Semaglutide is a GLP-1 monoagonist. Tirzepatide is a GLP-1/GIP dual agonist. Retatrutide adds a third target, the glucagon receptor, making it a triple agonist. Each additional receptor changes the metabolic pathways available to a research model, and raises the analytical burden on identity confirmation.
+
+Three compounds dominate metabolic peptide research right now. They look similar on a catalog page. They behave very differently in an assay.
+
+The distinction is not potency. It is receptor coverage. Semaglutide engages one receptor. Tirzepatide engages two. Retatrutide engages three. That progression sounds incremental, but each addition opens a metabolic pathway the previous compound could not reach, and each addition makes the molecule harder to synthesize, harder to characterize, and harder to verify on arrival.
+
+This guide covers what separates them at the molecular level, what the glucagon receptor contributes that the incretin receptors cannot, and why a 39-amino-acid sequence demands analytical scrutiny that a 31-mer does not.
+
+## Molecular Comparison at a Glance
+
+Start with the hard numbers. Everything downstream depends on getting these right.
+
+<div className="overflow-x-auto my-8 rounded-2xl border border-white/10 bg-[#090C12] shadow-2xl">
+  <table className="w-full text-left text-xs md:text-sm text-white/80 border-collapse">
+    <thead className="bg-white/5 border-b border-white/10 text-white uppercase text-[11px] tracking-wider">
+      <tr>
+        <th className="p-4 font-bold text-brand-accent">Attribute</th>
+        <th className="p-4 font-bold text-brand-accent">Semaglutide</th>
+        <th className="p-4 font-bold text-brand-accent">Tirzepatide</th>
+        <th className="p-4 font-bold text-brand-accent">Retatrutide (LY3437943)</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y divide-white/5 font-medium">
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Agonist class</td>
+        <td className="p-4 text-white/70">Monoagonist</td>
+        <td className="p-4 text-white/70">Dual agonist</td>
+        <td className="p-4 text-white/70">Triple agonist</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Receptor targets</td>
+        <td className="p-4 text-white/70">GLP-1R</td>
+        <td className="p-4 text-white/70">GLP-1R, GIPR</td>
+        <td className="p-4 text-white/70">GLP-1R, GIPR, GCGR</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Amino acid length</td>
+        <td className="p-4 text-white/70">31 residues</td>
+        <td className="p-4 text-white/70">39 residues</td>
+        <td className="p-4 text-white/70">39 residues</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Molecular weight</td>
+        <td className="p-4 text-white/70">4,113.58 g/mol</td>
+        <td className="p-4 text-white/70">4,813.45 g/mol</td>
+        <td className="p-4 text-white/70">4,731.33 g/mol</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Reference potency</td>
+        <td className="p-4 text-white/70">Sub-nanomolar GLP-1R EC50 (assay-dependent)</td>
+        <td className="p-4 text-white/70">Sub-nanomolar GIPR EC50 (assay-dependent)</td>
+        <td className="p-4 text-white/70">Assay-dependent across three receptors</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Lipidation</td>
+        <td className="p-4 text-white/70">C18 fatty diacid</td>
+        <td className="p-4 text-white/70">C20 fatty diacid</td>
+        <td className="p-4 text-white/70">Fatty diacid conjugate</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">DPP-4 resistance</td>
+        <td className="p-4 text-white/70">Aib substitution</td>
+        <td className="p-4 text-white/70">Aib substitution</td>
+        <td className="p-4 text-white/70">Aib substitution</td>
+      </tr>
+      <tr className="hover:bg-white/[0.03] transition-colors">
+        <td className="p-4 font-bold text-white">Key trial reference</td>
+        <td className="p-4 text-white/70">SURMOUNT-5 (comparator arm)</td>
+        <td className="p-4 text-white/70">SURMOUNT-5</td>
+        <td className="p-4 text-white/70">TRIUMPH-1, SYNERGY-OUTCOMES</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Notice the molecular weight relationship between the two 39-mers. Retatrutide is *lighter* than tirzepatide despite having identical chain length. Roughly 82 Daltons separate them. That counterintuitive detail becomes useful later, because it gives you a clean analytical handle for telling the two apart.
+
+## Semaglutide: The Monoagonist Baseline
+
+Semaglutide is the reference point. Every comparison in metabolic peptide research runs through it.
+
+### Structure and Sequence
+
+At 31 amino acids and 4,113.58 g/mol, semaglutide is the smallest of the three. It derives from the native GLP-1 backbone with two critical modifications. First, an Aib substitution at position 8 blocks DPP-4 from cleaving the N-terminus. Second, a C18 fatty diacid attached through a spacer binds serum albumin, which slows renal clearance considerably.
+
+Those two changes are the entire reason a native peptide with a half-life measured in minutes becomes one measured in days.
+
+### What the GLP-1 Receptor Does
+
+GLP-1 receptor activation raises intracellular cAMP in a glucose-dependent manner. In pancreatic β-cell models, that drives insulin secretion only when glucose is present. In central nervous system models, GLP-1R engagement modulates food intake signaling.
+
+With sub-nanomolar EC50 values reported at GLP-1R, semaglutide is a potent monoagonist. But potency at one receptor is exactly the ceiling. Everything semaglutide does, it does through a single signaling pathway.
+
+For laboratories running clean single-pathway experiments, that limitation is actually a feature. If you want to isolate GLP-1R contribution without confounding signal, the monoagonist is the correct tool. Explore [semaglutide research grade](/products/semaglutide) specifications when your protocol calls for pathway isolation.
+
+## Tirzepatide: Adding the GIP Receptor
+
+Tirzepatide extends the sequence to 39 residues and 4,813.45 g/mol. The extra length carries a second pharmacology.
+
+### Why GIP Was Added
+
+Glucose-dependent insulinotropic polypeptide is the other major incretin hormone. Its receptor distribution overlaps with GLP-1R in some tissues and diverges in others, particularly in adipose tissue and in subcortical brain regions involved in energy balance.
+
+That divergence is the point. Two receptors with partially non-overlapping expression maps reach cell populations that neither reaches alone.
+
+Tirzepatide shows sub-nanomolar EC50 activity at GIPR alongside its GLP-1R activity. The molecule uses a C20 fatty diacid rather than semaglutide's C18, which further extends albumin binding.
+
+### The SURMOUNT-5 Comparison
+
+SURMOUNT-5 remains the most cited direct comparison between a dual agonist and a monoagonist. Published in the *New England Journal of Medicine* in 2025, the Phase 3b open-label trial randomized 751 adults with obesity and without type 2 diabetes to maximum tolerated doses of either compound over 72 weeks.
+
+Tirzepatide produced a 20.2% reduction in body weight against 13.7% for semaglutide. Waist circumference change was −18.4 cm versus −13.0 cm.
+
+For research purposes, the headline numbers matter less than the mechanistic inference. The trial authors attributed the separation to non-overlapping central receptor expression patterns rather than to raw potency. That hypothesis is directly testable in vitro, and it is why dual-agonist comparison work continues to generate publications. Review [tirzepatide wholesale](/products/tirzepatide) documentation if your program includes dual-agonist comparator arms.
+
+## Retatrutide: The Third Receptor
+
+Retatrutide, also designated LY3437943, matches tirzepatide's 39-residue length but carries a different sequence and a lower molecular weight of 4,731.33 g/mol. The functional difference is glucagon receptor agonism.
+
+### What GCGR Does That Incretin Receptors Cannot
+
+This is the question that actually matters, and it is where most comparison articles stop short.
+
+GLP-1 and GIP receptors act primarily on pancreatic, adipose and central tissue. The glucagon receptor acts on the hepatocyte. That is a fundamentally different address.
+
+Inside the liver, GCGR activation does three things the incretin receptors cannot do directly:
+
+- **Stimulates hepatic β-oxidation.** Glucagon signaling drives fatty acids into the mitochondria for oxidation rather than storage. This is a direct catabolic effect on intrahepatic lipid.
+- **Suppresses de novo lipogenesis.** GCGR engagement downregulates the lipogenic program that converts excess substrate into new triglyceride within the hepatocyte.
+- **Increases hepatic energy expenditure.** The net effect raises metabolic rate in liver tissue independently of appetite pathways.
+
+Put plainly: semaglutide and tirzepatide reduce hepatic steatosis largely as a downstream consequence of reduced substrate load. Retatrutide adds a mechanism that operates inside the hepatocyte itself.
+
+That distinction determines which compound belongs in a liver-focused protocol. If your endpoint is intrahepatic triglyceride content measured by MRI-PDFF, or fatty acid oxidation flux in a hepatocyte model, the triple agonist gives you a direct mechanistic lever. The dual agonist does not.
+
+### Why Researchers Reach Past Dual Agonism
+
+The obvious follow-up question is whether a third receptor is worth the added complexity. Three considerations drive the answer.
+
+First, **pathway independence**. GCGR activity produces effects that persist even when incretin signaling is blocked. That makes the triple agonist useful for dissecting which observed effects belong to which receptor.
+
+Second, **hepatic specificity**. Metabolic dysfunction-associated steatotic liver disease research needs compounds that reach the liver directly. Incretin monoagonists and dual agonists reach it obliquely.
+
+Third, **the ceiling problem**. Single-mechanism approaches tend to plateau. Adding a mechanistically distinct pathway is the standard strategy for pushing past that plateau, and it is the explicit rationale behind the triple-agonist design.
+
+### Trial Context
+
+Retatrutide's Phase 3 development runs across three programs. TRIUMPH covers obesity endpoints, TRANSCEND covers type 2 diabetes, and SYNERGY covers liver disease.
+
+TRIUMPH-1 (NCT05929066) reported topline results in May 2026. The 80-week randomized placebo-controlled trial enrolled 2,339 participants across 4 mg, 9 mg and 12 mg arms, with all doses meeting primary and key secondary endpoints.
+
+SYNERGY-OUTCOMES is the reference point for hepatic work. It is a Phase 3 master protocol evaluating both retatrutide and tirzepatide against placebo for prevention of major adverse liver outcomes in high-risk MASLD. Worth noting for accuracy: it is a multi-agent protocol, not a retatrutide-only trial, which makes it a genuine head-to-head between triple and dual agonism in a hepatic endpoint.
+
+Earlier Phase 2 work reported liver fat reductions substantially exceeding those seen with dual agonists, which is the observation that motivated the Phase 3 liver program. Specifications for [retatrutide research compound](/products/retatrutide) lots are available for laboratories building comparator studies.
+
+## The Shared Engineering: Aib and Albumin
+
+All three compounds solve the same two problems with the same two tools. Understanding that shared architecture explains a great deal about their handling behavior.
+
+### Aib Substitution and DPP-4 Resistance
+
+Dipeptidyl peptidase-4 cleaves native incretin hormones within minutes by removing the first two N-terminal residues. Any therapeutic-scale peptide built on an incretin backbone has to defeat that enzyme.
+
+α-aminoisobutyric acid solves it structurally. Aib is a non-proteinogenic residue with two methyl groups on the α-carbon. That geometry creates steric bulk DPP-4 cannot accommodate, so the cleavage site becomes inaccessible.
+
+The same steric bulk that blocks the enzyme also makes Aib difficult to couple during synthesis. Hindered residues couple slowly and incompletely, which is one reason these sequences carry a heavier impurity burden than ordinary peptides of comparable length.
+
+### Albumin Binding and Effective Concentration
+
+The fatty diacid chains on all three compounds bind reversibly to serum albumin. In circulation, that binding creates a depot effect and extends half-life dramatically.
+
+In a culture dish, it creates a problem you need to account for. Serum-containing media contains albumin. Albumin sequesters your compound. The free fraction available to bind receptor is therefore lower than your nominal concentration, sometimes considerably so.
+
+Laboratories that skip this correction end up reporting potency values that look weaker than published figures, then spend weeks troubleshooting a compound that was never the problem.
+
+## Why 39-Amino-Acid Peptides Demand LC-MS Confirmation
+
+Here is where procurement and analytical chemistry converge.
+
+### The Limits of HPLC Alone
+
+HPLC purity is reported as area percent: the proportion of total UV absorbance attributable to the main peak. It answers one question well. How much of what eluted is a single species?
+
+It does not answer the question that matters more. Is that species the compound you ordered?
+
+### Where Long Sequences Fail
+
+Solid-phase synthesis proceeds one residue at a time. Each coupling has a small failure probability. Across 39 cycles, those probabilities compound into a meaningful population of deletion sequences: molecules missing one residue somewhere in the chain.
+
+A single-residue deletion changes molecular weight by 57 to 186 Da depending on which residue is missing. That is a substantial mass difference. But it often produces almost no change in hydrophobicity, which means the deletion sequence can co-elute with the target peak on a standard C18 reversed-phase gradient.
+
+Your chromatogram shows one clean peak. Your vial contains two compounds.
+
+The risk scales with length. A 31-mer accumulates fewer coupling failures than a 39-mer. Aib-containing sequences accumulate more still, because hindered couplings fail more often.
+
+### What the Ion Envelope Tells You
+
+Electrospray LC-MS produces a series of multiply charged ions rather than a single mass peak. Deconvoluting that ion envelope yields the intact molecular weight directly.
+
+For these three compounds, that measurement is decisive:
+
+- A deconvoluted mass of 4,113.58 g/mol confirms semaglutide.
+- 4,813.45 g/mol confirms tirzepatide.
+- 4,731.33 g/mol confirms retatrutide.
+
+The 82 Da gap between the two 39-mers sits far outside instrument error. No modern LC-MS platform will confuse them. Meanwhile a deletion sequence appears as a distinct mass, even when it hid perfectly on the chromatogram.
+
+This is why LC-MS identity confirmation is not optional documentation for long incretin analogs. HPLC establishes purity. LC-MS establishes identity. Neither substitutes for the other.
+
+## Reading a Certificate of Analysis Critically
+
+A Certificate of Analysis is only as useful as the reader's skepticism.
+
+**Check that documentation is lot-specific.** Representative COAs describe some lot, not necessarily yours. Insist on lot-matched records.
+
+**Read purity and peptide content as separate figures.** Purity describes the peptide-related fraction that is your target. Peptide content describes how much of the vial's total mass is peptide at all, with the remainder being counterions, residual solvent and water. A 99% pure lot can be 80% peptide by mass. Molarity calculations must use peptide content, not purity, or your stock concentration will be systematically wrong.
+
+**Request the raw chromatogram, not the summary.** A number in a table cannot be independently evaluated. A chromatogram with a stated gradient method can.
+
+**Confirm the mass spectrum is present.** For any 39-mer, its absence is a gap rather than an oversight.
+
+**Verify the research-use-only designation appears explicitly.** RUO material carries specific handling and documentation expectations that differ from other supply categories.
+
+## Reconstitution and Stock Handling for Laboratory Use
+
+Lyophilized powder is the stable form. Solution is the fragile one. Most degradation problems trace back to how the transition between them was handled.
+
+General principles for preparing in-vitro stock solutions:
+
+- **Equilibrate before opening.** Bring vials to ambient temperature before breaking the seal. Cold vials condense atmospheric moisture, and hydrated lyophilized powder degrades faster.
+- **Calculate against peptide content.** Use the peptide content figure from the COA, not the vial's nominal mass, when computing molar concentration. The [Peptide Reconstitution Calculator](/peptide-calculator) handles the conversion.
+- **Add solvent gently down the vial wall.** Direct jetting onto the cake generates shear and foam. Foam means denatured peptide at the air-liquid interface.
+- **Dissolve by swirling, never vortexing.** Allow several minutes for complete dissolution before assuming a problem exists.
+- **Aliquot immediately.** Single-use aliquots eliminate freeze-thaw cycling, which is the single largest avoidable source of stock degradation.
+- **Use low-binding plasticware for dilute solutions.** Lipidated peptides adsorb to standard polypropylene at low concentrations, which quietly reduces your working concentration.
+
+Document each of these steps. Reproducibility problems in metabolic peptide work are frequently handling problems rather than compound problems, and only documentation lets you tell the difference.
+
+## Choosing Between the Three for a Research Program
+
+The selection logic is more straightforward than the biochemistry.
+
+**Choose semaglutide** when the experimental question isolates GLP-1 receptor contribution. Its single-pathway pharmacology makes it the cleanest control compound available, and its shorter sequence makes lot-to-lot consistency easier to achieve.
+
+**Choose tirzepatide** when the question involves incretin synergy or requires a comparator arm against published dual-agonist data. SURMOUNT-5 gives you a well-characterized reference frame.
+
+**Choose retatrutide** when hepatic endpoints are involved, or when the protocol needs to separate glucagon receptor effects from incretin effects. No other compound in this class offers that dissection.
+
+Many programs end up using all three, precisely because the comparison itself is informative. Running a monoagonist, a dual agonist and a triple agonist side by side in the same assay system produces cleaner receptor attribution than any single compound can.
+
+For laboratories building multi-compound comparator programs, consistent sourcing across all three matters more than price on any single line item. Lot-to-lot variability introduced by mixed suppliers will surface as noise in exactly the comparison you are trying to make. Submit a [wholesale inquiry form](/wholesale-application) to discuss lot reservation and documentation requirements across a multi-compound program.
+
+## Summary
+
+Receptor coverage is the organizing principle. Semaglutide covers one receptor at 31 residues. Tirzepatide covers two at 39 residues. Retatrutide covers three at 39 residues, adding hepatic access through the glucagon receptor that neither incretin-only compound provides.
+
+Analytical burden scales with that same progression. Longer sequences accumulate more deletion impurities, Aib substitutions make coupling harder, and co-eluting impurities make HPLC alone insufficient. LC-MS identity confirmation closes the gap that chromatography leaves open.
+
+Select by mechanism. Verify by mass. Document everything.
+
+---
+
+*All products referenced are supplied strictly for research use only. Not for human or veterinary use. Not for diagnostic or therapeutic application.*
+
+## Sources and Further Reading
+
+1. Aronne LJ, et al. "Tirzepatide as Compared with Semaglutide for the Treatment of Obesity." *New England Journal of Medicine*, 2025. DOI: 10.1056/NEJMoa2416394. SURMOUNT-5, NCT05822830.
+2. Eli Lilly and Company. "Lilly's triple agonist, retatrutide, delivered powerful weight loss in pivotal Phase 3 obesity trial." Investor release, May 21, 2026. TRIUMPH-1, NCT05929066.
+3. SYNERGY-OUTCOMES. Phase 3 master protocol evaluating retatrutide and tirzepatide versus placebo for prevention of major adverse liver outcomes in high-risk MASLD.
+4. Jastreboff AM, et al. "Triple-Hormone-Receptor Agonist Retatrutide for Obesity." *New England Journal of Medicine*, 2023. Phase 2 trial including the MRI-PDFF hepatic fat sub-study.

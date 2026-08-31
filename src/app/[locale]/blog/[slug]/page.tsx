@@ -27,7 +27,7 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
   const compounds: { name: string, slug: string, img: string, desc: string }[] = [];
   const images: string[] = [];
 
-  if (normSlug.includes('verify') || normSlug.includes('supplier')) {
+  if (normSlug.includes('verify') || normSlug.includes('supplier') || normSlug.includes('sourcing') || normSlug.includes('fda') || normSlug.includes('compliance') || normSlug.includes('procurement') || normSlug.includes('california') || normSlug.includes('texas') || normSlug.includes('florida') || normSlug.includes('new-york')) {
     compounds.push(
       { name: 'BPC-157 5mg', slug: 'bpc-157', img: '/product-images/BPC-157 5mg-5.webp', desc: '≥99% purity verified HPLC batch.' },
       { name: 'Semaglutide 5mg', slug: 'semaglutide', img: '/product-images/SEMAGLUTIDE 5mg-2.webp', desc: 'LC-MS identity confirmed lot.' },
@@ -56,6 +56,27 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
     images.push(
       '/images/fluorescence-spectrofluorometer-lab.jpg',
       '/images/luminescence-assay-plate.jpg'
+    );
+  } else if (normSlug.includes('spray') || normSlug.includes('lyophilized') || normSlug.includes('pre-dissolved')) {
+    compounds.push(
+      { name: 'BPC-157 + TB-500 Spray', slug: 'bpc-157-tb-500-spray', img: '/product-images/bpc-157-tb-500-spray-10mg.jpg', desc: 'Pre-dissolved 0.1 mL metered spray.' },
+      { name: '5-Amino-1MQ Spray', slug: '5-amino-1mq-spray', img: '/product-images/5-amino-1mq-spray-50mg.jpg', desc: 'Solution-phase NNMT inhibitor spray.' },
+      { name: 'Semaglutide Spray', slug: 'semaglutide-spray', img: '/product-images/semaglutide-spray-10mg.jpg', desc: 'Pre-dissolved GLP-1 research spray.' }
+    );
+    images.push(
+      '/product-images/bpc-157-tb-500-spray-10mg.jpg',
+      '/product-images/5-amino-1mq-spray-50mg.jpg',
+      '/product-images/semaglutide-spray-10mg.jpg'
+    );
+  } else if (normSlug.includes('retatrutide')) {
+    compounds.push(
+      { name: 'Retatrutide 10mg', slug: 'retatrutide', img: '/product-images/RETATRUTIDE 10mg-6.webp', desc: 'Triple agonist research compound.' },
+      { name: 'Tirzepatide 10mg', slug: 'tirzepatide', img: '/product-images/TIRZEPATIDE 10mg-3.webp', desc: 'Dual GIP/GLP-1 receptor agonist lot.' },
+      { name: 'Semaglutide 5mg', slug: 'semaglutide', img: '/product-images/SEMAGLUTIDE 5mg-2.webp', desc: 'Selective GLP-1 receptor agonist.' }
+    );
+    images.push(
+      '/product-images/RETATRUTIDE 10mg-6.webp',
+      '/product-images/TIRZEPATIDE 10mg-3.webp'
     );
   } else if (normSlug.includes('glp') || normSlug.includes('weight') || normSlug.includes('tirzepatide') || normSlug.includes('semaglutide')) {
     compounds.push(
@@ -134,7 +155,7 @@ const mdxComponents = {
     <h3 className="text-xl md:text-2xl font-bold font-absans text-white uppercase tracking-wide mt-8 mb-4 font-normal" {...props} />
   ),
   p: (props: any) => (
-    <div className="text-white/70 font-archia text-sm md:text-base leading-relaxed mb-6 font-medium" {...props} />
+    <p className="text-white/70 font-archia text-sm md:text-base leading-relaxed mb-6 font-medium" {...props} />
   ),
   ul: (props: any) => (
     <ul className="list-none space-y-3 mb-8 pl-0" {...props} />
@@ -154,11 +175,13 @@ const mdxComponents = {
   a: (props: any) => (
     <a className="text-brand-accent hover:text-white transition-colors underline font-bold" {...props} />
   ),
+  // Markdown images are parsed inside a paragraph, so this wrapper must be phrasing
+  // content — a <figure> here would nest inside <p> and break hydration. Styled block.
   img: (props: any) => (
-    <figure className="my-10 overflow-hidden rounded-[2.5rem] border border-white/10 shadow-2xl relative group max-w-4xl mx-auto aspect-[16/9] block">
+    <span className="my-10 overflow-hidden rounded-[2.5rem] border border-white/10 shadow-2xl relative group max-w-4xl mx-auto aspect-[16/9] block">
       <img className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105" alt={props.alt || 'Research image'} {...props} />
       <span className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none block" />
-    </figure>
+    </span>
   ),
   table: (props: any) => (
     <figure className="my-10 overflow-x-auto rounded-[1.8rem] border border-white/10 shadow-2xl bg-[#090C12] block">
@@ -198,10 +221,12 @@ function generateBlogKeywords(title: string, slug: string) {
     keywords.unshift('fluorescence spectroscopy', 'chemiluminescence assay', 'bioluminescence imaging', 'signal-to-noise ratio', 'spectrofluorometer');
   } else if (normSlug.includes('bpc')) {
     keywords.unshift('BPC-157 wholesale', 'BPC-157 supplier', 'tissue repair research', 'peptide recovery');
-  } else if (normSlug.includes('glp') || normSlug.includes('semaglutide') || normSlug.includes('tirzepatide')) {
-    keywords.unshift('GLP-1 wholesale', 'semaglutide research', 'tirzepatide supplier', 'metabolic peptides');
+  } else if (normSlug.includes('glp') || normSlug.includes('semaglutide') || normSlug.includes('tirzepatide') || normSlug.includes('retatrutide')) {
+    keywords.unshift('retatrutide vs tirzepatide vs semaglutide', 'triple agonist peptide', 'retatrutide research', 'GLP-1 wholesale', 'semaglutide research', 'tirzepatide supplier', 'metabolic peptides');
   } else if (normSlug.includes('nad')) {
     keywords.unshift('NAD+ wholesale', 'NAD+ longevity research', 'cellular health peptides');
+  } else if (normSlug.includes('bioregulator') || normSlug.includes('epithalon')) {
+    keywords.unshift('bioregulator peptides research', 'Khavinson bioregulator peptides', 'short chain peptide gene expression', 'Epithalon pineal research', 'histone acetylation peptide');
   }
 
   return keywords;
@@ -215,12 +240,16 @@ export async function generateMetadata(props: any) {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
     const url = `${baseUrl}/${params.locale === 'en' ? '' : params.locale + '/'}blog/${params.slug}`;
     const metaDescription = post.meta.description || post.meta.desc || post.meta.title;
+    // SERP <title> is capped around 60 chars before Google truncates or rewrites it.
+    // `seoTitle` lets a post serve a short, keyword-front title to search while the
+    // longer editorial `title` stays as the on-page H1 and the social/OG headline.
+    const seoTitle = post.meta.seoTitle || post.meta.title;
     const ogUrlImage = `${baseUrl}/api/og?title=${encodeURIComponent(post.meta.title)}&desc=${encodeURIComponent(metaDescription)}&category=Clinical%20Research%20Blog`;
     const keywords = generateBlogKeywords(post.meta.title, params.slug);
 
     return {
       metadataBase: new URL(baseUrl),
-      title: { absolute: post.meta.title },
+      title: { absolute: seoTitle },
       description: metaDescription,
       keywords: keywords,
       alternates: {
@@ -264,18 +293,25 @@ export default async function BlogPost({ params }: { params: { locale: string, s
   try {
     const post = await getPostBySlug(params.slug, params.locale);
     const { images, compounds } = getRelatedImages(params.slug, post.meta.title);
+    const bodyImages = post.meta.coverImage && !images.includes(post.meta.coverImage)
+      ? [post.meta.coverImage, ...images]
+      : images;
     const normSlug = params.slug.toLowerCase();
     const hasEmbeddedImages = normSlug.includes('fluorescence') || normSlug.includes('chemiluminescence') || normSlug.includes('bioluminescence');
 
     // Dynamic section splitting to inject multiple gorgeous related images between post sections
-    const sections = post.content.split(/(?=## )/);
+    const sections = post.content
+      .trim()
+      .split(/(?=^## )/m)
+      .map(s => s.trim())
+      .filter(Boolean);
 
     return (
       <main className="min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
         <ArticleSchema 
           title={post.meta.title}
-          description={post.meta.desc || post.meta.title}
-          image={images.length > 0 ? `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}${images[0]}` : `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`}
+          description={post.meta.desc || post.meta.description || post.meta.title}
+          image={post.meta.coverImage ? `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}${post.meta.coverImage}` : (images.length > 0 ? `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}${images[0]}` : `${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/og-image.png`)}
           datePublished={post.meta.date}
           url={`${process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com'}/${params.locale === 'en' ? '' : params.locale + '/'}blog/${params.slug}`}
         />
@@ -310,7 +346,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
               </time>
               
               {/* Dynamic Post Title */}
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-absans text-black uppercase tracking-tight leading-tight max-w-4xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold font-absans text-black uppercase tracking-tight leading-tight max-w-4xl mb-8">
                 {post.meta.title}
               </h1>
             </FadeIn>
@@ -330,9 +366,20 @@ export default async function BlogPost({ params }: { params: { locale: string, s
                 <FadeIn>
                   <article className="prose prose-invert prose-brand max-w-none text-white/80 font-archia leading-relaxed text-sm md:text-base space-y-12">
                     {sections.map((section, index) => {
-                      const imageToShow = images.length === 2
-                        ? (index === 0 ? images[0] : index === sections.length - 2 ? images[1] : null)
-                        : (index < images.length ? images[index] : null);
+                      // Image 1 always appears right after Section 0 (1 paragraph/section above it).
+                      // Secondary images (if present) appear spaced out in middle/latter sections.
+                      let imageToShow: string | null = null;
+                      if (bodyImages.length > 0) {
+                        if (index === 0) {
+                          imageToShow = bodyImages[0];
+                        } else if (bodyImages.length === 2 && index === Math.max(2, Math.floor(sections.length / 2))) {
+                          imageToShow = bodyImages[1];
+                        } else if (bodyImages.length >= 3 && index === Math.max(2, Math.floor(sections.length / 2))) {
+                          imageToShow = bodyImages[1];
+                        } else if (bodyImages.length >= 3 && index === sections.length - 2 && sections.length > 4) {
+                          imageToShow = bodyImages[2];
+                        }
+                      }
 
                       return (
                         <div key={index} className="space-y-8">
@@ -350,7 +397,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
                               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                               <div className="absolute bottom-6 left-8 right-6 z-10">
                                 <span className="text-[9px] font-bold font-dm-mono uppercase tracking-widest text-brand-accent mb-2 block">
-                                  Analytical Reference {imageToShow === images[0] ? "Phase 01" : "Phase 02"}
+                                  Analytical Reference {imageToShow === bodyImages[0] ? "Phase 01" : (imageToShow === bodyImages[1] ? "Phase 02" : "Phase 03")}
                                 </span>
                                 <h4 className="text-lg font-bold font-absans text-white uppercase tracking-wider">
                                   {humanizeImageAlt(imageToShow)}

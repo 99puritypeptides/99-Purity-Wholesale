@@ -22,8 +22,17 @@ export async function generateMetadata(props: any) {
 }
 
 // Curate high-quality, topic-relevant image paths dynamically for blog index cards
-function getPostCardImage(slug: string, index: number): string {
+function getPostCardImage(slug: string, index: number, meta?: any): string {
+  if (meta?.coverImage) {
+    return meta.coverImage;
+  }
   const normSlug = slug.toLowerCase();
+  if (normSlug.includes('retatrutide')) {
+    return '/images/retatrutide-vs-tirzepatide-vs-semaglutide-cover.jpg';
+  }
+  if (normSlug.includes('bioregulator') || normSlug.includes('epithalon')) {
+    return '/product-images/bioregulator-core-panel.webp';
+  }
   if (normSlug.includes('glp') || normSlug.includes('semaglutide') || normSlug.includes('tirzepatide') || normSlug.includes('weight')) {
     return '/product-images/SEMAGLUTIDE 5mg-2.webp';
   }
@@ -36,7 +45,7 @@ function getPostCardImage(slug: string, index: number): string {
   if (normSlug.includes('reconstitution') || normSlug.includes('storage')) {
     return '/product-images/BAC WATER 3ML.webp';
   }
-  if (normSlug.includes('verify') || normSlug.includes('supplier') || normSlug.includes('evaluation')) {
+  if (normSlug.includes('verify') || normSlug.includes('supplier') || normSlug.includes('evaluation') || normSlug.includes('sourcing') || normSlug.includes('fda') || normSlug.includes('compliance') || normSlug.includes('procurement') || normSlug.includes('california') || normSlug.includes('texas') || normSlug.includes('florida') || normSlug.includes('new-york')) {
     return '/images/peptide-supplier-verification-coa-audit.jpg';
   }
   if (normSlug.includes('coa') || normSlug.includes('quality') || normSlug.includes('read-coa')) {
@@ -150,7 +159,7 @@ export default async function BlogIndex({ params }: { params: { locale: string }
                     {/* Top Portion: Rich Visual Image Header */}
                     <div className="h-56 relative overflow-hidden bg-black/10">
                       <Image 
-                        src={getPostCardImage(post.slug, idx)} 
+                        src={getPostCardImage(post.slug, idx, post.meta)} 
                         alt={post.meta.title} 
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
