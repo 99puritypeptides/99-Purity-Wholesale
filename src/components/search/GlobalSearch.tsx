@@ -198,9 +198,13 @@ export default function GlobalSearch({ isOpen, onClose }: GlobalSearchProps) {
                     <div className="text-[10px] text-white/30 font-medium">{t('institutionalDesc')}</div>
                   </div>
                 </div>
-                <button className="px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold text-white/60 uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                <Link 
+                  href="/contact"
+                  onClick={onClose}
+                  className="px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold text-white/60 uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-flex items-center justify-center"
+                >
                   {t('helpCenter')}
-                </button>
+                </Link>
               </div>
             </div>
           )}

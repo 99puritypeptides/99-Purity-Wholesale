@@ -50,6 +50,16 @@ const nextConfig = {
         source: '/legal/disclaimer',
         destination: '/compliance',
         permanent: true,
+      },
+      {
+        source: '/calculator',
+        destination: '/peptide-calculator',
+        permanent: true,
+      },
+      {
+        source: '/:locale(en|es)/calculator',
+        destination: '/:locale/peptide-calculator',
+        permanent: true,
       }
     ];
   },

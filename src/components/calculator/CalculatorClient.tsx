@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Info, HelpCircle, PhoneCall, AlertTriangle, FileText, Check } from 'lucide-react';
+import { Info, PhoneCall, AlertTriangle } from 'lucide-react';
 
 export default function CalculatorClient() {
   const t = useTranslations('Calculator');
@@ -12,37 +12,57 @@ export default function CalculatorClient() {
   const [vialSize, setVialSize] = useState<number>(5); // in mg
   const [bacWater, setBacWater] = useState<number>(2); // in mL
   const [syringeSize, setSyringeSize] = useState<number>(100); // 30, 50, 100 units
-  const [targetDose, setTargetDose] = useState<number>(250); // in mcg
+  const [targetDoseInput, setTargetDoseInput] = useState<string>('250'); // in mcg (as string for editing safety)
 
   // Presets
   const vialPresets = [2, 5, 10, 15];
   const waterPresets = [1, 2, 2.5, 3];
   const dosePresets = [100, 250, 500, 1000];
 
-  // Mathematical Calculations
+  // Total vial capacity in micrograms
   const totalMcg = vialSize * 1000;
+
+  // Single-layer validation for targetDoseInput
+  const trimmedInput = targetDoseInput.trim();
+  const rawDose = parseFloat(trimmedInput);
+  const isValidDose = trimmedInput !== '' && !isNaN(rawDose) && isFinite(rawDose) && rawDose > 0;
+  const isDoseExceedingVial = isValidDose && rawDose > totalMcg;
+  const numericDose = isValidDose ? rawDose : 0;
+
+  // Mathematical Calculations
   // Concentration = totalMcg / bacWater (mcg/mL)
   // 1 unit = 0.01 mL
   // mcg per unit = Concentration * 0.01 = totalMcg / (bacWater * 100)
-  const mcgPerUnit = totalMcg / (bacWater * 100);
+  const mcgPerUnit = bacWater > 0 ? totalMcg / (bacWater * 100) : 0;
   
   // Units required = targetDose / mcgPerUnit
-  const unitsRequiredRaw = targetDose / mcgPerUnit;
-  const unitsRequired = Math.round(unitsRequiredRaw * 10) / 10; // Round to 1 decimal place
+  const unitsRequiredRaw = isValidDose && mcgPerUnit > 0 ? numericDose / mcgPerUnit : 0;
+  const unitsRequired = isValidDose && mcgPerUnit > 0 ? Math.round(unitsRequiredRaw * 10) / 10 : 0;
   
   // Total doses per vial
-  const dosesPerVial = Math.floor(totalMcg / targetDose);
+  const dosesPerVial = isValidDose && numericDose > 0 ? Math.floor(totalMcg / numericDose) : 0;
 
   // Validate if unitsRequired exceeds syringe capacity
-  const isOverCapacity = unitsRequired > syringeSize;
-  const fillFraction = Math.min(1, unitsRequired / syringeSize);
+  const isOverCapacity = isValidDose && unitsRequired > syringeSize;
+  const fillFraction = isValidDose && syringeSize > 0 ? Math.min(1, Math.max(0, unitsRequired / syringeSize)) : 0;
 
-  // Limit target dose range dynamically when vial size changes
-  useEffect(() => {
-    if (targetDose > totalMcg) {
-      setTargetDose(totalMcg);
+  // Handler to update vialSize and clamp targetDoseInput synchronously if needed (no useEffect side-effect)
+  const handleVialSizeChange = (newVialSize: number) => {
+    setVialSize(newVialSize);
+    const newTotalMcg = newVialSize * 1000;
+    if (isValidDose && rawDose > newTotalMcg) {
+      setTargetDoseInput(newTotalMcg.toString());
     }
-  }, [vialSize, totalMcg, targetDose]);
+  };
+
+  // Handler for targetDose number input change
+  const handleTargetDoseChange = (valStr: string) => {
+    setTargetDoseInput(valStr);
+    const parsed = parseFloat(valStr);
+    if (!isNaN(parsed) && isFinite(parsed) && parsed > totalMcg) {
+      setTargetDoseInput(totalMcg.toString());
+    }
+  };
 
   // Generate SVG tick marks for syringe based on selected size
   const renderTicks = () => {
@@ -104,10 +124,10 @@ export default function CalculatorClient() {
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div>
-                  <label className="text-sm font-bold text-black uppercase tracking-wider block">
+                  <label id="vial-size-label" htmlFor="vial-size-slider" className="text-sm font-bold text-black uppercase tracking-wider block">
                     {t('vialSizeLabel')}
                   </label>
-                  <span className="text-xs text-black/40 font-archia font-medium">
+                  <span id="vial-size-desc" className="text-xs text-black/40 font-archia font-medium">
                     {t('vialSizeSub')}
                   </span>
                 </div>
@@ -119,12 +139,19 @@ export default function CalculatorClient() {
 
               {/* Slider */}
               <input
+                id="vial-size-slider"
                 type="range"
                 min="1"
                 max="30"
                 step="1"
                 value={vialSize}
-                onChange={(e) => setVialSize(Number(e.target.value))}
+                onChange={(e) => handleVialSizeChange(Number(e.target.value))}
+                aria-labelledby="vial-size-label"
+                aria-describedby="vial-size-desc"
+                aria-valuemin={1}
+                aria-valuemax={30}
+                aria-valuenow={vialSize}
+                aria-valuetext={`${vialSize} mg`}
                 className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-black mb-4"
               />
 
@@ -133,7 +160,9 @@ export default function CalculatorClient() {
                 {vialPresets.map((preset) => (
                   <button
                     key={preset}
-                    onClick={() => setVialSize(preset)}
+                    type="button"
+                    onClick={() => handleVialSizeChange(preset)}
+                    aria-label={`Select ${preset} milligram vial preset`}
                     className={`px-4 py-2 text-[10px] font-bold font-dm-mono uppercase tracking-widest rounded-xl transition-all border ${
                       vialSize === preset
                         ? 'bg-black text-white border-black'
@@ -152,10 +181,10 @@ export default function CalculatorClient() {
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div>
-                  <label className="text-sm font-bold text-black uppercase tracking-wider block">
+                  <label id="water-volume-label" htmlFor="water-volume-slider" className="text-sm font-bold text-black uppercase tracking-wider block">
                     {t('waterVolumeLabel')}
                   </label>
-                  <span className="text-xs text-black/40 font-archia font-medium">
+                  <span id="water-volume-desc" className="text-xs text-black/40 font-archia font-medium">
                     {t('waterVolumeSub')}
                   </span>
                 </div>
@@ -167,12 +196,19 @@ export default function CalculatorClient() {
 
               {/* Slider */}
               <input
+                id="water-volume-slider"
                 type="range"
                 min="0.5"
                 max="10"
                 step="0.5"
                 value={bacWater}
                 onChange={(e) => setBacWater(Number(e.target.value))}
+                aria-labelledby="water-volume-label"
+                aria-describedby="water-volume-desc"
+                aria-valuemin={0.5}
+                aria-valuemax={10}
+                aria-valuenow={bacWater}
+                aria-valuetext={`${bacWater} mL`}
                 className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-black mb-4"
               />
 
@@ -181,7 +217,9 @@ export default function CalculatorClient() {
                 {waterPresets.map((preset) => (
                   <button
                     key={preset}
+                    type="button"
                     onClick={() => setBacWater(preset)}
+                    aria-label={`Select ${preset} milliliter diluent volume preset`}
                     className={`px-4 py-2 text-[10px] font-bold font-dm-mono uppercase tracking-widest rounded-xl transition-all border ${
                       bacWater === preset
                         ? 'bg-black text-white border-black'
@@ -200,17 +238,22 @@ export default function CalculatorClient() {
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div>
-                  <label className="text-sm font-bold text-black uppercase tracking-wider block">
+                  <label id="syringe-size-label" className="text-sm font-bold text-black uppercase tracking-wider block">
                     {t('syringeSizeLabel')}
                   </label>
-                  <span className="text-xs text-black/40 font-archia font-medium">
+                  <span id="syringe-size-desc" className="text-xs text-black/40 font-archia font-medium">
                     {t('syringeSizeSub')}
                   </span>
                 </div>
               </div>
 
               {/* Select Options grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div 
+                role="radiogroup" 
+                aria-labelledby="syringe-size-label"
+                aria-describedby="syringe-size-desc"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-3"
+              >
                 {[
                   { value: 100, label: '1.0 mL', desc: 'U-100 Syringe' },
                   { value: 50, label: '0.5 mL', desc: 'U-50 Syringe' },
@@ -218,6 +261,10 @@ export default function CalculatorClient() {
                 ].map((option) => (
                   <button
                     key={option.value}
+                    type="button"
+                    role="radio"
+                    aria-checked={syringeSize === option.value}
+                    aria-label={`${option.desc} - ${option.label} capacity`}
                     onClick={() => setSyringeSize(option.value)}
                     className={`p-4 flex flex-col items-center justify-center text-center rounded-2xl transition-all border ${
                       syringeSize === option.value
@@ -240,38 +287,51 @@ export default function CalculatorClient() {
             <div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div>
-                  <label className="text-sm font-bold text-black uppercase tracking-wider block">
+                  <label id="target-dose-label" htmlFor="target-dose-input" className="text-sm font-bold text-black uppercase tracking-wider block">
                     {t('targetDoseLabel')}
                   </label>
-                  <span className="text-xs text-black/40 font-archia font-medium">
+                  <span id="target-dose-desc" className="text-xs text-black/40 font-archia font-medium">
                     {t('targetDoseSub')}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 self-start sm:self-auto bg-black/[0.03] px-4 py-1.5 rounded-xl border border-black/5">
                   <input
+                    id="target-dose-input"
                     type="number"
                     min="1"
                     max={totalMcg}
-                    value={targetDose || ''}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (val > totalMcg) setTargetDose(totalMcg);
-                      else setTargetDose(val);
-                    }}
-                    className="w-24 bg-transparent text-2xl font-bold font-absans text-black outline-none border-none text-right"
+                    step="any"
+                    value={targetDoseInput}
+                    onChange={(e) => handleTargetDoseChange(e.target.value)}
+                    aria-labelledby="target-dose-label"
+                    aria-describedby="target-dose-desc"
+                    className="w-28 bg-transparent text-2xl font-bold font-absans text-black outline-none border-none text-right"
                   />
                   <span className="text-sm font-bold text-black/50">mcg</span>
                 </div>
               </div>
 
-              {/* Slider */}
+              {/* Input Validation Feedback */}
+              {!isValidDose && trimmedInput !== '' && (
+                <p className="text-xs text-amber-700 font-archia font-medium mb-3">
+                  Please enter a valid positive dosage amount in micrograms (mcg).
+                </p>
+              )}
+
+              {/* Slider (Synchronized up to totalMcg) */}
               <input
+                id="target-dose-slider"
                 type="range"
                 min="10"
-                max={Math.min(totalMcg, 2000)}
+                max={totalMcg}
                 step="10"
-                value={targetDose}
-                onChange={(e) => setTargetDose(Number(e.target.value))}
+                value={isValidDose ? Math.min(numericDose, totalMcg) : 10}
+                onChange={(e) => handleTargetDoseChange(e.target.value)}
+                aria-label="Target dose adjustment slider"
+                aria-valuemin={10}
+                aria-valuemax={totalMcg}
+                aria-valuenow={isValidDose ? numericDose : 0}
+                aria-valuetext={`${isValidDose ? numericDose : 0} mcg`}
                 className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-black mb-4"
               />
 
@@ -282,12 +342,14 @@ export default function CalculatorClient() {
                   return (
                     <button
                       key={preset}
+                      type="button"
                       disabled={!isAvailable}
-                      onClick={() => setTargetDose(preset)}
+                      onClick={() => handleTargetDoseChange(preset.toString())}
+                      aria-label={`Select ${preset} microgram target dose preset`}
                       className={`px-4 py-2 text-[10px] font-bold font-dm-mono uppercase tracking-widest rounded-xl transition-all border ${
                         !isAvailable
                           ? 'opacity-30 cursor-not-allowed border-black/5 text-black/40 bg-black/[0.01]'
-                          : targetDose === preset
+                          : isValidDose && numericDose === preset
                           ? 'bg-black text-white border-black'
                           : 'bg-black/[0.02] text-black/60 border-black/5 hover:border-black/20 hover:bg-black/[0.04]'
                       }`}
@@ -327,8 +389,13 @@ export default function CalculatorClient() {
 
       {/* Syringe Visualizer & Specifications (Right) */}
       <div className="lg:col-span-5 flex flex-col gap-6">
-        {/* Result values Panel */}
-        <div className="bg-white border border-black/5 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden flex flex-col gap-6">
+        {/* Result values Panel with ARIA Live Region */}
+        <div 
+          role="status" 
+          aria-live="polite" 
+          aria-atomic="true"
+          className="bg-white border border-black/5 rounded-[2.5rem] p-8 shadow-sm relative overflow-hidden flex flex-col gap-6"
+        >
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none bg-[url('/images/noise.svg')]" />
 
           <div className="relative z-10">
@@ -342,7 +409,7 @@ export default function CalculatorClient() {
                 <span className="text-xs font-bold text-black/50 uppercase tracking-widest mb-1">{t('results.unitsRequired')}</span>
                 <div className="flex items-baseline gap-2">
                   <span className="text-6xl md:text-7xl font-bold font-absans text-black leading-none">
-                    {unitsRequired}
+                    {isValidDose ? unitsRequired : '—'}
                   </span>
                   <span className="text-base font-bold text-black/50 uppercase tracking-wider">Units</span>
                 </div>
@@ -355,7 +422,9 @@ export default function CalculatorClient() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-5 border border-black/5 rounded-3xl flex flex-col">
                   <span className="text-[10px] font-bold text-black/40 uppercase tracking-wider mb-2">{t('results.mcgPerUnit')}</span>
-                  <span className="text-2xl font-bold font-absans text-black leading-none">{Math.round(mcgPerUnit * 100) / 100} mcg</span>
+                  <span className="text-2xl font-bold font-absans text-black leading-none">
+                    {Math.round(mcgPerUnit * 100) / 100} mcg
+                  </span>
                   <p className="text-[10px] text-black/40 mt-2 font-archia leading-normal font-medium">
                     {t('results.mcgPerUnitDesc')}
                   </p>
@@ -363,7 +432,9 @@ export default function CalculatorClient() {
  
                 <div className="p-5 border border-black/5 rounded-3xl flex flex-col">
                   <span className="text-[10px] font-bold text-black/40 uppercase tracking-wider mb-2">{t('results.dosesPerVial')}</span>
-                  <span className="text-2xl font-bold font-absans text-black leading-none">{dosesPerVial}</span>
+                  <span className="text-2xl font-bold font-absans text-black leading-none">
+                    {isValidDose ? dosesPerVial : '—'}
+                  </span>
                   <p className="text-[10px] text-black/40 mt-2 font-archia leading-normal font-medium">
                     {t('results.dosesPerVialDesc')}
                   </p>
@@ -380,6 +451,8 @@ export default function CalculatorClient() {
           <div className="relative z-10 w-full flex flex-col items-center">
             {/* SVG Visualizer */}
             <svg
+              role="img"
+              aria-label={`Interactive syringe visualizer displaying ${isValidDose ? unitsRequired : 0} units drawn for a ${syringeSize} unit syringe`}
               viewBox="0 0 200 620"
               className="w-44 h-auto overflow-visible"
             >
@@ -398,7 +471,7 @@ export default function CalculatorClient() {
                 stroke="url(#needle-grad)"
                 strokeWidth="1.2"
               />
-              
+
               {/* Needle Hub (Insulin Orange Hub) */}
               <polygon
                 points="95,45 105,45 107,60 93,60"
@@ -428,8 +501,8 @@ export default function CalculatorClient() {
                 fill="url(#barrel-glass-grad)"
               />
 
-              {/* Dynamic Fluid Fill */}
-              {unitsRequired > 0 && (
+              {/* Dynamic Fluid Fill (only when valid dose > 0) */}
+              {isValidDose && unitsRequired > 0 && (
                 <motion.path
                   initial={{ d: `M 80.5,70 Q 100,62 119.5,70 L 119.5,70 L 80.5,70 Z` }}
                   animate={{ 

@@ -360,7 +360,7 @@ export default function Header() {
             <div className="flex flex-col gap-1">
               {[
                 { href: '/certificates-of-analysis', label: t('nav.coa'), icon: ShieldCheck, desc: 'Purity & Testing Standards' },
-                { href: '/calculator', label: t('nav.calculator'), icon: FlaskConical, desc: 'Reconstitution Utility' },
+                { href: '/peptide-calculator', label: t('nav.calculator'), icon: FlaskConical, desc: 'Reconstitution Utility' },
                 { href: '/services', label: t('nav.services'), icon: LayoutGrid, desc: 'Wholesale Solutions' },
                 { href: '/blog', label: t('nav.blog'), icon: Newspaper, desc: 'Research Updates & Insights' },
                 { href: '/about', label: t('nav.about'), icon: Info, desc: 'Our Laboratory Mission' }
