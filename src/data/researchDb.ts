@@ -3595,7 +3595,7 @@ export const productLookup: Record<string, StaticProductInfo> = {
   },
   "kpv": {
     scientificName: "KPV Anti-inflammatory Peptide",
-    cas: "17750-73-1",
+    cas: "67727-97-3",
     formula: "C16H29N5O4",
     molarMass: "355.44 g/mol",
     sequence: "Lys-Pro-Val",

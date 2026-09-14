@@ -114,6 +114,16 @@ function getRelatedImages(slug: string, title: string): { images: string[], comp
       '/images/hero-lab-bg.png',
       '/product-images/EPITHALON 10mg.webp'
     );
+  } else if (normSlug.includes('kpv')) {
+    compounds.push(
+      { name: 'KPV 10mg', slug: 'kpv', img: '/product-images/KPV 10mg.webp', desc: 'Lys-Pro-Val tripeptide for mucosal research.' },
+      { name: 'KPV Spray 5mg', slug: 'kpv-spray', img: '/product-images/KPV spray 5mg.webp', desc: 'Pre-dissolved metered research spray.' },
+      { name: 'Gut & Mucosal Panel', slug: 'gut-mucosal-panel', img: '/product-images/bundle-gut-mucosal-panel.webp', desc: 'BPC-157, KPV & Thymosin Alpha-1 research kit.' }
+    );
+    images.push(
+      '/images/kpv-pept1-nfkb-mapk-mechanism-schematic.jpg',
+      '/images/kpv-fda-pcac-regulatory-timeline-2026.jpg'
+    );
   } else if (normSlug.includes('private-label') || normSlug.includes('start-peptide') || normSlug.includes('launch') || normSlug.includes('business')) {
     compounds.push(
       { name: 'Custom Peptide Kit', slug: 'klow-blend', img: '/product-images/klow-custom-peptide-kit.jpg', desc: 'Private label kit customization.' },
@@ -227,6 +237,8 @@ function generateBlogKeywords(title: string, slug: string) {
     keywords.unshift('NAD+ wholesale', 'NAD+ longevity research', 'cellular health peptides');
   } else if (normSlug.includes('bioregulator') || normSlug.includes('epithalon')) {
     keywords.unshift('bioregulator peptides research', 'Khavinson bioregulator peptides', 'short chain peptide gene expression', 'Epithalon pineal research', 'histone acetylation peptide');
+  } else if (normSlug.includes('kpv')) {
+    keywords.unshift('KPV peptide research', 'PepT1 transporter uptake', 'NF-kB signalling inhibition', 'KPV free base vs acetate', '2026 FDA PCAC KPV vote', '503A bulks list KPV');
   }
 
   return keywords;
@@ -253,7 +265,7 @@ export async function generateMetadata(props: any) {
       description: metaDescription,
       keywords: keywords,
       alternates: {
-        canonical: url,
+        canonical: post.meta.canonical || url,
         languages: {
           'en-US': `${baseUrl}/blog/${params.slug}`,
           es: `${baseUrl}/es/blog/${params.slug}`,
@@ -297,7 +309,7 @@ export default async function BlogPost({ params }: { params: { locale: string, s
       ? [post.meta.coverImage, ...images]
       : images;
     const normSlug = params.slug.toLowerCase();
-    const hasEmbeddedImages = normSlug.includes('fluorescence') || normSlug.includes('chemiluminescence') || normSlug.includes('bioluminescence');
+    const hasEmbeddedImages = normSlug.includes('fluorescence') || normSlug.includes('chemiluminescence') || normSlug.includes('bioluminescence') || normSlug.includes('kpv') || normSlug.includes('503b');
 
     // Dynamic section splitting to inject multiple gorgeous related images between post sections
     const sections = post.content
