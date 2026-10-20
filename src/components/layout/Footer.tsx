@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import NextLink from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { ArrowUpRight, Globe, ShieldCheck, Mail, FlaskConical, LayoutGrid } from 'lucide-react';
@@ -148,14 +149,22 @@ export default function Footer() {
               <Globe className="w-4 h-4 text-white/50" />
             </div>
             <div className="flex items-center gap-1">
-              <Link
-                locale="en"
+              {/* Plain next/link so the href is the bare path. next-intl's Link would
+                  either force an /en prefix (with a `locale` prop) or inherit the current
+                  locale's prefix (without one) — both wrong for the default locale. The
+                  cookie write replaces the sync next-intl does off the `locale` prop, and
+                  is what stops middleware bouncing an /es visitor back to /es. */}
+              <NextLink
                 href={pathname}
+                hrefLang="en"
+                onClick={() => {
+                  document.cookie = 'NEXT_LOCALE=en;sameSite=lax;path=/;';
+                }}
                 className={`px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest transition-all ${locale === 'en' ? 'bg-white text-black shadow-lg scale-105' : 'text-white/40 hover:text-white'
                   }`}
               >
                 EN
-              </Link>
+              </NextLink>
               <Link
                 locale="es"
                 href={pathname}

@@ -14,6 +14,16 @@ import { FadeIn } from '@/components/shared/Motion';
 import ProductGallery from '@/components/products/ProductGallery';
 import AddToInquiryButton from '@/components/products/AddToInquiryButton';
 
+// 2 days. Overrides the 1 hour inherited from [locale]/layout.tsx, so the catalog
+// gets a longer window than the services and locations routes.
+export const revalidate = 172800;
+
+// Unknown slugs are typos or dead links, so 404 at the router instead of rendering.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return productsData.map((product) => ({ slug: product.slug }));
+}
 
 export async function generateMetadata(props: any) {
   const params = props?.params || {};
@@ -687,8 +697,8 @@ export default async function ProductPage({ params }: { params: { locale: string
       a: `Sí. Los socios comerciales calificados que requieran especificaciones de investigación particulares pueden coordinar tamaños de viales personalizados, variaciones de concentración o formulaciones liofilizadas a medida. Póngase en contacto con nuestro equipo de ventas a granel para definir sus requisitos.`
     },
     {
-      q: `¿Cómo se envía ${product.name} al por mayor y está garantizada la entrega?`,
-      a: `Todos los pedidos se sellan al vacío en envases de alta resistencia térmica para preservar la integridad molecular de los péptidos. Realizamos envíos express y discretos con seguimiento global y despacho optimizado, asegurando una entrega 100% segura a sus instalaciones.`
+      q: `¿Cómo se envía ${product.name} al por mayor?`,
+      a: `Todos los pedidos se sellan al vacío en envases de alta resistencia térmica para preservar la integridad molecular de los péptidos. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.`
     },
     {
       q: `¿Puedo ver el informe de HPLC para el lote actual de ${product.name} antes de realizar un pedido?`,
@@ -724,8 +734,8 @@ export default async function ProductPage({ params }: { params: { locale: string
       a: `Yes. Qualified procurement partners requiring specific experimental profiles can request custom concentration sizes, alternative vial counts, or custom lyophilized compound blending. Please contact our corporate sales desk to define your parameters.`
     },
     {
-      q: `How is wholesale ${product.name} shipped, and is bulk delivery guaranteed?`,
-      a: `We ship all bulk orders in high-grade, vacuum-sealed packaging with temperature stability buffers to preserve molecular integrity. Transit is managed via premium express couriers with discrete border-optimized clearance, ensuring 100% delivery safety.`
+      q: `How is wholesale ${product.name} shipped?`,
+      a: `We ship all bulk orders in high-grade, vacuum-sealed packaging with temperature stability buffers to preserve molecular integrity. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.`
     },
     {
       q: `Can I view the HPLC report for the current batch of ${product.name} before placing an order?`,
@@ -739,7 +749,7 @@ export default async function ProductPage({ params }: { params: { locale: string
 
   const faqs = customContent?.faqs ?? templateFaqs;
 
-  // FAQ JSON-LD is emitted as a FAQPage script below, alongside the Product and BreadcrumbList schemas.
+  // FAQ JSON-LD is emitted by the <FaqSection> below (which renders this same faqs array) — no separate script here.
 
   // Get product spec images map
   const specImagesMap = productSpecImagesMap[product.slug as keyof typeof productSpecImagesMap] || {};
@@ -761,28 +771,13 @@ export default async function ProductPage({ params }: { params: { locale: string
       '@type': 'Brand',
       name: '99 Purity Wholesale'
     },
+    // No price or availability: rates are quoted per account and stock is not tracked
+    // per product, so any value here would contradict the page. An Offer carrying only
+    // a url is valid schema.org.
     offers: {
       '@type': 'Offer',
       url: productUrl,
-      priceCurrency: 'USD',
-      price: '199',
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
     },
-  };
-
-  // FAQPage markup for the `faqs` array rendered by <FaqSection> below.
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a,
-      },
-    })),
   };
 
   // Home -> Products -> Category -> Product, matching the visible breadcrumb trail.
@@ -822,7 +817,6 @@ export default async function ProductPage({ params }: { params: { locale: string
     <div className="flex flex-col min-h-screen bg-[#F8F8F6] text-black -mt-24 md:-mt-32">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumbs Fold */}
       <div className="border-b border-black/5 bg-[#F8F8F6] relative z-20 pt-28 md:pt-36">

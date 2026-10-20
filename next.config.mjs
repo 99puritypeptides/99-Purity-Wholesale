@@ -23,8 +23,8 @@ const nextConfig = {
       },
       {
         source: '/en/work',
-        destination: '/en',
-        permanent: false,
+        destination: '/',
+        permanent: true,
       },
       {
         source: '/es/work',
@@ -57,8 +57,29 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/:locale(en|es)/calculator',
-        destination: '/:locale/peptide-calculator',
+        source: '/en/calculator',
+        destination: '/peptide-calculator',
+        permanent: true,
+      },
+      {
+        source: '/es/calculator',
+        destination: '/es/peptide-calculator',
+        permanent: true,
+      },
+      // Bare /en needs its own rule: the catch-all below matches it with an empty
+      // :path*, which renders an empty Location header rather than '/'.
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      // Catch-all for the default locale. next-intl's middleware would also strip the
+      // /en prefix, but only as a 307, so Google never consolidates onto the bare URL.
+      // Handling it here emits a 308 and runs before middleware. Must stay last so the
+      // specific /en rules above win; /es is a real route and is deliberately untouched.
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
         permanent: true,
       }
     ];

@@ -19,6 +19,9 @@ import QualityStandardsSection from '@/components/locations/QualityStandardsSect
 import { linkifyText } from '@/lib/linkifyLocationContent';
 import { getLocalizedLocation } from '@/lib/locationTranslations';
 
+// Pinned to the 1 hour this route had before the layout was raised to 2 days.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const stateParams = locationsData.map((loc) => {
     const isCountry = loc.city === loc.region;

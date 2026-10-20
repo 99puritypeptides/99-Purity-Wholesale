@@ -148,7 +148,16 @@ import CartDrawer from '@/components/cart/CartDrawer';
 
 import { setRequestLocale } from 'next-intl/server';
 
-export const revalidate = 3600;
+// Next uses the SMALLEST revalidate in a route's segment tree, not the deepest, so a
+// value here caps every page beneath it. Holding the catalog's 2 day window means this
+// has to be the laxest value; routes that need a tighter one set it themselves.
+export const revalidate = 172800;
+
+// Enumerating the locales lets every nested route prerender. Without this the
+// [locale] segment stays dynamic and no child can be statically generated.
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }];
+}
 
 export default async function RootLayout(props: any) {
   const children = props.children;
@@ -199,7 +208,7 @@ export default async function RootLayout(props: any) {
       "Peptide Dropshipping Program",
       "HPLC Verified Peptide Purity",
       "Freedom Diagnostic COA Verification",
-      "Tirzepatide Bulk Suppy",
+      "Tirzepatide Bulk Supply",
       "Research Chemicals Wholesale",
       "Peptide Synthesis USA"
     ],

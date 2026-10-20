@@ -27,6 +27,9 @@ const SERVICE_ICONS: Record<string, React.ElementType> = {
   'fulfillment-consulting': Settings,
 };
 
+// Pinned to the 1 hour this route had before the layout was raised to 2 days.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   return Object.keys(servicesRegistry).map((slug) => ({ slug }));
 }

@@ -54,7 +54,7 @@ const FIVE_AMINO_1MQ_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale 5-Amino-1MQ Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the photolabile aminoquinolinium core against oxidation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the photolabile aminoquinolinium core against oxidation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -97,7 +97,7 @@ const FIVE_AMINO_1MQ_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía 5-Amino-1MQ Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el núcleo fotolábil de aminoquinolinio frente a la oxidación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el núcleo fotolábil de aminoquinolinio frente a la oxidación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -140,7 +140,7 @@ const TIRZEPATIDE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Tirzepatide Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive Trp25 residue and the peptide backbone against aggregation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive Trp25 residue and the peptide backbone against aggregation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -183,7 +183,7 @@ const TIRZEPATIDE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Tirzepatide Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo Trp25 sensible a la oxidación y el esqueleto peptídico frente a la agregación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo Trp25 sensible a la oxidación y el esqueleto peptídico frente a la agregación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -226,7 +226,7 @@ const SEMAGLUTIDE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Semaglutide Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive Trp31 residue and guard the peptide backbone against aggregation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive Trp31 residue and guard the peptide backbone against aggregation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -269,7 +269,7 @@ const SEMAGLUTIDE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Semaglutide Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo Trp31 sensible a la oxidación y resguardan el esqueleto peptídico frente a la agregación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo Trp31 sensible a la oxidación y resguardan el esqueleto peptídico frente a la agregación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -312,7 +312,7 @@ const RETATRUTIDE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Retatrutide Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive tryptophan residue and guard the peptide against aggregation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-sensitive tryptophan residue and guard the peptide against aggregation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -355,7 +355,7 @@ const RETATRUTIDE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Retatrutide Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo de triptófano sensible a la oxidación y resguardan el péptido frente a la agregación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo de triptófano sensible a la oxidación y resguardan el péptido frente a la agregación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -398,7 +398,7 @@ const THYMOSIN_ALPHA_1_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Thymosin Alpha-1 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the N-terminal acetyl group and the C-terminal asparagine, the two positions most vulnerable in this sequence. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the N-terminal acetyl group and the C-terminal asparagine, the two positions most vulnerable in this sequence. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -441,7 +441,7 @@ const THYMOSIN_ALPHA_1_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Thymosin Alpha-1 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo acetilo N-terminal y la asparagina C-terminal, las dos posiciones más vulnerables de esta secuencia. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo acetilo N-terminal y la asparagina C-terminal, las dos posiciones más vulnerables de esta secuencia. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -484,7 +484,7 @@ const TESAMORELIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Tesamorelin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-prone methionine residue and guard this long peptide chain against aggregation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-prone methionine residue and guard this long peptide chain against aggregation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -527,7 +527,7 @@ const TESAMORELIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Tesamorelin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo de metionina propenso a la oxidación y resguardan esta cadena peptídica larga frente a la agregación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo de metionina propenso a la oxidación y resguardan esta cadena peptídica larga frente a la agregación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -570,7 +570,7 @@ const TESAMORELIN_IPAMORELIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Tesamorelin + Ipamorelin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-prone methionine in the Tesamorelin chain and the blend ratio between the two peptides. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the oxidation-prone methionine in the Tesamorelin chain and the blend ratio between the two peptides. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -613,7 +613,7 @@ const TESAMORELIN_IPAMORELIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Tesamorelin + Ipamorelin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la metionina propensa a oxidación de la cadena de tesamorelina y la proporción entre ambos péptidos. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la metionina propensa a oxidación de la cadena de tesamorelina y la proporción entre ambos péptidos. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -656,7 +656,7 @@ const TB_500_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale TB-500 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single methionine residue and the peptide backbone. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single methionine residue and the peptide backbone. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -699,7 +699,7 @@ const TB_500_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía TB-500 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único residuo de metionina y el esqueleto peptídico. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único residuo de metionina y el esqueleto peptídico. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -742,7 +742,7 @@ const SNAP_8_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale SNAP-8 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the N-terminal acetyl group and the single methionine residue. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the N-terminal acetyl group and the single methionine residue. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -785,7 +785,7 @@ const SNAP_8_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía SNAP-8 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo acetilo N-terminal y el único residuo de metionina. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo acetilo N-terminal y el único residuo de metionina. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -828,7 +828,7 @@ const SERMORELIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Sermorelin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single methionine residue and the asparagine positions prone to deamidation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single methionine residue and the asparagine positions prone to deamidation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -871,7 +871,7 @@ const SERMORELIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Sermorelin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único residuo de metionina y las posiciones de asparagina propensas a desamidación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único residuo de metionina y las posiciones de asparagina propensas a desamidación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -914,7 +914,7 @@ const SS_31_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale SS-31 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the non-standard dimethyltyrosine residue and the D-amino acid stereochemistry. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the non-standard dimethyltyrosine residue and the D-amino acid stereochemistry. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -957,7 +957,7 @@ const SS_31_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía SS-31 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo no estándar de dimetiltirosina y la estereoquímica de los aminoácidos D. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el residuo no estándar de dimetiltirosina y la estereoquímica de los aminoácidos D. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1000,7 +1000,7 @@ const MOTS_C_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale MOTS-c Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two oxidation-prone methionine residues. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two oxidation-prone methionine residues. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1043,7 +1043,7 @@ const MOTS_C_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía MOTS-c Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos de metionina propensos a oxidación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos de metionina propensos a oxidación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1086,7 +1086,7 @@ const MELANOTAN_1_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Melanotan-1 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the D-phenylalanine stereocentre and the tryptophan residue. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the D-phenylalanine stereocentre and the tryptophan residue. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1129,7 +1129,7 @@ const MELANOTAN_1_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Melanotan-1 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el centro quiral de D-fenilalanina y el residuo de triptófano. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el centro quiral de D-fenilalanina y el residuo de triptófano. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1172,7 +1172,7 @@ const LL_37_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale LL-37 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the highly cationic backbone against surface adsorption. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the highly cationic backbone against surface adsorption. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1215,7 +1215,7 @@ const LL_37_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía LL-37 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el esqueleto fuertemente catiónico frente a la adsorción superficial. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el esqueleto fuertemente catiónico frente a la adsorción superficial. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1258,7 +1258,7 @@ const LIPO_C_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Lipo-C Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the methionine component against oxidation and the ratio between the three components. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the methionine component against oxidation and the ratio between the three components. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1301,7 +1301,7 @@ const LIPO_C_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Lipo-C Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el componente de metionina frente a la oxidación y la proporción entre los tres componentes. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el componente de metionina frente a la oxidación y la proporción entre los tres componentes. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1344,7 +1344,7 @@ const L_CARNITINE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale L-Carnitine Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the zwitterionic compound against moisture uptake. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the zwitterionic compound against moisture uptake. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1387,7 +1387,7 @@ const L_CARNITINE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía L-Carnitine Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el compuesto zwitteriónico frente a la absorción de humedad. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el compuesto zwitteriónico frente a la absorción de humedad. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1430,7 +1430,7 @@ const KLOW_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale KLOW Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination and the blend ratio between the four components. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination and the blend ratio between the four components. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1469,7 +1469,7 @@ const KLOW_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía KLOW Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre y la proporción entre los cuatro componentes. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre y la proporción entre los cuatro componentes. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1512,7 +1512,7 @@ const KISSPEPTIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Kisspeptin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the C-terminal amide required for receptor activation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the C-terminal amide required for receptor activation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1555,7 +1555,7 @@ const KISSPEPTIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Kisspeptin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la amida C-terminal necesaria para la activación del receptor. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la amida C-terminal necesaria para la activación del receptor. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1598,7 +1598,7 @@ const IPAMORELIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Ipamorelin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two D-configured residues and the C-terminal amide. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two D-configured residues and the C-terminal amide. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1641,7 +1641,7 @@ const IPAMORELIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Ipamorelin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos en configuración D y la amida C-terminal. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos en configuración D y la amida C-terminal. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1684,7 +1684,7 @@ const IGF_1_LR3_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale IGF-1 LR3 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the three disulfide bonds that hold the folded structure together. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the three disulfide bonds that hold the folded structure together. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1727,7 +1727,7 @@ const IGF_1_LR3_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía IGF-1 LR3 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los tres puentes disulfuro que sostienen la estructura plegada. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los tres puentes disulfuro que sostienen la estructura plegada. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1770,7 +1770,7 @@ const HCG_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale HCG Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the glycosylation pattern that determines measured bioactivity. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the glycosylation pattern that determines measured bioactivity. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1813,7 +1813,7 @@ const HCG_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía HCG Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el patrón de glicosilación que determina la bioactividad medida. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el patrón de glicosilación que determina la bioactividad medida. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1856,7 +1856,7 @@ const H_FRAG_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale H-Frag Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the internal disulfide loop and the two cysteine residues. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the internal disulfide loop and the two cysteine residues. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1899,7 +1899,7 @@ const H_FRAG_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía H-Frag Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el bucle disulfuro interno y los dos residuos de cisteína. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el bucle disulfuro interno y los dos residuos de cisteína. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -1942,7 +1942,7 @@ const GLUTATHIONE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Glutathione Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the free cysteine thiol against air oxidation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the free cysteine thiol against air oxidation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -1985,7 +1985,7 @@ const GLUTATHIONE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Glutathione Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el tiol libre de cisteína frente a la oxidación por aire. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el tiol libre de cisteína frente a la oxidación por aire. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2028,7 +2028,7 @@ const GLOW_BLEND_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale GLOW Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination and the blend ratio between the three components. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination and the blend ratio between the three components. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2071,7 +2071,7 @@ const GLOW_BLEND_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía GLOW Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre y la proporción entre los tres componentes. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre y la proporción entre los tres componentes. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2114,7 +2114,7 @@ const GHRP_6_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale GHRP-6 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two oxidation-prone tryptophan residues. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the two oxidation-prone tryptophan residues. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2157,7 +2157,7 @@ const GHRP_6_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía GHRP-6 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos de triptófano propensos a oxidación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen los dos residuos de triptófano propensos a oxidación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2200,7 +2200,7 @@ const GHRP_2_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale GHRP-2 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single tryptophan and the three D-configured positions. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the single tryptophan and the three D-configured positions. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2243,7 +2243,7 @@ const GHRP_2_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía GHRP-2 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único triptófano y las tres posiciones en configuración D. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el único triptófano y las tres posiciones en configuración D. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2286,7 +2286,7 @@ const DIHEXA_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Dihexa Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the hydrophobic acyl chain against adsorption losses. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the hydrophobic acyl chain against adsorption losses. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2329,7 +2329,7 @@ const DIHEXA_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Dihexa Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la cadena acilo hidrofóbica frente a pérdidas por adsorción. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la cadena acilo hidrofóbica frente a pérdidas por adsorción. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2372,7 +2372,7 @@ const CJC_1295_IPAMORELIN_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale CJC-1295 + Ipamorelin Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the blend ratio and the non-standard residues in both peptides. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the blend ratio and the non-standard residues in both peptides. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2415,7 +2415,7 @@ const CJC_1295_IPAMORELIN_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía CJC-1295 + Ipamorelin Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la proporción de la mezcla y los residuos no estándar de ambos péptidos. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la proporción de la mezcla y los residuos no estándar de ambos péptidos. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2458,7 +2458,7 @@ const CJC_1295_DAC_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale CJC-1295 (with DAC) Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the reactive maleimide group that forms the albumin bond. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the reactive maleimide group that forms the albumin bond. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2501,7 +2501,7 @@ const CJC_1295_DAC_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía CJC-1295 (with DAC) Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo maleimida reactivo que forma el enlace con la albúmina. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el grupo maleimida reactivo que forma el enlace con la albúmina. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2544,7 +2544,7 @@ const CJC_1295_NO_DAC_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale CJC-1295 (No DAC) Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the four engineered substitutions and the C-terminal amide. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the four engineered substitutions and the C-terminal amide. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2587,7 +2587,7 @@ const CJC_1295_NO_DAC_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía CJC-1295 (No DAC) Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen las cuatro sustituciones diseñadas y la amida C-terminal. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen las cuatro sustituciones diseñadas y la amida C-terminal. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2630,7 +2630,7 @@ const CAGRILINTIDE_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Cagrilintide Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the disulfide bridge and the fatty acid side chain. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the disulfide bridge and the fatty acid side chain. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2673,7 +2673,7 @@ const CAGRILINTIDE_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Cagrilintide Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el puente disulfuro y la cadena lateral de ácido graso. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el puente disulfuro y la cadena lateral de ácido graso. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2716,7 +2716,7 @@ const BPC_157_TB_500_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale BPC-157 + TB-500 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the blend ratio and the oxidation-sensitive residues in both peptides. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the blend ratio and the oxidation-sensitive residues in both peptides. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2759,7 +2759,7 @@ const BPC_157_TB_500_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía BPC-157 + TB-500 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la proporción de la mezcla y los residuos sensibles a oxidación de ambos péptidos. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la proporción de la mezcla y los residuos sensibles a oxidación de ambos péptidos. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2802,7 +2802,7 @@ const ARA_290_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale ARA-290 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the short chain against adsorption and the aromatic residues from light. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the short chain against adsorption and the aromatic residues from light. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2845,7 +2845,7 @@ const ARA_290_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía ARA-290 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la cadena corta frente a la adsorción y los residuos aromáticos frente a la luz. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la cadena corta frente a la adsorción y los residuos aromáticos frente a la luz. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2888,7 +2888,7 @@ const AOD9604_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale AOD9604 Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the internal disulfide loop and the tyrosine at the amino terminus. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the internal disulfide loop and the tyrosine at the amino terminus. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -2931,7 +2931,7 @@ const AOD9604_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía AOD9604 Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el bucle disulfuro interno y la tirosina del extremo amino. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen el bucle disulfuro interno y la tirosina del extremo amino. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -2974,7 +2974,7 @@ const AHK_CU_SPRAY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale AHK-Cu Spray packaged and shipped to preserve compound integrity?',
-      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination against demetallation. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Units ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers that hold the shipment inside the refrigerated range through transit. Amber primary containers and nitrogen-purged headspace protect the copper coordination against demetallation. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3017,7 +3017,7 @@ const AHK_CU_SPRAY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía AHK-Cu Spray al por mayor para preservar la integridad del compuesto?',
-      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre frente a la desmetalación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Las unidades se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío dentro del rango refrigerado durante el tránsito. Los envases primarios ámbar y el espacio de cabeza purgado con nitrógeno protegen la coordinación del cobre frente a la desmetalación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3060,7 +3060,7 @@ const BIOREGULATOR_CORE_PANEL_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Core Panel packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3103,7 +3103,7 @@ const BIOREGULATOR_CORE_PANEL_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Core Panel al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3146,7 +3146,7 @@ const BIOREGULATOR_FULL_MASTER_SET_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Full Master Set packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3189,7 +3189,7 @@ const BIOREGULATOR_FULL_MASTER_SET_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Full Master Set al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3232,7 +3232,7 @@ const BIOREGULATOR_CARDIOVASCULAR_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Cardiovascular packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3275,7 +3275,7 @@ const BIOREGULATOR_CARDIOVASCULAR_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Cardiovascular al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3318,7 +3318,7 @@ const BIOREGULATOR_HEPATIC_DIGESTIVE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Hepatic / Digestive packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3361,7 +3361,7 @@ const BIOREGULATOR_HEPATIC_DIGESTIVE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Hepatic / Digestive al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3404,7 +3404,7 @@ const BIOREGULATOR_IMMUNE_THYMIC_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Immune / Thymic packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3447,7 +3447,7 @@ const BIOREGULATOR_IMMUNE_THYMIC_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Immune / Thymic al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3490,7 +3490,7 @@ const BIOREGULATOR_NEURO_PINEAL_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Neuro / Pineal packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3533,7 +3533,7 @@ const BIOREGULATOR_NEURO_PINEAL_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Neuro / Pineal al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3576,7 +3576,7 @@ const BIOREGULATOR_RESPIRATORY_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Respiratory packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3619,7 +3619,7 @@ const BIOREGULATOR_RESPIRATORY_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Respiratory al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3662,7 +3662,7 @@ const BIOREGULATOR_UROGENITAL_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Bioregulator Urogenital packaged and shipped to preserve compound integrity?',
-      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Panels ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the kit tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3705,7 +3705,7 @@ const BIOREGULATOR_UROGENITAL_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Bioregulator Urogenital al por mayor para preservar la integridad del compuesto?',
-      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los paneles se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja del kit, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3748,7 +3748,7 @@ const ADVANCED_NOOTROPIC_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Advanced Nootropic packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3791,7 +3791,7 @@ const ADVANCED_NOOTROPIC_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Advanced Nootropic al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3834,7 +3834,7 @@ const ADVANCED_REPAIR_IMMUNE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Advanced Repair & Immune packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3877,7 +3877,7 @@ const ADVANCED_REPAIR_IMMUNE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Advanced Repair & Immune al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -3920,7 +3920,7 @@ const BODY_COMPOSITION_KIT_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Body Composition Kit packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -3963,7 +3963,7 @@ const BODY_COMPOSITION_KIT_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Body Composition Kit al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4006,7 +4006,7 @@ const CLASSIC_SECRETAGOGUE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Classic Secretagogue packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4049,7 +4049,7 @@ const CLASSIC_SECRETAGOGUE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Classic Secretagogue al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4092,7 +4092,7 @@ const EXTENDED_GH_IGF_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Extended GH / IGF packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4135,7 +4135,7 @@ const EXTENDED_GH_IGF_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Extended GH / IGF al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4178,7 +4178,7 @@ const GH_SECRETAGOGUE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale GH Secretagogue packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4221,7 +4221,7 @@ const GH_SECRETAGOGUE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía GH Secretagogue al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4264,7 +4264,7 @@ const GUT_MUCOSAL_PANEL_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Gut & Mucosal Panel packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4307,7 +4307,7 @@ const GUT_MUCOSAL_PANEL_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Gut & Mucosal Panel al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4350,7 +4350,7 @@ const INCRETIN_AMYLIN_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Incretin + Amylin packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4393,7 +4393,7 @@ const INCRETIN_AMYLIN_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Incretin + Amylin al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4436,7 +4436,7 @@ const LONGEVITY_MITOCHONDRIAL_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Longevity & Mitochondrial packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4479,7 +4479,7 @@ const LONGEVITY_MITOCHONDRIAL_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Longevity & Mitochondrial al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4522,7 +4522,7 @@ const MELANOCORTIN_REPRODUCTIVE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Melanocortin & Reproductive packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4565,7 +4565,7 @@ const MELANOCORTIN_REPRODUCTIVE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Melanocortin & Reproductive al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4608,7 +4608,7 @@ const METABOLIC_ACTIVATION_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Metabolic Activation packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4651,7 +4651,7 @@ const METABOLIC_ACTIVATION_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Metabolic Activation al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4694,7 +4694,7 @@ const METABOLIC_SUPPORT_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Metabolic Support packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4737,7 +4737,7 @@ const METABOLIC_SUPPORT_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Metabolic Support al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4780,7 +4780,7 @@ const NAD_ANTIOXIDANT_EN: ProductContent = {
     },
     {
       q: 'How is wholesale NAD+ & Antioxidant packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4823,7 +4823,7 @@ const NAD_ANTIOXIDANT_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía NAD+ & Antioxidant al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4866,7 +4866,7 @@ const NEURO_CORE_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Neuro Core packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4909,7 +4909,7 @@ const NEURO_CORE_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Neuro Core al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -4952,7 +4952,7 @@ const RECOVERY_SLEEP_STRESS_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Recovery, Sleep & Stress packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -4995,7 +4995,7 @@ const RECOVERY_SLEEP_STRESS_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Recovery, Sleep & Stress al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5038,7 +5038,7 @@ const REPAIR_TRIO_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Repair Trio packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5081,7 +5081,7 @@ const REPAIR_TRIO_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Repair Trio al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5124,7 +5124,7 @@ const REPRODUCTIVE_HPG_AXIS_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Reproductive / HPG-Axis packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5167,7 +5167,7 @@ const REPRODUCTIVE_HPG_AXIS_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Reproductive / HPG-Axis al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5210,7 +5210,7 @@ const SKIN_COSMETIC_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Skin & Cosmetic packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5253,7 +5253,7 @@ const SKIN_COSMETIC_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Skin & Cosmetic al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5296,7 +5296,7 @@ const VASCULAR_IMMUNE_PROTECTION_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Vascular, Immune & Protection packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5339,7 +5339,7 @@ const VASCULAR_IMMUNE_PROTECTION_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Vascular, Immune & Protection al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5382,7 +5382,7 @@ const SENESCENCE_STACK_EN: ProductContent = {
     },
     {
       q: 'How is wholesale Senescence Stack packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. We ship nationwide across all 50 US states and internationally via express couriers with discrete, border-optimized clearance and full delivery assurance.',
+      a: 'Kits ship in light-blocking, vacuum-sealed secondary packaging with temperature-stability buffers holding the shipment in the frozen or refrigerated range through transit. Each vial retains its individual identity label inside the tray so component traceability survives handling. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5425,7 +5425,7 @@ const SENESCENCE_STACK_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía Senescence Stack al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Enviamos a los 50 estados de EE. UU. y a nivel internacional mediante mensajería express con despacho aduanero discreto y optimizado, con garantía total de entrega.',
+      a: 'Los kits se envían en empaque secundario opaco y sellado al vacío, con amortiguadores de estabilidad térmica que mantienen el envío en rango congelado o refrigerado durante el tránsito. Cada vial conserva su etiqueta de identidad individual dentro de la bandeja, de modo que la trazabilidad por componente sobrevive a la manipulación. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {
@@ -5468,7 +5468,7 @@ const PATHWAY_GENETIC_OPTIMIZATION_TEST_EN: ProductContent = {
     },
     {
       q: 'How is wholesale PATHWAY™ Genetic Optimization Test packaged and shipped to preserve compound integrity?',
-      a: 'Kits ship at ambient temperature in sealed retail packaging with prepaid return materials included. No cold chain is required — the collection tube holds a stabilizing buffer that preserves buccal cell DNA at room temperature through return transit, so refrigeration and temperature-controlled couriers are unnecessary and freezing is harmful. We ship nationwide across all 50 US states with full delivery assurance.',
+      a: 'Kits ship at ambient temperature in sealed retail packaging with prepaid return materials included. No cold chain is required — the collection tube holds a stabilizing buffer that preserves buccal cell DNA at room temperature through return transit, so refrigeration and temperature-controlled couriers are unnecessary and freezing is harmful. Orders ship from our U.S. facility via tracked express courier to all 50 states. Tracking is provided for every shipment.',
     },
   ],
   dossier: {
@@ -5511,7 +5511,7 @@ const PATHWAY_GENETIC_OPTIMIZATION_TEST_ES: ProductContent = {
     },
     {
       q: '¿Cómo se empaca y envía PATHWAY™ Genetic Optimization Test al por mayor para preservar la integridad del compuesto?',
-      a: 'Los kits se envían a temperatura ambiente en empaque minorista sellado con materiales de devolución prepagados incluidos. No se requiere cadena de frío — el tubo de recolección contiene un tampón estabilizador que preserva el ADN de células bucales a temperatura ambiente durante el transporte de retorno, así que la refrigeración y los mensajeros con control de temperatura son innecesarios y la congelación es perjudicial. Enviamos a los 50 estados de EE. UU. con garantía total de entrega.',
+      a: 'Los kits se envían a temperatura ambiente en empaque minorista sellado con materiales de devolución prepagados incluidos. No se requiere cadena de frío — el tubo de recolección contiene un tampón estabilizador que preserva el ADN de células bucales a temperatura ambiente durante el transporte de retorno, así que la refrigeración y los mensajeros con control de temperatura son innecesarios y la congelación es perjudicial. Los pedidos se envían desde nuestra instalación en EE. UU. mediante mensajería express con seguimiento a los 50 estados. Se proporciona seguimiento para cada envío.',
     },
   ],
   dossier: {

@@ -20,6 +20,17 @@ import FaqSection from '@/components/shared/FaqSection';
 import { curatedResearch, productLookup } from '@/data/researchDb';
 import type { ResearchData } from '@/data/researchDb';
 
+export const revalidate = 172800;
+
+export const dynamicParams = false;
+
+// Enumerated from products.json rather than researchDb: this page exists for every
+// product and falls back to generated content, so researchDb covers only part of the
+// catalog. It matches the notFound() gate below, which also keys off products.json.
+export function generateStaticParams() {
+  return productsData.map((product) => ({ slug: product.slug }));
+}
+
 export async function generateMetadata(props: any) {
   const params = props?.params || {};
   const locale = params?.locale || 'en';

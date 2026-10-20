@@ -61,8 +61,8 @@ export function generateProductFaqs({
         a: `Para kits en inventario, el tiempo de preparación suele ser de 1 a 3 días hábiles. Para pedidos comerciales de alto volumen (más de 500 viales) o solicitudes de etiqueta privada, el tiempo de preparación puede variar de 7 a 14 días. Consulte a su representante de cuenta para obtener proyecciones logísticas exactas.`
       },
       {
-        q: `¿A qué países realizan envíos de ${productName} y está garantizado el paso por aduanas?`,
-        a: `Realizamos envíos globales a más de 50 países en América del Norte, Europa y Asia a través de canales de mensajería seguros y discretos. Nuestro equipo logístico utiliza embalaje avanzado y declaraciones de importación/exportación conformes para garantizar el paso seguro por la aduana hacia instalaciones de investigación autorizadas.`
+        q: `¿A qué destinos realizan envíos de ${productName}?`,
+        a: `Realizamos envíos a nivel nacional dentro de Estados Unidos, a los 50 estados, desde nuestra instalación en EE. UU. Los pedidos se envían mediante mensajería express con seguimiento, y se proporciona seguimiento para cada envío. No realizamos envíos internacionales.`
       },
       {
         q: `¿Qué métodos de pago son aceptados para pedidos a granel de ${productName}?`,
@@ -90,7 +90,7 @@ export function generateProductFaqs({
       },
       {
         q: `¿Cuáles son sus políticas de devolución y reemplazo para ${productName} al por mayor?`,
-        a: `Debido a la naturaleza sensible a la temperatura de los compuestos de investigación y los riesgos de contaminación, no aceptamos devoluciones estándar una vez que el producto ha salido de nuestras instalaciones. Sin embargo, si un pedido resulta dañado en tránsito o incautado permanentemente (sujeto a la garantía de entrega aplicable), organizaremos un reenvío o crédito sin costo adicional.`
+        a: `Debido a la naturaleza sensible a la temperatura de los compuestos de investigación y los riesgos de contaminación, no aceptamos devoluciones estándar una vez que el producto ha salido de nuestras instalaciones. Sin embargo, si un pedido resulta dañado en tránsito, organizaremos un reenvío o crédito sin costo adicional.`
       },
       {
         q: `¿Puedo solicitar concentraciones personalizadas o tamaños de vial para ${productName}?`,
@@ -146,8 +146,8 @@ export function generateProductFaqs({
       a: `For in-stock kits, lead time is typically 1 to 3 business days. For high-volume commercial orders (500+ vials) or custom Private Label requests, lead time can range from 7 to 14 days. Please consult your account representative for exact logistical projections.`
     },
     {
-      q: `Which countries do you ship ${productName} to, and is customs clearance guaranteed?`,
-      a: `We ship globally to over 50 countries across North America, Europe, and Asia via secure, discrete courier channels. Our logistics team utilizes advanced packaging and compliant import/export declarations to ensure safe customs passage to authorized research facilities.`
+      q: `Where do you ship ${productName} to?`,
+      a: `We ship domestically within the United States, to all 50 states, from our U.S. facility. Orders move via tracked express courier, and tracking is provided for every shipment. We do not ship internationally.`
     },
     {
       q: `What payment methods are accepted for bulk ${productName} purchases?`,
@@ -175,7 +175,7 @@ export function generateProductFaqs({
     },
     {
       q: `What are your return and replacement policies for wholesale ${productName}?`,
-      a: `Due to the temperature-sensitive nature of research compounds and contamination risks, we do not accept standard returns once product has left our facility. However, if an order is verifiably damaged in transit or permanently seized (subject to applicable delivery guarantees), we will arrange a reshipment or credit at no additional cost.`
+      a: `Due to the temperature-sensitive nature of research compounds and contamination risks, we do not accept standard returns once product has left our facility. However, if an order is verifiably damaged in transit, we will arrange a reshipment or credit at no additional cost.`
     },
     {
       q: `Can I request custom spec concentrations or vial sizes for wholesale ${productName}?`,

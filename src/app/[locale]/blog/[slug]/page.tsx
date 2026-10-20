@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/utils/mdx';
+import { getPostBySlug, getAllPosts } from '@/utils/mdx';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { Link } from '@/i18n/routing';
@@ -9,6 +9,17 @@ import { getTranslations } from 'next-intl/server';
 import { FadeIn } from '@/components/shared/Motion';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+
+export const revalidate = 172800;
+
+export const dynamicParams = false;
+
+// getAllPosts already excludes the .es.mdx translations, so these are the base slugs;
+// the [locale] segment above pairs each one with en and es.
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 // Builds a descriptive alt string from an image filename, e.g. "/product-images/semaglutide-20mg.jpg" -> "Semaglutide 20mg"
 function humanizeImageAlt(path: string): string {

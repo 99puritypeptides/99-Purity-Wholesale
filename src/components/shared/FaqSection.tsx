@@ -158,7 +158,10 @@ export default function FaqSection({
         {/* Remaining FAQs Accordion */}
         {items.length > 1 && (
           <div className={`space-y-0 border-t ${borderCol}`}>
-            {items.map((faq, i) => {
+            {/* Item 0 is skipped: it shows as a card at both breakpoints, so its
+                accordion row would be hidden everywhere and only bloat the HTML. */}
+            {items.slice(1).map((faq, offset) => {
+              const i = offset + 1;
               const isAccordionDesktop = i >= 3;
               const isAccordionMobile = i >= 1;
 
