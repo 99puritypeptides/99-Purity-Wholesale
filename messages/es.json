@@ -1232,7 +1232,7 @@
       "dropshipping": {
         "eyebrow": "Programa de Cumplimiento",
         "title": "Programa de Envío Directo (Dropshipping) de Péptidos de Investigación",
-        "desc": "Venda péptidos de grado de investigación fabricados en EE. UU. sin tocar nunca el inventario. Nuestro programa de dropshipping al por mayor maneja el almacenamiento, el control de calidad, el embalaje y el cumplimiento de pedidos discreto directamente al cliente, todo bajo su marca. Usted se concentra exclusivamente en la adquisición de clientes y las ventas; nosotros operamos como su motor de cumplimiento invisible y de alta pureza. Ideal para spas médicos, clínicas de bienestar y distribuidores en línea que buscan ingresar al mercado de compuestos de investigación con cero inversión inicial en inventario y sin gastos generales de gestión de cadena de frío.",
+        "desc": "Haga dropshipping de péptidos de investigación bajo su propia marca sin comprar inventario. Almacenamos, empaquetamos a ciegas y enviamos a los 50 estados de EE. UU. Solo cuentas B2B autorizadas.",
         "tags": {
           "t1": "dropshipping de péptidos",
           "t2": "cumplimiento de marca blanca",
@@ -1244,12 +1244,12 @@
           "i3": "Marcas de bienestar que agregan compuestos de investigación a sus ofertas"
         },
         "ctaText": "Consultar sobre Dropshipping",
-        "msg": "Hola, estoy interesado en el Programa de Envío Directo de Péptidos. Mi negocio es: "
+        "msg": "Hola, estoy interesado en el Programa de Dropshipping de Péptidos de Investigación. Mi tipo de negocio es: "
       },
       "launch-support": {
         "eyebrow": "Desarrollo de Negocios",
         "title": "Soporte de Lanzamiento de Negocios de Péptidos de Investigación",
-        "desc": "Lanzar un negocio de péptidos al por mayor o agregar compuestos de investigación a su práctica existente requiere más que el acceso al producto: exige claridad estratégica. Nuestro programa de soporte de lanzamiento brinda orientación práctica sobre la selección de productos para su mercado específico, la arquitectura de precios B2B, la estrategia de adquisición de inventario inicial y la configuración operativa. Hemos guiado a docenas de clínicas de EE. UU., farmacias de formulación magistral y distribuidores a través de su primer pedido de péptidos al por mayor y más allá. Evite errores costosos de inicio con una infraestructura experimentada detrás de cada decisión.",
+        "desc": "Soporte de lanzamiento para profesionales autorizados que ingresan al mercado de péptidos de investigación en EE. UU. Estrategia de mercado, selección de productos, precios y configuración de proveedores en 2 a 4 semanas.",
         "tags": {
           "t1": "iniciar un negocio de péptidos",
           "t2": "lanzamiento de péptidos al por mayor",
@@ -1261,12 +1261,12 @@
           "i3": "Empresarios que ingresan al mercado de compuestos de investigación de EE. UU."
         },
         "ctaText": "Obtener Soporte de Lanzamiento",
-        "msg": "Hola, me gustaría recibir soporte de lanzamiento para iniciar un negocio de péptidos de investigación. Mi situación es: "
+        "msg": "Hola, me gustaría hablar sobre el soporte de lanzamiento para ingresar al mercado de compuestos de investigación. Mi tipo de negocio es: "
       },
       "website-development": {
         "eyebrow": "Infraestructura Digital",
         "title": "Desarrollo de Sitios Web de Negocios de Péptidos",
-        "desc": "Su presencia digital es su activo de ventas más escalable. Nuestro equipo construye sitios web de alto rendimiento y totalmente personalizados para negocios de compuestos de investigación, diseñados desde cero para los requisitos de cumplimiento, las demandas de SEO y los patrones de conversión específicos de esta industria. Construimos portales mayoristas B2B, sitios de compuestos de investigación minoristas y plataformas híbridas utilizando tecnologías modernas como Next.js, React y arquitecturas de CMS sin cabeza. Cada sitio que construimos está optimizado para el cumplimiento de anuncios, la visibilidad en motores de búsqueda y un flujo de consultas B2B sin fricciones.",
+        "desc": "Sitios web a medida para empresas autorizadas de péptidos de investigación. Portales mayoristas, tarifas protegidas, arquitectura de cumplimiento legal. Desde $3,500, desarrollados en 4 a 8 semanas.",
         "tags": {
           "t1": "desarrollo web de péptidos",
           "t2": "portal B2B de compuestos de investigación",
@@ -1277,13 +1277,13 @@
           "i2": "Negocios existentes que se actualizan desde plataformas obsoletas",
           "i3": "Socios de dropshipping que necesitan una interfaz minorista de marca"
         },
-        "ctaText": "Discutir Desarrollo Web",
-        "msg": "Hola, estoy interesado en que me desarrollen un sitio web de péptidos de investigación. Mis necesidades: "
+        "ctaText": "Analizar Desarrollo Web",
+        "msg": "Hola, me gustaría hablar sobre el desarrollo de un sitio web para mi negocio de compuestos de investigación. Mi plataforma actual es: "
       },
       "sales-distribution": {
-        "eyebrow": "Crecimiento de Ingresos",
-        "title": "Desarrollo de Ventas y Distribución de Péptidos B2B",
-        "desc": "Escalar los ingresos en el mercado mayorista de compuestos de investigación requiere un enfoque sistemático para la adquisición de clientes B2B, el desarrollo de territorios y la arquitectura de redes de distribución. Asesoramos a los operadores establecidos sobre la creación de redes de afiliados, la expansión a nuevos mercados geográficos, la estructuración de acuerdos de distribución de alto volumen y el desarrollo de canales de ventas institucionales dirigidos a farmacias de formulación magistral, grupos de bienestar con múltiples ubicaciones y distribuidores regionales. Nuestras estrategias se basan en la experiencia directa en la industria, no en consejos comerciales genéricos, y están diseñadas para la dinámica específica de la cadena de suministro de compuestos de investigación de EE. UU.",
+        "eyebrow": "Consultoría en Estrategia de Distribución",
+        "title": "Consultoría en Estrategia de Distribución para Operadores de Péptidos",
+        "desc": "Consultoría en estrategia de distribución para operadores consolidados de compuestos de investigación en EE. UU. Planificación de territorios, red de distribuidores y afiliados, acuerdos comerciales y embudo de ventas.",
         "tags": {
           "t1": "distribución de péptidos",
           "t2": "estrategia de adquisición B2B",
@@ -1294,8 +1294,8 @@
           "i2": "Operadores de alto volumen que estructuran canales de ventas institucionales",
           "i3": "Negocios que construyen bases de clientes de farmacias de formulación magistral"
         },
-        "ctaText": "Explorar Estrategia de Distribución",
-        "msg": "Hola, me gustaría discutir el Desarrollo de Ventas y Distribución para mi negocio de péptidos."
+        "ctaText": "Analizar Estrategia de Distribución",
+        "msg": "Hola, me gustaría analizar la consultoría en estrategia de distribución. Mi volumen mensual actual es: "
       },
       "private-label": {
         "eyebrow": "Valor de Marca",

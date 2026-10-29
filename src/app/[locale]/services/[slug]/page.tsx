@@ -9,7 +9,7 @@ import {
 import GlobalCTA from '@/components/layout/GlobalCTA';
 import FaqSection from '@/components/shared/FaqSection';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-import servicesRegistry from '@/data/services-content/index';
+import servicesRegistry, { getServiceByLocale } from '@/data/services-content/index';
 
 const ICON_MAP: Record<string, React.ElementType> = {
   Package, Rocket, MonitorSmartphone, TrendingUp, Tag, Settings,
@@ -37,7 +37,7 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: any) {
   const params = props?.params || {};
   const locale = params?.locale || 'en';
-  const service = servicesRegistry[params.slug];
+  const service = getServiceByLocale(params.slug, locale);
   if (!service) return {};
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
   const url = `${baseUrl}/${params.locale === 'en' ? '' : params.locale + '/'}services/${params.slug}`;
@@ -73,7 +73,8 @@ export async function generateMetadata(props: any) {
 }
 
 export default function ServiceDetailPage({ params }: { params: { locale: string; slug: string } }) {
-  const service = servicesRegistry[params.slug];
+  const isEs = params.locale === 'es';
+  const service = getServiceByLocale(params.slug, params.locale);
   if (!service) notFound();
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://99puritywholesale.com';
@@ -103,7 +104,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
       {/* Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <BreadcrumbSchema items={[
-        { name: 'Services', item: `${baseUrl}/${localePrefix}services` },
+        { name: isEs ? 'Servicios' : 'Services', item: `${baseUrl}/${localePrefix}services` },
         { name: service.hero.h1, item: `${baseUrl}/${localePrefix}services/${service.slug}` },
       ]} />
 
@@ -116,7 +117,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           {/* Breadcrumb nav */}
           <nav className="flex items-center gap-2 text-[10px] font-dm-mono font-bold uppercase tracking-widest text-white/30 mb-12">
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <Link href="/services" className="hover:text-white transition-colors">{isEs ? 'Servicios' : 'Services'}</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-white/70">{service.hero.eyebrow}</span>
           </nav>
@@ -150,7 +151,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
                   href="/services"
                   className="inline-flex items-center justify-center gap-3 px-8 py-5 bg-transparent border border-white/10 text-white/70 rounded-xl font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs transition-all duration-300 hover:border-white/30 hover:text-white hover:bg-white/5"
                 >
-                  All Services
+                  {isEs ? 'Todos los Servicios' : 'All Services'}
                 </Link>
               </div>
             </div>
@@ -159,10 +160,10 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
             <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent blur-3xl -z-10" />
               {[
-                { val: '≥99%', label: 'Purity Standard', icon: Award },
-                { val: 'COA', label: 'On Every Order', icon: ClipboardCheck },
-                { val: 'U.S.', label: 'Manufactured', icon: Globe },
-                { val: 'B2B', label: 'Exclusive Program', icon: ShieldCheck },
+                { val: '≥99%', label: isEs ? 'Estándar de Pureza' : 'Purity Standard', icon: Award },
+                { val: 'COA', label: isEs ? 'En Cada Pedido' : 'On Every Order', icon: ClipboardCheck },
+                { val: 'U.S.', label: isEs ? 'Fabricado en EE. UU.' : 'Manufactured', icon: Globe },
+                { val: 'B2B', label: isEs ? 'Programa Exclusivo' : 'Exclusive Program', icon: ShieldCheck },
               ].map((stat) => (
                 <div key={stat.label} className="bg-white/[0.02] border border-white/5 backdrop-blur-md rounded-3xl p-6 md:p-8 flex flex-col gap-3 hover:bg-white/[0.04] hover:border-white/15 transition-all duration-500 group cursor-default">
                   <div className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-500">
@@ -206,7 +207,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
           <div className="mb-16">
             <div className="w-10 h-px bg-black/10 mb-6" />
             <h2 className="font-absans text-3xl md:text-5xl font-bold text-black uppercase tracking-tighter">
-              Key Benefits
+              {isEs ? 'Beneficios Clave' : 'Key Benefits'}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,7 +233,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
           <div className="mb-16">
             <div className="w-10 h-px bg-black/10 mb-6" />
             <h2 className="font-absans text-3xl md:text-5xl font-bold text-black uppercase tracking-tighter">
-              How It Works
+              {isEs ? 'Cómo Funciona' : 'How It Works'}
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -262,9 +263,9 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
           </div>
           <div className="bg-white border border-black/5 rounded-2xl overflow-hidden">
             <div className="grid grid-cols-12 bg-black/[0.03] border-b border-black/5 px-6 py-3">
-              <div className="col-span-5 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40">Profile / Use Case</div>
-              <div className="col-span-2 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40 text-center">Suitable</div>
-              <div className="col-span-5 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40">Why</div>
+              <div className="col-span-5 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40">{isEs ? 'Perfil / Caso de Uso' : 'Profile / Use Case'}</div>
+              <div className="col-span-2 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40 text-center">{isEs ? 'Adecuado' : 'Suitable'}</div>
+              <div className="col-span-5 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/40">{isEs ? 'Motivo' : 'Why'}</div>
             </div>
             {service.comparisonTable.rows.map((row, i) => (
               <div key={i} className={`grid grid-cols-12 px-6 py-5 gap-4 border-b border-black/5 last:border-b-0 ${i % 2 === 0 ? '' : 'bg-black/[0.01]'}`}>
@@ -295,7 +296,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
               {service.pricingSection.tiers.map((tier, i) => (
                 <div key={i} className={`rounded-2xl p-8 border transition-all duration-300 ${tier.highlight ? 'bg-black text-white border-black/20' : 'bg-[#F8F8F6] border-black/5 hover:border-black/15 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)]'}`}>
-                  <div className={`text-[9px] font-dm-mono font-bold uppercase tracking-widest mb-3 ${tier.highlight ? 'text-white/40' : 'text-black/30'}`}>Volume</div>
+                  <div className={`text-[9px] font-dm-mono font-bold uppercase tracking-widest mb-3 ${tier.highlight ? 'text-white/40' : 'text-black/30'}`}>{isEs ? 'Volumen' : 'Volume'}</div>
                   <div className={`font-absans text-2xl font-bold uppercase tracking-tighter mb-1 ${tier.highlight ? 'text-white' : 'text-black'}`}>{tier.name}</div>
                   <div className={`font-dm-mono text-xs font-bold mb-5 ${tier.highlight ? 'text-white/50' : 'text-black/40'}`}>{tier.volume}</div>
                   <p className={`font-archia text-sm leading-relaxed ${tier.highlight ? 'text-white/60' : 'text-black/50'}`}>{tier.description}</p>
@@ -326,7 +327,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
             {service.technicalDeepDive.statsTable && (
               <div className="bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden">
                 <div className="px-6 py-3 border-b border-white/10 bg-white/[0.02]">
-                  <span className="text-[9px] font-dm-mono font-bold uppercase tracking-widest text-white/30">Operational Specifications</span>
+                  <span className="text-[9px] font-dm-mono font-bold uppercase tracking-widest text-white/30">{isEs ? 'Especificaciones Operativas' : 'Operational Specifications'}</span>
                 </div>
                 {service.technicalDeepDive.statsTable.map((row, i) => (
                   <div key={i} className={`flex justify-between gap-4 px-6 py-4 border-b border-white/5 last:border-0 ${i % 2 === 0 ? '' : 'bg-white/[0.01]'}`}>
@@ -364,8 +365,8 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
       <FaqSection
         id={`${service.slug}-faq`}
         eyebrow="(FAQ)"
-        title={`${service.hero.h1} — Frequently Asked Questions`}
-        subtitle="Comprehensive answers to the most common questions about this service program."
+        title={isEs ? `${service.hero.h1} — Preguntas Frecuentes` : `${service.hero.h1} — Frequently Asked Questions`}
+        subtitle={isEs ? 'Respuestas completas a las preguntas más habituales sobre este programa de servicios.' : 'Comprehensive answers to the most common questions about this service program.'}
         items={faqItems}
         theme="light"
       />
@@ -375,7 +376,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="mb-12">
             <div className="w-10 h-px bg-black/10 mb-6" />
-            <h2 className="font-absans text-3xl font-bold text-black uppercase tracking-tighter">Related Services</h2>
+            <h2 className="font-absans text-3xl font-bold text-black uppercase tracking-tighter">{isEs ? 'Servicios Relacionados' : 'Related Services'}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {service.relatedServices.map((rel) => {
@@ -391,7 +392,7 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
                   </div>
                   <div className="flex items-center gap-2 text-[9px] font-dm-mono font-bold uppercase tracking-widest text-black/30 group-hover:text-black transition-colors mt-auto">
                     <div className="w-5 h-px bg-black/20 group-hover:w-8 transition-all" />
-                    Learn More
+                    {isEs ? 'Más Información' : 'Learn More'}
                   </div>
                 </Link>
               );
@@ -402,9 +403,9 @@ export default function ServiceDetailPage({ params }: { params: { locale: string
 
       {/* ── FINAL CTA ─────────────────────────────────────────── */}
       <GlobalCTA
-        badge="B2B Services"
-        title="Ready to Get Started?"
-        subtitle="Contact our B2B team via WhatsApp or email to discuss your requirements. We respond to all qualified inquiries within 1 business day."
+        badge={isEs ? 'Servicios B2B' : 'B2B Services'}
+        title={isEs ? '¿Listo para Comenzar?' : 'Ready to Get Started?'}
+        subtitle={isEs ? 'Póngase en contacto con nuestro equipo B2B a través de WhatsApp o correo electrónico para analizar sus requisitos. Respondemos a todas las consultas en 1 día hábil.' : 'Contact our B2B team via WhatsApp or email to discuss your requirements. We respond to all qualified inquiries within 1 business day.'}
         primaryCtaText={service.hero.ctaText}
         primaryCtaHref={`https://wa.me/18433307365?text=${encodeURIComponent(service.hero.ctaMsg)}`}
       />

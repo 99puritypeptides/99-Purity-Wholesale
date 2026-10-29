@@ -219,7 +219,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
         </div>
       </section>
 
-      <section className="relative z-10 overflow-hidden bg-[#090C11] py-32 md:py-48">
+      <section className="relative z-10 bg-[#090C11] py-32 md:py-48 overflow-hidden">
         <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
           <div className="container mx-auto">
             <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
@@ -228,110 +228,20 @@ export default async function HomePage({ params }: { params: { locale: string } 
           </div>
         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none bg-[url('/images/noise.svg')]" />
-        
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
-            <FadeIn className="max-w-3xl">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-10 h-px bg-white/20" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{t('Categories.badge')}</span>
-              </div>
-              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-7xl font-bold text-white leading-[1.1] sm:leading-none tracking-tighter uppercase">
-                {t('Categories.title').split('Library')[0]}
-                <span className="text-white/20 italic font-medium lowercase ml-4">Library</span>
-              </h2>
-              <p className="mt-8 max-w-xl font-archia text-lg text-white/40 leading-relaxed">
-                {t('Categories.subtitle')}
-              </p>
-            </FadeIn>
-            <FadeIn direction="left" delay={0.2}>
-              <Link href="/products" className="group inline-flex items-center gap-4 px-8 py-4 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-[0.3em] text-white transition-all hover:bg-white hover:text-black">
-                {t('Categories.cta')} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </FadeIn>
-          </div>
-
-          <div className="reveal-grid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              { id: 'metabolic-research', icon: Zap },
-              { id: 'cognitive-function', icon: Microscope },
-              { id: 'sleep-cycle-investigation', icon: ShieldCheck },
-              { id: 'growth-factor-research', icon: Award },
-              { id: 'recovery-research', icon: Star },
-              { id: 'cellular-health-research', icon: FlaskConical },
-              { id: 'aminos', icon: Globe },
-              { id: 'essentials', icon: Truck },
-            ].map((cat, idx) => (
-              <div key={cat.id} className="reveal-card">
-                <Link 
-                  href={`/products#${cat.id}`} 
-                  className="group relative h-[400px] w-full block rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:bg-white/[0.05] hover:border-white/20"
-                >
-                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
-
-                  <div className="flex h-full flex-col justify-between relative z-10">
-                    <div>
-                      <div className="mb-12 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 border border-white/10 group-hover:bg-white group-hover:text-black transition-all duration-500">
-                        <cat.icon className="h-6 w-6 text-white group-hover:text-black transition-colors duration-500" />
-                      </div>
-                      <h4 className="font-absans text-2xl font-bold leading-tight text-white tracking-tight mb-4">{pt(`categories.${cat.id}.name`)}</h4>
-                      <p className="line-clamp-3 font-archia text-sm leading-relaxed text-white/40 group-hover:text-white/60 transition-colors">{pt(`categories.${cat.id}.desc`)}</p>
-                    </div>
-                    <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.2em] text-white/30 group-hover:text-white transition-colors">
-                      <div className="w-6 h-px bg-white/20 group-hover:w-10 transition-all" />
-                      {t('Categories.exploreSeries')}
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-
-            <div className="reveal-card">
-              <Link href="/products" className="group relative h-[400px] w-full block rounded-[2.5rem] bg-white p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2">
-                <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/images/noise.svg')]" />
-                <div className="flex h-full flex-col items-start justify-between relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white">
-                    <FlaskConical className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-absans text-3xl font-bold uppercase tracking-tight text-black mb-4">{t('Categories.fullCatalog')}</h4>
-                    <p className="font-archia text-sm leading-relaxed text-black/60 mb-10">{t('Categories.fullCatalogDesc')}</p>
-                    <div className="inline-flex h-14 w-full items-center justify-center gap-4 rounded-2xl bg-black text-white transition-all duration-500 group-hover:gap-6">
-                      <span className="text-[10px] font-bold uppercase tracking-widest">{t('Categories.accessCatalog')}</span>
-                      <ArrowRight className="h-5 w-5" />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative z-10 bg-[#F2F2F2] py-32 md:py-48 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
-          <div className="container mx-auto">
-            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
-              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Subtle Light Grain Texture */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
+        {/* Subtle Dark Grain Texture */}
+        <div className="absolute inset-0 opacity-30 pointer-events-none bg-[url('/images/noise.svg')]" />
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <FadeIn className="max-w-3xl mb-24">
             <div className="inline-flex items-center gap-3 mb-6">
-              <div className="w-10 h-px bg-black/10" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{t('BestSellers.badge')}</span>
+              <div className="w-10 h-px bg-white/20" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">{t('BestSellers.badge')}</span>
             </div>
-            <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-[1.1] sm:leading-[0.9] tracking-tighter uppercase">
+            <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-[1.1] sm:leading-[0.9] tracking-tighter uppercase">
               {t('BestSellers.title').split('Compounds')[0]}
-              <span className="text-black/20 italic font-medium lowercase block md:inline md:ml-4">Compounds</span>
+              <span className="text-white/20 italic font-medium lowercase block md:inline md:ml-4">Compounds</span>
             </h2>
-            <p className="mt-8 max-w-xl font-archia text-lg text-black/40 leading-relaxed">
+            <p className="mt-8 max-w-xl font-archia text-lg text-white/40 leading-relaxed">
               {t('BestSellers.subtitle')}
             </p>
           </FadeIn>
@@ -357,48 +267,48 @@ export default async function HomePage({ params }: { params: { locale: string } 
               return (
                 <div 
                   key={slug} 
-                  className="reveal-card group relative flex flex-col h-[520px] rounded-[1.5rem] bg-white border border-black/[0.03] p-6 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-2"
+                  className="reveal-card group relative flex flex-col h-[520px] rounded-[1.5rem] bg-white/[0.02] border border-white/10 p-6 transition-all duration-700 hover:bg-white/[0.05] hover:border-white/20 hover:shadow-[0_40px_80px_rgba(0,0,0,0.5)] hover:-translate-y-2"
                 >
                   <Link 
                     href={`/products/${slug}`} 
                     className="flex flex-col h-full w-full text-left"
                   >
                     <div className="flex-grow flex flex-col">
-                      {/* Beautiful Seamless Floating Product Image */}
-                      <div className="relative w-full h-60 flex items-center justify-center mb-4 overflow-hidden">
+                      {/* Seamless Light Backdrop for Product Bottle */}
+                      <div className="relative w-full h-60 flex items-center justify-center mb-4 overflow-hidden rounded-xl bg-white p-4">
                         <Image 
                           src={productImg} 
                           alt={`${p.name} High Purity Wholesale Research Peptide`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          className="object-contain mix-blend-multiply brightness-[1.05] contrast-[1.02] filter group-hover:scale-105 transition-transform duration-700 ease-out" 
+                          className="object-contain filter group-hover:scale-105 transition-transform duration-700 ease-out" 
                         />
                       </div>
 
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="px-3 py-1 rounded-full bg-black text-white text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
-                        <div className="h-px flex-grow bg-black/5" />
+                        <span className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-[8px] font-bold uppercase tracking-widest">{pt(`categories.${cat}.name`)}</span>
+                        <div className="h-px flex-grow bg-white/10" />
                       </div>
                       
-                      <h3 className="font-absans text-lg font-bold text-black tracking-tight mb-2 group-hover:text-black/60 transition-colors uppercase line-clamp-1">{p.name}</h3>
-                      <p className="font-archia text-xs leading-relaxed text-black/40 line-clamp-2 mb-3">{p.desc}</p>
+                      <h3 className="font-absans text-lg font-bold text-white tracking-tight mb-2 group-hover:text-white/80 transition-colors uppercase line-clamp-1">{p.name}</h3>
+                      <p className="font-archia text-xs leading-relaxed text-white/40 line-clamp-2 mb-3">{p.desc}</p>
                       
-                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-black/5 mt-auto">
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 mt-auto">
                         <div>
-                          <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-1">{t('BestSellers.technicalGrade')}</div>
-                          <div className="font-archia text-xs font-bold text-black">{p.spec}</div>
+                          <div className="text-[8px] font-bold uppercase tracking-widest text-white/30 mb-1">{t('BestSellers.technicalGrade')}</div>
+                          <div className="font-archia text-xs font-bold text-white">{p.spec}</div>
                         </div>
                         <div className="text-right">
-                          <div className="text-[8px] font-bold uppercase tracking-widest text-black/30 mb-1">{t('BestSellers.verifiedPurity')}</div>
-                          <div className="font-archia text-xs font-bold text-emerald-600">&ge;99.0%</div>
+                          <div className="text-[8px] font-bold uppercase tracking-widest text-white/30 mb-1">{t('BestSellers.verifiedPurity')}</div>
+                          <div className="font-archia text-xs font-bold text-emerald-400">&ge;99.0%</div>
                         </div>
                       </div>
                     </div>
 
                     <div 
-                      className="mt-6 relative inline-flex items-center justify-center gap-4 py-4 rounded-2xl bg-black text-white overflow-hidden transition-all group-hover:pr-12"
+                      className="mt-6 relative inline-flex items-center justify-center gap-4 py-4 rounded-2xl bg-white text-black overflow-hidden transition-all group-hover:pr-12 group-hover:bg-white/90"
                     >
-                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] relative z-10">{t('BestSellers.viewSpecs')}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] relative z-10 font-bold">{t('BestSellers.viewSpecs')}</span>
                       <ArrowRight className="h-4 w-4 absolute right-8 opacity-0 transition-all group-hover:opacity-100 group-hover:right-6" />
                     </div>
                   </Link>
@@ -410,19 +320,109 @@ export default async function HomePage({ params }: { params: { locale: string } 
           <FadeIn direction="up" delay={0.2} className="mt-24 flex justify-center">
             <Link 
               href="/products" 
-              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-6 rounded-full border border-black/10 bg-white px-10 py-5 transition-all duration-500 hover:border-black hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] overflow-hidden"
+              className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-6 rounded-full border border-white/15 bg-white/5 px-10 py-5 transition-all duration-500 hover:border-white/30 hover:bg-white/10 hover:shadow-[0_10px_30px_rgba(255,255,255,0.05)] overflow-hidden"
             >
-              <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-black transition-transform duration-500 group-hover:-translate-x-1">
+              <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-white transition-transform duration-500 group-hover:-translate-x-1">
                 {t('BestSellers.browseAll', { count: productsData.length })}
               </span>
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-black text-white transition-all duration-500 group-hover:bg-black/80">
+              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-white text-black transition-all duration-500 group-hover:bg-white/90">
                 <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
               </div>
               
               {/* Premium Specular Highlight */}
-              <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-black/[0.03] to-transparent skew-x-[-25deg] transition-all duration-1000 group-hover:left-[150%]" />
+              <div className="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/[0.05] to-transparent skew-x-[-25deg] transition-all duration-1000 group-hover:left-[150%]" />
             </Link>
           </FadeIn>
+        </div>
+      </section>
+
+      <section className="relative z-10 overflow-hidden bg-[#F2F2F2] py-32 md:py-48">
+        <div className="absolute top-0 left-0 w-full px-6 lg:px-12 pt-2 z-20">
+          <div className="container mx-auto">
+            <svg viewBox="0 0 1200 4" className="w-full h-1 reveal-line" data-scrub="true">
+              <path d="M0 2 H1200" stroke="rgba(0, 0, 0, 0.06)" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+        </div>
+
+        <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[url('/images/noise.svg')]" />
+        
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
+          <div className="mb-24 flex flex-col justify-between gap-12 md:flex-row md:items-end">
+            <FadeIn className="max-w-3xl">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="w-10 h-px bg-black/10" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-black/40">{t('Categories.badge')}</span>
+              </div>
+              <h2 className="reveal-text font-absans text-3xl sm:text-4xl md:text-7xl font-bold text-black leading-[1.1] sm:leading-none tracking-tighter uppercase">
+                {t('Categories.title').split('Library')[0]}
+                <span className="text-black/20 italic font-medium lowercase ml-4">Library</span>
+              </h2>
+              <p className="mt-8 max-w-xl font-archia text-lg text-black/40 leading-relaxed">
+                {t('Categories.subtitle')}
+              </p>
+            </FadeIn>
+            <FadeIn direction="left" delay={0.2}>
+              <Link href="/products" className="group inline-flex items-center gap-4 px-8 py-4 rounded-full border border-black/10 bg-white text-[10px] font-bold uppercase tracking-[0.3em] text-black transition-all hover:bg-black hover:text-white shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+                {t('Categories.cta')} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </FadeIn>
+          </div>
+
+          <div className="reveal-grid grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { id: 'metabolic-research', icon: Zap },
+              { id: 'cognitive-function', icon: Microscope },
+              { id: 'sleep-cycle-investigation', icon: ShieldCheck },
+              { id: 'growth-factor-research', icon: Award },
+              { id: 'recovery-research', icon: Star },
+              { id: 'cellular-health-research', icon: FlaskConical },
+              { id: 'aminos', icon: Globe },
+              { id: 'essentials', icon: Truck },
+            ].map((cat, idx) => (
+              <div key={cat.id} className="reveal-card">
+                <Link 
+                  href={`/products#${cat.id}`} 
+                  className="group relative h-[400px] w-full block rounded-[2.5rem] border border-black/[0.06] bg-white p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:border-black/15 shadow-[0_15px_40px_rgba(0,0,0,0.02)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)]"
+                >
+                  <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('/images/noise.svg')]" />
+
+                  <div className="flex h-full flex-col justify-between relative z-10">
+                    <div>
+                      <div className="mb-12 flex h-14 w-14 items-center justify-center rounded-2xl bg-black/5 border border-black/5 group-hover:bg-black group-hover:text-white transition-all duration-500">
+                        <cat.icon className="h-6 w-6 text-black group-hover:text-white transition-colors duration-500" />
+                      </div>
+                      <h4 className="font-absans text-2xl font-bold leading-tight text-black tracking-tight mb-4">{pt(`categories.${cat.id}.name`)}</h4>
+                      <p className="line-clamp-3 font-archia text-sm leading-relaxed text-black/45 group-hover:text-black/70 transition-colors">{pt(`categories.${cat.id}.desc`)}</p>
+                    </div>
+                    <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.2em] text-black/35 group-hover:text-black transition-colors">
+                      <div className="w-6 h-px bg-black/20 group-hover:w-10 transition-all" />
+                      {t('Categories.exploreSeries')}
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+
+            <div className="reveal-card">
+              <Link href="/products" className="group relative h-[400px] w-full block rounded-[2.5rem] bg-black p-10 overflow-hidden transition-all duration-700 hover:-translate-y-2 shadow-[0_25px_50px_rgba(0,0,0,0.15)]">
+                <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[url('/images/noise.svg')]" />
+                <div className="flex h-full flex-col items-start justify-between relative z-10">
+                  <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-black">
+                    <FlaskConical className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-absans text-3xl font-bold uppercase tracking-tight text-white mb-4">{t('Categories.fullCatalog')}</h4>
+                    <p className="font-archia text-sm leading-relaxed text-white/60 mb-10">{t('Categories.fullCatalogDesc')}</p>
+                    <div className="inline-flex h-14 w-full items-center justify-center gap-4 rounded-2xl bg-white text-black transition-all duration-500 group-hover:gap-6">
+                      <span className="text-[10px] font-bold uppercase tracking-widest">{t('Categories.accessCatalog')}</span>
+                      <ArrowRight className="h-5 w-5" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
